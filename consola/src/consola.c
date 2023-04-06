@@ -1,32 +1,32 @@
 #include <utils.h>
+#include <commons/string.h>
+#include<commons/config.h>
+#include<commons/log.h>
 
 
-int main(void)
+int main(int argc, char** argv)
 {
-	//#####################################################
-	char* ip = "127.0.0.1";
-    char* puerto = "4444";
-	//#####################################################
-	//#####################################################
+    t_config* config = iniciar_config("consola.config");
 
-	//logger = iniciar_logger();
+    char* IP_KERNEL = config_get_string_value(config,"IP_KERNEL");
+    char* PUERTO_KERNEL = config_get_string_value(config,"PUERTO_KERNEL");
 
-	//log_info(logger, "Soy un Log");
+    t_log* logger = iniciar_logger("consola.log","proceso");
 
-	//config = iniciar_config();
+	log_info(logger,"%s", IP_KERNEL);//el %s es para que no tire warning para tomarlo como literal cadena
+	log_info(logger,"%s", PUERTO_KERNEL);
 
-	//if (config == NULL) {
-	//	log_error(logger, "¡No se pudo crear el config!");
-	//	terminar_programa_sin_conexion(logger, config);
-	//}
 
-	int conexion = crear_conexion(ip, puerto);
+
+	int conexion = crear_conexion(IP_KERNEL, PUERTO_KERNEL);
 
 //
 ////// Enviamos al servidor el valor de CLAVE como mensaje
-    puts("listosjhjdf");
-    enviar_mensaje("jdsfkanfdsjkf", conexion);
-    puts("listo");
+    puts("antes de mandar");
+    enviar_mensaje("mensaje1", conexion);
+    enviar_mensaje("mensaje2", conexion);
+
+    puts("despues de mandar");
 	//terminar_programa(conexion, logger, config);
 }
 

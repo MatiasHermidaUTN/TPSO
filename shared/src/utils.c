@@ -52,14 +52,8 @@ void enviar_mensaje(char* mensaje, int socket_cliente)
 // Funciones de servidor //
 ///////////////////////////
 
-int iniciar_servidor(void)
+int iniciar_servidor(char* IP, char* PUERTO)
 {
-    //#############################################
-	// HARDCODEADO
-    char* IP = "127.0.0.1";
-    char* PUERTO = "4444";
-    //#############################################
-
 
 	int socket_servidor;
 
@@ -141,13 +135,6 @@ void recibir_mensaje(int socket_cliente)
 	free(buffer);
 }
 
-t_log* iniciar_logger(void)
-{
-	t_log* nuevo_logger;
-	nuevo_logger = log_create("tp0.log", "Proceso", 1, LOG_LEVEL_INFO);
-	return nuevo_logger;
-}
-
 void* recibir_buffer(int* size, int socket_cliente)
 {
     void * buffer;
@@ -164,4 +151,30 @@ void eliminar_paquete(t_paquete* paquete)
     free(paquete->buffer->stream);
     free(paquete->buffer);
     free(paquete);
+}
+
+t_config* iniciar_config(char* path)
+{
+	t_config* nuevo_config;
+
+	nuevo_config = config_create(path);
+
+	if(!nuevo_config) {
+		printf("No se pudo crear el config.\n");
+		exit(2);
+	}
+
+	return nuevo_config;
+}
+
+t_log* iniciar_logger(char* path,char* nombre)
+{
+	t_log* nuevo_logger = log_create(path, nombre, 1, LOG_LEVEL_INFO);
+
+	if(!nuevo_logger) {
+		printf("No se pudo crear un logger.");
+		exit(1);
+	}
+
+	return nuevo_logger;
 }

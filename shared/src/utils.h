@@ -13,6 +13,7 @@
 #include<netdb.h>
 #include<string.h>
 #include<commons/log.h>
+#include<commons/config.h>
 
 
 
@@ -61,7 +62,7 @@ int crear_conexion(char *ip, char* puerto);
 
 void enviar_mensaje(char* mensaje, int socket_cliente);
 
-int iniciar_servidor(void);
+int iniciar_servidor(char* IP, char* PUERTO);
 
 int esperar_cliente(int socket_servidor);
 
@@ -69,13 +70,16 @@ int recibir_operacion(int socket_cliente);
 
 void recibir_mensaje(int socket_cliente);
 
-t_log* iniciar_logger(void);
-
 void* serializar_paquete(t_paquete* paquete, int bytes);
 
 void* recibir_buffer(int* size, int socket_cliente);
 
 void eliminar_paquete(t_paquete* paquete);
+
+t_config* iniciar_config(char* path);
+
+t_log* iniciar_logger(char* path,char* nombre);
+
 
 
 #endif /* UTILS_H_ */

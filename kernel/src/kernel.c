@@ -4,7 +4,7 @@
 int main (void){
     //t_log* logger = iniciar_logger();
 
-    int server = iniciar_servidor();
+    int server = iniciar_servidor("127.0.0.1","4444");
     //log_info(logger, "Servidor listo para recibir al cliente");
     puts("Servidor listo para recibir al cliente");
     int cliente = esperar_cliente(server);
@@ -17,6 +17,7 @@ int main (void){
 			recibir_mensaje(cliente);
 			break;
             }
-        return 0;
+
     }
+    return 0;
 }
