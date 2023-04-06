@@ -1,4 +1,4 @@
-#include "../utils/utils.h"
+#include "utils.h"
 
 
 //////////////////////////
@@ -137,6 +137,7 @@ void recibir_mensaje(int socket_cliente)
 	char* buffer = recibir_buffer(&size, socket_cliente);
 	//log_info(logger, "Me llego el mensaje %s", buffer);
 	puts(buffer);
+
 	free(buffer);
 }
 

@@ -8,7 +8,6 @@ RM := rm -rf
 
 # All of the sources participating in the build are defined here
 -include sources.mk
--include src/utils/subdir.mk
 -include src/subdir.mk
 ifneq ($(MAKECMDGOALS),clean)
 ifneq ($(strip $(C_DEPS)),)
@@ -41,7 +40,7 @@ main-build: kernel
 kernel: $(OBJS) $(USER_OBJS) makefile $(OPTIONAL_TOOL_DEPS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: GCC C Linker'
-	gcc  -o "kernel" $(OBJS) $(USER_OBJS) $(LIBS) -lcommons
+	gcc -L"/home/utnso/Documents/TP-O/shared/Debug" -o "kernel" $(OBJS) $(USER_OBJS) $(LIBS) -lcommons -lshared
 	@echo 'Finished building target: $@'
 	@echo ' '
 

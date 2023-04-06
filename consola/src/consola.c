@@ -1,4 +1,4 @@
-#include "utils/utils.h"
+#include <utils.h>
 
 
 int main(void)
@@ -24,6 +24,7 @@ int main(void)
 
 //
 ////// Enviamos al servidor el valor de CLAVE como mensaje
+    puts("listosjhjdf");
     enviar_mensaje("jdsfkanfdsjkf", conexion);
     puts("listo");
 	//terminar_programa(conexion, logger, config);
