@@ -3,23 +3,16 @@
 #include <commons/config.h>
 #include <commons/log.h>
 #include "../include/configuracion_consola.h" // Fijarse si está bien
-
-#define CANT_INSTRUCCIONES 16 //se puede sacar si usamos size?
-
-//typedef nombreInstrucciones = char[16];
-
-const char* cod_op[CANT_INSTRUCCIONES] = {"F_READ", "F_WRITE", "SET", "MOV_IN", "MOV_OUT", "F_TRUNCATE", "F_SEEK", "CREATE_SEGMENT", "I/O", "WAIT", "SIGNAL", "F_OPEN", "F_CLOSE", "DELETE_SEGMENT", "EXIT", "YIELD"};
-const int cant_params[CANT_INSTRUCCIONES] = {3, 3, 2, 2, 2, 2, 2, 2, 1, 1, 1, 1, 1, 1, 0, 0};
+#include <commons/collections/dictionary.h>
+#include <commons/collections/list.h>
 
 typedef struct instruccion {
-    int codOp;
-    char** parametros;
+    char* nombre;
+    t_list* parametros;
 } t_instruccion;
 
 void parsearPseudocodigo(t_log* logger, char* direccionPseudocodigo);
-int obtenerCodOp(t_log* logger,char* codigo_str);
-void obtenerParametros(char*** parametros, char** instruccionParseada);
-void liberar(t_instruccion *instruccion,int cantParams);
+t_instruccion* parsearInstruccion(char* lineaLeida, t_log* logger, t_dictionary*);
 
 int main(int argc, char** argv) {
     t_config* config = iniciar_config("../consola.config");
@@ -46,7 +39,7 @@ int main(int argc, char** argv) {
 
 void parsearPseudocodigo(t_log* logger, char* direccionPseudocodigo) {
     FILE * archivoPseudocodigo;
-    char * instruccionLeida = NULL;
+    char * lineaLeida = NULL;
     size_t length = 0;
     int read;
 
@@ -55,53 +48,71 @@ void parsearPseudocodigo(t_log* logger, char* direccionPseudocodigo) {
         log_error(logger, "Error al abrir archivo pseudocodigo");
         exit(EXIT_FAILURE); 
     }
-    puts("abrio el archivo");
+    puts("Abrio el archivo\n");
 
-    while ((read = getline(&instruccionLeida, &length, archivoPseudocodigo)) != -1) {
-    	instruccionLeida = string_replace(instruccionLeida,"\n","\0");
-		char** instruccionParseada = string_split(instruccionLeida, " ");
+	t_dictionary* instrucciones = dictionary_create();
 
-        t_instruccion instruccion;
-        instruccion.codOp = obtenerCodOp(logger,instruccionParseada[0]);
-        puts(instruccionParseada[0]);
-        obtenerParametros(&(instruccion.parametros), instruccionParseada);
+	dictionary_put(instrucciones, "F_READ",         (void*)3);
+	dictionary_put(instrucciones, "F_WRITE",        (void*)3);
+	dictionary_put(instrucciones, "SET",            (void*)2);
+	dictionary_put(instrucciones, "MOV_IN",         (void*)2);
+	dictionary_put(instrucciones, "MOV_OUT",        (void*)2);
+	dictionary_put(instrucciones, "F_TRUNCATE",     (void*)2);
+	dictionary_put(instrucciones, "F_SEEK",         (void*)2);
+	dictionary_put(instrucciones, "CREATE_SEGMENT", (void*)2);
+	dictionary_put(instrucciones, "I/O",            (void*)1);
+	dictionary_put(instrucciones, "WAIT",           (void*)1);
+	dictionary_put(instrucciones, "SIGNAL",         (void*)1);
+	dictionary_put(instrucciones, "F_OPEN",         (void*)1);
+	dictionary_put(instrucciones, "F_CLOSE",        (void*)1);
+	dictionary_put(instrucciones, "DELETE_SEGMENT", (void*)1);
+	dictionary_put(instrucciones, "EXIT",           (void*)0);
+	dictionary_put(instrucciones, "YIELD",          (void*)0);
 
-        for(int i=0;i<string_array_size(instruccionParseada);i++){
-        	//puts(instruccionParseada[i]);
-        }
-    	puts("");
 
 
-        if (cant_params[instruccion.codOp] != string_array_size(instruccion.parametros))
-            log_error(logger, "%s esperaba %d parametros, pero recibio %d paremtros",instruccionParseada[0],cant_params[instruccion.codOp], string_array_size(instruccion.parametros));
-
-        liberar(&instruccion, cant_params[instruccion.codOp]);
-
+    t_list* instruccionesLeidas = list_create();
+    while ((read = getline(&lineaLeida, &length, archivoPseudocodigo)) != -1) {
+		list_add(instruccionesLeidas, parsearInstruccion(lineaLeida, logger, instrucciones));
+		puts("");
     }
+	free(lineaLeida);
 
     fclose(archivoPseudocodigo);
 }
 
-int obtenerCodOp(t_log* logger,char* codigo_str){
-    for(int i = 0 ; i < CANT_INSTRUCCIONES ; i++){
-        if(! strcmp(cod_op[i], codigo_str)) return i; 
+t_instruccion* parsearInstruccion(char* lineaLeida, t_log* logger, t_dictionary* instrucciones) {
+	t_instruccion* instruccionAParsear = malloc(sizeof(t_instruccion));
+	char* nombreInstruccion = strtok(lineaLeida, " \n");
+	char* parametroLeido;
+
+    if (!nombreInstruccion) {
+        log_info(logger, "Error: No se pudo leer la instruccion.");
+        exit(EXIT_FAILURE);
     }
-    log_error(logger, "La instruccion no es valida");
-    exit(EXIT_FAILURE); //rompe programa, se podria hacer que no le de importancia a la linea
-}
+    //Agrega nombre de instrucción
+	instruccionAParsear->nombre = strdup(nombreInstruccion);
+	printf("%s: ", instruccionAParsear->nombre);
 
-void obtenerParametros(char*** parametros, char** instruccionParseada){
-    int cantParametros = string_array_size(instruccionParseada) - 1;
-	*parametros = malloc(sizeof(char*)* cantParametros);
+	instruccionAParsear->parametros = list_create();
 
-    for(int i = 0; i < cantParametros ; i++){
-        (*parametros)[i] = strdup(instruccionParseada[i + 1]);
-    }
-}
+	//Agrega parámetros
+	parametroLeido = strtok(NULL, " \n");
+	while(parametroLeido) {
+		list_add(instruccionAParsear->parametros, parametroLeido);
+		printf("%s ", parametroLeido);
 
-void liberar(t_instruccion *instruccion,int cantParams){
-	for(int i=0;i<cantParams;i++){
-		free((*instruccion).parametros[i]);
+		parametroLeido = strtok(NULL, " \n");
 	}
-	free(instruccion->parametros);
+
+	puts("");
+
+	//Verifica que la cantidad de parámetros sea correcta
+	int cantidadDeParametrosObtenidos = list_size(instruccionAParsear->parametros);
+	int cantidadDeParametrosEsperados = (int)(intptr_t)dictionary_get(instrucciones, nombreInstruccion);
+	if(cantidadDeParametrosEsperados != cantidadDeParametrosObtenidos) {
+		log_info(logger, "Error: %s esperaba %d parametros, pero recibió %d.", nombreInstruccion, cantidadDeParametrosEsperados, cantidadDeParametrosObtenidos);
+	}
+
+	return instruccionAParsear;
 }
