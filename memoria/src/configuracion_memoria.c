@@ -1,4 +1,4 @@
-#include "../include/configuracion_memoria.c"
+#include "../include/configuracion_memoria.h"
 
 t_memoria_config leer_memoria_config(t_config* config) {
     t_memoria_config lectura_de_config;

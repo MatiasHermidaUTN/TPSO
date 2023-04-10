@@ -5,6 +5,8 @@
 
 int main(int argc, char** argv) {
 
+	t_config* config = iniciar_config("fileSystem.config");
+
     t_fileSystem_config lectura_de_config = leer_fileSystem_config(config);
 
 	int conexion = crear_conexion(lectura_de_config.IP_MEMORIA, lectura_de_config.PUERTO_MEMORIA);

@@ -4,14 +4,14 @@
 #include <commons/config.h>
 
 typedef struct fileSystem_config {
-	char* IP_MEMORIA,
-	char* PUERTO_MEMORIA,
-	char* PUERTO_ESCUCHA,
-	char* PATH_SUPERBLOQUE,
-	char* PATH_BITMAP,
-	char* PATH_BLOQUES,
-	char* PATH_FCB,
-	char* RETARDO_ACCESO_BLOQUE
+	char* IP_MEMORIA;
+	char* PUERTO_MEMORIA;
+	char* PUERTO_ESCUCHA;
+	char* PATH_SUPERBLOQUE;
+	char* PATH_BITMAP;
+	char* PATH_BLOQUES;
+	char* PATH_FCB;
+	char* RETARDO_ACCESO_BLOQUE;
 } t_fileSystem_config;
 
 t_fileSystem_config leer_fileSystem_config(t_config* config);

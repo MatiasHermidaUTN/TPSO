@@ -8,7 +8,7 @@ int main(int argc, char** argv) {
 
 	t_memoria_config lectura_de_config = leer_memoria_config(config);
 
-    int server = iniciar_servidor(lectura_de_config.IP_MEMORIA, lectura_de_config.PUERTO_MEMORIA);
+    int server = iniciar_servidor("127.0.0.1", lectura_de_config.PUERTO_ESCUCHA); //preguntar
 	puts("Servidor listo para recibir al cliente");
 
 
