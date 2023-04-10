@@ -1,0 +1,1048 @@
+[INFO] 00:31:13:893 proceso/(6013:6013): 127.0.0.1
+[INFO] 00:31:13:894 proceso/(6013:6013): 8000
+[INFO] 00:33:14:639 proceso/(6149:6149): 127.0.0.1
+[INFO] 00:33:14:640 proceso/(6149:6149): 8000
+[INFO] 00:33:47:189 proceso/(6202:6202): 127.0.0.1
+[INFO] 00:33:47:190 proceso/(6202:6202): 8000
+[INFO] 00:36:58:089 proceso/(6347:6347): 127.0.0.1
+[INFO] 00:36:58:090 proceso/(6347:6347): 8000
+[INFO] 00:37:39:809 proceso/(6431:6431): 127.0.0.1
+[INFO] 00:37:39:809 proceso/(6431:6431): 8000
+[INFO] 00:39:24:819 proceso/(6567:6567): 127.0.0.1
+[INFO] 00:39:24:820 proceso/(6567:6567): 8000
+[ERROR] 00:39:24:820 proceso/(6567:6567): La instruccion esperaba mas/menos parametros
+[INFO] 00:40:22:407 proceso/(6641:6641): 127.0.0.1
+[INFO] 00:40:22:408 proceso/(6641:6641): 8000
+[INFO] 00:40:22:409 proceso/(6641:6641): 2 ../consola.config 
+
+[INFO] 00:40:22:409 proceso/(6641:6641): 10 ../consola.config 
+
+[INFO] 00:40:22:409 proceso/(6641:6641): 5 ../consola.config 
+
+[INFO] 00:40:22:410 proceso/(6641:6641): 4 ../consola.config 
+
+[INFO] 00:40:22:410 proceso/(6641:6641): 6 ../consola.config 
+
+[ERROR] 00:40:22:410 proceso/(6641:6641): La instruccion no es valida
+[INFO] 00:41:58:346 proceso/(6676:6676): 127.0.0.1
+[INFO] 00:41:58:347 proceso/(6676:6676): 8000
+[INFO] 00:41:58:347 proceso/(6676:6676): 2 ../consola.config 
+
+[INFO] 00:41:58:348 proceso/(6676:6676): 10 ../consola.config 
+
+[INFO] 00:41:58:348 proceso/(6676:6676): 5 ../consola.config 
+
+[INFO] 00:41:58:348 proceso/(6676:6676): 4 ../consola.config 
+
+[INFO] 00:41:58:349 proceso/(6676:6676): 6 ../consola.config 
+
+[INFO] 00:41:58:349 proceso/(6676:6676): 3 ../consola.config 
+
+[INFO] 00:41:58:349 proceso/(6676:6676): 7 ../consola.config 
+
+[ERROR] 00:41:58:349 proceso/(6676:6676): La instruccion no es valida
+[INFO] 00:43:30:939 proceso/(6729:6729): 127.0.0.1
+[INFO] 00:43:30:940 proceso/(6729:6729): 8000
+[INFO] 00:43:30:940 proceso/(6729:6729): 2 ../consola.config 
+
+[INFO] 00:43:30:940 proceso/(6729:6729): 10 ../consola.config 
+
+[INFO] 00:43:30:941 proceso/(6729:6729): 5 ../consola.config 
+
+[INFO] 00:43:30:941 proceso/(6729:6729): 4 ../consola.config 
+
+[INFO] 00:43:30:941 proceso/(6729:6729): 6 ../consola.config 
+
+[INFO] 00:43:30:942 proceso/(6729:6729): 3 ../consola.config 
+
+[INFO] 00:43:30:943 proceso/(6729:6729): 7 ../consola.config 
+
+[INFO] 00:44:51:092 proceso/(6837:6837): 127.0.0.1
+[INFO] 00:44:51:092 proceso/(6837:6837): 8000
+[INFO] 00:44:51:093 proceso/(6837:6837): 2 ../consola.config 
+
+[INFO] 00:44:51:101 proceso/(6837:6837): 10 ../consola.config 
+
+[INFO] 00:44:51:101 proceso/(6837:6837): 5 ../consola.config 
+
+[INFO] 00:44:51:102 proceso/(6837:6837): 4 ../consola.config 
+
+[INFO] 00:44:51:102 proceso/(6837:6837): 6 ../consola.config 
+
+[INFO] 00:44:51:103 proceso/(6837:6837): 3 ../consola.config 
+
+[INFO] 00:44:51:103 proceso/(6837:6837): 7 ../consola.config 
+
+[ERROR] 00:44:51:103 proceso/(6837:6837): La instruccion no es valida
+[INFO] 00:48:31:240 proceso/(7117:7117): 127.0.0.1
+[INFO] 00:48:31:243 proceso/(7117:7117): 8000
+[INFO] 00:48:31:244 proceso/(7117:7117): 2 ../consola.config 
+
+[INFO] 00:48:31:244 proceso/(7117:7117): 10 ../consola.config 
+
+[INFO] 00:48:31:245 proceso/(7117:7117): 5 ../consola.config 
+
+[INFO] 00:48:31:245 proceso/(7117:7117): 4 ../consola.config 
+
+[INFO] 00:48:31:245 proceso/(7117:7117): 6 ../consola.config 
+
+[INFO] 00:48:31:246 proceso/(7117:7117): 3 ../consola.config 
+
+[INFO] 00:48:31:246 proceso/(7117:7117): 7 ../consola.config 
+
+[ERROR] 00:48:31:246 proceso/(7117:7117): La instruccion no es valida
+[INFO] 00:50:07:680 proceso/(7240:7240): 127.0.0.1
+[INFO] 00:50:07:685 proceso/(7240:7240): 8000
+[INFO] 00:50:07:692 proceso/(7240:7240): 2 ../consola.config 
+
+[INFO] 00:50:07:692 proceso/(7240:7240): 10 ../consola.config 
+
+[INFO] 00:50:07:693 proceso/(7240:7240): 5 ../consola.config 
+
+[INFO] 00:50:07:693 proceso/(7240:7240): 4 ../consola.config 
+
+[INFO] 00:50:07:693 proceso/(7240:7240): 6 ../consola.config 
+
+[INFO] 00:50:07:694 proceso/(7240:7240): 3 ../consola.config 
+
+[INFO] 00:50:07:694 proceso/(7240:7240): 7 ../consola.config 
+
+[ERROR] 00:50:07:694 proceso/(7240:7240): La instruccion no es valida
+[INFO] 00:50:47:599 proceso/(7320:7320): 127.0.0.1
+[INFO] 00:50:47:600 proceso/(7320:7320): 8000
+[INFO] 00:50:47:600 proceso/(7320:7320): 2 ../consola.config 
+
+[INFO] 00:50:47:601 proceso/(7320:7320): 10 ../consola.config 
+
+[INFO] 00:50:47:601 proceso/(7320:7320): 5 ../consola.config 
+
+[INFO] 00:50:47:601 proceso/(7320:7320): 4 ../consola.config 
+
+[INFO] 00:50:47:601 proceso/(7320:7320): 6 ../consola.config 
+
+[INFO] 00:50:47:602 proceso/(7320:7320): 3 ../consola.config 
+
+[INFO] 00:50:47:602 proceso/(7320:7320): 7 ../consola.config 
+
+[ERROR] 00:50:47:602 proceso/(7320:7320): La instruccion no es valida
+[INFO] 00:51:08:164 proceso/(7375:7375): 127.0.0.1
+[INFO] 00:51:08:165 proceso/(7375:7375): 8000
+[INFO] 00:51:08:165 proceso/(7375:7375): 2 ../consola.config 
+
+[INFO] 00:51:08:166 proceso/(7375:7375): 10 ../consola.config 
+
+[INFO] 00:51:08:166 proceso/(7375:7375): 5 ../consola.config 
+
+[INFO] 00:51:08:166 proceso/(7375:7375): 4 ../consola.config 
+
+[INFO] 00:51:08:167 proceso/(7375:7375): 6 ../consola.config 
+
+[INFO] 00:51:08:167 proceso/(7375:7375): 3 ../consola.config 
+
+[INFO] 00:51:08:167 proceso/(7375:7375): 7 ../consola.config 
+
+[ERROR] 00:51:08:171 proceso/(7375:7375): La instruccion no es valida
+[INFO] 00:54:59:504 proceso/(7567:7567): 127.0.0.1
+[INFO] 00:54:59:505 proceso/(7567:7567): 8000
+[INFO] 00:54:59:506 proceso/(7567:7567): 2 ../consola.config 
+
+[INFO] 00:54:59:506 proceso/(7567:7567): 10 ../consola.config 
+
+[INFO] 00:54:59:506 proceso/(7567:7567): 5 ../consola.config 
+
+[INFO] 00:54:59:507 proceso/(7567:7567): 4 ../consola.config 
+
+[INFO] 00:54:59:507 proceso/(7567:7567): 6 ../consola.config 
+
+[INFO] 00:54:59:508 proceso/(7567:7567): 3 ../consola.config 
+
+[INFO] 00:54:59:508 proceso/(7567:7567): 7 ../consola.config 
+
+[INFO] 00:55:53:917 proceso/(7639:7639): 127.0.0.1
+[INFO] 00:55:53:918 proceso/(7639:7639): 8000
+[INFO] 00:55:53:918 proceso/(7639:7639): 2 ../consola.config 
+
+[INFO] 00:55:53:919 proceso/(7639:7639): 10 ../consola.config 
+
+[INFO] 00:55:53:919 proceso/(7639:7639): 5 ../consola.config 
+
+[INFO] 00:55:53:920 proceso/(7639:7639): 4 ../consola.config 
+
+[INFO] 00:55:53:920 proceso/(7639:7639): 6 ../consola.config 
+
+[INFO] 00:55:53:920 proceso/(7639:7639): 3 ../consola.config 
+
+[INFO] 00:55:53:921 proceso/(7639:7639): 7 ../consola.config 
+
+[ERROR] 00:55:53:921 proceso/(7639:7639): La instruccion no es valida
+[INFO] 00:57:34:663 proceso/(7719:7719): 127.0.0.1
+[INFO] 00:57:34:664 proceso/(7719:7719): 8000
+[INFO] 00:57:34:664 proceso/(7719:7719): 2 ../consola.config 
+
+[INFO] 00:57:34:665 proceso/(7719:7719): 10 ../consola.config 
+
+[INFO] 00:57:34:666 proceso/(7719:7719): 5 ../consola.config 
+
+[INFO] 00:57:34:667 proceso/(7719:7719): 4 ../consola.config 
+
+[INFO] 00:57:34:667 proceso/(7719:7719): 6 ../consola.config 
+
+[INFO] 00:57:34:667 proceso/(7719:7719): 3 ../consola.config 
+
+[INFO] 00:57:34:667 proceso/(7719:7719): 7 ../consola.config 
+
+[INFO] 00:58:06:518 proceso/(7813:7813): 127.0.0.1
+[INFO] 00:58:06:519 proceso/(7813:7813): 8000
+[INFO] 00:58:06:519 proceso/(7813:7813): 2 ../consola.config 
+
+[INFO] 00:58:06:519 proceso/(7813:7813): 10 ../consola.config 
+
+[INFO] 00:58:06:520 proceso/(7813:7813): 5 ../consola.config 
+
+[INFO] 00:58:06:520 proceso/(7813:7813): 4 ../consola.config 
+
+[INFO] 00:58:06:520 proceso/(7813:7813): 6 ../consola.config 
+
+[INFO] 00:58:06:520 proceso/(7813:7813): 3 ../consola.config 
+
+[INFO] 00:58:06:521 proceso/(7813:7813): 7 ../consola.config 
+
+[ERROR] 00:58:06:521 proceso/(7813:7813): La instruccion no es valida
+[INFO] 00:59:29:902 proceso/(7946:7946): 127.0.0.1
+[INFO] 00:59:29:904 proceso/(7946:7946): 8000
+[INFO] 00:59:29:904 proceso/(7946:7946): -6
+[INFO] 00:59:29:905 proceso/(7946:7946): 2 ../consola.config 
+
+[INFO] 00:59:29:905 proceso/(7946:7946): -12
+[INFO] 00:59:29:905 proceso/(7946:7946): 10 ../consola.config 
+
+[INFO] 00:59:29:905 proceso/(7946:7946): -2
+[INFO] 00:59:29:906 proceso/(7946:7946): 5 ../consola.config 
+
+[INFO] 00:59:29:906 proceso/(7946:7946): -16
+[INFO] 00:59:29:906 proceso/(7946:7946): 4 ../consola.config 
+
+[INFO] 00:59:29:906 proceso/(7946:7946): -6
+[INFO] 00:59:29:907 proceso/(7946:7946): 6 ../consola.config 
+
+[INFO] 00:59:29:907 proceso/(7946:7946): -12
+[INFO] 00:59:29:907 proceso/(7946:7946): 3 ../consola.config 
+
+[INFO] 00:59:29:910 proceso/(7946:7946): -19
+[INFO] 00:59:29:910 proceso/(7946:7946): 7 ../consola.config 
+
+[INFO] 00:59:29:910 proceso/(7946:7946): 10
+[ERROR] 00:59:29:910 proceso/(7946:7946): La instruccion no es valida
+[INFO] 01:01:02:220 proceso/(7989:7989): 127.0.0.1
+[INFO] 01:01:02:229 proceso/(7989:7989): 8000
+[INFO] 01:01:02:229 proceso/(7989:7989): 0
+[INFO] 01:01:02:230 proceso/(7989:7989): 2 ../consola.config 
+
+[INFO] 01:01:02:230 proceso/(7989:7989): -6
+[INFO] 01:01:02:231 proceso/(7989:7989): 10 ../consola.config 
+
+[INFO] 01:01:02:231 proceso/(7989:7989): 4
+[INFO] 01:01:02:231 proceso/(7989:7989): 5 ../consola.config 
+
+[INFO] 01:01:02:231 proceso/(7989:7989): -10
+[INFO] 01:01:02:232 proceso/(7989:7989): 4 ../consola.config 
+
+[INFO] 01:01:02:233 proceso/(7989:7989): 4
+[INFO] 01:01:02:233 proceso/(7989:7989): 6 ../consola.config 
+
+[INFO] 01:01:02:233 proceso/(7989:7989): -6
+[INFO] 01:01:02:233 proceso/(7989:7989): 3 ../consola.config 
+
+[INFO] 01:01:02:233 proceso/(7989:7989): -13
+[INFO] 01:01:02:234 proceso/(7989:7989): 7 ../consola.config 
+
+[INFO] 01:01:02:234 proceso/(7989:7989): 6
+[ERROR] 01:01:02:234 proceso/(7989:7989): La instruccion no es valida
+[INFO] 01:02:01:190 proceso/(8041:8041): 127.0.0.1
+[INFO] 01:02:01:191 proceso/(8041:8041): 8000
+[INFO] 01:02:01:191 proceso/(8041:8041): -6
+[INFO] 01:02:01:192 proceso/(8041:8041): 3 ../consola.config 
+
+[INFO] 01:02:01:192 proceso/(8041:8041): -12
+[INFO] 01:02:01:193 proceso/(8041:8041): 11 ../consola.config 
+
+[INFO] 01:02:01:193 proceso/(8041:8041): -2
+[INFO] 01:02:01:193 proceso/(8041:8041): 6 ../consola.config 
+
+[INFO] 01:02:01:193 proceso/(8041:8041): -16
+[INFO] 01:02:01:194 proceso/(8041:8041): 5 ../consola.config 
+
+[INFO] 01:02:01:194 proceso/(8041:8041): -6
+[INFO] 01:02:01:195 proceso/(8041:8041): 7 ../consola.config 
+
+[INFO] 01:02:01:195 proceso/(8041:8041): -12
+[INFO] 01:02:01:195 proceso/(8041:8041): 4 ../consola.config 
+
+[INFO] 01:02:01:196 proceso/(8041:8041): -19
+[INFO] 01:02:01:197 proceso/(8041:8041): 8 ../consola.config 
+
+[INFO] 01:02:01:198 proceso/(8041:8041): 10
+[ERROR] 01:02:01:198 proceso/(8041:8041): La instruccion no es valida
+[INFO] 01:03:19:015 proceso/(8130:8130): 127.0.0.1
+[INFO] 01:03:19:017 proceso/(8130:8130): 8000
+[INFO] 01:03:19:017 proceso/(8130:8130): -6
+[INFO] 01:03:19:017 proceso/(8130:8130): 2 ../consola.config 
+
+[INFO] 01:03:19:017 proceso/(8130:8130): -12
+[INFO] 01:03:19:018 proceso/(8130:8130): 10 ../consola.config 
+
+[INFO] 01:03:19:018 proceso/(8130:8130): -2
+[INFO] 01:03:19:018 proceso/(8130:8130): 5 ../consola.config 
+
+[INFO] 01:03:19:018 proceso/(8130:8130): -16
+[INFO] 01:03:19:018 proceso/(8130:8130): 4 ../consola.config 
+
+[INFO] 01:03:19:018 proceso/(8130:8130): -6
+[INFO] 01:03:19:018 proceso/(8130:8130): 6 ../consola.config 
+
+[INFO] 01:03:19:019 proceso/(8130:8130): -12
+[INFO] 01:03:19:019 proceso/(8130:8130): 3 ../consola.config 
+
+[INFO] 01:03:19:019 proceso/(8130:8130): -19
+[INFO] 01:03:19:019 proceso/(8130:8130): 7 ../consola.config 
+
+[INFO] 01:03:19:023 proceso/(8130:8130): 0
+[ERROR] 01:03:19:023 proceso/(8130:8130): La instruccion no es valida
+[INFO] 01:08:10:718 proceso/(8399:8399): 127.0.0.1
+[INFO] 01:08:10:719 proceso/(8399:8399): 8000
+[INFO] 01:08:10:743 proceso/(8399:8399): 2 ../consola.config 
+
+[INFO] 01:08:10:743 proceso/(8399:8399): 10 ../consola.config 
+
+[INFO] 01:08:10:743 proceso/(8399:8399): 5 ../consola.config 
+
+[INFO] 01:08:10:744 proceso/(8399:8399): 4 ../consola.config 
+
+[INFO] 01:08:10:744 proceso/(8399:8399): 6 ../consola.config 
+
+[INFO] 01:08:10:744 proceso/(8399:8399): 3 ../consola.config 
+
+[INFO] 01:08:10:744 proceso/(8399:8399): 7 ../consola.config 
+
+[INFO] 01:08:10:745 proceso/(8399:8399): 15 ../consola.config 
+
+[INFO] 01:08:10:745 proceso/(8399:8399): 11 ../consola.config 
+
+[INFO] 01:08:10:745 proceso/(8399:8399): 12 ../consola.config 
+
+[INFO] 01:08:10:746 proceso/(8399:8399): 13 ../consola.config 
+
+[INFO] 01:08:10:746 proceso/(8399:8399): 1 ../consola.config 
+
+[INFO] 01:08:10:746 proceso/(8399:8399): 0 ../consola.config 
+
+[INFO] 01:08:10:746 proceso/(8399:8399): 9 ../consola.config 
+
+[INFO] 01:08:10:746 proceso/(8399:8399): 8 ../consola.config 
+
+[INFO] 01:08:10:746 proceso/(8399:8399): 14 ../consola.config 
+
+[INFO] 01:09:21:939 proceso/(8434:8434): 127.0.0.1
+[INFO] 01:09:21:939 proceso/(8434:8434): 8000
+[INFO] 01:09:21:940 proceso/(8434:8434): 2 ../consola.config 
+
+[INFO] 01:09:21:940 proceso/(8434:8434): 10 ../consola.config 
+
+[INFO] 01:09:21:940 proceso/(8434:8434): 5 ../consola.config 
+
+[INFO] 01:09:21:940 proceso/(8434:8434): 4 ../consola.config 
+
+[INFO] 01:09:21:940 proceso/(8434:8434): 6 ../consola.config 
+
+[INFO] 01:09:21:941 proceso/(8434:8434): 3 ../consola.config 
+
+[INFO] 01:09:21:941 proceso/(8434:8434): 7 ../consola.config 
+
+[INFO] 01:09:21:941 proceso/(8434:8434): 15 ../consola.config 
+
+[INFO] 01:09:21:941 proceso/(8434:8434): 11 ../consola.config 
+
+[INFO] 01:09:21:941 proceso/(8434:8434): 12 ../consola.config 
+
+[INFO] 01:09:21:942 proceso/(8434:8434): 13 ../consola.config 
+
+[INFO] 01:09:21:942 proceso/(8434:8434): 1 ../consola.config 
+
+[INFO] 01:09:21:942 proceso/(8434:8434): 0 ../consola.config 
+
+[INFO] 01:09:21:942 proceso/(8434:8434): 9 ../consola.config 
+
+[INFO] 01:09:21:942 proceso/(8434:8434): 8 ../consola.config 
+
+[INFO] 01:09:21:943 proceso/(8434:8434): 14 ../consola.config 
+
+[INFO] 01:09:41:162 proceso/(8466:8466): 127.0.0.1
+[INFO] 01:09:41:166 proceso/(8466:8466): 8000
+[INFO] 01:09:41:167 proceso/(8466:8466): 2 ../consola.config 
+
+[INFO] 01:09:41:167 proceso/(8466:8466): 10 ../consola.config 
+
+[INFO] 01:09:41:168 proceso/(8466:8466): 5 ../consola.config 
+
+[INFO] 01:09:41:169 proceso/(8466:8466): 4 ../consola.config 
+
+[INFO] 01:09:41:169 proceso/(8466:8466): 6 ../consola.config 
+
+[INFO] 01:09:41:170 proceso/(8466:8466): 3 ../consola.config 
+
+[INFO] 01:09:41:178 proceso/(8466:8466): 7 ../consola.config 
+
+[INFO] 01:09:41:178 proceso/(8466:8466): 15 ../consola.config 
+
+[INFO] 01:09:41:178 proceso/(8466:8466): 11 ../consola.config 
+
+[INFO] 01:09:41:178 proceso/(8466:8466): 12 ../consola.config 
+
+[INFO] 01:09:41:178 proceso/(8466:8466): 13 ../consola.config 
+
+[INFO] 01:09:41:179 proceso/(8466:8466): 1 ../consola.config 
+
+[INFO] 01:09:41:179 proceso/(8466:8466): 0 ../consola.config 
+
+[INFO] 01:09:41:179 proceso/(8466:8466): 9 ../consola.config 
+
+[INFO] 01:09:41:179 proceso/(8466:8466): 8 ../consola.config 
+
+[INFO] 01:09:41:179 proceso/(8466:8466): 14 ../consola.config 
+
+[INFO] 01:09:59:873 proceso/(8502:8502): 127.0.0.1
+[INFO] 01:09:59:874 proceso/(8502:8502): 8000
+[INFO] 01:09:59:874 proceso/(8502:8502): 2 ../consola.config 
+
+[INFO] 01:09:59:874 proceso/(8502:8502): 10 ../consola.config 
+
+[INFO] 01:09:59:875 proceso/(8502:8502): 5 ../consola.config 
+
+[INFO] 01:09:59:875 proceso/(8502:8502): 4 ../consola.config 
+
+[INFO] 01:09:59:875 proceso/(8502:8502): 6 ../consola.config 
+
+[INFO] 01:09:59:876 proceso/(8502:8502): 3 ../consola.config 
+
+[INFO] 01:09:59:876 proceso/(8502:8502): 7 ../consola.config 
+
+[INFO] 01:09:59:876 proceso/(8502:8502): 15 ../consola.config 
+
+[INFO] 01:09:59:877 proceso/(8502:8502): 11 ../consola.config 
+
+[INFO] 01:09:59:877 proceso/(8502:8502): 12 ../consola.config 
+
+[INFO] 01:09:59:877 proceso/(8502:8502): 13 ../consola.config 
+
+[INFO] 01:09:59:881 proceso/(8502:8502): 1 ../consola.config 
+
+[INFO] 01:09:59:885 proceso/(8502:8502): 0 ../consola.config 
+
+[INFO] 01:09:59:885 proceso/(8502:8502): 9 ../consola.config 
+
+[INFO] 01:09:59:885 proceso/(8502:8502): 8 ../consola.config 
+
+[INFO] 01:09:59:885 proceso/(8502:8502): 14 ../consola.config 
+
+[INFO] 01:10:42:007 proceso/(8534:8534): 127.0.0.1
+[INFO] 01:10:42:008 proceso/(8534:8534): 8000
+[ERROR] 01:10:42:009 proceso/(8534:8534): La instruccion esperaba mas/menos parametros
+[INFO] 01:12:51:509 proceso/(8688:8688): 127.0.0.1
+[INFO] 01:12:51:510 proceso/(8688:8688): 8000
+[INFO] 01:12:51:510 proceso/(8688:8688): 2
+[INFO] 01:12:51:510 proceso/(8688:8688): 139
+[ERROR] 01:12:51:510 proceso/(8688:8688): La instruccion esperaba mas/menos parametros
+[INFO] 01:14:34:752 proceso/(8902:8902): 127.0.0.1
+[INFO] 01:14:34:753 proceso/(8902:8902): 8000
+[INFO] 01:14:34:754 proceso/(8902:8902): 2
+[INFO] 01:14:34:754 proceso/(8902:8902): 139
+[ERROR] 01:14:34:754 proceso/(8902:8902): La instruccion esperaba mas/menos parametros
+[INFO] 01:17:27:479 proceso/(9204:9204): 127.0.0.1
+[INFO] 01:17:27:490 proceso/(9204:9204): 8000
+[INFO] 01:17:27:491 proceso/(9204:9204): 2
+[INFO] 01:17:27:491 proceso/(9204:9204): 1
+[ERROR] 01:17:27:491 proceso/(9204:9204): La instruccion esperaba mas/menos parametros
+[INFO] 01:17:59:834 proceso/(9240:9240): 127.0.0.1
+[INFO] 01:17:59:835 proceso/(9240:9240): 8000
+[INFO] 01:17:59:836 proceso/(9240:9240): 2
+[INFO] 01:17:59:836 proceso/(9240:9240): 1
+[ERROR] 01:17:59:836 proceso/(9240:9240): La instruccion esperaba mas/menos parametros
+[INFO] 01:18:19:429 proceso/(9281:9281): 127.0.0.1
+[INFO] 01:18:19:430 proceso/(9281:9281): 8000
+[INFO] 01:19:01:205 proceso/(9313:9313): 127.0.0.1
+[INFO] 01:19:01:205 proceso/(9313:9313): 8000
+[INFO] 01:20:59:700 proceso/(9380:9380): 127.0.0.1
+[INFO] 01:20:59:702 proceso/(9380:9380): 8000
+[INFO] 01:22:13:867 proceso/(9437:9437): 127.0.0.1
+[INFO] 01:22:13:868 proceso/(9437:9437): 8000
+[INFO] 01:22:32:698 proceso/(9475:9475): 127.0.0.1
+[INFO] 01:22:32:698 proceso/(9475:9475): 8000
+[INFO] 01:23:27:646 proceso/(9528:9528): 127.0.0.1
+[INFO] 01:23:27:648 proceso/(9528:9528): 8000
+[INFO] 01:24:00:735 proceso/(9568:9568): 127.0.0.1
+[INFO] 01:24:00:736 proceso/(9568:9568): 8000
+[INFO] 01:24:45:143 proceso/(9636:9636): 127.0.0.1
+[INFO] 01:24:45:144 proceso/(9636:9636): 8000
+[INFO] 01:25:32:383 proceso/(9704:9704): 127.0.0.1
+[INFO] 01:25:32:387 proceso/(9704:9704): 8000
+[INFO] 01:25:32:388 proceso/(9704:9704): 2
+[INFO] 01:25:32:388 proceso/(9704:9704): 2
+[INFO] 01:25:32:388 proceso/(9704:9704): 2 AX 
+
+[INFO] 01:25:32:388 proceso/(9704:9704): 1
+[INFO] 01:25:32:389 proceso/(9704:9704): 2
+[ERROR] 01:25:32:389 proceso/(9704:9704): La instruccion esperaba mas/menos parametros
+[INFO] 01:25:32:389 proceso/(9704:9704): 10 120 
+
+[INFO] 01:25:32:389 proceso/(9704:9704): 2
+[INFO] 01:25:32:389 proceso/(9704:9704): 1
+[ERROR] 01:25:32:390 proceso/(9704:9704): La instruccion esperaba mas/menos parametros
+[INFO] 01:25:32:390 proceso/(9704:9704): 5 DISCO 
+
+[INFO] 01:25:32:390 proceso/(9704:9704): 2
+[INFO] 01:25:32:390 proceso/(9704:9704): 1
+[ERROR] 01:25:32:390 proceso/(9704:9704): La instruccion esperaba mas/menos parametros
+[INFO] 01:25:32:390 proceso/(9704:9704): 4 10 
+
+[INFO] 01:25:32:390 proceso/(9704:9704): 2
+[INFO] 01:25:32:390 proceso/(9704:9704): 1
+[ERROR] 01:25:32:391 proceso/(9704:9704): La instruccion esperaba mas/menos parametros
+[INFO] 01:25:32:391 proceso/(9704:9704): 6 DISCO 
+
+[INFO] 01:25:32:391 proceso/(9704:9704): 2
+[INFO] 01:25:32:394 proceso/(9704:9704): 2
+[INFO] 01:25:32:394 proceso/(9704:9704): 3 BX 
+
+[INFO] 01:25:32:395 proceso/(9704:9704): 2
+[INFO] 01:25:32:395 proceso/(9704:9704): 1
+[ERROR] 01:25:32:395 proceso/(9704:9704): La instruccion esperaba mas/menos parametros
+[INFO] 01:25:32:395 proceso/(9704:9704): 7 ARCHIVO 
+
+[INFO] 01:25:32:395 proceso/(9704:9704): 0
+[INFO] 01:25:32:395 proceso/(9704:9704): 1
+[ERROR] 01:25:32:395 proceso/(9704:9704): La instruccion esperaba mas/menos parametros
+[INFO] 01:30:23:792 proceso/(9789:9789): 127.0.0.1
+[INFO] 01:30:23:792 proceso/(9789:9789): 8000
+[INFO] 01:30:23:792 proceso/(9789:9789): 2
+[INFO] 01:30:23:792 proceso/(9789:9789): 2
+[INFO] 01:30:23:793 proceso/(9789:9789): 2 AX 
+
+[INFO] 01:30:23:793 proceso/(9789:9789): 2
+[INFO] 01:30:23:793 proceso/(9789:9789): 2
+[INFO] 01:30:23:793 proceso/(9789:9789): 4 120 
+
+[INFO] 01:30:23:793 proceso/(9789:9789): 1
+[INFO] 01:30:23:793 proceso/(9789:9789): 1
+[INFO] 01:30:23:793 proceso/(9789:9789): 9 DISCO 
+
+[INFO] 01:30:23:793 proceso/(9789:9789): 1
+[INFO] 01:30:23:793 proceso/(9789:9789): 1
+[INFO] 01:30:23:793 proceso/(9789:9789): 8 10 
+
+[INFO] 01:30:23:793 proceso/(9789:9789): 1
+[INFO] 01:30:23:793 proceso/(9789:9789): 1
+[INFO] 01:30:23:794 proceso/(9789:9789): 10 DISCO 
+
+[INFO] 01:30:23:794 proceso/(9789:9789): 2
+[INFO] 01:30:23:794 proceso/(9789:9789): 2
+[INFO] 01:30:23:794 proceso/(9789:9789): 3 BX 
+
+[INFO] 01:30:23:794 proceso/(9789:9789): 1
+[INFO] 01:30:23:794 proceso/(9789:9789): 1
+[INFO] 01:30:23:794 proceso/(9789:9789): 11 ARCHIVO 
+
+[INFO] 01:30:23:794 proceso/(9789:9789): 0
+[INFO] 01:30:23:794 proceso/(9789:9789): 1
+[ERROR] 01:30:23:794 proceso/(9789:9789): La instruccion esperaba mas/menos parametros
+[INFO] 01:31:08:527 proceso/(9831:9831): 127.0.0.1
+[INFO] 01:31:08:529 proceso/(9831:9831): 8000
+[INFO] 01:31:08:535 proceso/(9831:9831): 2
+[INFO] 01:31:08:536 proceso/(9831:9831): 2
+[INFO] 01:31:08:536 proceso/(9831:9831): 2 AX 
+
+[INFO] 01:31:08:537 proceso/(9831:9831): 2
+[INFO] 01:31:08:540 proceso/(9831:9831): 2
+[INFO] 01:31:08:541 proceso/(9831:9831): 4 120 
+
+[INFO] 01:31:08:541 proceso/(9831:9831): 1
+[INFO] 01:31:08:542 proceso/(9831:9831): 1
+[INFO] 01:31:08:542 proceso/(9831:9831): 9 DISCO 
+
+[INFO] 01:31:08:543 proceso/(9831:9831): 1
+[INFO] 01:31:08:544 proceso/(9831:9831): 1
+[INFO] 01:31:08:545 proceso/(9831:9831): 8 10 
+
+[INFO] 01:31:08:548 proceso/(9831:9831): 1
+[INFO] 01:31:08:550 proceso/(9831:9831): 1
+[INFO] 01:31:08:550 proceso/(9831:9831): 10 DISCO 
+
+[INFO] 01:31:08:550 proceso/(9831:9831): 2
+[INFO] 01:31:08:550 proceso/(9831:9831): 2
+[INFO] 01:31:08:550 proceso/(9831:9831): 3 BX 
+
+[INFO] 01:31:08:550 proceso/(9831:9831): 1
+[INFO] 01:31:08:551 proceso/(9831:9831): 1
+[INFO] 01:31:08:551 proceso/(9831:9831): 11 ARCHIVO 
+
+[INFO] 01:31:08:551 proceso/(9831:9831): 0
+[INFO] 01:31:08:551 proceso/(9831:9831): 1
+[ERROR] 01:31:08:551 proceso/(9831:9831): La instruccion esperaba mas/menos parametros
+[INFO] 01:31:48:422 proceso/(9883:9883): 127.0.0.1
+[INFO] 01:31:48:430 proceso/(9883:9883): 8000
+[INFO] 01:31:48:430 proceso/(9883:9883): 2
+[INFO] 01:31:48:431 proceso/(9883:9883): 2
+[INFO] 01:31:48:431 proceso/(9883:9883): 2
+[INFO] 01:31:48:431 proceso/(9883:9883): 2
+[INFO] 01:31:48:431 proceso/(9883:9883): 1
+[INFO] 01:31:48:431 proceso/(9883:9883): 1
+[INFO] 01:31:48:431 proceso/(9883:9883): 1
+[INFO] 01:31:48:431 proceso/(9883:9883): 1
+[INFO] 01:31:48:431 proceso/(9883:9883): 1
+[INFO] 01:31:48:431 proceso/(9883:9883): 1
+[INFO] 01:31:48:431 proceso/(9883:9883): 2
+[INFO] 01:31:48:432 proceso/(9883:9883): 2
+[INFO] 01:31:48:432 proceso/(9883:9883): 1
+[INFO] 01:31:48:432 proceso/(9883:9883): 1
+[INFO] 01:31:48:432 proceso/(9883:9883): 0
+[INFO] 01:31:48:432 proceso/(9883:9883): 1
+[ERROR] 01:31:48:432 proceso/(9883:9883): La instruccion esperaba mas/menos parametros
+[INFO] 01:31:48:433 proceso/(9883:9883): 2
+[INFO] 01:31:48:433 proceso/(9883:9883): 2
+[INFO] 01:31:48:433 proceso/(9883:9883): 2
+[INFO] 01:31:48:433 proceso/(9883:9883): 2
+[INFO] 01:31:48:433 proceso/(9883:9883): 2
+[INFO] 01:31:48:433 proceso/(9883:9883): 2
+[INFO] 01:31:48:433 proceso/(9883:9883): 3
+[INFO] 01:31:48:433 proceso/(9883:9883): 5
+[ERROR] 01:31:48:433 proceso/(9883:9883): La instruccion esperaba mas/menos parametros
+[INFO] 01:31:48:433 proceso/(9883:9883): 3
+[INFO] 01:31:48:434 proceso/(9883:9883): 5
+[ERROR] 01:31:48:434 proceso/(9883:9883): La instruccion esperaba mas/menos parametros
+[INFO] 01:31:48:434 proceso/(9883:9883): 1
+[INFO] 01:31:48:434 proceso/(9883:9883): 1
+[INFO] 01:31:48:434 proceso/(9883:9883): 1
+[INFO] 01:31:48:434 proceso/(9883:9883): 1
+[INFO] 01:31:48:434 proceso/(9883:9883): 0
+[INFO] 01:31:48:434 proceso/(9883:9883): 1
+[ERROR] 01:31:48:434 proceso/(9883:9883): La instruccion esperaba mas/menos parametros
+[INFO] 01:33:21:024 proceso/(10507:10507): 127.0.0.1
+[INFO] 01:33:21:024 proceso/(10507:10507): 8000
+[INFO] 01:33:21:025 proceso/(10507:10507): 2
+[INFO] 01:33:21:025 proceso/(10507:10507): 2
+[INFO] 01:33:21:025 proceso/(10507:10507): 2
+[INFO] 01:33:21:025 proceso/(10507:10507): 2
+[INFO] 01:33:21:025 proceso/(10507:10507): 1
+[INFO] 01:33:21:025 proceso/(10507:10507): 1
+[INFO] 01:33:21:025 proceso/(10507:10507): 1
+[INFO] 01:33:21:025 proceso/(10507:10507): 1
+[INFO] 01:33:21:026 proceso/(10507:10507): 1
+[INFO] 01:33:21:026 proceso/(10507:10507): 1
+[INFO] 01:33:21:026 proceso/(10507:10507): 2
+[INFO] 01:33:21:026 proceso/(10507:10507): 2
+[INFO] 01:33:21:026 proceso/(10507:10507): 1
+[INFO] 01:33:21:026 proceso/(10507:10507): 1
+[INFO] 01:33:21:026 proceso/(10507:10507): 0
+[INFO] 01:33:21:027 proceso/(10507:10507): 1
+[ERROR] 01:33:21:027 proceso/(10507:10507): La instruccion esperaba mas/menos parametros
+[INFO] 01:33:21:027 proceso/(10507:10507): 2
+[INFO] 01:33:21:027 proceso/(10507:10507): 2
+[INFO] 01:33:21:027 proceso/(10507:10507): 2
+[INFO] 01:33:21:027 proceso/(10507:10507): 2
+[INFO] 01:33:21:027 proceso/(10507:10507): 2
+[INFO] 01:33:21:028 proceso/(10507:10507): 2
+[INFO] 01:33:21:028 proceso/(10507:10507): 3
+[INFO] 01:33:21:028 proceso/(10507:10507): 5
+[ERROR] 01:33:21:028 proceso/(10507:10507): La instruccion esperaba mas/menos parametros
+[INFO] 01:33:21:028 proceso/(10507:10507): 3
+[INFO] 01:33:21:028 proceso/(10507:10507): 5
+[ERROR] 01:33:21:028 proceso/(10507:10507): La instruccion esperaba mas/menos parametros
+[INFO] 01:33:21:029 proceso/(10507:10507): 1
+[INFO] 01:33:21:029 proceso/(10507:10507): 1
+[INFO] 01:33:21:029 proceso/(10507:10507): 1
+[INFO] 01:33:21:029 proceso/(10507:10507): 1
+[INFO] 01:33:21:030 proceso/(10507:10507): 0
+[INFO] 01:33:21:030 proceso/(10507:10507): 1
+[ERROR] 01:33:21:030 proceso/(10507:10507): La instruccion esperaba mas/menos parametros
+[INFO] 01:36:15:738 proceso/(10644:10644): 127.0.0.1
+[INFO] 01:36:15:739 proceso/(10644:10644): 8000
+[INFO] 01:36:15:739 proceso/(10644:10644): 2
+[INFO] 01:36:15:739 proceso/(10644:10644): 2
+[INFO] 01:36:15:739 proceso/(10644:10644): 33
+[INFO] 01:36:15:740 proceso/(10644:10644): 2
+[INFO] 01:36:15:740 proceso/(10644:10644): 2
+[INFO] 01:36:15:740 proceso/(10644:10644): 33
+[INFO] 01:36:15:740 proceso/(10644:10644): 1
+[INFO] 01:36:15:740 proceso/(10644:10644): 1
+[INFO] 01:36:15:740 proceso/(10644:10644): 33
+[INFO] 01:36:15:740 proceso/(10644:10644): 1
+[INFO] 01:36:15:740 proceso/(10644:10644): 1
+[INFO] 01:36:15:740 proceso/(10644:10644): 33
+[INFO] 01:36:15:740 proceso/(10644:10644): 1
+[INFO] 01:36:15:741 proceso/(10644:10644): 1
+[INFO] 01:36:15:741 proceso/(10644:10644): 33
+[INFO] 01:36:15:741 proceso/(10644:10644): 2
+[INFO] 01:36:15:741 proceso/(10644:10644): 2
+[INFO] 01:36:15:741 proceso/(10644:10644): 33
+[INFO] 01:36:15:741 proceso/(10644:10644): 1
+[INFO] 01:36:15:741 proceso/(10644:10644): 1
+[INFO] 01:36:15:741 proceso/(10644:10644): 33
+[INFO] 01:36:15:741 proceso/(10644:10644): 0
+[INFO] 01:36:15:741 proceso/(10644:10644): 1
+[INFO] 01:36:15:742 proceso/(10644:10644): 33
+[ERROR] 01:36:15:742 proceso/(10644:10644): La instruccion esperaba mas/menos parametros
+[INFO] 01:36:15:742 proceso/(10644:10644): 2
+[INFO] 01:36:15:742 proceso/(10644:10644): 2
+[INFO] 01:36:15:742 proceso/(10644:10644): 33
+[INFO] 01:36:15:742 proceso/(10644:10644): 2
+[INFO] 01:36:15:742 proceso/(10644:10644): 2
+[INFO] 01:36:15:742 proceso/(10644:10644): 33
+[INFO] 01:36:15:742 proceso/(10644:10644): 2
+[INFO] 01:36:15:742 proceso/(10644:10644): 2
+[INFO] 01:36:15:742 proceso/(10644:10644): 33
+[INFO] 01:36:15:742 proceso/(10644:10644): 3
+[INFO] 01:36:15:743 proceso/(10644:10644): 5
+[INFO] 01:36:15:743 proceso/(10644:10644): 33
+[ERROR] 01:36:15:743 proceso/(10644:10644): La instruccion esperaba mas/menos parametros
+[INFO] 01:36:15:743 proceso/(10644:10644): 3
+[INFO] 01:36:15:743 proceso/(10644:10644): 5
+[INFO] 01:36:15:743 proceso/(10644:10644): 33
+[ERROR] 01:36:15:743 proceso/(10644:10644): La instruccion esperaba mas/menos parametros
+[INFO] 01:36:15:743 proceso/(10644:10644): 1
+[INFO] 01:36:15:743 proceso/(10644:10644): 1
+[INFO] 01:36:15:743 proceso/(10644:10644): 33
+[INFO] 01:36:15:743 proceso/(10644:10644): 1
+[INFO] 01:36:15:743 proceso/(10644:10644): 1
+[INFO] 01:36:15:743 proceso/(10644:10644): 33
+[INFO] 01:36:15:744 proceso/(10644:10644): 0
+[INFO] 01:36:15:744 proceso/(10644:10644): 1
+[INFO] 01:36:15:744 proceso/(10644:10644): 33
+[ERROR] 01:36:15:744 proceso/(10644:10644): La instruccion esperaba mas/menos parametros
+[INFO] 01:37:56:120 proceso/(10762:10762): 127.0.0.1
+[INFO] 01:37:56:120 proceso/(10762:10762): 8000
+[INFO] 01:37:56:121 proceso/(10762:10762): 2
+[INFO] 01:37:56:121 proceso/(10762:10762): 2
+[INFO] 01:37:56:121 proceso/(10762:10762): 2
+[INFO] 01:37:56:121 proceso/(10762:10762): 2
+[INFO] 01:37:56:121 proceso/(10762:10762): 1
+[INFO] 01:37:56:121 proceso/(10762:10762): 1
+[INFO] 01:37:56:121 proceso/(10762:10762): 1
+[INFO] 01:37:56:121 proceso/(10762:10762): 1
+[INFO] 01:37:56:121 proceso/(10762:10762): 1
+[INFO] 01:37:56:121 proceso/(10762:10762): 1
+[INFO] 01:37:56:121 proceso/(10762:10762): 2
+[INFO] 01:37:56:121 proceso/(10762:10762): 2
+[INFO] 01:37:56:122 proceso/(10762:10762): 1
+[INFO] 01:37:56:122 proceso/(10762:10762): 1
+[INFO] 01:37:56:122 proceso/(10762:10762): 0
+[INFO] 01:37:56:122 proceso/(10762:10762): 1
+[ERROR] 01:37:56:122 proceso/(10762:10762): La instruccion esperaba mas/menos parametros
+[INFO] 01:37:56:122 proceso/(10762:10762): 2
+[INFO] 01:37:56:122 proceso/(10762:10762): 2
+[INFO] 01:37:56:122 proceso/(10762:10762): 2
+[INFO] 01:37:56:122 proceso/(10762:10762): 2
+[INFO] 01:37:56:122 proceso/(10762:10762): 2
+[INFO] 01:37:56:123 proceso/(10762:10762): 2
+[INFO] 01:37:56:123 proceso/(10762:10762): 3
+[INFO] 01:37:56:123 proceso/(10762:10762): 5
+[ERROR] 01:37:56:123 proceso/(10762:10762): La instruccion esperaba mas/menos parametros
+[INFO] 01:37:56:124 proceso/(10762:10762): 3
+[INFO] 01:37:56:124 proceso/(10762:10762): 5
+[ERROR] 01:37:56:124 proceso/(10762:10762): La instruccion esperaba mas/menos parametros
+[INFO] 01:37:56:124 proceso/(10762:10762): 1
+[INFO] 01:37:56:124 proceso/(10762:10762): 1
+[INFO] 01:37:56:124 proceso/(10762:10762): 1
+[INFO] 01:37:56:124 proceso/(10762:10762): 1
+[INFO] 01:37:56:124 proceso/(10762:10762): 0
+[INFO] 01:37:56:124 proceso/(10762:10762): 1
+[ERROR] 01:37:56:124 proceso/(10762:10762): La instruccion esperaba mas/menos parametros
+[INFO] 01:40:06:404 proceso/(10924:10924): 127.0.0.1
+[INFO] 01:40:06:404 proceso/(10924:10924): 8000
+[INFO] 01:40:06:404 proceso/(10924:10924): 2
+[INFO] 01:40:06:405 proceso/(10924:10924): 2
+[INFO] 01:40:06:405 proceso/(10924:10924): 2
+[INFO] 01:40:06:405 proceso/(10924:10924): 2
+[INFO] 01:40:06:405 proceso/(10924:10924): 1
+[INFO] 01:40:06:405 proceso/(10924:10924): 1
+[INFO] 01:40:06:405 proceso/(10924:10924): 1
+[INFO] 01:40:06:405 proceso/(10924:10924): 1
+[INFO] 01:40:06:405 proceso/(10924:10924): 1
+[INFO] 01:40:06:406 proceso/(10924:10924): 1
+[INFO] 01:40:06:406 proceso/(10924:10924): 2
+[INFO] 01:40:06:406 proceso/(10924:10924): 2
+[INFO] 01:40:06:406 proceso/(10924:10924): 1
+[INFO] 01:40:06:406 proceso/(10924:10924): 1
+[INFO] 01:40:06:406 proceso/(10924:10924): 0
+[INFO] 01:40:06:406 proceso/(10924:10924): 1
+[INFO] 01:40:06:407 proceso/(10924:10924): 2
+[INFO] 01:40:06:407 proceso/(10924:10924): 2
+[INFO] 01:40:06:407 proceso/(10924:10924): 2
+[INFO] 01:40:06:407 proceso/(10924:10924): 2
+[INFO] 01:40:06:407 proceso/(10924:10924): 2
+[INFO] 01:40:06:407 proceso/(10924:10924): 2
+[INFO] 01:40:06:407 proceso/(10924:10924): 3
+[INFO] 01:40:06:407 proceso/(10924:10924): 5
+[INFO] 01:40:06:407 proceso/(10924:10924): 3
+[INFO] 01:40:06:407 proceso/(10924:10924): 5
+[INFO] 01:40:06:408 proceso/(10924:10924): 1
+[INFO] 01:40:06:408 proceso/(10924:10924): 1
+[INFO] 01:40:06:408 proceso/(10924:10924): 1
+[INFO] 01:40:06:408 proceso/(10924:10924): 1
+[INFO] 01:40:06:408 proceso/(10924:10924): 0
+[INFO] 01:40:06:408 proceso/(10924:10924): 1
+[INFO] 01:42:00:309 proceso/(11022:11022): 127.0.0.1
+[INFO] 01:42:00:310 proceso/(11022:11022): 8000
+[INFO] 01:42:23:113 proceso/(11046:11046): 127.0.0.1
+[INFO] 01:42:23:120 proceso/(11046:11046): 8000
+[ERROR] 01:42:23:121 proceso/(11046:11046): La instruccion esperaba 1 parametros, pero recibio 2 paremtros
+[ERROR] 01:42:23:121 proceso/(11046:11046): La instruccion esperaba 1 parametros, pero recibio 2 paremtros
+[ERROR] 01:42:23:122 proceso/(11046:11046): La instruccion esperaba 3 parametros, pero recibio 5 paremtros
+[ERROR] 01:42:23:122 proceso/(11046:11046): La instruccion esperaba 3 parametros, pero recibio 18 paremtros
+[INFO] 01:43:36:416 proceso/(11109:11109): 127.0.0.1
+[INFO] 01:43:36:421 proceso/(11109:11109): 8000
+[ERROR] 01:43:36:422 proceso/(11109:11109): WAIT esperaba 1 parametros, pero recibio 2 paremtros
+[ERROR] 01:43:36:422 proceso/(11109:11109): I/O esperaba 1 parametros, pero recibio 2 paremtros
+[ERROR] 01:43:36:423 proceso/(11109:11109): F_WRITE esperaba 3 parametros, pero recibio 5 paremtros
+[ERROR] 01:43:36:424 proceso/(11109:11109): F_READ esperaba 3 parametros, pero recibio 32 paremtros
+[INFO] 01:47:23:200 proceso/(11246:11246): 127.0.0.1
+[INFO] 01:47:23:201 proceso/(11246:11246): 8000
+[ERROR] 01:47:23:201 proceso/(11246:11246): WAIT esperaba 1 parametros, pero recibio 2 paremtros
+[ERROR] 01:47:23:201 proceso/(11246:11246): I/O esperaba 1 parametros, pero recibio 2 paremtros
+[ERROR] 01:47:23:201 proceso/(11246:11246): F_WRITE esperaba 3 parametros, pero recibio 5 paremtros
+[ERROR] 01:47:23:201 proceso/(11246:11246): F_READ esperaba 3 parametros, pero recibio 32 paremtros
+[INFO] 01:51:30:830 proceso/(11385:11385): 127.0.0.1
+[INFO] 01:51:30:839 proceso/(11385:11385): 8000
+[ERROR] 01:51:30:840 proceso/(11385:11385): WAIT esperaba 1 parametros, pero recibio 2 paremtros
+[ERROR] 01:51:30:840 proceso/(11385:11385): I/O esperaba 1 parametros, pero recibio 2 paremtros
+[ERROR] 01:51:30:841 proceso/(11385:11385): F_WRITE esperaba 3 parametros, pero recibio 5 paremtros
+[ERROR] 01:51:30:842 proceso/(11385:11385): F_READ esperaba 3 parametros, pero recibio 32 paremtros
+[INFO] 01:53:02:274 proceso/(11432:11432): 127.0.0.1
+[INFO] 01:53:02:276 proceso/(11432:11432): 8000
+[ERROR] 01:53:02:277 proceso/(11432:11432): WAIT esperaba 1 parametros, pero recibio 2 paremtros
+[ERROR] 01:53:02:277 proceso/(11432:11432): I/O esperaba 1 parametros, pero recibio 2 paremtros
+[INFO] 02:01:12:853 proceso/(11755:11755): 127.0.0.1
+[INFO] 02:01:12:854 proceso/(11755:11755): 8000
+[ERROR] 02:01:12:858 proceso/(11755:11755): WAIT esperaba 1 parametros, pero recibio 2 paremtros
+[ERROR] 02:01:12:858 proceso/(11755:11755): SIGNAL esperaba 1 parametros, pero recibio 2 paremtros
+[INFO] 02:05:04:242 proceso/(11876:11876): 127.0.0.1
+[INFO] 02:05:04:243 proceso/(11876:11876): 8000
+[INFO] 02:05:39:090 proceso/(11938:11938): 127.0.0.1
+[INFO] 02:05:39:092 proceso/(11938:11938): 8000
+[ERROR] 02:05:39:092 proceso/(11938:11938): WAIT esperaba 1 parametros, pero recibio 2 paremtros
+[ERROR] 02:05:39:093 proceso/(11938:11938): SIGNAL esperaba 1 parametros, pero recibio 2 paremtros
+[INFO] 02:09:01:207 proceso/(12094:12094): 127.0.0.1
+[INFO] 02:09:01:208 proceso/(12094:12094): 8000
+[ERROR] 02:09:01:209 proceso/(12094:12094): WAIT esperaba 1 parametros, pero recibio 2 paremtros
+[ERROR] 02:09:01:210 proceso/(12094:12094): SIGNAL esperaba 1 parametros, pero recibio 2 paremtros
+[ERROR] 02:09:01:212 proceso/(12094:12094): F_WRITE esperaba 3 parametros, pero recibio 5 paremtros
+[ERROR] 02:09:01:212 proceso/(12094:12094): F_READ esperaba 3 parametros, pero recibio 5 paremtros
+[INFO] 02:11:35:957 proceso/(12196:12196): 127.0.0.1
+[INFO] 02:11:35:958 proceso/(12196:12196): 8000
+[ERROR] 02:11:35:959 proceso/(12196:12196): WAIT esperaba 1 parametros, pero recibio 2 paremtros
+[ERROR] 02:11:35:959 proceso/(12196:12196): SIGNAL esperaba 1 parametros, pero recibio 2 paremtros
+[ERROR] 02:11:35:961 proceso/(12196:12196): F_WRITE esperaba 3 parametros, pero recibio 5 paremtros
+[ERROR] 02:11:35:961 proceso/(12196:12196): F_READ esperaba 3 parametros, pero recibio 5 paremtros
+[INFO] 02:11:58:869 proceso/(12235:12235): 127.0.0.1
+[INFO] 02:11:58:870 proceso/(12235:12235): 8000
+[ERROR] 02:11:58:871 proceso/(12235:12235): WAIT esperaba 1 parametros, pero recibio 2 paremtros
+[ERROR] 02:11:58:871 proceso/(12235:12235): SIGNAL esperaba 1 parametros, pero recibio 2 paremtros
+[ERROR] 02:11:58:873 proceso/(12235:12235): F_WRITE esperaba 3 parametros, pero recibio 5 paremtros
+[ERROR] 02:11:58:873 proceso/(12235:12235): F_READ esperaba 3 parametros, pero recibio 5 paremtros
+[INFO] 02:12:06:800 proceso/(12236:12236): 127.0.0.1
+[INFO] 02:12:06:800 proceso/(12236:12236): 8000
+[ERROR] 02:12:06:801 proceso/(12236:12236): WAIT esperaba 1 parametros, pero recibio 2 paremtros
+[ERROR] 02:12:06:802 proceso/(12236:12236): SIGNAL esperaba 1 parametros, pero recibio 2 paremtros
+[ERROR] 02:12:06:804 proceso/(12236:12236): F_WRITE esperaba 3 parametros, pero recibio 5 paremtros
+[ERROR] 02:12:06:804 proceso/(12236:12236): F_READ esperaba 3 parametros, pero recibio 5 paremtros
+[INFO] 02:13:31:833 proceso/(12341:12341): 127.0.0.1
+[INFO] 02:13:31:834 proceso/(12341:12341): 8000
+[ERROR] 02:13:31:835 proceso/(12341:12341): WAIT esperaba 1 parametros, pero recibio 2 paremtros
+[ERROR] 02:13:31:835 proceso/(12341:12341): SIGNAL esperaba 1 parametros, pero recibio 2 paremtros
+[ERROR] 02:13:31:837 proceso/(12341:12341): F_WRITE esperaba 3 parametros, pero recibio 5 paremtros
+[ERROR] 02:13:31:837 proceso/(12341:12341): F_READ esperaba 3 parametros, pero recibio 5 paremtros
+[INFO] 02:16:38:266 proceso/(12448:12448): 127.0.0.1
+[INFO] 02:16:38:267 proceso/(12448:12448): 8000
+[ERROR] 02:16:38:267 proceso/(12448:12448): WAIT esperaba 1 parametros, pero recibio 2 paremtros
+[ERROR] 02:16:38:268 proceso/(12448:12448): SIGNAL esperaba 1 parametros, pero recibio 2 paremtros
+[ERROR] 02:16:38:269 proceso/(12448:12448): F_WRITE esperaba 3 parametros, pero recibio 5 paremtros
+[ERROR] 02:16:38:269 proceso/(12448:12448): F_READ esperaba 3 parametros, pero recibio 5 paremtros
+[INFO] 02:19:40:189 proceso/(13135:13135): 127.0.0.1
+[INFO] 02:19:40:190 proceso/(13135:13135): 8000
+[ERROR] 02:19:40:191 proceso/(13135:13135): WAIT esperaba 1 parametros, pero recibio 2 paremtros
+[ERROR] 02:19:40:191 proceso/(13135:13135): SIGNAL esperaba 1 parametros, pero recibio 2 paremtros
+[ERROR] 02:19:40:191 proceso/(13135:13135): F_WRITE esperaba 3 parametros, pero recibio 5 paremtros
+[ERROR] 02:19:40:191 proceso/(13135:13135): F_READ esperaba 3 parametros, pero recibio 5 paremtros
+[INFO] 02:20:31:089 proceso/(13185:13185): 127.0.0.1
+[INFO] 02:20:31:090 proceso/(13185:13185): 8000
+[ERROR] 02:20:31:090 proceso/(13185:13185): WAIT esperaba 1 parametros, pero recibio 2 paremtros
+[ERROR] 02:20:31:092 proceso/(13185:13185): SIGNAL esperaba 1 parametros, pero recibio 2 paremtros
+[ERROR] 02:20:31:093 proceso/(13185:13185): F_WRITE esperaba 3 parametros, pero recibio 5 paremtros
+[ERROR] 02:20:31:093 proceso/(13185:13185): F_READ esperaba 3 parametros, pero recibio 5 paremtros
+[INFO] 02:21:19:364 proceso/(13226:13226): 127.0.0.1
+[INFO] 02:21:19:365 proceso/(13226:13226): 8000
+[ERROR] 02:21:19:365 proceso/(13226:13226): WAIT esperaba 1 parametros, pero recibio 2 paremtros
+[ERROR] 02:21:19:366 proceso/(13226:13226): SIGNAL esperaba 1 parametros, pero recibio 2 paremtros
+[ERROR] 02:21:19:366 proceso/(13226:13226): F_WRITE esperaba 3 parametros, pero recibio 5 paremtros
+[ERROR] 02:21:19:367 proceso/(13226:13226): F_READ esperaba 3 parametros, pero recibio 5 paremtros
+[INFO] 02:23:13:275 proceso/(13346:13346): 127.0.0.1
+[INFO] 02:23:13:276 proceso/(13346:13346): 8000
+[ERROR] 02:23:13:276 proceso/(13346:13346): WAIT esperaba 1 parametros, pero recibio 2 paremtros
+[ERROR] 02:23:13:277 proceso/(13346:13346): SIGNAL esperaba 1 parametros, pero recibio 2 paremtros
+[ERROR] 02:23:13:277 proceso/(13346:13346): F_WRITE esperaba 3 parametros, pero recibio 5 paremtros
+[ERROR] 02:23:13:278 proceso/(13346:13346): F_READ esperaba 3 parametros, pero recibio 5 paremtros
+[INFO] 02:26:00:892 proceso/(13516:13516): 127.0.0.1
+[INFO] 02:26:00:893 proceso/(13516:13516): 8000
+[ERROR] 02:26:00:893 proceso/(13516:13516): WAIT esperaba 1 parametros, pero recibio 2 paremtros
+[INFO] 02:26:58:741 proceso/(13537:13537): 127.0.0.1
+[INFO] 02:26:58:742 proceso/(13537:13537): 8000
+[ERROR] 02:26:58:742 proceso/(13537:13537): WAIT esperaba 1 parametros, pero recibio 2 paremtros
+[INFO] 02:27:09:716 proceso/(13545:13545): 127.0.0.1
+[INFO] 02:27:09:716 proceso/(13545:13545): 8000
+[ERROR] 02:27:09:717 proceso/(13545:13545): WAIT esperaba 1 parametros, pero recibio 2 paremtros
+[INFO] 02:27:20:666 proceso/(13571:13571): 127.0.0.1
+[INFO] 02:27:20:666 proceso/(13571:13571): 8000
+[ERROR] 02:27:20:667 proceso/(13571:13571): WAIT esperaba 1 parametros, pero recibio 2 paremtros
+[ERROR] 02:27:20:667 proceso/(13571:13571): SIGNAL esperaba 1 parametros, pero recibio 2 paremtros
+[ERROR] 02:27:20:668 proceso/(13571:13571): F_WRITE esperaba 3 parametros, pero recibio 5 paremtros
+[ERROR] 02:27:20:668 proceso/(13571:13571): F_READ esperaba 3 parametros, pero recibio 5 paremtros
+[INFO] 02:29:24:870 proceso/(13574:13574): 127.0.0.1
+[INFO] 02:29:24:877 proceso/(13574:13574): 8000
+[ERROR] 02:29:24:922 proceso/(13574:13574): WAIT esperaba 1 parametros, pero recibio 2 paremtros
+[ERROR] 02:29:24:923 proceso/(13574:13574): SIGNAL esperaba 1 parametros, pero recibio 2 paremtros
+[ERROR] 02:29:24:966 proceso/(13574:13574): F_WRITE esperaba 3 parametros, pero recibio 5 paremtros
+[ERROR] 02:29:24:972 proceso/(13574:13574): F_READ esperaba 3 parametros, pero recibio 5 paremtros
+[INFO] 13:56:22:118 proceso/(108701:108701): 127.0.0.1
+[INFO] 13:56:22:120 proceso/(108701:108701): 8000
+[INFO] 13:58:17:467 proceso/(108741:108741): 127.0.0.1
+[INFO] 13:58:17:469 proceso/(108741:108741): 8000
+[INFO] 14:00:10:533 proceso/(108817:108817): 127.0.0.1
+[INFO] 14:00:10:534 proceso/(108817:108817): 8000
+[INFO] 14:00:42:949 proceso/(108854:108854): 127.0.0.1
+[INFO] 14:00:42:950 proceso/(108854:108854): 8000
+[INFO] 14:01:12:848 proceso/(108893:108893): 127.0.0.1
+[INFO] 14:01:12:848 proceso/(108893:108893): 8000
+[INFO] 14:04:11:089 proceso/(108939:108939): 127.0.0.1
+[INFO] 14:04:11:090 proceso/(108939:108939): 8000
+[INFO] 14:04:14:677 proceso/(108963:108963): 127.0.0.1
+[INFO] 14:04:14:679 proceso/(108963:108963): 8000
+[INFO] 14:04:32:257 proceso/(108994:108994): 127.0.0.1
+[INFO] 14:04:32:257 proceso/(108994:108994): 8000
+[INFO] 14:04:43:600 proceso/(109025:109025): 127.0.0.1
+[INFO] 14:04:43:601 proceso/(109025:109025): 8000
+[INFO] 14:05:37:913 proceso/(109061:109061): 127.0.0.1
+[INFO] 14:05:37:913 proceso/(109061:109061): 8000
+[INFO] 14:06:14:817 proceso/(109096:109096): 127.0.0.1
+[INFO] 14:06:14:818 proceso/(109096:109096): 8000
+[INFO] 14:06:58:122 proceso/(109126:109126): 127.0.0.1
+[INFO] 14:06:58:122 proceso/(109126:109126): 8000
+[INFO] 14:08:11:963 proceso/(109167:109167): 127.0.0.1
+[INFO] 14:08:11:965 proceso/(109167:109167): 8000
+[INFO] 14:18:56:032 proceso/(109302:109302): 127.0.0.1
+[INFO] 14:18:56:034 proceso/(109302:109302): 8000
+[INFO] 14:19:01:524 proceso/(109303:109303): 127.0.0.1
+[INFO] 14:19:01:524 proceso/(109303:109303): 8000
+[INFO] 14:19:09:978 proceso/(109304:109304): 127.0.0.1
+[INFO] 14:19:09:978 proceso/(109304:109304): 8000
+[INFO] 14:19:11:522 proceso/(109305:109305): 127.0.0.1
+[INFO] 14:19:11:522 proceso/(109305:109305): 8000
+[INFO] 14:19:18:075 proceso/(109306:109306): 127.0.0.1
+[INFO] 14:19:18:075 proceso/(109306:109306): 8000
+[INFO] 14:20:01:267 proceso/(109329:109329): 127.0.0.1
+[INFO] 14:20:01:268 proceso/(109329:109329): 8000
+[INFO] 14:22:27:622 proceso/(109373:109373): 127.0.0.1
+[INFO] 14:22:27:623 proceso/(109373:109373): 8000
+[INFO] 14:23:33:499 proceso/(109417:109417): 127.0.0.1
+[INFO] 14:23:33:500 proceso/(109417:109417): 8000
+[INFO] 14:24:45:554 proceso/(109450:109450): 127.0.0.1
+[INFO] 14:24:45:554 proceso/(109450:109450): 8000
+[INFO] 14:25:06:106 proceso/(109476:109476): 127.0.0.1
+[INFO] 14:25:06:106 proceso/(109476:109476): 8000
+[INFO] 14:26:53:080 proceso/(109507:109507): 127.0.0.1
+[INFO] 14:26:53:081 proceso/(109507:109507): 8000
+[INFO] 14:27:05:424 proceso/(109513:109513): 127.0.0.1
+[INFO] 14:27:05:424 proceso/(109513:109513): 8000
+[INFO] 14:27:08:896 proceso/(109535:109535): 127.0.0.1
+[INFO] 14:27:08:896 proceso/(109535:109535): 8000
+[INFO] 14:28:58:631 proceso/(109564:109564): 127.0.0.1
+[INFO] 14:28:58:631 proceso/(109564:109564): 8000
+[INFO] 14:29:08:193 proceso/(109588:109588): 127.0.0.1
+[INFO] 14:29:08:193 proceso/(109588:109588): 8000
+[INFO] 14:29:13:459 proceso/(109611:109611): 127.0.0.1
+[INFO] 14:29:13:460 proceso/(109611:109611): 8000
+[INFO] 14:31:15:615 proceso/(109646:109646): 127.0.0.1
+[INFO] 14:31:15:615 proceso/(109646:109646): 8000
+[INFO] 14:33:17:655 proceso/(109711:109711): 127.0.0.1
+[INFO] 14:33:17:656 proceso/(109711:109711): 8000
+[INFO] 14:33:33:084 proceso/(109741:109741): 127.0.0.1
+[INFO] 14:33:33:084 proceso/(109741:109741): 8000
+[INFO] 14:33:48:198 proceso/(109768:109768): 127.0.0.1
+[INFO] 14:33:48:198 proceso/(109768:109768): 8000
+[INFO] 14:34:01:669 proceso/(109790:109790): 127.0.0.1
+[INFO] 14:34:01:669 proceso/(109790:109790): 8000
+[INFO] 14:34:11:663 proceso/(109812:109812): 127.0.0.1
+[INFO] 14:34:11:664 proceso/(109812:109812): 8000
+[INFO] 14:36:20:717 proceso/(109852:109852): 127.0.0.1
+[INFO] 14:36:20:717 proceso/(109852:109852): 8000
+[INFO] 14:36:39:707 proceso/(109880:109880): 127.0.0.1
+[INFO] 14:36:39:707 proceso/(109880:109880): 8000
+[INFO] 14:37:24:243 proceso/(109906:109906): 127.0.0.1
+[INFO] 14:37:24:243 proceso/(109906:109906): 8000
+[INFO] 14:38:36:557 proceso/(109911:109911): 127.0.0.1
+[INFO] 14:38:36:557 proceso/(109911:109911): 8000
+[INFO] 14:39:05:710 proceso/(109939:109939): 127.0.0.1
+[INFO] 14:39:05:711 proceso/(109939:109939): 8000
+[INFO] 14:39:38:806 proceso/(109971:109971): 127.0.0.1
+[INFO] 14:39:38:807 proceso/(109971:109971): 8000
+[INFO] 14:46:48:661 proceso/(110114:110114): 127.0.0.1
+[INFO] 14:46:48:662 proceso/(110114:110114): 8000
+[INFO] 14:47:20:757 proceso/(110144:110144): 127.0.0.1
+[INFO] 14:47:20:758 proceso/(110144:110144): 8000
+[INFO] 14:47:33:750 proceso/(110173:110173): 127.0.0.1
+[INFO] 14:47:33:750 proceso/(110173:110173): 8000
+[INFO] 14:48:59:881 proceso/(110229:110229): 127.0.0.1
+[INFO] 14:48:59:882 proceso/(110229:110229): 8000
+[INFO] 14:49:08:493 proceso/(110259:110259): 127.0.0.1
+[INFO] 14:49:08:494 proceso/(110259:110259): 8000
+[INFO] 14:49:28:301 proceso/(110327:110327): 127.0.0.1
+[INFO] 14:49:28:301 proceso/(110327:110327): 8000
+[INFO] 14:49:28:302 proceso/(110327:110327): Error: SET esperaba 2 parametros, pero recibió 0.
+[INFO] 14:49:28:302 proceso/(110327:110327): Error: MOV_OUT esperaba 2 parametros, pero recibió -718061401.
+[INFO] 14:49:28:302 proceso/(110327:110327): Error: WAIT esperaba 1 parametros, pero recibió -718061345.
+[INFO] 14:49:28:302 proceso/(110327:110327): Error: I/O esperaba 1 parametros, pero recibió 0.
+[INFO] 14:49:28:302 proceso/(110327:110327): Error: SIGNAL esperaba 1 parametros, pero recibió -718061345.
+[INFO] 14:49:28:303 proceso/(110327:110327): Error: MOV_IN esperaba 2 parametros, pero recibió -718061401.
+[INFO] 14:49:28:303 proceso/(110327:110327): Error: F_OPEN esperaba 1 parametros, pero recibió -718061345.
+[INFO] 14:49:28:303 proceso/(110327:110327): Error: YIELD esperaba 0 parametros, pero recibió -718061297.
+[INFO] 14:49:28:303 proceso/(110327:110327): Error: F_TRUNCATE esperaba 2 parametros, pero recibió -718061401.
+[INFO] 14:49:28:303 proceso/(110327:110327): Error: F_SEEK esperaba 2 parametros, pero recibió -718061401.
+[INFO] 14:49:28:304 proceso/(110327:110327): Error: CREATE_SEGMENT esperaba 2 parametros, pero recibió -718061401.
+[INFO] 14:49:28:304 proceso/(110327:110327): Error: F_WRITE esperaba 3 parametros, pero recibió -718061418.
+[INFO] 14:49:28:304 proceso/(110327:110327): Error: F_READ esperaba 3 parametros, pero recibió -718061418.
+[INFO] 14:49:28:304 proceso/(110327:110327): Error: DELETE_SEGMENT esperaba 1 parametros, pero recibió -718061345.
+[INFO] 14:49:28:304 proceso/(110327:110327): Error: F_CLOSE esperaba 1 parametros, pero recibió -718061345.
+[INFO] 14:49:28:305 proceso/(110327:110327): Error: EXIT esperaba 0 parametros, pero recibió -718061297.
+[INFO] 14:51:13:494 proceso/(110371:110371): 127.0.0.1
+[INFO] 14:51:13:494 proceso/(110371:110371): 8000
+[INFO] 14:51:13:495 proceso/(110371:110371): Error: SET esperaba 2 parametros, pero recibió 0.
+[INFO] 14:51:13:495 proceso/(110371:110371): Error: I/O esperaba 1 parametros, pero recibió 0.
+[INFO] 14:52:03:663 proceso/(110401:110401): 127.0.0.1
+[INFO] 14:52:03:663 proceso/(110401:110401): 8000
+[INFO] 14:52:03:663 proceso/(110401:110401): Error: SET esperaba 2 parametros, pero recibió 0.
+[INFO] 14:52:03:663 proceso/(110401:110401): Error: I/O esperaba 1 parametros, pero recibió 0.
+[INFO] 14:52:31:702 proceso/(110435:110435): 127.0.0.1
+[INFO] 14:52:31:704 proceso/(110435:110435): 8000
+[INFO] 14:52:31:705 proceso/(110435:110435): Error: SET esperaba 0 parametros, pero recibió 2.
+[INFO] 14:52:31:705 proceso/(110435:110435): Error: I/O esperaba 0 parametros, pero recibió 1.
+[INFO] 14:53:56:070 proceso/(110475:110475): 127.0.0.1
+[INFO] 14:53:56:070 proceso/(110475:110475): 8000
+[INFO] 15:18:39:096 proceso/(111696:111696): 127.0.0.1
+[INFO] 15:18:39:101 proceso/(111696:111696): 8000
+[INFO] 15:22:29:225 proceso/(112053:112053): 127.0.0.1
+[INFO] 15:22:29:228 proceso/(112053:112053): 8000
+[INFO] 15:28:57:384 proceso/(112199:112199): 127.0.0.1
+[INFO] 15:28:57:389 proceso/(112199:112199): 8000
+[INFO] 15:30:10:281 proceso/(112237:112237): 127.0.0.1
+[INFO] 15:30:10:282 proceso/(112237:112237): 8000
+[INFO] 15:30:43:199 proceso/(112270:112270): 127.0.0.1
+[INFO] 15:30:43:200 proceso/(112270:112270): 8000
+[INFO] 15:48:37:169 proceso/(112541:112541): 127.0.0.1
+[INFO] 15:48:37:171 proceso/(112541:112541): 8000
