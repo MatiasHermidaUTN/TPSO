@@ -21,7 +21,10 @@ int crear_conexion(char *ip, char* puerto)
 	                    server_info->ai_socktype,
 	                    server_info->ai_protocol);
 
-	if(connect(socket_cliente, server_info->ai_addr, server_info->ai_addrlen)) return -1;
+	if(connect(socket_cliente, server_info->ai_addr, server_info->ai_addrlen)){
+		freeaddrinfo(server_info);
+		return -1;
+	}
 
 	freeaddrinfo(server_info);
 

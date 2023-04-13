@@ -1,2 +1,7 @@
 [INFO] 23:07:20:400 proceso/(7218:7218): 127.0.0.1
 [INFO] 23:07:20:402 proceso/(7218:7218): 4444
+[INFO] 15:40:50:018 proceso/(135948:135948): 127.0.0.1
+[INFO] 15:40:50:022 proceso/(135948:135948): 8000
+[ERROR] 15:40:50:022 proceso/(135948:135948): Error al abrir archivo pseudocodigo
+[ERROR] 17:52:24:964 proceso/(141748:141748): Error al abrir archivo pseudocodigo
+[ERROR] 17:52:57:748 proceso/(141813:141813): Error al abrir archivo pseudocodigo

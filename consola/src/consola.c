@@ -11,8 +11,12 @@ typedef struct instruccion {
     t_list* parametros;
 } t_instruccion;
 
-void parsearPseudocodigo(t_log* logger, char* direccionPseudocodigo);
+t_list* parsearPseudocodigo(t_log* logger, char* direccionPseudocodigo);
 t_instruccion* parsearInstruccion(char* lineaLeida, t_log* logger, t_dictionary*);
+void destruir_instruccion(t_instruccion* instruccion);
+void destruir_parametro(char* parametro);
+void destruir_diccionario(int* cantParametros);
+void agregar_a_diccionario(t_dictionary* diccionario, char* key, int elemento);
 
 int main(int argc, char** argv) {
     t_config* config = iniciar_config("../consola.config");
@@ -24,20 +28,21 @@ int main(int argc, char** argv) {
 	log_info(logger, "%s", lectura_de_config.IP_KERNEL);//el %s es para que no tire warning para tomarlo como literal cadena
 	log_info(logger, "%s", lectura_de_config.PUERTO_KERNEL);
 
-    parsearPseudocodigo(logger, argv[1]);
+    t_list* instrucciones = parsearPseudocodigo(logger, argv[1]);
 
-	int conexion = crear_conexion(lectura_de_config.IP_KERNEL, lectura_de_config.PUERTO_KERNEL);
+	int socket_kernel = crear_conexion(lectura_de_config.IP_KERNEL, lectura_de_config.PUERTO_KERNEL);
 
-    ////// Enviamos al servidor el valor de CLAVE como mensaje
-
-    enviar_mensaje("mensaje1", conexion);
-    enviar_mensaje("mensaje2", conexion);
+    list_destroy_and_destroy_elements(instrucciones, (void *)destruir_instruccion);
+    log_destroy(logger);
+    config_destroy(config);
+    liberar_estructura_config(lectura_de_config);
+    close(socket_kernel);
 
 	//terminar_programa(conexion, logger, config);
 }
 
 
-void parsearPseudocodigo(t_log* logger, char* direccionPseudocodigo) {
+t_list* parsearPseudocodigo(t_log* logger, char* direccionPseudocodigo) {
     FILE * archivoPseudocodigo;
     char * lineaLeida = NULL;
     size_t length = 0;
@@ -48,43 +53,47 @@ void parsearPseudocodigo(t_log* logger, char* direccionPseudocodigo) {
         log_error(logger, "Error al abrir archivo pseudocodigo");
         exit(EXIT_FAILURE); 
     }
-    puts("Abrio el archivo\n");
-
 	t_dictionary* instrucciones = dictionary_create();
 
-	dictionary_put(instrucciones, "F_READ",         (void*)3);
-	dictionary_put(instrucciones, "F_WRITE",        (void*)3);
-	dictionary_put(instrucciones, "SET",            (void*)2);
-	dictionary_put(instrucciones, "MOV_IN",         (void*)2);
-	dictionary_put(instrucciones, "MOV_OUT",        (void*)2);
-	dictionary_put(instrucciones, "F_TRUNCATE",     (void*)2);
-	dictionary_put(instrucciones, "F_SEEK",         (void*)2);
-	dictionary_put(instrucciones, "CREATE_SEGMENT", (void*)2);
-	dictionary_put(instrucciones, "I/O",            (void*)1);
-	dictionary_put(instrucciones, "WAIT",           (void*)1);
-	dictionary_put(instrucciones, "SIGNAL",         (void*)1);
-	dictionary_put(instrucciones, "F_OPEN",         (void*)1);
-	dictionary_put(instrucciones, "F_CLOSE",        (void*)1);
-	dictionary_put(instrucciones, "DELETE_SEGMENT", (void*)1);
-	dictionary_put(instrucciones, "EXIT",           (void*)0);
-	dictionary_put(instrucciones, "YIELD",          (void*)0);
+	agregar_a_diccionario(instrucciones, "F_READ",         3);
+	agregar_a_diccionario(instrucciones, "F_WRITE",        3);
+	agregar_a_diccionario(instrucciones, "SET",            2);
+	agregar_a_diccionario(instrucciones, "MOV_IN",         2);
+	agregar_a_diccionario(instrucciones, "MOV_OUT",        2);
+	agregar_a_diccionario(instrucciones, "F_TRUNCATE", 	   2);
+	agregar_a_diccionario(instrucciones, "F_SEEK",    	   2);
+	agregar_a_diccionario(instrucciones, "CREATE_SEGMENT", 2);
+	agregar_a_diccionario(instrucciones, "I/O",            1);
+	agregar_a_diccionario(instrucciones, "WAIT",           1);
+	agregar_a_diccionario(instrucciones, "SIGNAL",         1);
+	agregar_a_diccionario(instrucciones, "F_OPEN",         1);
+	agregar_a_diccionario(instrucciones, "F_CLOSE",        1);
+	agregar_a_diccionario(instrucciones, "DELETE_SEGMENT", 1);
+	agregar_a_diccionario(instrucciones, "EXIT",           0);
+	agregar_a_diccionario(instrucciones, "YIELD",          0);
 
 
 
     t_list* instruccionesLeidas = list_create();
     while ((read = getline(&lineaLeida, &length, archivoPseudocodigo)) != -1) {
-		list_add(instruccionesLeidas, parsearInstruccion(lineaLeida, logger, instrucciones));
+    	t_instruccion* instruccionParseada = parsearInstruccion(lineaLeida, logger, instrucciones);
+    	list_add(instruccionesLeidas, instruccionParseada);
 		puts("");
     }
 	free(lineaLeida);
 
     fclose(archivoPseudocodigo);
+
+    dictionary_destroy_and_destroy_elements(instrucciones, (void*)destruir_diccionario);
+
+    return instruccionesLeidas;
 }
 
 t_instruccion* parsearInstruccion(char* lineaLeida, t_log* logger, t_dictionary* instrucciones) {
 	t_instruccion* instruccionAParsear = malloc(sizeof(t_instruccion));
 	char* nombreInstruccion = strtok(lineaLeida, " \n");
-	char* parametroLeido;
+	char* parametroLeido = NULL;
+	char* token;
 
     if (!nombreInstruccion) {
         log_error(logger, "Error: No se pudo leer la instruccion.");
@@ -97,22 +106,44 @@ t_instruccion* parsearInstruccion(char* lineaLeida, t_log* logger, t_dictionary*
 	instruccionAParsear->parametros = list_create();
 
 	//Agrega parámetros
-	parametroLeido = strtok(NULL, " \n");
-	while(parametroLeido) {
+	token = strtok(NULL, " \n");
+	if(token) parametroLeido = strdup(token);
+	while(token) {
 		list_add(instruccionAParsear->parametros, parametroLeido);
-		printf("%s ", parametroLeido);
 
-		parametroLeido = strtok(NULL, " \n");
+		log_info(logger,"%s ", parametroLeido);
+		token = strtok(NULL, " \n");
+		if(token) parametroLeido = strdup(token);
 	}
 
 	puts("");
 
-	//Verifica que la cantidad de parámetros sea correcta
+	//Verifica que la cantidad de parametros sea correcta
 	int cantidadDeParametrosObtenidos = list_size(instruccionAParsear->parametros);
-	int cantidadDeParametrosEsperados = (int)(intptr_t)dictionary_get(instrucciones, nombreInstruccion);
-	if(cantidadDeParametrosEsperados != cantidadDeParametrosObtenidos) {
-		log_error(logger, "Error: %s esperaba %d parametros, pero recibio %d.", nombreInstruccion, cantidadDeParametrosEsperados, cantidadDeParametrosObtenidos);
+	int* cantidadDeParametrosEsperados = (int*)dictionary_get(instrucciones, nombreInstruccion);
+	if(*cantidadDeParametrosEsperados != cantidadDeParametrosObtenidos) {
+		log_error(logger, "Error: %s esperaba %d parametros, pero recibio %d.", nombreInstruccion, *cantidadDeParametrosEsperados, cantidadDeParametrosObtenidos);
 	}
 
 	return instruccionAParsear;
+}
+
+void destruir_parametro(char* parametro){
+	free(parametro);
+}
+
+void destruir_instruccion(t_instruccion* instruccion){
+	free(instruccion->nombre);
+	list_destroy_and_destroy_elements(instruccion->parametros, (void*)destruir_parametro);
+	free(instruccion);
+}
+
+void destruir_diccionario(int* cantParametros){
+	free(cantParametros);
+}
+
+void agregar_a_diccionario(t_dictionary* diccionario, char* key, int elemento){
+	int* elemento_a_agreagar = malloc(sizeof(elemento));
+	*elemento_a_agreagar = elemento;
+	dictionary_put(diccionario, key, elemento_a_agreagar);
 }
