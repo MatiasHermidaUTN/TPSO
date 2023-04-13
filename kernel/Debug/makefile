@@ -40,7 +40,7 @@ main-build: kernel
 kernel: $(OBJS) $(USER_OBJS) makefile $(OPTIONAL_TOOL_DEPS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: GCC C Linker'
-	gcc -L"/home/utnso/tp-2023-1c-Los-Matias/shared/Debug" -o "kernel" $(OBJS) $(USER_OBJS) $(LIBS) -lcommons -lshared
+	gcc -L"/home/utnso/Documents/tp-2023-1c-Los-Matias/shared/Debug" -o "kernel" $(OBJS) $(USER_OBJS) $(LIBS) -lcommons -lpthread -lshared
 	@echo 'Finished building target: $@'
 	@echo ' '
 

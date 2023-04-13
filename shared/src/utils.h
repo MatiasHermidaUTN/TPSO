@@ -15,13 +15,20 @@
 #include<commons/log.h>
 #include<commons/config.h>
 
-
-
 typedef enum
 {
 	MENSAJE,
 	PAQUETE
 }op_code;
+
+typedef enum
+{
+	KERNEL,
+	CPU,
+	FILESYSTEM,
+	OK,
+	ERROR,
+}t_handshake;
 
 typedef struct
 {
@@ -34,6 +41,7 @@ typedef struct
 	op_code codigo_operacion;
 	t_buffer* buffer;
 } t_paquete;
+
 
 
 /*
@@ -80,6 +88,8 @@ t_config* iniciar_config(char* path);
 
 t_log* iniciar_logger(char* path,char* nombre);
 
+t_handshake recibir_handshake(int socket_cliente);
 
+void enviar_handshake(int socket, t_handshake t_handshake);
 
 #endif /* UTILS_H_ */

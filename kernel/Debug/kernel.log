@@ -1,0 +1,16 @@
+[ERROR] 14:59:41:943 proceso/(134606:134606): 4
+[ERROR] 14:59:45:792 proceso/(134607:134607): 4
+[ERROR] 14:59:46:630 proceso/(134608:134608): 4
+[ERROR] 14:59:47:412 proceso/(134609:134609): 4
+[ERROR] 14:59:56:076 proceso/(134611:134611): 4
+[ERROR] 15:02:06:938 proceso/(134730:134730): -1
+[ERROR] 15:04:46:413 proceso/(134928:134928): error MATI
+[ERROR] 15:07:39:927 proceso/(135070:135070): El kernel no pudo conectarse a la memoria);
+[ERROR] 15:11:49:238 proceso/(135392:135392): El kernel no pudo conectarse a el CPU
+[INFO] 15:23:24:416 proceso/(135729:135750): se conecto una consola
+[INFO] 15:23:41:230 proceso/(135729:135752): se conecto una consola
+[INFO] 15:23:43:625 proceso/(135729:135754): se conecto una consola
+[INFO] 15:23:44:232 proceso/(135729:135756): se conecto una consola
+[INFO] 15:23:44:778 proceso/(135729:135758): se conecto una consola
+[INFO] 15:23:45:290 proceso/(135729:135760): se conecto una consola
+[INFO] 15:23:45:875 proceso/(135729:135762): se conecto una consola

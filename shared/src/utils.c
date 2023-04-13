@@ -21,7 +21,7 @@ int crear_conexion(char *ip, char* puerto)
 	                    server_info->ai_socktype,
 	                    server_info->ai_protocol);
 
-	connect(socket_cliente, server_info->ai_addr, server_info->ai_addrlen);
+	if(connect(socket_cliente, server_info->ai_addr, server_info->ai_addrlen)) return -1;
 
 	freeaddrinfo(server_info);
 
@@ -89,11 +89,7 @@ int iniciar_servidor(char* IP, char* PUERTO)
 
 int esperar_cliente(int socket_servidor)
 {
-
-	// Aceptamos un nuevo cliente
 	int socket_cliente = accept(socket_servidor, NULL, NULL);
-	//log_info(logger, "Se conecto un cliente!");
-
 	return socket_cliente;
 }
 
@@ -177,4 +173,15 @@ t_log* iniciar_logger(char* path,char* nombre)
 	}
 
 	return nuevo_logger;
+}
+
+t_handshake recibir_handshake(int socket_cliente){
+	t_handshake rta_handshake;
+	recv(socket_cliente, &rta_handshake, sizeof(rta_handshake), MSG_WAITALL);
+	return rta_handshake;
+}
+
+void enviar_handshake(int socket, t_handshake msg_hanshake){
+	//TODO: Falta fijarse si da error
+	send(socket, &msg_hanshake, sizeof(msg_hanshake), 0);
 }

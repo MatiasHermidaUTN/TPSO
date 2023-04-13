@@ -87,7 +87,7 @@ t_instruccion* parsearInstruccion(char* lineaLeida, t_log* logger, t_dictionary*
 	char* parametroLeido;
 
     if (!nombreInstruccion) {
-        log_info(logger, "Error: No se pudo leer la instruccion.");
+        log_error(logger, "Error: No se pudo leer la instruccion.");
         exit(EXIT_FAILURE);
     }
     //Agrega nombre de instrucción
@@ -111,7 +111,7 @@ t_instruccion* parsearInstruccion(char* lineaLeida, t_log* logger, t_dictionary*
 	int cantidadDeParametrosObtenidos = list_size(instruccionAParsear->parametros);
 	int cantidadDeParametrosEsperados = (int)(intptr_t)dictionary_get(instrucciones, nombreInstruccion);
 	if(cantidadDeParametrosEsperados != cantidadDeParametrosObtenidos) {
-		log_info(logger, "Error: %s esperaba %d parametros, pero recibió %d.", nombreInstruccion, cantidadDeParametrosEsperados, cantidadDeParametrosObtenidos);
+		log_error(logger, "Error: %s esperaba %d parametros, pero recibio %d.", nombreInstruccion, cantidadDeParametrosEsperados, cantidadDeParametrosObtenidos);
 	}
 
 	return instruccionAParsear;

@@ -4,14 +4,17 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
+../src/conexiones_kernel.c \
 ../src/configuracion_kernel.c \
 ../src/kernel.c 
 
 C_DEPS += \
+./src/conexiones_kernel.d \
 ./src/configuracion_kernel.d \
 ./src/kernel.d 
 
 OBJS += \
+./src/conexiones_kernel.o \
 ./src/configuracion_kernel.o \
 ./src/kernel.o 
 
@@ -20,7 +23,7 @@ OBJS += \
 src/%.o: ../src/%.c src/subdir.mk
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C Compiler'
-	gcc -I"/home/utnso/tp-2023-1c-Los-Matias/shared/src" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$@" -o "$@" "$<"
+	gcc -I"/home/utnso/Documents/tp-2023-1c-Los-Matias/shared/src" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$@" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
@@ -28,7 +31,7 @@ src/%.o: ../src/%.c src/subdir.mk
 clean: clean-src
 
 clean-src:
-	-$(RM) ./src/configuracion_kernel.d ./src/configuracion_kernel.o ./src/kernel.d ./src/kernel.o
+	-$(RM) ./src/conexiones_kernel.d ./src/conexiones_kernel.o ./src/configuracion_kernel.d ./src/configuracion_kernel.o ./src/kernel.d ./src/kernel.o
 
 .PHONY: clean-src
 
