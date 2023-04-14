@@ -10,7 +10,7 @@
 #include <stdio.h>
 #include "configuracion_consola.h" // Fijarse si está bien
 #include "parser.h"
-#include "comunicacion.h"
+#include "comunicaciones_consola.h"
 
 void destruir_instruccion(t_instruccion* instruccion);
 void destruir_parametro(char* parametro);

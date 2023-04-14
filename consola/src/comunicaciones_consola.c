@@ -1,8 +1,8 @@
-#include "../include/comunicacion.h"
+#include "../include/comunicaciones_consola.h"
 
 int enviar_instrucciones(int socket_kernel, t_list* instrucciones){
 	int size = calculo_tamanio_msj(instrucciones);
-    log_warning(logger, "Cant bytes a mandar: %d", size);
+    //printf("Los bytes con instrucciones son: %d\n", size);
 	void* a_enviar = serializar_instrucciones(instrucciones, size);
 
 	send(socket_kernel, a_enviar, size, 0);
@@ -13,12 +13,15 @@ int enviar_instrucciones(int socket_kernel, t_list* instrucciones){
 
 void* serializar_instrucciones(t_list* instrucciones, int size){
     void* stream = malloc(size);
+    size_t size_payload = size - sizeof(op_code) - sizeof(size_t);
     int desplazamiento = 0;
 
     //copio op code de msj
     op_code op_code1 = LIST_INSTRUCCIONES;
     memcpy(stream, &(op_code1), sizeof(op_code));								//pongo op_code
     desplazamiento += sizeof(op_code);
+    memcpy(stream + desplazamiento, &(size_payload), sizeof(size_t));								//pongo op_code
+    desplazamiento += sizeof(size_t);
 
     for(int i = 0 ; i < instrucciones->elements_count ; i++){
 		t_instruccion* instruccion = (t_instruccion*)list_get(instrucciones, i);
@@ -38,7 +41,7 @@ void* serializar_instrucciones(t_list* instrucciones, int size){
 			desplazamiento+= largo_nombre;
 	    }
 	}
-    log_warning(logger, "Los bytes en el stream son: %d\n", desplazamiento);
+    printf("Los bytes en el stream son: %d\n", desplazamiento);
 
     return stream;
 }
@@ -46,6 +49,7 @@ void* serializar_instrucciones(t_list* instrucciones, int size){
 int calculo_tamanio_msj(t_list* instrucciones){
 	int size = 0;
     size += sizeof(op_code);
+    size += sizeof(size_t);
 	for(int i = 0; i < instrucciones->elements_count; i++){
 		t_instruccion* instruccion = (t_instruccion*)list_get(instrucciones, i);
 	    size += sizeof(size_t)	//para decir cuantos char son el nombre de instruccion

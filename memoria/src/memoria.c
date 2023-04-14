@@ -1,7 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <utils.h>
 #include <commons/log.h>
+
+#include "../../shared/include/utils.h"
 #include "../include/configuracion_memoria.h"
 #include "../include/conexiones_memoria.h"
 

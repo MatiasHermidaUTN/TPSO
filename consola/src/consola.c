@@ -12,11 +12,14 @@ int main(int argc, char** argv) {
 
     // ***** PARSEAR INSTRUCCIONES ***** /
     t_list* instrucciones = parsearPseudocodigo(logger, argv[1]);
+    //log_warning(logger, "Cant bytes a mandar: %d", calculo_tamanio_msj(instrucciones));
 
     // ***** CONECTAR A KERNEL ***** /
 	int socket_kernel = crear_conexion(lectura_de_config.IP_KERNEL, lectura_de_config.PUERTO_KERNEL);
 	// ***** ENVIAR INSTRUCCIONES A KERNEL ***** //
 	enviar_instrucciones(socket_kernel, instrucciones);
+	//esperar_confirmacion(socket_kernel);
+	//esperar_fin_proceso(socket_kernel);
 
 	// ***** LIBERAR MEMORIA Y CERRAR ***** //
     list_destroy_and_destroy_elements(instrucciones, (void *)destruir_instruccion);

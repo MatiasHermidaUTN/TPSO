@@ -3,7 +3,9 @@
 #include <pthread.h>
 #include <commons/log.h>
 #include <utils.h>
+#include <commons/collections/list.h>
 #include "configuracion_kernel.h"
+#include "comunicaciones_kernel.h"
 
 typedef struct args_recibir_conexiones{
 	int socket_cliente;

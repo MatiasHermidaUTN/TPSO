@@ -23,3 +23,76 @@
 [INFO] 02:50:57:288 proceso/(20722:20736): se conecto una consola
 [INFO] 02:50:57:687 proceso/(20722:20738): se conecto una consola
 [INFO] 02:50:58:831 proceso/(20722:20740): se conecto una consola
+[ERROR] 12:03:10:961 proceso/(3863:3863): El kernel no pudo conectarse a la memoria
+[ERROR] 12:03:25:762 proceso/(3876:3876): El kernel no pudo conectarse a la memoria
+[INFO] 12:04:50:632 proceso/(3989:3991): se conecto una consola
+[INFO] 12:04:50:632 proceso/(3989:3991): Consola mandando instrucciones
+[INFO] 12:55:30:460 proceso/(6467:6469): se conecto una consola
+[INFO] 12:55:30:460 proceso/(6467:6469): Consola mandando instrucciones
+[INFO] 12:57:18:119 proceso/(6562:6564): se conecto una consola
+[INFO] 12:57:18:119 proceso/(6562:6564): Consola mandando instrucciones
+[INFO] 12:59:45:466 proceso/(6731:6733): se conecto una consola
+[INFO] 12:59:45:467 proceso/(6731:6733): Consola mandando instrucciones
+[INFO] 13:01:33:805 proceso/(6797:6799): se conecto una consola
+[INFO] 13:01:33:806 proceso/(6797:6799): Consola mandando instrucciones
+[INFO] 13:03:05:168 proceso/(6890:6892): se conecto una consola
+[INFO] 13:03:05:168 proceso/(6890:6892): Consola mandando instrucciones
+[INFO] 13:04:22:474 proceso/(6948:6950): se conecto una consola
+[INFO] 13:04:22:474 proceso/(6948:6950): Consola mandando instrucciones
+[INFO] 13:05:08:506 proceso/(7006:7008): se conecto una consola
+[INFO] 13:05:08:507 proceso/(7006:7008): Consola mandando instrucciones
+[INFO] 13:07:21:430 proceso/(7093:7095): se conecto una consola
+[INFO] 13:07:21:430 proceso/(7093:7095): Consola mandando instrucciones
+[INFO] 13:11:07:772 proceso/(7138:7140): se conecto una consola
+[INFO] 13:11:07:773 proceso/(7138:7140): Consola mandando instrucciones
+[INFO] 13:20:52:860 proceso/(7455:7457): se conecto una consola
+[INFO] 13:20:52:861 proceso/(7455:7457): Consola mandando instrucciones
+[INFO] 13:22:20:118 proceso/(7521:7523): se conecto una consola
+[INFO] 13:22:20:118 proceso/(7521:7523): Consola mandando instrucciones
+[INFO] 13:35:00:225 proceso/(8053:8055): se conecto una consola
+[INFO] 13:35:00:226 proceso/(8053:8055): Consola mandando instrucciones
+[INFO] 13:35:21:898 proceso/(8090:8092): se conecto una consola
+[INFO] 13:35:21:898 proceso/(8090:8092): Consola mandando instrucciones
+[INFO] 13:37:45:502 proceso/(8172:8174): se conecto una consola
+[INFO] 13:37:45:502 proceso/(8172:8174): Consola mandando instrucciones
+[INFO] 13:38:07:454 proceso/(8209:8211): se conecto una consola
+[INFO] 13:38:07:454 proceso/(8209:8211): Consola mandando instrucciones
+[INFO] 13:39:44:737 proceso/(8305:8307): se conecto una consola
+[INFO] 13:39:44:737 proceso/(8305:8307): Consola mandando instrucciones
+[INFO] 13:40:02:665 proceso/(8320:8322): se conecto una consola
+[INFO] 13:40:02:665 proceso/(8320:8322): Consola mandando instrucciones
+[INFO] 13:40:03:746 proceso/(8320:8324): se conecto una consola
+[INFO] 13:40:03:746 proceso/(8320:8324): Consola mandando instrucciones
+[INFO] 13:42:04:084 proceso/(8443:8445): se conecto una consola
+[INFO] 13:42:04:085 proceso/(8443:8445): Consola mandando instrucciones
+[INFO] 13:43:19:991 proceso/(8522:8524): se conecto una consola
+[INFO] 13:43:19:991 proceso/(8522:8524): Consola mandando instrucciones
+[INFO] 13:44:13:760 proceso/(8607:8609): se conecto una consola
+[INFO] 13:44:13:760 proceso/(8607:8609): Consola mandando instrucciones
+[INFO] 13:45:04:641 proceso/(8646:8648): se conecto una consola
+[INFO] 13:45:04:642 proceso/(8646:8648): Consola mandando instrucciones
+[INFO] 13:45:27:442 proceso/(8684:8686): se conecto una consola
+[INFO] 13:45:27:442 proceso/(8684:8686): Consola mandando instrucciones
+[INFO] 13:45:54:163 proceso/(8733:8735): se conecto una consola
+[INFO] 13:45:54:163 proceso/(8733:8735): Consola mandando instrucciones
+[INFO] 13:48:25:943 proceso/(8886:8888): se conecto una consola
+[INFO] 13:48:25:943 proceso/(8886:8888): Consola mandando instrucciones
+[INFO] 13:48:47:231 proceso/(8924:8926): se conecto una consola
+[INFO] 13:48:47:231 proceso/(8924:8926): Consola mandando instrucciones
+[INFO] 13:50:02:545 proceso/(8973:8975): se conecto una consola
+[INFO] 13:50:02:545 proceso/(8973:8975): Consola mandando instrucciones
+[INFO] 14:00:34:650 proceso/(9740:9742): se conecto una consola
+[INFO] 14:00:34:650 proceso/(9740:9742): Consola mandando instrucciones
+[INFO] 14:00:37:457 proceso/(9740:9744): se conecto una consola
+[INFO] 14:00:37:458 proceso/(9740:9744): Consola mandando instrucciones
+[INFO] 14:04:06:583 proceso/(9946:9948): se conecto una consola
+[INFO] 14:04:06:583 proceso/(9946:9948): Consola mandando instrucciones
+[INFO] 14:04:18:119 proceso/(9946:9974): se conecto una consola
+[INFO] 14:04:18:119 proceso/(9946:9974): Consola mandando instrucciones
+[INFO] 14:04:24:088 proceso/(9975:9977): se conecto una consola
+[INFO] 14:04:24:088 proceso/(9975:9977): Consola mandando instrucciones
+[ERROR] 14:10:38:408 proceso/(10209:10209): El kernel no pudo conectarse a la memoria
+[INFO] 14:10:58:698 proceso/(10241:10243): se conecto una consola
+[INFO] 14:10:58:698 proceso/(10241:10243): Consola mandando instrucciones
+[INFO] 14:11:00:786 proceso/(10241:10245): se conecto una consola
+[INFO] 14:11:00:786 proceso/(10241:10245): Consola mandando instrucciones

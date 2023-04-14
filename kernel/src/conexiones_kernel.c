@@ -23,9 +23,22 @@ void manejar_conexion(void* args){
 
 	log_info(logger, "se conecto una consola");
 
-
 	//TODO: Implementar
-	//recibir msj y deserializarlo -> ver comunicacion.c de consola
+	op_code cod_op = recibir_operacion(socket_consola);
+	switch(cod_op){
+		case LIST_INSTRUCCIONES:
+			log_info(logger, "Consola mandando instrucciones");
+			//recibir msj y deserializarlo
+			t_list* instrucciones = recibir_instrucciones(socket_consola);
+			//enviar_confirmacion_recepcion(socket_consola);
+			//**prueba con consola**
+			print_l_instrucciones(instrucciones);
+			//sleep(10);
+			//enviar_fin_proceso(socket_consola);
+			break;
+		default:
+			log_error(logger, "Error en el handshake");
+	}
 }
 
 void init_conexiones(t_kernel_config lectura_de_config, t_log* logger, int* socket_memoria, int* socket_cpu, int* socket_fileSystem){

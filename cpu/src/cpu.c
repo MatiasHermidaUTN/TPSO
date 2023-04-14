@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <utils.h>
+
+#include "../../shared/include/utils.h"
 #include "../include/configuracion_cpu.h"
 
 
