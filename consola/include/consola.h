@@ -1,12 +1,18 @@
 #ifndef CONSOLA_H_
 #define CONSOLA_H_
 
-struct consola_config {
-    char* IP_KERNEL;
-    char* PUERTO_KERNEL;
-} t_consola_config;
+#include <utils.h>
+#include <commons/string.h>
+#include <commons/config.h>
+#include <commons/log.h>
+#include <commons/collections/dictionary.h>
+#include <commons/collections/list.h>
+#include <stdio.h>
+#include "configuracion_consola.h" // Fijarse si está bien
+#include "parser.h"
+#include "comunicacion.h"
 
-t_consola_config leer_consola_config(t_config* config);
-
+void destruir_instruccion(t_instruccion* instruccion);
+void destruir_parametro(char* parametro);
 
 #endif /* CONSOLA_H_ */

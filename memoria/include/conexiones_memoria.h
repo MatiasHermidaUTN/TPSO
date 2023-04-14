@@ -1,9 +1,9 @@
 #ifndef CONEXIONES_MEMORIA_H_
 #define CONEXIONES_MEMORIA_H_
+
 #include <pthread.h>
 #include <commons/log.h>
 #include <utils.h>
-#include "../include/comunicaciones_memoria.h"
 
 typedef struct args_recibir_conexiones{
 	int socket_cliente;

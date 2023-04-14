@@ -15,11 +15,41 @@
 #include<commons/log.h>
 #include<commons/config.h>
 
+#include <inttypes.h>
+#include <stdio.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <stdlib.h>
+
+typedef enum {
+    EXPULSAR_TRIPULANTE = 1,
+    INICIAR_PATOTA,
+    INICIAR_SELF_EN_PATOTA,
+    SOLICITAR_TAREA,
+    TAREA,
+    MOVIMIENTO,
+    OBTENER_BITACORA,
+    BITACORA,
+    SABOTAJE,
+    FIN_FSCK,
+    INICIO_FSCK,
+    INICIO_TAREA,
+    FIN_TAREA,
+    ATENCION_SABOTAJE,
+    RESOLUCION_SABOTAJE,
+    GENERAR,
+    CONSUMIR,
+    DESCARTAR_BASURA,
+    CAMBIO_ESTADO,
+    HANDSHAKE_SABOTAJE,
+    DEBUG               = 69,
+} hey_hey;
+
 typedef enum
 {
 	MENSAJE,
-	PAQUETE
-}op_code;
+	LIST_INSTRUCCIONES,
+} op_code;
 
 typedef enum
 {
@@ -28,7 +58,7 @@ typedef enum
 	FILESYSTEM,
 	OK,
 	ERROR,
-}t_handshake;
+} t_handshake;
 
 typedef struct
 {
@@ -41,8 +71,6 @@ typedef struct
 	op_code codigo_operacion;
 	t_buffer* buffer;
 } t_paquete;
-
-
 
 /*
 int crear_conexion(char* ip, char* puerto);
@@ -58,13 +86,12 @@ void eliminar_paquete(t_paquete* paquete);
 // Utils.c del servidor //
 //////////////////////////
 
-
 t_log* iniciar_logger(void);
 t_config* iniciar_config(void);
 void leer_consola(t_log*);
 void paquete(int);
-void terminar_programa(int, t_log*, t_config*);
-*/
+void terminar_programa(int, t_log*, t_config*);*/
+
 
 int crear_conexion(char *ip, char* puerto);
 

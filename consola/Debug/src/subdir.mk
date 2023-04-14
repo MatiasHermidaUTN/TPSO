@@ -4,16 +4,22 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
+../src/comunicacion.c \
 ../src/configuracion_consola.c \
-../src/consola.c 
+../src/consola.c \
+../src/parser.c 
 
 C_DEPS += \
+./src/comunicacion.d \
 ./src/configuracion_consola.d \
-./src/consola.d 
+./src/consola.d \
+./src/parser.d 
 
 OBJS += \
+./src/comunicacion.o \
 ./src/configuracion_consola.o \
-./src/consola.o 
+./src/consola.o \
+./src/parser.o 
 
 
 # Each subdirectory must supply rules for building sources it contributes
@@ -28,7 +34,7 @@ src/%.o: ../src/%.c src/subdir.mk
 clean: clean-src
 
 clean-src:
-	-$(RM) ./src/configuracion_consola.d ./src/configuracion_consola.o ./src/consola.d ./src/consola.o
+	-$(RM) ./src/comunicacion.d ./src/comunicacion.o ./src/configuracion_consola.d ./src/configuracion_consola.o ./src/consola.d ./src/consola.o ./src/parser.d ./src/parser.o
 
 .PHONY: clean-src
 
