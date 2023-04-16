@@ -1,6 +1,6 @@
 #include "diccionario_instrucciones.h"
 
-t_dictionary* crear_diccionario_instrucciones(){
+t_dictionary* crear_diccionario_instrucciones() {
 	t_dictionary* diccionario_instrucciones = dictionary_create();
 	agregar_a_diccionario(diccionario_instrucciones, "F_READ",         3);
 	agregar_a_diccionario(diccionario_instrucciones, "F_WRITE",        3);
@@ -21,12 +21,12 @@ t_dictionary* crear_diccionario_instrucciones(){
 	return diccionario_instrucciones;
 }
 
-void agregar_a_diccionario(t_dictionary* diccionario, char* key, int elemento){
+void agregar_a_diccionario(t_dictionary* diccionario, char* key, int elemento) {
 	int* elemento_a_agreagar = malloc(sizeof(elemento));
 	*elemento_a_agreagar = elemento;
 	dictionary_put(diccionario, key, elemento_a_agreagar);
 }
 
-void destruir_diccionario(int* cantParametros){
+void destruir_diccionario(int* cantParametros) {
 	free(cantParametros);
 }

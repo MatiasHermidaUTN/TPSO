@@ -19,14 +19,12 @@
 #include <stdbool.h>
 #include <stdint.h>
 
-typedef enum
-{
+typedef enum {
 	MENSAJE,
-	LIST_INSTRUCCIONES,
+	NUEVO_PROCESO,
 } op_code;
 
-typedef enum
-{
+typedef enum {
 	KERNEL,
 	CPU,
 	FILESYSTEM,
@@ -34,14 +32,12 @@ typedef enum
 	ERROR,
 } t_handshake;
 
-typedef struct
-{
+typedef struct {
 	int size;
 	void* stream;
 } t_buffer;
 
-typedef struct
-{
+typedef struct {
 	op_code codigo_operacion;
 	t_buffer* buffer;
 } t_paquete;

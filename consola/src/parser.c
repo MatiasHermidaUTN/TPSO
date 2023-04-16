@@ -67,3 +67,12 @@ t_instruccion* parsearInstruccion(char* lineaLeida, t_log* logger, t_dictionary*
 	return instruccionAParsear;
 }
 
+void destruir_parametro(char* parametro) {
+	free(parametro);
+}
+
+void destruir_instruccion(t_instruccion* instruccion) {
+	free(instruccion->nombre);
+	list_destroy_and_destroy_elements(instruccion->parametros, (void*)destruir_parametro);
+	free(instruccion);
+}

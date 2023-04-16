@@ -96,3 +96,68 @@
 [INFO] 14:10:58:698 proceso/(10241:10243): Consola mandando instrucciones
 [INFO] 14:11:00:786 proceso/(10241:10245): se conecto una consola
 [INFO] 14:11:00:786 proceso/(10241:10245): Consola mandando instrucciones
+[ERROR] 21:39:45:296 proceso/(6006:6006): El kernel no pudo conectarse a la memoria
+[ERROR] 21:40:28:128 proceso/(6024:6024): El kernel no pudo conectarse a el CPU
+[INFO] 21:43:02:312 proceso/(6063:6082): se conecto una consola
+[INFO] 21:43:02:312 proceso/(6063:6082): Consola mandando instrucciones
+[INFO] 21:43:31:496 proceso/(6063:6101): se conecto una consola
+[INFO] 21:43:31:496 proceso/(6063:6101): Consola mandando instrucciones
+[INFO] 14:41:04:827 proceso/(6063:7107): se conecto una consola
+[INFO] 14:41:04:829 proceso/(6063:7107): Consola mandando instrucciones
+[INFO] 22:42:44:531 proceso/(7792:7795): se conecto una consola
+[INFO] 22:42:44:531 proceso/(7792:7795): Consola mandando instrucciones
+[INFO] 22:42:52:813 proceso/(7792:7797): se conecto una consola
+[INFO] 22:42:52:815 proceso/(7792:7797): Consola mandando instrucciones
+[INFO] 23:24:30:627 proceso/(8496:8499): se conecto una consola
+[INFO] 23:24:30:627 proceso/(8496:8499): Consola mandando instrucciones
+[INFO] 23:24:37:267 proceso/(8496:8501): se conecto una consola
+[INFO] 23:24:37:268 proceso/(8496:8501): Consola mandando instrucciones
+[INFO] 23:26:40:761 proceso/(8496:8709): se conecto una consola
+[INFO] 23:26:40:763 proceso/(8496:8709): Consola mandando instrucciones
+[ERROR] 01:55:16:003 proceso/(10835:10835): El Kernel no pudo conectarse a la Memoria
+[INFO] 02:02:11:487 proceso/(10989:10992): se conecto una consola
+[INFO] 02:02:11:528 proceso/(10989:10992): Consola mandando instrucciones
+[INFO] 13:29:23:853 proceso/(11281:11284): se conecto una consola
+[INFO] 13:29:23:894 proceso/(11281:11284): Consola mandando instrucciones
+[INFO] 13:29:28:347 proceso/(11281:11286): se conecto una consola
+[INFO] 13:29:28:348 proceso/(11281:11286): Consola mandando instrucciones
+[INFO] 13:41:12:288 proceso/(11599:11607): se conecto una consola
+[INFO] 13:41:12:327 proceso/(11599:11607): Consola mandando instrucciones
+[INFO] 13:41:16:449 proceso/(11599:11609): se conecto una consola
+[INFO] 13:41:16:450 proceso/(11599:11609): Consola mandando instrucciones
+[INFO] 13:41:38:507 proceso/(11599:11611): se conecto una consola
+[INFO] 13:41:38:509 proceso/(11599:11611): Consola mandando instrucciones
+[INFO] 13:44:59:268 proceso/(11739:11742): se conecto una consola
+[INFO] 13:44:59:308 proceso/(11739:11742): Consola mandando instrucciones
+[INFO] 13:49:49:707 proceso/(11860:11863): se conecto una consola
+[INFO] 13:49:49:748 proceso/(11860:11863): Consola mandando instrucciones
+[INFO] 14:12:56:041 proceso/(12204:12210): se conecto una consola
+[INFO] 14:12:56:087 proceso/(12204:12210): Consola mandando instrucciones
+[INFO] 14:13:05:245 proceso/(12204:12212): se conecto una consola
+[INFO] 14:13:05:252 proceso/(12204:12212): Consola mandando instrucciones
+[INFO] 14:14:59:979 proceso/(12271:12271): 
+Kernel listo para recibir Consola
+[ERROR] 17:48:35:405 proceso/(15048:15048): El Kernel no pudo conectarse a la Memoria
+[ERROR] 17:48:54:258 proceso/(15049:15049): El Kernel no pudo conectarse a la Memoria
+[ERROR] 18:05:09:793 proceso/(15190:15190): El Kernel no pudo conectarse a la Memoria
+[INFO] 18:05:57:017 proceso/(15211:15211): 
+Kernel listo para recibir Consola
+[INFO] 18:06:10:848 proceso/(15211:15211): 
+Kernel listo para recibir Consola
+[INFO] 18:06:10:853 proceso/(15211:15214): Se conecto una consola
+[INFO] 19:26:56:593 proceso/(15346:15346): 
+Kernel listo para recibir Consola
+[INFO] 19:27:07:023 proceso/(15346:15346): 
+Kernel listo para recibir Consola
+[INFO] 19:27:07:027 proceso/(15346:15349): Se conecto una consola
+[INFO] 19:29:18:116 proceso/(15375:15375): 
+Kernel listo para recibir Consola
+[INFO] 19:29:29:475 proceso/(15375:15375): 
+Kernel listo para recibir Consola
+[INFO] 19:29:29:476 proceso/(15375:15378): Se conecto una consola
+[INFO] 19:30:17:489 proceso/(15408:15408): 
+Kernel listo para recibir Consola
+[INFO] 19:30:20:436 proceso/(15408:15408): 
+Kernel listo para recibir Consola
+[INFO] 19:30:20:436 proceso/(15408:15412): Se conecto una consola
+[ERROR] 19:30:27:244 proceso/(15414:15414): El Kernel no pudo conectarse al CPU

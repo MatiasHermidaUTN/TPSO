@@ -11,7 +11,7 @@
 void* serializar_instrucciones(t_list* instrucciones, int size);
 int enviar_instrucciones(int socket_kernel, t_list* instrucciones);
 int calculo_tamanio_msj(t_list* instrucciones);
-int calculo_tamanio_parametros(t_list* parametros, int index_instruccion);
+int calculo_tamanio_parametros(t_list* parametros);
 
 
 #endif /* COMUNICACION_H_ */

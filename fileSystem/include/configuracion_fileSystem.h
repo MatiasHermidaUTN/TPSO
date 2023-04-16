@@ -1,6 +1,8 @@
 #ifndef CONFIGURACION_FILESYSTEM_H_
 #define CONFIGURACION_FILESYSTEM_H_
 
+#include <stdlib.h>
+#include <string.h>
 #include <commons/config.h>
 
 typedef struct fileSystem_config {
@@ -15,5 +17,7 @@ typedef struct fileSystem_config {
 } t_fileSystem_config;
 
 t_fileSystem_config leer_fileSystem_config(t_config* config);
+
+void liberar_estructura_de_config(t_fileSystem_config config);
 
 #endif /* CONFIGURACION_FILESYSTEM_H_ */

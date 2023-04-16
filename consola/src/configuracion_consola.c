@@ -9,8 +9,7 @@ t_consola_config leer_consola_config(t_config* config) {
     return lectura_de_config;
 }
 
-void liberar_estructura_config(t_consola_config config){
+void liberar_estructura_de_config(t_consola_config config) {
 	free(config.IP_KERNEL);
 	free(config.PUERTO_KERNEL);
 }
-

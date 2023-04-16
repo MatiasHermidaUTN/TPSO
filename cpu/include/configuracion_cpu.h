@@ -1,6 +1,8 @@
 #ifndef CONFIGURACION_CPU_H_
 #define CONFIGURACION_CPU_H_
 
+#include <stdlib.h>
+#include <string.h>
 #include <commons/config.h>
 
 typedef struct cpu_config {
@@ -13,5 +15,6 @@ typedef struct cpu_config {
 
 t_cpu_config leer_cpu_config(t_config* config);
 
+void liberar_estructura_de_config(t_cpu_config config);
 
 #endif /* CONFIGURACION_CPU_H_ */

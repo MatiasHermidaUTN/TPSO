@@ -17,5 +17,7 @@ typedef struct {
 
 t_list* parsearPseudocodigo(t_log* logger, char* direccionPseudocodigo);
 t_instruccion* parsearInstruccion(char* lineaLeida, t_log* logger, t_dictionary* instrucciones);
+void destruir_instruccion(t_instruccion* instruccion);
+void destruir_parametro(char* parametro);
 
 #endif /* PARSER_H_ */
