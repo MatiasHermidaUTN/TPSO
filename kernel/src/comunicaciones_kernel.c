@@ -92,3 +92,13 @@ void print_l_instrucciones(t_list* instrucciones){
 	    printf("\n");
     }
 }
+
+void enviar_pcb(t_pcb* pcb){
+	//TODO: IMPLEMENTAR
+	return;
+}
+
+t_rta_cpu_al_kernel esperar_cpu(){
+	//TODO: IMPLEMENTAR
+	return YIELD;
+}

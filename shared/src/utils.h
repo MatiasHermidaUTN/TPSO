@@ -34,6 +34,13 @@ typedef enum
 	ERROR,
 } t_handshake;
 
+typedef enum
+{
+	YIELD,
+	IO,
+	EXIT,
+}t_rta_cpu_al_kernel;
+
 typedef struct
 {
 	int size;
@@ -45,6 +52,7 @@ typedef struct
 	op_code codigo_operacion;
 	t_buffer* buffer;
 } t_paquete;
+
 
 /*
 int crear_conexion(char* ip, char* puerto);

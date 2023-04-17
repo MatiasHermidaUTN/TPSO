@@ -25,18 +25,22 @@ void manejar_conexion(void* args){
 	switch(rta_handshake){
 		case KERNEL:
 			log_info(logger, "El Kernel se conecto a memoria");
+			enviar_handshake(socket_cliente,OK);
 			manejar_conexion_kernel(socket_cliente, logger);
 			break;
 		case CPU:
 			log_info(logger, "La CPU se conecto a memoria");
+			enviar_handshake(socket_cliente,OK);
 			manejar_conexion_cpu(socket_cliente, logger);
 			break;
 		case FILESYSTEM:
 			log_info(logger, "El Filesystem se conecto a memoria");
+			enviar_handshake(socket_cliente,OK);
 			manejar_conexion_fileSystem(socket_cliente, logger);
 			break;
 		default:
 			log_error(logger, "Error en el handshake");
+			enviar_handshake(socket_cliente,ERROR);
 	}
 
 }

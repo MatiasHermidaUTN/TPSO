@@ -7,19 +7,22 @@ C_SRCS += \
 ../src/comunicaciones_kernel.c \
 ../src/conexiones_kernel.c \
 ../src/configuracion_kernel.c \
-../src/kernel.c 
+../src/kernel.c \
+../src/planificacion_corto.c 
 
 C_DEPS += \
 ./src/comunicaciones_kernel.d \
 ./src/conexiones_kernel.d \
 ./src/configuracion_kernel.d \
-./src/kernel.d 
+./src/kernel.d \
+./src/planificacion_corto.d 
 
 OBJS += \
 ./src/comunicaciones_kernel.o \
 ./src/conexiones_kernel.o \
 ./src/configuracion_kernel.o \
-./src/kernel.o 
+./src/kernel.o \
+./src/planificacion_corto.o 
 
 
 # Each subdirectory must supply rules for building sources it contributes
@@ -34,7 +37,7 @@ src/%.o: ../src/%.c src/subdir.mk
 clean: clean-src
 
 clean-src:
-	-$(RM) ./src/comunicaciones_kernel.d ./src/comunicaciones_kernel.o ./src/conexiones_kernel.d ./src/conexiones_kernel.o ./src/configuracion_kernel.d ./src/configuracion_kernel.o ./src/kernel.d ./src/kernel.o
+	-$(RM) ./src/comunicaciones_kernel.d ./src/comunicaciones_kernel.o ./src/conexiones_kernel.d ./src/conexiones_kernel.o ./src/configuracion_kernel.d ./src/configuracion_kernel.o ./src/kernel.d ./src/kernel.o ./src/planificacion_corto.d ./src/planificacion_corto.o
 
 .PHONY: clean-src
 

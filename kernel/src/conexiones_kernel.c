@@ -1,6 +1,7 @@
 #include "../include/conexiones_kernel.h"
 
-int recibir_conexiones(int socket_kernel, t_log* logger){
+
+int recibir_conexiones(int socket_kernel){
 	int socket_consola = esperar_cliente(socket_kernel);
 	if(socket_consola != -1){ //TODO: checkear -1 es error
 		pthread_t hilo;
@@ -23,17 +24,20 @@ void manejar_conexion(void* args){
 
 	log_info(logger, "se conecto una consola");
 
-	//TODO: Implementar
 	op_code cod_op = recibir_operacion(socket_consola);
 	switch(cod_op){
 		case LIST_INSTRUCCIONES:
 			log_info(logger, "Consola mandando instrucciones");
-			//recibir msj y deserializarlo
 			t_list* instrucciones = recibir_instrucciones(socket_consola);
-			//enviar_confirmacion_recepcion(socket_consola);
-			//**prueba con consola**
 			print_l_instrucciones(instrucciones);
-			//sleep(10);
+			t_pcb* pcb = crear_pcb(instrucciones, socket_consola);
+
+			log_info(logger,"PID: %d \n",pcb->pid);
+
+			queue_push(ready_queue,pcb);
+			sem_post(&sem_ready);
+
+
 			//enviar_fin_proceso(socket_consola);
 			break;
 		default:
@@ -48,6 +52,11 @@ void init_conexiones(t_kernel_config lectura_de_config, t_log* logger, int* sock
 		exit(EXIT_FAILURE);
 	}
 	enviar_handshake(*socket_memoria, KERNEL);
+	t_handshake rta = recibir_handshake(*socket_memoria);
+	if(rta == ERROR){
+		log_error(logger,"El kernel no se pudo conectar a la memoria");
+		exit(EXIT_FAILURE);
+	}
 
 	//Para estos no hace falta handshake porque solo reciben al Kernel
 	*socket_cpu = crear_conexion(lectura_de_config.IP_CPU, lectura_de_config.PUERTO_CPU);
@@ -63,3 +72,14 @@ void init_conexiones(t_kernel_config lectura_de_config, t_log* logger, int* sock
 	}
 }
 
+void liberar_estructura_config(t_kernel_config config);
+
+void destruir_parametro(char* parametro){
+	free(parametro);
+}
+
+void destruir_instruccion(t_instruccion* instruccion){
+	free(instruccion->nombre);
+	list_destroy_and_destroy_elements(instruccion->parametros, (void*)destruir_parametro);
+	free(instruccion);
+}

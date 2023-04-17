@@ -19,7 +19,7 @@ int main(int argc, char** argv) {
 	// ***** ENVIAR INSTRUCCIONES A KERNEL ***** //
 	enviar_instrucciones(socket_kernel, instrucciones);
 	//esperar_confirmacion(socket_kernel);
-	//esperar_fin_proceso(socket_kernel);
+	esperar_fin_proceso(socket_kernel,logger);
 
 	// ***** LIBERAR MEMORIA Y CERRAR ***** //
     list_destroy_and_destroy_elements(instrucciones, (void *)destruir_instruccion);
@@ -38,4 +38,13 @@ void destruir_instruccion(t_instruccion* instruccion){
 	free(instruccion->nombre);
 	list_destroy_and_destroy_elements(instruccion->parametros, (void*)destruir_parametro);
 	free(instruccion);
+}
+
+void esperar_fin_proceso(int socket_kernel,t_log* logger){
+	t_handshake rta = recibir_handshake(socket_kernel);
+	if(rta == OK){
+		log_info(logger,"Proceso terminado");
+	} else 	log_error(logger,"Hubo un error en el proceso"); //falta enviar el hanshake ne el kernel cuando se termina el proceso
+
+
 }

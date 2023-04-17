@@ -1,24 +1,27 @@
 #include <commons/log.h>
-
 #include <utils.h>
-#include "../include/configuracion_kernel.h"
 #include "../include/conexiones_kernel.h"
+#include "../include/kernel.h"
+#include "../include/configuracion_kernel.h"
 
 int main (int argc, char** argv) {
-    //t_log* logger = iniciar_logger();
-
     t_config* config = iniciar_config("../kernel.config");
-    t_kernel_config lectura_de_config = leer_kernel_config(config);
+    lectura_de_config = leer_kernel_config(config);
 
-    t_log* logger = iniciar_logger("kernel.log", "proceso");
+    logger = iniciar_logger("kernel.log", "proceso");
 
-    int socket_memoria;
-    int socket_cpu;
-    int socket_fileSystem;
+    init_semaforos();
+    init_estados();
+
     init_conexiones(lectura_de_config, logger, &socket_memoria, &socket_cpu, &socket_fileSystem);
 
-    int socket_kernel = iniciar_servidor("127.0.0.1",lectura_de_config.PUERTO_ESCUCHA); //TODO: Hardcodeado
-    while(recibir_conexiones(socket_kernel, logger)); //Recibe conexiones y crea hilos para manejarlas
+    pthread_t planificador_corto;
+    pthread_create(&planificador_corto,NULL,(void*)planificar_corto,NULL);
 
+    int socket_kernel = iniciar_servidor("127.0.0.1",lectura_de_config.PUERTO_ESCUCHA); //TODO: Hardcodeado
+    while(recibir_conexiones(socket_kernel)); //Recibe conexiones de consolas y crea hilos para manejarlas
+
+    liberar_estructura_config(lectura_de_config);
+    config_destroy(config);
     return 0;
 }

@@ -14,5 +14,6 @@
 
 void destruir_instruccion(t_instruccion* instruccion);
 void destruir_parametro(char* parametro);
+void esperar_fin_proceso(int socket_kernel,t_log* logger);
 
 #endif /* CONSOLA_H_ */

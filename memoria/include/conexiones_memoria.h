@@ -4,6 +4,7 @@
 #include <pthread.h>
 #include <commons/log.h>
 #include <utils.h>
+#include "comunicaciones_memoria.h"
 
 typedef struct args_recibir_conexiones{
 	int socket_cliente;
