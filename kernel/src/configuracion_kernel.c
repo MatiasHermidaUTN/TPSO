@@ -48,19 +48,19 @@ t_kernel_config leer_kernel_config(t_config* config) {
     return lectura_de_config;
 }
 
-void init_semaforos(){
-	pthread_mutex_init(&mutex_contador_pid,NULL);
-	pthread_mutex_init(&mutex_ready_queue,NULL);
-	sem_init(&sem_ready,0,0);
+void init_semaforos() {
+	pthread_mutex_init(&mutex_contador_pid, NULL);
+	pthread_mutex_init(&mutex_ready_queue,  NULL);
+	sem_init(&sem_ready, 0, 0);
 }
 
-void init_estados(){
-	new_queue = queue_create();
-	ready_queue = queue_create();
+void init_estados() {
+	new_queue     = queue_create();
+	ready_queue   = queue_create();
 	blocked_queue = queue_create();
 }
 
-void liberar_estructura_config(t_kernel_config config){
+void liberar_estructura_config(t_kernel_config config) {
 	free(config.IP_MEMORIA);
 	free(config.PUERTO_MEMORIA);
 	free(config.IP_CPU);

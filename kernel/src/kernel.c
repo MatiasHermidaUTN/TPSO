@@ -15,10 +15,12 @@ int main (int argc, char** argv) {
 
     init_conexiones(lectura_de_config, logger, &socket_memoria, &socket_cpu, &socket_fileSystem);
 
-    pthread_t planificador_corto;
-    pthread_create(&planificador_corto,NULL,(void*)planificar_corto,NULL);
+    pthread_t hilo_planificador_corto;
+	t_args_recibir_conexiones* args = malloc(sizeof(t_args_recibir_conexiones)); //tiene que ser puntero?
+	args->socket_cliente = socket_cpu;
+    pthread_create(&hilo_planificador_corto, NULL, (void*)planificar_corto, (void*)args);
 
-    int socket_kernel = iniciar_servidor("127.0.0.1",lectura_de_config.PUERTO_ESCUCHA); //TODO: Hardcodeado
+    int socket_kernel = iniciar_servidor("127.0.0.1", lectura_de_config.PUERTO_ESCUCHA); //TODO: Hardcodeado
     while(recibir_conexiones(socket_kernel)); //Recibe conexiones de consolas y crea hilos para manejarlas
 
     liberar_estructura_config(lectura_de_config);

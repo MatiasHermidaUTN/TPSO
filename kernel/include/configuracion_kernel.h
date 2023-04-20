@@ -1,11 +1,12 @@
 #ifndef CONFIGURACION_KERNEL_H_
 #define CONFIGURACION_KERNEL_H_
 
-#include <commons/config.h>
 #include <pthread.h>
-#include <commons/collections/queue.h>
-#include "planificacion_corto.h"
 #include <semaphore.h>
+#include <commons/config.h>
+#include <commons/collections/queue.h>
+
+#include "planificacion_corto.h"
 
 typedef struct kernel_config{
     char* IP_MEMORIA;

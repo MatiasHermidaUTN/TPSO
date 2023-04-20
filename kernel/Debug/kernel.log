@@ -160,3 +160,107 @@
 [INFO] 02:25:31:188 proceso/(14580:14585): Consola mandando instrucciones
 [INFO] 02:25:31:203 proceso/(14580:14585): PID: 1 
 
+[INFO] 13:16:49:847 proceso/(31028:31028): En recibir_conexiones
+[INFO] 13:16:49:936 proceso/(31028:31032): se conecto una consola
+[INFO] 13:16:49:938 proceso/(31028:31032): Consola mandando instrucciones
+[INFO] 13:16:49:951 proceso/(31028:31032): Antes del mutex en crear_pcb
+[INFO] 13:16:49:953 proceso/(31028:31032): Se crea el proceso 1 en NEW
+
+[ERROR] 13:21:51:505 proceso/(31133:31133): El kernel no pudo conectarse al FileSystem
+[ERROR] 13:36:15:096 proceso/(31381:31381): El kernel no pudo conectarse al CPU
+[INFO] 13:36:29:955 proceso/(31387:31387): En recibir_conexiones del Kernel
+[INFO] 13:36:33:928 proceso/(31387:31387): En recibir_conexiones del Kernel
+[INFO] 13:36:33:929 proceso/(31387:31391): se conecto una consola
+[INFO] 13:36:33:932 proceso/(31387:31391): Consola mandando instrucciones
+[INFO] 13:36:33:943 proceso/(31387:31391): Antes del mutex en crear_pcb
+[INFO] 13:36:33:945 proceso/(31387:31391): Se crea el proceso 1 en NEW
+
+[INFO] 13:36:33:948 proceso/(31387:31389): Antes de enviar el pcb
+[INFO] 13:36:33:962 proceso/(31387:31389): Despues de enviar el pcb
+[ERROR] 13:38:02:476 proceso/(31424:31424): El kernel no pudo conectarse al FileSystem
+[ERROR] 13:38:23:859 proceso/(31431:31431): El kernel no pudo conectarse al FileSystem
+[ERROR] 13:39:11:292 proceso/(31435:31435): El kernel no pudo conectarse al FileSystem
+[ERROR] 13:39:46:958 proceso/(31463:31463): El kernel no pudo conectarse al FileSystem
+[INFO] 13:41:36:689 proceso/(31475:31475): En recibir_conexiones del Kernel
+[INFO] 13:42:06:213 proceso/(31475:31475): En recibir_conexiones del Kernel
+[INFO] 13:42:06:215 proceso/(31475:31480): se conecto una consola
+[INFO] 13:42:06:218 proceso/(31475:31480): Consola mandando instrucciones
+[INFO] 13:42:06:230 proceso/(31475:31480): Antes del mutex en crear_pcb
+[INFO] 13:42:06:231 proceso/(31475:31480): Se crea el proceso 1 en NEW
+
+[INFO] 13:42:06:237 proceso/(31475:31477): Antes de enviar el pcb
+[INFO] 13:42:06:253 proceso/(31475:31477): Despues de enviar el pcb
+[ERROR] 13:43:58:377 proceso/(31529:31529): El kernel no pudo conectarse al FileSystem
+[ERROR] 13:44:14:185 proceso/(31535:31535): El kernel no pudo conectarse al FileSystem
+[ERROR] 13:44:57:809 proceso/(31541:31541): El kernel no pudo conectarse al FileSystem
+[ERROR] 13:45:22:898 proceso/(31546:31546): El kernel no pudo conectarse a la memoria
+[ERROR] 13:45:36:259 proceso/(31547:31547): El kernel no pudo conectarse a la memoria
+[ERROR] 13:45:36:877 proceso/(31548:31548): El kernel no pudo conectarse a la memoria
+[ERROR] 13:45:38:194 proceso/(31549:31549): El kernel no pudo conectarse a la memoria
+[ERROR] 13:45:39:328 proceso/(31550:31550): El kernel no pudo conectarse a la memoria
+[ERROR] 13:45:40:244 proceso/(31551:31551): El kernel no pudo conectarse a la memoria
+[ERROR] 13:45:41:097 proceso/(31552:31552): El kernel no pudo conectarse a la memoria
+[ERROR] 13:45:41:949 proceso/(31553:31553): El kernel no pudo conectarse a la memoria
+[ERROR] 13:45:42:718 proceso/(31554:31554): El kernel no pudo conectarse a la memoria
+[ERROR] 13:45:43:469 proceso/(31555:31555): El kernel no pudo conectarse a la memoria
+[ERROR] 13:45:44:077 proceso/(31556:31556): El kernel no pudo conectarse a la memoria
+[ERROR] 13:45:44:715 proceso/(31557:31557): El kernel no pudo conectarse a la memoria
+[ERROR] 13:45:45:317 proceso/(31558:31558): El kernel no pudo conectarse a la memoria
+[ERROR] 13:45:45:939 proceso/(31559:31559): El kernel no pudo conectarse a la memoria
+[ERROR] 13:45:46:578 proceso/(31560:31560): El kernel no pudo conectarse a la memoria
+[ERROR] 13:45:47:134 proceso/(31561:31561): El kernel no pudo conectarse a la memoria
+[INFO] 13:47:24:295 proceso/(31567:31567): En recibir_conexiones del Kernel
+[INFO] 13:47:28:948 proceso/(31567:31567): En recibir_conexiones del Kernel
+[INFO] 13:47:28:949 proceso/(31567:31571): se conecto una consola
+[INFO] 13:47:28:952 proceso/(31567:31571): Consola mandando instrucciones
+[INFO] 13:47:28:967 proceso/(31567:31571): Antes del mutex en crear_pcb
+[INFO] 13:47:28:968 proceso/(31567:31571): Se crea el proceso 1 en NEW
+
+[INFO] 13:47:28:971 proceso/(31567:31569): Antes de enviar el pcb
+[INFO] 13:47:28:976 proceso/(31567:31569): size_total: 696
+[INFO] 13:47:28:983 proceso/(31567:31569): Despues de enviar el pcb
+[ERROR] 13:57:45:677 proceso/(31990:31990): El kernel no pudo conectarse a la memoria
+[ERROR] 13:58:02:880 proceso/(31994:31994): El kernel no pudo conectarse a la memoria
+[ERROR] 13:59:28:250 proceso/(32003:32003): El kernel no pudo conectarse al CPU
+[INFO] 14:00:44:448 proceso/(32010:32010): En recibir_conexiones del Kernel
+[INFO] 14:00:47:512 proceso/(32010:32010): En recibir_conexiones del Kernel
+[INFO] 14:00:47:514 proceso/(32010:32014): se conecto una consola
+[INFO] 14:00:47:515 proceso/(32010:32014): Consola mandando instrucciones
+[INFO] 14:00:47:529 proceso/(32010:32014): Antes del mutex en crear_pcb
+[INFO] 14:00:47:530 proceso/(32010:32014): Se crea el proceso 1 en NEW
+
+[INFO] 14:00:47:533 proceso/(32010:32012): Antes de enviar el pcb
+[INFO] 14:00:47:538 proceso/(32010:32012): size_total: 696
+[INFO] 14:00:47:545 proceso/(32010:32012): Despues de enviar el pcb
+[ERROR] 14:30:40:280 proceso/(32090:32090): El kernel no pudo conectarse a la memoria
+[ERROR] 14:30:47:356 proceso/(32092:32092): El kernel no pudo conectarse a la memoria
+[ERROR] 14:30:57:951 proceso/(32096:32096): El kernel no pudo conectarse a la memoria
+[ERROR] 14:31:07:158 proceso/(32100:32100): El kernel no pudo conectarse a la memoria
+[ERROR] 14:31:17:428 proceso/(32101:32101): El kernel no pudo conectarse a la memoria
+[ERROR] 14:31:32:694 proceso/(32106:32106): El kernel no pudo conectarse a la memoria
+[ERROR] 14:31:39:050 proceso/(32107:32107): El kernel no pudo conectarse a la memoria
+[ERROR] 14:31:39:594 proceso/(32108:32108): El kernel no pudo conectarse a la memoria
+[ERROR] 14:31:40:146 proceso/(32109:32109): El kernel no pudo conectarse a la memoria
+[ERROR] 14:31:40:687 proceso/(32110:32110): El kernel no pudo conectarse a la memoria
+[ERROR] 14:31:41:226 proceso/(32111:32111): El kernel no pudo conectarse a la memoria
+[ERROR] 14:31:41:762 proceso/(32112:32112): El kernel no pudo conectarse a la memoria
+[ERROR] 14:31:42:293 proceso/(32113:32113): El kernel no pudo conectarse a la memoria
+[ERROR] 14:31:42:826 proceso/(32114:32114): El kernel no pudo conectarse a la memoria
+[ERROR] 14:31:43:358 proceso/(32115:32115): El kernel no pudo conectarse a la memoria
+[ERROR] 14:31:43:890 proceso/(32116:32116): El kernel no pudo conectarse a la memoria
+[ERROR] 14:31:44:418 proceso/(32117:32117): El kernel no pudo conectarse a la memoria
+[ERROR] 14:31:44:948 proceso/(32118:32118): El kernel no pudo conectarse a la memoria
+[ERROR] 14:31:45:475 proceso/(32119:32119): El kernel no pudo conectarse a la memoria
+[ERROR] 14:31:46:010 proceso/(32120:32120): El kernel no pudo conectarse a la memoria
+[ERROR] 14:31:46:547 proceso/(32121:32121): El kernel no pudo conectarse a la memoria
+[INFO] 14:32:06:506 proceso/(32127:32127): En recibir_conexiones del Kernel
+[INFO] 14:32:16:086 proceso/(32127:32127): En recibir_conexiones del Kernel
+[INFO] 14:32:16:088 proceso/(32127:32131): se conecto una consola
+[INFO] 14:32:16:090 proceso/(32127:32131): Consola mandando instrucciones
+[INFO] 14:32:16:105 proceso/(32127:32131): Antes del mutex en crear_pcb
+[INFO] 14:32:16:106 proceso/(32127:32131): Se crea el proceso 1 en NEW
+
+[INFO] 14:32:16:109 proceso/(32127:32129): Antes de enviar el pcb
+[INFO] 14:32:16:114 proceso/(32127:32129): size_total: 696
+[INFO] 14:32:16:121 proceso/(32127:32129): Despues de enviar el pcb
+[ERROR] 15:43:02:463 proceso/(32384:32384): El kernel no pudo conectarse a la memoria

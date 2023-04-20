@@ -18,16 +18,20 @@ void* serializar_instrucciones(t_list* instrucciones, int size){
 
     //copio op code de msj
     op_code op_code1 = LIST_INSTRUCCIONES;
+
     memcpy(stream, &(op_code1), sizeof(op_code));								//pongo op_code
     desplazamiento += sizeof(op_code);
+
     memcpy(stream + desplazamiento, &(size_payload), sizeof(size_t));								//pongo op_code
     desplazamiento += sizeof(size_t);
 
     for(int i = 0 ; i < instrucciones->elements_count ; i++){
 		t_instruccion* instruccion = (t_instruccion*)list_get(instrucciones, i);
 		size_t largo_nombre = strlen(instruccion->nombre)+1;
+
 		memcpy(stream + desplazamiento, &(largo_nombre), sizeof(size_t));		//pongo size de nombre instruccion
 		desplazamiento+= sizeof(size_t);
+
 		memcpy(stream + desplazamiento, instruccion->nombre, largo_nombre);		//pongo nombre instruccion
 		desplazamiento+= largo_nombre;
 
@@ -35,8 +39,10 @@ void* serializar_instrucciones(t_list* instrucciones, int size){
 		for(int j = 0; j < parametros->elements_count; j++){
 			char* parametro = (char*)list_get(parametros, j);
 			size_t largo_nombre = strlen(parametro)+1;
+
 			memcpy(stream + desplazamiento, &(largo_nombre), sizeof(size_t));	//pongo size nombre parametro
 			desplazamiento+= sizeof(size_t);
+
 			memcpy(stream + desplazamiento, parametro, largo_nombre);			//pongo parametro
 			desplazamiento+= largo_nombre;
 	    }

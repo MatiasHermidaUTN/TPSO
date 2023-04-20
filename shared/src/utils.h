@@ -19,14 +19,13 @@
 #include <stdbool.h>
 #include <stdint.h>
 
-typedef enum
-{
+typedef enum {
 	MENSAJE,
 	LIST_INSTRUCCIONES,
+	PCB,
 } op_code;
 
-typedef enum
-{
+typedef enum {
 	KERNEL,
 	CPU,
 	FILESYSTEM,
@@ -34,25 +33,51 @@ typedef enum
 	ERROR,
 } t_handshake;
 
-typedef enum
-{
+typedef enum {
 	YIELD,
 	IO,
 	EXIT,
-}t_rta_cpu_al_kernel;
+} t_rta_cpu_al_kernel;
 
-typedef struct
-{
+typedef struct {
 	int size;
 	void* stream;
 } t_buffer;
 
-typedef struct
-{
+typedef struct {
 	op_code codigo_operacion;
 	t_buffer* buffer;
 } t_paquete;
 
+
+typedef struct {
+	char* nombre;
+	t_list* parametros;
+} t_instruccion;
+
+typedef struct registros_cpu {
+	char  AX [4],  BX[ 4],  CX[ 4],  DX[ 4];
+	char EAX [8], EBX[ 8], ECX[ 8], EDX[ 8];
+	char RAX[16], RBX[16], RCX[16], RDX[16];
+} t_registros_cpu;
+
+typedef struct t_pcb {
+	int pid;
+	t_list* instrucciones;
+	int pc;
+	t_registros_cpu registros_cpu;
+	t_list* tabla_segmentos;
+	int estimado_prox_rafaga;
+	int estimado_llegada_ready;
+	t_list* archivos_abiertos;
+
+	int socket_consola; //para mandarle mensaje que cuando termina
+} t_pcb;
+
+typedef struct args_recibir_conexiones {
+	int socket_cliente;
+	t_log* logger;
+} t_args_recibir_conexiones;
 
 /*
 int crear_conexion(char* ip, char* puerto);

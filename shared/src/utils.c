@@ -96,13 +96,12 @@ int esperar_cliente(int socket_servidor)
 	return socket_cliente;
 }
 
-int recibir_operacion(int socket_cliente)
-{
+int recibir_operacion(int socket_cliente) {
 	int cod_op;
-	if(recv(socket_cliente, &cod_op, sizeof(op_code), MSG_WAITALL) > 0)
+	if(recv(socket_cliente, &cod_op, sizeof(op_code), MSG_WAITALL) > 0)	{
 		return cod_op;
-	else
-	{
+	}
+	else {
 		close(socket_cliente);
 		return -1;
 	}
