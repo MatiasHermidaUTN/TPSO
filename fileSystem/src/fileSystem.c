@@ -14,7 +14,7 @@ int main(int argc, char** argv) {
 	int socket_memoria = crear_conexion(lectura_de_config.IP_MEMORIA, lectura_de_config.PUERTO_MEMORIA);
     enviar_handshake(socket_memoria, FILESYSTEM);
     t_handshake rta = recibir_handshake(socket_memoria);
-    	if(rta == ERROR){
+    	if(rta == ERROR_HANDSHAKE){
     		log_error(logger,"El fileSystem no se pudo conectar a la memoria");
     		exit(EXIT_FAILURE);
     	}

@@ -1,5 +1,7 @@
 #include "../include/configuracion_cpu.h"
 
+int socket_kernel;
+t_cpu_config lectura_de_config;
 
 t_cpu_config leer_cpu_config(t_config* config) {
     t_cpu_config lectura_de_config;

@@ -24,24 +24,21 @@ void manejar_conexion(void* args){
 
 	log_info(logger, "se conecto una consola");
 
-	op_code cod_op = recibir_operacion(socket_consola);
+	t_msj_kernel_consola cod_op = recibir_operacion(socket_consola);
 	switch(cod_op){
 		case LIST_INSTRUCCIONES:
-			log_info(logger, "Consola mandando instrucciones");
+			log_info(logger, "Consola mando instrucciones");
 			t_list* instrucciones = recibir_instrucciones(socket_consola);
-			print_l_instrucciones(instrucciones);
 			t_pcb* pcb = crear_pcb(instrucciones, socket_consola);
 
-			log_info(logger,"PID: %d \n",pcb->pid);
+			log_info(logger,"Se crea el proceso %d en NEW \n",pcb->pid);
+			queue_push_con_mutex(new_queue, pcb, &mutex_new_queue);
 
-			queue_push(ready_queue,pcb);
-			sem_post(&sem_ready);
+			sem_post(&sem_cant_new);
 
-
-			//enviar_fin_proceso(socket_consola);
 			break;
 		default:
-			log_error(logger, "Error en el handshake");
+			log_error(logger, "Error en el envio de instrucciones");
 	}
 }
 
@@ -53,7 +50,7 @@ void init_conexiones(t_kernel_config lectura_de_config, t_log* logger, int* sock
 	}
 	enviar_handshake(*socket_memoria, KERNEL);
 	t_handshake rta = recibir_handshake(*socket_memoria);
-	if(rta == ERROR){
+	if(rta == ERROR_HANDSHAKE){
 		log_error(logger,"El kernel no se pudo conectar a la memoria");
 		exit(EXIT_FAILURE);
 	}

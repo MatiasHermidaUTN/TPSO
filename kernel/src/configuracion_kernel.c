@@ -4,8 +4,11 @@
 
 //SEMAFOROS////////////////////////////////
 pthread_mutex_t mutex_contador_pid;
-pthread_mutex_t mutex_ready_queue; //por si quieren agregar y eliminar de la lista al mismo tiempo.
-sem_t sem_ready;
+pthread_mutex_t mutex_ready_list; //por si quieren agregar y eliminar de la lista al mismo tiempo.
+pthread_mutex_t mutex_new_queue;
+sem_t sem_cant_ready;
+sem_t sem_cant_new;
+sem_t sem_multiprogramacion;
 ///////////////////////////////////////////
 
 //CONFIG///////////////////////////////////
@@ -17,7 +20,7 @@ t_log* logger;
 ///////////////////////////////////////////
 
 t_queue* new_queue;
-t_queue* ready_queue;
+t_list* ready_list;
 t_queue* blocked_queue;
 
 //SOCKETS//////////////////////////////////
@@ -50,13 +53,16 @@ t_kernel_config leer_kernel_config(t_config* config) {
 
 void init_semaforos(){
 	pthread_mutex_init(&mutex_contador_pid,NULL);
-	pthread_mutex_init(&mutex_ready_queue,NULL);
-	sem_init(&sem_ready,0,0);
+	pthread_mutex_init(&mutex_ready_list,NULL);
+	pthread_mutex_init(&mutex_new_queue,NULL);
+	sem_init(&sem_cant_ready,0,0);
+	sem_init(&sem_cant_new,0,0);
+	sem_init(&sem_multiprogramacion,0, lectura_de_config.GRADO_MAX_MULTIPROGRAMACION);
 }
 
 void init_estados(){
 	new_queue = queue_create();
-	ready_queue = queue_create();
+	ready_list = list_create();
 	blocked_queue = queue_create();
 }
 

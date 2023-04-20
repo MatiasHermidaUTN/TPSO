@@ -29,31 +29,26 @@ t_pcb* crear_pcb(t_list* instrucciones,int socket_consola){
 
 void planificar_corto(){
 	while(1){
-		sem_wait(&sem_ready); //entra solo si hay algun proceso en ready, es una espera no activa
-			t_pcb* pcb = queue_pop_con_mutex(ready_queue, mutex_ready_queue);
+		sem_wait(&sem_cant_ready); //entra solo si hay algun proceso en ready, es una espera no activa
+		t_pcb* pcb = list_pop_con_mutex(ready_list, &mutex_ready_list);
+		enviar_pcb(pcb);
 
-			enviar_pcb(pcb);
+		print_l_instrucciones(pcb->instrucciones);
 
-			t_rta_cpu_al_kernel rta = esperar_cpu();
 
-			switch(rta){
-				case YIELD: //vuelve a ready
-					break;
-				case IO: //bloquea
-					break;
-				case EXIT: //lo pone en exit
-					break;
-				default:
-					log_error(logger,"Error en la comunicacion entre el Kernel y la CPU");
-					exit(EXIT_FAILURE);
-			}
+		t_msj_kernel_cpu rta = esperar_cpu();
+
+		switch(rta){
+			case YIELD_EJECUTADO: //vuelve a ready
+				break;
+			case IO_EJECUTADO: //bloquea
+				break;
+			case EXIT_EJECUTADO: //lo pone en exit
+				sem_post(&sem_multiprogramacion);
+				break;
+			default:
+				log_error(logger,"Error en la comunicacion entre el Kernel y la CPU");
+				exit(EXIT_FAILURE);
+		}
 	}
-}
-
-t_pcb *queue_pop_con_mutex(t_queue* queue, pthread_mutex_t mutex)
-{
-    pthread_mutex_lock(&mutex);
-    t_pcb *pcb = queue_pop(queue);
-    pthread_mutex_unlock(&mutex);
-    return pcb;
 }

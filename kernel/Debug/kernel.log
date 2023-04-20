@@ -160,3 +160,95 @@
 [INFO] 02:25:31:188 proceso/(14580:14585): Consola mandando instrucciones
 [INFO] 02:25:31:203 proceso/(14580:14585): PID: 1 
 
+[INFO] 13:29:13:399 proceso/(156029:156033): se conecto una consola
+[INFO] 13:29:13:400 proceso/(156029:156033): Consola mandando instrucciones
+[INFO] 13:29:13:401 proceso/(156029:156033): PID: 1 
+
+[INFO] 13:42:20:806 proceso/(156585:156603): se conecto una consola
+[INFO] 13:42:20:810 proceso/(156585:156603): Consola mandando instrucciones
+[INFO] 13:42:20:811 proceso/(156585:156603): PID: 1 
+
+[INFO] 13:42:20:813 proceso/(156585:156603): PRUEBAAAAAAA: 10 
+
+[INFO] 13:47:10:315 proceso/(156779:156783): se conecto una consola
+[INFO] 13:47:10:316 proceso/(156779:156783): Consola mandando instrucciones
+[INFO] 13:47:10:316 proceso/(156779:156783): PID: 1 
+
+[INFO] 13:47:10:316 proceso/(156779:156783): PRUEBAAAAAAA: 10 
+
+[INFO] 14:31:06:978 proceso/(159992:159996): se conecto una consola
+[INFO] 14:31:06:978 proceso/(159992:159996): Consola mandando instrucciones
+[INFO] 14:31:06:979 proceso/(159992:159996): PID: 1 
+
+[INFO] 15:57:19:210 proceso/(164493:164498): se conecto una consola
+[INFO] 15:57:19:211 proceso/(164493:164498): Consola mando instrucciones
+[INFO] 15:57:19:211 proceso/(164493:164498): PID: 1 
+
+[INFO] 16:00:39:469 proceso/(164620:164625): se conecto una consola
+[INFO] 16:00:39:469 proceso/(164620:164625): Consola mando instrucciones
+[INFO] 16:00:39:470 proceso/(164620:164625): PID: 1 
+
+[INFO] 16:03:54:099 proceso/(164737:164742): se conecto una consola
+[INFO] 16:03:54:100 proceso/(164737:164742): Consola mando instrucciones
+[INFO] 16:03:54:100 proceso/(164737:164742): PID: 1 
+
+[INFO] 16:12:51:228 proceso/(164889:164892): Planificador largo
+[INFO] 16:14:56:774 proceso/(164965:164968): Planificador largo
+[INFO] 16:14:56:776 proceso/(164965:164968): Planificador largo
+[INFO] 16:14:56:776 proceso/(164965:164968): Planificador largo
+[INFO] 16:14:56:776 proceso/(164965:164968): Planificador largo
+[INFO] 16:16:36:412 proceso/(165183:165186): Planificador largo
+[INFO] 16:20:41:289 proceso/(165451:165454): Planificador largo
+[INFO] 16:20:41:290 proceso/(165451:165454): Planificador largo
+[INFO] 16:21:21:756 proceso/(165514:165517): Planificador largo
+[INFO] 16:21:21:757 proceso/(165514:165517): Planificador largo
+[INFO] 16:21:21:757 proceso/(165514:165517): Planificador largo
+[INFO] 16:21:21:757 proceso/(165514:165517): Planificador largo
+[INFO] 16:23:50:322 proceso/(165624:165627): Planificador largo
+[INFO] 16:24:12:669 proceso/(165691:165694): Planificador largo
+[INFO] 16:24:12:670 proceso/(165691:165694): Planificador largo
+[INFO] 16:24:12:670 proceso/(165691:165694): Planificador largo
+[INFO] 16:24:12:670 proceso/(165691:165694): Planificador largo
+[INFO] 16:26:16:556 proceso/(165798:165801): Planificador largo
+[INFO] 16:26:16:556 proceso/(165798:165801): Planificador largo
+[INFO] 16:26:16:556 proceso/(165798:165801): Planificador largo
+[INFO] 16:26:16:556 proceso/(165798:165801): Planificador largo
+[INFO] 16:26:21:902 proceso/(165798:165803): se conecto una consola
+[INFO] 16:26:21:903 proceso/(165798:165803): Consola mando instrucciones
+[INFO] 16:26:21:903 proceso/(165798:165803): PID: 1 
+
+[INFO] 16:33:04:998 proceso/(166085:166090): se conecto una consola
+[INFO] 16:33:04:999 proceso/(166085:166090): Consola mando instrucciones
+[INFO] 16:33:05:000 proceso/(166085:166090): PID: 1 
+
+[INFO] 16:33:05:000 proceso/(166085:166088): Planificador largo
+[ERROR] 16:33:34:075 proceso/(166096:166096): El kernel no pudo conectarse a el CPU
+[ERROR] 16:34:23:081 proceso/(166103:166103): El kernel no pudo conectarse a la memoria
+[INFO] 16:35:33:960 proceso/(166109:166114): se conecto una consola
+[INFO] 16:35:33:961 proceso/(166109:166114): Consola mando instrucciones
+[INFO] 16:35:33:961 proceso/(166109:166114): PID: 1 
+
+[INFO] 16:35:33:961 proceso/(166109:166112): Planificador largo
+[INFO] 16:35:37:386 proceso/(166109:166116): se conecto una consola
+[INFO] 16:35:37:386 proceso/(166109:166116): Consola mando instrucciones
+[INFO] 16:35:37:386 proceso/(166109:166116): PID: 2 
+
+[INFO] 16:35:37:386 proceso/(166109:166112): Planificador largo
+[INFO] 16:35:50:206 proceso/(166109:166118): se conecto una consola
+[INFO] 16:35:50:206 proceso/(166109:166118): Consola mando instrucciones
+[INFO] 16:35:50:206 proceso/(166109:166118): PID: 3 
+
+[INFO] 16:35:50:207 proceso/(166109:166112): Planificador largo
+[INFO] 16:35:57:115 proceso/(166109:166120): se conecto una consola
+[INFO] 16:35:57:115 proceso/(166109:166120): Consola mando instrucciones
+[INFO] 16:35:57:115 proceso/(166109:166120): PID: 4 
+
+[INFO] 16:35:57:115 proceso/(166109:166112): Planificador largo
+[INFO] 16:36:09:332 proceso/(166109:166122): se conecto una consola
+[INFO] 16:36:09:332 proceso/(166109:166122): Consola mando instrucciones
+[INFO] 16:36:09:332 proceso/(166109:166122): PID: 5 
+
+[INFO] 16:38:16:186 proceso/(166194:166199): se conecto una consola
+[INFO] 16:38:16:187 proceso/(166194:166199): Consola mando instrucciones
+[INFO] 16:38:16:187 proceso/(166194:166199): PID: 1 
+

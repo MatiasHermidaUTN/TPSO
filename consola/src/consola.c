@@ -41,8 +41,8 @@ void destruir_instruccion(t_instruccion* instruccion){
 }
 
 void esperar_fin_proceso(int socket_kernel,t_log* logger){
-	t_handshake rta = recibir_handshake(socket_kernel);
-	if(rta == OK){
+	t_msj_kernel_consola rta = recibir_fin_proceso(socket_kernel);
+	if(rta == FINALIZACION_OK){
 		log_info(logger,"Proceso terminado");
 	} else 	log_error(logger,"Hubo un error en el proceso"); //falta enviar el hanshake ne el kernel cuando se termina el proceso
 

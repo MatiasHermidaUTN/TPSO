@@ -188,3 +188,49 @@ void enviar_handshake(int socket, t_handshake msg_hanshake){
 	//TODO: Falta fijarse si da error
 	send(socket, &msg_hanshake, sizeof(msg_hanshake), 0);
 }
+
+t_msj_kernel_consola recibir_fin_proceso(int socket_cliente){
+	t_msj_kernel_consola msj;
+	recv(socket_cliente, &msj, sizeof(t_msj_kernel_consola), MSG_WAITALL);
+	return msj;
+}
+
+void enviar_fin_proceso(int socket, t_msj_kernel_consola msj){
+	//TODO: Falta fijarse si da error
+	send(socket, &msj, sizeof(msj), 0);
+}
+
+void *queue_pop_con_mutex(t_queue* queue, pthread_mutex_t* mutex)
+{
+    pthread_mutex_lock(mutex);
+    void *elemento = queue_pop(queue);
+    pthread_mutex_unlock(mutex);
+    return elemento;
+}
+
+void queue_push_con_mutex(t_queue* queue,void* elemento , pthread_mutex_t* mutex)
+{
+    pthread_mutex_lock(mutex);
+    queue_push(queue, elemento);
+    pthread_mutex_unlock(mutex);
+    return;
+}
+
+void *list_pop_con_mutex(t_list* lista, pthread_mutex_t* mutex)
+{
+    pthread_mutex_lock(mutex);
+    void* elemento = list_remove(lista, 0);
+    pthread_mutex_unlock(mutex);
+    return elemento;
+}
+
+void list_push_con_mutex(t_list* lista,void* elemento , pthread_mutex_t* mutex){
+    pthread_mutex_lock(mutex);
+    list_add(lista, elemento);
+    pthread_mutex_unlock(mutex);
+    return;
+}
+
+char* obtener_pids(t_list* lista_pcbs){
+	//TODO
+}

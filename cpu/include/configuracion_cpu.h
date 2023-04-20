@@ -11,7 +11,9 @@ typedef struct cpu_config {
     char* TAM_MAX_SEGMENTO;
 } t_cpu_config;
 
-t_cpu_config leer_cpu_config(t_config* config);
+extern int socket_kernel;
+extern t_cpu_config lectura_de_config;
 
+t_cpu_config leer_cpu_config(t_config* config);
 
 #endif /* CONFIGURACION_CPU_H_ */

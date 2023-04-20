@@ -5,6 +5,7 @@
 #include <pthread.h>
 #include <commons/collections/queue.h>
 #include "planificacion_corto.h"
+#include "planificacion_largo.h"
 #include <semaphore.h>
 
 typedef struct kernel_config{
@@ -25,22 +26,23 @@ typedef struct kernel_config{
 
 
 extern pthread_mutex_t mutex_contador_pid;
-extern pthread_mutex_t mutex_ready_queue;
+extern pthread_mutex_t mutex_new_queue;
+extern pthread_mutex_t mutex_ready_list;
 
-extern sem_t sem_ready;
-
+extern sem_t sem_cant_ready;
+extern sem_t sem_cant_new;
+extern sem_t sem_multiprogramacion;
 
 extern t_kernel_config lectura_de_config;
 extern t_log* logger;
 
 extern t_queue* new_queue;
-extern t_queue* ready_queue;
+extern t_list* ready_list;
 extern t_queue* blocked_queue;
 
 extern int socket_memoria;
 extern int socket_cpu;
 extern int socket_fileSystem;
-
 
 t_kernel_config leer_kernel_config(t_config* config);
 

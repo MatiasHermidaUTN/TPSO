@@ -98,7 +98,7 @@ void enviar_pcb(t_pcb* pcb){
 	return;
 }
 
-t_rta_cpu_al_kernel esperar_cpu(){
+t_msj_kernel_cpu esperar_cpu(){
 	//TODO: IMPLEMENTAR
-	return YIELD;
+	return YIELD_EJECUTADO;
 }
