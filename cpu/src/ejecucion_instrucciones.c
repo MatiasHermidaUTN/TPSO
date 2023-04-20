@@ -39,8 +39,12 @@ void ejecutar_instrucciones(t_pcb* pcb){
 			case DELETE_SEGMENT:
 				break;
 			case YIELD:
+				enviar_pcb(socket_kernel, pcb, YIELD_EJECUTADO);
+				return;
 				break;
 			case EXIT:
+				enviar_pcb(socket_kernel, pcb, EXIT);
+				return;
 				break;
 			default:
 				break;
@@ -112,4 +116,5 @@ void ejecutar_set(t_pcb* pcb, t_instruccion* instruccion_actual){
 	sleep(atoi(lectura_de_config.RETARDO_INSTRUCCION));
 	return;
 }
+
 

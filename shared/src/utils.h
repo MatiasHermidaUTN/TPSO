@@ -20,6 +20,7 @@
 #include <stdbool.h>
 #include <stdint.h>
 #include <pthread.h>
+#include "diccionario_instrucciones.h"
 
 
 typedef enum
@@ -169,5 +170,39 @@ void *list_pop_con_mutex(t_list* lista, pthread_mutex_t* mutex);
 void list_push_con_mutex(t_list* lista,void* elemento , pthread_mutex_t* mutex);
 
 char* obtener_pids(t_list* lista_pcbs);
+
+t_pcb* recibir_pcb(int socket);
+
+void enviar_pcb(int socket, t_pcb* pcb, t_msj_kernel_cpu op_code);
+
+void liberar_pcb(t_pcb* pcb);
+
+void* serializar_pcb(t_pcb* pcb, size_t* size_total, t_msj_kernel_cpu op_code);
+
+size_t tamanio_payload_pcb(t_pcb* pcb);
+
+size_t tamanio_instrucciones(t_list* instrucciones);
+
+int tamanio_parametros(t_list* parametros, int index_instruccion);
+
+void memcpy_instrucciones_serializar(void* stream_pcb, t_list* instrucciones, int* desplazamiento);
+
+void memcpy_registros_serializar(void* stream_pcb, t_registros_cpu registros_cpu, int* desplazamiento);
+
+void memcpy_tabla_segmentos_serializar(void* stream, t_list* tabla_segmentos, int* desplazamiento);
+
+void memcpy_archivos_abiertos_serializar(void* stream, t_list* archivos_abiertos, int* desplazamiento);
+
+t_pcb* deserializar_pcb(void* stream, size_t size_payload);
+
+t_list* deserializar_instrucciones(void* a_recibir, size_t size_payload, int* desplazamiento);
+
+void deserializar_parametros(void* a_recibir, int* desplazamiento, t_instruccion* instruccion, t_dictionary* diccionario_instrucciones);
+
+void memcpy_registros_deserializar(t_registros_cpu* registros_cpu, void* stream_pcb, int* desplazamiento);
+
+void memcpy_tabla_segmentos_deserializar(t_list* tabla_segmentos, void* stream, int* desplazamiento);
+
+void memcpy_archivos_abiertos_deserializar(t_list* archivos_abiertos, void* stream, int* desplazamiento);
 
 #endif /* UTILS_H_ */

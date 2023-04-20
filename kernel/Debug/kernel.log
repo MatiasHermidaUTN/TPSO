@@ -252,3 +252,62 @@
 [INFO] 16:38:16:187 proceso/(166194:166199): Consola mando instrucciones
 [INFO] 16:38:16:187 proceso/(166194:166199): PID: 1 
 
+[INFO] 19:36:19:566 proceso/(171669:171676): se conecto una consola
+[INFO] 19:36:19:567 proceso/(171669:171676): Consola mando instrucciones
+[INFO] 19:36:19:568 proceso/(171669:171676): Se crea el proceso 1 en NEW 
+
+[INFO] 19:36:19:568 proceso/(171669:171672): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[ERROR] 19:36:20:542 proceso/(171669:171671): Error en la comunicacion entre el Kernel y la CPU
+[INFO] 19:40:53:954 proceso/(171933:171938): se conecto una consola
+[INFO] 19:40:53:956 proceso/(171933:171938): Consola mando instrucciones
+[INFO] 19:40:53:956 proceso/(171933:171938): Se crea el proceso 1 en NEW 
+
+[INFO] 19:40:53:957 proceso/(171933:171936): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[ERROR] 19:40:54:782 proceso/(171933:171935): Error en la comunicacion entre el Kernel y la CPU
+[INFO] 19:43:59:770 proceso/(172082:172087): se conecto una consola
+[INFO] 19:43:59:771 proceso/(172082:172087): Consola mando instrucciones
+[INFO] 19:43:59:771 proceso/(172082:172087): Se crea el proceso 1 en NEW 
+
+[INFO] 19:43:59:772 proceso/(172082:172085): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 20:08:47:548 proceso/(173754:173759): se conecto una consola
+[INFO] 20:08:47:549 proceso/(173754:173759): Consola mando instrucciones
+[INFO] 20:08:47:549 proceso/(173754:173759): Se crea el proceso 1 en NEW 
+
+[INFO] 20:08:47:549 proceso/(173754:173757): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[ERROR] 20:08:48:059 proceso/(173754:173756): Error en la comunicacion entre el Kernel y la CPU
+[INFO] 20:15:23:262 proceso/(174393:174398): se conecto una consola
+[INFO] 20:15:23:263 proceso/(174393:174398): Consola mando instrucciones
+[INFO] 20:15:23:263 proceso/(174393:174398): Se crea el proceso 1 en NEW 
+
+[INFO] 20:15:23:263 proceso/(174393:174396): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[ERROR] 20:15:23:719 proceso/(174393:174395): Error en la comunicacion entre el Kernel y la CPU
+[INFO] 20:18:06:070 proceso/(174609:174614): se conecto una consola
+[INFO] 20:18:06:071 proceso/(174609:174614): Consola mando instrucciones
+[INFO] 20:18:06:071 proceso/(174609:174614): Se crea el proceso 1 en NEW 
+
+[INFO] 20:18:06:071 proceso/(174609:174612): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[ERROR] 20:18:06:351 proceso/(174609:174611): Error en la comunicacion entre el Kernel y la CPU
+[INFO] 20:19:27:610 proceso/(174687:174692): se conecto una consola
+[INFO] 20:19:27:610 proceso/(174687:174692): Consola mando instrucciones
+[INFO] 20:19:27:611 proceso/(174687:174692): Se crea el proceso 1 en NEW 
+
+[INFO] 20:19:27:611 proceso/(174687:174690): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[ERROR] 20:19:27:777 proceso/(174687:174689): Error en la comunicacion entre el Kernel y la CPU
+[INFO] 20:20:39:841 proceso/(174742:174747): se conecto una consola
+[INFO] 20:20:39:841 proceso/(174742:174747): Consola mando instrucciones
+[INFO] 20:20:39:841 proceso/(174742:174747): Se crea el proceso 1 en NEW 
+
+[INFO] 20:20:39:841 proceso/(174742:174745): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[ERROR] 20:20:40:017 proceso/(174742:174744): Error en la comunicacion entre el Kernel y la CPU
+[INFO] 20:22:40:835 proceso/(174874:174879): se conecto una consola
+[INFO] 20:22:40:835 proceso/(174874:174879): Consola mando instrucciones
+[INFO] 20:22:40:836 proceso/(174874:174879): Se crea el proceso 1 en NEW 
+
+[INFO] 20:22:40:836 proceso/(174874:174877): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[ERROR] 20:22:41:011 proceso/(174874:174876): Error en la comunicacion entre el Kernel y la CPU
+[INFO] 20:25:20:520 proceso/(175082:175087): se conecto una consola
+[INFO] 20:25:20:520 proceso/(175082:175087): Consola mando instrucciones
+[INFO] 20:25:20:521 proceso/(175082:175087): Se crea el proceso 1 en NEW 
+
+[INFO] 20:25:20:522 proceso/(175082:175085): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[ERROR] 20:25:21:011 proceso/(175082:175084): Error en la comunicacion entre el Kernel y la CPU

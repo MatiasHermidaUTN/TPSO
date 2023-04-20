@@ -13,13 +13,13 @@ t_list* recibir_instrucciones(int socket_consola){
         return false;
     }
 
-    t_list* instrucciones = deserializar_instrucciones(a_recibir, size_payload);
+    t_list* instrucciones = deserializar_instrucciones_kernel(a_recibir, size_payload);
 
 	free(a_recibir);
 	return instrucciones;
 }
 
-t_list* deserializar_instrucciones(void* a_recibir, int size_payload){
+t_list* deserializar_instrucciones_kernel(void* a_recibir, int size_payload){
     t_list* instrucciones = list_create();
     int desplazamiento;
     t_dictionary* diccionario_instrucciones = crear_diccionario_instrucciones();
@@ -93,12 +93,8 @@ void print_l_instrucciones(t_list* instrucciones){
     }
 }
 
-void enviar_pcb(t_pcb* pcb){
-	//TODO: IMPLEMENTAR
-	return;
-}
-
 t_msj_kernel_cpu esperar_cpu(){
-	//TODO: IMPLEMENTAR
-	return YIELD_EJECUTADO;
+	t_msj_kernel_cpu respuesta;
+	recv(socket_cpu, &respuesta, sizeof(t_msj_kernel_cpu), MSG_WAITALL); //va el MSG_WAITALL?
+	return respuesta;
 }

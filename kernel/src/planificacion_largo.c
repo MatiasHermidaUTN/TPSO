@@ -2,7 +2,7 @@
 
 void planificar_largo(){
 	while(1){
-		sem_wait(&sem_cant_new);
+		sem_wait(&sem_cant_new); //para que no haga nada si no hay nadie en new
 		sem_wait(&sem_multiprogramacion);
 		if(queue_size(new_queue) > 0){
 			t_pcb* pcb = queue_pop_con_mutex(new_queue, &mutex_new_queue);
