@@ -252,3 +252,322 @@
 [INFO] 16:38:16:187 proceso/(166194:166199): Consola mando instrucciones
 [INFO] 16:38:16:187 proceso/(166194:166199): PID: 1 
 
+[INFO] 19:36:19:566 proceso/(171669:171676): se conecto una consola
+[INFO] 19:36:19:567 proceso/(171669:171676): Consola mando instrucciones
+[INFO] 19:36:19:568 proceso/(171669:171676): Se crea el proceso 1 en NEW 
+
+[INFO] 19:36:19:568 proceso/(171669:171672): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[ERROR] 19:36:20:542 proceso/(171669:171671): Error en la comunicacion entre el Kernel y la CPU
+[INFO] 19:40:53:954 proceso/(171933:171938): se conecto una consola
+[INFO] 19:40:53:956 proceso/(171933:171938): Consola mando instrucciones
+[INFO] 19:40:53:956 proceso/(171933:171938): Se crea el proceso 1 en NEW 
+
+[INFO] 19:40:53:957 proceso/(171933:171936): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[ERROR] 19:40:54:782 proceso/(171933:171935): Error en la comunicacion entre el Kernel y la CPU
+[INFO] 19:43:59:770 proceso/(172082:172087): se conecto una consola
+[INFO] 19:43:59:771 proceso/(172082:172087): Consola mando instrucciones
+[INFO] 19:43:59:771 proceso/(172082:172087): Se crea el proceso 1 en NEW 
+
+[INFO] 19:43:59:772 proceso/(172082:172085): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 20:08:47:548 proceso/(173754:173759): se conecto una consola
+[INFO] 20:08:47:549 proceso/(173754:173759): Consola mando instrucciones
+[INFO] 20:08:47:549 proceso/(173754:173759): Se crea el proceso 1 en NEW 
+
+[INFO] 20:08:47:549 proceso/(173754:173757): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[ERROR] 20:08:48:059 proceso/(173754:173756): Error en la comunicacion entre el Kernel y la CPU
+[INFO] 20:15:23:262 proceso/(174393:174398): se conecto una consola
+[INFO] 20:15:23:263 proceso/(174393:174398): Consola mando instrucciones
+[INFO] 20:15:23:263 proceso/(174393:174398): Se crea el proceso 1 en NEW 
+
+[INFO] 20:15:23:263 proceso/(174393:174396): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[ERROR] 20:15:23:719 proceso/(174393:174395): Error en la comunicacion entre el Kernel y la CPU
+[INFO] 20:18:06:070 proceso/(174609:174614): se conecto una consola
+[INFO] 20:18:06:071 proceso/(174609:174614): Consola mando instrucciones
+[INFO] 20:18:06:071 proceso/(174609:174614): Se crea el proceso 1 en NEW 
+
+[INFO] 20:18:06:071 proceso/(174609:174612): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[ERROR] 20:18:06:351 proceso/(174609:174611): Error en la comunicacion entre el Kernel y la CPU
+[INFO] 20:19:27:610 proceso/(174687:174692): se conecto una consola
+[INFO] 20:19:27:610 proceso/(174687:174692): Consola mando instrucciones
+[INFO] 20:19:27:611 proceso/(174687:174692): Se crea el proceso 1 en NEW 
+
+[INFO] 20:19:27:611 proceso/(174687:174690): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[ERROR] 20:19:27:777 proceso/(174687:174689): Error en la comunicacion entre el Kernel y la CPU
+[INFO] 20:20:39:841 proceso/(174742:174747): se conecto una consola
+[INFO] 20:20:39:841 proceso/(174742:174747): Consola mando instrucciones
+[INFO] 20:20:39:841 proceso/(174742:174747): Se crea el proceso 1 en NEW 
+
+[INFO] 20:20:39:841 proceso/(174742:174745): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[ERROR] 20:20:40:017 proceso/(174742:174744): Error en la comunicacion entre el Kernel y la CPU
+[INFO] 20:22:40:835 proceso/(174874:174879): se conecto una consola
+[INFO] 20:22:40:835 proceso/(174874:174879): Consola mando instrucciones
+[INFO] 20:22:40:836 proceso/(174874:174879): Se crea el proceso 1 en NEW 
+
+[INFO] 20:22:40:836 proceso/(174874:174877): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[ERROR] 20:22:41:011 proceso/(174874:174876): Error en la comunicacion entre el Kernel y la CPU
+[INFO] 20:25:20:520 proceso/(175082:175087): se conecto una consola
+[INFO] 20:25:20:520 proceso/(175082:175087): Consola mando instrucciones
+[INFO] 20:25:20:521 proceso/(175082:175087): Se crea el proceso 1 en NEW 
+
+[INFO] 20:25:20:522 proceso/(175082:175085): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[ERROR] 20:25:21:011 proceso/(175082:175084): Error en la comunicacion entre el Kernel y la CPU
+[INFO] 22:59:00:983 proceso/(3914:3914): DISCO
+[INFO] 22:59:00:983 proceso/(3914:3914): RECURSO_1
+[ERROR] 22:59:00:983 proceso/(3914:3914): El kernel no pudo conectarse a la memoria
+[INFO] 23:21:19:748 proceso/(5320:5320): DISCO 1
+[ERROR] 23:26:35:829 proceso/(5515:5515): El kernel no pudo conectarse a la memoria
+[ERROR] 23:26:44:741 proceso/(5516:5516): El kernel no pudo conectarse a la memoria
+[ERROR] 23:26:45:422 proceso/(5517:5517): El kernel no pudo conectarse a la memoria
+[ERROR] 23:26:45:943 proceso/(5518:5518): El kernel no pudo conectarse a la memoria
+[ERROR] 23:26:46:385 proceso/(5519:5519): El kernel no pudo conectarse a la memoria
+[ERROR] 23:26:46:821 proceso/(5520:5520): El kernel no pudo conectarse a la memoria
+[ERROR] 23:26:47:138 proceso/(5521:5521): El kernel no pudo conectarse a la memoria
+[ERROR] 23:26:47:407 proceso/(5522:5522): El kernel no pudo conectarse a la memoria
+[ERROR] 23:26:47:628 proceso/(5523:5523): El kernel no pudo conectarse a la memoria
+[ERROR] 23:26:47:815 proceso/(5524:5524): El kernel no pudo conectarse a la memoria
+[ERROR] 23:26:47:999 proceso/(5525:5525): El kernel no pudo conectarse a la memoria
+[ERROR] 23:26:48:166 proceso/(5526:5526): El kernel no pudo conectarse a la memoria
+[ERROR] 23:33:43:841 proceso/(6337:6337): El kernel no pudo conectarse a la memoria
+[INFO] 23:33:54:885 proceso/(6363:6363): DISCO 1
+[INFO] 23:33:54:887 proceso/(6363:6363): RECURSO_1 2
+[ERROR] 23:33:54:887 proceso/(6363:6363): El kernel no pudo conectarse a la memoria
+[INFO] 23:34:05:664 proceso/(6364:6364): DISCO 1
+[INFO] 23:34:05:664 proceso/(6364:6364): RECURSO_1 2
+[ERROR] 23:34:05:664 proceso/(6364:6364): El kernel no pudo conectarse a la memoria
+[INFO] 23:34:06:271 proceso/(6365:6365): DISCO 1
+[INFO] 23:34:06:271 proceso/(6365:6365): RECURSO_1 2
+[ERROR] 23:34:06:271 proceso/(6365:6365): El kernel no pudo conectarse a la memoria
+[INFO] 23:34:06:893 proceso/(6366:6366): DISCO 1
+[INFO] 23:34:06:893 proceso/(6366:6366): RECURSO_1 2
+[ERROR] 23:34:06:893 proceso/(6366:6366): El kernel no pudo conectarse a la memoria
+[ERROR] 23:35:19:880 proceso/(6399:6399): El kernel no pudo conectarse a la memoria
+[INFO] 23:35:57:413 proceso/(6437:6437): DISCO 1
+[INFO] 23:35:57:491 proceso/(6437:6437): RECURSO_1 2
+[ERROR] 23:35:57:512 proceso/(6437:6437): El kernel no pudo conectarse a la memoria
+[INFO] 23:42:21:560 proceso/(6631:6631): DISCO 1
+[INFO] 23:42:21:618 proceso/(6631:6631): RECURSO_1 2
+[ERROR] 23:42:21:634 proceso/(6631:6631): El kernel no pudo conectarse a la memoria
+[INFO] 23:43:05:155 proceso/(6646:6646): DISCO 1
+[INFO] 23:43:05:155 proceso/(6646:6646): RECURSO_1 2
+[ERROR] 23:43:05:155 proceso/(6646:6646): El kernel no pudo conectarse a la memoria
+[INFO] 23:45:03:426 proceso/(6767:6767): DISCO 1
+[INFO] 23:45:03:426 proceso/(6767:6767): RECURSO_1 2
+[ERROR] 23:45:03:427 proceso/(6767:6767): El kernel no pudo conectarse a la memoria
+[INFO] 23:45:06:858 proceso/(6768:6768): DISCO 1
+[INFO] 23:45:06:920 proceso/(6768:6768): RECURSO_1 2
+[ERROR] 23:45:06:948 proceso/(6768:6768): El kernel no pudo conectarse a la memoria
+[INFO] 23:45:15:185 proceso/(6769:6769): DISCO 1
+[INFO] 23:45:15:185 proceso/(6769:6769): RECURSO_1 2
+[ERROR] 23:45:15:186 proceso/(6769:6769): El kernel no pudo conectarse a la memoria
+[INFO] 00:06:25:849 proceso/(7751:7751): DISCO 1
+[INFO] 00:06:25:849 proceso/(7751:7751): RECURSO_1 2
+[INFO] 00:06:38:070 proceso/(7751:7756): se conecto una consola
+[INFO] 00:06:38:070 proceso/(7751:7756): Consola mando instrucciones
+[INFO] 00:06:38:071 proceso/(7751:7756): Se crea el proceso 1 en NEW 
+
+[INFO] 00:06:38:071 proceso/(7751:7754): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[ERROR] 00:06:38:071 proceso/(7751:7753): Error en la lectura del algoritmo de planificacion
+[INFO] 00:09:01:580 proceso/(8372:8372): DISCO 1
+[INFO] 00:09:01:581 proceso/(8372:8372): RECURSO_1 2
+[INFO] 00:09:06:402 proceso/(8372:8377): se conecto una consola
+[INFO] 00:09:06:402 proceso/(8372:8377): Consola mando instrucciones
+[INFO] 00:09:06:402 proceso/(8372:8377): Se crea el proceso 1 en NEW 
+
+[INFO] 00:09:06:402 proceso/(8372:8375): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[ERROR] 00:09:06:403 proceso/(8372:8374): Error en la comunicacion entre el Kernel y la CPU
+[INFO] 00:12:33:827 proceso/(8560:8560): DISCO 1
+[INFO] 00:12:33:828 proceso/(8560:8560): RECURSO_1 2
+[INFO] 00:12:38:172 proceso/(8560:8565): se conecto una consola
+[INFO] 00:12:38:173 proceso/(8560:8565): Consola mando instrucciones
+[INFO] 00:12:38:173 proceso/(8560:8565): Se crea el proceso 1 en NEW 
+
+[INFO] 00:12:38:173 proceso/(8560:8563): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[ERROR] 00:12:38:559 proceso/(8560:8562): Error en la comunicacion entre el Kernel y la CPU
+[INFO] 00:14:09:698 proceso/(8622:8622): DISCO 1
+[INFO] 00:14:09:699 proceso/(8622:8622): RECURSO_1 2
+[INFO] 00:14:13:817 proceso/(8622:8627): se conecto una consola
+[INFO] 00:14:13:818 proceso/(8622:8627): Consola mando instrucciones
+[INFO] 00:14:13:818 proceso/(8622:8627): Se crea el proceso 1 en NEW 
+
+[INFO] 00:14:13:818 proceso/(8622:8625): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[ERROR] 00:14:14:007 proceso/(8622:8624): Error en la comunicacion entre el Kernel y la CPU
+[INFO] 00:15:16:734 proceso/(8704:8704): DISCO 1
+[INFO] 00:15:16:734 proceso/(8704:8704): RECURSO_1 2
+[INFO] 00:15:20:726 proceso/(8704:8709): se conecto una consola
+[INFO] 00:15:20:726 proceso/(8704:8709): Consola mando instrucciones
+[INFO] 00:15:20:727 proceso/(8704:8709): Se crea el proceso 1 en NEW 
+
+[INFO] 00:15:20:728 proceso/(8704:8707): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[ERROR] 00:15:20:932 proceso/(8704:8706): Error en la comunicacion entre el Kernel y la CPU
+[INFO] 00:16:46:924 proceso/(8804:8804): DISCO 1
+[INFO] 00:16:46:925 proceso/(8804:8804): RECURSO_1 2
+[INFO] 00:16:50:721 proceso/(8804:8809): se conecto una consola
+[INFO] 00:16:50:721 proceso/(8804:8809): Consola mando instrucciones
+[INFO] 00:16:50:721 proceso/(8804:8809): Se crea el proceso 1 en NEW 
+
+[INFO] 00:16:50:723 proceso/(8804:8807): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[ERROR] 00:16:50:938 proceso/(8804:8806): Error en la comunicacion entre el Kernel y la CPU
+[INFO] 00:24:13:600 proceso/(9497:9497): DISCO 1
+[INFO] 00:24:13:602 proceso/(9497:9497): RECURSO_1 2
+[INFO] 00:24:16:811 proceso/(9497:9502): se conecto una consola
+[INFO] 00:24:16:811 proceso/(9497:9502): Consola mando instrucciones
+[INFO] 00:24:16:812 proceso/(9497:9502): Se crea el proceso 1 en NEW 
+
+[INFO] 00:24:16:812 proceso/(9497:9500): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[ERROR] 00:24:17:039 proceso/(9497:9499): Error en la comunicacion entre el Kernel y la CPU
+[INFO] 00:28:19:997 proceso/(9649:9649): DISCO 1
+[INFO] 00:28:19:998 proceso/(9649:9649): RECURSO_1 2
+[INFO] 00:28:22:823 proceso/(9649:9654): se conecto una consola
+[INFO] 00:28:22:823 proceso/(9649:9654): Consola mando instrucciones
+[INFO] 00:28:22:823 proceso/(9649:9654): Se crea el proceso 1 en NEW 
+
+[INFO] 00:28:22:824 proceso/(9649:9652): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[ERROR] 00:28:23:049 proceso/(9649:9651): Error en la comunicacion entre el Kernel y la CPU
+[INFO] 01:03:21:114 proceso/(10478:10478): DISCO 1
+[INFO] 01:03:21:114 proceso/(10478:10478): RECURSO_1 2
+[INFO] 01:03:26:426 proceso/(10478:10483): se conecto una consola
+[INFO] 01:03:26:426 proceso/(10478:10483): Consola mando instrucciones
+[INFO] 01:03:26:426 proceso/(10478:10483): Se crea el proceso 1 en NEW 
+
+[INFO] 01:03:26:426 proceso/(10478:10481): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[ERROR] 01:03:26:725 proceso/(10478:10480): Error en la comunicacion entre el Kernel y la CPU
+[INFO] 01:04:25:409 proceso/(10562:10562): DISCO 1
+[INFO] 01:04:25:409 proceso/(10562:10562): RECURSO_1 2
+[ERROR] 01:04:25:410 proceso/(10562:10562): El kernel no pudo conectarse a el CPU
+[INFO] 01:05:58:355 proceso/(10595:10595): DISCO 1
+[INFO] 01:05:58:356 proceso/(10595:10595): RECURSO_1 2
+[INFO] 01:06:01:818 proceso/(10595:10600): se conecto una consola
+[INFO] 01:06:01:818 proceso/(10595:10600): Consola mando instrucciones
+[INFO] 01:06:01:818 proceso/(10595:10600): Se crea el proceso 1 en NEW 
+
+[INFO] 01:06:01:818 proceso/(10595:10598): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[ERROR] 01:06:01:981 proceso/(10595:10597): Error en la comunicacion entre el Kernel y la CPU
+[INFO] 01:08:20:994 proceso/(10700:10700): DISCO 1
+[INFO] 01:08:20:995 proceso/(10700:10700): RECURSO_1 2
+[INFO] 01:08:27:553 proceso/(10700:10705): se conecto una consola
+[INFO] 01:08:27:553 proceso/(10700:10705): Consola mando instrucciones
+[INFO] 01:08:27:554 proceso/(10700:10705): Se crea el proceso 1 en NEW 
+
+[INFO] 01:08:27:554 proceso/(10700:10703): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[ERROR] 01:08:38:993 proceso/(10700:10702): Error en la comunicacion entre el Kernel y la CPU
+[INFO] 01:22:48:403 proceso/(11568:11568): DISCO 1
+[INFO] 01:22:48:403 proceso/(11568:11568): RECURSO_1 2
+[INFO] 01:22:51:464 proceso/(11568:11573): se conecto una consola
+[INFO] 01:22:51:464 proceso/(11568:11573): Consola mando instrucciones
+[INFO] 01:22:51:464 proceso/(11568:11573): Se crea el proceso 1 en NEW 
+
+[INFO] 01:22:51:466 proceso/(11568:11571): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[ERROR] 01:23:43:901 proceso/(11568:11570): Error en la comunicacion entre el Kernel y la CPU
+[INFO] 01:28:30:309 proceso/(11938:11938): DISCO 1
+[INFO] 01:28:30:310 proceso/(11938:11938): RECURSO_1 2
+[INFO] 01:28:33:510 proceso/(11938:11943): se conecto una consola
+[INFO] 01:28:33:510 proceso/(11938:11943): Consola mando instrucciones
+[INFO] 01:28:33:510 proceso/(11938:11943): Se crea el proceso 1 en NEW 
+
+[INFO] 01:28:33:510 proceso/(11938:11941): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[ERROR] 01:29:37:004 proceso/(11938:11940): Error en la comunicacion entre el Kernel y la CPU
+[INFO] 01:30:45:749 proceso/(11970:11970): DISCO 1
+[INFO] 01:30:45:749 proceso/(11970:11970): RECURSO_1 2
+[INFO] 01:30:49:116 proceso/(11970:11975): se conecto una consola
+[INFO] 01:30:49:116 proceso/(11970:11975): Consola mando instrucciones
+[INFO] 01:30:49:116 proceso/(11970:11975): Se crea el proceso 1 en NEW 
+
+[INFO] 01:30:49:117 proceso/(11970:11973): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[ERROR] 01:31:28:294 proceso/(11970:11972): Error en la comunicacion entre el Kernel y la CPU
+[INFO] 01:32:09:928 proceso/(12016:12016): DISCO 1
+[INFO] 01:32:09:929 proceso/(12016:12016): RECURSO_1 2
+[ERROR] 01:32:09:930 proceso/(12016:12016): El kernel no pudo conectarse a el CPU
+[INFO] 01:33:49:668 proceso/(12038:12038): DISCO 1
+[INFO] 01:33:49:669 proceso/(12038:12038): RECURSO_1 2
+[INFO] 01:33:54:797 proceso/(12038:12044): se conecto una consola
+[INFO] 01:33:54:797 proceso/(12038:12044): Consola mando instrucciones
+[INFO] 01:33:54:798 proceso/(12038:12044): Se crea el proceso 1 en NEW 
+
+[INFO] 01:33:54:798 proceso/(12038:12041): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[ERROR] 01:38:47:763 proceso/(12038:12040): Error en la comunicacion entre el Kernel y la CPU
+[INFO] 01:40:08:690 proceso/(12372:12372): DISCO 1
+[INFO] 01:40:08:690 proceso/(12372:12372): RECURSO_1 2
+[INFO] 01:40:13:807 proceso/(12372:12377): se conecto una consola
+[INFO] 01:40:13:807 proceso/(12372:12377): Consola mando instrucciones
+[INFO] 01:40:13:807 proceso/(12372:12377): Se crea el proceso 1 en NEW 
+
+[INFO] 01:40:13:808 proceso/(12372:12375): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[ERROR] 01:40:52:560 proceso/(12372:12374): Error en la comunicacion entre el Kernel y la CPU
+[INFO] 01:42:06:344 proceso/(12457:12457): DISCO 1
+[INFO] 01:42:06:344 proceso/(12457:12457): RECURSO_1 2
+[INFO] 01:42:10:705 proceso/(12457:12462): se conecto una consola
+[INFO] 01:42:10:705 proceso/(12457:12462): Consola mando instrucciones
+[INFO] 01:42:10:705 proceso/(12457:12462): Se crea el proceso 1 en NEW 
+
+[INFO] 01:42:10:705 proceso/(12457:12460): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[ERROR] 01:42:10:706 proceso/(12457:12459): Error en la comunicacion entre el Kernel y la CPU
+[INFO] 01:44:55:397 proceso/(12679:12679): DISCO 1
+[INFO] 01:44:55:398 proceso/(12679:12679): RECURSO_1 2
+[INFO] 01:44:59:152 proceso/(12679:12684): se conecto una consola
+[INFO] 01:44:59:152 proceso/(12679:12684): Consola mando instrucciones
+[INFO] 01:44:59:152 proceso/(12679:12684): Se crea el proceso 1 en NEW 
+
+[INFO] 01:44:59:153 proceso/(12679:12682): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 01:45:09:374 proceso/(12679:12686): se conecto una consola
+[INFO] 01:45:09:374 proceso/(12679:12686): Consola mando instrucciones
+[INFO] 01:45:09:374 proceso/(12679:12686): Se crea el proceso 2 en NEW 
+
+[INFO] 01:45:09:374 proceso/(12679:12682): PID: 2 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 01:47:15:031 proceso/(12782:12787): se conecto una consola
+[INFO] 01:47:15:032 proceso/(12782:12787): Consola mando instrucciones
+[INFO] 01:47:15:032 proceso/(12782:12787): Se crea el proceso 1 en NEW 
+
+[INFO] 01:47:15:032 proceso/(12782:12785): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 01:49:17:578 proceso/(12811:12816): se conecto una consola
+[INFO] 01:49:17:578 proceso/(12811:12816): Consola mando instrucciones
+[INFO] 01:49:17:578 proceso/(12811:12816): Se crea el proceso 1 en NEW 
+
+[INFO] 01:49:17:578 proceso/(12811:12814): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 01:53:56:925 proceso/(13038:13043): se conecto una consola
+[INFO] 01:53:56:925 proceso/(13038:13043): Consola mando instrucciones
+[INFO] 01:53:56:926 proceso/(13038:13043): Se crea el proceso 1 en NEW 
+
+[INFO] 01:53:56:926 proceso/(13038:13041): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 02:02:00:885 proceso/(13725:13730): se conecto una consola
+[INFO] 02:02:00:886 proceso/(13725:13730): Consola mando instrucciones
+[INFO] 02:02:00:886 proceso/(13725:13730): Se crea el proceso 1 en NEW 
+
+[INFO] 02:02:00:886 proceso/(13725:13728): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 02:10:33:695 proceso/(13961:13966): se conecto una consola
+[INFO] 02:10:33:695 proceso/(13961:13966): Consola mando instrucciones
+[INFO] 02:10:33:695 proceso/(13961:13966): Se crea el proceso 1 en NEW 
+
+[INFO] 02:10:33:695 proceso/(13961:13964): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 02:13:56:421 proceso/(14044:14049): se conecto una consola
+[INFO] 02:13:56:422 proceso/(14044:14049): Consola mando instrucciones
+[INFO] 02:13:56:422 proceso/(14044:14049): Se crea el proceso 1 en NEW 
+
+[INFO] 02:13:56:422 proceso/(14044:14047): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 02:22:37:641 proceso/(14315:14320): se conecto una consola
+[INFO] 02:22:37:642 proceso/(14315:14320): Consola mando instrucciones
+[INFO] 02:22:37:642 proceso/(14315:14320): Se crea el proceso 1 en NEW 
+
+[INFO] 02:22:37:642 proceso/(14315:14318): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[ERROR] 02:23:48:025 proceso/(14345:14345): El kernel no pudo conectarse a el CPU
+[INFO] 02:25:28:096 proceso/(14362:14367): se conecto una consola
+[INFO] 02:25:28:141 proceso/(14362:14367): Consola mando instrucciones
+[INFO] 02:25:28:149 proceso/(14362:14367): Se crea el proceso 1 en NEW 
+
+[INFO] 02:25:28:159 proceso/(14362:14365): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 02:31:53:599 proceso/(14501:14506): se conecto una consola
+[INFO] 02:31:53:602 proceso/(14501:14506): Consola mando instrucciones
+[INFO] 02:31:53:602 proceso/(14501:14506): Se crea el proceso 1 en NEW 
+
+[INFO] 02:31:53:602 proceso/(14501:14504): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 02:32:54:939 proceso/(14617:14622): se conecto una consola
+[INFO] 02:32:54:940 proceso/(14617:14622): Consola mando instrucciones
+[INFO] 02:32:54:940 proceso/(14617:14622): Se crea el proceso 1 en NEW 
+
+[INFO] 02:32:54:940 proceso/(14617:14620): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 02:32:59:941 proceso/(14617:14619): AX: HOLA
+[INFO] 02:34:06:790 proceso/(14632:14637): se conecto una consola
+[INFO] 02:34:06:790 proceso/(14632:14637): Consola mando instrucciones
+[INFO] 02:34:06:790 proceso/(14632:14637): Se crea el proceso 1 en NEW 
+
+[INFO] 02:34:06:791 proceso/(14632:14635): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 02:34:11:793 proceso/(14632:14634): AX: HOLA

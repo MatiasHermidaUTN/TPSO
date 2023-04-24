@@ -20,10 +20,17 @@ typedef struct kernel_config{
     int   ESTIMACION_INICIAL;
     int   HRRN_ALFA;
     int   GRADO_MAX_MULTIPROGRAMACION;
-    char* RECURSOS;
-    char* INSTANCIAS_RECURSOS;
+    char** RECURSOS;
+    char** INSTANCIAS_RECURSOS;
 } t_kernel_config;
 
+typedef struct{
+	char* nombre;
+	t_list* lista_bloqueados;
+	sem_t sem_cant_recurso;
+	sem_t sem_cant_bloqueados;
+	pthread_mutex_t mutex_lista_bloqueados;
+} t_estructura_recurso;
 
 extern pthread_mutex_t mutex_contador_pid;
 extern pthread_mutex_t mutex_new_queue;
@@ -38,11 +45,12 @@ extern t_log* logger;
 
 extern t_queue* new_queue;
 extern t_list* ready_list;
-extern t_queue* blocked_queue;
 
 extern int socket_memoria;
 extern int socket_cpu;
 extern int socket_fileSystem;
+
+extern t_list* estructuras_recursos_list;
 
 t_kernel_config leer_kernel_config(t_config* config);
 

@@ -10,8 +10,8 @@ int main (int argc, char** argv) {
 
     logger = iniciar_logger("kernel.log", "proceso");
 
-    init_semaforos();
     init_estados();
+    init_semaforos();
 
     init_conexiones(lectura_de_config, logger, &socket_memoria, &socket_cpu, &socket_fileSystem);
 

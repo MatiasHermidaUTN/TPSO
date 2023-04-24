@@ -29,11 +29,12 @@ int main(int argc, char** argv) {
     	int cod_op = recibir_operacion(socket_kernel);
     	switch (cod_op){
     		case PCB_A_EJECUTAR:
-    			//t_pcb* pcb = deserializar_pcb(socket_kernel); //deserializar hace el malloc
-    			//ejecutar_instrucciones(pcb);
+    			t_pcb* pcb = recibir_pcb(socket_kernel); //deserializar hace el malloc
+    			log_info(logger, "PID RECIBIDO: %d", pcb->pid);
+    			ejecutar_instrucciones(pcb);
+    			liberar_pcb(pcb);
     			break;
         }
-        return 0;
     }
 
 	return EXIT_SUCCESS;

@@ -21,7 +21,8 @@ t_log* logger;
 
 t_queue* new_queue;
 t_list* ready_list;
-t_queue* blocked_queue;
+
+t_list* estructuras_recursos_list;
 
 //SOCKETS//////////////////////////////////
 int socket_memoria;
@@ -44,9 +45,21 @@ t_kernel_config leer_kernel_config(t_config* config) {
     lectura_de_config.ESTIMACION_INICIAL          = config_get_int_value(config, "ESTIMACION_INICIAL");
     lectura_de_config.HRRN_ALFA                   = config_get_int_value(config, "HRRN_ALFA");
     lectura_de_config.GRADO_MAX_MULTIPROGRAMACION = config_get_int_value(config, "GRADO_MAX_MULTIPROGRAMACION");
-    lectura_de_config.RECURSOS                    = strdup(config_get_string_value(config, "RECURSOS"));
-    lectura_de_config.INSTANCIAS_RECURSOS         = strdup(config_get_string_value(config, "INSTANCIAS_RECURSOS"));
-    // Fijarse si los 3 ints nos conviene que sean ints o directamente char*
+
+    char*recursos                    = strdup(config_get_string_value(config, "RECURSOS"));
+    char* recursos_sin_espacio= string_replace(recursos," " ,"");
+    free(recursos);
+    lectura_de_config.RECURSOS = string_get_string_as_array(recursos_sin_espacio);
+    free(recursos_sin_espacio); //REVISAR ESTE FREE (valgrind no se queja)
+
+
+    char*instancias_recursos                    = strdup(config_get_string_value(config, "INSTANCIAS_RECURSOS"));
+	char* instancias_recursos_sin_espacio= string_replace(instancias_recursos," " ,"");
+	free(instancias_recursos);
+	lectura_de_config.INSTANCIAS_RECURSOS = string_get_string_as_array(instancias_recursos_sin_espacio);
+	free(instancias_recursos_sin_espacio); //REVISAR ESTE FREE (valgrind no se queja)
+
+
 
     return lectura_de_config;
 }
@@ -63,7 +76,19 @@ void init_semaforos(){
 void init_estados(){
 	new_queue = queue_create();
 	ready_list = list_create();
-	blocked_queue = queue_create();
+
+	estructuras_recursos_list = list_create();
+
+	t_estructura_recurso* estructura;
+	for(int i =0; i< string_array_size(lectura_de_config.RECURSOS);i++){
+		estructura = malloc(sizeof(t_estructura_recurso));
+		estructura->nombre = lectura_de_config.RECURSOS[i];
+		pthread_mutex_init(&(estructura->mutex_lista_bloqueados),NULL);
+		sem_init(&(estructura->sem_cant_bloqueados),0,0);
+		estructura->lista_bloqueados = list_create();
+		sem_init(&(estructura->sem_cant_recurso),0,atoi(lectura_de_config.INSTANCIAS_RECURSOS[i]));
+		list_add(estructuras_recursos_list,estructura);//no hace falta mutex
+	}
 }
 
 void liberar_estructura_config(t_kernel_config config){
@@ -75,7 +100,9 @@ void liberar_estructura_config(t_kernel_config config){
 	free(config.PUERTO_FILESYSTEM);
 	free(config.PUERTO_ESCUCHA);
 	free(config.ALGORITMO_PLANIFICACION);
-	free(config.RECURSOS);
-	free(config.INSTANCIAS_RECURSOS);
+	//free(config.RECURSOS);
+	string_array_destroy(config.RECURSOS);
+	//free(config.INSTANCIAS_RECURSOS); //hay que liberar todos
+	string_array_destroy(config.INSTANCIAS_RECURSOS);
 
 }

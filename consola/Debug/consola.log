@@ -31886,3 +31886,141 @@
 [INFO] 16:38:16:185 proceso/(166198:166198): IP KERNEL: 127.0.0.1
 [INFO] 16:38:16:186 proceso/(166198:166198): Puerto KERNEL: 8000
 [ERROR] 16:38:25:106 proceso/(166198:166198): Hubo un error en el proceso
+[INFO] 19:36:19:563 proceso/(171675:171675): IP KERNEL: 127.0.0.1
+[INFO] 19:36:19:565 proceso/(171675:171675): Puerto KERNEL: 8000
+[ERROR] 19:36:20:543 proceso/(171675:171675): Hubo un error en el proceso
+[INFO] 19:40:53:952 proceso/(171937:171937): IP KERNEL: 127.0.0.1
+[INFO] 19:40:53:953 proceso/(171937:171937): Puerto KERNEL: 8000
+[ERROR] 19:40:54:783 proceso/(171937:171937): Hubo un error en el proceso
+[INFO] 19:43:59:766 proceso/(172086:172086): IP KERNEL: 127.0.0.1
+[INFO] 19:43:59:769 proceso/(172086:172086): Puerto KERNEL: 8000
+[INFO] 20:08:47:545 proceso/(173758:173758): IP KERNEL: 127.0.0.1
+[INFO] 20:08:47:547 proceso/(173758:173758): Puerto KERNEL: 8000
+[ERROR] 20:08:48:061 proceso/(173758:173758): Hubo un error en el proceso
+[INFO] 20:15:23:261 proceso/(174397:174397): IP KERNEL: 127.0.0.1
+[INFO] 20:15:23:261 proceso/(174397:174397): Puerto KERNEL: 8000
+[ERROR] 20:15:23:719 proceso/(174397:174397): Hubo un error en el proceso
+[INFO] 20:16:27:653 proceso/(174592:174592): IP KERNEL: 127.0.0.1
+[INFO] 20:16:27:654 proceso/(174592:174592): Puerto KERNEL: 8000
+[ERROR] 20:16:27:654 proceso/(174592:174592): Hubo un error en el proceso
+[INFO] 20:18:06:070 proceso/(174613:174613): IP KERNEL: 127.0.0.1
+[INFO] 20:18:06:070 proceso/(174613:174613): Puerto KERNEL: 8000
+[ERROR] 20:18:06:352 proceso/(174613:174613): Hubo un error en el proceso
+[INFO] 20:19:05:259 proceso/(174681:174681): IP KERNEL: 127.0.0.1
+[INFO] 20:19:05:260 proceso/(174681:174681): Puerto KERNEL: 8000
+[ERROR] 20:19:05:260 proceso/(174681:174681): Hubo un error en el proceso
+[INFO] 20:19:27:610 proceso/(174691:174691): IP KERNEL: 127.0.0.1
+[INFO] 20:19:27:610 proceso/(174691:174691): Puerto KERNEL: 8000
+[ERROR] 20:19:27:778 proceso/(174691:174691): Hubo un error en el proceso
+[INFO] 20:20:39:839 proceso/(174746:174746): IP KERNEL: 127.0.0.1
+[INFO] 20:20:39:840 proceso/(174746:174746): Puerto KERNEL: 8000
+[ERROR] 20:20:40:017 proceso/(174746:174746): Hubo un error en el proceso
+[INFO] 20:22:40:833 proceso/(174878:174878): IP KERNEL: 127.0.0.1
+[INFO] 20:22:40:834 proceso/(174878:174878): Puerto KERNEL: 8000
+[ERROR] 20:22:41:013 proceso/(174878:174878): Hubo un error en el proceso
+[INFO] 20:25:20:518 proceso/(175086:175086): IP KERNEL: 127.0.0.1
+[INFO] 20:25:20:519 proceso/(175086:175086): Puerto KERNEL: 8000
+[ERROR] 20:25:21:012 proceso/(175086:175086): Hubo un error en el proceso
+[INFO] 00:06:38:068 proceso/(7755:7755): IP KERNEL: 127.0.0.1
+[INFO] 00:06:38:069 proceso/(7755:7755): Puerto KERNEL: 8000
+[ERROR] 00:06:38:072 proceso/(7755:7755): Hubo un error en el proceso
+[INFO] 00:09:06:400 proceso/(8376:8376): IP KERNEL: 127.0.0.1
+[INFO] 00:09:06:401 proceso/(8376:8376): Puerto KERNEL: 8000
+[ERROR] 00:09:06:403 proceso/(8376:8376): Hubo un error en el proceso
+[INFO] 00:12:38:170 proceso/(8564:8564): IP KERNEL: 127.0.0.1
+[INFO] 00:12:38:171 proceso/(8564:8564): Puerto KERNEL: 8000
+[ERROR] 00:12:38:560 proceso/(8564:8564): Hubo un error en el proceso
+[INFO] 00:14:13:817 proceso/(8626:8626): IP KERNEL: 127.0.0.1
+[INFO] 00:14:13:817 proceso/(8626:8626): Puerto KERNEL: 8000
+[ERROR] 00:14:14:007 proceso/(8626:8626): Hubo un error en el proceso
+[INFO] 00:15:20:725 proceso/(8708:8708): IP KERNEL: 127.0.0.1
+[INFO] 00:15:20:725 proceso/(8708:8708): Puerto KERNEL: 8000
+[ERROR] 00:15:20:932 proceso/(8708:8708): Hubo un error en el proceso
+[INFO] 00:16:50:720 proceso/(8808:8808): IP KERNEL: 127.0.0.1
+[INFO] 00:16:50:721 proceso/(8808:8808): Puerto KERNEL: 8000
+[ERROR] 00:16:50:939 proceso/(8808:8808): Hubo un error en el proceso
+[INFO] 00:24:16:810 proceso/(9501:9501): IP KERNEL: 127.0.0.1
+[INFO] 00:24:16:811 proceso/(9501:9501): Puerto KERNEL: 8000
+[ERROR] 00:24:17:040 proceso/(9501:9501): Hubo un error en el proceso
+[INFO] 00:28:22:820 proceso/(9653:9653): IP KERNEL: 127.0.0.1
+[INFO] 00:28:22:823 proceso/(9653:9653): Puerto KERNEL: 8000
+[ERROR] 00:28:23:049 proceso/(9653:9653): Hubo un error en el proceso
+[INFO] 01:03:26:425 proceso/(10482:10482): IP KERNEL: 127.0.0.1
+[INFO] 01:03:26:425 proceso/(10482:10482): Puerto KERNEL: 8000
+[ERROR] 01:03:26:725 proceso/(10482:10482): Hubo un error en el proceso
+[INFO] 01:04:28:971 proceso/(10564:10564): IP KERNEL: 127.0.0.1
+[INFO] 01:04:28:971 proceso/(10564:10564): Puerto KERNEL: 8000
+[ERROR] 01:04:28:971 proceso/(10564:10564): Hubo un error en el proceso
+[INFO] 01:06:01:817 proceso/(10599:10599): IP KERNEL: 127.0.0.1
+[INFO] 01:06:01:818 proceso/(10599:10599): Puerto KERNEL: 8000
+[ERROR] 01:06:01:982 proceso/(10599:10599): Hubo un error en el proceso
+[INFO] 01:08:27:552 proceso/(10704:10704): IP KERNEL: 127.0.0.1
+[INFO] 01:08:27:553 proceso/(10704:10704): Puerto KERNEL: 8000
+[ERROR] 01:08:38:994 proceso/(10704:10704): Hubo un error en el proceso
+[INFO] 01:22:51:462 proceso/(11572:11572): IP KERNEL: 127.0.0.1
+[INFO] 01:22:51:463 proceso/(11572:11572): Puerto KERNEL: 8000
+[ERROR] 01:23:43:902 proceso/(11572:11572): Hubo un error en el proceso
+[INFO] 01:28:33:508 proceso/(11942:11942): IP KERNEL: 127.0.0.1
+[INFO] 01:28:33:509 proceso/(11942:11942): Puerto KERNEL: 8000
+[ERROR] 01:29:37:006 proceso/(11942:11942): Hubo un error en el proceso
+[INFO] 01:30:49:115 proceso/(11974:11974): IP KERNEL: 127.0.0.1
+[INFO] 01:30:49:115 proceso/(11974:11974): Puerto KERNEL: 8000
+[INFO] 01:32:35:852 proceso/(12019:12019): IP KERNEL: 127.0.0.1
+[INFO] 01:32:35:853 proceso/(12019:12019): Puerto KERNEL: 8000
+[ERROR] 01:32:35:853 proceso/(12019:12019): Hubo un error en el proceso
+[INFO] 01:33:54:796 proceso/(12043:12043): IP KERNEL: 127.0.0.1
+[INFO] 01:33:54:797 proceso/(12043:12043): Puerto KERNEL: 8000
+[ERROR] 01:38:47:766 proceso/(12043:12043): Hubo un error en el proceso
+[INFO] 01:40:13:806 proceso/(12376:12376): IP KERNEL: 127.0.0.1
+[INFO] 01:40:13:806 proceso/(12376:12376): Puerto KERNEL: 8000
+[ERROR] 01:40:52:565 proceso/(12376:12376): Hubo un error en el proceso
+[INFO] 01:42:10:703 proceso/(12461:12461): IP KERNEL: 127.0.0.1
+[INFO] 01:42:10:704 proceso/(12461:12461): Puerto KERNEL: 8000
+[ERROR] 01:42:10:712 proceso/(12461:12461): Hubo un error en el proceso
+[INFO] 01:44:59:151 proceso/(12683:12683): IP KERNEL: 127.0.0.1
+[INFO] 01:44:59:151 proceso/(12683:12683): Puerto KERNEL: 8000
+[INFO] 01:44:59:155 proceso/(12683:12683): Proceso terminado
+[INFO] 01:45:09:373 proceso/(12685:12685): IP KERNEL: 127.0.0.1
+[INFO] 01:45:09:374 proceso/(12685:12685): Puerto KERNEL: 8000
+[INFO] 01:45:09:375 proceso/(12685:12685): Proceso terminado
+[INFO] 01:47:15:030 proceso/(12786:12786): IP KERNEL: 127.0.0.1
+[INFO] 01:47:15:031 proceso/(12786:12786): Puerto KERNEL: 8000
+[INFO] 01:49:17:577 proceso/(12815:12815): IP KERNEL: 127.0.0.1
+[INFO] 01:49:17:577 proceso/(12815:12815): Puerto KERNEL: 8000
+[INFO] 01:49:18:579 proceso/(12815:12815): Proceso terminado
+[INFO] 01:53:56:923 proceso/(13042:13042): IP KERNEL: 127.0.0.1
+[INFO] 01:53:56:924 proceso/(13042:13042): Puerto KERNEL: 8000
+[ERROR] 01:53:58:413 proceso/(13042:13042): Hubo un error en el proceso
+[INFO] 02:02:00:884 proceso/(13729:13729): IP KERNEL: 127.0.0.1
+[INFO] 02:02:00:884 proceso/(13729:13729): Puerto KERNEL: 8000
+[ERROR] 02:02:02:221 proceso/(13729:13729): Hubo un error en el proceso
+[INFO] 02:10:33:691 proceso/(13965:13965): IP KERNEL: 127.0.0.1
+[INFO] 02:10:33:694 proceso/(13965:13965): Puerto KERNEL: 8000
+[ERROR] 02:10:35:106 proceso/(13965:13965): Hubo un error en el proceso
+[INFO] 02:13:56:420 proceso/(14048:14048): IP KERNEL: 127.0.0.1
+[INFO] 02:13:56:420 proceso/(14048:14048): Puerto KERNEL: 8000
+[ERROR] 02:13:56:807 proceso/(14048:14048): Hubo un error en el proceso
+[INFO] 02:22:37:639 proceso/(14319:14319): IP KERNEL: 127.0.0.1
+[INFO] 02:22:37:640 proceso/(14319:14319): Puerto KERNEL: 8000
+[ERROR] 02:22:38:141 proceso/(14319:14319): Hubo un error en el proceso
+[INFO] 02:23:31:763 proceso/(14339:14339): IP KERNEL: 127.0.0.1
+[INFO] 02:23:31:764 proceso/(14339:14339): Puerto KERNEL: 8000
+[ERROR] 02:23:31:764 proceso/(14339:14339): Hubo un error en el proceso
+[INFO] 02:25:28:056 proceso/(14366:14366): IP KERNEL: 127.0.0.1
+[INFO] 02:25:28:056 proceso/(14366:14366): Puerto KERNEL: 8000
+[ERROR] 02:29:29:826 proceso/(14366:14366): Hubo un error en el proceso
+[INFO] 02:29:45:154 proceso/(14465:14465): IP KERNEL: 127.0.0.1
+[INFO] 02:29:45:155 proceso/(14465:14465): Puerto KERNEL: 8000
+[ERROR] 02:29:45:155 proceso/(14465:14465): Hubo un error en el proceso
+[INFO] 02:30:15:238 proceso/(14475:14475): IP KERNEL: 127.0.0.1
+[INFO] 02:30:15:238 proceso/(14475:14475): Puerto KERNEL: 8000
+[ERROR] 02:30:15:238 proceso/(14475:14475): Hubo un error en el proceso
+[INFO] 02:31:53:598 proceso/(14505:14505): IP KERNEL: 127.0.0.1
+[INFO] 02:31:53:599 proceso/(14505:14505): Puerto KERNEL: 8000
+[INFO] 02:31:53:604 proceso/(14505:14505): Proceso terminado
+[INFO] 02:32:54:938 proceso/(14621:14621): IP KERNEL: 127.0.0.1
+[INFO] 02:32:54:939 proceso/(14621:14621): Puerto KERNEL: 8000
+[INFO] 02:32:59:941 proceso/(14621:14621): Proceso terminado
+[INFO] 02:34:06:789 proceso/(14636:14636): IP KERNEL: 127.0.0.1
+[INFO] 02:34:06:790 proceso/(14636:14636): Puerto KERNEL: 8000
+[INFO] 02:34:11:793 proceso/(14636:14636): Proceso terminado

@@ -39,8 +39,12 @@ void ejecutar_instrucciones(t_pcb* pcb){
 			case DELETE_SEGMENT:
 				break;
 			case YIELD:
+				enviar_pcb(socket_kernel, pcb, YIELD_EJECUTADO);
+				return;
 				break;
 			case EXIT:
+				enviar_pcb(socket_kernel, pcb, EXIT_EJECUTADO);
+				return;
 				break;
 			default:
 				break;
@@ -74,42 +78,43 @@ void ejecutar_set(t_pcb* pcb, t_instruccion* instruccion_actual){
 	char* valor = list_get(instruccion_actual->parametros, 1);
 
 	if(!strcmp(registro, "AX")){
-		memcpy(pcb->registros_cpu.AX, valor, 4);
+		memcpy(pcb->registros_cpu.AX, valor, 4*sizeof(char));
 	}
 	else if(!strcmp(registro, "BX")){
-		memcpy(pcb->registros_cpu.BX, valor, 4);
+		memcpy(pcb->registros_cpu.BX, valor, 4*sizeof(char));
 	}
 	else if(!strcmp(registro, "CX")){
-		memcpy(pcb->registros_cpu.CX, valor, 4);
+		memcpy(pcb->registros_cpu.CX, valor, 4*sizeof(char));
 	}
 	else if(!strcmp(registro, "DX")){
-		memcpy(pcb->registros_cpu.DX, valor, 4);
+		memcpy(pcb->registros_cpu.DX, valor, 4*sizeof(char));
 	}
 	else if(!strcmp(registro, "EAX")){
-		memcpy(pcb->registros_cpu.EAX, valor, 8);
+		memcpy(pcb->registros_cpu.EAX, valor, 8*sizeof(char));
 	}
 	else if(!strcmp(registro, "EBX")){
-		memcpy(pcb->registros_cpu.EBX, valor, 8);
+		memcpy(pcb->registros_cpu.EBX, valor, 8*sizeof(char));
 	}
 	else if(!strcmp(registro, "ECX")){
-		memcpy(pcb->registros_cpu.ECX, valor, 8);
+		memcpy(pcb->registros_cpu.ECX, valor, 8*sizeof(char));
 	}
 	else if(!strcmp(registro, "EDX")){
-		memcpy(pcb->registros_cpu.EDX, valor, 8);
+		memcpy(pcb->registros_cpu.EDX, valor, 8*sizeof(char));
 	}
 	else if(!strcmp(registro, "RAX")){
-		memcpy(pcb->registros_cpu.RAX, valor, 16);
+		memcpy(pcb->registros_cpu.RAX, valor, 16*sizeof(char));
 	}
 	else if(!strcmp(registro, "RBX")){
-		memcpy(pcb->registros_cpu.RBX, valor, 16);
+		memcpy(pcb->registros_cpu.RBX, valor, 16*sizeof(char));
 	}
 	else if(!strcmp(registro, "RCX")){
-		memcpy(pcb->registros_cpu.RCX, valor, 16);
+		memcpy(pcb->registros_cpu.RCX, valor, 16*sizeof(char));
 	}
 	else if(!strcmp(registro, "RDX")){
-		memcpy(pcb->registros_cpu.RDX, valor, 16);
+		memcpy(pcb->registros_cpu.RDX, valor, 16*sizeof(char));
 	}
 	sleep(atoi(lectura_de_config.RETARDO_INSTRUCCION));
 	return;
 }
+
 

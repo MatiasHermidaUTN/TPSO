@@ -7,7 +7,6 @@ int recibir_conexiones(int socket_kernel){
 		pthread_t hilo;
 		t_args_recibir_conexiones* args = malloc(sizeof(t_args_recibir_conexiones)); //tiene que ser puntero?
 		args->socket_cliente = socket_consola;
-		args->logger = logger;
 
 		pthread_create(&hilo, NULL, (void*)manejar_conexion, (void*)args);
 		pthread_detach(hilo);
@@ -19,7 +18,6 @@ int recibir_conexiones(int socket_kernel){
 
 void manejar_conexion(void* args){
 	int socket_consola = ((t_args_recibir_conexiones*)args)->socket_cliente;
-	t_log* logger = ((t_args_recibir_conexiones*)args)->logger;
 	free(args);
 
 	log_info(logger, "se conecto una consola");
@@ -40,6 +38,29 @@ void manejar_conexion(void* args){
 		default:
 			log_error(logger, "Error en el envio de instrucciones");
 	}
+}
+
+int contador_pid = 1;
+
+t_pcb* crear_pcb(t_list* instrucciones,int socket_consola){
+	t_pcb* pcb = malloc(sizeof(t_pcb));
+	pthread_mutex_lock(&mutex_contador_pid);
+	pcb->pid = contador_pid;
+	contador_pid++;
+	pthread_mutex_unlock(&mutex_contador_pid);
+
+	pcb->instrucciones = instrucciones;
+	pcb->pc =0;
+	//pcb->registros_cpu = init_registros_cpu(); NO HACE FALTA INICIALIZARLOS, es memoria estatica
+	pcb->tabla_segmentos = list_create();
+	pcb->estimado_prox_rafaga = lectura_de_config.ESTIMACION_INICIAL;
+	pcb->tiempo_llegada_ready = 0;
+	pcb->archivos_abiertos = list_create();
+
+	pcb->socket_consola =socket_consola;
+
+	return pcb;
+
 }
 
 void init_conexiones(t_kernel_config lectura_de_config, t_log* logger, int* socket_memoria, int* socket_cpu, int* socket_fileSystem){
