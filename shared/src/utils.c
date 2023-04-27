@@ -134,8 +134,7 @@ void recibir_mensaje(int socket_cliente)
 	free(buffer);
 }
 
-void* recibir_buffer(int* size, int socket_cliente)
-{
+void* recibir_buffer(int* size, int socket_cliente) {
     void * buffer;
 
     recv(socket_cliente, size, sizeof(int), MSG_WAITALL);
@@ -145,15 +144,13 @@ void* recibir_buffer(int* size, int socket_cliente)
     return buffer;
 }
 
-void eliminar_paquete(t_paquete* paquete)
-{
+void eliminar_paquete(t_paquete* paquete) {
     free(paquete->buffer->stream);
     free(paquete->buffer);
     free(paquete);
 }
 
-t_config* iniciar_config(char* path)
-{
+t_config* iniciar_config(char* path) {
 	t_config* nuevo_config;
 
 	nuevo_config = config_create(path);
@@ -166,8 +163,7 @@ t_config* iniciar_config(char* path)
 	return nuevo_config;
 }
 
-t_log* iniciar_logger(char* path,char* nombre)
-{
+t_log* iniciar_logger(char* path,char* nombre) {
 	t_log* nuevo_logger = log_create(path, nombre, 1, LOG_LEVEL_INFO);
 
 	if(!nuevo_logger) {
@@ -178,71 +174,68 @@ t_log* iniciar_logger(char* path,char* nombre)
 	return nuevo_logger;
 }
 
-t_handshake recibir_handshake(int socket_cliente){
+t_handshake recibir_handshake(int socket_cliente) {
 	t_handshake rta_handshake;
 	recv(socket_cliente, &rta_handshake, sizeof(rta_handshake), MSG_WAITALL);
 	return rta_handshake;
 }
 
-void enviar_handshake(int socket, t_handshake msg_hanshake){
+void enviar_handshake(int socket, t_handshake msg_hanshake) {
 	//TODO: Falta fijarse si da error
 	send(socket, &msg_hanshake, sizeof(msg_hanshake), 0);
 }
 
-t_msj_kernel_consola recibir_fin_proceso(int socket_cliente){
+t_msj_kernel_consola recibir_fin_proceso(int socket_cliente) {
 	t_msj_kernel_consola msj;
 	recv(socket_cliente, &msj, sizeof(t_msj_kernel_consola), MSG_WAITALL);
 	return msj;
 }
 
-void enviar_fin_proceso(int socket, t_msj_kernel_consola msj){
+void enviar_fin_proceso(int socket, t_msj_kernel_consola msj) {
 	//TODO: Falta fijarse si da error
 	send(socket, &msj, sizeof(msj), 0);
 }
 
-void *queue_pop_con_mutex(t_queue* queue, pthread_mutex_t* mutex)
-{
+void *queue_pop_con_mutex(t_queue* queue, pthread_mutex_t* mutex) {
     pthread_mutex_lock(mutex);
     void *elemento = queue_pop(queue);
     pthread_mutex_unlock(mutex);
     return elemento;
 }
 
-void queue_push_con_mutex(t_queue* queue,void* elemento , pthread_mutex_t* mutex)
-{
+void queue_push_con_mutex(t_queue* queue,void* elemento , pthread_mutex_t* mutex) {
     pthread_mutex_lock(mutex);
     queue_push(queue, elemento);
     pthread_mutex_unlock(mutex);
     return;
 }
 
-void *list_pop_con_mutex(t_list* lista, pthread_mutex_t* mutex)
-{
+void *list_pop_con_mutex(t_list* lista, pthread_mutex_t* mutex) {
     pthread_mutex_lock(mutex);
     void* elemento = list_remove(lista, 0);
     pthread_mutex_unlock(mutex);
     return elemento;
 }
 
-void list_push_con_mutex(t_list* lista,void* elemento , pthread_mutex_t* mutex){
+void list_push_con_mutex(t_list* lista,void* elemento , pthread_mutex_t* mutex) {
     pthread_mutex_lock(mutex);
     list_add(lista, elemento);
     pthread_mutex_unlock(mutex);
     return;
 }
 
-char* obtener_pids(t_list* lista_pcbs){
+char* obtener_pids(t_list* lista_pcbs) {
 	//TODO
 }
 
 
-void liberar_pcb(t_pcb* pcb){
+void liberar_pcb(t_pcb* pcb) {
 	//TODO
 }
 
-void enviar_pcb(int socket_cpu, t_pcb* pcb, t_msj_kernel_cpu op_code) {
+void enviar_pcb(int socket_cpu, t_pcb* pcb, t_msj_kernel_cpu op_code, char* parametro_de_instruccion) {
 	size_t size_total;
-	void* stream_pcb_a_enviar = serializar_pcb(pcb, &size_total, op_code);
+	void* stream_pcb_a_enviar = serializar_pcb(pcb, &size_total, op_code, parametro_de_instruccion);
 	//log_info(logger, "size_total: %d", (int)size_total);
 
 	send(socket_cpu, stream_pcb_a_enviar, size_total, 0);
@@ -250,19 +243,37 @@ void enviar_pcb(int socket_cpu, t_pcb* pcb, t_msj_kernel_cpu op_code) {
 	free(stream_pcb_a_enviar);
 }
 
-void* serializar_pcb(t_pcb* pcb, size_t* size_total, t_msj_kernel_cpu op_code) {
+void* serializar_pcb(t_pcb* pcb, size_t* size_total, t_msj_kernel_cpu op_code, char* parametro_de_instruccion) {
 	size_t size_payload = tamanio_payload_pcb(pcb);
-	*size_total = size_payload + sizeof(t_msj_kernel_cpu) + sizeof(size_t);
+	*size_total = sizeof(t_msj_kernel_cpu);
+
+	if(parametro_de_instruccion) { //Si hay algun parametro
+		*size_total += sizeof(size_t) + strlen(parametro_de_instruccion) + 1;
+	}
+
+	*size_total += sizeof(size_t) + size_payload;
+
 	void* stream_pcb = malloc(*size_total);
 	int desplazamiento = 0;
 
 	//* memcpy código de operación y tamanio de Payload *//
 
-    t_msj_kernel_cpu op_code_a_enviar = op_code; //TODO: agregar PCB a op_code
-    memcpy(stream_pcb, &(op_code_a_enviar), sizeof(t_msj_kernel_cpu));								//pongo op_code
+    t_msj_kernel_cpu op_code_a_enviar = op_code;
+    memcpy(stream_pcb + desplazamiento, &(op_code_a_enviar), sizeof(t_msj_kernel_cpu));
     desplazamiento += sizeof(t_msj_kernel_cpu);
 
-    memcpy(stream_pcb + desplazamiento, &(size_payload), sizeof(size_t));								//pongo op_code
+    if(parametro_de_instruccion) { //Si hay algun parametro
+    	size_t size_parametro_de_instruccion = strlen(parametro_de_instruccion) + 1;
+    	memcpy(stream_pcb + desplazamiento, &(size_parametro_de_instruccion), sizeof(size_parametro_de_instruccion));
+    	desplazamiento += sizeof(size_parametro_de_instruccion);
+
+    	memcpy(stream_pcb + desplazamiento, parametro_de_instruccion, size_parametro_de_instruccion);
+    	desplazamiento += size_parametro_de_instruccion;
+
+    	//printf("parametro_de_instruccion (deserializar): %s de %d\n", parametro_de_instruccion, size_parametro_de_instruccion);
+    } //Para esto no hace falta deserializar en recibir_pcb, ya que esto lo hace la funcion recibir_parametro_de_instruccion
+
+    memcpy(stream_pcb + desplazamiento, &(size_payload), sizeof(size_t));
     desplazamiento += sizeof(size_t);
 
 	//* memcpy Payload *//
@@ -419,14 +430,13 @@ t_pcb* recibir_pcb(int socket_kernel) {
         return false; //TODO: false? o exit(algo) ?
     }
 
-	void* stream_pcb_a_recibir = malloc(size_payload); //el error esta aca o en mandar
+	void* stream_pcb_a_recibir = malloc(size_payload);
     if (recv(socket_kernel, stream_pcb_a_recibir, size_payload, 0) != size_payload) {
         free(stream_pcb_a_recibir);
         return false;
     }
 
     t_pcb* pcb = deserializar_pcb(stream_pcb_a_recibir, size_payload);
-
 
 	free(stream_pcb_a_recibir);
 	return pcb;
@@ -589,4 +599,14 @@ void memcpy_archivos_abiertos_deserializar(t_list* archivos_abiertos, void* stre
 	}
 }
 
-
+void print_l_instrucciones(t_list* instrucciones) {
+	for(int i = 0; i < instrucciones->elements_count; i++) {
+		t_instruccion* instruccion = (t_instruccion*)list_get(instrucciones, i);
+	    printf("%s", instruccion->nombre);
+		for(int i = 0; i < instruccion->parametros->elements_count; i++) {
+			char* parametro = (char*)list_get(instruccion->parametros, i);
+		    printf(" %s", parametro);
+	    }
+	    printf("\n");
+    }
+}

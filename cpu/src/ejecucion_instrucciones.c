@@ -1,6 +1,8 @@
 #include "../include/ejecucion_instrucciones.h"
 
 void ejecutar_instrucciones(t_pcb* pcb){
+	int tiempo_inicial = time(NULL); // Para calcular el tiemo en ejecucion
+
 	int cant_instrucciones = list_size(pcb->instrucciones);
 	t_instruccion* instruccion_actual;
 	while(pcb->pc < cant_instrucciones){
@@ -8,7 +10,7 @@ void ejecutar_instrucciones(t_pcb* pcb){
 		instruccion_actual = list_get(pcb->instrucciones, pcb->pc);
 		pcb->pc ++;
 		//Decode y Execute
-		switch(instruccion_a_enum(instruccion_actual)){
+		switch(instruccion_a_enum(instruccion_actual)) {
 			case SET:
 				ejecutar_set(pcb, instruccion_actual);
 				break;
@@ -17,6 +19,12 @@ void ejecutar_instrucciones(t_pcb* pcb){
 			case MOV_OUT:
 				break;
 			case IO:
+				pcb->tiempo_real_ejecucion = time(NULL) - tiempo_inicial;
+
+				char* tiempo_a_bloquear = list_get(instruccion_actual->parametros, 0); //va con strdup?
+				//printf("El tiempo a bloquear de %d es: %s.\n", pcb->pid, tiempo_a_bloquear);
+				enviar_pcb(socket_kernel, pcb, IO_EJECUTADO, tiempo_a_bloquear);
+				return;
 				break;
 			case F_OPEN:
 				break;
@@ -39,11 +47,13 @@ void ejecutar_instrucciones(t_pcb* pcb){
 			case DELETE_SEGMENT:
 				break;
 			case YIELD:
-				enviar_pcb(socket_kernel, pcb, YIELD_EJECUTADO);
+				pcb->tiempo_real_ejecucion = time(NULL) - tiempo_inicial;
+				//printf("tiempo_real_ejecucion de %d: %d.\n", pcb->pid, pcb->tiempo_real_ejecucion);
+				enviar_pcb(socket_kernel, pcb, YIELD_EJECUTADO, NULL); //NULL porque no se le pasa ningun parametro
 				return;
 				break;
 			case EXIT:
-				enviar_pcb(socket_kernel, pcb, EXIT_EJECUTADO);
+				enviar_pcb(socket_kernel, pcb, EXIT_EJECUTADO, NULL); //NULL porque no se le pasa ningun parametro
 				return;
 				break;
 			default:

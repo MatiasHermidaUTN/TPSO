@@ -59,6 +59,8 @@ t_pcb* crear_pcb(t_list* instrucciones,int socket_consola){
 
 	pcb->socket_consola =socket_consola;
 
+	pcb->tiempo_real_ejecucion = 0; // No hace falta igual, porque no se usa hasta que sea modificado por la CPU
+
 	return pcb;
 
 }
@@ -89,8 +91,6 @@ void init_conexiones(t_kernel_config lectura_de_config, t_log* logger, int* sock
 				exit(EXIT_FAILURE);
 	}
 }
-
-void liberar_estructura_config(t_kernel_config config);
 
 void destruir_parametro(char* parametro){
 	free(parametro);

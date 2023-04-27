@@ -12,8 +12,7 @@
 t_list* deserializar_instrucciones_kernel(void* a_recibir, int size_payload);
 t_list* recibir_instrucciones(int socket_consola);
 void deserializar_parametros(void* a_recibir, int* desplazamiento, t_instruccion* instruccion, t_dictionary* diccionario_instrucciones);
-void print_l_instrucciones(t_list* instrucciones);
 t_msj_kernel_cpu esperar_cpu();
-char* recibir_parametro();
+char* recibir_parametro_de_instruccion();
 
 #endif /* COMUNICACION_H_ */

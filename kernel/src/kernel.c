@@ -5,7 +5,7 @@
 #include "../include/configuracion_kernel.h"
 
 int main (int argc, char** argv) {
-    t_config* config = iniciar_config("../kernel.config");
+    t_config* config = iniciar_config(argv[1]);
     lectura_de_config = leer_kernel_config(config);
 
     logger = iniciar_logger("kernel.log", "proceso");

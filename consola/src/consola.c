@@ -2,7 +2,7 @@
 
 int main(int argc, char** argv) {
 	// ***** INICIAR CONSOLA ***** //
-    t_config* config = iniciar_config("../consola.config");
+    t_config* config = iniciar_config(argv[1]);
     t_log* logger    = iniciar_logger("consola.log", "proceso");
 
     t_consola_config lectura_de_config = leer_consola_config(config);
@@ -11,7 +11,7 @@ int main(int argc, char** argv) {
 	log_info(logger, "Puerto KERNEL: %s", lectura_de_config.PUERTO_KERNEL);
 
     // ***** PARSEAR INSTRUCCIONES ***** /
-    t_list* instrucciones = parsearPseudocodigo(logger, argv[1]);
+    t_list* instrucciones = parsearPseudocodigo(logger, argv[2]);
     //log_warning(logger, "Cant bytes a mandar: %d", calculo_tamanio_msj(instrucciones));
 
     // ***** CONECTAR A KERNEL ***** /

@@ -23,13 +23,11 @@
 #include "diccionario_instrucciones.h"
 
 
-typedef enum
-{
+typedef enum {
 	MENSAJE,
 } op_code;
 
-typedef enum
-{
+typedef enum {
 	KERNEL,
 	CPU,
 	FILESYSTEM,
@@ -37,22 +35,19 @@ typedef enum
 	ERROR_HANDSHAKE,
 } t_handshake;
 
-typedef enum
-{
+typedef enum {
 	YIELD_EJECUTADO,
 	IO_EJECUTADO,
 	EXIT_EJECUTADO,
 	PCB_A_EJECUTAR,
-}t_msj_kernel_cpu;
+} t_msj_kernel_cpu;
 
-typedef enum
-{
+typedef enum {
 	LIST_INSTRUCCIONES,
 	FINALIZACION_OK,
-}t_msj_kernel_consola;
+} t_msj_kernel_consola;
 
-typedef enum
-{
+typedef enum {
 	SET,
 	MOV_IN,
 	MOV_OUT,
@@ -70,28 +65,26 @@ typedef enum
 	YIELD,
 	EXIT,
 	INSTRUCCION_ERRONEA,
-}t_enum_instruccion;
+} t_enum_instruccion;
 
 
-typedef struct
-{
+typedef struct {
 	int size;
 	void* stream;
 } t_buffer;
 
-typedef struct
-{
+typedef struct {
 	op_code codigo_operacion;
 	t_buffer* buffer;
 } t_paquete;
 
-typedef struct registros_cpu{
-	char AX[4],BX[4],CX[4],DX[4];
-	char EAX[8],EBX[8],ECX[8],EDX[8];
-	char RAX[16],RBX[16],RCX[16],RDX[16];
-}t_registros_cpu;
+typedef struct registros_cpu {
+	char  AX[ 4],  BX[ 4],  CX[ 4],  DX[ 4];
+	char EAX[ 8], EBX[ 8], ECX[ 8], EDX [8];
+	char RAX[16], RBX[16], RCX[16], RDX[16];
+} t_registros_cpu;
 
-typedef struct pcb{
+typedef struct pcb {
 	int pid;
 	t_list* instrucciones;
 	int pc;
@@ -100,10 +93,11 @@ typedef struct pcb{
 	int estimado_prox_rafaga;
 	int tiempo_llegada_ready;
 	t_list* archivos_abiertos;
-	int socket_consola; //para mandarle mensaje que cuando termina
-	int tiempo_real_ejecucion;
 
-}t_pcb;
+	int socket_consola; //para mandarle mensaje que cuando termina
+
+	int tiempo_real_ejecucion;
+} t_pcb;
 
 typedef struct {
 	char* nombre;
@@ -174,11 +168,11 @@ char* obtener_pids(t_list* lista_pcbs);
 
 t_pcb* recibir_pcb(int socket);
 
-void enviar_pcb(int socket, t_pcb* pcb, t_msj_kernel_cpu op_code);
+void enviar_pcb(int socket, t_pcb* pcb, t_msj_kernel_cpu op_code, char* parametro_de_instruccion);
 
 void liberar_pcb(t_pcb* pcb);
 
-void* serializar_pcb(t_pcb* pcb, size_t* size_total, t_msj_kernel_cpu op_code);
+void* serializar_pcb(t_pcb* pcb, size_t* size_total, t_msj_kernel_cpu op_code, char* parametro_de_instruccion);
 
 size_t tamanio_payload_pcb(t_pcb* pcb);
 
@@ -205,5 +199,7 @@ void memcpy_registros_deserializar(t_registros_cpu* registros_cpu, void* stream_
 void memcpy_tabla_segmentos_deserializar(t_list* tabla_segmentos, void* stream, int* desplazamiento);
 
 void memcpy_archivos_abiertos_deserializar(t_list* archivos_abiertos, void* stream, int* desplazamiento);
+
+void print_l_instrucciones(t_list* instrucciones);
 
 #endif /* UTILS_H_ */
