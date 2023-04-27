@@ -1,8 +1,11 @@
 #include "../include/fileSystem.h"
+#define PRIMER_BLOQUE_SECUNDARIO 1
+#define LEER_DESDE_EL_INICIO 0
 
 t_config* superbloque;
 //FILE* bitmap;
 void* bitmap;
+void* bitmap_pointer;
 t_bitarray* bitarray_de_bitmap;
 FILE* bloques;
 //t_config* directorio_FCB;
@@ -12,26 +15,27 @@ t_log* logger;
 t_config* config;
 t_fileSystem_config lectura_de_config;
 
+int kernel;
+
 int main(int argc, char** argv) {
 
 	//LECTURA DE CONFIG DEL FILESYSTEM
-	
 	logger = iniciar_logger("FileSystem.log", "FS");
 	config = iniciar_config("../fileSystem.config");
 
     lectura_de_config = leer_fileSystem_config(config);
 
 	//SE CONECTA AL SERIVDOR MEMORIA
-
+/*
 	int socket_memoria = crear_conexion(lectura_de_config.IP_MEMORIA, lectura_de_config.PUERTO_MEMORIA);
     enviar_handshake(socket_memoria, FILESYSTEM);
-
+*/
 	//SE HACE SERVIDOR Y ESPERA LA CONEXION DEL KERNEL
 	//TODO CREAR UN HILO PARA ESPERAR EL CLIENTE(KERNEL)
 
 	int server = iniciar_servidor("127.0.0.1", lectura_de_config.PUERTO_ESCUCHA);
 	puts("Servidor listo para recibir al cliente");
-	int kernel = esperar_cliente(server);
+	kernel = esperar_cliente(server);
 
 	puts("Se conecto el Kernel a FileSystem");
 
@@ -39,14 +43,13 @@ int main(int argc, char** argv) {
 
 	//SUPERBLOQUE
 	if (archivo_se_puede_leer(lectura_de_config.PATH_SUPERBLOQUE)){
-		log_info(logger, "SuperBloque existe");
 		superbloque = iniciar_config(lectura_de_config.PATH_SUPERBLOQUE);
 		super_bloque_info.block_size = config_get_int_value(superbloque, "BLOCK_SIZE");
 		super_bloque_info.block_count = config_get_int_value(superbloque, "BLOCK_COUNT");
 		log_info(logger, "SuperBloque leido");
 	} else {
 		log_error(logger, "SuperBloque no esiste");
-		//kaboom?
+		return EXIT_FAILURE;
 	}
 
 	//BITMAP
@@ -54,13 +57,14 @@ int main(int argc, char** argv) {
 	if (fd == -1) {
 		close(fd);
 		log_error(logger, "Error abriendo el bitmap");
-		//kaboom?
+		return EXIT_FAILURE;
 	}
 	double c = (double) super_bloque_info.block_count;
 	tamanioBitmap = (int) ceil( c/8.0 ); 	// tener en cuenta si no se necesita en otro lado
-	void* bitmap_pointer = mmap(NULL, tamanioBitmap, PROT_READ | PROT_WRITE, MAP_SHARED, fd, 0);
+	bitmap_pointer = mmap(NULL, tamanioBitmap, PROT_READ | PROT_WRITE, MAP_SHARED, fd, 0);
 	bitarray_de_bitmap = bitarray_create_with_mode((char*) bitmap_pointer, tamanioBitmap, MSB_FIRST);
 	close(fd);
+	log_info(logger, "Bitmap abierto");
 
 	//BLOQUES
 	bloques = fopen(lectura_de_config.PATH_BLOQUES, "r+");
@@ -68,75 +72,88 @@ int main(int argc, char** argv) {
 		log_info(logger, "Bloques existe");
 
 	} else {
+		return EXIT_FAILURE;
 		bloques = fopen(lectura_de_config.PATH_BLOQUES, "w+");
 	}
 
-	while (1) {
-		t_instrucciones cod_op = recibir_operacion(kernel);
-		char* nombre_archivo;
+	limpiar_bitmap();
+
+	while(1){
+		t_instrucciones cod_op = recibir_cod_op(kernel);
+		//recv(kernel, &cod_op, sizeof(t_instrucciones), 0);
+		char* nombre_archivo;// = strdup("archivo1");
+		int nuevo_tamanio_archivo;
+		int apartir_de_donde_X;
+		int cuanto_X;
+		int dir_fisica_memoria;
+		char* buffer;
 
 		switch (cod_op) {
 			case ABRIR:{
-				recibir_parametros(kernel);
-
+				printf("abrir\n");
+				recibir_parametros(cod_op, &nombre_archivo, &nuevo_tamanio_archivo, &apartir_de_donde_X, &cuanto_X, &dir_fisica_memoria);
+				printf("%s\n",nombre_archivo);
 				if (existe_archivo(nombre_archivo)) {	//existe FCB?
-					enviar_mensaje_kernel(kernel, "OK El archivo ya existe");
+					//enviar_mensaje_kernel(kernel, "OK El archivo ya existe");
+					printf("existe/abierto %s\n",nombre_archivo);
 				} else {
-					enviar_mensaje_kernel(kernel, "ERROR El archivo NO existe");
+					//enviar_mensaje_kernel(kernel, "ERROR El archivo NO existe");
+					printf("no existe %s\n",nombre_archivo);
 				}
+				free(nombre_archivo);
 				break;
 			}
 			case CREAR:{
-				recibir_parametros(kernel);
+				recibir_parametros(cod_op, &nombre_archivo, &nuevo_tamanio_archivo, &apartir_de_donde_X, &cuanto_X, &dir_fisica_memoria);
+				printf("nombre_archivo: %s \n", nombre_archivo);
 				crear_archivo(nombre_archivo);	//crear FCB y poner tamaño 0 y sin bloques asociados.
 				enviar_mensaje_kernel(kernel, "OK Archivo creado");
+				printf("archivo creado: %s\n",nombre_archivo);
+				free(nombre_archivo);
 				break;
 			}
 			case TRUNCAR:{
-				int tamanio_nuevo_archivo;
-				recibir_parametros(kernel);
-				/*if (tamanio_archivo(nombre_archivo) > tamanio_nuevo_archivo){
-					//achicas_archivo();
-				}
-				else {
-					//agrandas_archivo();
-				}*/
-				enviar_mensaje_kernel(kernel, "OK Archivo truncado");
+				recibir_parametros(cod_op, &nombre_archivo, &nuevo_tamanio_archivo, &apartir_de_donde_X, &cuanto_X, &dir_fisica_memoria);
+				printf("nombre_archivo: %s\n", nombre_archivo);
+				printf("nuevo_tamanio_archivo: %d\n", nuevo_tamanio_archivo);
+				truncar(nombre_archivo, nuevo_tamanio_archivo);
+				//enviar_mensaje_kernel(kernel, "OK Archivo truncado");
+				free(nombre_archivo);
 				break;
 			}
 			case LEER:{
-				int apartir_de_donde_leer;
-				int cuanto_leer;
-				int dir_fisica_memoria;
-				recibir_parametros(kernel);
-				char* buffer = leer_archivo(nombre_archivo, apartir_de_donde_leer, cuanto_leer);	//malloc se hace en leer_archivo
-				mandar_a_memoria(socket_memoria, ESCRIBIR, buffer, cuanto_leer, dir_fisica_memoria);
-				enviar_mensaje_kernel(kernel, "OK Archivo leido");
-				free(buffer);
+				recibir_parametros(cod_op, &nombre_archivo, &nuevo_tamanio_archivo, &apartir_de_donde_X, &cuanto_X, &dir_fisica_memoria);
+				printf("nombre_archivo: %s\n", nombre_archivo);
+				printf("apartir_de_donde_X: %d\n", apartir_de_donde_X);
+				printf("cuanto_X: %d\n", cuanto_X);
+				printf("dir_fisica_memoria: %d\n", dir_fisica_memoria);
+				//buffer = leer_archivo(nombre_archivo, apartir_de_donde_X, cuanto_X);	//malloc se hace en leer_archivo
+				//mandar_a_memoria(socket_memoria, ESCRIBIR, buffer, cuanto_X, dir_fisica_memoria);
+				//enviar_mensaje_kernel(kernel, "OK Archivo leido");
+				//free(buffer);
+				free(nombre_archivo);
 				break;
 			}
 			case ESCRIBIR:{
-				int apartir_de_donde_escribir;
-				int cuanto_escribir;
-				int dir_fisica_memoria;
-				recibir_parametros(kernel);
-				char* buffer = leer_de_memoria(socket_memoria, LEER, cuanto_escribir, dir_fisica_memoria);	//malloc se hace en leer_de_memoria
-				escribir_archivo(buffer, nombre_archivo, apartir_de_donde_escribir, cuanto_escribir);
-				enviar_mensaje_kernel(kernel, "OK Archivo escrito");
-				free(buffer);
+				recibir_parametros(cod_op, &nombre_archivo, &nuevo_tamanio_archivo, &apartir_de_donde_X, &cuanto_X, &dir_fisica_memoria);
+				printf("nombre_archivo: %s\n", nombre_archivo);
+				printf("apartir_de_donde_X: %d\n", apartir_de_donde_X);
+				printf("cuanto_X: %d\n", cuanto_X);
+				printf("dir_fisica_memoria: %d\n", dir_fisica_memoria);
+				//buffer = leer_de_memoria(socket_memoria, LEER, cuanto_X, dir_fisica_memoria);	//malloc se hace en leer_de_memoria
+				//escribir_archivo(buffer, nombre_archivo, apartir_de_donde_X, cuanto_X);
+				//enviar_mensaje_kernel(kernel, "OK Archivo escrito");
+				//free(buffer);
+				free(nombre_archivo);
 				break;
 			}
-			default:
 			case ERROR:
-				recibir_parametros(kernel);
+				//recibir_parametros(cod_op, &nombre_archivo, &nuevo_tamanio_archivo, &apartir_de_donde_X, &cuanto_X, &dir_fisica_memoria);
+				break;
+			default:
 				break;
 		}
-		free(nombre_archivo);
-		config_destroy(superbloque);
 		msync(bitmap_pointer, tamanioBitmap, MS_SYNC);
-		munmap(bitmap_pointer, tamanioBitmap);
-		fclose(bloques);
-		return 0;
 	}
 	config_destroy(superbloque);
 	msync(bitmap_pointer, tamanioBitmap, MS_SYNC);
@@ -145,18 +162,102 @@ int main(int argc, char** argv) {
 	return EXIT_SUCCESS;
 }
 
-void crear_archivo(char* nombre_archivo) {
+void truncar(char* nombre_archivo, int nuevo_tamanio_archivo){
+	char* path = obtener_path_FCB_sin_free(nombre_archivo);
+	t_config* archivo_FCB = iniciar_config(path);
+	free(path);
+
+	int tamanio_archivo = config_get_int_value(archivo_FCB, "TAMANIO_ARCHIVO");
+
+	if (nuevo_tamanio_archivo > tamanio_archivo){
+		agrandas_archivo(archivo_FCB, nombre_archivo, nuevo_tamanio_archivo);
+	}
+	else if (nuevo_tamanio_archivo < tamanio_archivo) {
+		achicas_archivo(archivo_FCB, nombre_archivo, nuevo_tamanio_archivo);
+	}
+	config_set_value(archivo_FCB, "TAMANIO_ARCHIVO", string_itoa(nuevo_tamanio_archivo));
+	config_destroy(archivo_FCB);
+}
+
+void achicas_archivo(t_config* archivo_FCB, char* nombre_archivo, int nuevo_tamanio_archivo){
+	int tamanio_archivo = config_get_int_value(archivo_FCB, "TAMANIO_ARCHIVO");
+
+	//entro si tiene puntero_directo y ya tiene puntero_indirecto
+	if(tamanio_archivo > super_bloque_info.block_size){
+		uint32_t puntero_indirecto = config_get_int_value(archivo_FCB, "PUNTERO_INDIRECTO");
+
+		int cant_punteros_secundarios = (int) ceil((float) tamanio_archivo / super_bloque_info.block_size - 1);
+		int cant_bloques_secundarios_necesarios = (int) ceil((float) nuevo_tamanio_archivo / super_bloque_info.block_size - 1);
+		if(cant_bloques_secundarios_necesarios < cant_punteros_secundarios){
+			for( ; cant_punteros_secundarios > cant_bloques_secundarios_necesarios ; ) {
+				cant_punteros_secundarios--;	//lo pongo aca para el seek el 1er ptr_secundario esta en [0]
+				uint32_t puntero;
+				fseek(bloques, puntero_indirecto * super_bloque_info.block_size + sizeof(puntero) * cant_punteros_secundarios, SEEK_SET);
+				fread(puntero, sizeof(puntero), 1, bloques);
+				liberar_bloque(puntero);
+			}
+		}
+		if(nuevo_tamanio_archivo <= super_bloque_info.block_size){
+			uint32_t puntero_indirecto = config_get_int_value(archivo_FCB, "PUNTERO_INDIRECTO");
+			liberar_bloque(puntero_indirecto);
+			config_set_value(archivo_FCB, "PUNTERO_INDIRECTO", "");
+		}
+	}
+	if(nuevo_tamanio_archivo == 0){
+		uint32_t puntero_directo = config_get_int_value(archivo_FCB, "PUNTERO_DIRECTO");
+		liberar_bloque(puntero_directo);
+		config_set_value(archivo_FCB, "PUNTERO_DIRECTO", "");
+	}
+	return;
+}
+
+void agrandas_archivo(t_config* archivo_FCB, char* nombre_archivo, int nuevo_tamanio_archivo){
+	int tamanio_archivo = config_get_int_value(archivo_FCB, "TAMANIO_ARCHIVO");
+
+	//CADENA DE IFs, va entrando si cumple condicion
+	//entro si no tiene puntero_directo
+	if(tamanio_archivo == 0){
+		uint32_t puntero_directo = dame_un_bloque_libre();
+		config_set_value(archivo_FCB, "PUNTERO_DIRECTO", string_itoa(puntero_directo));
+	}
+	//entro si tiene puntero_directo, no tiene puntero_indirecto y si el nuevo tamanio requiere de punteros_secundarios
+	if(tamanio_archivo <= super_bloque_info.block_size && nuevo_tamanio_archivo > super_bloque_info.block_size){
+		uint32_t puntero_indirecto = dame_un_bloque_libre();
+		config_set_value(archivo_FCB, "PUNTERO_INDIRECTO", string_itoa(puntero_indirecto));
+
+		int cant_punteros_secundarios = 0;
+		int cant_bloques_secundarios_necesarios = (int) ceil((float) nuevo_tamanio_archivo / super_bloque_info.block_size - 1);
+		for( ; cant_punteros_secundarios < cant_bloques_secundarios_necesarios ; cant_punteros_secundarios++) {
+			uint32_t puntero = dame_un_bloque_libre();
+			fseek(bloques, puntero_indirecto * super_bloque_info.block_size + sizeof(puntero) * cant_punteros_secundarios, SEEK_SET);
+			fwrite(&puntero, sizeof(puntero), 1, bloques);				//anoto nuevo puntero_secundario en bloque de puntero_indirecto
+		}
+	}
+	//entro si tiene puntero_directo, tiene puntero_indirecto (tiene 1 o + punteros_secundarios)
+	if(tamanio_archivo > super_bloque_info.block_size){
+		uint32_t puntero_indirecto = config_get_int_value(archivo_FCB, "PUNTERO_INDIRECTO");
+
+		int cant_punteros_secundarios = (int) ceil((float) tamanio_archivo / super_bloque_info.block_size - 1);
+		int cant_bloques_secundarios_necesarios = (int) ceil((float) nuevo_tamanio_archivo / super_bloque_info.block_size - 1);
+		for( ; cant_punteros_secundarios < cant_bloques_secundarios_necesarios ; cant_punteros_secundarios++) {
+			uint32_t puntero = dame_un_bloque_libre();
+			fseek(bloques, puntero_indirecto * super_bloque_info.block_size + sizeof(puntero) * cant_punteros_secundarios, SEEK_SET);
+			fwrite(&puntero, sizeof(puntero), 1, bloques);				//anoto nuevo puntero_secundario en bloque de puntero_indirecto
+		}
+	}
+	return;
+}
+
+void crear_archivo(char* nombre_archivo) {	//necesita semaforos para hilos pq entra a archivo comun FCBdefault
 	char* path = obtener_path_FCB_sin_free(nombre_archivo);
 
-	FILE* archivo_a_crear = fopen(path, "w");	//creo el archivo para el FCB
-	fclose(archivo_a_crear);
-
-	t_config* fcb_nuevo = iniciar_config(path);	//abro el FCB creado como config y seteo valores de iniciacion
-	config_set_value(fcb_nuevo, "NOMBRE_ARCHIVO", nombre_archivo);
-	config_set_value(fcb_nuevo, "TAMANIO_ARCHIVO", "0");
-	config_set_value(fcb_nuevo, "PUNTERO_DIRECTO", "");
-	config_set_value(fcb_nuevo, "PUNTERO_INDIRECTO", "");
-	config_destroy(fcb_nuevo);					//cierro el FCB como config
+	t_config* FCBdefault = iniciar_config("../FCBdefault");
+	config_set_value(FCBdefault, "NOMBRE_ARCHIVO", nombre_archivo);
+	config_set_value(FCBdefault, "TAMANIO_ARCHIVO", "0");
+	config_set_value(FCBdefault, "PUNTERO_DIRECTO", "");
+	config_set_value(FCBdefault, "PUNTERO_INDIRECTO", "");
+	config_save_in_file(FCBdefault, path);
+	config_destroy(FCBdefault);					//cierro el FCB
 	free(path);
 }
 
@@ -186,38 +287,108 @@ char* leer_archivo(char* nombre_archivo, int apartir_de_donde_leer, int cuanto_l
 	t_config* archivo_FCB = iniciar_config(path);
 	free(path);
 
+	//FAIL CHECKERS
 	int tamanio_archivo = config_get_int_value(archivo_FCB, "TAMANIO_ARCHIVO");
 	if (apartir_de_donde_leer > tamanio_archivo) {
 		return "ERROR, apartir_de_donde_leer es > al tamanio_archivo";
 	}
 	if (apartir_de_donde_leer + cuanto_leer > tamanio_archivo) {
 		cuanto_leer = tamanio_archivo - apartir_de_donde_leer;		//deberia tirar error?
+		//return "ERROR, apartir_de_donde_leer + cuanto_leer es > al tamanio_archivo";
 	}
-	uint32_t puntero_directo = config_get_int_value(archivo_FCB, "PUNTERO_DIRECTO");
-	uint32_t puntero_indirecto = config_get_int_value(archivo_FCB, "PUNTERO_INDIRECTO");
-	config_destroy(archivo_FCB);
 
+	//LECTURA
 	char* buffer = malloc(cuanto_leer);
 	if (tamanio_archivo != 0) {
-		fseek(bloques, puntero_directo * super_bloque_info.block_size, SEEK_SET);
-		if(cuanto_leer < super_bloque_info.block_size){
-			fread(buffer, cuanto_leer, 1, bloques);
-		}else{
-			fread(buffer, super_bloque_info.block_size, 1, bloques);
-			leer_indirecto(&buffer, puntero_indirecto, cuanto_leer);
+		//entro si leo de puntero_directo
+		if (apartir_de_donde_leer < super_bloque_info.block_size){
+			uint32_t puntero_directo = config_get_int_value(archivo_FCB, "PUNTERO_DIRECTO");
+			fseek(bloques, puntero_directo * super_bloque_info.block_size, SEEK_SET);
+			int cant_disponible_leer_de_puntero = super_bloque_info.block_size - apartir_de_donde_leer;
+
+			if(cuanto_leer < cant_disponible_leer_de_puntero){
+				fread(buffer, cuanto_leer, 1, bloques);
+				cuanto_leer = 0;
+			}else{
+				fread(buffer, cant_disponible_leer_de_puntero, 1, bloques);
+				cuanto_leer -= cant_disponible_leer_de_puntero;
+				leer_indirecto(&buffer, archivo_FCB, PRIMER_BLOQUE_SECUNDARIO, LEER_DESDE_EL_INICIO, cuanto_leer);
+			}
+		}
+		//entro si leo de puntero indirecto y cualquier puntero secundario
+		if (apartir_de_donde_leer >= super_bloque_info.block_size){
+			int bloque_secundario_inicial = (int) ceil((float) apartir_de_donde_leer / super_bloque_info.block_size - 1);
+			int apartir_de_donde_leer_relativo_a_bloque = apartir_de_donde_leer%super_bloque_info.block_size;
+			leer_indirecto(&buffer, archivo_FCB, bloque_secundario_inicial, apartir_de_donde_leer_relativo_a_bloque, cuanto_leer);
 		}
 	}
 	else {
 		//logear error
+		//"No puedo leer archivo vacio"?
+		config_destroy(archivo_FCB);
 		exit(EXIT_FAILURE);
 	}
+	config_destroy(archivo_FCB);
 	return buffer;	//el free se hace en el switch, despues de pasarle el contenido a memoria
 }
 
-void leer_indirecto(char** buffer, uint32_t puntero_indirecto, int cuanto_leer) {
+void leer_indirecto(char** buffer, t_config* archivo_FCB, int bloque_secundario_donde_leer, int apartir_de_donde_leer_relativo_a_bloque, int cuanto_leer) {
+	int tamanio_archivo = config_get_int_value(archivo_FCB, "TAMANIO_ARCHIVO");
+	uint32_t puntero_indirecto = config_get_int_value(archivo_FCB, "PUNTERO_INDIRECTO");
+	uint32_t puntero_secundario;
+	fseek(bloques, puntero_indirecto * super_bloque_info.block_size + sizeof(puntero_secundario) * bloque_secundario_donde_leer, SEEK_SET);
+	fread(&bloque_secundario_donde_leer, sizeof(puntero_secundario), 1, bloques);				//anoto nuevo puntero_secundario en bloque de puntero_indirecto
 
-	char * buffer1 = malloc(super_bloque_info.block_size);
+	int cant_disponible_leer_de_puntero = super_bloque_info.block_size - apartir_de_donde_leer_relativo_a_bloque;
+	if(cuanto_leer < cant_disponible_leer_de_puntero){
+		char * buffer1 = malloc(cuanto_leer);
+		fread(buffer1, cuanto_leer, 1, bloques);
+		cuanto_leer = 0;
+		strcat(*buffer, buffer1);
+		free(buffer1);
+		strcat(*buffer, buffer1);
+	}else{
+		char * buffer1 = malloc(cant_disponible_leer_de_puntero);
+		fread(buffer1, cant_disponible_leer_de_puntero, 1, bloques);
+		cuanto_leer -= cant_disponible_leer_de_puntero;
+		strcat(*buffer, buffer1);
+		free(buffer1);
+		leer_indirecto(&buffer, archivo_FCB, bloque_secundario_donde_leer+1, LEER_DESDE_EL_INICIO, cuanto_leer);
+	}
+/*
+	int cant_punteros_secundarios = (int) ceil((float) tamanio_archivo / super_bloque_info.block_size - 1);
+	int cant_bloques_secundarios_necesarios = (int) ceil((float) (apartir_de_donde_leer+cuanto_leer) / super_bloque_info.block_size - 1);
+
+	for(int bloque_secundario_a_leer = bloque_secundario_inicial-1 ; bloque_secundario_a_leer < cant_bloques_secundarios_necesarios ; bloque_secundario_a_leer++) {
+		uint32_t puntero;
+		fseek(bloques, puntero_indirecto * super_bloque_info.block_size + sizeof(puntero) * bloque_secundario_a_leer, SEEK_SET);
+		fread(&puntero, sizeof(puntero), 1, bloques);				//anoto nuevo puntero_secundario en bloque de puntero_indirecto
+
+		char * buffer1 = malloc(super_bloque_info.block_size);
+		int cant_disponible_leer_de_puntero = super_bloque_info.block_size - apartir_de_donde_leer;
+
+		fseek(bloques, puntero * super_bloque_info.block_size, SEEK_SET);
+		if(cuanto_leer >= super_bloque_info.block_size){
+			fread(buffer1, super_bloque_info.block_size, 1, bloques);
+		} else {
+			fread(buffer1, cuanto_leer, 1, bloques);
+		}
+		strcat(*buffer, buffer1);
+		if(cuanto_leer < cant_disponible_leer_de_puntero){
+			fread(buffer, cuanto_leer, 1, bloques);
+			cuanto_leer = 0;
+		}else{
+			fread(buffer, cant_disponible_leer_de_puntero, 1, bloques);
+			cuanto_leer -= cant_disponible_leer_de_puntero;
+			//leer_indirecto(&buffer, archivo_FCB, super_bloque_info.block_size+1, cuanto_leer);
+		}
+		free(buffer1);
+	}
+
+
 	uint32_t dir_bloque;
+
+
 
 	t_list* aux = list_create();
 	t_list_iterator *lista_bloques = list_iterator_create(aux);	//TODO Fijarse que probablemente este MAL
@@ -238,11 +409,11 @@ void leer_indirecto(char** buffer, uint32_t puntero_indirecto, int cuanto_leer) 
 	while (true) {
 		fseek(bloques, dir_bloque * super_bloque_info.block_size, SEEK_SET);
 		if(cuanto_leer >= super_bloque_info.block_size){
-			fread(buffer1, super_bloque_info.block_size, 1, bloques);
+			//fread(buffer1, super_bloque_info.block_size, 1, bloques);
 		} else {
-			fread(buffer1, cuanto_leer, 1, bloques);
+			//fread(buffer1, cuanto_leer, 1, bloques);
 		}
-		strcat(*buffer, buffer1);
+		//strcat(*buffer, buffer1);
 
 		cuanto_leer -= super_bloque_info.block_size;
 		if(list_iterator_has_next(lista_bloques))
@@ -250,7 +421,7 @@ void leer_indirecto(char** buffer, uint32_t puntero_indirecto, int cuanto_leer) 
 		else
 			break;
 	}
-	free(buffer1);
+	//free(buffer1);*/
 }
 
 void escribir_archivo(char* buffer, char* nombre_archivo, int apartir_de_donde_escribir, int cuanto_escribir) {
@@ -341,7 +512,14 @@ void escribir_archivo(char* buffer, char* nombre_archivo, int apartir_de_donde_e
 
 bool archivo_se_puede_leer(char* path)
 {
-	return (!access(path, R_OK ));
+	FILE* f;
+	if(f = fopen(path, "r")){
+		fclose(f);
+		return 1;
+	} else {
+		return 0;
+	}
+	//return (!access(path, R_OK ));
 }
 
 bool archivo_se_puede_escribir(char* path)
@@ -409,10 +587,24 @@ uint32_t dame_un_bloque_libre() {
 	for (int i = 0; i < bitarray_get_max_bit(bitarray_de_bitmap); i++) {
 		if (bitarray_test_bit(bitarray_de_bitmap, i) == 0) {
 			bitarray_set_bit(bitarray_de_bitmap, i);
+			msync(bitmap_pointer, tamanioBitmap, MS_SYNC);
 			return i;
 		}
 	}
 	return -1;	
+}
+
+void limpiar_bitmap() {
+	for (int i = 0; i < bitarray_get_max_bit(bitarray_de_bitmap); i++) {
+		bitarray_clean_bit(bitarray_de_bitmap, i);
+	}
+	msync(bitmap_pointer, tamanioBitmap, MS_SYNC);
+	return;
+}
+
+void liberar_bloque(uint32_t puntero){
+	bitarray_clean_bit(bitarray_de_bitmap, puntero);
+	msync(bitmap_pointer, tamanioBitmap, MS_SYNC);
 }
 
 void escribir_bloque(char* buffer, uint32_t puntero, int* cuanto_escribir, int* cantidad_escrita, int espacio_libre_en_bloque) {
@@ -447,11 +639,79 @@ int espacio_libre_en_bloque(uint32_t puntero) {
 	return espacio_libre;
 }
 
+t_instrucciones recibir_cod_op(int socket_cliente)
+{
+	t_instrucciones cod_op;
+	if(recv(socket_cliente, &cod_op, sizeof(t_instrucciones), 0x100) > 0)
+		return cod_op;
+	else
+	{
+		close(socket_cliente);
+		return ERROR;
+	}
+}
 
-void recibir_parametros(int socket_kernel){
+void recibir_parametros(t_instrucciones cod_op, char** nombre_archivo, int* tamanio_nuevo_archivo, int* apartir_de_donde_X, int* cuanto_X, int* dir_fisica_memoria){
+	/*F_OPEN ARCHIVO
+	F_TRUNCATE ARCHIVO 64
+	F_WRITE ARCHIVO 4 4
+	F_READ ARCHIVO 16 4*/
+	size_t largo_nombre;
+
+	size_t size_payload;
+	if (recv(kernel, &size_payload, sizeof(size_t), 0) != sizeof(size_t)){
+		return;
+	}
+
+	void* a_recibir = malloc(size_payload);
+	if (recv(kernel, a_recibir, size_payload, 0) != size_payload) {
+		free(a_recibir);
+		return;
+	}
+
+	deserializar_instrucciones_kernel(a_recibir, size_payload, cod_op, nombre_archivo, tamanio_nuevo_archivo, apartir_de_donde_X, cuanto_X, dir_fisica_memoria);
+
+	free(a_recibir);
 	return;
 }
-void enviar_mensaje_kernel(int socket_kernel, char* msj){
+
+void deserializar_instrucciones_kernel(void* a_recibir, int size_payload, t_instrucciones cod_op, char** nombre_archivo, int* tamanio_nuevo_archivo, int* apartir_de_donde_X, int* cuanto_X, int* dir_fisica_memoria){
+	switch(cod_op){
+		case ABRIR:
+		case CREAR:
+		default:
+			int desplazamiento = 0;
+			size_t largo_nombre;
+			memcpy(&largo_nombre, a_recibir + desplazamiento, sizeof(largo_nombre));
+			desplazamiento += sizeof(largo_nombre);
+			//printf("largo_nombre: %d\n", largo_nombre);
+			char* aux_nombre_file = malloc(largo_nombre);
+			memcpy(aux_nombre_file, a_recibir + desplazamiento, largo_nombre);
+			desplazamiento += largo_nombre;
+			//printf("nombre_archivo: %s\n", aux_nombre_file);
+			*nombre_archivo = strdup(aux_nombre_file);
+			switch(cod_op){
+				case TRUNCAR:
+					memcpy(tamanio_nuevo_archivo, a_recibir + desplazamiento, sizeof(int));
+					desplazamiento += sizeof(int);
+					break;
+				case LEER:
+				case ESCRIBIR:
+					memcpy(apartir_de_donde_X, a_recibir + desplazamiento, sizeof(int));
+					desplazamiento += sizeof(int);
+					memcpy(cuanto_X, a_recibir + desplazamiento, sizeof(int));
+					desplazamiento += sizeof(int);
+					memcpy(dir_fisica_memoria, a_recibir + desplazamiento, sizeof(int));
+					desplazamiento += sizeof(int);
+					break;
+			}
+			break;
+		case ERROR:
+			break;
+		}
+}
+
+void enviar_mensaje_kernel(int kernel, char* msj){
 	return;
 }
 char* leer_de_memoria(int socket_memoria, t_instrucciones LEER, int cuanto_escribir, int dir_fisica_memoria){
