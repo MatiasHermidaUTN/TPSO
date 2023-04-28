@@ -12,8 +12,8 @@ void ejecutar_instrucciones(t_pcb* pcb) {
 	while(pcb->pc < cant_instrucciones) {
 		//Fetch
 		instruccion_actual = list_get(pcb->instrucciones, pcb->pc);
-		pcb->pc ++;
-		log_info(logger, "PID: %d - Ejecutando: %s - <PARAMETROS>", pcb->pid, instruccion_actual); //log obligatorio
+		pcb->pc++;
+		log_info(logger, "PID: %d - Ejecutando: %s - <PARAMETROS>", pcb->pid, instruccion_actual->nombre); //log obligatorio
 		//TODO: emitir los parametros
 		//Decode y Execute
 		switch(instruccion_a_enum(instruccion_actual)) {

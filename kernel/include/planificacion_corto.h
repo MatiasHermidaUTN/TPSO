@@ -26,9 +26,7 @@ t_pcb* obtener_proximo_a_ejecutar();
 void manejar_io(t_args_io* args_io);
 
 void wait_recurso(t_pcb* pcb, char* recurso);
-int existe_recurso(char* nombre_recurso);
-// Logica repetida! que asco!! (pero ya fue)
-t_recurso* buscar_recurso(char* nombre_recurso);
+int buscar_recurso(char* nombre_recurso);
 void signal_recurso(t_pcb* pcb, char* recurso);
 
 void exit_proceso(t_pcb* pcb);

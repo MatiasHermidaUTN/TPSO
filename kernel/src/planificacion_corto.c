@@ -71,9 +71,8 @@ void planificar_corto() {
 }
 
 void ready_list_push(t_pcb* pcb_recibido) { //Para ahorrar logica
-	pcb_recibido->tiempo_llegada_ready = time(NULL); //Actualizo el momento en que llega a Ready
-
 	if(!proceso_que_sigue_en_exec) { //Si pasa a Ready en serio, y no es uno que sigue en EXEC
+		pcb_recibido->tiempo_llegada_ready = time(NULL); //Actualizo el momento en que llega a Ready
 		calcular_prox_rafaga(pcb_recibido); //S se calcula solo al que entra a Ready
 		//log_warning(logger, "Nuevo proceso para Ready: %d\n", pcb_recibido->pid); //este lo hace el log obligatorio
 	}
@@ -139,8 +138,9 @@ void manejar_io(t_args_io* args_io) {
 void wait_recurso(t_pcb* pcb, char* recurso) {
 	t_recurso* recurso_a_buscar;
 
-	if(existe_recurso(recurso)) {
-		recurso_a_buscar = buscar_recurso(recurso); //Podria hacerse con list_find?
+	int indice_del_recurso = buscar_recurso(recurso); //Podria hacerse con list_find?
+	if(indice_del_recurso != -1) {
+		recurso_a_buscar = list_get(list_recursos, indice_del_recurso);
 		recurso_a_buscar->cantidad_disponibles--;
 		log_info(logger, "PID: %d - Wait: %s - Instancias: %d", pcb->pid, recurso, recurso_a_buscar->cantidad_disponibles); //log obligatorio
 
@@ -164,34 +164,24 @@ void wait_recurso(t_pcb* pcb, char* recurso) {
 	}
 }
 
-int existe_recurso(char* nombre_recurso) {
+int buscar_recurso(char* nombre_recurso) {
 	t_recurso* recurso;
 	for(int i = 0; i < list_size(list_recursos); i++) {
 		recurso = list_get(list_recursos, i);
 		if(!strcmp(recurso->nombre, nombre_recurso)) {
-			return 1;
+			return i; //Indice del recurso encontrado en la lista
 		}
 	}
-	return 0;
-}
-// Logica repetida! que asco!! (pero ya fue)
-t_recurso* buscar_recurso(char* nombre_recurso) {
-	t_recurso* recurso;
-	for(int i = 0; i < list_size(list_recursos); i++) {
-		recurso = list_get(list_recursos, i);
-		if(!strcmp(recurso->nombre, nombre_recurso)) {
-			return recurso;
-		}
-	}
-	return NULL;
+	return -1;
 }
 
 void signal_recurso(t_pcb* pcb, char* recurso) {
 	t_recurso* recurso_a_buscar;
 	t_pcb* pcb_a_desbloquear;
 
-	if(existe_recurso(recurso)) {
-		recurso_a_buscar = buscar_recurso(recurso);
+	int indice_recurso = buscar_recurso(recurso);
+	if(indice_recurso != -1) {
+		recurso_a_buscar = list_get(list_recursos, indice_recurso);
 		recurso_a_buscar->cantidad_disponibles++;
 		log_info(logger, "PID: %d - Signal: %s - Instancias: %d", pcb->pid, recurso, recurso_a_buscar->cantidad_disponibles); //log obligatorio
 
