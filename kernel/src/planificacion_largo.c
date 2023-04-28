@@ -1,7 +1,7 @@
 #include "../include/planificacion_largo.h"
 
-void planificar_largo(){
-	while(1){
+void planificar_largo() {
+	while(1) {
 		sem_wait(&sem_cant_new); //para que no haga nada si no hay nadie en new
 		sem_wait(&sem_multiprogramacion);
 

@@ -41,7 +41,7 @@ void* serializar_instrucciones(t_list* instrucciones, int size){
 			desplazamiento+= largo_nombre;
 	    }
 	}
-    printf("Los bytes en el stream son: %d\n", desplazamiento);
+    //printf("Los bytes en el stream son: %d\n", desplazamiento);
 
     return stream;
 }

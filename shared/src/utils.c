@@ -1,6 +1,5 @@
 #include "utils.h"
 
-
 //////////////////////////
 // Funciones de cliente //
 //////////////////////////
@@ -55,9 +54,7 @@ void enviar_mensaje(char* mensaje, int socket_cliente)
 // Funciones de servidor //
 ///////////////////////////
 
-int iniciar_servidor(char* IP, char* PUERTO)
-{
-
+int iniciar_servidor(char* IP, char* PUERTO) {
 	int socket_servidor;
 
 	struct addrinfo hints, *servinfo;
@@ -90,27 +87,23 @@ int iniciar_servidor(char* IP, char* PUERTO)
 	return socket_servidor;
 }
 
-int esperar_cliente(int socket_servidor)
-{
+int esperar_cliente(int socket_servidor) {
 	int socket_cliente = accept(socket_servidor, NULL, NULL);
 	return socket_cliente;
 }
 
-int recibir_operacion(int socket_cliente)
-{
+int recibir_operacion(int socket_cliente) {
 	int cod_op;
 	if(recv(socket_cliente, &cod_op, sizeof(op_code), MSG_WAITALL) > 0)
 		return cod_op;
-	else
-	{
+	else {
 		close(socket_cliente);
 		return -1;
 	}
 }
 
 
-void* serializar_paquete(t_paquete* paquete, int bytes)
-{
+void* serializar_paquete(t_paquete* paquete, int bytes) {
     void * magic = malloc(bytes);
     int desplazamiento = 0;
 
@@ -124,8 +117,7 @@ void* serializar_paquete(t_paquete* paquete, int bytes)
     return magic;
 }
 
-void recibir_mensaje(int socket_cliente)
-{
+void recibir_mensaje(int socket_cliente) {
 	int size;
 	char* buffer = recibir_buffer(&size, socket_cliente);
 	//log_info(logger, "Me llego el mensaje %s", buffer);
@@ -224,21 +216,75 @@ void list_push_con_mutex(t_list* lista,void* elemento , pthread_mutex_t* mutex) 
     return;
 }
 
-char* obtener_pids(t_list* lista_pcbs) {
-	//TODO
+/*
+char* obtener_pids(t_list* pcbs) {
+    t_pcb* pcb;
+	char* pids = malloc(tamanio_de_pids(pcbs));
+	char* pid_leido;
+	char* coma = ",";
+	int desplazamiento = 0;
+
+    for (int i = 0; i < list_size(pcbs); i++) {
+    	pcb = list_get(pcbs, i);
+    	pid_leido = string_itoa(pcb->pid);
+    	memcpy(pids + desplazamiento, &(pid_leido), strlen(pid_leido)+1);
+    	desplazamiento += strlen(pid_leido)+1;
+
+    	if(i != list_size(pcbs) - 1) {//para que no ponga una coma al final
+    		memcpy(pids + desplazamiento, &(coma), strlen(coma)+1);
+    		desplazamiento += strlen(coma)+1;
+    	}
+    }
+
+    return (char*)pids;
 }
 
+int tamanio_de_pids(t_list* pcbs) {
+	int tamanio = list_size(pcbs) - 1; //por cada coma entre los pids
+	t_pcb* pcb;
+
+	for(int j = 0; j < list_size(pcbs); j++) {
+		pcb = list_get(pcbs, j);
+		tamanio += log10(pcb->pid) + 1; //cantidad de digitos del pid
+	} //TODO: ver porque no me lo reconoce en el resto de modulos
+
+	return tamanio;
+}
+*/
+
+void destruir_instruccion(t_instruccion* instruccion) {
+	free(instruccion->nombre);
+	list_destroy_and_destroy_elements(instruccion->parametros, (void*)destruir_parametro);
+	free(instruccion);
+}
+
+void destruir_parametro(char* parametro) {
+	free(parametro);
+}
 
 void liberar_pcb(t_pcb* pcb) {
+	list_destroy_and_destroy_elements(pcb->instrucciones, (void*)destruir_instruccion);
+	//liberar_tabla_segmentos_pcb(pcb->tabla_segmentos);
+	//liberar_archivos_abiertos_pcb(pcb->archivos_abiertos);
+
+	free(pcb);
+}
+/*
+void liberar_tabla_segmentos_pcb(tabla_segmentos) {
 	//TODO
 }
 
-void enviar_pcb(int socket_cpu, t_pcb* pcb, t_msj_kernel_cpu op_code, char* parametro_de_instruccion) {
+void liberar_archivos_abiertos_pcb(archivos_abiertos) {
+	//TODO
+}
+*/
+
+void enviar_pcb(int socket, t_pcb* pcb, t_msj_kernel_cpu op_code, char* parametro_de_instruccion) {
 	size_t size_total;
 	void* stream_pcb_a_enviar = serializar_pcb(pcb, &size_total, op_code, parametro_de_instruccion);
 	//log_info(logger, "size_total: %d", (int)size_total);
 
-	send(socket_cpu, stream_pcb_a_enviar, size_total, 0);
+	send(socket, stream_pcb_a_enviar, size_total, 0);
 
 	free(stream_pcb_a_enviar);
 }
@@ -282,8 +328,6 @@ void* serializar_pcb(t_pcb* pcb, size_t* size_total, t_msj_kernel_cpu op_code, c
 	desplazamiento += sizeof(int);
 
 	int tamanio_instrucciones_en_bytes = tamanio_instrucciones(pcb->instrucciones);
-
-
 	memcpy(stream_pcb + desplazamiento, &(tamanio_instrucciones_en_bytes), sizeof(int));
 	desplazamiento += sizeof(int);
 
@@ -307,14 +351,22 @@ void* serializar_pcb(t_pcb* pcb, size_t* size_total, t_msj_kernel_cpu op_code, c
 	memcpy(stream_pcb + desplazamiento, &(pcb->socket_consola), sizeof(pcb->socket_consola));
 	desplazamiento += sizeof(pcb->socket_consola);
 
+	memcpy(stream_pcb + desplazamiento, &(pcb->tiempo_real_ejecucion), sizeof(pcb->tiempo_real_ejecucion));
+	desplazamiento += sizeof(pcb->tiempo_real_ejecucion);
+
+	memcpy(stream_pcb + desplazamiento, &(pcb->tiempo_inicial_ejecucion), sizeof(pcb->tiempo_inicial_ejecucion));
+	desplazamiento += sizeof(pcb->tiempo_inicial_ejecucion);
+
 	return stream_pcb;
 }
 
 size_t tamanio_payload_pcb(t_pcb* pcb) {
-	size_t size = sizeof(pcb->pid) + tamanio_instrucciones(pcb->instrucciones) + sizeof(pcb->pc);
+	size_t size = sizeof(pcb->pid) + tamanio_instrucciones(pcb->instrucciones);
+	size += sizeof(int); //para el tamanio_instrucciones_en_bytes
+	size += sizeof(pcb->pc);
 	size += sizeof(char)*16*7; // Por todos los char[] de los registros (?
 	size += sizeof(pcb->estimado_prox_rafaga) + sizeof(pcb->tiempo_llegada_ready) + sizeof(pcb->socket_consola);
-	size+= sizeof(int); //para el tamanio_instrucciones_en_bytes
+	size += sizeof(pcb->tiempo_real_ejecucion) + sizeof(pcb->tiempo_inicial_ejecucion);
 	return size; // + sizeof(tabla_segmentos) + sizeof(archivos_abiertos);
 	//TODO: los 2 sizeofs de arriba
 }
@@ -474,6 +526,12 @@ t_pcb* deserializar_pcb(void* stream, size_t size_payload) {
 
 	memcpy(&(pcb->socket_consola), stream + desplazamiento, sizeof(pcb->socket_consola));
 	desplazamiento += sizeof(pcb->socket_consola);
+
+	memcpy(&(pcb->tiempo_real_ejecucion), stream + desplazamiento, sizeof(pcb->tiempo_real_ejecucion));
+	desplazamiento += sizeof(pcb->tiempo_real_ejecucion);
+
+	memcpy(&(pcb->tiempo_inicial_ejecucion), stream + desplazamiento, sizeof(pcb->tiempo_inicial_ejecucion));
+	desplazamiento += sizeof(pcb->tiempo_inicial_ejecucion);
 
 	return pcb;
 }

@@ -1,26 +1,23 @@
 #include "../include/planificacion_corto.h"
 
+int proceso_que_sigue_en_exec = 0; //Para ver si hay uno en WAIT o SIGNAL, que en realidad siguen en EXEC
+//Si esta en 0, es que no hay ninguno, por eso lo inicializo asi
+
 void planificar_corto() {
 	t_pcb* pcb;
 	t_pcb* pcb_recibido;
 	while(1) {
 		sem_wait(&sem_cant_ready); //entra solo si hay algun proceso en Ready, es una espera no activa
 		pcb = obtener_proximo_a_ejecutar();
+		log_warning(logger, "Proximo a ejecutar: %d", pcb->pid);
 
 		enviar_pcb(socket_cpu, pcb, PCB_A_EJECUTAR, NULL); //NULL porque no se le pasa ningun parametro extra
-		print_l_instrucciones(pcb->instrucciones);
+		//print_l_instrucciones(pcb->instrucciones);
 		liberar_pcb(pcb);
 
 		t_msj_kernel_cpu respuesta = esperar_cpu();
 
 		switch(respuesta) {
-			case YIELD_EJECUTADO: //vuelve a ready
-				pcb_recibido = recibir_pcb(socket_cpu);
-				ready_list_push(pcb_recibido); //Aca calcula el S (proxima rafaga) y actualizo el tiempo_llegada_ready (solo necesito pasarle el pcb, porque ya se que es en Ready)
-
-				sem_post(&sem_cant_ready); //Dice que hay un nuevo proceso en Ready
-				break;
-
 			case IO_EJECUTADO:
 				char* parametro = recibir_parametro_de_instruccion();
 				int tiempo_a_bloquear = atoi(parametro);
@@ -42,31 +39,47 @@ void planificar_corto() {
 				pthread_detach(hilo_io);
 				break;
 
+			case WAIT_EJECUTADO:
+				char* recurso_a_usar = recibir_parametro_de_instruccion();
+				pcb_recibido = recibir_pcb(socket_cpu);
+				wait_recurso(pcb_recibido, recurso_a_usar);
+				break;
+
+			case SIGNAL_EJECUTADO:
+				char* recurso_a_desbloquear = recibir_parametro_de_instruccion();
+				pcb_recibido = recibir_pcb(socket_cpu);
+				signal_recurso(pcb_recibido, recurso_a_desbloquear);
+				break;
+
+			case YIELD_EJECUTADO: //vuelve a ready
+				pcb_recibido = recibir_pcb(socket_cpu);
+				ready_list_push(pcb_recibido); //Aca calcula el S (proxima rafaga), actualizo el tiempo_llegada_ready
+				log_info(logger, "PID: %d - Estado Anterior: EXEC - Estado Actual: READY", pcb_recibido->pid); //log obligatorio
+				break;  					   //y hago sem_post(&sem_cant_ready) (solo necesito pasarle el pcb, porque ya se que es en Ready)
+
 			case EXIT_EJECUTADO:
 				pcb_recibido = recibir_pcb(socket_cpu);
-				log_info(logger, "AX: %s",pcb_recibido->registros_cpu.AX);
-				sem_post(&sem_multiprogramacion);
-				enviar_fin_proceso(pcb_recibido->socket_consola, FINALIZACION_OK);
-
-				log_info(logger, "PID: %d - Estado Anterior: EXEC - Estado Actual: EXIT", pcb_recibido->pid); //log obligatorio
-				log_info(logger, "Finaliza el proceso %d - Motivo: SUCCESS", pcb_recibido->pid); //log obligatorio
-
-				//avisarle a memoria para liberar la estructura
-				liberar_pcb(pcb_recibido);
+				//log_info(logger, "AX: %s", pcb_recibido->registros_cpu.AX);
+				exit_proceso(pcb_recibido); //Aca hace el sem_post(&sem_multiprogramacion)
 				break;
 
 			default:
 				log_error(logger,"Error en la comunicacion entre el Kernel y la CPU");
-				exit(EXIT_FAILURE);
+				exit(1);
 		}
 	}
 }
 
-void ready_list_push(t_pcb* pcb_recibido) {
-	pcb_recibido->tiempo_llegada_ready = time(NULL); //Actualizo el momento en que llega a Ready
+void ready_list_push(t_pcb* pcb_recibido) { //Para ahorrar logica
+	if(!proceso_que_sigue_en_exec) { //Si pasa a Ready en serio, y no es uno que sigue en EXEC
+		pcb_recibido->tiempo_llegada_ready = time(NULL); //Actualizo el momento en que llega a Ready
+		calcular_prox_rafaga(pcb_recibido); //S se calcula solo al que entra a Ready
+		//log_warning(logger, "Nuevo proceso para Ready: %d\n", pcb_recibido->pid); //este lo hace el log obligatorio
+	}
+
 	list_push_con_mutex(ready_list, pcb_recibido, &mutex_ready_list);
 
-	list_iterate(ready_list, (void*)calcular_prox_rafaga); //map con efecto
+	sem_post(&sem_cant_ready); //Dice que hay un nuevo proceso en Ready
 }
 
 void calcular_prox_rafaga(t_pcb* pcb) {
@@ -79,28 +92,121 @@ int calcular_R(t_pcb* pcb) {
 	return (calcular_tiempo_en_ready(pcb->tiempo_llegada_ready) + pcb->estimado_prox_rafaga) / pcb->estimado_prox_rafaga;
 }
 
-int calcular_tiempo_en_ready(int segundos){
+int calcular_tiempo_en_ready(int segundos) {
 	return time(NULL) - segundos;
 }
 
 t_pcb* obtener_proximo_a_ejecutar() {
-	if(!strcmp(lectura_de_config.ALGORITMO_PLANIFICACION, "FIFO")) {
+	t_pcb* pcb;
+
+	if(proceso_que_sigue_en_exec) { //Si hay algun proceso que sigue en EXEC
+		for(int i = 0; i < list_size(ready_list); i++) {//Busco a ese proceso
+			pcb = list_get(ready_list, i);
+			if(pcb->pid == proceso_que_sigue_en_exec) {
+				proceso_que_sigue_en_exec = 0; //Vuelve a decir que no hay uno que sigue en EXEC
+				log_warning(logger, "proceso_que_sigue_en_exec = 0");
+
+				pthread_mutex_lock(&mutex_ready_list);
+			    //pcb = list_remove(ready_list, i);
+				list_remove_element(ready_list, pcb);
+				pthread_mutex_unlock(&mutex_ready_list);
+				return pcb;
+			}
+		}
+	}
+	else if(!strcmp(lectura_de_config.ALGORITMO_PLANIFICACION, "FIFO")) {
 		return list_pop_con_mutex(ready_list, &mutex_ready_list);
 	}
 	else if (!strcmp(lectura_de_config.ALGORITMO_PLANIFICACION, "HRRN")) {
 		pthread_mutex_lock(&mutex_ready_list);
-		t_pcb* pcb = list_get_maximum(ready_list, (void*)calcular_R);
-		list_remove_element(ready_list,pcb);
+		pcb = list_get_maximum(ready_list, (void*)calcular_R);
+		list_remove_element(ready_list, pcb);
 		pthread_mutex_unlock(&mutex_ready_list);
 		return pcb;
 	}
-	else log_error(logger,"Error en la lectura del algoritmo de planificacion");
-	exit(2);
+	else log_error(logger, "Error en la lectura del algoritmo de planificacion");
+	exit(EXIT_FAILURE);
 }
 
 void manejar_io(t_args_io* args_io) {
 	sleep(args_io->tiempo);
-	ready_list_push(args_io->pcb); //Aca calcula el S (proxima rafaga) y actualizo el tiempo_llegada_ready
-	sem_post(&sem_cant_ready);
+	ready_list_push(args_io->pcb); //Aca calcula el S (proxima rafaga), actualizo el tiempo_llegada_ready y hago sem_post(&sem_cant_ready)
+	log_info(logger, "PID: %d - Estado Anterior: BLOCK - Estado Actual: READY", args_io->pcb->pid); //log obligatorio
 	free(args_io);
 }
+
+void wait_recurso(t_pcb* pcb, char* recurso) {
+	t_recurso* recurso_a_buscar;
+
+	int indice_del_recurso = buscar_recurso(recurso); //Podria hacerse con list_find?
+	if(indice_del_recurso != -1) {
+		recurso_a_buscar = list_get(list_recursos, indice_del_recurso);
+		recurso_a_buscar->cantidad_disponibles--;
+		log_info(logger, "PID: %d - Wait: %s - Instancias: %d", pcb->pid, recurso, recurso_a_buscar->cantidad_disponibles); //log obligatorio
+
+		if(recurso_a_buscar->cantidad_disponibles < 0) { //Si el recurso no esta disponible
+			pcb->tiempo_real_ejecucion = time(NULL) - pcb->tiempo_inicial_ejecucion;
+			//Lo hago aca pues no se hace en el cpu
+			pcb->tiempo_inicial_ejecucion = 0; //Indica que no sigue en EXEC
+
+			queue_push(recurso_a_buscar->cola_bloqueados, pcb); //Pasa a BLOCK
+			log_info(logger, "PID: %d - Estado Anterior: EXEC - Estado Actual: BLOCK", pcb->pid); //log obligatorio
+			log_info(logger, "PID: %d - Bloqueado por: %s", pcb->pid, recurso); //log obligatorio
+		}
+		else {
+			log_warning(logger, "proceso_que_sigue_en_exec = %d", pcb->pid);
+			proceso_que_sigue_en_exec = pcb->pid; //No cambia de estado
+			ready_list_push(pcb); //hacer el sem_post(&sem_cant_ready)
+		}
+	}
+	else {
+		exit_proceso(pcb);
+	}
+}
+
+int buscar_recurso(char* nombre_recurso) {
+	t_recurso* recurso;
+	for(int i = 0; i < list_size(list_recursos); i++) {
+		recurso = list_get(list_recursos, i);
+		if(!strcmp(recurso->nombre, nombre_recurso)) {
+			return i; //Indice del recurso encontrado en la lista
+		}
+	}
+	return -1;
+}
+
+void signal_recurso(t_pcb* pcb, char* recurso) {
+	t_recurso* recurso_a_buscar;
+	t_pcb* pcb_a_desbloquear;
+
+	int indice_recurso = buscar_recurso(recurso);
+	if(indice_recurso != -1) {
+		recurso_a_buscar = list_get(list_recursos, indice_recurso);
+		recurso_a_buscar->cantidad_disponibles++;
+		log_info(logger, "PID: %d - Signal: %s - Instancias: %d", pcb->pid, recurso, recurso_a_buscar->cantidad_disponibles); //log obligatorio
+
+		if(recurso_a_buscar->cantidad_disponibles <= 0) { //Si habia al menos un proceso que estaba bloqueado
+			pcb_a_desbloquear = queue_pop(recurso_a_buscar->cola_bloqueados);
+			ready_list_push(pcb_a_desbloquear); //hace el sem_post(&sem_cant_ready)
+			log_info(logger, "PID: %d - Estado Anterior: BLOCK - Estado Actual: READY", pcb_a_desbloquear->pid); //log obligatorio
+		}
+		log_warning(logger, "proceso_que_sigue_en_exec = %d", pcb->pid);
+		proceso_que_sigue_en_exec = pcb->pid; //No cambia de estado
+		ready_list_push(pcb); //hace el sem_post(&sem_cant_ready)
+	}
+	else {
+		exit_proceso(pcb);
+	}
+}
+
+void exit_proceso(t_pcb* pcb) {
+	sem_post(&sem_multiprogramacion);
+	enviar_fin_proceso(pcb->socket_consola, FINALIZACION_OK);
+
+	log_info(logger, "PID: %d - Estado Anterior: EXEC - Estado Actual: EXIT", pcb->pid); //log obligatorio
+	log_info(logger, "Finaliza el proceso %d - Motivo: SUCCESS", pcb->pid); //log obligatorio
+
+	//avisarle a memoria para liberar la estructura
+	liberar_pcb(pcb);
+}
+

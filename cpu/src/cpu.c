@@ -9,7 +9,7 @@ int main(int argc, char** argv) {
     t_config* config = iniciar_config(argv[1]);
     lectura_de_config = leer_cpu_config(config);
 
-    t_log* logger = iniciar_logger("cpu.config", "CPU");
+    logger = iniciar_logger("cpu.config", "CPU");
 
     int socket_memoria = crear_conexion(lectura_de_config.IP_MEMORIA, lectura_de_config.PUERTO_MEMORIA);
     enviar_handshake(socket_memoria, CPU);
@@ -20,7 +20,7 @@ int main(int argc, char** argv) {
     }
 
     int socket_cpu = iniciar_servidor("127.0.0.1",lectura_de_config.PUERTO_ESCUCHA);
-    puts("Servidor listo para recibir al cliente");
+    log_warning(logger, "CPU lista para recibir al Kernel");
     socket_kernel = esperar_cliente(socket_cpu);
 
     puts("Se conecto el Kernel a la CPU");
@@ -30,7 +30,7 @@ int main(int argc, char** argv) {
     	switch (cod_op){
     		case PCB_A_EJECUTAR:
     			t_pcb* pcb = recibir_pcb(socket_kernel); //deserializar hace el malloc
-    			log_info(logger, "PID RECIBIDO: %d", pcb->pid);
+    			log_warning(logger, "PID RECIBIDO: %d", pcb->pid);
     			ejecutar_instrucciones(pcb);
     			liberar_pcb(pcb);
     			break;
