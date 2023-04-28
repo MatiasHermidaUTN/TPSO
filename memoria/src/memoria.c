@@ -14,7 +14,7 @@ int main(int argc, char** argv) {
 
 
     int socket_memoria = iniciar_servidor("127.0.0.1", lectura_de_config.PUERTO_ESCUCHA); //preguntar si la ip tiene que estar en el config o no
-	puts("Servidor listo para recibir al cliente");
+	puts("Memoria lista para recibir al cliente");
 
 	while(recibir_conexiones(socket_memoria, logger)); //Recibe conexiones y crea hilos para manejarlas
 

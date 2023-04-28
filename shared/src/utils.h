@@ -38,11 +38,11 @@ typedef enum {
 } t_handshake;
 
 typedef enum {
-	YIELD_EJECUTADO,
 	IO_EJECUTADO,
-	EXIT_EJECUTADO,
 	WAIT_EJECUTADO,
 	SIGNAL_EJECUTADO,
+	YIELD_EJECUTADO,
+	EXIT_EJECUTADO,
 
 	PCB_A_EJECUTAR,
 } t_msj_kernel_cpu;

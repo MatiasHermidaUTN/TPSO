@@ -1,10 +1,10 @@
 #ifndef CONFIGURACION_KERNEL_H_
 #define CONFIGURACION_KERNEL_H_
 
+#include <utils.h>
 #include <commons/config.h>
 #include <pthread.h>
 #include <commons/collections/queue.h>
-#include "planificacion_corto.h"
 #include "planificacion_largo.h"
 #include <semaphore.h>
 

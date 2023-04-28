@@ -1,5 +1,7 @@
 #include "../include/ejecucion_instrucciones.h"
 
+t_log* logger;
+
 void ejecutar_instrucciones(t_pcb* pcb) {
 	if(!pcb->tiempo_inicial_ejecucion) { //Si no viene de EXEC
 		pcb->tiempo_inicial_ejecucion = time(NULL); // Para calcular el tiempo en ejecucion
@@ -11,6 +13,8 @@ void ejecutar_instrucciones(t_pcb* pcb) {
 		//Fetch
 		instruccion_actual = list_get(pcb->instrucciones, pcb->pc);
 		pcb->pc ++;
+		log_info(logger, "PID: %d - Ejecutando: %s - <PARAMETROS>", pcb->pid, instruccion_actual); //log obligatorio
+		//TODO: emitir los parametros
 		//Decode y Execute
 		switch(instruccion_a_enum(instruccion_actual)) {
 			case SET:
@@ -45,12 +49,14 @@ void ejecutar_instrucciones(t_pcb* pcb) {
 				//No se actualiza el tiempo_real_ejecucion, ya que se considera que sigue en EXEC (Running)
 				char* recurso_a_usar = list_get(instruccion_actual->parametros, 0); //va con strdup?
 				enviar_pcb(socket_kernel, pcb, WAIT_EJECUTADO, recurso_a_usar);
+				log_warning(logger, "Se leyo un WAIT\n");
 				return;
 				break;
 			case SIGNAL:
 				//No se actualiza el tiempo_real_ejecucion, ya que se considera que sigue en EXEC (Running)
-				char* recurso_a_liberar = list_get(instruccion_actual->parametros, 0); //va con strdup?
-				enviar_pcb(socket_kernel, pcb, SIGNAL_EJECUTADO, recurso_a_liberar);
+				char* recurso_a_desbloquear = list_get(instruccion_actual->parametros, 0); //va con strdup?
+				enviar_pcb(socket_kernel, pcb, SIGNAL_EJECUTADO, recurso_a_desbloquear);
+				log_warning(logger, "Se leyo un SIGNAL\n");
 				return;
 				break;
 			case CREATE_SEGMENT:
@@ -87,7 +93,7 @@ t_enum_instruccion instruccion_a_enum(t_instruccion* instruccion){
 	if(!strcmp(nombre, "F_WRITE")) return F_WRITE;
 	if(!strcmp(nombre, "F_TRUNCATE")) return F_TRUNCATE;
 	if(!strcmp(nombre, "WAIT")) return WAIT;
-	if(!strcmp(nombre, "SINGAL")) return SIGNAL;
+	if(!strcmp(nombre, "SIGNAL")) return SIGNAL;
 	if(!strcmp(nombre, "CREATE_SEGMEN")) return CREATE_SEGMENT;
 	if(!strcmp(nombre, "DELETE_SEGMENT")) return DELETE_SEGMENT;
 	if(!strcmp(nombre, "YIELD")) return YIELD;

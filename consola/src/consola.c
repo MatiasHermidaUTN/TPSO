@@ -20,7 +20,7 @@ int main(int argc, char** argv) {
 	// ***** ENVIAR INSTRUCCIONES A KERNEL ***** //
 	enviar_instrucciones(socket_kernel, instrucciones);
 	//esperar_confirmacion(socket_kernel);
-	esperar_fin_proceso(socket_kernel,logger);
+	esperar_fin_proceso(socket_kernel, logger);
 
 	// ***** LIBERAR MEMORIA Y CERRAR ***** //
     list_destroy_and_destroy_elements(instrucciones, (void*)destruir_instruccion);
@@ -42,7 +42,7 @@ void destruir_parametro(char* parametro) {
 	free(parametro);
 }
 
-void esperar_fin_proceso(int socket_kernel,t_log* logger) {
+void esperar_fin_proceso(int socket_kernel, t_log* logger) {
 	t_msj_kernel_consola respuesta = recibir_fin_proceso(socket_kernel);
 	if(respuesta == FINALIZACION_OK) {
 		log_info(logger, "Proceso terminado");
