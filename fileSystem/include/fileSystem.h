@@ -61,5 +61,6 @@ void deserializar_instrucciones_kernel(void* a_recibir, int size_payload, t_inst
 void enviar_mensaje_kernel(int socket_kernel, char* msj);
 char* leer_de_memoria(int socket_memoria, t_instrucciones LEER, int cuanto_escribir, int dir_fisica_memoria);
 void mandar_a_memoria(int socket_memoria, t_instrucciones ESCRIBIR, char* buffer, int cuanto_leer, int dir_fisica_memoria);
+void liberar_bloque(uint32_t puntero);
 
 #endif /* FILESYSTEM_H_ */
