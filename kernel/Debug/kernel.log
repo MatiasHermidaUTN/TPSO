@@ -1427,3 +1427,88 @@
 [INFO] 14:44:41:769 proceso/(124486:124488): AX: HOLA
 [INFO] 14:44:41:770 proceso/(124486:124488): PID: 4 - Estado Anterior: EXEC - Estado Actual: EXIT
 [INFO] 14:44:41:771 proceso/(124486:124488): Finaliza el proceso 4 - Motivo: SUCCESS
+[INFO] 15:43:28:484 proceso/(127751:127756): se conecto una consola
+[INFO] 15:43:28:486 proceso/(127751:127756): Consola mando instrucciones
+[INFO] 15:43:28:486 proceso/(127751:127756): Se crea el proceso 1 en NEW 
+
+[INFO] 15:43:28:486 proceso/(127751:127754): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 15:43:28:487 proceso/(127751:127753): PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 15:43:28:487 proceso/(127751:127753): PID: 1 - Bloqueado por: IO
+[INFO] 15:43:28:487 proceso/(127751:127753): PID: 1 - Ejecuta IO: 10
+[INFO] 15:43:42:681 proceso/(127751:127760): se conecto una consola
+[INFO] 15:43:42:682 proceso/(127751:127760): Consola mando instrucciones
+[INFO] 15:43:42:682 proceso/(127751:127760): Se crea el proceso 2 en NEW 
+
+[INFO] 15:43:42:682 proceso/(127751:127754): PID: 2 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 15:43:43:490 proceso/(127751:127753): AX: HOLA
+[INFO] 15:43:43:490 proceso/(127751:127753): PID: 1 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 15:43:43:490 proceso/(127751:127753): Finaliza el proceso 1 - Motivo: SUCCESS
+[INFO] 15:43:43:490 proceso/(127751:127753): PID: 2 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 15:43:43:491 proceso/(127751:127753): PID: 2 - Bloqueado por: IO
+[INFO] 15:43:43:491 proceso/(127751:127753): PID: 2 - Ejecuta IO: 10
+[INFO] 15:49:00:362 proceso/(127894:127899): se conecto una consola
+[INFO] 15:49:00:363 proceso/(127894:127899): Consola mando instrucciones
+[INFO] 15:49:00:363 proceso/(127894:127899): Se crea el proceso 1 en NEW 
+
+[INFO] 15:49:00:363 proceso/(127894:127897): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 15:49:00:364 proceso/(127894:127896): PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 15:49:00:364 proceso/(127894:127896): PID: 1 - Bloqueado por: IO
+[INFO] 15:49:00:364 proceso/(127894:127896): PID: 1 - Ejecuta IO: 10
+[INFO] 15:49:15:367 proceso/(127894:127896): AX: HOLA
+[INFO] 15:49:15:369 proceso/(127894:127896): PID: 1 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 15:49:15:371 proceso/(127894:127896): Finaliza el proceso 1 - Motivo: SUCCESS
+[INFO] 15:49:20:530 proceso/(127894:127902): se conecto una consola
+[INFO] 15:49:20:530 proceso/(127894:127902): Consola mando instrucciones
+[INFO] 15:49:20:530 proceso/(127894:127902): Se crea el proceso 2 en NEW 
+
+[INFO] 15:49:20:530 proceso/(127894:127897): PID: 2 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 15:49:20:531 proceso/(127894:127896): PID: 2 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 15:49:20:531 proceso/(127894:127896): PID: 2 - Bloqueado por: IO
+[INFO] 15:49:20:531 proceso/(127894:127896): PID: 2 - Ejecuta IO: 10
+[INFO] 15:49:35:533 proceso/(127894:127896): AX: HOLA
+[INFO] 15:49:35:533 proceso/(127894:127896): PID: 2 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 15:49:35:533 proceso/(127894:127896): Finaliza el proceso 2 - Motivo: SUCCESS
+[INFO] 16:11:49:128 proceso/(127894:128049): se conecto una consola
+[INFO] 16:11:49:129 proceso/(127894:128049): Consola mando instrucciones
+[INFO] 16:11:49:129 proceso/(127894:128049): Se crea el proceso 3 en NEW 
+
+[INFO] 16:11:49:129 proceso/(127894:127897): PID: 3 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 16:11:49:132 proceso/(127894:127896): PID: 3 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 16:11:49:132 proceso/(127894:127896): PID: 3 - Bloqueado por: IO
+[INFO] 16:11:49:132 proceso/(127894:127896): PID: 3 - Ejecuta IO: 10
+[INFO] 16:11:54:567 proceso/(127894:128052): se conecto una consola
+[INFO] 16:11:54:568 proceso/(127894:128052): Consola mando instrucciones
+[INFO] 16:11:54:568 proceso/(127894:128052): Se crea el proceso 4 en NEW 
+
+[INFO] 16:11:54:568 proceso/(127894:127897): PID: 4 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 16:11:54:568 proceso/(127894:127896): PID: 4 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 16:11:54:568 proceso/(127894:127896): PID: 4 - Bloqueado por: IO
+[INFO] 16:11:54:568 proceso/(127894:127896): PID: 4 - Ejecuta IO: 10
+[INFO] 16:12:04:134 proceso/(127894:127896): AX: HOLA
+[INFO] 16:12:04:134 proceso/(127894:127896): PID: 3 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 16:12:04:135 proceso/(127894:127896): Finaliza el proceso 3 - Motivo: SUCCESS
+[INFO] 16:12:09:570 proceso/(127894:127896): AX: HOLA
+[INFO] 16:12:09:572 proceso/(127894:127896): PID: 4 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 16:12:09:573 proceso/(127894:127896): Finaliza el proceso 4 - Motivo: SUCCESS
+[INFO] 18:05:09:233 proceso/(130199:130204): se conecto una consola
+[INFO] 18:05:09:234 proceso/(130199:130204): Consola mando instrucciones
+[INFO] 18:05:09:234 proceso/(130199:130204): Se crea el proceso 1 en NEW 
+
+[INFO] 18:05:09:235 proceso/(130199:130202): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 18:05:09:235 proceso/(130199:130201): PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 18:05:09:235 proceso/(130199:130201): PID: 1 - Bloqueado por: IO
+[INFO] 18:05:09:235 proceso/(130199:130201): PID: 1 - Ejecuta IO: 10
+[INFO] 18:05:11:416 proceso/(130199:130207): se conecto una consola
+[INFO] 18:05:11:416 proceso/(130199:130207): Consola mando instrucciones
+[INFO] 18:05:11:416 proceso/(130199:130207): Se crea el proceso 2 en NEW 
+
+[INFO] 18:05:11:416 proceso/(130199:130202): PID: 2 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 18:05:11:416 proceso/(130199:130201): PID: 2 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 18:05:11:416 proceso/(130199:130201): PID: 2 - Bloqueado por: IO
+[INFO] 18:05:11:416 proceso/(130199:130201): PID: 2 - Ejecuta IO: 10
+[INFO] 18:05:24:237 proceso/(130199:130201): AX: HOLA
+[INFO] 18:05:24:237 proceso/(130199:130201): PID: 1 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 18:05:24:237 proceso/(130199:130201): Finaliza el proceso 1 - Motivo: SUCCESS
+[INFO] 18:05:29:239 proceso/(130199:130201): AX: HOLA
+[INFO] 18:05:29:239 proceso/(130199:130201): PID: 2 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 18:05:29:240 proceso/(130199:130201): Finaliza el proceso 2 - Motivo: SUCCESS

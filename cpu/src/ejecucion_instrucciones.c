@@ -1,11 +1,13 @@
 #include "../include/ejecucion_instrucciones.h"
 
-void ejecutar_instrucciones(t_pcb* pcb){
-	int tiempo_inicial = time(NULL); // Para calcular el tiemo en ejecucion
+void ejecutar_instrucciones(t_pcb* pcb) {
+	if(!pcb->tiempo_inicial_ejecucion) { //Si no viene de EXEC
+		pcb->tiempo_inicial_ejecucion = time(NULL); // Para calcular el tiempo en ejecucion
+	}
 
 	int cant_instrucciones = list_size(pcb->instrucciones);
 	t_instruccion* instruccion_actual;
-	while(pcb->pc < cant_instrucciones){
+	while(pcb->pc < cant_instrucciones) {
 		//Fetch
 		instruccion_actual = list_get(pcb->instrucciones, pcb->pc);
 		pcb->pc ++;
@@ -19,7 +21,8 @@ void ejecutar_instrucciones(t_pcb* pcb){
 			case MOV_OUT:
 				break;
 			case IO:
-				pcb->tiempo_real_ejecucion = time(NULL) - tiempo_inicial;
+				pcb->tiempo_real_ejecucion = time(NULL) - pcb->tiempo_inicial_ejecucion;
+				pcb->tiempo_inicial_ejecucion = 0;
 
 				char* tiempo_a_bloquear = list_get(instruccion_actual->parametros, 0); //va con strdup?
 				//printf("El tiempo a bloquear de %d es: %s.\n", pcb->pid, tiempo_a_bloquear);
@@ -39,15 +42,24 @@ void ejecutar_instrucciones(t_pcb* pcb){
 			case F_TRUNCATE:
 				break;
 			case WAIT:
+				//No se actualiza el tiempo_real_ejecucion, ya que se considera que sigue en EXEC (Running)
+				char* recurso_a_usar = list_get(instruccion_actual->parametros, 0); //va con strdup?
+				enviar_pcb(socket_kernel, pcb, WAIT_EJECUTADO, recurso_a_usar);
+				return;
 				break;
 			case SIGNAL:
+				//No se actualiza el tiempo_real_ejecucion, ya que se considera que sigue en EXEC (Running)
+				char* recurso_a_liberar = list_get(instruccion_actual->parametros, 0); //va con strdup?
+				enviar_pcb(socket_kernel, pcb, SIGNAL_EJECUTADO, recurso_a_liberar);
+				return;
 				break;
 			case CREATE_SEGMENT:
 				break;
 			case DELETE_SEGMENT:
 				break;
 			case YIELD:
-				pcb->tiempo_real_ejecucion = time(NULL) - tiempo_inicial;
+				pcb->tiempo_real_ejecucion = time(NULL) - pcb->tiempo_inicial_ejecucion;
+				pcb->tiempo_inicial_ejecucion = 0;
 				//printf("tiempo_real_ejecucion de %d: %d.\n", pcb->pid, pcb->tiempo_real_ejecucion);
 				enviar_pcb(socket_kernel, pcb, YIELD_EJECUTADO, NULL); //NULL porque no se le pasa ningun parametro
 				return;

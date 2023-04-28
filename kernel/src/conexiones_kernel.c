@@ -1,9 +1,8 @@
 #include "../include/conexiones_kernel.h"
 
-
-int recibir_conexiones(int socket_kernel){
+int recibir_conexiones(int socket_kernel) {
 	int socket_consola = esperar_cliente(socket_kernel);
-	if(socket_consola != -1){ //TODO: checkear -1 es error
+	if(socket_consola != -1) { //TODO: checkear -1 es error
 		pthread_t hilo;
 		t_args_recibir_conexiones* args = malloc(sizeof(t_args_recibir_conexiones)); //tiene que ser puntero?
 		args->socket_cliente = socket_consola;
@@ -16,14 +15,14 @@ int recibir_conexiones(int socket_kernel){
 	return 0;
 }
 
-void manejar_conexion(void* args){
+void manejar_conexion(void* args) {
 	int socket_consola = ((t_args_recibir_conexiones*)args)->socket_cliente;
 	free(args);
 
 	log_info(logger, "se conecto una consola");
 
 	t_msj_kernel_consola cod_op = recibir_operacion(socket_consola);
-	switch(cod_op){
+	switch(cod_op) {
 		case LIST_INSTRUCCIONES:
 			log_info(logger, "Consola mando instrucciones");
 			t_list* instrucciones = recibir_instrucciones(socket_consola);
@@ -42,7 +41,7 @@ void manejar_conexion(void* args){
 
 int contador_pid = 1;
 
-t_pcb* crear_pcb(t_list* instrucciones,int socket_consola){
+t_pcb* crear_pcb(t_list* instrucciones,int socket_consola) {
 	t_pcb* pcb = malloc(sizeof(t_pcb));
 	pthread_mutex_lock(&mutex_contador_pid);
 	pcb->pid = contador_pid;
@@ -57,17 +56,18 @@ t_pcb* crear_pcb(t_list* instrucciones,int socket_consola){
 	pcb->tiempo_llegada_ready = 0;
 	pcb->archivos_abiertos = list_create();
 
-	pcb->socket_consola =socket_consola;
+	pcb->socket_consola = socket_consola;
 
 	pcb->tiempo_real_ejecucion = 0; // No hace falta igual, porque no se usa hasta que sea modificado por la CPU
+	pcb->tiempo_inicial_ejecucion = 0;
 
 	return pcb;
 
 }
 
-void init_conexiones(t_kernel_config lectura_de_config, t_log* logger, int* socket_memoria, int* socket_cpu, int* socket_fileSystem){
+void init_conexiones(t_kernel_config lectura_de_config, t_log* logger, int* socket_memoria, int* socket_cpu, int* socket_fileSystem) {
 	*socket_memoria = crear_conexion(lectura_de_config.IP_MEMORIA, lectura_de_config.PUERTO_MEMORIA);
-	if(*socket_memoria == -1){
+	if(*socket_memoria == -1) {
 		log_error(logger, "El kernel no pudo conectarse a la memoria");
 		exit(EXIT_FAILURE);
 	}
@@ -80,24 +80,14 @@ void init_conexiones(t_kernel_config lectura_de_config, t_log* logger, int* sock
 
 	//Para estos no hace falta handshake porque solo reciben al Kernel
 	*socket_cpu = crear_conexion(lectura_de_config.IP_CPU, lectura_de_config.PUERTO_CPU);
-	if(*socket_cpu == -1){
-			log_error(logger, "El kernel no pudo conectarse a el CPU");
-			exit(EXIT_FAILURE);
+	if(*socket_cpu == -1) {
+		log_error(logger, "El kernel no pudo conectarse a el CPU");
+		exit(EXIT_FAILURE);
 	}
 
 	*socket_fileSystem = crear_conexion(lectura_de_config.IP_FILESYSTEM, lectura_de_config.PUERTO_FILESYSTEM);
-	if(*socket_fileSystem == -1){
-				log_error(logger, "El kernel no pudo conectarse a el FileSystem");
-				exit(EXIT_FAILURE);
+	if(*socket_fileSystem == -1) {
+		log_error(logger, "El kernel no pudo conectarse a el FileSystem");
+		exit(EXIT_FAILURE);
 	}
-}
-
-void destruir_parametro(char* parametro){
-	free(parametro);
-}
-
-void destruir_instruccion(t_instruccion* instruccion){
-	free(instruccion->nombre);
-	list_destroy_and_destroy_elements(instruccion->parametros, (void*)destruir_parametro);
-	free(instruccion);
 }

@@ -8,7 +8,7 @@
 #include "planificacion_largo.h"
 #include <semaphore.h>
 
-typedef struct kernel_config{
+typedef struct kernel_config {
     char* IP_MEMORIA;
     char* PUERTO_MEMORIA;
     char* IP_CPU;
@@ -24,13 +24,11 @@ typedef struct kernel_config{
     char** INSTANCIAS_RECURSOS;
 } t_kernel_config;
 
-typedef struct{
+typedef struct {
 	char* nombre;
-	t_list* lista_bloqueados;
-	sem_t sem_cant_recurso;
-	sem_t sem_cant_bloqueados;
-	pthread_mutex_t mutex_lista_bloqueados;
-} t_estructura_recurso;
+	int cantidad_disponibles;
+	t_queue* cola_bloqueados;
+} t_recurso;
 
 extern pthread_mutex_t mutex_contador_pid;
 extern pthread_mutex_t mutex_new_queue;
@@ -50,7 +48,7 @@ extern int socket_memoria;
 extern int socket_cpu;
 extern int socket_fileSystem;
 
-extern t_list* estructuras_recursos_list;
+extern t_list* list_recursos;
 
 t_kernel_config leer_kernel_config(t_config* config);
 
