@@ -90,4 +90,5 @@ void init_conexiones(t_kernel_config lectura_de_config, t_log* logger, int* sock
 		log_error(logger, "El kernel no pudo conectarse a el FileSystem");
 		exit(EXIT_FAILURE);
 	}
+
 }

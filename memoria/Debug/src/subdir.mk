@@ -4,19 +4,22 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
-../src/configuracion_cpu.c \
-../src/cpu.c \
-../src/ejecucion_instrucciones.c 
+../src/comunicaciones_memoria.c \
+../src/conexiones_memoria.c \
+../src/configuracion_memoria.c \
+../src/memoria.c 
 
 C_DEPS += \
-./src/configuracion_cpu.d \
-./src/cpu.d \
-./src/ejecucion_instrucciones.d 
+./src/comunicaciones_memoria.d \
+./src/conexiones_memoria.d \
+./src/configuracion_memoria.d \
+./src/memoria.d 
 
 OBJS += \
-./src/configuracion_cpu.o \
-./src/cpu.o \
-./src/ejecucion_instrucciones.o 
+./src/comunicaciones_memoria.o \
+./src/conexiones_memoria.o \
+./src/configuracion_memoria.o \
+./src/memoria.o 
 
 
 # Each subdirectory must supply rules for building sources it contributes
@@ -31,7 +34,7 @@ src/%.o: ../src/%.c src/subdir.mk
 clean: clean-src
 
 clean-src:
-	-$(RM) ./src/configuracion_cpu.d ./src/configuracion_cpu.o ./src/cpu.d ./src/cpu.o ./src/ejecucion_instrucciones.d ./src/ejecucion_instrucciones.o
+	-$(RM) ./src/comunicaciones_memoria.d ./src/comunicaciones_memoria.o ./src/conexiones_memoria.d ./src/conexiones_memoria.o ./src/configuracion_memoria.d ./src/configuracion_memoria.o ./src/memoria.d ./src/memoria.o
 
 .PHONY: clean-src
 

@@ -19,6 +19,7 @@ void ejecutar_instrucciones(t_pcb* pcb) {
 		switch(instruccion_a_enum(instruccion_actual)) {
 			case SET:
 				ejecutar_set(pcb, instruccion_actual);
+				log_warning(logger, "Se leyo un SET\n");
 				break;
 			case MOV_IN:
 				break;
@@ -31,6 +32,7 @@ void ejecutar_instrucciones(t_pcb* pcb) {
 				char* tiempo_a_bloquear = list_get(instruccion_actual->parametros, 0); //va con strdup?
 				//printf("El tiempo a bloquear de %d es: %s.\n", pcb->pid, tiempo_a_bloquear);
 				enviar_pcb(socket_kernel, pcb, IO_EJECUTADO, tiempo_a_bloquear);
+				log_warning(logger, "Se leyo un IO\n");
 				return;
 				break;
 			case F_OPEN:
@@ -66,7 +68,7 @@ void ejecutar_instrucciones(t_pcb* pcb) {
 			case YIELD:
 				pcb->tiempo_real_ejecucion = time(NULL) - pcb->tiempo_inicial_ejecucion;
 				pcb->tiempo_inicial_ejecucion = 0;
-				//printf("tiempo_real_ejecucion de %d: %d.\n", pcb->pid, pcb->tiempo_real_ejecucion);
+				log_warning(logger, "Se leyo un YIELD\n");
 				enviar_pcb(socket_kernel, pcb, YIELD_EJECUTADO, NULL); //NULL porque no se le pasa ningun parametro
 				return;
 				break;

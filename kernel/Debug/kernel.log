@@ -1,2113 +1,417 @@
-[ERROR] 14:59:41:943 proceso/(134606:134606): 4
-[ERROR] 14:59:45:792 proceso/(134607:134607): 4
-[ERROR] 14:59:46:630 proceso/(134608:134608): 4
-[ERROR] 14:59:47:412 proceso/(134609:134609): 4
-[ERROR] 14:59:56:076 proceso/(134611:134611): 4
-[ERROR] 15:02:06:938 proceso/(134730:134730): -1
-[ERROR] 15:04:46:413 proceso/(134928:134928): error MATI
-[ERROR] 15:07:39:927 proceso/(135070:135070): El kernel no pudo conectarse a la memoria);
-[ERROR] 15:11:49:238 proceso/(135392:135392): El kernel no pudo conectarse a el CPU
-[INFO] 15:23:24:416 proceso/(135729:135750): se conecto una consola
-[INFO] 15:23:41:230 proceso/(135729:135752): se conecto una consola
-[INFO] 15:23:43:625 proceso/(135729:135754): se conecto una consola
-[INFO] 15:23:44:232 proceso/(135729:135756): se conecto una consola
-[INFO] 15:23:44:778 proceso/(135729:135758): se conecto una consola
-[INFO] 15:23:45:290 proceso/(135729:135760): se conecto una consola
-[INFO] 15:23:45:875 proceso/(135729:135762): se conecto una consola
-[INFO] 22:19:10:471 proceso/(9550:9553): se conecto una consola
-[ERROR] 01:28:06:660 proceso/(16954:16954): El kernel no pudo conectarse a la memoria
-[INFO] 01:28:22:230 proceso/(16960:16963): se conecto una consola
-[INFO] 02:50:47:911 proceso/(20722:20730): se conecto una consola
-[INFO] 02:50:53:369 proceso/(20722:20732): se conecto una consola
-[INFO] 02:50:54:400 proceso/(20722:20734): se conecto una consola
-[INFO] 02:50:57:288 proceso/(20722:20736): se conecto una consola
-[INFO] 02:50:57:687 proceso/(20722:20738): se conecto una consola
-[INFO] 02:50:58:831 proceso/(20722:20740): se conecto una consola
-[ERROR] 12:03:10:961 proceso/(3863:3863): El kernel no pudo conectarse a la memoria
-[ERROR] 12:03:25:762 proceso/(3876:3876): El kernel no pudo conectarse a la memoria
-[INFO] 12:04:50:632 proceso/(3989:3991): se conecto una consola
-[INFO] 12:04:50:632 proceso/(3989:3991): Consola mandando instrucciones
-[INFO] 12:55:30:460 proceso/(6467:6469): se conecto una consola
-[INFO] 12:55:30:460 proceso/(6467:6469): Consola mandando instrucciones
-[INFO] 12:57:18:119 proceso/(6562:6564): se conecto una consola
-[INFO] 12:57:18:119 proceso/(6562:6564): Consola mandando instrucciones
-[INFO] 12:59:45:466 proceso/(6731:6733): se conecto una consola
-[INFO] 12:59:45:467 proceso/(6731:6733): Consola mandando instrucciones
-[INFO] 13:01:33:805 proceso/(6797:6799): se conecto una consola
-[INFO] 13:01:33:806 proceso/(6797:6799): Consola mandando instrucciones
-[INFO] 13:03:05:168 proceso/(6890:6892): se conecto una consola
-[INFO] 13:03:05:168 proceso/(6890:6892): Consola mandando instrucciones
-[INFO] 13:04:22:474 proceso/(6948:6950): se conecto una consola
-[INFO] 13:04:22:474 proceso/(6948:6950): Consola mandando instrucciones
-[INFO] 13:05:08:506 proceso/(7006:7008): se conecto una consola
-[INFO] 13:05:08:507 proceso/(7006:7008): Consola mandando instrucciones
-[INFO] 13:07:21:430 proceso/(7093:7095): se conecto una consola
-[INFO] 13:07:21:430 proceso/(7093:7095): Consola mandando instrucciones
-[INFO] 13:11:07:772 proceso/(7138:7140): se conecto una consola
-[INFO] 13:11:07:773 proceso/(7138:7140): Consola mandando instrucciones
-[INFO] 13:20:52:860 proceso/(7455:7457): se conecto una consola
-[INFO] 13:20:52:861 proceso/(7455:7457): Consola mandando instrucciones
-[INFO] 13:22:20:118 proceso/(7521:7523): se conecto una consola
-[INFO] 13:22:20:118 proceso/(7521:7523): Consola mandando instrucciones
-[INFO] 13:35:00:225 proceso/(8053:8055): se conecto una consola
-[INFO] 13:35:00:226 proceso/(8053:8055): Consola mandando instrucciones
-[INFO] 13:35:21:898 proceso/(8090:8092): se conecto una consola
-[INFO] 13:35:21:898 proceso/(8090:8092): Consola mandando instrucciones
-[INFO] 13:37:45:502 proceso/(8172:8174): se conecto una consola
-[INFO] 13:37:45:502 proceso/(8172:8174): Consola mandando instrucciones
-[INFO] 13:38:07:454 proceso/(8209:8211): se conecto una consola
-[INFO] 13:38:07:454 proceso/(8209:8211): Consola mandando instrucciones
-[INFO] 13:39:44:737 proceso/(8305:8307): se conecto una consola
-[INFO] 13:39:44:737 proceso/(8305:8307): Consola mandando instrucciones
-[INFO] 13:40:02:665 proceso/(8320:8322): se conecto una consola
-[INFO] 13:40:02:665 proceso/(8320:8322): Consola mandando instrucciones
-[INFO] 13:40:03:746 proceso/(8320:8324): se conecto una consola
-[INFO] 13:40:03:746 proceso/(8320:8324): Consola mandando instrucciones
-[INFO] 13:42:04:084 proceso/(8443:8445): se conecto una consola
-[INFO] 13:42:04:085 proceso/(8443:8445): Consola mandando instrucciones
-[INFO] 13:43:19:991 proceso/(8522:8524): se conecto una consola
-[INFO] 13:43:19:991 proceso/(8522:8524): Consola mandando instrucciones
-[INFO] 13:44:13:760 proceso/(8607:8609): se conecto una consola
-[INFO] 13:44:13:760 proceso/(8607:8609): Consola mandando instrucciones
-[INFO] 13:45:04:641 proceso/(8646:8648): se conecto una consola
-[INFO] 13:45:04:642 proceso/(8646:8648): Consola mandando instrucciones
-[INFO] 13:45:27:442 proceso/(8684:8686): se conecto una consola
-[INFO] 13:45:27:442 proceso/(8684:8686): Consola mandando instrucciones
-[INFO] 13:45:54:163 proceso/(8733:8735): se conecto una consola
-[INFO] 13:45:54:163 proceso/(8733:8735): Consola mandando instrucciones
-[INFO] 13:48:25:943 proceso/(8886:8888): se conecto una consola
-[INFO] 13:48:25:943 proceso/(8886:8888): Consola mandando instrucciones
-[INFO] 13:48:47:231 proceso/(8924:8926): se conecto una consola
-[INFO] 13:48:47:231 proceso/(8924:8926): Consola mandando instrucciones
-[INFO] 13:50:02:545 proceso/(8973:8975): se conecto una consola
-[INFO] 13:50:02:545 proceso/(8973:8975): Consola mandando instrucciones
-[INFO] 14:00:34:650 proceso/(9740:9742): se conecto una consola
-[INFO] 14:00:34:650 proceso/(9740:9742): Consola mandando instrucciones
-[INFO] 14:00:37:457 proceso/(9740:9744): se conecto una consola
-[INFO] 14:00:37:458 proceso/(9740:9744): Consola mandando instrucciones
-[INFO] 14:04:06:583 proceso/(9946:9948): se conecto una consola
-[INFO] 14:04:06:583 proceso/(9946:9948): Consola mandando instrucciones
-[INFO] 14:04:18:119 proceso/(9946:9974): se conecto una consola
-[INFO] 14:04:18:119 proceso/(9946:9974): Consola mandando instrucciones
-[INFO] 14:04:24:088 proceso/(9975:9977): se conecto una consola
-[INFO] 14:04:24:088 proceso/(9975:9977): Consola mandando instrucciones
-[ERROR] 14:10:38:408 proceso/(10209:10209): El kernel no pudo conectarse a la memoria
-[INFO] 14:10:58:698 proceso/(10241:10243): se conecto una consola
-[INFO] 14:10:58:698 proceso/(10241:10243): Consola mandando instrucciones
-[INFO] 14:11:00:786 proceso/(10241:10245): se conecto una consola
-[INFO] 14:11:00:786 proceso/(10241:10245): Consola mandando instrucciones
-[INFO] 20:24:38:968 proceso/(2016:2026): se conecto una consola
-[INFO] 20:24:39:033 proceso/(2016:2026): Consola mandando instrucciones
-[INFO] 20:34:05:974 proceso/(2317:2321): se conecto una consola
-[INFO] 20:34:06:028 proceso/(2317:2321): Consola mandando instrucciones
-[INFO] 20:59:43:311 proceso/(3573:3577): se conecto una consola
-[INFO] 20:59:43:381 proceso/(3573:3577): Consola mandando instrucciones
-[INFO] 21:00:23:945 proceso/(3573:3579): se conecto una consola
-[INFO] 21:00:23:946 proceso/(3573:3579): Consola mandando instrucciones
-[INFO] 23:48:20:366 proceso/(10234:10239): se conecto una consola
-[INFO] 23:48:20:432 proceso/(10234:10239): Consola mandando instrucciones
-[INFO] 23:48:20:453 proceso/(10234:10239): PID: 1 
-
-[INFO] 23:48:30:280 proceso/(10234:10241): se conecto una consola
-[INFO] 23:48:30:280 proceso/(10234:10241): Consola mandando instrucciones
-[INFO] 23:48:30:285 proceso/(10234:10241): PID: 2 
-
-[INFO] 23:48:32:347 proceso/(10234:10243): se conecto una consola
-[INFO] 23:48:32:348 proceso/(10234:10243): Consola mandando instrucciones
-[INFO] 23:48:32:351 proceso/(10234:10243): PID: 3 
-
-[INFO] 23:48:32:997 proceso/(10234:10245): se conecto una consola
-[INFO] 23:48:32:997 proceso/(10234:10245): Consola mandando instrucciones
-[INFO] 23:48:33:000 proceso/(10234:10245): PID: 4 
-
-[INFO] 23:48:33:569 proceso/(10234:10247): se conecto una consola
-[INFO] 23:48:33:569 proceso/(10234:10247): Consola mandando instrucciones
-[INFO] 23:48:33:573 proceso/(10234:10247): PID: 5 
-
-[INFO] 23:48:34:110 proceso/(10234:10249): se conecto una consola
-[INFO] 23:48:34:111 proceso/(10234:10249): Consola mandando instrucciones
-[INFO] 23:48:34:120 proceso/(10234:10249): PID: 6 
-
-[INFO] 23:48:34:642 proceso/(10234:10251): se conecto una consola
-[INFO] 23:48:34:642 proceso/(10234:10251): Consola mandando instrucciones
-[INFO] 23:48:34:646 proceso/(10234:10251): PID: 7 
-
-[INFO] 23:48:35:173 proceso/(10234:10253): se conecto una consola
-[INFO] 23:48:35:174 proceso/(10234:10253): Consola mandando instrucciones
-[INFO] 23:48:35:178 proceso/(10234:10253): PID: 8 
-
-[INFO] 23:48:35:700 proceso/(10234:10255): se conecto una consola
-[INFO] 23:48:35:701 proceso/(10234:10255): Consola mandando instrucciones
-[INFO] 23:48:35:704 proceso/(10234:10255): PID: 9 
-
-[INFO] 23:48:36:288 proceso/(10234:10257): se conecto una consola
-[INFO] 23:48:36:288 proceso/(10234:10257): Consola mandando instrucciones
-[INFO] 23:48:36:291 proceso/(10234:10257): PID: 10 
-
-[INFO] 00:01:37:785 proceso/(10757:10760): se conecto una consola
-[INFO] 00:01:37:836 proceso/(10757:10760): Consola mandando instrucciones
-[INFO] 00:01:37:850 proceso/(10757:10760): PID: 1 
-
-[INFO] 00:05:33:786 proceso/(10854:10859): se conecto una consola
-[INFO] 00:05:33:831 proceso/(10854:10859): Consola mandando instrucciones
-[INFO] 00:05:33:845 proceso/(10854:10859): PID: 1 
-
-[INFO] 00:08:11:407 proceso/(10982:10986): se conecto una consola
-[INFO] 00:08:11:453 proceso/(10982:10986): Consola mandando instrucciones
-[INFO] 00:08:11:469 proceso/(10982:10986): PID: 1 
-
-[INFO] 02:25:31:143 proceso/(14580:14585): se conecto una consola
-[INFO] 02:25:31:188 proceso/(14580:14585): Consola mandando instrucciones
-[INFO] 02:25:31:203 proceso/(14580:14585): PID: 1 
-
-[INFO] 13:29:13:399 proceso/(156029:156033): se conecto una consola
-[INFO] 13:29:13:400 proceso/(156029:156033): Consola mandando instrucciones
-[INFO] 13:29:13:401 proceso/(156029:156033): PID: 1 
-
-[INFO] 13:42:20:806 proceso/(156585:156603): se conecto una consola
-[INFO] 13:42:20:810 proceso/(156585:156603): Consola mandando instrucciones
-[INFO] 13:42:20:811 proceso/(156585:156603): PID: 1 
-
-[INFO] 13:42:20:813 proceso/(156585:156603): PRUEBAAAAAAA: 10 
-
-[INFO] 13:47:10:315 proceso/(156779:156783): se conecto una consola
-[INFO] 13:47:10:316 proceso/(156779:156783): Consola mandando instrucciones
-[INFO] 13:47:10:316 proceso/(156779:156783): PID: 1 
-
-[INFO] 13:47:10:316 proceso/(156779:156783): PRUEBAAAAAAA: 10 
-
-[INFO] 14:31:06:978 proceso/(159992:159996): se conecto una consola
-[INFO] 14:31:06:978 proceso/(159992:159996): Consola mandando instrucciones
-[INFO] 14:31:06:979 proceso/(159992:159996): PID: 1 
-
-[INFO] 15:57:19:210 proceso/(164493:164498): se conecto una consola
-[INFO] 15:57:19:211 proceso/(164493:164498): Consola mando instrucciones
-[INFO] 15:57:19:211 proceso/(164493:164498): PID: 1 
-
-[INFO] 16:00:39:469 proceso/(164620:164625): se conecto una consola
-[INFO] 16:00:39:469 proceso/(164620:164625): Consola mando instrucciones
-[INFO] 16:00:39:470 proceso/(164620:164625): PID: 1 
-
-[INFO] 16:03:54:099 proceso/(164737:164742): se conecto una consola
-[INFO] 16:03:54:100 proceso/(164737:164742): Consola mando instrucciones
-[INFO] 16:03:54:100 proceso/(164737:164742): PID: 1 
-
-[INFO] 16:12:51:228 proceso/(164889:164892): Planificador largo
-[INFO] 16:14:56:774 proceso/(164965:164968): Planificador largo
-[INFO] 16:14:56:776 proceso/(164965:164968): Planificador largo
-[INFO] 16:14:56:776 proceso/(164965:164968): Planificador largo
-[INFO] 16:14:56:776 proceso/(164965:164968): Planificador largo
-[INFO] 16:16:36:412 proceso/(165183:165186): Planificador largo
-[INFO] 16:20:41:289 proceso/(165451:165454): Planificador largo
-[INFO] 16:20:41:290 proceso/(165451:165454): Planificador largo
-[INFO] 16:21:21:756 proceso/(165514:165517): Planificador largo
-[INFO] 16:21:21:757 proceso/(165514:165517): Planificador largo
-[INFO] 16:21:21:757 proceso/(165514:165517): Planificador largo
-[INFO] 16:21:21:757 proceso/(165514:165517): Planificador largo
-[INFO] 16:23:50:322 proceso/(165624:165627): Planificador largo
-[INFO] 16:24:12:669 proceso/(165691:165694): Planificador largo
-[INFO] 16:24:12:670 proceso/(165691:165694): Planificador largo
-[INFO] 16:24:12:670 proceso/(165691:165694): Planificador largo
-[INFO] 16:24:12:670 proceso/(165691:165694): Planificador largo
-[INFO] 16:26:16:556 proceso/(165798:165801): Planificador largo
-[INFO] 16:26:16:556 proceso/(165798:165801): Planificador largo
-[INFO] 16:26:16:556 proceso/(165798:165801): Planificador largo
-[INFO] 16:26:16:556 proceso/(165798:165801): Planificador largo
-[INFO] 16:26:21:902 proceso/(165798:165803): se conecto una consola
-[INFO] 16:26:21:903 proceso/(165798:165803): Consola mando instrucciones
-[INFO] 16:26:21:903 proceso/(165798:165803): PID: 1 
-
-[INFO] 16:33:04:998 proceso/(166085:166090): se conecto una consola
-[INFO] 16:33:04:999 proceso/(166085:166090): Consola mando instrucciones
-[INFO] 16:33:05:000 proceso/(166085:166090): PID: 1 
-
-[INFO] 16:33:05:000 proceso/(166085:166088): Planificador largo
-[ERROR] 16:33:34:075 proceso/(166096:166096): El kernel no pudo conectarse a el CPU
-[ERROR] 16:34:23:081 proceso/(166103:166103): El kernel no pudo conectarse a la memoria
-[INFO] 16:35:33:960 proceso/(166109:166114): se conecto una consola
-[INFO] 16:35:33:961 proceso/(166109:166114): Consola mando instrucciones
-[INFO] 16:35:33:961 proceso/(166109:166114): PID: 1 
-
-[INFO] 16:35:33:961 proceso/(166109:166112): Planificador largo
-[INFO] 16:35:37:386 proceso/(166109:166116): se conecto una consola
-[INFO] 16:35:37:386 proceso/(166109:166116): Consola mando instrucciones
-[INFO] 16:35:37:386 proceso/(166109:166116): PID: 2 
-
-[INFO] 16:35:37:386 proceso/(166109:166112): Planificador largo
-[INFO] 16:35:50:206 proceso/(166109:166118): se conecto una consola
-[INFO] 16:35:50:206 proceso/(166109:166118): Consola mando instrucciones
-[INFO] 16:35:50:206 proceso/(166109:166118): PID: 3 
-
-[INFO] 16:35:50:207 proceso/(166109:166112): Planificador largo
-[INFO] 16:35:57:115 proceso/(166109:166120): se conecto una consola
-[INFO] 16:35:57:115 proceso/(166109:166120): Consola mando instrucciones
-[INFO] 16:35:57:115 proceso/(166109:166120): PID: 4 
-
-[INFO] 16:35:57:115 proceso/(166109:166112): Planificador largo
-[INFO] 16:36:09:332 proceso/(166109:166122): se conecto una consola
-[INFO] 16:36:09:332 proceso/(166109:166122): Consola mando instrucciones
-[INFO] 16:36:09:332 proceso/(166109:166122): PID: 5 
-
-[INFO] 16:38:16:186 proceso/(166194:166199): se conecto una consola
-[INFO] 16:38:16:187 proceso/(166194:166199): Consola mando instrucciones
-[INFO] 16:38:16:187 proceso/(166194:166199): PID: 1 
-
-[INFO] 19:36:19:566 proceso/(171669:171676): se conecto una consola
-[INFO] 19:36:19:567 proceso/(171669:171676): Consola mando instrucciones
-[INFO] 19:36:19:568 proceso/(171669:171676): Se crea el proceso 1 en NEW 
-
-[INFO] 19:36:19:568 proceso/(171669:171672): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
-[ERROR] 19:36:20:542 proceso/(171669:171671): Error en la comunicacion entre el Kernel y la CPU
-[INFO] 19:40:53:954 proceso/(171933:171938): se conecto una consola
-[INFO] 19:40:53:956 proceso/(171933:171938): Consola mando instrucciones
-[INFO] 19:40:53:956 proceso/(171933:171938): Se crea el proceso 1 en NEW 
-
-[INFO] 19:40:53:957 proceso/(171933:171936): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
-[ERROR] 19:40:54:782 proceso/(171933:171935): Error en la comunicacion entre el Kernel y la CPU
-[INFO] 19:43:59:770 proceso/(172082:172087): se conecto una consola
-[INFO] 19:43:59:771 proceso/(172082:172087): Consola mando instrucciones
-[INFO] 19:43:59:771 proceso/(172082:172087): Se crea el proceso 1 en NEW 
-
-[INFO] 19:43:59:772 proceso/(172082:172085): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
-[INFO] 20:08:47:548 proceso/(173754:173759): se conecto una consola
-[INFO] 20:08:47:549 proceso/(173754:173759): Consola mando instrucciones
-[INFO] 20:08:47:549 proceso/(173754:173759): Se crea el proceso 1 en NEW 
-
-[INFO] 20:08:47:549 proceso/(173754:173757): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
-[ERROR] 20:08:48:059 proceso/(173754:173756): Error en la comunicacion entre el Kernel y la CPU
-[INFO] 20:15:23:262 proceso/(174393:174398): se conecto una consola
-[INFO] 20:15:23:263 proceso/(174393:174398): Consola mando instrucciones
-[INFO] 20:15:23:263 proceso/(174393:174398): Se crea el proceso 1 en NEW 
-
-[INFO] 20:15:23:263 proceso/(174393:174396): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
-[ERROR] 20:15:23:719 proceso/(174393:174395): Error en la comunicacion entre el Kernel y la CPU
-[INFO] 20:18:06:070 proceso/(174609:174614): se conecto una consola
-[INFO] 20:18:06:071 proceso/(174609:174614): Consola mando instrucciones
-[INFO] 20:18:06:071 proceso/(174609:174614): Se crea el proceso 1 en NEW 
-
-[INFO] 20:18:06:071 proceso/(174609:174612): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
-[ERROR] 20:18:06:351 proceso/(174609:174611): Error en la comunicacion entre el Kernel y la CPU
-[INFO] 20:19:27:610 proceso/(174687:174692): se conecto una consola
-[INFO] 20:19:27:610 proceso/(174687:174692): Consola mando instrucciones
-[INFO] 20:19:27:611 proceso/(174687:174692): Se crea el proceso 1 en NEW 
-
-[INFO] 20:19:27:611 proceso/(174687:174690): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
-[ERROR] 20:19:27:777 proceso/(174687:174689): Error en la comunicacion entre el Kernel y la CPU
-[INFO] 20:20:39:841 proceso/(174742:174747): se conecto una consola
-[INFO] 20:20:39:841 proceso/(174742:174747): Consola mando instrucciones
-[INFO] 20:20:39:841 proceso/(174742:174747): Se crea el proceso 1 en NEW 
-
-[INFO] 20:20:39:841 proceso/(174742:174745): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
-[ERROR] 20:20:40:017 proceso/(174742:174744): Error en la comunicacion entre el Kernel y la CPU
-[INFO] 20:22:40:835 proceso/(174874:174879): se conecto una consola
-[INFO] 20:22:40:835 proceso/(174874:174879): Consola mando instrucciones
-[INFO] 20:22:40:836 proceso/(174874:174879): Se crea el proceso 1 en NEW 
-
-[INFO] 20:22:40:836 proceso/(174874:174877): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
-[ERROR] 20:22:41:011 proceso/(174874:174876): Error en la comunicacion entre el Kernel y la CPU
-[INFO] 20:25:20:520 proceso/(175082:175087): se conecto una consola
-[INFO] 20:25:20:520 proceso/(175082:175087): Consola mando instrucciones
-[INFO] 20:25:20:521 proceso/(175082:175087): Se crea el proceso 1 en NEW 
-
-[INFO] 20:25:20:522 proceso/(175082:175085): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
-[ERROR] 20:25:21:011 proceso/(175082:175084): Error en la comunicacion entre el Kernel y la CPU
-[INFO] 22:59:00:983 proceso/(3914:3914): DISCO
-[INFO] 22:59:00:983 proceso/(3914:3914): RECURSO_1
-[ERROR] 22:59:00:983 proceso/(3914:3914): El kernel no pudo conectarse a la memoria
-[INFO] 23:21:19:748 proceso/(5320:5320): DISCO 1
-[ERROR] 23:26:35:829 proceso/(5515:5515): El kernel no pudo conectarse a la memoria
-[ERROR] 23:26:44:741 proceso/(5516:5516): El kernel no pudo conectarse a la memoria
-[ERROR] 23:26:45:422 proceso/(5517:5517): El kernel no pudo conectarse a la memoria
-[ERROR] 23:26:45:943 proceso/(5518:5518): El kernel no pudo conectarse a la memoria
-[ERROR] 23:26:46:385 proceso/(5519:5519): El kernel no pudo conectarse a la memoria
-[ERROR] 23:26:46:821 proceso/(5520:5520): El kernel no pudo conectarse a la memoria
-[ERROR] 23:26:47:138 proceso/(5521:5521): El kernel no pudo conectarse a la memoria
-[ERROR] 23:26:47:407 proceso/(5522:5522): El kernel no pudo conectarse a la memoria
-[ERROR] 23:26:47:628 proceso/(5523:5523): El kernel no pudo conectarse a la memoria
-[ERROR] 23:26:47:815 proceso/(5524:5524): El kernel no pudo conectarse a la memoria
-[ERROR] 23:26:47:999 proceso/(5525:5525): El kernel no pudo conectarse a la memoria
-[ERROR] 23:26:48:166 proceso/(5526:5526): El kernel no pudo conectarse a la memoria
-[ERROR] 23:33:43:841 proceso/(6337:6337): El kernel no pudo conectarse a la memoria
-[INFO] 23:33:54:885 proceso/(6363:6363): DISCO 1
-[INFO] 23:33:54:887 proceso/(6363:6363): RECURSO_1 2
-[ERROR] 23:33:54:887 proceso/(6363:6363): El kernel no pudo conectarse a la memoria
-[INFO] 23:34:05:664 proceso/(6364:6364): DISCO 1
-[INFO] 23:34:05:664 proceso/(6364:6364): RECURSO_1 2
-[ERROR] 23:34:05:664 proceso/(6364:6364): El kernel no pudo conectarse a la memoria
-[INFO] 23:34:06:271 proceso/(6365:6365): DISCO 1
-[INFO] 23:34:06:271 proceso/(6365:6365): RECURSO_1 2
-[ERROR] 23:34:06:271 proceso/(6365:6365): El kernel no pudo conectarse a la memoria
-[INFO] 23:34:06:893 proceso/(6366:6366): DISCO 1
-[INFO] 23:34:06:893 proceso/(6366:6366): RECURSO_1 2
-[ERROR] 23:34:06:893 proceso/(6366:6366): El kernel no pudo conectarse a la memoria
-[ERROR] 23:35:19:880 proceso/(6399:6399): El kernel no pudo conectarse a la memoria
-[INFO] 23:35:57:413 proceso/(6437:6437): DISCO 1
-[INFO] 23:35:57:491 proceso/(6437:6437): RECURSO_1 2
-[ERROR] 23:35:57:512 proceso/(6437:6437): El kernel no pudo conectarse a la memoria
-[INFO] 23:42:21:560 proceso/(6631:6631): DISCO 1
-[INFO] 23:42:21:618 proceso/(6631:6631): RECURSO_1 2
-[ERROR] 23:42:21:634 proceso/(6631:6631): El kernel no pudo conectarse a la memoria
-[INFO] 23:43:05:155 proceso/(6646:6646): DISCO 1
-[INFO] 23:43:05:155 proceso/(6646:6646): RECURSO_1 2
-[ERROR] 23:43:05:155 proceso/(6646:6646): El kernel no pudo conectarse a la memoria
-[INFO] 23:45:03:426 proceso/(6767:6767): DISCO 1
-[INFO] 23:45:03:426 proceso/(6767:6767): RECURSO_1 2
-[ERROR] 23:45:03:427 proceso/(6767:6767): El kernel no pudo conectarse a la memoria
-[INFO] 23:45:06:858 proceso/(6768:6768): DISCO 1
-[INFO] 23:45:06:920 proceso/(6768:6768): RECURSO_1 2
-[ERROR] 23:45:06:948 proceso/(6768:6768): El kernel no pudo conectarse a la memoria
-[INFO] 23:45:15:185 proceso/(6769:6769): DISCO 1
-[INFO] 23:45:15:185 proceso/(6769:6769): RECURSO_1 2
-[ERROR] 23:45:15:186 proceso/(6769:6769): El kernel no pudo conectarse a la memoria
-[INFO] 00:06:25:849 proceso/(7751:7751): DISCO 1
-[INFO] 00:06:25:849 proceso/(7751:7751): RECURSO_1 2
-[INFO] 00:06:38:070 proceso/(7751:7756): se conecto una consola
-[INFO] 00:06:38:070 proceso/(7751:7756): Consola mando instrucciones
-[INFO] 00:06:38:071 proceso/(7751:7756): Se crea el proceso 1 en NEW 
-
-[INFO] 00:06:38:071 proceso/(7751:7754): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
-[ERROR] 00:06:38:071 proceso/(7751:7753): Error en la lectura del algoritmo de planificacion
-[INFO] 00:09:01:580 proceso/(8372:8372): DISCO 1
-[INFO] 00:09:01:581 proceso/(8372:8372): RECURSO_1 2
-[INFO] 00:09:06:402 proceso/(8372:8377): se conecto una consola
-[INFO] 00:09:06:402 proceso/(8372:8377): Consola mando instrucciones
-[INFO] 00:09:06:402 proceso/(8372:8377): Se crea el proceso 1 en NEW 
-
-[INFO] 00:09:06:402 proceso/(8372:8375): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
-[ERROR] 00:09:06:403 proceso/(8372:8374): Error en la comunicacion entre el Kernel y la CPU
-[INFO] 00:12:33:827 proceso/(8560:8560): DISCO 1
-[INFO] 00:12:33:828 proceso/(8560:8560): RECURSO_1 2
-[INFO] 00:12:38:172 proceso/(8560:8565): se conecto una consola
-[INFO] 00:12:38:173 proceso/(8560:8565): Consola mando instrucciones
-[INFO] 00:12:38:173 proceso/(8560:8565): Se crea el proceso 1 en NEW 
-
-[INFO] 00:12:38:173 proceso/(8560:8563): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
-[ERROR] 00:12:38:559 proceso/(8560:8562): Error en la comunicacion entre el Kernel y la CPU
-[INFO] 00:14:09:698 proceso/(8622:8622): DISCO 1
-[INFO] 00:14:09:699 proceso/(8622:8622): RECURSO_1 2
-[INFO] 00:14:13:817 proceso/(8622:8627): se conecto una consola
-[INFO] 00:14:13:818 proceso/(8622:8627): Consola mando instrucciones
-[INFO] 00:14:13:818 proceso/(8622:8627): Se crea el proceso 1 en NEW 
-
-[INFO] 00:14:13:818 proceso/(8622:8625): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
-[ERROR] 00:14:14:007 proceso/(8622:8624): Error en la comunicacion entre el Kernel y la CPU
-[INFO] 00:15:16:734 proceso/(8704:8704): DISCO 1
-[INFO] 00:15:16:734 proceso/(8704:8704): RECURSO_1 2
-[INFO] 00:15:20:726 proceso/(8704:8709): se conecto una consola
-[INFO] 00:15:20:726 proceso/(8704:8709): Consola mando instrucciones
-[INFO] 00:15:20:727 proceso/(8704:8709): Se crea el proceso 1 en NEW 
-
-[INFO] 00:15:20:728 proceso/(8704:8707): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
-[ERROR] 00:15:20:932 proceso/(8704:8706): Error en la comunicacion entre el Kernel y la CPU
-[INFO] 00:16:46:924 proceso/(8804:8804): DISCO 1
-[INFO] 00:16:46:925 proceso/(8804:8804): RECURSO_1 2
-[INFO] 00:16:50:721 proceso/(8804:8809): se conecto una consola
-[INFO] 00:16:50:721 proceso/(8804:8809): Consola mando instrucciones
-[INFO] 00:16:50:721 proceso/(8804:8809): Se crea el proceso 1 en NEW 
-
-[INFO] 00:16:50:723 proceso/(8804:8807): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
-[ERROR] 00:16:50:938 proceso/(8804:8806): Error en la comunicacion entre el Kernel y la CPU
-[INFO] 00:24:13:600 proceso/(9497:9497): DISCO 1
-[INFO] 00:24:13:602 proceso/(9497:9497): RECURSO_1 2
-[INFO] 00:24:16:811 proceso/(9497:9502): se conecto una consola
-[INFO] 00:24:16:811 proceso/(9497:9502): Consola mando instrucciones
-[INFO] 00:24:16:812 proceso/(9497:9502): Se crea el proceso 1 en NEW 
-
-[INFO] 00:24:16:812 proceso/(9497:9500): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
-[ERROR] 00:24:17:039 proceso/(9497:9499): Error en la comunicacion entre el Kernel y la CPU
-[INFO] 00:28:19:997 proceso/(9649:9649): DISCO 1
-[INFO] 00:28:19:998 proceso/(9649:9649): RECURSO_1 2
-[INFO] 00:28:22:823 proceso/(9649:9654): se conecto una consola
-[INFO] 00:28:22:823 proceso/(9649:9654): Consola mando instrucciones
-[INFO] 00:28:22:823 proceso/(9649:9654): Se crea el proceso 1 en NEW 
-
-[INFO] 00:28:22:824 proceso/(9649:9652): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
-[ERROR] 00:28:23:049 proceso/(9649:9651): Error en la comunicacion entre el Kernel y la CPU
-[INFO] 01:03:21:114 proceso/(10478:10478): DISCO 1
-[INFO] 01:03:21:114 proceso/(10478:10478): RECURSO_1 2
-[INFO] 01:03:26:426 proceso/(10478:10483): se conecto una consola
-[INFO] 01:03:26:426 proceso/(10478:10483): Consola mando instrucciones
-[INFO] 01:03:26:426 proceso/(10478:10483): Se crea el proceso 1 en NEW 
-
-[INFO] 01:03:26:426 proceso/(10478:10481): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
-[ERROR] 01:03:26:725 proceso/(10478:10480): Error en la comunicacion entre el Kernel y la CPU
-[INFO] 01:04:25:409 proceso/(10562:10562): DISCO 1
-[INFO] 01:04:25:409 proceso/(10562:10562): RECURSO_1 2
-[ERROR] 01:04:25:410 proceso/(10562:10562): El kernel no pudo conectarse a el CPU
-[INFO] 01:05:58:355 proceso/(10595:10595): DISCO 1
-[INFO] 01:05:58:356 proceso/(10595:10595): RECURSO_1 2
-[INFO] 01:06:01:818 proceso/(10595:10600): se conecto una consola
-[INFO] 01:06:01:818 proceso/(10595:10600): Consola mando instrucciones
-[INFO] 01:06:01:818 proceso/(10595:10600): Se crea el proceso 1 en NEW 
-
-[INFO] 01:06:01:818 proceso/(10595:10598): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
-[ERROR] 01:06:01:981 proceso/(10595:10597): Error en la comunicacion entre el Kernel y la CPU
-[INFO] 01:08:20:994 proceso/(10700:10700): DISCO 1
-[INFO] 01:08:20:995 proceso/(10700:10700): RECURSO_1 2
-[INFO] 01:08:27:553 proceso/(10700:10705): se conecto una consola
-[INFO] 01:08:27:553 proceso/(10700:10705): Consola mando instrucciones
-[INFO] 01:08:27:554 proceso/(10700:10705): Se crea el proceso 1 en NEW 
-
-[INFO] 01:08:27:554 proceso/(10700:10703): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
-[ERROR] 01:08:38:993 proceso/(10700:10702): Error en la comunicacion entre el Kernel y la CPU
-[INFO] 01:22:48:403 proceso/(11568:11568): DISCO 1
-[INFO] 01:22:48:403 proceso/(11568:11568): RECURSO_1 2
-[INFO] 01:22:51:464 proceso/(11568:11573): se conecto una consola
-[INFO] 01:22:51:464 proceso/(11568:11573): Consola mando instrucciones
-[INFO] 01:22:51:464 proceso/(11568:11573): Se crea el proceso 1 en NEW 
-
-[INFO] 01:22:51:466 proceso/(11568:11571): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
-[ERROR] 01:23:43:901 proceso/(11568:11570): Error en la comunicacion entre el Kernel y la CPU
-[INFO] 01:28:30:309 proceso/(11938:11938): DISCO 1
-[INFO] 01:28:30:310 proceso/(11938:11938): RECURSO_1 2
-[INFO] 01:28:33:510 proceso/(11938:11943): se conecto una consola
-[INFO] 01:28:33:510 proceso/(11938:11943): Consola mando instrucciones
-[INFO] 01:28:33:510 proceso/(11938:11943): Se crea el proceso 1 en NEW 
-
-[INFO] 01:28:33:510 proceso/(11938:11941): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
-[ERROR] 01:29:37:004 proceso/(11938:11940): Error en la comunicacion entre el Kernel y la CPU
-[INFO] 01:30:45:749 proceso/(11970:11970): DISCO 1
-[INFO] 01:30:45:749 proceso/(11970:11970): RECURSO_1 2
-[INFO] 01:30:49:116 proceso/(11970:11975): se conecto una consola
-[INFO] 01:30:49:116 proceso/(11970:11975): Consola mando instrucciones
-[INFO] 01:30:49:116 proceso/(11970:11975): Se crea el proceso 1 en NEW 
-
-[INFO] 01:30:49:117 proceso/(11970:11973): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
-[ERROR] 01:31:28:294 proceso/(11970:11972): Error en la comunicacion entre el Kernel y la CPU
-[INFO] 01:32:09:928 proceso/(12016:12016): DISCO 1
-[INFO] 01:32:09:929 proceso/(12016:12016): RECURSO_1 2
-[ERROR] 01:32:09:930 proceso/(12016:12016): El kernel no pudo conectarse a el CPU
-[INFO] 01:33:49:668 proceso/(12038:12038): DISCO 1
-[INFO] 01:33:49:669 proceso/(12038:12038): RECURSO_1 2
-[INFO] 01:33:54:797 proceso/(12038:12044): se conecto una consola
-[INFO] 01:33:54:797 proceso/(12038:12044): Consola mando instrucciones
-[INFO] 01:33:54:798 proceso/(12038:12044): Se crea el proceso 1 en NEW 
-
-[INFO] 01:33:54:798 proceso/(12038:12041): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
-[ERROR] 01:38:47:763 proceso/(12038:12040): Error en la comunicacion entre el Kernel y la CPU
-[INFO] 01:40:08:690 proceso/(12372:12372): DISCO 1
-[INFO] 01:40:08:690 proceso/(12372:12372): RECURSO_1 2
-[INFO] 01:40:13:807 proceso/(12372:12377): se conecto una consola
-[INFO] 01:40:13:807 proceso/(12372:12377): Consola mando instrucciones
-[INFO] 01:40:13:807 proceso/(12372:12377): Se crea el proceso 1 en NEW 
-
-[INFO] 01:40:13:808 proceso/(12372:12375): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
-[ERROR] 01:40:52:560 proceso/(12372:12374): Error en la comunicacion entre el Kernel y la CPU
-[INFO] 01:42:06:344 proceso/(12457:12457): DISCO 1
-[INFO] 01:42:06:344 proceso/(12457:12457): RECURSO_1 2
-[INFO] 01:42:10:705 proceso/(12457:12462): se conecto una consola
-[INFO] 01:42:10:705 proceso/(12457:12462): Consola mando instrucciones
-[INFO] 01:42:10:705 proceso/(12457:12462): Se crea el proceso 1 en NEW 
-
-[INFO] 01:42:10:705 proceso/(12457:12460): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
-[ERROR] 01:42:10:706 proceso/(12457:12459): Error en la comunicacion entre el Kernel y la CPU
-[INFO] 01:44:55:397 proceso/(12679:12679): DISCO 1
-[INFO] 01:44:55:398 proceso/(12679:12679): RECURSO_1 2
-[INFO] 01:44:59:152 proceso/(12679:12684): se conecto una consola
-[INFO] 01:44:59:152 proceso/(12679:12684): Consola mando instrucciones
-[INFO] 01:44:59:152 proceso/(12679:12684): Se crea el proceso 1 en NEW 
-
-[INFO] 01:44:59:153 proceso/(12679:12682): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
-[INFO] 01:45:09:374 proceso/(12679:12686): se conecto una consola
-[INFO] 01:45:09:374 proceso/(12679:12686): Consola mando instrucciones
-[INFO] 01:45:09:374 proceso/(12679:12686): Se crea el proceso 2 en NEW 
-
-[INFO] 01:45:09:374 proceso/(12679:12682): PID: 2 - Estado Anterior: NEW - Estado Actual: READY
-[INFO] 01:47:15:031 proceso/(12782:12787): se conecto una consola
-[INFO] 01:47:15:032 proceso/(12782:12787): Consola mando instrucciones
-[INFO] 01:47:15:032 proceso/(12782:12787): Se crea el proceso 1 en NEW 
-
-[INFO] 01:47:15:032 proceso/(12782:12785): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
-[INFO] 01:49:17:578 proceso/(12811:12816): se conecto una consola
-[INFO] 01:49:17:578 proceso/(12811:12816): Consola mando instrucciones
-[INFO] 01:49:17:578 proceso/(12811:12816): Se crea el proceso 1 en NEW 
-
-[INFO] 01:49:17:578 proceso/(12811:12814): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
-[INFO] 01:53:56:925 proceso/(13038:13043): se conecto una consola
-[INFO] 01:53:56:925 proceso/(13038:13043): Consola mando instrucciones
-[INFO] 01:53:56:926 proceso/(13038:13043): Se crea el proceso 1 en NEW 
-
-[INFO] 01:53:56:926 proceso/(13038:13041): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
-[INFO] 02:02:00:885 proceso/(13725:13730): se conecto una consola
-[INFO] 02:02:00:886 proceso/(13725:13730): Consola mando instrucciones
-[INFO] 02:02:00:886 proceso/(13725:13730): Se crea el proceso 1 en NEW 
-
-[INFO] 02:02:00:886 proceso/(13725:13728): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
-[INFO] 02:10:33:695 proceso/(13961:13966): se conecto una consola
-[INFO] 02:10:33:695 proceso/(13961:13966): Consola mando instrucciones
-[INFO] 02:10:33:695 proceso/(13961:13966): Se crea el proceso 1 en NEW 
-
-[INFO] 02:10:33:695 proceso/(13961:13964): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
-[INFO] 02:13:56:421 proceso/(14044:14049): se conecto una consola
-[INFO] 02:13:56:422 proceso/(14044:14049): Consola mando instrucciones
-[INFO] 02:13:56:422 proceso/(14044:14049): Se crea el proceso 1 en NEW 
-
-[INFO] 02:13:56:422 proceso/(14044:14047): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
-[INFO] 02:22:37:641 proceso/(14315:14320): se conecto una consola
-[INFO] 02:22:37:642 proceso/(14315:14320): Consola mando instrucciones
-[INFO] 02:22:37:642 proceso/(14315:14320): Se crea el proceso 1 en NEW 
-
-[INFO] 02:22:37:642 proceso/(14315:14318): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
-[ERROR] 02:23:48:025 proceso/(14345:14345): El kernel no pudo conectarse a el CPU
-[INFO] 02:25:28:096 proceso/(14362:14367): se conecto una consola
-[INFO] 02:25:28:141 proceso/(14362:14367): Consola mando instrucciones
-[INFO] 02:25:28:149 proceso/(14362:14367): Se crea el proceso 1 en NEW 
-
-[INFO] 02:25:28:159 proceso/(14362:14365): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
-[INFO] 02:31:53:599 proceso/(14501:14506): se conecto una consola
-[INFO] 02:31:53:602 proceso/(14501:14506): Consola mando instrucciones
-[INFO] 02:31:53:602 proceso/(14501:14506): Se crea el proceso 1 en NEW 
-
-[INFO] 02:31:53:602 proceso/(14501:14504): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
-[INFO] 02:32:54:939 proceso/(14617:14622): se conecto una consola
-[INFO] 02:32:54:940 proceso/(14617:14622): Consola mando instrucciones
-[INFO] 02:32:54:940 proceso/(14617:14622): Se crea el proceso 1 en NEW 
-
-[INFO] 02:32:54:940 proceso/(14617:14620): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
-[INFO] 02:32:59:941 proceso/(14617:14619): AX: HOLA
-[INFO] 02:34:06:790 proceso/(14632:14637): se conecto una consola
-[INFO] 02:34:06:790 proceso/(14632:14637): Consola mando instrucciones
-[INFO] 02:34:06:790 proceso/(14632:14637): Se crea el proceso 1 en NEW 
-
-[INFO] 02:34:06:791 proceso/(14632:14635): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
-[INFO] 02:34:11:793 proceso/(14632:14634): AX: HOLA
-[INFO] 20:38:44:601 proceso/(106208:106277): se conecto una consola
-[INFO] 20:38:44:602 proceso/(106208:106277): Consola mando instrucciones
-[INFO] 20:38:44:602 proceso/(106208:106277): Se crea el proceso 1 en NEW 
-
-[INFO] 20:38:44:602 proceso/(106208:106211): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
-[INFO] 20:38:49:605 proceso/(106208:106210): AX: HOLA
-[INFO] 20:39:36:594 proceso/(106208:106285): se conecto una consola
-[INFO] 20:39:36:595 proceso/(106208:106285): Consola mando instrucciones
-[INFO] 20:39:36:595 proceso/(106208:106285): Se crea el proceso 2 en NEW 
-
-[INFO] 20:39:36:595 proceso/(106208:106211): PID: 2 - Estado Anterior: NEW - Estado Actual: READY
-[INFO] 20:39:36:595 proceso/(106208:106210): AX: 
-[INFO] 20:45:04:257 proceso/(106625:106630): se conecto una consola
-[INFO] 20:45:04:257 proceso/(106625:106630): Consola mando instrucciones
-[INFO] 20:45:04:258 proceso/(106625:106630): Se crea el proceso 1 en NEW 
-
-[INFO] 20:45:04:258 proceso/(106625:106628): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
-[INFO] 20:45:04:258 proceso/(106625:106627): AX: 
-[INFO] 20:45:17:690 proceso/(106625:106632): se conecto una consola
-[INFO] 20:45:17:691 proceso/(106625:106632): Consola mando instrucciones
-[INFO] 20:45:17:691 proceso/(106625:106632): Se crea el proceso 2 en NEW 
-
-[INFO] 20:45:17:691 proceso/(106625:106628): PID: 2 - Estado Anterior: NEW - Estado Actual: READY
-[INFO] 20:45:17:691 proceso/(106625:106627): AX: 
-[INFO] 20:46:51:362 proceso/(106678:106683): se conecto una consola
-[INFO] 20:46:51:362 proceso/(106678:106683): Consola mando instrucciones
-[INFO] 20:46:51:363 proceso/(106678:106683): Se crea el proceso 1 en NEW 
-
-[INFO] 20:46:51:363 proceso/(106678:106681): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
-[INFO] 20:46:56:368 proceso/(106678:106680): AX: HOLA
-[INFO] 20:47:00:950 proceso/(106678:106685): se conecto una consola
-[INFO] 20:47:00:950 proceso/(106678:106685): Consola mando instrucciones
-[INFO] 20:47:00:950 proceso/(106678:106685): Se crea el proceso 2 en NEW 
-
-[INFO] 20:47:00:950 proceso/(106678:106681): PID: 2 - Estado Anterior: NEW - Estado Actual: READY
-[INFO] 20:47:05:952 proceso/(106678:106680): AX: HOLA
-[INFO] 20:47:29:108 proceso/(106678:106687): se conecto una consola
-[INFO] 20:47:29:108 proceso/(106678:106687): Consola mando instrucciones
-[INFO] 20:47:29:108 proceso/(106678:106687): Se crea el proceso 3 en NEW 
-
-[INFO] 20:47:29:108 proceso/(106678:106681): PID: 3 - Estado Anterior: NEW - Estado Actual: READY
-[INFO] 20:47:34:114 proceso/(106678:106680): AX: HOLA
-[INFO] 20:48:15:132 proceso/(106678:106695): se conecto una consola
-[INFO] 20:48:15:132 proceso/(106678:106695): Consola mando instrucciones
-[INFO] 20:48:15:132 proceso/(106678:106695): Se crea el proceso 4 en NEW 
-
-[INFO] 20:48:15:132 proceso/(106678:106681): PID: 4 - Estado Anterior: NEW - Estado Actual: READY
-[INFO] 20:48:15:133 proceso/(106678:106680): AX: 
-[INFO] 20:48:19:405 proceso/(106678:106697): se conecto una consola
-[INFO] 20:48:19:405 proceso/(106678:106697): Consola mando instrucciones
-[INFO] 20:48:19:405 proceso/(106678:106697): Se crea el proceso 5 en NEW 
-
-[INFO] 20:48:19:405 proceso/(106678:106681): PID: 5 - Estado Anterior: NEW - Estado Actual: READY
-[INFO] 20:48:19:406 proceso/(106678:106680): AX: 
-[INFO] 22:34:32:347 proceso/(109086:109091): se conecto una consola
-[INFO] 22:34:32:347 proceso/(109086:109091): Consola mando instrucciones
-[INFO] 22:34:32:347 proceso/(109086:109091): Se crea el proceso 1 en NEW 
-
-[INFO] 22:34:32:347 proceso/(109086:109089): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
-[INFO] 22:34:32:348 proceso/(109086:109088): AX: 
-[INFO] 22:36:54:574 proceso/(109086:109118): se conecto una consola
-[INFO] 22:36:54:577 proceso/(109086:109118): Consola mando instrucciones
-[INFO] 22:36:54:577 proceso/(109086:109118): Se crea el proceso 2 en NEW 
-
-[INFO] 22:36:54:577 proceso/(109086:109089): PID: 2 - Estado Anterior: NEW - Estado Actual: READY
-[INFO] 22:36:54:580 proceso/(109086:109088): AX: 
-[INFO] 22:36:58:894 proceso/(109086:109120): se conecto una consola
-[INFO] 22:36:58:894 proceso/(109086:109120): Consola mando instrucciones
-[INFO] 22:36:58:894 proceso/(109086:109120): Se crea el proceso 3 en NEW 
-
-[INFO] 22:36:58:894 proceso/(109086:109089): PID: 3 - Estado Anterior: NEW - Estado Actual: READY
-[INFO] 22:36:58:895 proceso/(109086:109088): AX: 
-[INFO] 22:37:01:160 proceso/(109086:109122): se conecto una consola
-[INFO] 22:37:01:160 proceso/(109086:109122): Consola mando instrucciones
-[INFO] 22:37:01:160 proceso/(109086:109122): Se crea el proceso 4 en NEW 
-
-[INFO] 22:37:01:160 proceso/(109086:109089): PID: 4 - Estado Anterior: NEW - Estado Actual: READY
-[INFO] 22:37:01:160 proceso/(109086:109088): AX: 
-[INFO] 22:37:02:079 proceso/(109086:109124): se conecto una consola
-[INFO] 22:37:02:079 proceso/(109086:109124): Consola mando instrucciones
-[INFO] 22:37:02:079 proceso/(109086:109124): Se crea el proceso 5 en NEW 
-
-[INFO] 22:37:02:079 proceso/(109086:109089): PID: 5 - Estado Anterior: NEW - Estado Actual: READY
-[INFO] 22:37:02:079 proceso/(109086:109088): AX: 
-[INFO] 22:37:02:416 proceso/(109086:109126): se conecto una consola
-[INFO] 22:37:02:416 proceso/(109086:109126): Consola mando instrucciones
-[INFO] 22:37:02:416 proceso/(109086:109126): Se crea el proceso 6 en NEW 
-
-[INFO] 22:37:02:416 proceso/(109086:109089): PID: 6 - Estado Anterior: NEW - Estado Actual: READY
-[INFO] 22:37:02:416 proceso/(109086:109088): AX: 
-[INFO] 22:39:36:031 proceso/(109086:109207): se conecto una consola
-[INFO] 22:39:36:032 proceso/(109086:109207): Consola mando instrucciones
-[INFO] 22:39:36:032 proceso/(109086:109207): Se crea el proceso 7 en NEW 
-
-[INFO] 22:39:36:034 proceso/(109086:109089): PID: 7 - Estado Anterior: NEW - Estado Actual: READY
-[INFO] 22:39:36:043 proceso/(109086:109088): AX: 
-[INFO] 22:39:39:100 proceso/(109086:109209): se conecto una consola
-[INFO] 22:39:39:100 proceso/(109086:109209): Consola mando instrucciones
-[INFO] 22:39:39:100 proceso/(109086:109209): Se crea el proceso 8 en NEW 
-
-[INFO] 22:39:39:100 proceso/(109086:109089): PID: 8 - Estado Anterior: NEW - Estado Actual: READY
-[INFO] 22:39:39:100 proceso/(109086:109088): AX: 
-[ERROR] 22:39:55:420 proceso/(109215:109215): El kernel no pudo conectarse a el CPU
-[ERROR] 22:40:27:997 proceso/(109221:109221): El kernel no pudo conectarse a el CPU
-[INFO] 22:41:39:385 proceso/(109230:109235): se conecto una consola
-[INFO] 22:41:39:385 proceso/(109230:109235): Consola mando instrucciones
-[INFO] 22:41:39:385 proceso/(109230:109235): Se crea el proceso 1 en NEW 
-
-[INFO] 22:41:39:385 proceso/(109230:109233): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
-[INFO] 22:41:39:386 proceso/(109230:109232): AX: 
-[INFO] 22:42:16:828 proceso/(109230:109245): se conecto una consola
-[INFO] 22:42:16:828 proceso/(109230:109245): Consola mando instrucciones
-[INFO] 22:42:16:828 proceso/(109230:109245): Se crea el proceso 2 en NEW 
-
-[INFO] 22:42:16:828 proceso/(109230:109233): PID: 2 - Estado Anterior: NEW - Estado Actual: READY
-[INFO] 22:42:21:831 proceso/(109230:109232): AX: HOLA
-[INFO] 22:42:22:942 proceso/(109230:109247): se conecto una consola
-[INFO] 22:42:22:942 proceso/(109230:109247): Consola mando instrucciones
-[INFO] 22:42:22:943 proceso/(109230:109247): Se crea el proceso 3 en NEW 
-
-[INFO] 22:42:22:943 proceso/(109230:109233): PID: 3 - Estado Anterior: NEW - Estado Actual: READY
-[INFO] 22:42:27:945 proceso/(109230:109232): AX: HOLA
-[INFO] 22:42:31:908 proceso/(109230:109249): se conecto una consola
-[INFO] 22:42:31:908 proceso/(109230:109249): Consola mando instrucciones
-[INFO] 22:42:31:909 proceso/(109230:109249): Se crea el proceso 4 en NEW 
-
-[INFO] 22:42:31:909 proceso/(109230:109233): PID: 4 - Estado Anterior: NEW - Estado Actual: READY
-[INFO] 22:42:36:912 proceso/(109230:109232): AX: HOLA
-[INFO] 22:43:49:482 proceso/(109230:109322): se conecto una consola
-[INFO] 22:43:49:483 proceso/(109230:109322): Consola mando instrucciones
-[INFO] 22:43:49:483 proceso/(109230:109322): Se crea el proceso 5 en NEW 
-
-[INFO] 22:43:49:483 proceso/(109230:109233): PID: 5 - Estado Anterior: NEW - Estado Actual: READY
-[INFO] 22:43:49:819 proceso/(109230:109324): se conecto una consola
-[INFO] 22:43:49:820 proceso/(109230:109324): Consola mando instrucciones
-[INFO] 22:43:49:821 proceso/(109230:109324): Se crea el proceso 6 en NEW 
-
-[INFO] 22:43:49:821 proceso/(109230:109233): PID: 6 - Estado Anterior: NEW - Estado Actual: READY
-[INFO] 22:43:59:487 proceso/(109230:109232): AX: HOLA
-[INFO] 22:43:59:491 proceso/(109230:109232): AX: HOLA
-[INFO] 22:46:13:159 proceso/(109230:109405): se conecto una consola
-[INFO] 22:46:13:160 proceso/(109230:109405): Consola mando instrucciones
-[INFO] 22:46:13:160 proceso/(109230:109405): Se crea el proceso 7 en NEW 
-
-[INFO] 22:46:13:160 proceso/(109230:109233): PID: 7 - Estado Anterior: NEW - Estado Actual: READY
-[INFO] 22:46:16:325 proceso/(109230:109407): se conecto una consola
-[INFO] 22:46:16:325 proceso/(109230:109407): Consola mando instrucciones
-[INFO] 22:46:16:325 proceso/(109230:109407): Se crea el proceso 8 en NEW 
-
-[INFO] 22:46:16:326 proceso/(109230:109233): PID: 8 - Estado Anterior: NEW - Estado Actual: READY
-[INFO] 22:46:23:165 proceso/(109230:109232): AX: HOLA
-[INFO] 22:46:23:166 proceso/(109230:109232): AX: HOLA
-[INFO] 01:03:49:307 proceso/(111485:111490): se conecto una consola
-[INFO] 01:03:49:308 proceso/(111485:111490): Consola mando instrucciones
-[INFO] 01:03:49:308 proceso/(111485:111490): Se crea el proceso 1 en NEW 
-
-[INFO] 01:03:49:308 proceso/(111485:111488): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
-[INFO] 01:06:24:191 proceso/(111501:111506): se conecto una consola
-[INFO] 01:06:24:191 proceso/(111501:111506): Consola mando instrucciones
-[INFO] 01:06:24:191 proceso/(111501:111506): Se crea el proceso 1 en NEW 
-
-[INFO] 01:06:24:191 proceso/(111501:111504): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
-[INFO] 01:08:50:473 proceso/(111604:111609): se conecto una consola
-[INFO] 01:08:50:477 proceso/(111604:111609): Consola mando instrucciones
-[INFO] 01:08:50:477 proceso/(111604:111609): Se crea el proceso 1 en NEW 
-
-[INFO] 01:08:50:477 proceso/(111604:111607): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
-[INFO] 01:12:18:129 proceso/(111787:111792): se conecto una consola
-[INFO] 01:12:18:130 proceso/(111787:111792): Consola mando instrucciones
-[INFO] 01:12:18:130 proceso/(111787:111792): Se crea el proceso 1 en NEW 
-
-[INFO] 01:12:18:130 proceso/(111787:111790): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
-[INFO] 01:13:40:088 proceso/(111902:111907): se conecto una consola
-[INFO] 01:13:40:089 proceso/(111902:111907): Consola mando instrucciones
-[INFO] 01:13:40:089 proceso/(111902:111907): Se crea el proceso 1 en NEW 
-
-[INFO] 01:13:40:089 proceso/(111902:111905): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
-[ERROR] 01:14:37:476 proceso/(111963:111963): El kernel no pudo conectarse a la memoria
-[INFO] 01:15:27:966 proceso/(111971:111976): se conecto una consola
-[INFO] 01:15:27:966 proceso/(111971:111976): Consola mando instrucciones
-[INFO] 01:15:27:966 proceso/(111971:111976): Se crea el proceso 1 en NEW 
-
-[INFO] 01:15:27:966 proceso/(111971:111974): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
-[INFO] 01:16:52:471 proceso/(112007:112012): se conecto una consola
-[INFO] 01:16:52:471 proceso/(112007:112012): Consola mando instrucciones
-[INFO] 01:16:52:471 proceso/(112007:112012): Se crea el proceso 1 en NEW 
-
-[INFO] 01:16:52:471 proceso/(112007:112010): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
-[INFO] 01:18:20:989 proceso/(112076:112081): se conecto una consola
-[INFO] 01:18:20:989 proceso/(112076:112081): Consola mando instrucciones
-[INFO] 01:18:20:989 proceso/(112076:112081): Se crea el proceso 1 en NEW 
-
-[INFO] 01:18:20:989 proceso/(112076:112079): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
-[INFO] 01:23:12:049 proceso/(112223:112228): se conecto una consola
-[INFO] 01:23:12:050 proceso/(112223:112228): Consola mando instrucciones
-[INFO] 01:23:12:050 proceso/(112223:112228): Se crea el proceso 1 en NEW 
-
-[INFO] 01:23:12:050 proceso/(112223:112226): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
-[INFO] 01:24:50:087 proceso/(112378:112383): se conecto una consola
-[INFO] 01:24:50:088 proceso/(112378:112383): Consola mando instrucciones
-[INFO] 01:24:50:088 proceso/(112378:112383): Se crea el proceso 1 en NEW 
-
-[INFO] 01:24:50:088 proceso/(112378:112381): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
-[INFO] 01:26:53:066 proceso/(112458:112463): se conecto una consola
-[INFO] 01:26:53:067 proceso/(112458:112463): Consola mando instrucciones
-[INFO] 01:26:53:067 proceso/(112458:112463): Se crea el proceso 1 en NEW 
-
-[INFO] 01:26:53:067 proceso/(112458:112461): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
-[INFO] 01:38:54:192 proceso/(112940:112945): se conecto una consola
-[INFO] 01:38:54:192 proceso/(112940:112945): Consola mando instrucciones
-[INFO] 01:38:54:192 proceso/(112940:112945): Se crea el proceso 1 en NEW 
-
-[INFO] 01:38:54:193 proceso/(112940:112943): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
-[INFO] 01:41:11:012 proceso/(113010:113015): se conecto una consola
-[INFO] 01:41:11:012 proceso/(113010:113015): Consola mando instrucciones
-[INFO] 01:41:11:012 proceso/(113010:113015): Se crea el proceso 1 en NEW 
-
-[INFO] 01:41:11:012 proceso/(113010:113013): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
-[INFO] 01:44:07:787 proceso/(113113:113118): se conecto una consola
-[INFO] 01:44:07:787 proceso/(113113:113118): Consola mando instrucciones
-[INFO] 01:44:07:787 proceso/(113113:113118): Se crea el proceso 1 en NEW 
-
-[INFO] 01:44:07:788 proceso/(113113:113116): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
-[INFO] 01:46:38:048 proceso/(113202:113207): se conecto una consola
-[INFO] 01:46:38:048 proceso/(113202:113207): Consola mando instrucciones
-[INFO] 01:46:38:049 proceso/(113202:113207): Se crea el proceso 1 en NEW 
-
-[INFO] 01:46:38:049 proceso/(113202:113205): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
-[INFO] 01:49:07:920 proceso/(113242:113248): se conecto una consola
-[INFO] 01:49:07:920 proceso/(113242:113248): Consola mando instrucciones
-[INFO] 01:49:07:920 proceso/(113242:113248): Se crea el proceso 1 en NEW 
-
-[INFO] 01:49:07:920 proceso/(113242:113245): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
-[INFO] 01:51:24:148 proceso/(113533:113538): se conecto una consola
-[INFO] 01:51:24:149 proceso/(113533:113538): Consola mando instrucciones
-[INFO] 01:51:24:149 proceso/(113533:113538): Se crea el proceso 1 en NEW 
-
-[INFO] 01:51:24:149 proceso/(113533:113536): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
-[INFO] 01:52:46:366 proceso/(113617:113622): se conecto una consola
-[INFO] 01:52:46:367 proceso/(113617:113622): Consola mando instrucciones
-[INFO] 01:52:46:367 proceso/(113617:113622): Se crea el proceso 1 en NEW 
-
-[INFO] 01:52:46:367 proceso/(113617:113620): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
-[INFO] 01:54:11:801 proceso/(113721:113726): se conecto una consola
-[INFO] 01:54:11:801 proceso/(113721:113726): Consola mando instrucciones
-[INFO] 01:54:11:801 proceso/(113721:113726): Se crea el proceso 1 en NEW 
-
-[INFO] 01:54:11:801 proceso/(113721:113724): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
-[INFO] 01:55:53:725 proceso/(113967:113972): se conecto una consola
-[INFO] 01:55:53:726 proceso/(113967:113972): Consola mando instrucciones
-[INFO] 01:55:53:726 proceso/(113967:113972): Se crea el proceso 1 en NEW 
-
-[INFO] 01:55:53:726 proceso/(113967:113970): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
-[INFO] 01:57:50:805 proceso/(114161:114166): se conecto una consola
-[INFO] 01:57:50:805 proceso/(114161:114166): Consola mando instrucciones
-[INFO] 01:57:50:805 proceso/(114161:114166): Se crea el proceso 1 en NEW 
-
-[INFO] 01:57:50:805 proceso/(114161:114164): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
-[ERROR] 01:57:50:893 proceso/(114161:114163): Error en la comunicacion entre el Kernel y la CPU
-[INFO] 01:59:17:936 proceso/(114250:114255): se conecto una consola
-[INFO] 01:59:17:936 proceso/(114250:114255): Consola mando instrucciones
-[INFO] 01:59:17:936 proceso/(114250:114255): Se crea el proceso 1 en NEW 
-
-[INFO] 01:59:17:936 proceso/(114250:114253): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
-[ERROR] 01:59:18:018 proceso/(114250:114252): Error en la comunicacion entre el Kernel y la CPU
-[INFO] 02:00:35:598 proceso/(114366:114371): se conecto una consola
-[INFO] 02:00:35:599 proceso/(114366:114371): Consola mando instrucciones
-[INFO] 02:00:35:599 proceso/(114366:114371): Se crea el proceso 1 en NEW 
-
-[INFO] 02:00:35:600 proceso/(114366:114369): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
-[ERROR] 02:00:35:683 proceso/(114366:114368): Error en la comunicacion entre el Kernel y la CPU
-[INFO] 02:02:14:714 proceso/(114424:114429): se conecto una consola
-[INFO] 02:02:14:715 proceso/(114424:114429): Consola mando instrucciones
-[INFO] 02:02:14:715 proceso/(114424:114429): Se crea el proceso 1 en NEW 
-
-[INFO] 02:02:14:715 proceso/(114424:114427): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
-[ERROR] 02:02:14:851 proceso/(114424:114426): Error en la comunicacion entre el Kernel y la CPU
-[INFO] 02:03:22:005 proceso/(114552:114557): se conecto una consola
-[INFO] 02:03:22:006 proceso/(114552:114557): Consola mando instrucciones
-[INFO] 02:03:22:006 proceso/(114552:114557): Se crea el proceso 1 en NEW 
-
-[INFO] 02:03:22:007 proceso/(114552:114555): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
-[INFO] 02:05:32:500 proceso/(114736:114741): se conecto una consola
-[INFO] 02:05:32:501 proceso/(114736:114741): Consola mando instrucciones
-[INFO] 02:05:32:501 proceso/(114736:114741): Se crea el proceso 1 en NEW 
-
-[INFO] 02:05:32:501 proceso/(114736:114739): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
-[ERROR] 02:06:34:736 proceso/(114846:114846): El kernel no pudo conectarse a la memoria
-[INFO] 02:07:03:199 proceso/(114885:114890): se conecto una consola
-[INFO] 02:07:03:200 proceso/(114885:114890): Consola mando instrucciones
-[INFO] 02:07:03:200 proceso/(114885:114890): Se crea el proceso 1 en NEW 
-
-[INFO] 02:07:03:200 proceso/(114885:114888): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
-[INFO] 02:08:28:121 proceso/(114961:114966): se conecto una consola
-[INFO] 02:08:28:121 proceso/(114961:114966): Consola mando instrucciones
-[INFO] 02:08:28:121 proceso/(114961:114966): Se crea el proceso 1 en NEW 
-
-[INFO] 02:08:28:121 proceso/(114961:114964): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
-[INFO] 02:10:56:638 proceso/(115153:115158): se conecto una consola
-[INFO] 02:10:56:638 proceso/(115153:115158): Consola mando instrucciones
-[INFO] 02:10:56:639 proceso/(115153:115158): Se crea el proceso 1 en NEW 
-
-[INFO] 02:10:56:639 proceso/(115153:115156): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
-[ERROR] 02:12:11:721 proceso/(115205:115205): El kernel no pudo conectarse a la memoria
-[INFO] 02:12:21:205 proceso/(115211:115216): se conecto una consola
-[INFO] 02:12:21:205 proceso/(115211:115216): Consola mando instrucciones
-[INFO] 02:12:21:205 proceso/(115211:115216): Se crea el proceso 1 en NEW 
-
-[INFO] 02:12:21:205 proceso/(115211:115214): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
-[INFO] 02:13:40:925 proceso/(115347:115352): se conecto una consola
-[INFO] 02:13:40:925 proceso/(115347:115352): Consola mando instrucciones
-[INFO] 02:13:40:926 proceso/(115347:115352): Se crea el proceso 1 en NEW 
-
-[INFO] 02:13:40:926 proceso/(115347:115350): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
-[ERROR] 02:14:36:055 proceso/(115396:115396): El kernel no pudo conectarse a la memoria
-[INFO] 02:15:57:937 proceso/(115412:115418): se conecto una consola
-[INFO] 02:15:57:938 proceso/(115412:115418): Consola mando instrucciones
-[INFO] 02:15:57:938 proceso/(115412:115418): Se crea el proceso 1 en NEW 
-
-[INFO] 02:15:57:938 proceso/(115412:115415): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
-[INFO] 02:17:27:101 proceso/(115469:115474): se conecto una consola
-[INFO] 02:17:27:101 proceso/(115469:115474): Consola mando instrucciones
-[INFO] 02:17:27:101 proceso/(115469:115474): Se crea el proceso 1 en NEW 
-
-[INFO] 02:17:27:101 proceso/(115469:115472): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
-[INFO] 02:19:12:541 proceso/(115568:115573): se conecto una consola
-[INFO] 02:19:12:542 proceso/(115568:115573): Consola mando instrucciones
-[INFO] 02:19:12:542 proceso/(115568:115573): Se crea el proceso 1 en NEW 
-
-[INFO] 02:19:12:542 proceso/(115568:115571): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
-[INFO] 02:20:43:920 proceso/(115646:115651): se conecto una consola
-[INFO] 02:20:43:920 proceso/(115646:115651): Consola mando instrucciones
-[INFO] 02:20:43:920 proceso/(115646:115651): Se crea el proceso 1 en NEW 
-
-[INFO] 02:20:43:920 proceso/(115646:115649): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
-[INFO] 02:22:06:063 proceso/(115708:115713): se conecto una consola
-[INFO] 02:22:06:063 proceso/(115708:115713): Consola mando instrucciones
-[INFO] 02:22:06:063 proceso/(115708:115713): Se crea el proceso 1 en NEW 
-
-[INFO] 02:22:06:064 proceso/(115708:115711): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
-[INFO] 02:23:48:371 proceso/(115870:115875): se conecto una consola
-[INFO] 02:23:48:372 proceso/(115870:115875): Consola mando instrucciones
-[INFO] 02:23:48:372 proceso/(115870:115875): Se crea el proceso 1 en NEW 
-
-[INFO] 02:23:48:373 proceso/(115870:115873): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
-[INFO] 04:24:28:193 proceso/(116088:116093): se conecto una consola
-[INFO] 04:24:28:194 proceso/(116088:116093): Consola mando instrucciones
-[INFO] 04:24:28:194 proceso/(116088:116093): Se crea el proceso 1 en NEW 
-
-[INFO] 04:24:28:194 proceso/(116088:116091): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
-[ERROR] 04:24:46:997 proceso/(116088:116090): Error en la comunicacion entre el Kernel y la CPU
-[INFO] 04:26:00:726 proceso/(116197:116202): se conecto una consola
-[INFO] 04:26:00:727 proceso/(116197:116202): Consola mando instrucciones
-[INFO] 04:26:00:727 proceso/(116197:116202): Se crea el proceso 1 en NEW 
-
-[INFO] 04:26:00:727 proceso/(116197:116200): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
-[INFO] 04:26:05:728 proceso/(116197:116199): AX: HOLA
-[INFO] 04:26:15:782 proceso/(116197:116204): se conecto una consola
-[INFO] 04:26:15:782 proceso/(116197:116204): Consola mando instrucciones
-[INFO] 04:26:15:783 proceso/(116197:116204): Se crea el proceso 2 en NEW 
-
-[INFO] 04:26:15:783 proceso/(116197:116200): PID: 2 - Estado Anterior: NEW - Estado Actual: READY
-[INFO] 04:26:20:784 proceso/(116197:116199): AX: HOLA
-[INFO] 04:26:30:430 proceso/(116197:116206): se conecto una consola
-[INFO] 04:26:30:430 proceso/(116197:116206): Consola mando instrucciones
-[INFO] 04:26:30:430 proceso/(116197:116206): Se crea el proceso 3 en NEW 
-
-[INFO] 04:26:30:431 proceso/(116197:116200): PID: 3 - Estado Anterior: NEW - Estado Actual: READY
-[INFO] 04:26:31:016 proceso/(116197:116208): se conecto una consola
-[INFO] 04:26:31:016 proceso/(116197:116208): Consola mando instrucciones
-[INFO] 04:26:31:016 proceso/(116197:116208): Se crea el proceso 4 en NEW 
-
-[INFO] 04:26:31:016 proceso/(116197:116200): PID: 4 - Estado Anterior: NEW - Estado Actual: READY
-[INFO] 04:26:35:431 proceso/(116197:116199): AX: HOLA
-[INFO] 04:26:40:437 proceso/(116197:116199): AX: HOLA
-[INFO] 04:26:47:030 proceso/(116197:116210): se conecto una consola
-[INFO] 04:26:47:030 proceso/(116197:116210): Consola mando instrucciones
-[INFO] 04:26:47:031 proceso/(116197:116210): Se crea el proceso 5 en NEW 
-
-[INFO] 04:26:47:031 proceso/(116197:116200): PID: 5 - Estado Anterior: NEW - Estado Actual: READY
-[INFO] 04:26:47:710 proceso/(116197:116212): se conecto una consola
-[INFO] 04:26:47:710 proceso/(116197:116212): Consola mando instrucciones
-[INFO] 04:26:47:711 proceso/(116197:116212): Se crea el proceso 6 en NEW 
-
-[INFO] 04:26:47:711 proceso/(116197:116200): PID: 6 - Estado Anterior: NEW - Estado Actual: READY
-[INFO] 04:26:52:031 proceso/(116197:116199): AX: HOLA
-[INFO] 04:26:57:034 proceso/(116197:116199): AX: HOLA
-[INFO] 04:27:01:775 proceso/(116197:116214): se conecto una consola
-[INFO] 04:27:01:775 proceso/(116197:116214): Consola mando instrucciones
-[INFO] 04:27:01:775 proceso/(116197:116214): Se crea el proceso 7 en NEW 
-
-[INFO] 04:27:01:775 proceso/(116197:116200): PID: 7 - Estado Anterior: NEW - Estado Actual: READY
-[INFO] 04:27:02:247 proceso/(116197:116216): se conecto una consola
-[INFO] 04:27:02:247 proceso/(116197:116216): Consola mando instrucciones
-[INFO] 04:27:02:247 proceso/(116197:116216): Se crea el proceso 8 en NEW 
-
-[INFO] 04:27:02:247 proceso/(116197:116200): PID: 8 - Estado Anterior: NEW - Estado Actual: READY
-[INFO] 04:27:06:777 proceso/(116197:116199): AX: HOLA
-[INFO] 04:27:11:780 proceso/(116197:116199): AX: HOLA
-[INFO] 04:34:18:678 proceso/(116451:116456): se conecto una consola
-[INFO] 04:34:18:679 proceso/(116451:116456): Consola mando instrucciones
-[INFO] 04:34:18:679 proceso/(116451:116456): Se crea el proceso 1 en NEW 
-
-[INFO] 04:34:18:680 proceso/(116451:116454): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
-[INFO] 04:34:23:681 proceso/(116451:116453): AX: HOLA
-[INFO] 04:37:09:734 proceso/(116528:116533): se conecto una consola
-[INFO] 04:37:09:734 proceso/(116528:116533): Consola mando instrucciones
-[INFO] 04:37:09:734 proceso/(116528:116533): Se crea el proceso 1 en NEW 
-
-[INFO] 04:37:09:734 proceso/(116528:116531): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
-[INFO] 04:37:09:734 proceso/(116528:116530): PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCK
-[INFO] 04:37:09:734 proceso/(116528:116530): PID: 1 - Bloqueado por: IO
-[INFO] 04:37:09:734 proceso/(116528:116530): PID: 1 - Ejecuta IO: 10
-[INFO] 04:38:13:435 proceso/(116528:116536): se conecto una consola
-[INFO] 04:38:13:435 proceso/(116528:116536): Consola mando instrucciones
-[INFO] 04:38:13:436 proceso/(116528:116536): Se crea el proceso 2 en NEW 
-
-[INFO] 04:38:13:436 proceso/(116528:116531): PID: 2 - Estado Anterior: NEW - Estado Actual: READY
-[INFO] 04:38:42:157 proceso/(116528:116539): se conecto una consola
-[INFO] 04:38:42:157 proceso/(116528:116539): Consola mando instrucciones
-[INFO] 04:38:42:157 proceso/(116528:116539): Se crea el proceso 3 en NEW 
-
-[INFO] 04:38:42:157 proceso/(116528:116531): PID: 3 - Estado Anterior: NEW - Estado Actual: READY
-[INFO] 04:38:43:829 proceso/(116528:116541): se conecto una consola
-[INFO] 04:38:43:829 proceso/(116528:116541): Consola mando instrucciones
-[INFO] 04:38:43:829 proceso/(116528:116541): Se crea el proceso 4 en NEW 
-
-[INFO] 04:38:43:829 proceso/(116528:116531): PID: 4 - Estado Anterior: NEW - Estado Actual: READY
-[INFO] 04:38:44:702 proceso/(116528:116543): se conecto una consola
-[INFO] 04:38:44:702 proceso/(116528:116543): Consola mando instrucciones
-[INFO] 04:38:44:702 proceso/(116528:116543): Se crea el proceso 5 en NEW 
-
-[ERROR] 04:38:47:435 proceso/(116528:116530): Error en la comunicacion entre el Kernel y la CPU
-[INFO] 04:51:40:388 proceso/(117020:117025): se conecto una consola
-[INFO] 04:51:40:388 proceso/(117020:117025): Consola mando instrucciones
-[INFO] 04:51:40:388 proceso/(117020:117025): Se crea el proceso 1 en NEW 
-
-[INFO] 04:51:40:389 proceso/(117020:117023): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
-[INFO] 04:51:40:389 proceso/(117020:117022): PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCK
-[INFO] 04:51:40:389 proceso/(117020:117022): PID: 1 - Bloqueado por: IO
-[INFO] 04:51:40:389 proceso/(117020:117022): PID: 1 - Ejecuta IO: 10
-[INFO] 04:51:55:393 proceso/(117020:117022): AX: HOLA
-[INFO] 04:52:05:379 proceso/(117020:117028): se conecto una consola
-[INFO] 04:52:05:379 proceso/(117020:117028): Consola mando instrucciones
-[INFO] 04:52:05:379 proceso/(117020:117028): Se crea el proceso 2 en NEW 
-
-[INFO] 04:52:05:379 proceso/(117020:117023): PID: 2 - Estado Anterior: NEW - Estado Actual: READY
-[INFO] 04:52:05:379 proceso/(117020:117022): PID: 2 - Estado Anterior: EXEC - Estado Actual: BLOCK
-[INFO] 04:52:05:379 proceso/(117020:117022): PID: 2 - Bloqueado por: IO
-[INFO] 04:52:05:379 proceso/(117020:117022): PID: 2 - Ejecuta IO: 10
-[INFO] 04:52:20:382 proceso/(117020:117022): AX: HOLA
-[INFO] 04:54:21:212 proceso/(117111:117116): se conecto una consola
-[INFO] 04:54:21:213 proceso/(117111:117116): Consola mando instrucciones
-[INFO] 04:54:21:213 proceso/(117111:117116): Se crea el proceso 1 en NEW 
-
-[INFO] 04:54:21:213 proceso/(117111:117114): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
-[INFO] 04:54:21:214 proceso/(117111:117113): PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCK
-[INFO] 04:54:21:214 proceso/(117111:117113): PID: 1 - Bloqueado por: IO
-[INFO] 04:54:21:214 proceso/(117111:117113): PID: 1 - Ejecuta IO: 10
-[INFO] 04:54:36:217 proceso/(117111:117113): AX: HOLA
-[INFO] 04:54:41:050 proceso/(117111:117119): se conecto una consola
-[INFO] 04:54:41:050 proceso/(117111:117119): Consola mando instrucciones
-[INFO] 04:54:41:050 proceso/(117111:117119): Se crea el proceso 2 en NEW 
-
-[INFO] 04:54:41:050 proceso/(117111:117114): PID: 2 - Estado Anterior: NEW - Estado Actual: READY
-[INFO] 04:54:41:051 proceso/(117111:117113): PID: 2 - Estado Anterior: EXEC - Estado Actual: BLOCK
-[INFO] 04:54:41:051 proceso/(117111:117113): PID: 2 - Bloqueado por: IO
-[INFO] 04:54:41:051 proceso/(117111:117113): PID: 2 - Ejecuta IO: 10
-[ERROR] 04:54:54:372 proceso/(117111:117113): Error en la comunicacion entre el Kernel y la CPU
-[ERROR] 04:55:54:232 proceso/(117203:117203): El kernel no pudo conectarse a el CPU
-[INFO] 04:57:11:498 proceso/(117260:117265): se conecto una consola
-[INFO] 04:57:11:499 proceso/(117260:117265): Consola mando instrucciones
-[INFO] 04:57:11:499 proceso/(117260:117265): Se crea el proceso 1 en NEW 
-
-[INFO] 04:57:11:499 proceso/(117260:117263): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
-[INFO] 04:57:11:500 proceso/(117260:117262): PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCK
-[INFO] 04:57:11:500 proceso/(117260:117262): PID: 1 - Bloqueado por: IO
-[INFO] 04:57:11:500 proceso/(117260:117262): PID: 1 - Ejecuta IO: 10
-[INFO] 04:57:26:503 proceso/(117260:117262): AX: HOLA
-[INFO] 04:57:47:842 proceso/(117260:117269): se conecto una consola
-[INFO] 04:57:47:842 proceso/(117260:117269): Consola mando instrucciones
-[INFO] 04:57:47:843 proceso/(117260:117269): Se crea el proceso 2 en NEW 
-
-[INFO] 04:57:47:843 proceso/(117260:117263): PID: 2 - Estado Anterior: NEW - Estado Actual: READY
-[INFO] 04:57:47:843 proceso/(117260:117262): PID: 2 - Estado Anterior: EXEC - Estado Actual: BLOCK
-[INFO] 04:57:47:843 proceso/(117260:117262): PID: 2 - Bloqueado por: IO
-[INFO] 04:57:47:843 proceso/(117260:117262): PID: 2 - Ejecuta IO: 10
-[INFO] 04:58:02:848 proceso/(117260:117262): AX: HOLA
-[INFO] 04:59:55:701 proceso/(117463:117468): se conecto una consola
-[INFO] 04:59:55:702 proceso/(117463:117468): Consola mando instrucciones
-[INFO] 04:59:55:702 proceso/(117463:117468): Se crea el proceso 1 en NEW 
-
-[INFO] 04:59:55:702 proceso/(117463:117466): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
-[INFO] 04:59:55:703 proceso/(117463:117465): PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCK
-[INFO] 04:59:55:703 proceso/(117463:117465): PID: 1 - Bloqueado por: IO
-[INFO] 04:59:55:703 proceso/(117463:117465): PID: 1 - Ejecuta IO: 10
-[INFO] 05:00:10:706 proceso/(117463:117465): AX: HOLA
-[INFO] 05:00:14:962 proceso/(117463:117471): se conecto una consola
-[INFO] 05:00:14:962 proceso/(117463:117471): Consola mando instrucciones
-[INFO] 05:00:14:962 proceso/(117463:117471): Se crea el proceso 2 en NEW 
-
-[INFO] 05:00:14:962 proceso/(117463:117466): PID: 2 - Estado Anterior: NEW - Estado Actual: READY
-[INFO] 05:00:14:962 proceso/(117463:117465): PID: 2 - Estado Anterior: EXEC - Estado Actual: BLOCK
-[INFO] 05:00:14:962 proceso/(117463:117465): PID: 2 - Bloqueado por: IO
-[INFO] 05:00:14:962 proceso/(117463:117465): PID: 2 - Ejecuta IO: 10
-[INFO] 05:00:29:965 proceso/(117463:117465): AX: HOLA
-[INFO] 05:12:20:151 proceso/(117965:117970): se conecto una consola
-[INFO] 05:12:20:152 proceso/(117965:117970): Consola mando instrucciones
-[INFO] 05:12:20:152 proceso/(117965:117970): Se crea el proceso 1 en NEW 
-
-[INFO] 05:12:20:152 proceso/(117965:117968): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
-[ERROR] 05:13:28:167 proceso/(118143:118143): El kernel no pudo conectarse a la memoria
-[INFO] 05:15:27:742 proceso/(118156:118161): se conecto una consola
-[INFO] 05:15:27:742 proceso/(118156:118161): Consola mando instrucciones
-[INFO] 05:15:27:742 proceso/(118156:118161): Se crea el proceso 1 en NEW 
-
-[INFO] 05:15:27:742 proceso/(118156:118159): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
-[INFO] 05:17:11:622 proceso/(118235:118240): se conecto una consola
-[INFO] 05:17:11:622 proceso/(118235:118240): Consola mando instrucciones
-[INFO] 05:17:11:622 proceso/(118235:118240): Se crea el proceso 1 en NEW 
-
-[INFO] 05:17:11:622 proceso/(118235:118238): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
-[INFO] 05:20:30:666 proceso/(118401:118406): se conecto una consola
-[INFO] 05:20:30:667 proceso/(118401:118406): Consola mando instrucciones
-[INFO] 05:20:30:668 proceso/(118401:118406): Se crea el proceso 1 en NEW 
-
-[INFO] 05:20:30:668 proceso/(118401:118404): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
-[INFO] 05:23:51:423 proceso/(118587:118592): se conecto una consola
-[INFO] 05:23:51:424 proceso/(118587:118592): Consola mando instrucciones
-[INFO] 05:23:51:424 proceso/(118587:118592): Se crea el proceso 1 en NEW 
-
-[INFO] 05:23:51:425 proceso/(118587:118590): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
-[INFO] 05:27:33:687 proceso/(118815:118820): se conecto una consola
-[INFO] 05:27:33:687 proceso/(118815:118820): Consola mando instrucciones
-[INFO] 05:27:33:688 proceso/(118815:118820): Se crea el proceso 1 en NEW 
-
-[INFO] 05:27:33:688 proceso/(118815:118818): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
-[INFO] 05:35:15:215 proceso/(118930:118935): se conecto una consola
-[INFO] 05:35:15:217 proceso/(118930:118935): Consola mando instrucciones
-[INFO] 05:35:15:217 proceso/(118930:118935): Se crea el proceso 1 en NEW 
-
-[INFO] 05:35:15:217 proceso/(118930:118933): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
-[INFO] 05:38:57:765 proceso/(119113:119118): se conecto una consola
-[INFO] 05:38:57:766 proceso/(119113:119118): Consola mando instrucciones
-[INFO] 05:38:57:766 proceso/(119113:119118): Se crea el proceso 1 en NEW 
-
-[INFO] 05:38:57:766 proceso/(119113:119116): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
-[INFO] 05:41:24:509 proceso/(119257:119262): se conecto una consola
-[INFO] 05:41:24:510 proceso/(119257:119262): Consola mando instrucciones
-[INFO] 05:41:24:510 proceso/(119257:119262): Se crea el proceso 1 en NEW 
-
-[INFO] 05:41:24:510 proceso/(119257:119260): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
-[INFO] 05:44:29:250 proceso/(119406:119411): se conecto una consola
-[INFO] 05:44:29:250 proceso/(119406:119411): Consola mando instrucciones
-[INFO] 05:44:29:250 proceso/(119406:119411): Se crea el proceso 1 en NEW 
-
-[INFO] 05:44:29:250 proceso/(119406:119409): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
-[INFO] 05:51:04:205 proceso/(119493:119498): se conecto una consola
-[INFO] 05:51:04:205 proceso/(119493:119498): Consola mando instrucciones
-[INFO] 05:51:04:206 proceso/(119493:119498): Se crea el proceso 1 en NEW 
-
-[INFO] 05:51:04:206 proceso/(119493:119496): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
-[INFO] 05:51:04:206 proceso/(119493:119495): parametro (recibir_parametro): 10
-[INFO] 05:53:03:652 proceso/(119586:119591): se conecto una consola
-[INFO] 05:53:03:652 proceso/(119586:119591): Consola mando instrucciones
-[INFO] 05:53:03:652 proceso/(119586:119591): Se crea el proceso 1 en NEW 
-
-[INFO] 05:53:03:652 proceso/(119586:119589): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
-[ERROR] 05:54:06:240 proceso/(119718:119718): El kernel no pudo conectarse a la memoria
-[INFO] 05:54:54:708 proceso/(119724:119729): se conecto una consola
-[INFO] 05:54:54:708 proceso/(119724:119729): Consola mando instrucciones
-[INFO] 05:54:54:708 proceso/(119724:119729): Se crea el proceso 1 en NEW 
-
-[INFO] 05:54:54:708 proceso/(119724:119727): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
-[INFO] 05:58:58:175 proceso/(120085:120090): se conecto una consola
-[INFO] 05:58:58:176 proceso/(120085:120090): Consola mando instrucciones
-[INFO] 05:58:58:176 proceso/(120085:120090): Se crea el proceso 1 en NEW 
-
-[INFO] 05:58:58:177 proceso/(120085:120088): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
-[INFO] 06:00:51:353 proceso/(120098:120103): se conecto una consola
-[INFO] 06:00:51:353 proceso/(120098:120103): Consola mando instrucciones
-[INFO] 06:00:51:353 proceso/(120098:120103): Se crea el proceso 1 en NEW 
-
-[INFO] 06:00:51:353 proceso/(120098:120101): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
-[INFO] 06:03:34:759 proceso/(120183:120188): se conecto una consola
-[INFO] 06:03:34:760 proceso/(120183:120188): Consola mando instrucciones
-[INFO] 06:03:34:760 proceso/(120183:120188): Se crea el proceso 1 en NEW 
-
-[INFO] 06:03:34:760 proceso/(120183:120186): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
-[INFO] 06:05:55:784 proceso/(120259:120264): se conecto una consola
-[INFO] 06:05:55:785 proceso/(120259:120264): Consola mando instrucciones
-[INFO] 06:05:55:785 proceso/(120259:120264): Se crea el proceso 1 en NEW 
-
-[INFO] 06:05:55:785 proceso/(120259:120262): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
-[INFO] 06:07:16:409 proceso/(120328:120333): se conecto una consola
-[INFO] 06:07:16:410 proceso/(120328:120333): Consola mando instrucciones
-[INFO] 06:07:16:410 proceso/(120328:120333): Se crea el proceso 1 en NEW 
-
-[INFO] 06:07:16:410 proceso/(120328:120331): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
-[INFO] 06:08:38:006 proceso/(120402:120407): se conecto una consola
-[INFO] 06:08:38:006 proceso/(120402:120407): Consola mando instrucciones
-[INFO] 06:08:38:006 proceso/(120402:120407): Se crea el proceso 1 en NEW 
-
-[INFO] 06:08:38:006 proceso/(120402:120405): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
-[INFO] 06:12:31:294 proceso/(120536:120541): se conecto una consola
-[INFO] 06:12:31:294 proceso/(120536:120541): Consola mando instrucciones
-[INFO] 06:12:31:294 proceso/(120536:120541): Se crea el proceso 1 en NEW 
-
-[INFO] 06:12:31:294 proceso/(120536:120539): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
-[INFO] 06:13:53:622 proceso/(120598:120603): se conecto una consola
-[INFO] 06:13:53:623 proceso/(120598:120603): Consola mando instrucciones
-[INFO] 06:13:53:623 proceso/(120598:120603): Se crea el proceso 1 en NEW 
-
-[INFO] 06:13:53:623 proceso/(120598:120601): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
-[INFO] 06:16:25:393 proceso/(120690:120695): se conecto una consola
-[INFO] 06:16:25:394 proceso/(120690:120695): Consola mando instrucciones
-[INFO] 06:16:25:394 proceso/(120690:120695): Se crea el proceso 1 en NEW 
-
-[INFO] 06:16:25:394 proceso/(120690:120693): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
-[INFO] 06:17:52:672 proceso/(120744:120749): se conecto una consola
-[INFO] 06:17:52:673 proceso/(120744:120749): Consola mando instrucciones
-[INFO] 06:17:52:673 proceso/(120744:120749): Se crea el proceso 1 en NEW 
-
-[INFO] 06:17:52:673 proceso/(120744:120747): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
-[INFO] 06:17:52:675 proceso/(120744:120746): PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCK
-[INFO] 06:17:52:675 proceso/(120744:120746): PID: 1 - Bloqueado por: IO
-[INFO] 06:17:52:675 proceso/(120744:120746): PID: 1 - Ejecuta IO: 10
-[INFO] 06:18:07:678 proceso/(120744:120746): AX: HOLA
-[INFO] 06:19:36:599 proceso/(120827:120832): se conecto una consola
-[INFO] 06:19:36:600 proceso/(120827:120832): Consola mando instrucciones
-[INFO] 06:19:36:600 proceso/(120827:120832): Se crea el proceso 1 en NEW 
-
-[INFO] 06:19:36:601 proceso/(120827:120830): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
-[INFO] 06:19:36:602 proceso/(120827:120829): PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCK
-[INFO] 06:19:36:602 proceso/(120827:120829): PID: 1 - Bloqueado por: IO
-[INFO] 06:19:36:602 proceso/(120827:120829): PID: 1 - Ejecuta IO: 10
-[INFO] 06:19:51:604 proceso/(120827:120829): AX: HOLA
-[INFO] 06:19:54:220 proceso/(120827:120835): se conecto una consola
-[INFO] 06:19:54:220 proceso/(120827:120835): Consola mando instrucciones
-[INFO] 06:19:54:221 proceso/(120827:120835): Se crea el proceso 2 en NEW 
-
-[INFO] 06:19:54:221 proceso/(120827:120830): PID: 2 - Estado Anterior: NEW - Estado Actual: READY
-[INFO] 06:19:54:221 proceso/(120827:120829): PID: 2 - Estado Anterior: EXEC - Estado Actual: BLOCK
-[INFO] 06:19:54:221 proceso/(120827:120829): PID: 2 - Bloqueado por: IO
-[INFO] 06:19:54:221 proceso/(120827:120829): PID: 2 - Ejecuta IO: 10
-[INFO] 06:20:09:223 proceso/(120827:120829): AX: HOLA
-[INFO] 06:32:02:077 proceso/(120998:121003): se conecto una consola
-[INFO] 06:32:02:078 proceso/(120998:121003): Consola mando instrucciones
-[INFO] 06:32:02:079 proceso/(120998:121003): Se crea el proceso 1 en NEW 
-
-[INFO] 06:32:02:079 proceso/(120998:121001): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
-[INFO] 06:34:05:700 proceso/(121116:121121): se conecto una consola
-[INFO] 06:34:05:700 proceso/(121116:121121): Consola mando instrucciones
-[INFO] 06:34:05:700 proceso/(121116:121121): Se crea el proceso 1 en NEW 
-
-[INFO] 06:34:05:701 proceso/(121116:121119): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
-[INFO] 13:01:49:444 proceso/(122001:122006): se conecto una consola
-[INFO] 13:01:49:444 proceso/(122001:122006): Consola mando instrucciones
-[INFO] 13:01:49:445 proceso/(122001:122006): Se crea el proceso 1 en NEW 
-
-[INFO] 13:01:49:445 proceso/(122001:122004): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
-[INFO] 13:04:27:468 proceso/(122028:122033): se conecto una consola
-[INFO] 13:04:27:514 proceso/(122028:122033): Consola mando instrucciones
-[INFO] 13:04:27:522 proceso/(122028:122033): Se crea el proceso 1 en NEW 
-
-[INFO] 13:04:27:527 proceso/(122028:122031): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
-[INFO] 13:04:27:553 proceso/(122028:122030): PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCK
-[INFO] 13:04:27:553 proceso/(122028:122030): PID: 1 - Bloqueado por: IO
-[INFO] 13:04:27:554 proceso/(122028:122030): PID: 1 - Ejecuta IO: 10
-[INFO] 13:04:42:564 proceso/(122028:122030): AX: HOLA
-[INFO] 13:05:32:465 proceso/(122028:122036): se conecto una consola
-[INFO] 13:05:32:466 proceso/(122028:122036): Consola mando instrucciones
-[INFO] 13:05:32:466 proceso/(122028:122036): Se crea el proceso 2 en NEW 
-
-[INFO] 13:05:32:467 proceso/(122028:122031): PID: 2 - Estado Anterior: NEW - Estado Actual: READY
-[INFO] 13:05:32:468 proceso/(122028:122030): PID: 2 - Estado Anterior: EXEC - Estado Actual: BLOCK
-[INFO] 13:05:32:469 proceso/(122028:122030): PID: 2 - Bloqueado por: IO
-[INFO] 13:05:32:469 proceso/(122028:122030): PID: 2 - Ejecuta IO: 10
-[INFO] 13:05:47:524 proceso/(122028:122030): AX: HOLA
-[INFO] 13:05:52:685 proceso/(122028:122039): se conecto una consola
-[INFO] 13:05:52:685 proceso/(122028:122039): Consola mando instrucciones
-[INFO] 13:05:52:686 proceso/(122028:122039): Se crea el proceso 3 en NEW 
-
-[INFO] 13:05:52:687 proceso/(122028:122031): PID: 3 - Estado Anterior: NEW - Estado Actual: READY
-[INFO] 13:05:52:688 proceso/(122028:122030): PID: 3 - Estado Anterior: EXEC - Estado Actual: BLOCK
-[INFO] 13:05:52:689 proceso/(122028:122030): PID: 3 - Bloqueado por: IO
-[INFO] 13:05:52:689 proceso/(122028:122030): PID: 3 - Ejecuta IO: 10
-[INFO] 14:11:32:706 proceso/(122283:122289): se conecto una consola
-[INFO] 14:11:32:745 proceso/(122283:122289): Consola mando instrucciones
-[INFO] 14:11:32:754 proceso/(122283:122289): Se crea el proceso 1 en NEW 
-
-[INFO] 14:11:32:758 proceso/(122283:122287): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
-[INFO] 14:11:32:787 proceso/(122283:122286): PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCK
-[INFO] 14:11:32:787 proceso/(122283:122286): PID: 1 - Bloqueado por: IO
-[INFO] 14:11:32:788 proceso/(122283:122286): PID: 1 - Ejecuta IO: 10
-[INFO] 14:13:50:896 proceso/(122299:122304): se conecto una consola
-[INFO] 14:13:50:896 proceso/(122299:122304): Consola mando instrucciones
-[INFO] 14:13:50:896 proceso/(122299:122304): Se crea el proceso 1 en NEW 
-
-[INFO] 14:13:50:896 proceso/(122299:122302): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
-[INFO] 14:17:36:201 proceso/(122436:122441): se conecto una consola
-[INFO] 14:17:36:202 proceso/(122436:122441): Consola mando instrucciones
-[INFO] 14:17:36:202 proceso/(122436:122441): Se crea el proceso 1 en NEW 
-
-[INFO] 14:17:36:202 proceso/(122436:122439): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
-[INFO] 14:19:27:786 proceso/(122510:122515): se conecto una consola
-[INFO] 14:19:27:787 proceso/(122510:122515): Consola mando instrucciones
-[INFO] 14:19:27:787 proceso/(122510:122515): Se crea el proceso 1 en NEW 
-
-[INFO] 14:19:27:787 proceso/(122510:122513): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
-[INFO] 14:21:21:616 proceso/(122571:122576): se conecto una consola
-[INFO] 14:21:21:617 proceso/(122571:122576): Consola mando instrucciones
-[INFO] 14:21:21:617 proceso/(122571:122576): Se crea el proceso 1 en NEW 
-
-[INFO] 14:21:21:617 proceso/(122571:122574): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
-[INFO] 14:22:34:488 proceso/(122644:122649): se conecto una consola
-[INFO] 14:22:34:489 proceso/(122644:122649): Consola mando instrucciones
-[INFO] 14:22:34:489 proceso/(122644:122649): Se crea el proceso 1 en NEW 
-
-[INFO] 14:22:34:490 proceso/(122644:122647): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
-[ERROR] 14:25:45:660 proceso/(123120:123120): El kernel no pudo conectarse a la memoria
-[INFO] 14:26:06:875 proceso/(123126:123131): se conecto una consola
-[INFO] 14:26:06:875 proceso/(123126:123131): Consola mando instrucciones
-[INFO] 14:26:06:875 proceso/(123126:123131): Se crea el proceso 1 en NEW 
-
-[INFO] 14:26:06:875 proceso/(123126:123129): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
-[INFO] 14:26:06:876 proceso/(123126:123128): PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCK
-[INFO] 14:26:06:876 proceso/(123126:123128): PID: 1 - Bloqueado por: IO
-[INFO] 14:26:06:876 proceso/(123126:123128): PID: 1 - Ejecuta IO: 10
-[INFO] 14:26:21:880 proceso/(123126:123128): AX: HOLA
-[INFO] 14:28:23:216 proceso/(123578:123583): se conecto una consola
-[INFO] 14:28:23:217 proceso/(123578:123583): Consola mando instrucciones
-[INFO] 14:28:23:217 proceso/(123578:123583): Se crea el proceso 1 en NEW 
-
-[INFO] 14:28:23:218 proceso/(123578:123581): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
-[INFO] 14:28:23:218 proceso/(123578:123580): PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCK
-[INFO] 14:28:23:218 proceso/(123578:123580): PID: 1 - Bloqueado por: IO
-[INFO] 14:28:23:218 proceso/(123578:123580): PID: 1 - Ejecuta IO: 10
-[INFO] 14:28:38:222 proceso/(123578:123580): AX: HOLA
-[ERROR] 14:29:46:477 proceso/(123663:123663): El kernel no pudo conectarse a la memoria
-[INFO] 14:29:57:359 proceso/(123669:123674): se conecto una consola
-[INFO] 14:29:57:359 proceso/(123669:123674): Consola mando instrucciones
-[INFO] 14:29:57:359 proceso/(123669:123674): Se crea el proceso 1 en NEW 
-
-[INFO] 14:29:57:360 proceso/(123669:123672): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
-[INFO] 14:29:57:361 proceso/(123669:123671): PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCK
-[INFO] 14:29:57:361 proceso/(123669:123671): PID: 1 - Bloqueado por: IO
-[INFO] 14:29:57:361 proceso/(123669:123671): PID: 1 - Ejecuta IO: 10
-[INFO] 14:30:12:361 proceso/(123669:123671): AX: HOLA
-[INFO] 14:30:14:645 proceso/(123669:123677): se conecto una consola
-[INFO] 14:30:14:645 proceso/(123669:123677): Consola mando instrucciones
-[INFO] 14:30:14:645 proceso/(123669:123677): Se crea el proceso 2 en NEW 
-
-[INFO] 14:30:14:646 proceso/(123669:123672): PID: 2 - Estado Anterior: NEW - Estado Actual: READY
-[INFO] 14:30:14:646 proceso/(123669:123671): PID: 2 - Estado Anterior: EXEC - Estado Actual: BLOCK
-[INFO] 14:30:14:646 proceso/(123669:123671): PID: 2 - Bloqueado por: IO
-[INFO] 14:30:14:646 proceso/(123669:123671): PID: 2 - Ejecuta IO: 10
-[INFO] 14:30:29:649 proceso/(123669:123671): AX: HOLA
-[INFO] 14:30:35:383 proceso/(123669:123681): se conecto una consola
-[INFO] 14:30:35:383 proceso/(123669:123681): Consola mando instrucciones
-[INFO] 14:30:35:383 proceso/(123669:123681): Se crea el proceso 3 en NEW 
-
-[INFO] 14:30:35:384 proceso/(123669:123672): PID: 3 - Estado Anterior: NEW - Estado Actual: READY
-[INFO] 14:30:35:384 proceso/(123669:123671): PID: 3 - Estado Anterior: EXEC - Estado Actual: BLOCK
-[INFO] 14:30:35:384 proceso/(123669:123671): PID: 3 - Bloqueado por: IO
-[INFO] 14:30:35:384 proceso/(123669:123671): PID: 3 - Ejecuta IO: 10
-[INFO] 14:30:36:053 proceso/(123669:123684): se conecto una consola
-[INFO] 14:30:36:053 proceso/(123669:123684): Consola mando instrucciones
-[INFO] 14:30:36:053 proceso/(123669:123684): Se crea el proceso 4 en NEW 
-
-[INFO] 14:30:36:053 proceso/(123669:123672): PID: 4 - Estado Anterior: NEW - Estado Actual: READY
-[INFO] 14:30:36:054 proceso/(123669:123671): PID: 4 - Estado Anterior: EXEC - Estado Actual: BLOCK
-[INFO] 14:30:36:054 proceso/(123669:123671): PID: 4 - Bloqueado por: IO
-[INFO] 14:30:36:054 proceso/(123669:123671): PID: 4 - Ejecuta IO: 10
-[INFO] 14:30:50:385 proceso/(123669:123671): AX: HOLA
-[INFO] 14:30:55:386 proceso/(123669:123671): AX: HOLA
-[INFO] 14:31:08:493 proceso/(123669:123687): se conecto una consola
-[INFO] 14:31:08:493 proceso/(123669:123687): Consola mando instrucciones
-[INFO] 14:31:08:493 proceso/(123669:123687): Se crea el proceso 5 en NEW 
-
-[INFO] 14:31:08:494 proceso/(123669:123672): PID: 5 - Estado Anterior: NEW - Estado Actual: READY
-[INFO] 14:31:08:494 proceso/(123669:123671): PID: 5 - Estado Anterior: EXEC - Estado Actual: BLOCK
-[INFO] 14:31:08:494 proceso/(123669:123671): PID: 5 - Bloqueado por: IO
-[INFO] 14:31:08:494 proceso/(123669:123671): PID: 5 - Ejecuta IO: 10
-[INFO] 14:31:09:030 proceso/(123669:123690): se conecto una consola
-[INFO] 14:31:09:030 proceso/(123669:123690): Consola mando instrucciones
-[INFO] 14:31:09:030 proceso/(123669:123690): Se crea el proceso 6 en NEW 
-
-[INFO] 14:31:09:031 proceso/(123669:123672): PID: 6 - Estado Anterior: NEW - Estado Actual: READY
-[INFO] 14:31:09:031 proceso/(123669:123671): PID: 6 - Estado Anterior: EXEC - Estado Actual: BLOCK
-[INFO] 14:31:09:031 proceso/(123669:123671): PID: 6 - Bloqueado por: IO
-[INFO] 14:31:09:031 proceso/(123669:123671): PID: 6 - Ejecuta IO: 10
-[INFO] 14:31:23:495 proceso/(123669:123671): AX: HOLA
-[INFO] 14:31:28:498 proceso/(123669:123671): AX: HOLA
-[INFO] 14:32:26:765 proceso/(123669:123701): se conecto una consola
-[INFO] 14:32:26:766 proceso/(123669:123701): Consola mando instrucciones
-[INFO] 14:32:26:766 proceso/(123669:123701): Se crea el proceso 7 en NEW 
-
-[INFO] 14:32:26:766 proceso/(123669:123672): PID: 7 - Estado Anterior: NEW - Estado Actual: READY
-[INFO] 14:32:26:766 proceso/(123669:123671): PID: 7 - Estado Anterior: EXEC - Estado Actual: BLOCK
-[INFO] 14:32:26:766 proceso/(123669:123671): PID: 7 - Bloqueado por: IO
-[INFO] 14:32:26:766 proceso/(123669:123671): PID: 7 - Ejecuta IO: 20
-[INFO] 14:32:34:197 proceso/(123669:123708): se conecto una consola
-[INFO] 14:32:34:198 proceso/(123669:123708): Consola mando instrucciones
-[INFO] 14:32:34:198 proceso/(123669:123708): Se crea el proceso 8 en NEW 
-
-[INFO] 14:32:34:198 proceso/(123669:123672): PID: 8 - Estado Anterior: NEW - Estado Actual: READY
-[INFO] 14:32:34:198 proceso/(123669:123671): PID: 8 - Estado Anterior: EXEC - Estado Actual: BLOCK
-[INFO] 14:32:34:198 proceso/(123669:123671): PID: 8 - Bloqueado por: IO
-[INFO] 14:32:34:198 proceso/(123669:123671): PID: 8 - Ejecuta IO: 5
-[INFO] 14:32:44:201 proceso/(123669:123671): AX: HOLA
-[INFO] 14:32:51:769 proceso/(123669:123671): AX: HOLA
-[INFO] 14:42:52:085 proceso/(124486:124491): se conecto una consola
-[INFO] 14:42:52:086 proceso/(124486:124491): Consola mando instrucciones
-[INFO] 14:42:52:086 proceso/(124486:124491): Se crea el proceso 1 en NEW 
-
-[INFO] 14:42:52:086 proceso/(124486:124489): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
-[INFO] 14:42:52:087 proceso/(124486:124488): PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCK
-[INFO] 14:42:52:087 proceso/(124486:124488): PID: 1 - Bloqueado por: IO
-[INFO] 14:42:52:087 proceso/(124486:124488): PID: 1 - Ejecuta IO: 10
-[INFO] 14:43:07:090 proceso/(124486:124488): AX: HOLA
-[INFO] 14:43:07:090 proceso/(124486:124488): PID: 1 - Estado Anterior: EXEC - Estado Actual: EXIT
-[INFO] 14:43:07:092 proceso/(124486:124488): Finaliza el proceso 1 - Motivo: SUCCESS
-[INFO] 14:43:37:144 proceso/(124486:124495): se conecto una consola
-[INFO] 14:43:37:144 proceso/(124486:124495): Consola mando instrucciones
-[INFO] 14:43:37:144 proceso/(124486:124495): Se crea el proceso 2 en NEW 
-
-[INFO] 14:43:37:144 proceso/(124486:124489): PID: 2 - Estado Anterior: NEW - Estado Actual: READY
-[INFO] 14:43:37:144 proceso/(124486:124488): PID: 2 - Estado Anterior: EXEC - Estado Actual: BLOCK
-[INFO] 14:43:37:144 proceso/(124486:124488): PID: 2 - Bloqueado por: IO
-[INFO] 14:43:37:145 proceso/(124486:124488): PID: 2 - Ejecuta IO: 10
-[INFO] 14:43:52:145 proceso/(124486:124488): AX: HOLA
-[INFO] 14:43:52:145 proceso/(124486:124488): PID: 2 - Estado Anterior: EXEC - Estado Actual: EXIT
-[INFO] 14:43:52:146 proceso/(124486:124488): Finaliza el proceso 2 - Motivo: SUCCESS
-[INFO] 14:44:21:763 proceso/(124486:124503): se conecto una consola
-[INFO] 14:44:21:763 proceso/(124486:124503): Consola mando instrucciones
-[INFO] 14:44:21:763 proceso/(124486:124503): Se crea el proceso 3 en NEW 
-
-[INFO] 14:44:21:763 proceso/(124486:124489): PID: 3 - Estado Anterior: NEW - Estado Actual: READY
-[INFO] 14:44:21:764 proceso/(124486:124488): PID: 3 - Estado Anterior: EXEC - Estado Actual: BLOCK
-[INFO] 14:44:21:764 proceso/(124486:124488): PID: 3 - Bloqueado por: IO
-[INFO] 14:44:21:764 proceso/(124486:124488): PID: 3 - Ejecuta IO: 10
-[INFO] 14:44:23:725 proceso/(124486:124506): se conecto una consola
-[INFO] 14:44:23:725 proceso/(124486:124506): Consola mando instrucciones
-[INFO] 14:44:23:725 proceso/(124486:124506): Se crea el proceso 4 en NEW 
-
-[INFO] 14:44:23:725 proceso/(124486:124489): PID: 4 - Estado Anterior: NEW - Estado Actual: READY
-[INFO] 14:44:23:726 proceso/(124486:124488): PID: 4 - Estado Anterior: EXEC - Estado Actual: BLOCK
-[INFO] 14:44:23:726 proceso/(124486:124488): PID: 4 - Bloqueado por: IO
-[INFO] 14:44:23:726 proceso/(124486:124488): PID: 4 - Ejecuta IO: 10
-[INFO] 14:44:36:767 proceso/(124486:124488): AX: HOLA
-[INFO] 14:44:36:767 proceso/(124486:124488): PID: 3 - Estado Anterior: EXEC - Estado Actual: EXIT
-[INFO] 14:44:36:768 proceso/(124486:124488): Finaliza el proceso 3 - Motivo: SUCCESS
-[INFO] 14:44:41:769 proceso/(124486:124488): AX: HOLA
-[INFO] 14:44:41:770 proceso/(124486:124488): PID: 4 - Estado Anterior: EXEC - Estado Actual: EXIT
-[INFO] 14:44:41:771 proceso/(124486:124488): Finaliza el proceso 4 - Motivo: SUCCESS
-[INFO] 15:43:28:484 proceso/(127751:127756): se conecto una consola
-[INFO] 15:43:28:486 proceso/(127751:127756): Consola mando instrucciones
-[INFO] 15:43:28:486 proceso/(127751:127756): Se crea el proceso 1 en NEW 
-
-[INFO] 15:43:28:486 proceso/(127751:127754): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
-[INFO] 15:43:28:487 proceso/(127751:127753): PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCK
-[INFO] 15:43:28:487 proceso/(127751:127753): PID: 1 - Bloqueado por: IO
-[INFO] 15:43:28:487 proceso/(127751:127753): PID: 1 - Ejecuta IO: 10
-[INFO] 15:43:42:681 proceso/(127751:127760): se conecto una consola
-[INFO] 15:43:42:682 proceso/(127751:127760): Consola mando instrucciones
-[INFO] 15:43:42:682 proceso/(127751:127760): Se crea el proceso 2 en NEW 
-
-[INFO] 15:43:42:682 proceso/(127751:127754): PID: 2 - Estado Anterior: NEW - Estado Actual: READY
-[INFO] 15:43:43:490 proceso/(127751:127753): AX: HOLA
-[INFO] 15:43:43:490 proceso/(127751:127753): PID: 1 - Estado Anterior: EXEC - Estado Actual: EXIT
-[INFO] 15:43:43:490 proceso/(127751:127753): Finaliza el proceso 1 - Motivo: SUCCESS
-[INFO] 15:43:43:490 proceso/(127751:127753): PID: 2 - Estado Anterior: EXEC - Estado Actual: BLOCK
-[INFO] 15:43:43:491 proceso/(127751:127753): PID: 2 - Bloqueado por: IO
-[INFO] 15:43:43:491 proceso/(127751:127753): PID: 2 - Ejecuta IO: 10
-[INFO] 15:49:00:362 proceso/(127894:127899): se conecto una consola
-[INFO] 15:49:00:363 proceso/(127894:127899): Consola mando instrucciones
-[INFO] 15:49:00:363 proceso/(127894:127899): Se crea el proceso 1 en NEW 
-
-[INFO] 15:49:00:363 proceso/(127894:127897): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
-[INFO] 15:49:00:364 proceso/(127894:127896): PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCK
-[INFO] 15:49:00:364 proceso/(127894:127896): PID: 1 - Bloqueado por: IO
-[INFO] 15:49:00:364 proceso/(127894:127896): PID: 1 - Ejecuta IO: 10
-[INFO] 15:49:15:367 proceso/(127894:127896): AX: HOLA
-[INFO] 15:49:15:369 proceso/(127894:127896): PID: 1 - Estado Anterior: EXEC - Estado Actual: EXIT
-[INFO] 15:49:15:371 proceso/(127894:127896): Finaliza el proceso 1 - Motivo: SUCCESS
-[INFO] 15:49:20:530 proceso/(127894:127902): se conecto una consola
-[INFO] 15:49:20:530 proceso/(127894:127902): Consola mando instrucciones
-[INFO] 15:49:20:530 proceso/(127894:127902): Se crea el proceso 2 en NEW 
-
-[INFO] 15:49:20:530 proceso/(127894:127897): PID: 2 - Estado Anterior: NEW - Estado Actual: READY
-[INFO] 15:49:20:531 proceso/(127894:127896): PID: 2 - Estado Anterior: EXEC - Estado Actual: BLOCK
-[INFO] 15:49:20:531 proceso/(127894:127896): PID: 2 - Bloqueado por: IO
-[INFO] 15:49:20:531 proceso/(127894:127896): PID: 2 - Ejecuta IO: 10
-[INFO] 15:49:35:533 proceso/(127894:127896): AX: HOLA
-[INFO] 15:49:35:533 proceso/(127894:127896): PID: 2 - Estado Anterior: EXEC - Estado Actual: EXIT
-[INFO] 15:49:35:533 proceso/(127894:127896): Finaliza el proceso 2 - Motivo: SUCCESS
-[INFO] 16:11:49:128 proceso/(127894:128049): se conecto una consola
-[INFO] 16:11:49:129 proceso/(127894:128049): Consola mando instrucciones
-[INFO] 16:11:49:129 proceso/(127894:128049): Se crea el proceso 3 en NEW 
-
-[INFO] 16:11:49:129 proceso/(127894:127897): PID: 3 - Estado Anterior: NEW - Estado Actual: READY
-[INFO] 16:11:49:132 proceso/(127894:127896): PID: 3 - Estado Anterior: EXEC - Estado Actual: BLOCK
-[INFO] 16:11:49:132 proceso/(127894:127896): PID: 3 - Bloqueado por: IO
-[INFO] 16:11:49:132 proceso/(127894:127896): PID: 3 - Ejecuta IO: 10
-[INFO] 16:11:54:567 proceso/(127894:128052): se conecto una consola
-[INFO] 16:11:54:568 proceso/(127894:128052): Consola mando instrucciones
-[INFO] 16:11:54:568 proceso/(127894:128052): Se crea el proceso 4 en NEW 
-
-[INFO] 16:11:54:568 proceso/(127894:127897): PID: 4 - Estado Anterior: NEW - Estado Actual: READY
-[INFO] 16:11:54:568 proceso/(127894:127896): PID: 4 - Estado Anterior: EXEC - Estado Actual: BLOCK
-[INFO] 16:11:54:568 proceso/(127894:127896): PID: 4 - Bloqueado por: IO
-[INFO] 16:11:54:568 proceso/(127894:127896): PID: 4 - Ejecuta IO: 10
-[INFO] 16:12:04:134 proceso/(127894:127896): AX: HOLA
-[INFO] 16:12:04:134 proceso/(127894:127896): PID: 3 - Estado Anterior: EXEC - Estado Actual: EXIT
-[INFO] 16:12:04:135 proceso/(127894:127896): Finaliza el proceso 3 - Motivo: SUCCESS
-[INFO] 16:12:09:570 proceso/(127894:127896): AX: HOLA
-[INFO] 16:12:09:572 proceso/(127894:127896): PID: 4 - Estado Anterior: EXEC - Estado Actual: EXIT
-[INFO] 16:12:09:573 proceso/(127894:127896): Finaliza el proceso 4 - Motivo: SUCCESS
-[INFO] 18:05:09:233 proceso/(130199:130204): se conecto una consola
-[INFO] 18:05:09:234 proceso/(130199:130204): Consola mando instrucciones
-[INFO] 18:05:09:234 proceso/(130199:130204): Se crea el proceso 1 en NEW 
-
-[INFO] 18:05:09:235 proceso/(130199:130202): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
-[INFO] 18:05:09:235 proceso/(130199:130201): PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCK
-[INFO] 18:05:09:235 proceso/(130199:130201): PID: 1 - Bloqueado por: IO
-[INFO] 18:05:09:235 proceso/(130199:130201): PID: 1 - Ejecuta IO: 10
-[INFO] 18:05:11:416 proceso/(130199:130207): se conecto una consola
-[INFO] 18:05:11:416 proceso/(130199:130207): Consola mando instrucciones
-[INFO] 18:05:11:416 proceso/(130199:130207): Se crea el proceso 2 en NEW 
-
-[INFO] 18:05:11:416 proceso/(130199:130202): PID: 2 - Estado Anterior: NEW - Estado Actual: READY
-[INFO] 18:05:11:416 proceso/(130199:130201): PID: 2 - Estado Anterior: EXEC - Estado Actual: BLOCK
-[INFO] 18:05:11:416 proceso/(130199:130201): PID: 2 - Bloqueado por: IO
-[INFO] 18:05:11:416 proceso/(130199:130201): PID: 2 - Ejecuta IO: 10
-[INFO] 18:05:24:237 proceso/(130199:130201): AX: HOLA
-[INFO] 18:05:24:237 proceso/(130199:130201): PID: 1 - Estado Anterior: EXEC - Estado Actual: EXIT
-[INFO] 18:05:24:237 proceso/(130199:130201): Finaliza el proceso 1 - Motivo: SUCCESS
-[INFO] 18:05:29:239 proceso/(130199:130201): AX: HOLA
-[INFO] 18:05:29:239 proceso/(130199:130201): PID: 2 - Estado Anterior: EXEC - Estado Actual: EXIT
-[INFO] 18:05:29:240 proceso/(130199:130201): Finaliza el proceso 2 - Motivo: SUCCESS
-[INFO] 14:56:08:976 proceso/(139013:139018): se conecto una consola
-[INFO] 14:56:08:976 proceso/(139013:139018): Consola mando instrucciones
-[INFO] 14:56:08:977 proceso/(139013:139018): Se crea el proceso 1 en NEW 
-
-[INFO] 14:56:08:977 proceso/(139013:139016): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
-[INFO] 14:56:08:977 proceso/(139013:139015): PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCK
-[INFO] 14:56:08:977 proceso/(139013:139015): PID: 1 - Bloqueado por: IO
-[INFO] 14:56:08:977 proceso/(139013:139015): PID: 1 - Ejecuta IO: 10
-[INFO] 14:56:18:154 proceso/(139013:139021): se conecto una consola
-[INFO] 14:56:18:155 proceso/(139013:139021): Consola mando instrucciones
-[INFO] 14:56:18:155 proceso/(139013:139021): Se crea el proceso 2 en NEW 
-
-[INFO] 14:56:18:155 proceso/(139013:139016): PID: 2 - Estado Anterior: NEW - Estado Actual: READY
-[INFO] 14:56:18:155 proceso/(139013:139015): PID: 2 - Estado Anterior: EXEC - Estado Actual: BLOCK
-[INFO] 14:56:18:155 proceso/(139013:139015): PID: 2 - Bloqueado por: IO
-[INFO] 14:56:18:155 proceso/(139013:139015): PID: 2 - Ejecuta IO: 10
-[INFO] 14:56:23:980 proceso/(139013:139015): PID: 1 - Estado Anterior: EXEC - Estado Actual: EXIT
-[INFO] 14:56:23:982 proceso/(139013:139015): Finaliza el proceso 1 - Motivo: SUCCESS
-[INFO] 14:56:33:157 proceso/(139013:139015): PID: 2 - Estado Anterior: EXEC - Estado Actual: EXIT
-[INFO] 14:56:33:159 proceso/(139013:139015): Finaliza el proceso 2 - Motivo: SUCCESS
-[INFO] 15:04:52:130 proceso/(139196:139222): se conecto una consola
-[INFO] 15:04:52:131 proceso/(139196:139222): Consola mando instrucciones
-[INFO] 15:04:52:131 proceso/(139196:139222): Se crea el proceso 1 en NEW 
-
-[INFO] 15:04:52:132 proceso/(139196:139199): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
-[INFO] 15:04:52:133 proceso/(139196:139198): PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCK
-[INFO] 15:04:52:133 proceso/(139196:139198): PID: 1 - Bloqueado por: IO
-[INFO] 15:04:52:133 proceso/(139196:139198): PID: 1 - Ejecuta IO: 10
-[INFO] 15:05:07:136 proceso/(139196:139198): PID: 1 - Estado Anterior: EXEC - Estado Actual: EXIT
-[INFO] 15:05:07:137 proceso/(139196:139198): Finaliza el proceso 1 - Motivo: SUCCESS
-[INFO] 15:09:38:935 proceso/(139297:139302): se conecto una consola
-[INFO] 15:09:38:936 proceso/(139297:139302): Consola mando instrucciones
-[INFO] 15:09:38:936 proceso/(139297:139302): Se crea el proceso 1 en NEW 
-
-[INFO] 15:09:38:936 proceso/(139297:139300): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
-[INFO] 15:09:38:937 proceso/(139297:139299): PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCK
-[INFO] 15:09:38:937 proceso/(139297:139299): PID: 1 - Bloqueado por: IO
-[INFO] 15:09:38:937 proceso/(139297:139299): PID: 1 - Ejecuta IO: 10
-[INFO] 15:09:47:038 proceso/(139297:139305): se conecto una consola
-[INFO] 15:09:47:038 proceso/(139297:139305): Consola mando instrucciones
-[INFO] 15:09:47:038 proceso/(139297:139305): Se crea el proceso 2 en NEW 
-
-[INFO] 15:09:47:039 proceso/(139297:139300): PID: 2 - Estado Anterior: NEW - Estado Actual: READY
-[INFO] 15:09:47:039 proceso/(139297:139299): PID: 2 - Estado Anterior: EXEC - Estado Actual: BLOCK
-[INFO] 15:09:47:039 proceso/(139297:139299): PID: 2 - Bloqueado por: IO
-[INFO] 15:09:47:039 proceso/(139297:139299): PID: 2 - Ejecuta IO: 10
-[INFO] 15:09:48:938 proceso/(139297:139299): PID: 1 - Wait: DISCO - Instancias: 0
-[INFO] 15:09:53:939 proceso/(139297:139299): PID: 1 - Estado Anterior: EXEC - Estado Actual: EXIT
-[INFO] 15:09:53:939 proceso/(139297:139299): Finaliza el proceso 1 - Motivo: SUCCESS
-[INFO] 15:09:57:040 proceso/(139297:139299): PID: 2 - Wait: DISCO - Instancias: -1
-[INFO] 15:09:57:040 proceso/(139297:139299): PID: 2 - Estado Anterior: EXEC - Estado Actual: BLOCK
-[INFO] 15:09:57:041 proceso/(139297:139299): PID: 2 - Bloqueado por: DISCO
-[INFO] 15:17:15:238 proceso/(139456:139462): se conecto una consola
-[INFO] 15:17:15:239 proceso/(139456:139462): Consola mando instrucciones
-[INFO] 15:17:15:239 proceso/(139456:139462): Se crea el proceso 1 en NEW 
-
-[INFO] 15:17:15:239 proceso/(139456:139459): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
-[INFO] 15:17:15:239 proceso/(139456:139458): PID: 1 - Wait: DISCO - Instancias: 0
-[INFO] 15:17:15:239 proceso/(139456:139458): PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCK
-[INFO] 15:17:15:239 proceso/(139456:139458): PID: 1 - Bloqueado por: IO
-[INFO] 15:17:15:239 proceso/(139456:139458): PID: 1 - Ejecuta IO: 10
-[INFO] 15:17:18:149 proceso/(139456:139465): se conecto una consola
-[INFO] 15:17:18:149 proceso/(139456:139465): Consola mando instrucciones
-[INFO] 15:17:18:149 proceso/(139456:139465): Se crea el proceso 2 en NEW 
-
-[INFO] 15:17:18:149 proceso/(139456:139459): PID: 2 - Estado Anterior: NEW - Estado Actual: READY
-[INFO] 15:17:18:150 proceso/(139456:139458): PID: 2 - Wait: DISCO - Instancias: -1
-[INFO] 15:17:18:150 proceso/(139456:139458): PID: 2 - Estado Anterior: EXEC - Estado Actual: BLOCK
-[INFO] 15:17:18:150 proceso/(139456:139458): PID: 2 - Bloqueado por: DISCO
-[INFO] 15:17:25:240 proceso/(139456:139463): PID: 1 - Estado Anterior: BLOCK - Estado Actual: READY
-[INFO] 15:17:30:242 proceso/(139456:139458): PID: 1 - Estado Anterior: EXEC - Estado Actual: EXIT
-[INFO] 15:17:30:243 proceso/(139456:139458): Finaliza el proceso 1 - Motivo: SUCCESS
-[INFO] 15:25:09:871 proceso/(139557:139562): se conecto una consola
-[INFO] 15:25:09:871 proceso/(139557:139562): Consola mando instrucciones
-[INFO] 15:25:09:871 proceso/(139557:139562): Se crea el proceso 1 en NEW 
-
-[INFO] 15:25:09:872 proceso/(139557:139560): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
-[INFO] 15:25:09:872 proceso/(139557:139559): PID: 1 - Wait: DISCO - Instancias: 0
-[INFO] 15:25:09:872 proceso/(139557:139559): PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCK
-[INFO] 15:25:09:872 proceso/(139557:139559): PID: 1 - Bloqueado por: IO
-[INFO] 15:25:09:872 proceso/(139557:139559): PID: 1 - Ejecuta IO: 10
-[INFO] 15:25:10:813 proceso/(139557:139565): se conecto una consola
-[INFO] 15:25:10:813 proceso/(139557:139565): Consola mando instrucciones
-[INFO] 15:25:10:814 proceso/(139557:139565): Se crea el proceso 2 en NEW 
-
-[INFO] 15:25:10:814 proceso/(139557:139560): PID: 2 - Estado Anterior: NEW - Estado Actual: READY
-[INFO] 15:25:10:814 proceso/(139557:139559): PID: 2 - Wait: DISCO - Instancias: -1
-[INFO] 15:25:10:814 proceso/(139557:139559): PID: 2 - Estado Anterior: EXEC - Estado Actual: BLOCK
-[INFO] 15:25:10:814 proceso/(139557:139559): PID: 2 - Bloqueado por: DISCO
-[INFO] 15:25:19:873 proceso/(139557:139563): PID: 1 - Estado Anterior: BLOCK - Estado Actual: READY
-[INFO] 15:25:24:873 proceso/(139557:139559): PID: 1 - Estado Anterior: EXEC - Estado Actual: EXIT
-[INFO] 15:25:24:874 proceso/(139557:139559): Finaliza el proceso 1 - Motivo: SUCCESS
-[INFO] 15:28:21:299 proceso/(139557:139589): se conecto una consola
-[INFO] 15:28:21:299 proceso/(139557:139589): Consola mando instrucciones
-[INFO] 15:28:21:300 proceso/(139557:139589): Se crea el proceso 3 en NEW 
-
-[INFO] 15:28:21:300 proceso/(139557:139560): PID: 3 - Estado Anterior: NEW - Estado Actual: READY
-[INFO] 15:28:21:300 proceso/(139557:139559): PID: 3 - Wait: DISCO - Instancias: -2
-[INFO] 15:28:21:300 proceso/(139557:139559): PID: 3 - Estado Anterior: EXEC - Estado Actual: BLOCK
-[INFO] 15:28:21:300 proceso/(139557:139559): PID: 3 - Bloqueado por: DISCO
-[INFO] 15:28:47:860 proceso/(139557:139608): se conecto una consola
-[INFO] 15:28:47:860 proceso/(139557:139608): Consola mando instrucciones
-[INFO] 15:28:47:860 proceso/(139557:139608): Se crea el proceso 4 en NEW 
-
-[INFO] 15:28:47:860 proceso/(139557:139560): PID: 4 - Estado Anterior: NEW - Estado Actual: READY
-[INFO] 15:28:47:861 proceso/(139557:139559): PID: 4 - Wait: DISCO - Instancias: -3
-[INFO] 15:28:47:861 proceso/(139557:139559): PID: 4 - Estado Anterior: EXEC - Estado Actual: BLOCK
-[INFO] 15:28:47:861 proceso/(139557:139559): PID: 4 - Bloqueado por: DISCO
-[INFO] 15:29:09:412 proceso/(139557:139610): se conecto una consola
-[INFO] 15:29:09:412 proceso/(139557:139610): Consola mando instrucciones
-[INFO] 15:29:09:412 proceso/(139557:139610): Se crea el proceso 5 en NEW 
-
-[INFO] 15:29:09:412 proceso/(139557:139560): PID: 5 - Estado Anterior: NEW - Estado Actual: READY
-[INFO] 15:29:09:413 proceso/(139557:139559): PID: 5 - Wait: DISCO - Instancias: -4
-[INFO] 15:29:09:413 proceso/(139557:139559): PID: 5 - Estado Anterior: EXEC - Estado Actual: BLOCK
-[INFO] 15:29:09:413 proceso/(139557:139559): PID: 5 - Bloqueado por: DISCO
-[INFO] 15:33:50:371 proceso/(139688:139693): se conecto una consola
-[INFO] 15:33:50:372 proceso/(139688:139693): Consola mando instrucciones
-[INFO] 15:33:50:372 proceso/(139688:139693): Se crea el proceso 1 en NEW 
-
-[INFO] 15:33:50:373 proceso/(139688:139691): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
-[INFO] 15:33:50:373 proceso/(139688:139690): PID: 1 - Wait: DISCO - Instancias: 0
-[INFO] 15:33:50:373 proceso/(139688:139690): PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCK
-[INFO] 15:33:50:373 proceso/(139688:139690): PID: 1 - Bloqueado por: IO
-[INFO] 15:33:50:373 proceso/(139688:139690): PID: 1 - Ejecuta IO: 10
-[INFO] 15:33:55:588 proceso/(139688:139696): se conecto una consola
-[INFO] 15:33:55:589 proceso/(139688:139696): Consola mando instrucciones
-[INFO] 15:33:55:589 proceso/(139688:139696): Se crea el proceso 2 en NEW 
-
-[INFO] 15:33:55:589 proceso/(139688:139691): PID: 2 - Estado Anterior: NEW - Estado Actual: READY
-[INFO] 15:33:55:589 proceso/(139688:139690): PID: 2 - Wait: DISCO - Instancias: -1
-[INFO] 15:33:55:589 proceso/(139688:139690): PID: 2 - Estado Anterior: EXEC - Estado Actual: BLOCK
-[INFO] 15:33:55:589 proceso/(139688:139690): PID: 2 - Bloqueado por: DISCO
-[INFO] 15:34:00:373 proceso/(139688:139694): PID: 1 - Estado Anterior: BLOCK - Estado Actual: READY
-[INFO] 15:34:05:374 proceso/(139688:139690): PID: 1 - Estado Anterior: EXEC - Estado Actual: EXIT
-[INFO] 15:34:05:374 proceso/(139688:139690): Finaliza el proceso 1 - Motivo: SUCCESS
-[INFO] 15:38:20:964 proceso/(139747:139752): se conecto una consola
-[INFO] 15:38:20:965 proceso/(139747:139752): Consola mando instrucciones
-[INFO] 15:38:20:965 proceso/(139747:139752): Se crea el proceso 1 en NEW 
-
-[INFO] 15:38:20:965 proceso/(139747:139750): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
-[INFO] 15:38:20:966 proceso/(139747:139749): PID: 1 - Wait: DISCO - Instancias: 0
-[INFO] 15:38:20:966 proceso/(139747:139749): PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCK
-[INFO] 15:38:20:966 proceso/(139747:139749): PID: 1 - Bloqueado por: IO
-[INFO] 15:38:20:966 proceso/(139747:139749): PID: 1 - Ejecuta IO: 10
-[INFO] 15:38:24:203 proceso/(139747:139755): se conecto una consola
-[INFO] 15:38:24:204 proceso/(139747:139755): Consola mando instrucciones
-[INFO] 15:38:24:204 proceso/(139747:139755): Se crea el proceso 2 en NEW 
-
-[INFO] 15:38:24:204 proceso/(139747:139750): PID: 2 - Estado Anterior: NEW - Estado Actual: READY
-[INFO] 15:38:24:204 proceso/(139747:139749): PID: 2 - Wait: DISCO - Instancias: -1
-[INFO] 15:38:24:204 proceso/(139747:139749): PID: 2 - Estado Anterior: EXEC - Estado Actual: BLOCK
-[INFO] 15:38:24:204 proceso/(139747:139749): PID: 2 - Bloqueado por: DISCO
-[INFO] 15:38:30:967 proceso/(139747:139753): PID: 1 - Estado Anterior: BLOCK - Estado Actual: READY
-[INFO] 15:38:35:969 proceso/(139747:139749): PID: 1 - Estado Anterior: EXEC - Estado Actual: EXIT
-[INFO] 15:38:35:970 proceso/(139747:139749): Finaliza el proceso 1 - Motivo: SUCCESS
-[INFO] 15:40:42:266 proceso/(139948:139953): se conecto una consola
-[INFO] 15:40:42:266 proceso/(139948:139953): Consola mando instrucciones
-[INFO] 15:40:42:267 proceso/(139948:139953): Se crea el proceso 1 en NEW 
-
-[INFO] 15:40:42:267 proceso/(139948:139951): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
-[INFO] 15:40:42:267 proceso/(139948:139950): PID: 1 - Wait: DISCO - Instancias: 0
-[INFO] 15:40:42:267 proceso/(139948:139950): PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCK
-[INFO] 15:40:42:267 proceso/(139948:139950): PID: 1 - Bloqueado por: IO
-[INFO] 15:40:42:267 proceso/(139948:139950): PID: 1 - Ejecuta IO: 10
-[INFO] 15:40:43:953 proceso/(139948:139956): se conecto una consola
-[INFO] 15:40:43:954 proceso/(139948:139956): Consola mando instrucciones
-[INFO] 15:40:43:954 proceso/(139948:139956): Se crea el proceso 2 en NEW 
-
-[INFO] 15:40:43:954 proceso/(139948:139951): PID: 2 - Estado Anterior: NEW - Estado Actual: READY
-[INFO] 15:40:43:954 proceso/(139948:139950): PID: 2 - Wait: DISCO - Instancias: -1
-[INFO] 15:40:43:954 proceso/(139948:139950): PID: 2 - Estado Anterior: EXEC - Estado Actual: BLOCK
-[INFO] 15:40:43:954 proceso/(139948:139950): PID: 2 - Bloqueado por: DISCO
-[WARNING] 15:40:52:268 proceso/(139948:139954): Sigue en Ready
-
-[INFO] 16:09:20:208 proceso/(140436:140441): se conecto una consola
-[INFO] 16:09:20:208 proceso/(140436:140441): Consola mando instrucciones
-[INFO] 16:09:20:208 proceso/(140436:140441): Se crea el proceso 1 en NEW 
-
-[INFO] 16:09:20:209 proceso/(140436:140439): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
-[INFO] 16:11:36:309 proceso/(140606:140611): se conecto una consola
-[INFO] 16:11:36:310 proceso/(140606:140611): Consola mando instrucciones
-[INFO] 16:11:36:311 proceso/(140606:140611): Se crea el proceso 1 en NEW 
-
-[INFO] 16:11:36:311 proceso/(140606:140609): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
-[INFO] 16:18:20:446 proceso/(140763:140768): se conecto una consola
-[INFO] 16:18:20:447 proceso/(140763:140768): Consola mando instrucciones
-[INFO] 16:18:20:447 proceso/(140763:140768): Se crea el proceso 1 en NEW 
-
-[INFO] 16:18:20:447 proceso/(140763:140766): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
-[INFO] 16:18:20:448 proceso/(140763:140765): PID: 1 - Wait: DISCO - Instancias: 0
-[WARNING] 16:18:20:448 proceso/(140763:140765): proceso_que_sigue_en_exec: 1
-[INFO] 16:18:20:448 proceso/(140763:140765): PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCK
-[INFO] 16:18:20:448 proceso/(140763:140765): PID: 1 - Bloqueado por: IO
-[INFO] 16:18:20:448 proceso/(140763:140765): PID: 1 - Ejecuta IO: 10
-[INFO] 16:18:22:213 proceso/(140763:140771): se conecto una consola
-[INFO] 16:18:22:213 proceso/(140763:140771): Consola mando instrucciones
-[INFO] 16:18:22:214 proceso/(140763:140771): Se crea el proceso 2 en NEW 
-
-[INFO] 16:18:22:214 proceso/(140763:140766): PID: 2 - Estado Anterior: NEW - Estado Actual: READY
-[INFO] 16:18:22:214 proceso/(140763:140765): PID: 2 - Wait: DISCO - Instancias: -1
-[INFO] 16:18:22:214 proceso/(140763:140765): PID: 2 - Estado Anterior: EXEC - Estado Actual: BLOCK
-[INFO] 16:18:22:214 proceso/(140763:140765): PID: 2 - Bloqueado por: DISCO
-[INFO] 16:18:30:449 proceso/(140763:140769): PID: 1 - Estado Anterior: BLOCK - Estado Actual: READY
-[INFO] 16:18:35:450 proceso/(140763:140765): PID: 1 - Estado Anterior: EXEC - Estado Actual: EXIT
-[INFO] 16:18:35:452 proceso/(140763:140765): Finaliza el proceso 1 - Motivo: SUCCESS
-[INFO] 16:24:06:765 proceso/(140853:140858): se conecto una consola
-[INFO] 16:24:06:767 proceso/(140853:140858): Consola mando instrucciones
-[INFO] 16:24:06:767 proceso/(140853:140858): Se crea el proceso 1 en NEW 
-
-[INFO] 16:24:06:767 proceso/(140853:140856): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
-[INFO] 16:24:06:768 proceso/(140853:140855): PID: 1 - Wait: DISCO - Instancias: 0
-[WARNING] 16:24:06:768 proceso/(140853:140855): proceso_que_sigue_en_exec: 1
-[INFO] 16:24:06:768 proceso/(140853:140855): PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCK
-[INFO] 16:24:06:768 proceso/(140853:140855): PID: 1 - Bloqueado por: IO
-[INFO] 16:24:06:768 proceso/(140853:140855): PID: 1 - Ejecuta IO: 10
-[INFO] 16:24:08:627 proceso/(140853:140861): se conecto una consola
-[INFO] 16:24:08:628 proceso/(140853:140861): Consola mando instrucciones
-[INFO] 16:24:08:628 proceso/(140853:140861): Se crea el proceso 2 en NEW 
-
-[INFO] 16:24:08:628 proceso/(140853:140856): PID: 2 - Estado Anterior: NEW - Estado Actual: READY
-[INFO] 16:24:08:628 proceso/(140853:140855): PID: 2 - Wait: DISCO - Instancias: -1
-[INFO] 16:24:08:628 proceso/(140853:140855): PID: 2 - Estado Anterior: EXEC - Estado Actual: BLOCK
-[INFO] 16:24:08:628 proceso/(140853:140855): PID: 2 - Bloqueado por: DISCO
-[INFO] 16:24:16:769 proceso/(140853:140859): PID: 1 - Estado Anterior: BLOCK - Estado Actual: READY
-[INFO] 16:24:21:772 proceso/(140853:140855): PID: 1 - Estado Anterior: EXEC - Estado Actual: EXIT
-[INFO] 16:24:21:774 proceso/(140853:140855): Finaliza el proceso 1 - Motivo: SUCCESS
-[INFO] 16:27:46:529 proceso/(140933:140938): se conecto una consola
-[INFO] 16:27:46:530 proceso/(140933:140938): Consola mando instrucciones
-[INFO] 16:27:46:530 proceso/(140933:140938): Se crea el proceso 1 en NEW 
-
-[INFO] 16:27:46:531 proceso/(140933:140936): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
-[WARNING] 16:27:46:532 proceso/(140933:140935): respuesta esperar_cpu: 3
-[INFO] 16:27:46:532 proceso/(140933:140935): PID: 1 - Wait: DISCO - Instancias: 0
-[WARNING] 16:27:46:532 proceso/(140933:140935): proceso_que_sigue_en_exec: 1
-[WARNING] 16:27:46:532 proceso/(140933:140935): respuesta esperar_cpu: 1
-[INFO] 16:27:46:532 proceso/(140933:140935): PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCK
-[INFO] 16:27:46:532 proceso/(140933:140935): PID: 1 - Bloqueado por: IO
-[INFO] 16:27:46:532 proceso/(140933:140935): PID: 1 - Ejecuta IO: 10
-[INFO] 16:27:48:272 proceso/(140933:140941): se conecto una consola
-[INFO] 16:27:48:272 proceso/(140933:140941): Consola mando instrucciones
-[INFO] 16:27:48:272 proceso/(140933:140941): Se crea el proceso 2 en NEW 
-
-[INFO] 16:27:48:272 proceso/(140933:140936): PID: 2 - Estado Anterior: NEW - Estado Actual: READY
-[WARNING] 16:27:48:273 proceso/(140933:140935): respuesta esperar_cpu: 3
-[INFO] 16:27:48:273 proceso/(140933:140935): PID: 2 - Wait: DISCO - Instancias: -1
-[INFO] 16:27:48:273 proceso/(140933:140935): PID: 2 - Estado Anterior: EXEC - Estado Actual: BLOCK
-[INFO] 16:27:48:273 proceso/(140933:140935): PID: 2 - Bloqueado por: DISCO
-[WARNING] 16:27:56:533 proceso/(140933:140939): 1 Nuevo proceso para a Ready
-
-[INFO] 16:31:38:870 proceso/(141004:141009): se conecto una consola
-[INFO] 16:31:38:871 proceso/(141004:141009): Consola mando instrucciones
-[INFO] 16:31:38:871 proceso/(141004:141009): Se crea el proceso 1 en NEW 
-
-[INFO] 16:31:38:871 proceso/(141004:141007): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
-[WARNING] 16:31:38:871 proceso/(141004:141006): respuesta esperar_cpu: 3
-[INFO] 16:31:38:871 proceso/(141004:141006): PID: 1 - Wait: DISCO - Instancias: 0
-[WARNING] 16:31:38:871 proceso/(141004:141006): proceso_que_sigue_en_exec: 1
-[WARNING] 16:31:38:871 proceso/(141004:141006): respuesta esperar_cpu: 1
-[INFO] 16:31:38:871 proceso/(141004:141006): PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCK
-[INFO] 16:31:38:871 proceso/(141004:141006): PID: 1 - Bloqueado por: IO
-[INFO] 16:31:38:871 proceso/(141004:141006): PID: 1 - Ejecuta IO: 10
-[INFO] 16:31:42:197 proceso/(141004:141012): se conecto una consola
-[INFO] 16:31:42:198 proceso/(141004:141012): Consola mando instrucciones
-[INFO] 16:31:42:198 proceso/(141004:141012): Se crea el proceso 2 en NEW 
-
-[INFO] 16:31:42:198 proceso/(141004:141007): PID: 2 - Estado Anterior: NEW - Estado Actual: READY
-[WARNING] 16:31:42:198 proceso/(141004:141006): respuesta esperar_cpu: 3
-[INFO] 16:31:42:198 proceso/(141004:141006): PID: 2 - Wait: DISCO - Instancias: -1
-[INFO] 16:31:42:198 proceso/(141004:141006): PID: 2 - Estado Anterior: EXEC - Estado Actual: BLOCK
-[INFO] 16:31:42:198 proceso/(141004:141006): PID: 2 - Bloqueado por: DISCO
-[WARNING] 16:31:48:872 proceso/(141004:141010): 1 Nuevo proceso para a Ready
-
-[INFO] 16:45:27:819 proceso/(141597:141602): se conecto una consola
-[INFO] 16:45:27:820 proceso/(141597:141602): Consola mando instrucciones
-[INFO] 16:45:27:820 proceso/(141597:141602): Se crea el proceso 1 en NEW 
-
-[INFO] 16:45:27:821 proceso/(141597:141600): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
-[WARNING] 16:45:27:822 proceso/(141597:141599): respuesta esperar_cpu: 3
-[WARNING] 16:45:27:822 proceso/(141597:141599): Entro en wait_recurso
-
-[WARNING] 16:45:27:822 proceso/(141597:141599): Entro en wait if(existe_recurso)
-
-[INFO] 16:45:27:822 proceso/(141597:141599): PID: 1 - Wait: DISCO - Instancias: 0
-[WARNING] 16:45:27:822 proceso/(141597:141599): proceso_que_sigue_en_exec: 1
-[WARNING] 16:45:27:822 proceso/(141597:141599): proceso_que_sigue_en_exec = 0
-[WARNING] 16:45:27:822 proceso/(141597:141599): respuesta esperar_cpu: 1
-[INFO] 16:45:27:822 proceso/(141597:141599): PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCK
-[INFO] 16:45:27:822 proceso/(141597:141599): PID: 1 - Bloqueado por: IO
-[INFO] 16:45:27:822 proceso/(141597:141599): PID: 1 - Ejecuta IO: 10
-[INFO] 16:45:31:726 proceso/(141597:141605): se conecto una consola
-[INFO] 16:45:31:726 proceso/(141597:141605): Consola mando instrucciones
-[INFO] 16:45:31:726 proceso/(141597:141605): Se crea el proceso 2 en NEW 
-
-[INFO] 16:45:31:726 proceso/(141597:141600): PID: 2 - Estado Anterior: NEW - Estado Actual: READY
-[WARNING] 16:45:31:726 proceso/(141597:141599): respuesta esperar_cpu: 3
-[WARNING] 16:45:31:726 proceso/(141597:141599): Entro en wait_recurso
-
-[WARNING] 16:45:31:726 proceso/(141597:141599): Entro en wait if(existe_recurso)
-
-[INFO] 16:45:31:726 proceso/(141597:141599): PID: 2 - Wait: DISCO - Instancias: -1
-[INFO] 16:45:31:726 proceso/(141597:141599): PID: 2 - Estado Anterior: EXEC - Estado Actual: BLOCK
-[INFO] 16:45:31:726 proceso/(141597:141599): PID: 2 - Bloqueado por: DISCO
-[WARNING] 16:45:37:823 proceso/(141597:141603): 1 Nuevo proceso para a Ready
-
-[INFO] 16:53:48:411 proceso/(141778:141783): se conecto una consola
-[INFO] 16:53:48:412 proceso/(141778:141783): Consola mando instrucciones
-[INFO] 16:53:48:412 proceso/(141778:141783): Se crea el proceso 1 en NEW 
-
-[INFO] 16:53:48:412 proceso/(141778:141781): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
-[WARNING] 16:53:48:412 proceso/(141778:141780): entro a obtener_proximo_a_ejecutar
-[WARNING] 16:53:48:412 proceso/(141778:141780): respuesta esperar_cpu: 3
-[WARNING] 16:53:48:413 proceso/(141778:141780): Entro en wait_recurso
-
-[WARNING] 16:53:48:413 proceso/(141778:141780): Entro en wait if(existe_recurso)
-
-[INFO] 16:53:48:413 proceso/(141778:141780): PID: 1 - Wait: DISCO - Instancias: 0
-[WARNING] 16:53:48:413 proceso/(141778:141780): proceso_que_sigue_en_exec = 1
-[WARNING] 16:53:48:413 proceso/(141778:141780): entro a obtener_proximo_a_ejecutar
-[WARNING] 16:53:48:413 proceso/(141778:141780): proceso_que_sigue_en_exec = 0
-[WARNING] 16:53:48:413 proceso/(141778:141780): respuesta esperar_cpu: 1
-[INFO] 16:53:48:413 proceso/(141778:141780): PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCK
-[INFO] 16:53:48:413 proceso/(141778:141780): PID: 1 - Bloqueado por: IO
-[INFO] 16:53:48:413 proceso/(141778:141780): PID: 1 - Ejecuta IO: 10
-[INFO] 16:53:49:777 proceso/(141778:141786): se conecto una consola
-[INFO] 16:53:49:777 proceso/(141778:141786): Consola mando instrucciones
-[INFO] 16:53:49:777 proceso/(141778:141786): Se crea el proceso 2 en NEW 
-
-[INFO] 16:53:49:777 proceso/(141778:141781): PID: 2 - Estado Anterior: NEW - Estado Actual: READY
-[WARNING] 16:53:49:777 proceso/(141778:141780): entro a obtener_proximo_a_ejecutar
-[WARNING] 16:53:49:777 proceso/(141778:141780): respuesta esperar_cpu: 3
-[WARNING] 16:53:49:777 proceso/(141778:141780): Entro en wait_recurso
-
-[WARNING] 16:53:49:777 proceso/(141778:141780): Entro en wait if(existe_recurso)
-
-[INFO] 16:53:49:777 proceso/(141778:141780): PID: 2 - Wait: DISCO - Instancias: -1
-[INFO] 16:53:49:777 proceso/(141778:141780): PID: 2 - Estado Anterior: EXEC - Estado Actual: BLOCK
-[INFO] 16:53:49:777 proceso/(141778:141780): PID: 2 - Bloqueado por: DISCO
-[WARNING] 16:53:58:414 proceso/(141778:141784): 1 Nuevo proceso para a Ready
-
-[INFO] 16:53:58:414 proceso/(141778:141784): PID: 1 - Estado Anterior: BLOCK - Estado Actual: READY
-[WARNING] 16:53:58:414 proceso/(141778:141780): entro a obtener_proximo_a_ejecutar
-[WARNING] 16:53:58:415 proceso/(141778:141780): respuesta esperar_cpu: 0
-[WARNING] 16:53:58:415 proceso/(141778:141780): 1 Nuevo proceso para a Ready
-
-[WARNING] 16:53:58:415 proceso/(141778:141780): entro a obtener_proximo_a_ejecutar
-[WARNING] 16:54:03:417 proceso/(141778:141780): respuesta esperar_cpu: 4
-[WARNING] 16:54:03:417 proceso/(141778:141780): se llego a SIGNAL_EJECUTADO
-[WARNING] 16:54:03:417 proceso/(141778:141780): Entro en signal_recurso
-
-[WARNING] 16:54:03:417 proceso/(141778:141780): Entro en signal if(existe_recurso)
-
-[INFO] 16:54:03:418 proceso/(141778:141780): PID: 1 - Signal: DISCO - Instancias: 0
-[WARNING] 16:54:03:418 proceso/(141778:141780): 2 Nuevo proceso para a Ready
-
-[INFO] 16:54:03:418 proceso/(141778:141780): PID: 2 - Estado Anterior: BLOCK - Estado Actual: READY
-[WARNING] 16:54:03:418 proceso/(141778:141780): proceso_que_sigue_en_exec = 1
-[WARNING] 16:54:03:418 proceso/(141778:141780): entro a obtener_proximo_a_ejecutar
-[WARNING] 16:54:03:418 proceso/(141778:141780): proceso_que_sigue_en_exec = 0
-[WARNING] 16:54:03:419 proceso/(141778:141780): respuesta esperar_cpu: 2
-[INFO] 16:54:03:420 proceso/(141778:141780): PID: 1 - Estado Anterior: EXEC - Estado Actual: EXIT
-[INFO] 16:54:03:420 proceso/(141778:141780): Finaliza el proceso 1 - Motivo: SUCCESS
-[WARNING] 16:54:03:420 proceso/(141778:141780): entro a obtener_proximo_a_ejecutar
-[WARNING] 16:54:03:421 proceso/(141778:141780): respuesta esperar_cpu: 1
-[INFO] 16:54:03:421 proceso/(141778:141780): PID: 2 - Estado Anterior: EXEC - Estado Actual: BLOCK
-[INFO] 16:54:03:421 proceso/(141778:141780): PID: 2 - Bloqueado por: IO
-[INFO] 16:54:03:421 proceso/(141778:141780): PID: 2 - Ejecuta IO: 10
-[WARNING] 16:54:13:421 proceso/(141778:141787): 2 Nuevo proceso para a Ready
-
-[INFO] 16:54:13:422 proceso/(141778:141787): PID: 2 - Estado Anterior: BLOCK - Estado Actual: READY
-[WARNING] 16:54:13:422 proceso/(141778:141780): entro a obtener_proximo_a_ejecutar
-[WARNING] 16:54:13:422 proceso/(141778:141780): respuesta esperar_cpu: 0
-[WARNING] 16:54:13:423 proceso/(141778:141780): 2 Nuevo proceso para a Ready
-
-[WARNING] 16:54:13:423 proceso/(141778:141780): entro a obtener_proximo_a_ejecutar
-[WARNING] 16:54:18:424 proceso/(141778:141780): respuesta esperar_cpu: 4
-[WARNING] 16:54:18:424 proceso/(141778:141780): se llego a SIGNAL_EJECUTADO
-[WARNING] 16:54:18:425 proceso/(141778:141780): Entro en signal_recurso
-
-[WARNING] 16:54:18:425 proceso/(141778:141780): Entro en signal if(existe_recurso)
-
-[INFO] 16:54:18:425 proceso/(141778:141780): PID: 2 - Signal: DISCO - Instancias: 1
-[INFO] 17:11:36:201 proceso/(141956:141961): se conecto una consola
-[INFO] 17:11:36:201 proceso/(141956:141961): Consola mando instrucciones
-[INFO] 17:11:36:201 proceso/(141956:141961): Se crea el proceso 1 en NEW 
-
-[INFO] 17:11:36:202 proceso/(141956:141959): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
-[WARNING] 17:11:36:202 proceso/(141956:141958): Proximo a ejecutar: 1
-[WARNING] 17:11:36:203 proceso/(141956:141958): respuesta esperar_cpu: 3
-[WARNING] 17:11:36:203 proceso/(141956:141958): Entro en wait_recurso
-[WARNING] 17:11:36:203 proceso/(141956:141958): Entro en wait if(existe_recurso)
-[INFO] 17:11:36:203 proceso/(141956:141958): PID: 1 - Wait: DISCO - Instancias: 0
-[WARNING] 17:11:36:203 proceso/(141956:141958): proceso_que_sigue_en_exec = 1
-[WARNING] 17:11:36:203 proceso/(141956:141958): proceso_que_sigue_en_exec = 0
-[WARNING] 17:11:36:203 proceso/(141956:141958): Proximo a ejecutar: 1
-[WARNING] 17:11:36:203 proceso/(141956:141958): respuesta esperar_cpu: 1
-[INFO] 17:11:36:203 proceso/(141956:141958): PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCK
-[INFO] 17:11:36:203 proceso/(141956:141958): PID: 1 - Bloqueado por: IO
-[INFO] 17:11:36:203 proceso/(141956:141958): PID: 1 - Ejecuta IO: 10
-[INFO] 17:11:37:914 proceso/(141956:141964): se conecto una consola
-[INFO] 17:11:37:914 proceso/(141956:141964): Consola mando instrucciones
-[INFO] 17:11:37:914 proceso/(141956:141964): Se crea el proceso 2 en NEW 
-
-[INFO] 17:11:37:914 proceso/(141956:141959): PID: 2 - Estado Anterior: NEW - Estado Actual: READY
-[WARNING] 17:11:37:914 proceso/(141956:141958): Proximo a ejecutar: 2
-[WARNING] 17:11:37:914 proceso/(141956:141958): respuesta esperar_cpu: 3
-[WARNING] 17:11:37:915 proceso/(141956:141958): Entro en wait_recurso
-[WARNING] 17:11:37:915 proceso/(141956:141958): Entro en wait if(existe_recurso)
-[INFO] 17:11:37:915 proceso/(141956:141958): PID: 2 - Wait: DISCO - Instancias: -1
-[INFO] 17:11:37:915 proceso/(141956:141958): PID: 2 - Estado Anterior: EXEC - Estado Actual: BLOCK
-[INFO] 17:11:37:915 proceso/(141956:141958): PID: 2 - Bloqueado por: DISCO
-[WARNING] 17:11:46:203 proceso/(141956:141962): 1 Nuevo proceso para Ready
-
-[INFO] 17:11:46:203 proceso/(141956:141962): PID: 1 - Estado Anterior: BLOCK - Estado Actual: READY
-[WARNING] 17:11:46:203 proceso/(141956:141958): Proximo a ejecutar: 1
-[WARNING] 17:11:46:204 proceso/(141956:141958): respuesta esperar_cpu: 0
-[WARNING] 17:11:46:204 proceso/(141956:141958): 1 Nuevo proceso para Ready
-
-[INFO] 17:11:46:204 proceso/(141956:141958): PID: 1 - Estado Anterior: EXEC - Estado Actual: READY
-[WARNING] 17:11:46:204 proceso/(141956:141958): Proximo a ejecutar: 1
-[WARNING] 17:11:51:205 proceso/(141956:141958): respuesta esperar_cpu: 4
-[WARNING] 17:11:51:205 proceso/(141956:141958): se llego a SIGNAL_EJECUTADO
-[WARNING] 17:11:51:206 proceso/(141956:141958): Entro en signal_recurso
-[WARNING] 17:11:51:206 proceso/(141956:141958): Entro en signal if(existe_recurso)
-[INFO] 17:11:51:206 proceso/(141956:141958): PID: 1 - Signal: DISCO - Instancias: 0
-[WARNING] 17:11:51:207 proceso/(141956:141958): 2 Nuevo proceso para Ready
-
-[INFO] 17:11:51:207 proceso/(141956:141958): PID: 2 - Estado Anterior: BLOCK - Estado Actual: READY
-[WARNING] 17:11:51:207 proceso/(141956:141958): proceso_que_sigue_en_exec = 1
-[WARNING] 17:11:51:207 proceso/(141956:141958): proceso_que_sigue_en_exec = 0
-[WARNING] 17:11:51:208 proceso/(141956:141958): Proximo a ejecutar: 1
-[WARNING] 17:11:51:208 proceso/(141956:141958): respuesta esperar_cpu: 2
-[INFO] 17:11:51:209 proceso/(141956:141958): PID: 1 - Estado Anterior: EXEC - Estado Actual: EXIT
-[INFO] 17:11:51:209 proceso/(141956:141958): Finaliza el proceso 1 - Motivo: SUCCESS
-[WARNING] 17:11:51:209 proceso/(141956:141958): Proximo a ejecutar: 2
-[WARNING] 17:11:51:209 proceso/(141956:141958): respuesta esperar_cpu: 1
-[INFO] 17:11:51:209 proceso/(141956:141958): PID: 2 - Estado Anterior: EXEC - Estado Actual: BLOCK
-[INFO] 17:11:51:209 proceso/(141956:141958): PID: 2 - Bloqueado por: IO
-[INFO] 17:11:51:209 proceso/(141956:141958): PID: 2 - Ejecuta IO: 10
-[WARNING] 17:12:01:209 proceso/(141956:141965): 2 Nuevo proceso para Ready
-
-[INFO] 17:12:01:210 proceso/(141956:141965): PID: 2 - Estado Anterior: BLOCK - Estado Actual: READY
-[WARNING] 17:12:01:210 proceso/(141956:141958): Proximo a ejecutar: 2
-[WARNING] 17:12:01:210 proceso/(141956:141958): respuesta esperar_cpu: 0
-[WARNING] 17:12:01:211 proceso/(141956:141958): 2 Nuevo proceso para Ready
-
-[INFO] 17:12:01:211 proceso/(141956:141958): PID: 2 - Estado Anterior: EXEC - Estado Actual: READY
-[WARNING] 17:12:01:211 proceso/(141956:141958): Proximo a ejecutar: 2
-[WARNING] 17:12:06:212 proceso/(141956:141958): respuesta esperar_cpu: 4
-[WARNING] 17:12:06:213 proceso/(141956:141958): se llego a SIGNAL_EJECUTADO
-[WARNING] 17:12:06:213 proceso/(141956:141958): Entro en signal_recurso
-[WARNING] 17:12:06:214 proceso/(141956:141958): Entro en signal if(existe_recurso)
-[INFO] 17:12:06:214 proceso/(141956:141958): PID: 2 - Signal: DISCO - Instancias: 1
-[WARNING] 17:12:06:214 proceso/(141956:141958): proceso_que_sigue_en_exec = 2
-[WARNING] 17:12:06:214 proceso/(141956:141958): proceso_que_sigue_en_exec = 0
-[WARNING] 17:12:06:215 proceso/(141956:141958): Proximo a ejecutar: 2
-[WARNING] 17:12:06:216 proceso/(141956:141958): respuesta esperar_cpu: 2
-[INFO] 17:12:06:217 proceso/(141956:141958): PID: 2 - Estado Anterior: EXEC - Estado Actual: EXIT
-[INFO] 17:12:06:217 proceso/(141956:141958): Finaliza el proceso 2 - Motivo: SUCCESS
-[INFO] 19:12:49:017 proceso/(142685:142690): se conecto una consola
-[INFO] 19:12:49:018 proceso/(142685:142690): Consola mando instrucciones
-[INFO] 19:12:49:018 proceso/(142685:142690): Se crea el proceso 1 en NEW 
-
-[INFO] 19:12:49:018 proceso/(142685:142688): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
-[WARNING] 19:12:49:018 proceso/(142685:142687): Proximo a ejecutar: 1
-[INFO] 19:12:49:019 proceso/(142685:142687): PID: 1 - Wait: RECURSO_1 - Instancias: 1
-[WARNING] 19:12:49:019 proceso/(142685:142687): proceso_que_sigue_en_exec = 1
-[WARNING] 19:12:49:019 proceso/(142685:142687): proceso_que_sigue_en_exec = 0
-[WARNING] 19:12:49:019 proceso/(142685:142687): Proximo a ejecutar: 1
-[INFO] 19:12:49:019 proceso/(142685:142687): PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCK
-[INFO] 19:12:49:019 proceso/(142685:142687): PID: 1 - Bloqueado por: IO
-[INFO] 19:12:49:019 proceso/(142685:142687): PID: 1 - Ejecuta IO: 15
-[INFO] 19:12:49:659 proceso/(142685:142693): se conecto una consola
-[INFO] 19:12:49:659 proceso/(142685:142693): Consola mando instrucciones
-[INFO] 19:12:49:659 proceso/(142685:142693): Se crea el proceso 2 en NEW 
-
-[INFO] 19:12:49:659 proceso/(142685:142688): PID: 2 - Estado Anterior: NEW - Estado Actual: READY
-[WARNING] 19:12:49:659 proceso/(142685:142687): Proximo a ejecutar: 2
-[INFO] 19:12:49:659 proceso/(142685:142687): PID: 2 - Wait: RECURSO_1 - Instancias: 0
-[WARNING] 19:12:49:659 proceso/(142685:142687): proceso_que_sigue_en_exec = 2
-[WARNING] 19:12:49:659 proceso/(142685:142687): proceso_que_sigue_en_exec = 0
-[WARNING] 19:12:49:659 proceso/(142685:142687): Proximo a ejecutar: 2
-[INFO] 19:12:49:659 proceso/(142685:142687): PID: 2 - Estado Anterior: EXEC - Estado Actual: BLOCK
-[INFO] 19:12:49:659 proceso/(142685:142687): PID: 2 - Bloqueado por: IO
-[INFO] 19:12:49:659 proceso/(142685:142687): PID: 2 - Ejecuta IO: 15
-[INFO] 19:12:52:397 proceso/(142685:142696): se conecto una consola
-[INFO] 19:12:52:397 proceso/(142685:142696): Consola mando instrucciones
-[INFO] 19:12:52:397 proceso/(142685:142696): Se crea el proceso 3 en NEW 
-
-[INFO] 19:12:52:397 proceso/(142685:142688): PID: 3 - Estado Anterior: NEW - Estado Actual: READY
-[WARNING] 19:12:52:397 proceso/(142685:142687): Proximo a ejecutar: 3
-[INFO] 19:12:52:397 proceso/(142685:142687): PID: 3 - Wait: RECURSO_1 - Instancias: -1
-[INFO] 19:12:52:397 proceso/(142685:142687): PID: 3 - Estado Anterior: EXEC - Estado Actual: BLOCK
-[INFO] 19:12:52:397 proceso/(142685:142687): PID: 3 - Bloqueado por: RECURSO_1
-[INFO] 19:13:04:020 proceso/(142685:142691): PID: 1 - Estado Anterior: BLOCK - Estado Actual: READY
-[WARNING] 19:13:04:020 proceso/(142685:142687): Proximo a ejecutar: 1
-[INFO] 19:13:04:020 proceso/(142685:142687): PID: 1 - Estado Anterior: EXEC - Estado Actual: READY
-[WARNING] 19:13:04:020 proceso/(142685:142687): Proximo a ejecutar: 1
-[INFO] 19:13:04:661 proceso/(142685:142694): PID: 2 - Estado Anterior: BLOCK - Estado Actual: READY
-[INFO] 19:13:09:022 proceso/(142685:142687): PID: 1 - Signal: RECURSO_1 - Instancias: 0
-[INFO] 19:13:09:022 proceso/(142685:142687): PID: 3 - Estado Anterior: BLOCK - Estado Actual: READY
-[WARNING] 19:13:09:022 proceso/(142685:142687): proceso_que_sigue_en_exec = 1
-[WARNING] 19:13:09:022 proceso/(142685:142687): proceso_que_sigue_en_exec = 0
-[WARNING] 19:13:09:022 proceso/(142685:142687): Proximo a ejecutar: 1
-[INFO] 19:13:09:024 proceso/(142685:142687): PID: 1 - Estado Anterior: EXEC - Estado Actual: EXIT
-[INFO] 19:13:09:024 proceso/(142685:142687): Finaliza el proceso 1 - Motivo: SUCCESS
-[WARNING] 19:13:09:025 proceso/(142685:142687): Proximo a ejecutar: 2
-[INFO] 19:13:09:026 proceso/(142685:142687): PID: 2 - Estado Anterior: EXEC - Estado Actual: READY
-[WARNING] 19:13:09:026 proceso/(142685:142687): Proximo a ejecutar: 3
-[INFO] 19:13:09:026 proceso/(142685:142687): PID: 3 - Estado Anterior: EXEC - Estado Actual: BLOCK
-[INFO] 19:13:09:026 proceso/(142685:142687): PID: 3 - Bloqueado por: IO
-[INFO] 19:13:09:026 proceso/(142685:142687): PID: 3 - Ejecuta IO: 15
-[WARNING] 19:13:09:026 proceso/(142685:142687): Proximo a ejecutar: 2
-[INFO] 19:13:14:027 proceso/(142685:142687): PID: 2 - Signal: RECURSO_1 - Instancias: 1
-[WARNING] 19:13:14:027 proceso/(142685:142687): proceso_que_sigue_en_exec = 2
-[WARNING] 19:13:14:027 proceso/(142685:142687): proceso_que_sigue_en_exec = 0
-[WARNING] 19:13:14:027 proceso/(142685:142687): Proximo a ejecutar: 2
-[INFO] 19:13:14:028 proceso/(142685:142687): PID: 2 - Estado Anterior: EXEC - Estado Actual: EXIT
-[INFO] 19:13:14:029 proceso/(142685:142687): Finaliza el proceso 2 - Motivo: SUCCESS
-[INFO] 19:13:24:026 proceso/(142685:142697): PID: 3 - Estado Anterior: BLOCK - Estado Actual: READY
-[WARNING] 19:13:24:026 proceso/(142685:142687): Proximo a ejecutar: 3
-[INFO] 19:13:24:028 proceso/(142685:142687): PID: 3 - Estado Anterior: EXEC - Estado Actual: READY
-[WARNING] 19:13:24:028 proceso/(142685:142687): Proximo a ejecutar: 3
-[INFO] 19:13:29:030 proceso/(142685:142687): PID: 3 - Signal: RECURSO_1 - Instancias: 2
-[WARNING] 19:13:29:030 proceso/(142685:142687): proceso_que_sigue_en_exec = 3
-[WARNING] 19:13:29:030 proceso/(142685:142687): proceso_que_sigue_en_exec = 0
-[WARNING] 19:13:29:031 proceso/(142685:142687): Proximo a ejecutar: 3
-[INFO] 19:13:29:032 proceso/(142685:142687): PID: 3 - Estado Anterior: EXEC - Estado Actual: EXIT
-[INFO] 19:13:29:033 proceso/(142685:142687): Finaliza el proceso 3 - Motivo: SUCCESS
-[INFO] 19:24:55:842 proceso/(143084:143089): se conecto una consola
-[INFO] 19:24:55:842 proceso/(143084:143089): Consola mando instrucciones
-[INFO] 19:24:55:842 proceso/(143084:143089): Se crea el proceso 1 en NEW 
-
-[INFO] 19:24:55:842 proceso/(143084:143087): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
-[WARNING] 19:24:55:842 proceso/(143084:143086): Proximo a ejecutar: 1
-[INFO] 19:24:55:842 proceso/(143084:143086): PID: 1 - Wait: RECURSO_1 - Instancias: 1
-[WARNING] 19:24:55:842 proceso/(143084:143086): proceso_que_sigue_en_exec = 1
-[WARNING] 19:24:55:842 proceso/(143084:143086): proceso_que_sigue_en_exec = 0
-[WARNING] 19:24:55:842 proceso/(143084:143086): Proximo a ejecutar: 1
-[INFO] 19:24:55:843 proceso/(143084:143086): PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCK
-[INFO] 19:24:55:843 proceso/(143084:143086): PID: 1 - Bloqueado por: IO
-[INFO] 19:24:55:843 proceso/(143084:143086): PID: 1 - Ejecuta IO: 15
-[INFO] 19:24:57:465 proceso/(143084:143092): se conecto una consola
-[INFO] 19:24:57:466 proceso/(143084:143092): Consola mando instrucciones
-[INFO] 19:24:57:466 proceso/(143084:143092): Se crea el proceso 2 en NEW 
-
-[INFO] 19:24:57:466 proceso/(143084:143087): PID: 2 - Estado Anterior: NEW - Estado Actual: READY
-[WARNING] 19:24:57:466 proceso/(143084:143086): Proximo a ejecutar: 2
-[INFO] 19:24:57:466 proceso/(143084:143086): PID: 2 - Wait: RECURSO_1 - Instancias: 0
-[WARNING] 19:24:57:466 proceso/(143084:143086): proceso_que_sigue_en_exec = 2
-[WARNING] 19:24:57:466 proceso/(143084:143086): proceso_que_sigue_en_exec = 0
-[WARNING] 19:24:57:466 proceso/(143084:143086): Proximo a ejecutar: 2
-[INFO] 19:24:57:466 proceso/(143084:143086): PID: 2 - Estado Anterior: EXEC - Estado Actual: BLOCK
-[INFO] 19:24:57:466 proceso/(143084:143086): PID: 2 - Bloqueado por: IO
-[INFO] 19:24:57:466 proceso/(143084:143086): PID: 2 - Ejecuta IO: 15
-[INFO] 19:24:59:326 proceso/(143084:143095): se conecto una consola
-[INFO] 19:24:59:326 proceso/(143084:143095): Consola mando instrucciones
-[INFO] 19:24:59:326 proceso/(143084:143095): Se crea el proceso 3 en NEW 
-
-[INFO] 19:24:59:326 proceso/(143084:143087): PID: 3 - Estado Anterior: NEW - Estado Actual: READY
-[WARNING] 19:24:59:326 proceso/(143084:143086): Proximo a ejecutar: 3
-[INFO] 19:24:59:326 proceso/(143084:143086): PID: 3 - Wait: RECURSO_1 - Instancias: -1
-[INFO] 19:24:59:326 proceso/(143084:143086): PID: 3 - Estado Anterior: EXEC - Estado Actual: BLOCK
-[INFO] 19:24:59:326 proceso/(143084:143086): PID: 3 - Bloqueado por: RECURSO_1
-[INFO] 19:25:10:843 proceso/(143084:143090): PID: 1 - Estado Anterior: BLOCK - Estado Actual: READY
-[WARNING] 19:25:10:843 proceso/(143084:143086): Proximo a ejecutar: 1
-[INFO] 19:25:10:845 proceso/(143084:143086): PID: 1 - Estado Anterior: EXEC - Estado Actual: READY
-[WARNING] 19:25:10:845 proceso/(143084:143086): Proximo a ejecutar: 1
-[INFO] 19:25:12:466 proceso/(143084:143093): PID: 2 - Estado Anterior: BLOCK - Estado Actual: READY
-[INFO] 19:25:15:847 proceso/(143084:143086): PID: 1 - Signal: RECURSO_1 - Instancias: 0
-[INFO] 19:25:15:847 proceso/(143084:143086): PID: 3 - Estado Anterior: BLOCK - Estado Actual: READY
-[WARNING] 19:25:15:847 proceso/(143084:143086): proceso_que_sigue_en_exec = 1
-[WARNING] 19:25:15:848 proceso/(143084:143086): proceso_que_sigue_en_exec = 0
-[WARNING] 19:25:15:848 proceso/(143084:143086): Proximo a ejecutar: 1
-[INFO] 19:25:15:851 proceso/(143084:143086): PID: 1 - Estado Anterior: EXEC - Estado Actual: EXIT
-[INFO] 19:25:15:851 proceso/(143084:143086): Finaliza el proceso 1 - Motivo: SUCCESS
-[WARNING] 19:25:15:851 proceso/(143084:143086): Proximo a ejecutar: 2
-[INFO] 19:25:15:851 proceso/(143084:143086): PID: 2 - Estado Anterior: EXEC - Estado Actual: READY
-[WARNING] 19:25:15:851 proceso/(143084:143086): Proximo a ejecutar: 3
-[INFO] 19:25:15:851 proceso/(143084:143086): PID: 3 - Estado Anterior: EXEC - Estado Actual: BLOCK
-[INFO] 19:25:15:851 proceso/(143084:143086): PID: 3 - Bloqueado por: IO
-[INFO] 19:25:15:852 proceso/(143084:143086): PID: 3 - Ejecuta IO: 15
-[WARNING] 19:25:15:852 proceso/(143084:143086): Proximo a ejecutar: 2
-[INFO] 19:25:20:854 proceso/(143084:143086): PID: 2 - Signal: RECURSO_1 - Instancias: 1
-[WARNING] 19:25:20:854 proceso/(143084:143086): proceso_que_sigue_en_exec = 2
-[WARNING] 19:25:20:854 proceso/(143084:143086): proceso_que_sigue_en_exec = 0
-[WARNING] 19:25:20:854 proceso/(143084:143086): Proximo a ejecutar: 2
-[INFO] 19:25:20:856 proceso/(143084:143086): PID: 2 - Estado Anterior: EXEC - Estado Actual: EXIT
-[INFO] 19:25:20:857 proceso/(143084:143086): Finaliza el proceso 2 - Motivo: SUCCESS
-[INFO] 19:25:30:852 proceso/(143084:143096): PID: 3 - Estado Anterior: BLOCK - Estado Actual: READY
-[WARNING] 19:25:30:852 proceso/(143084:143086): Proximo a ejecutar: 3
-[INFO] 19:25:30:854 proceso/(143084:143086): PID: 3 - Estado Anterior: EXEC - Estado Actual: READY
-[WARNING] 19:25:30:854 proceso/(143084:143086): Proximo a ejecutar: 3
-[INFO] 19:25:35:855 proceso/(143084:143086): PID: 3 - Signal: RECURSO_1 - Instancias: 2
-[WARNING] 19:25:35:855 proceso/(143084:143086): proceso_que_sigue_en_exec = 3
-[WARNING] 19:25:35:855 proceso/(143084:143086): proceso_que_sigue_en_exec = 0
-[WARNING] 19:25:35:855 proceso/(143084:143086): Proximo a ejecutar: 3
-[INFO] 19:25:35:855 proceso/(143084:143086): PID: 3 - Estado Anterior: EXEC - Estado Actual: EXIT
-[INFO] 19:25:35:855 proceso/(143084:143086): Finaliza el proceso 3 - Motivo: SUCCESS
+[INFO] 23:03:25:602 proceso/(4437:4464): se conecto una consola
+[INFO] 23:03:25:603 proceso/(4437:4464): Consola mando instrucciones
+[INFO] 23:03:25:603 proceso/(4437:4464): Se crea el proceso 1 en NEW 
+
+[INFO] 23:03:25:604 proceso/(4437:4440): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[WARNING] 23:03:25:604 proceso/(4437:4439): Proximo a ejecutar: 1
+[INFO] 23:03:25:606 proceso/(4437:4439): PID: 1 - Wait: RECURSO_1 - Instancias: 1
+[WARNING] 23:03:25:606 proceso/(4437:4439): proceso_que_sigue_en_exec = 1
+[INFO] 23:03:27:311 proceso/(4437:4466): se conecto una consola
+[INFO] 23:03:27:312 proceso/(4437:4466): Consola mando instrucciones
+[INFO] 23:03:27:312 proceso/(4437:4466): Se crea el proceso 2 en NEW 
+
+[INFO] 23:03:27:313 proceso/(4437:4440): PID: 2 - Estado Anterior: NEW - Estado Actual: READY
+[WARNING] 23:03:27:313 proceso/(4437:4439): Proximo a ejecutar: 1
+[INFO] 23:03:27:313 proceso/(4437:4439): PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 23:03:27:313 proceso/(4437:4439): PID: 1 - Bloqueado por: IO
+[INFO] 23:03:27:313 proceso/(4437:4439): PID: 1 - Ejecuta IO: 15
+[INFO] 23:03:42:313 proceso/(4437:4467): PID: 1 - Estado Anterior: BLOCK - Estado Actual: READY
+[WARNING] 23:03:42:313 proceso/(4437:4439): Proximo a ejecutar: 2
+[INFO] 23:03:42:314 proceso/(4437:4439): PID: 2 - Wait: RECURSO_1 - Instancias: 0
+[WARNING] 23:03:42:314 proceso/(4437:4439): proceso_que_sigue_en_exec = 2
+[ERROR] 23:08:31:924 proceso/(4627:4627): El kernel no pudo conectarse a la memoria
+[ERROR] 23:08:38:583 proceso/(4629:4629): El kernel no pudo conectarse a la memoria
+[INFO] 23:09:08:039 proceso/(4633:4638): se conecto una consola
+[INFO] 23:09:08:039 proceso/(4633:4638): Consola mando instrucciones
+[INFO] 23:09:08:040 proceso/(4633:4638): Se crea el proceso 1 en NEW 
+
+[INFO] 23:09:08:040 proceso/(4633:4636): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[WARNING] 23:09:08:040 proceso/(4633:4635): Proximo a ejecutar: 1
+[ERROR] 23:09:08:040 proceso/(4633:4635): NOMBRE DE RECURSO: RECURSO_1
+[INFO] 23:09:08:040 proceso/(4633:4635): PID: 1 - Wait: RECURSO_1 - Instancias: 1
+[WARNING] 23:09:08:040 proceso/(4633:4635): proceso_que_sigue_en_exec = 1
+[INFO] 23:09:09:784 proceso/(4633:4640): se conecto una consola
+[INFO] 23:09:09:784 proceso/(4633:4640): Consola mando instrucciones
+[INFO] 23:09:09:785 proceso/(4633:4640): Se crea el proceso 2 en NEW 
+
+[INFO] 23:09:09:785 proceso/(4633:4636): PID: 2 - Estado Anterior: NEW - Estado Actual: READY
+[WARNING] 23:09:09:785 proceso/(4633:4635): Proximo a ejecutar: 1
+[INFO] 23:09:09:785 proceso/(4633:4635): PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 23:09:09:785 proceso/(4633:4635): PID: 1 - Bloqueado por: IO
+[INFO] 23:09:09:785 proceso/(4633:4635): PID: 1 - Ejecuta IO: 15
+[INFO] 23:09:24:785 proceso/(4633:4641): PID: 1 - Estado Anterior: BLOCK - Estado Actual: READY
+[WARNING] 23:09:24:785 proceso/(4633:4635): Proximo a ejecutar: 2
+[ERROR] 23:09:24:786 proceso/(4633:4635): NOMBRE DE RECURSO: RECURSO_1
+[INFO] 23:09:24:786 proceso/(4633:4635): PID: 2 - Wait: RECURSO_1 - Instancias: 0
+[WARNING] 23:09:24:786 proceso/(4633:4635): proceso_que_sigue_en_exec = 2
+[INFO] 23:14:30:169 proceso/(4910:4915): se conecto una consola
+[INFO] 23:14:30:170 proceso/(4910:4915): Consola mando instrucciones
+[INFO] 23:14:30:170 proceso/(4910:4915): Se crea el proceso 1 en NEW 
+
+[INFO] 23:14:30:171 proceso/(4910:4913): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[WARNING] 23:14:30:171 proceso/(4910:4912): Proximo a ejecutar: 1
+[ERROR] 23:14:30:171 proceso/(4910:4912): NOMBRE DE RECURSO: RECURSO_1
+[INFO] 23:14:30:171 proceso/(4910:4912): PID: 1 - Wait: RECURSO_1 - Instancias: 1
+[WARNING] 23:14:30:171 proceso/(4910:4912): proceso_que_sigue_en_exec = 1
+[INFO] 23:14:31:569 proceso/(4910:4917): se conecto una consola
+[INFO] 23:14:31:569 proceso/(4910:4917): Consola mando instrucciones
+[INFO] 23:14:31:569 proceso/(4910:4917): Se crea el proceso 2 en NEW 
+
+[INFO] 23:14:31:570 proceso/(4910:4913): PID: 2 - Estado Anterior: NEW - Estado Actual: READY
+[ERROR] 23:14:31:570 proceso/(4910:4912): HOLAAAAAAAAAAAAAAAA
+[WARNING] 23:14:31:570 proceso/(4910:4912): Proximo a ejecutar: 1
+[INFO] 23:14:31:570 proceso/(4910:4912): PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 23:14:31:570 proceso/(4910:4912): PID: 1 - Bloqueado por: IO
+[INFO] 23:14:31:570 proceso/(4910:4912): PID: 1 - Ejecuta IO: 15
+[INFO] 23:14:46:570 proceso/(4910:4918): PID: 1 - Estado Anterior: BLOCK - Estado Actual: READY
+[WARNING] 23:14:46:570 proceso/(4910:4912): Proximo a ejecutar: 2
+[ERROR] 23:14:46:571 proceso/(4910:4912): NOMBRE DE RECURSO: RECURSO_1
+[INFO] 23:14:46:571 proceso/(4910:4912): PID: 2 - Wait: RECURSO_1 - Instancias: 0
+[WARNING] 23:14:46:571 proceso/(4910:4912): proceso_que_sigue_en_exec = 2
+[INFO] 23:22:01:338 proceso/(5056:5061): se conecto una consola
+[INFO] 23:22:01:339 proceso/(5056:5061): Consola mando instrucciones
+[INFO] 23:22:01:339 proceso/(5056:5061): Se crea el proceso 1 en NEW 
+
+[INFO] 23:22:01:339 proceso/(5056:5059): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[WARNING] 23:22:01:339 proceso/(5056:5058): Proximo a ejecutar: 1
+[ERROR] 23:22:01:340 proceso/(5056:5058): NOMBRE DE RECURSO: RECURSO_1
+[INFO] 23:22:01:340 proceso/(5056:5058): PID: 1 - Wait: RECURSO_1 - Instancias: 1
+[WARNING] 23:22:01:340 proceso/(5056:5058): proceso_que_sigue_en_exec = 1
+[INFO] 23:27:04:778 proceso/(5459:5464): se conecto una consola
+[INFO] 23:27:04:778 proceso/(5459:5464): Consola mando instrucciones
+[INFO] 23:27:04:778 proceso/(5459:5464): Se crea el proceso 1 en NEW 
+
+[INFO] 23:27:04:778 proceso/(5459:5462): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[WARNING] 23:27:04:778 proceso/(5459:5461): Proximo a ejecutar: 1
+[ERROR] 23:27:04:779 proceso/(5459:5461): NOMBRE DE RECURSO: RECURSO_1
+[INFO] 23:27:04:779 proceso/(5459:5461): PID: 1 - Wait: RECURSO_1 - Instancias: 1
+[WARNING] 23:27:04:779 proceso/(5459:5461): proceso_que_sigue_en_exec = 1
+[INFO] 23:28:45:748 proceso/(5507:5512): se conecto una consola
+[INFO] 23:28:45:749 proceso/(5507:5512): Consola mando instrucciones
+[INFO] 23:28:45:749 proceso/(5507:5512): Se crea el proceso 1 en NEW 
+
+[INFO] 23:28:45:749 proceso/(5507:5510): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 23:30:11:317 proceso/(5523:5528): se conecto una consola
+[INFO] 23:30:11:318 proceso/(5523:5528): Consola mando instrucciones
+[INFO] 23:30:11:318 proceso/(5523:5528): Se crea el proceso 1 en NEW 
+
+[INFO] 23:30:11:318 proceso/(5523:5526): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 23:32:42:834 proceso/(5647:5652): se conecto una consola
+[INFO] 23:32:42:834 proceso/(5647:5652): Consola mando instrucciones
+[INFO] 23:32:42:835 proceso/(5647:5652): Se crea el proceso 1 en NEW 
+
+[INFO] 23:32:42:835 proceso/(5647:5650): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[WARNING] 23:32:42:835 proceso/(5647:5649): Proximo a ejecutar: 1
+[ERROR] 23:32:42:835 proceso/(5647:5649): NOMBRE DE RECURSO: RECURSO_1
+[INFO] 23:32:42:835 proceso/(5647:5649): PID: 1 - Wait: RECURSO_1 - Instancias: 1
+[WARNING] 23:32:42:835 proceso/(5647:5649): proceso_que_sigue_en_exec = 1
+[INFO] 23:34:52:931 proceso/(5703:5708): se conecto una consola
+[INFO] 23:34:52:931 proceso/(5703:5708): Consola mando instrucciones
+[INFO] 23:34:52:931 proceso/(5703:5708): Se crea el proceso 1 en NEW 
+
+[INFO] 23:34:52:931 proceso/(5703:5706): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[WARNING] 23:34:52:931 proceso/(5703:5705): Proximo a ejecutar: 1
+[ERROR] 23:34:52:931 proceso/(5703:5705): NOMBRE DE RECURSO: RECURSO_1
+[INFO] 23:34:52:931 proceso/(5703:5705): PID: 1 - Wait: RECURSO_1 - Instancias: 1
+[WARNING] 23:34:52:931 proceso/(5703:5705): proceso_que_sigue_en_exec = 1
+[INFO] 23:36:14:735 proceso/(5768:5773): se conecto una consola
+[INFO] 23:36:14:735 proceso/(5768:5773): Consola mando instrucciones
+[INFO] 23:36:14:736 proceso/(5768:5773): Se crea el proceso 1 en NEW 
+
+[INFO] 23:36:14:736 proceso/(5768:5771): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 23:37:18:294 proceso/(5839:5844): se conecto una consola
+[INFO] 23:37:18:295 proceso/(5839:5844): Consola mando instrucciones
+[INFO] 23:37:18:296 proceso/(5839:5844): Se crea el proceso 1 en NEW 
+
+[INFO] 23:37:18:296 proceso/(5839:5842): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[ERROR] 23:37:18:296 proceso/(5839:5841): agus
+[WARNING] 23:37:18:296 proceso/(5839:5841): Proximo a ejecutar: 1
+[ERROR] 23:37:18:296 proceso/(5839:5841): NOMBRE DE RECURSO: RECURSO_1
+[INFO] 23:37:18:296 proceso/(5839:5841): PID: 1 - Wait: RECURSO_1 - Instancias: 1
+[WARNING] 23:37:18:296 proceso/(5839:5841): proceso_que_sigue_en_exec = 1
+[INFO] 23:39:03:193 proceso/(5896:5901): se conecto una consola
+[INFO] 23:39:03:193 proceso/(5896:5901): Consola mando instrucciones
+[INFO] 23:39:03:193 proceso/(5896:5901): Se crea el proceso 1 en NEW 
+
+[INFO] 23:39:03:194 proceso/(5896:5899): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[ERROR] 23:39:03:194 proceso/(5896:5898): agus
+[WARNING] 23:39:03:194 proceso/(5896:5898): Proximo a ejecutar: 1
+[ERROR] 23:39:03:194 proceso/(5896:5898): NOMBRE DE RECURSO: RECURSO_1
+[INFO] 23:39:03:194 proceso/(5896:5898): PID: 1 - Wait: RECURSO_1 - Instancias: 1
+[WARNING] 23:39:03:194 proceso/(5896:5898): proceso_que_sigue_en_exec = 1
+[ERROR] 23:39:03:194 proceso/(5896:5898): agus
+[WARNING] 23:39:03:194 proceso/(5896:5898): Proximo a ejecutar: 1
+[INFO] 23:39:03:194 proceso/(5896:5898): PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 23:39:03:194 proceso/(5896:5898): PID: 1 - Bloqueado por: IO
+[INFO] 23:39:03:194 proceso/(5896:5898): PID: 1 - Ejecuta IO: 15
+[INFO] 23:39:18:195 proceso/(5896:5902): PID: 1 - Estado Anterior: BLOCK - Estado Actual: READY
+[ERROR] 23:39:18:195 proceso/(5896:5898): agus
+[WARNING] 23:39:18:195 proceso/(5896:5898): Proximo a ejecutar: 1
+[INFO] 23:39:18:196 proceso/(5896:5898): PID: 1 - Estado Anterior: EXEC - Estado Actual: READY
+[ERROR] 23:39:18:196 proceso/(5896:5898): agus
+[WARNING] 23:39:18:196 proceso/(5896:5898): Proximo a ejecutar: 1
+[INFO] 23:39:23:197 proceso/(5896:5898): PID: 1 - Signal: RECURSO_1 - Instancias: 2
+[WARNING] 23:39:23:197 proceso/(5896:5898): proceso_que_sigue_en_exec = 1
+[ERROR] 23:39:23:197 proceso/(5896:5898): agus
+[WARNING] 23:39:23:197 proceso/(5896:5898): Proximo a ejecutar: 1
+[INFO] 23:39:23:197 proceso/(5896:5898): PID: 1 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 23:39:23:198 proceso/(5896:5898): Finaliza el proceso 1 - Motivo: SUCCESS
+[INFO] 23:39:32:005 proceso/(5896:5905): se conecto una consola
+[INFO] 23:39:32:005 proceso/(5896:5905): Consola mando instrucciones
+[INFO] 23:39:32:005 proceso/(5896:5905): Se crea el proceso 2 en NEW 
+
+[INFO] 23:39:32:005 proceso/(5896:5899): PID: 2 - Estado Anterior: NEW - Estado Actual: READY
+[ERROR] 23:39:32:005 proceso/(5896:5898): agus
+[WARNING] 23:39:32:005 proceso/(5896:5898): Proximo a ejecutar: 2
+[ERROR] 23:39:32:006 proceso/(5896:5898): NOMBRE DE RECURSO: RECURSO_1
+[INFO] 23:39:32:006 proceso/(5896:5898): PID: 2 - Wait: RECURSO_1 - Instancias: 1
+[WARNING] 23:39:32:006 proceso/(5896:5898): proceso_que_sigue_en_exec = 2
+[ERROR] 23:39:32:006 proceso/(5896:5898): agus
+[WARNING] 23:39:32:006 proceso/(5896:5898): Proximo a ejecutar: 2
+[INFO] 23:39:32:006 proceso/(5896:5898): PID: 2 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 23:39:32:006 proceso/(5896:5898): PID: 2 - Bloqueado por: IO
+[INFO] 23:39:32:006 proceso/(5896:5898): PID: 2 - Ejecuta IO: 15
+[INFO] 23:39:32:972 proceso/(5896:5908): se conecto una consola
+[INFO] 23:39:32:972 proceso/(5896:5908): Consola mando instrucciones
+[INFO] 23:39:32:972 proceso/(5896:5908): Se crea el proceso 3 en NEW 
+
+[INFO] 23:39:32:973 proceso/(5896:5899): PID: 3 - Estado Anterior: NEW - Estado Actual: READY
+[ERROR] 23:39:32:973 proceso/(5896:5898): agus
+[WARNING] 23:39:32:973 proceso/(5896:5898): Proximo a ejecutar: 3
+[ERROR] 23:39:32:973 proceso/(5896:5898): NOMBRE DE RECURSO: RECURSO_1
+[INFO] 23:39:32:973 proceso/(5896:5898): PID: 3 - Wait: RECURSO_1 - Instancias: 0
+[WARNING] 23:39:32:973 proceso/(5896:5898): proceso_que_sigue_en_exec = 3
+[ERROR] 23:39:32:973 proceso/(5896:5898): agus
+[WARNING] 23:39:32:973 proceso/(5896:5898): Proximo a ejecutar: 3
+[INFO] 23:39:32:973 proceso/(5896:5898): PID: 3 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 23:39:32:973 proceso/(5896:5898): PID: 3 - Bloqueado por: IO
+[INFO] 23:39:32:973 proceso/(5896:5898): PID: 3 - Ejecuta IO: 15
+[INFO] 23:39:47:007 proceso/(5896:5906): PID: 2 - Estado Anterior: BLOCK - Estado Actual: READY
+[ERROR] 23:39:47:007 proceso/(5896:5898): agus
+[WARNING] 23:39:47:007 proceso/(5896:5898): Proximo a ejecutar: 2
+[INFO] 23:39:47:007 proceso/(5896:5898): PID: 2 - Estado Anterior: EXEC - Estado Actual: READY
+[ERROR] 23:39:47:007 proceso/(5896:5898): agus
+[WARNING] 23:39:47:007 proceso/(5896:5898): Proximo a ejecutar: 2
+[INFO] 23:39:47:973 proceso/(5896:5909): PID: 3 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 23:39:52:008 proceso/(5896:5898): PID: 2 - Signal: RECURSO_1 - Instancias: 1
+[WARNING] 23:39:52:008 proceso/(5896:5898): proceso_que_sigue_en_exec = 2
+[ERROR] 23:39:52:008 proceso/(5896:5898): agus
+[WARNING] 23:39:52:008 proceso/(5896:5898): Proximo a ejecutar: 2
+[INFO] 23:39:52:009 proceso/(5896:5898): PID: 2 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 23:39:52:009 proceso/(5896:5898): Finaliza el proceso 2 - Motivo: SUCCESS
+[ERROR] 23:39:52:009 proceso/(5896:5898): agus
+[WARNING] 23:39:52:009 proceso/(5896:5898): Proximo a ejecutar: 3
+[INFO] 23:39:52:010 proceso/(5896:5898): PID: 3 - Estado Anterior: EXEC - Estado Actual: READY
+[ERROR] 23:39:52:010 proceso/(5896:5898): agus
+[WARNING] 23:39:52:010 proceso/(5896:5898): Proximo a ejecutar: 3
+[INFO] 23:39:57:011 proceso/(5896:5898): PID: 3 - Signal: RECURSO_1 - Instancias: 2
+[WARNING] 23:39:57:011 proceso/(5896:5898): proceso_que_sigue_en_exec = 3
+[ERROR] 23:39:57:011 proceso/(5896:5898): agus
+[WARNING] 23:39:57:011 proceso/(5896:5898): Proximo a ejecutar: 3
+[INFO] 23:39:57:012 proceso/(5896:5898): PID: 3 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 23:39:57:012 proceso/(5896:5898): Finaliza el proceso 3 - Motivo: SUCCESS
+[INFO] 23:41:59:702 proceso/(5922:5928): se conecto una consola
+[INFO] 23:41:59:703 proceso/(5922:5928): Consola mando instrucciones
+[INFO] 23:41:59:703 proceso/(5922:5928): Se crea el proceso 1 en NEW 
+
+[INFO] 23:41:59:704 proceso/(5922:5925): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[ERROR] 23:41:59:704 proceso/(5922:5924): agus
+[WARNING] 23:41:59:704 proceso/(5922:5924): Proximo a ejecutar: 1
+[ERROR] 23:41:59:705 proceso/(5922:5924): NOMBRE DE RECURSO: RECURSO_1
+[INFO] 23:41:59:705 proceso/(5922:5924): PID: 1 - Wait: RECURSO_1 - Instancias: 1
+[WARNING] 23:41:59:705 proceso/(5922:5924): proceso_que_sigue_en_exec = 1
+[ERROR] 23:41:59:705 proceso/(5922:5924): agus
+[WARNING] 23:41:59:705 proceso/(5922:5924): Proximo a ejecutar: 1
+[INFO] 23:41:59:706 proceso/(5922:5924): PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 23:41:59:706 proceso/(5922:5924): PID: 1 - Bloqueado por: IO
+[INFO] 23:41:59:706 proceso/(5922:5924): PID: 1 - Ejecuta IO: 15
+[INFO] 23:42:01:006 proceso/(5922:5931): se conecto una consola
+[INFO] 23:42:01:006 proceso/(5922:5931): Consola mando instrucciones
+[INFO] 23:42:01:006 proceso/(5922:5931): Se crea el proceso 2 en NEW 
+
+[INFO] 23:42:01:006 proceso/(5922:5925): PID: 2 - Estado Anterior: NEW - Estado Actual: READY
+[ERROR] 23:42:01:007 proceso/(5922:5924): agus
+[WARNING] 23:42:01:007 proceso/(5922:5924): Proximo a ejecutar: 2
+[ERROR] 23:42:01:007 proceso/(5922:5924): NOMBRE DE RECURSO: RECURSO_1
+[INFO] 23:42:01:007 proceso/(5922:5924): PID: 2 - Wait: RECURSO_1 - Instancias: 0
+[WARNING] 23:42:01:007 proceso/(5922:5924): proceso_que_sigue_en_exec = 2
+[ERROR] 23:42:01:007 proceso/(5922:5924): agus
+[WARNING] 23:42:01:007 proceso/(5922:5924): Proximo a ejecutar: 2
+[INFO] 23:42:01:007 proceso/(5922:5924): PID: 2 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 23:42:01:007 proceso/(5922:5924): PID: 2 - Bloqueado por: IO
+[INFO] 23:42:01:007 proceso/(5922:5924): PID: 2 - Ejecuta IO: 15
+[INFO] 23:42:14:707 proceso/(5922:5929): PID: 1 - Estado Anterior: BLOCK - Estado Actual: READY
+[ERROR] 23:42:14:707 proceso/(5922:5924): agus
+[WARNING] 23:42:14:707 proceso/(5922:5924): Proximo a ejecutar: 1
+[INFO] 23:42:14:707 proceso/(5922:5924): PID: 1 - Estado Anterior: EXEC - Estado Actual: READY
+[ERROR] 23:42:14:708 proceso/(5922:5924): agus
+[WARNING] 23:42:14:708 proceso/(5922:5924): Proximo a ejecutar: 1
+[INFO] 23:42:16:008 proceso/(5922:5932): PID: 2 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 23:42:19:708 proceso/(5922:5924): PID: 1 - Signal: RECURSO_1 - Instancias: 1
+[WARNING] 23:42:19:708 proceso/(5922:5924): proceso_que_sigue_en_exec = 1
+[ERROR] 23:42:19:708 proceso/(5922:5924): agus
+[WARNING] 23:42:19:708 proceso/(5922:5924): Proximo a ejecutar: 1
+[INFO] 23:42:19:709 proceso/(5922:5924): PID: 1 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 23:42:19:709 proceso/(5922:5924): Finaliza el proceso 1 - Motivo: SUCCESS
+[ERROR] 23:42:19:710 proceso/(5922:5924): agus
+[WARNING] 23:42:19:710 proceso/(5922:5924): Proximo a ejecutar: 2
+[INFO] 23:42:19:710 proceso/(5922:5924): PID: 2 - Estado Anterior: EXEC - Estado Actual: READY
+[ERROR] 23:42:19:710 proceso/(5922:5924): agus
+[WARNING] 23:42:19:710 proceso/(5922:5924): Proximo a ejecutar: 2
+[INFO] 23:42:24:712 proceso/(5922:5924): PID: 2 - Signal: RECURSO_1 - Instancias: 2
+[WARNING] 23:42:24:712 proceso/(5922:5924): proceso_que_sigue_en_exec = 2
+[ERROR] 23:42:24:712 proceso/(5922:5924): agus
+[WARNING] 23:42:24:712 proceso/(5922:5924): Proximo a ejecutar: 2
+[INFO] 23:42:24:712 proceso/(5922:5924): PID: 2 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 23:42:24:713 proceso/(5922:5924): Finaliza el proceso 2 - Motivo: SUCCESS
+[INFO] 00:41:35:170 proceso/(6182:6187): se conecto una consola
+[INFO] 00:41:35:170 proceso/(6182:6187): Consola mando instrucciones
+[INFO] 00:41:35:171 proceso/(6182:6187): Se crea el proceso 1 en NEW 
+
+[INFO] 00:41:35:171 proceso/(6182:6185): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[ERROR] 00:41:35:171 proceso/(6182:6184): agus
+[WARNING] 00:41:35:171 proceso/(6182:6184): Proximo a ejecutar: 1
+[ERROR] 00:41:35:171 proceso/(6182:6184): NOMBRE DE RECURSO: DISCO
+[INFO] 00:41:35:171 proceso/(6182:6184): PID: 1 - Wait: DISCO - Instancias: 0
+[WARNING] 00:41:35:171 proceso/(6182:6184): proceso_que_sigue_en_exec = 1
+[ERROR] 00:41:35:171 proceso/(6182:6184): agus
+[WARNING] 00:41:35:171 proceso/(6182:6184): Proximo a ejecutar: 1
+[INFO] 00:41:35:172 proceso/(6182:6184): PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 00:41:35:172 proceso/(6182:6184): PID: 1 - Bloqueado por: IO
+[INFO] 00:41:35:172 proceso/(6182:6184): PID: 1 - Ejecuta IO: 15
+[INFO] 00:41:36:261 proceso/(6182:6190): se conecto una consola
+[INFO] 00:41:36:261 proceso/(6182:6190): Consola mando instrucciones
+[INFO] 00:41:36:261 proceso/(6182:6190): Se crea el proceso 2 en NEW 
+
+[INFO] 00:41:36:262 proceso/(6182:6185): PID: 2 - Estado Anterior: NEW - Estado Actual: READY
+[ERROR] 00:41:36:262 proceso/(6182:6184): agus
+[WARNING] 00:41:36:262 proceso/(6182:6184): Proximo a ejecutar: 2
+[ERROR] 00:41:36:262 proceso/(6182:6184): NOMBRE DE RECURSO: DISCO
+[INFO] 00:41:36:262 proceso/(6182:6184): PID: 2 - Wait: DISCO - Instancias: -1
+[INFO] 00:41:36:262 proceso/(6182:6184): PID: 2 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 00:41:36:262 proceso/(6182:6184): PID: 2 - Bloqueado por: DISCO
+[INFO] 00:41:50:172 proceso/(6182:6188): PID: 1 - Estado Anterior: BLOCK - Estado Actual: READY
+[ERROR] 00:41:50:172 proceso/(6182:6184): agus
+[WARNING] 00:41:50:172 proceso/(6182:6184): Proximo a ejecutar: 1
+[INFO] 00:41:50:172 proceso/(6182:6184): PID: 1 - Estado Anterior: EXEC - Estado Actual: READY
+[ERROR] 00:41:50:173 proceso/(6182:6184): agus
+[WARNING] 00:41:50:173 proceso/(6182:6184): Proximo a ejecutar: 1
+[INFO] 00:41:55:174 proceso/(6182:6184): PID: 1 - Signal: DISCO - Instancias: 0
+[INFO] 00:41:55:175 proceso/(6182:6184): PID: 2 - Estado Anterior: BLOCK - Estado Actual: READY
+[WARNING] 00:41:55:175 proceso/(6182:6184): proceso_que_sigue_en_exec = 1
+[ERROR] 00:41:55:176 proceso/(6182:6184): agus
+[WARNING] 00:41:55:176 proceso/(6182:6184): Proximo a ejecutar: 1
+[INFO] 00:41:55:176 proceso/(6182:6184): PID: 1 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 00:41:55:177 proceso/(6182:6184): Finaliza el proceso 1 - Motivo: SUCCESS
+[ERROR] 00:41:55:178 proceso/(6182:6184): agus
+[WARNING] 00:41:55:178 proceso/(6182:6184): Proximo a ejecutar: 2
+[INFO] 00:41:55:178 proceso/(6182:6184): PID: 2 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 00:41:55:178 proceso/(6182:6184): PID: 2 - Bloqueado por: IO
+[INFO] 00:41:55:178 proceso/(6182:6184): PID: 2 - Ejecuta IO: 15
+[INFO] 00:42:10:179 proceso/(6182:6191): PID: 2 - Estado Anterior: BLOCK - Estado Actual: READY
+[ERROR] 00:42:10:179 proceso/(6182:6184): agus
+[WARNING] 00:42:10:180 proceso/(6182:6184): Proximo a ejecutar: 2
+[INFO] 00:42:10:180 proceso/(6182:6184): PID: 2 - Estado Anterior: EXEC - Estado Actual: READY
+[ERROR] 00:42:10:181 proceso/(6182:6184): agus
+[WARNING] 00:42:10:181 proceso/(6182:6184): Proximo a ejecutar: 2
+[INFO] 00:42:15:181 proceso/(6182:6184): PID: 2 - Signal: DISCO - Instancias: 1
+[WARNING] 00:42:15:181 proceso/(6182:6184): proceso_que_sigue_en_exec = 2
+[ERROR] 00:42:15:181 proceso/(6182:6184): agus
+[WARNING] 00:42:15:181 proceso/(6182:6184): Proximo a ejecutar: 2
+[INFO] 00:42:15:182 proceso/(6182:6184): PID: 2 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 00:42:15:183 proceso/(6182:6184): Finaliza el proceso 2 - Motivo: SUCCESS
+[INFO] 01:04:45:357 proceso/(6384:6389): se conecto una consola
+[INFO] 01:04:45:358 proceso/(6384:6389): Consola mando instrucciones
+[INFO] 01:04:45:358 proceso/(6384:6389): Se crea el proceso 1 en NEW 
+
+[INFO] 01:04:45:358 proceso/(6384:6387): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[ERROR] 01:04:45:358 proceso/(6384:6386): agus
+[WARNING] 01:04:45:358 proceso/(6384:6386): Proximo a ejecutar: 1
+[ERROR] 01:04:45:358 proceso/(6384:6386): NOMBRE DE RECURSO: DISCO
+[INFO] 01:04:45:358 proceso/(6384:6386): PID: 1 - Wait: DISCO - Instancias: 0
+[WARNING] 01:04:45:358 proceso/(6384:6386): proceso_que_sigue_en_exec = 1
+[ERROR] 01:04:45:358 proceso/(6384:6386): agus
+[WARNING] 01:04:45:358 proceso/(6384:6386): Proximo a ejecutar: 1
+[INFO] 01:04:45:359 proceso/(6384:6386): PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 01:04:45:359 proceso/(6384:6386): PID: 1 - Bloqueado por: IO
+[INFO] 01:04:45:359 proceso/(6384:6386): PID: 1 - Ejecuta IO: 15
+[INFO] 01:05:00:359 proceso/(6384:6390): PID: 1 - Estado Anterior: BLOCK - Estado Actual: READY
+[ERROR] 01:05:00:359 proceso/(6384:6386): agus
+[WARNING] 01:05:00:360 proceso/(6384:6386): Proximo a ejecutar: 1
+[INFO] 01:05:00:361 proceso/(6384:6386): PID: 1 - Estado Anterior: EXEC - Estado Actual: READY
+[ERROR] 01:05:00:361 proceso/(6384:6386): agus
+[WARNING] 01:05:00:361 proceso/(6384:6386): Proximo a ejecutar: 1
+[INFO] 01:05:05:362 proceso/(6384:6386): PID: 1 - Signal: DISCO - Instancias: 1
+[WARNING] 01:05:05:362 proceso/(6384:6386): proceso_que_sigue_en_exec = 1
+[ERROR] 01:05:05:362 proceso/(6384:6386): agus
+[WARNING] 01:05:05:363 proceso/(6384:6386): Proximo a ejecutar: 1
+[INFO] 01:05:05:364 proceso/(6384:6386): PID: 1 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 01:05:05:365 proceso/(6384:6386): Finaliza el proceso 1 - Motivo: SUCCESS
+[INFO] 01:07:22:049 proceso/(6435:6440): se conecto una consola
+[INFO] 01:07:22:074 proceso/(6435:6440): Consola mando instrucciones
+[INFO] 01:07:22:079 proceso/(6435:6440): Se crea el proceso 1 en NEW 
+
+[INFO] 01:07:22:082 proceso/(6435:6438): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[WARNING] 01:07:22:090 proceso/(6435:6437): Proximo a ejecutar: 1
+[ERROR] 01:07:22:100 proceso/(6435:6437): NOMBRE DE RECURSO: DISCO
+[INFO] 01:07:22:101 proceso/(6435:6437): PID: 1 - Wait: DISCO - Instancias: 0
+[WARNING] 01:07:22:102 proceso/(6435:6437): proceso_que_sigue_en_exec = 1
+[WARNING] 01:07:22:102 proceso/(6435:6437): Proximo a ejecutar: 1
+[INFO] 01:07:22:108 proceso/(6435:6437): PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 01:07:22:108 proceso/(6435:6437): PID: 1 - Bloqueado por: IO
+[INFO] 01:07:22:109 proceso/(6435:6437): PID: 1 - Ejecuta IO: 15
+[WARNING] 01:07:37:115 proceso/(6435:6437): Proximo a ejecutar: 1
+[INFO] 01:07:37:118 proceso/(6435:6437): PID: 1 - Estado Anterior: EXEC - Estado Actual: READY
+[INFO] 01:07:37:120 proceso/(6435:6441): PID: 1 - Estado Anterior: BLOCK - Estado Actual: READY
+[WARNING] 01:07:37:122 proceso/(6435:6437): Proximo a ejecutar: 1
+[INFO] 01:07:42:128 proceso/(6435:6437): PID: 1 - Signal: DISCO - Instancias: 1
+[WARNING] 01:07:42:131 proceso/(6435:6437): proceso_que_sigue_en_exec = 1
+[WARNING] 01:07:42:131 proceso/(6435:6437): Proximo a ejecutar: 1
+[INFO] 01:07:42:135 proceso/(6435:6437): PID: 1 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 01:07:42:135 proceso/(6435:6437): Finaliza el proceso 1 - Motivo: SUCCESS
+[INFO] 01:11:21:644 proceso/(6435:6465): se conecto una consola
+[INFO] 01:11:21:645 proceso/(6435:6465): Consola mando instrucciones
+[INFO] 01:11:21:647 proceso/(6435:6465): Se crea el proceso 2 en NEW 
+
+[INFO] 01:11:21:648 proceso/(6435:6438): PID: 2 - Estado Anterior: NEW - Estado Actual: READY
+[WARNING] 01:11:21:648 proceso/(6435:6437): Proximo a ejecutar: 2
+[ERROR] 01:11:21:649 proceso/(6435:6437): NOMBRE DE RECURSO: DISCO
+[INFO] 01:11:21:650 proceso/(6435:6437): PID: 2 - Wait: DISCO - Instancias: 0
+[WARNING] 01:11:21:650 proceso/(6435:6437): proceso_que_sigue_en_exec = 2
+[WARNING] 01:11:21:650 proceso/(6435:6437): Proximo a ejecutar: 2
+[INFO] 01:11:21:651 proceso/(6435:6437): PID: 2 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 01:11:21:652 proceso/(6435:6437): PID: 2 - Bloqueado por: IO
+[INFO] 01:11:21:652 proceso/(6435:6437): PID: 2 - Ejecuta IO: 15
+[INFO] 01:11:24:721 proceso/(6435:6468): se conecto una consola
+[INFO] 01:11:24:722 proceso/(6435:6468): Consola mando instrucciones
+[INFO] 01:11:24:723 proceso/(6435:6468): Se crea el proceso 3 en NEW 
+
+[INFO] 01:11:24:723 proceso/(6435:6438): PID: 3 - Estado Anterior: NEW - Estado Actual: READY
+[WARNING] 01:11:24:724 proceso/(6435:6437): Proximo a ejecutar: 3
+[ERROR] 01:11:24:728 proceso/(6435:6437): NOMBRE DE RECURSO: DISCO
+[INFO] 01:11:24:728 proceso/(6435:6437): PID: 3 - Wait: DISCO - Instancias: -1
+[INFO] 01:11:24:729 proceso/(6435:6437): PID: 3 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 01:11:24:729 proceso/(6435:6437): PID: 3 - Bloqueado por: DISCO
+[INFO] 01:11:36:660 proceso/(6435:6466): PID: 2 - Estado Anterior: BLOCK - Estado Actual: READY
+[WARNING] 01:11:36:661 proceso/(6435:6437): Proximo a ejecutar: 2
+[INFO] 01:11:36:663 proceso/(6435:6437): PID: 2 - Estado Anterior: EXEC - Estado Actual: READY
+[WARNING] 01:11:36:664 proceso/(6435:6437): Proximo a ejecutar: 2
+[INFO] 01:11:41:666 proceso/(6435:6437): PID: 2 - Signal: DISCO - Instancias: 0
+[INFO] 01:11:41:667 proceso/(6435:6437): PID: 3 - Estado Anterior: BLOCK - Estado Actual: READY
+[WARNING] 01:11:41:667 proceso/(6435:6437): proceso_que_sigue_en_exec = 2
+[WARNING] 01:11:41:668 proceso/(6435:6437): Proximo a ejecutar: 2
+[INFO] 01:11:41:670 proceso/(6435:6437): PID: 2 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 01:11:41:671 proceso/(6435:6437): Finaliza el proceso 2 - Motivo: SUCCESS
+[WARNING] 01:11:41:671 proceso/(6435:6437): Proximo a ejecutar: 3
+[INFO] 01:11:41:673 proceso/(6435:6437): PID: 3 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 01:11:41:674 proceso/(6435:6437): PID: 3 - Bloqueado por: IO
+[INFO] 01:11:41:674 proceso/(6435:6437): PID: 3 - Ejecuta IO: 15
+[INFO] 01:11:56:679 proceso/(6435:6469): PID: 3 - Estado Anterior: BLOCK - Estado Actual: READY
+[WARNING] 01:11:56:681 proceso/(6435:6437): Proximo a ejecutar: 3
+[INFO] 01:11:56:685 proceso/(6435:6437): PID: 3 - Estado Anterior: EXEC - Estado Actual: READY
+[WARNING] 01:11:56:687 proceso/(6435:6437): Proximo a ejecutar: 3
+[INFO] 01:12:01:691 proceso/(6435:6437): PID: 3 - Signal: DISCO - Instancias: 1
+[WARNING] 01:12:01:692 proceso/(6435:6437): proceso_que_sigue_en_exec = 3
+[WARNING] 01:12:01:693 proceso/(6435:6437): Proximo a ejecutar: 3
+[INFO] 01:12:01:696 proceso/(6435:6437): PID: 3 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 01:12:01:697 proceso/(6435:6437): Finaliza el proceso 3 - Motivo: SUCCESS

@@ -29,7 +29,8 @@ int socket_memoria;
 int socket_cpu;
 int socket_fileSystem;
 ///////////////////////////////////////////
-
+t_pcb* proximo_pcb_a_ejecutar_forzado = NULL;
+///////////////////////////////////////////
 t_kernel_config leer_kernel_config(t_config* config) {
     t_kernel_config lectura_de_config;
 

@@ -94,7 +94,5 @@ char* recibir_parametro_de_instruccion() {
 	char* parametro = malloc(tamanio_parametro);
 	recv(socket_cpu, parametro, tamanio_parametro, MSG_WAITALL);
 
-	//printf("adentro de recibir_parametro: %s de %d\n", parametro, tamanio_parametro);
-
 	return parametro; //acordarse de hacerle el free del otro lado
 }

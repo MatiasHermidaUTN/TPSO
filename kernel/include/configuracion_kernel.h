@@ -48,6 +48,8 @@ extern int socket_memoria;
 extern int socket_cpu;
 extern int socket_fileSystem;
 
+extern t_pcb* proximo_pcb_a_ejecutar_forzado;
+
 extern t_list* list_recursos;
 
 t_kernel_config leer_kernel_config(t_config* config);
