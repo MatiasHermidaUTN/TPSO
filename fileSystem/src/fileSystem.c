@@ -221,7 +221,7 @@ void sobreescribir_indirecto(char* buffer, t_config* archivo_FCB, int bloque_sec
 	uint32_t puntero_indirecto = config_get_int_value(archivo_FCB, "PUNTERO_INDIRECTO");
 	uint32_t puntero_secundario;			
 
-	while(cuanto_escribir < 0) {
+	while(cuanto_leer > 0)  {
 		fseek(bloques, puntero_indirecto * super_bloque_info.block_size + sizeof(puntero_secundario) * bloque_secundario_donde_escribir, SEEK_SET);
 		fread(&puntero_secundario, sizeof(puntero_secundario), 1, bloques);	
 		escribir_bloque(buffer, puntero_secundario, 0, &cuanto_escribir, &cantidad_escrita, super_bloque_info.block_size);
@@ -374,11 +374,14 @@ char* leer_archivo(char* nombre_archivo, int apartir_de_donde_leer, int cuanto_l
 	char* path = obtener_path_FCB_sin_free(nombre_archivo);
 	t_config* archivo_FCB = iniciar_config(path);
 	free(path);
-
 	//FAIL CHECKERS
 	int tamanio_archivo = config_get_int_value(archivo_FCB, "TAMANIO_ARCHIVO");
 	if (apartir_de_donde_leer > tamanio_archivo) {
 		return "ERROR, apartir_de_donde_leer es > al tamanio_archivo";
+	}
+	if (tamanio_archivo == 0) {
+		config_destroy(archivo_FCB);
+		exit(EXIT_FAILURE);
 	}
 	if (apartir_de_donde_leer + cuanto_leer > tamanio_archivo) {
 		cuanto_leer = tamanio_archivo - apartir_de_donde_leer;		//deberia tirar error?
@@ -387,61 +390,50 @@ char* leer_archivo(char* nombre_archivo, int apartir_de_donde_leer, int cuanto_l
 
 	//LECTURA
 	char* buffer = malloc(cuanto_leer);
-	if (tamanio_archivo != 0) {
 		//entro si leo de puntero_directo
-		if (apartir_de_donde_leer < super_bloque_info.block_size){
-			uint32_t puntero_directo = config_get_uint_value(archivo_FCB, "PUNTERO_DIRECTO");
-			fseek(bloques, puntero_directo * super_bloque_info.block_size, SEEK_SET);
-			int cant_disponible_leer_de_puntero = super_bloque_info.block_size - apartir_de_donde_leer;
+	if (apartir_de_donde_leer < super_bloque_info.block_size){
+		uint32_t puntero_directo = config_get_uint_value(archivo_FCB, "PUNTERO_DIRECTO");
+		fseek(bloques, puntero_directo * super_bloque_info.block_size, SEEK_SET);
+		int cant_disponible_leer_de_puntero = super_bloque_info.block_size - apartir_de_donde_leer;
 
-			if(cuanto_leer < cant_disponible_leer_de_puntero){
-				fread(buffer, cuanto_leer, 1, bloques);
-				cuanto_leer = 0;
-			}else{
-				fread(buffer, cant_disponible_leer_de_puntero, 1, bloques);
-				cuanto_leer -= cant_disponible_leer_de_puntero;
-				leer_indirecto(&buffer, archivo_FCB, PRIMER_BLOQUE_SECUNDARIO, LEER_DESDE_EL_INICIO, cuanto_leer);
-			}
-		}
-		//entro si leo de puntero indirecto y cualquier puntero secundario
-		if (apartir_de_donde_leer >= super_bloque_info.block_size){
-			int bloque_secundario_inicial = (int) ceil((float) apartir_de_donde_leer / super_bloque_info.block_size - 1);
-			int apartir_de_donde_leer_relativo_a_bloque = apartir_de_donde_leer%super_bloque_info.block_size;
-			leer_indirecto(&buffer, archivo_FCB, bloque_secundario_inicial, apartir_de_donde_leer_relativo_a_bloque, cuanto_leer);
+		if(cuanto_leer < cant_disponible_leer_de_puntero){
+			fread(buffer, cuanto_leer, 1, bloques);
+			cuanto_leer = 0;
+		}else{
+			fread(buffer, cant_disponible_leer_de_puntero, 1, bloques);
+			cuanto_leer -= cant_disponible_leer_de_puntero;
+			leer_indirecto(&buffer, archivo_FCB, PRIMER_BLOQUE_SECUNDARIO, cuanto_leer);
 		}
 	}
+	//entro si leo de puntero indirecto y cualquier puntero secundario
 	else {
-		//logear error
-		//"No puedo leer archivo vacio"?
-		config_destroy(archivo_FCB);
-		exit(EXIT_FAILURE);
+		int bloque_secundario_inicial = (int) ceil((float) apartir_de_donde_leer / super_bloque_info.block_size - 1);
+		int apartir_de_donde_leer_relativo_a_bloque = apartir_de_donde_leer % super_bloque_info.block_size;
+		fread(buffer, cant_disponible_leer_de_puntero, 1, bloques);
+		cuanto_leer -= cant_disponible_leer_de_puntero;
+		leer_indirecto(&buffer, archivo_FCB, bloque_secundario_inicial, cuanto_leer);
 	}
 	config_destroy(archivo_FCB);
 	return buffer;	//el free se hace en el switch, despues de pasarle el contenido a memoria
 }
 
-void leer_indirecto(char** buffer, t_config* archivo_FCB, int bloque_secundario_donde_leer, int apartir_de_donde_leer_relativo_a_bloque, int cuanto_leer) {
-	int tamanio_archivo = config_get_int_value(archivo_FCB, "TAMANIO_ARCHIVO");
-	uint32_t puntero_indirecto = config_get_uint_value(archivo_FCB, "PUNTERO_INDIRECTO");
-	uint32_t puntero_secundario;
-	fseek(bloques, puntero_indirecto * super_bloque_info.block_size + sizeof(puntero_secundario) * bloque_secundario_donde_leer, SEEK_SET);
-	fread(&bloque_secundario_donde_leer, sizeof(puntero_secundario), 1, bloques);				//anoto nuevo puntero_secundario en bloque de puntero_indirecto
+void leer_indirecto(char** buffer, t_config* archivo_FCB, int bloque_secundario_donde_leer, int cuanto_leer) {
 
-	int cant_disponible_leer_de_puntero = super_bloque_info.block_size - apartir_de_donde_leer_relativo_a_bloque;
-	if(cuanto_leer < cant_disponible_leer_de_puntero){
-		char * buffer1 = malloc(cuanto_leer);
-		fread(buffer1, cuanto_leer, 1, bloques);
-		cuanto_leer = 0;
+	int tamanio_archivo = config_get_int_value(archivo_FCB, "TAMANIO_ARCHIVO");
+	uint32_t puntero_indirecto = config_get_int_value(archivo_FCB, "PUNTERO_INDIRECTO");
+	uint32_t puntero_secundario;			
+
+	while(cuanto_leer > 0) {
+		fseek(bloques, puntero_indirecto * super_bloque_info.block_size + sizeof(puntero_secundario) * bloque_secundario_donde_leer, SEEK_SET);
+		fread(&puntero_secundario, sizeof(puntero_secundario), 1, bloques);	
+		fseek(bloques, puntero_secundario * super_bloque_info.block_size, SEEK_SET);
+
+		char * buffer1 = malloc(super_bloque_info.block_size);
+		fread(buffer1, super_bloque_info.block_size, 1, bloques);
+		cuanto_leer -= super_bloque_info.block_size;
 		strcat(*buffer, buffer1);
 		free(buffer1);
-		strcat(*buffer, buffer1);
-	}else{
-		char * buffer1 = malloc(cant_disponible_leer_de_puntero);
-		fread(buffer1, cant_disponible_leer_de_puntero, 1, bloques);
-		cuanto_leer -= cant_disponible_leer_de_puntero;
-		strcat(*buffer, buffer1);
-		free(buffer1);
-		leer_indirecto(&buffer, archivo_FCB, bloque_secundario_donde_leer+1, LEER_DESDE_EL_INICIO, cuanto_leer);
+		bloque_secundario_donde_leer++;
 	}
 }
 
