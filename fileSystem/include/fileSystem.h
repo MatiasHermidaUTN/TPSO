@@ -37,30 +37,42 @@ struct super_bloque_info {
 	int block_size;
 	int block_count;
 }super_bloque_info;
-
-bool archivo_se_puede_leer(char* path);
-void crear_archivo(char* nombre_archivo);
-bool existe_archivo(char* nombre_archivo);
-char* obtener_path_FCB_sin_free(char* nombre_arhcivo);
-char* leer_archivo(char* nombre_archivo, int apartir_de_donde_leer, int cuanto_leer);
-//void leer_indirecto(char** buffer, uint32_t puntero_indirecto, int cuanto_leer);
-void escribir_archivo(char* buffer, char* nombre_archivo, int apartir_de_donde_escribir, int cuanto_escribir);
-bool archivo_se_puede_leer(char* path);
-bool archivo_se_puede_escribir(char* path);
-char* intToCharAsterisco(unsigned int numero);
-int cantidad_de_digitos(unsigned int numero);
+//fcb
+uint32_t config_get_uint_value(t_config *self, char *key);
+char* obtener_path_FCB_sin_free(char* nombre_archivo);
+//
+//bitmap
 bool checkear_espacio(int cuanto_escribir);
 uint32_t dame_un_bloque_libre();
-//void escribir_bloque(char* buffer, uint32_t puntero, int* cuanto_escribir, int* cantidad_escrita, int espacio_libre_en_bloque);
-int espacio_libre_en_bloque(uint32_t puntero);
+void liberar_bloque(uint32_t puntero);
+//abrir
+bool existe_archivo(char* nombre_archivo);
+bool archivo_se_puede_leer(char* path);
+//crear
+void crear_archivo(char* nombre_archivo);
+//truncar
+void truncar(char* nombre_archivo, int nuevo_tamanio_archivo);
+void achicas_archivo(t_config* archivo_FCB, char* nombre_archivo, int nuevo_tamanio_archivo);
+void agrandas_archivo(t_config* archivo_FCB, char* nombre_archivo, int nuevo_tamanio_archivo);
+//leer
+char* leer_archivo(char* nombre_archivo, int apartir_de_donde_leer, int cuanto_leer);
+void leer_indirecto(char* buffer, t_config* archivo_FCB, int bloque_secundario_donde_leer, int* cuanto_leer);
+void leer_bloque(char* buffer, uint32_t puntero, int apartir_de_donde_leer_relativo_a_bloque, int* cuanto_leer);
+//escribir
+void escribir_archivo(char* buffer, char* nombre_archivo, int apartir_de_donde_escribir, int cuanto_escribir);
+void sobreescribir_indirecto(char* buffer, t_config* archivo_FCB, int bloque_secundario_donde_escribir, int* cuanto_escribir, int* cantidad_escrita);
+void escribir_bloque(char* buffer, uint32_t puntero, int apartir_de_donde_escribir_relativo_a_puntero, int* cuanto_escribir, int* cantidad_escrita);
 
-//TODO
+//comunicaciones
 t_instrucciones recibir_cod_op(int socket_cliente);
 void recibir_parametros(t_instrucciones cod_op, char** nombre_archivo, int* tamanio_nuevo_archivo, int* apartir_de_donde_X, int* cuanto_X, int* dir_fisica_memoria);
 void deserializar_instrucciones_kernel(void* a_recibir, int size_payload, t_instrucciones cod_op, char** nombre_archivo, int* tamanio_nuevo_archivo, int* apartir_de_donde_X, int* cuanto_X, int* dir_fisica_memoria);
 void enviar_mensaje_kernel(int socket_kernel, char* msj);
 char* leer_de_memoria(int socket_memoria, t_instrucciones LEER, int cuanto_escribir, int dir_fisica_memoria);
 void mandar_a_memoria(int socket_memoria, t_instrucciones ESCRIBIR, char* buffer, int cuanto_leer, int dir_fisica_memoria);
-void liberar_bloque(uint32_t puntero);
+
+//debug
+int cant_unos_en_bitmap();
+void limpiar_bitmap();
 
 #endif /* FILESYSTEM_H_ */
