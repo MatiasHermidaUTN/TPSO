@@ -3,8 +3,7 @@
 int main(int argc, char** argv) {
 	// ***** INICIAR CONSOLA ***** //
     t_config* config = iniciar_config(argv[1]);
-    t_log* logger    = iniciar_logger("consola.log", "proceso");
-
+    t_log* logger    = iniciar_logger("consola.log", "Consola");
     t_consola_config lectura_de_config = leer_consola_config(config);
 
 	log_info(logger, "IP KERNEL: %s", lectura_de_config.IP_KERNEL); //el %s es para que no tire warning para tomarlo como literal cadena

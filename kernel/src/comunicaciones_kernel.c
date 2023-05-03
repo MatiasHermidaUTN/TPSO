@@ -77,8 +77,6 @@ void deserializar_parametros(void* a_recibir, int* desplazamiento, t_instruccion
 
 		list_add(instruccion->parametros, parametro);
     }
-
-	return;
 }
 
 t_msj_kernel_cpu esperar_cpu() {
@@ -87,12 +85,34 @@ t_msj_kernel_cpu esperar_cpu() {
 	return respuesta;
 }
 
-char* recibir_parametro_de_instruccion() {
+char** recibir_parametros_de_instruccion() {
+	size_t cantidad_de_parametros;
 	size_t tamanio_parametro;
-	recv(socket_cpu, &tamanio_parametro, sizeof(size_t), MSG_WAITALL);
 
-	char* parametro = malloc(tamanio_parametro);
-	recv(socket_cpu, parametro, tamanio_parametro, MSG_WAITALL);
+	recv(socket_cpu, &cantidad_de_parametros, sizeof(size_t), MSG_WAITALL);
+	char** parametros = malloc(cantidad_de_parametros * sizeof(char*));
 
-	return parametro; //acordarse de hacerle el free del otro lado
+	for(int i = 0; i < cantidad_de_parametros; i++) {
+		recv(socket_cpu, &tamanio_parametro, sizeof(size_t), MSG_WAITALL);
+
+		parametros[i] = malloc(tamanio_parametro);
+		recv(socket_cpu, parametros[i], tamanio_parametro, MSG_WAITALL);
+	}
+
+	/*
+	char** parametros = string_array_new(); //Hace malloc(sizeof(char*))
+
+	recv(socket_cpu, &cantidad_de_parametros, sizeof(size_t), MSG_WAITALL);
+
+	for(int i = 0; i < cantidad_de_parametros; i++) {
+		recv(socket_cpu, &tamanio_parametro, sizeof(size_t), MSG_WAITALL);
+
+		char* parametro = malloc(tamanio_parametro);
+		recv(socket_cpu, parametro, tamanio_parametro, MSG_WAITALL);
+		string_array_push(&parametros, parametro); //Hace malloc del nuevo parametro y realloc del char**
+		free(parametro);
+	}
+	*/
+
+	return parametros; //acordarse de hacerle el free del otro lado
 }

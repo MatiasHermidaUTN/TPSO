@@ -171,10 +171,11 @@ void destruir_parametro(char* parametro);
 void liberar_pcb(t_pcb* pcb);
 //void liberar_tabla_segmentos_pcb(tabla_segmentos);
 //void liberar_archivos_abiertos_pcb(archivos_abiertos);
+void liberar_parametros(char** parametros);
 
-void enviar_pcb(int socket, t_pcb* pcb, t_msj_kernel_cpu op_code, char* parametro_de_instruccion);
+void enviar_pcb(int socket, t_pcb* pcb, t_msj_kernel_cpu op_code, char** parametros_de_instruccion);
 
-void* serializar_pcb(t_pcb* pcb, size_t* size_total, t_msj_kernel_cpu op_code, char* parametro_de_instruccion);
+void* serializar_pcb(t_pcb* pcb, size_t* size_total, t_msj_kernel_cpu op_code, char** parametros_de_instruccion);
 size_t tamanio_payload_pcb(t_pcb* pcb);
 size_t tamanio_instrucciones(t_list* instrucciones);
 int tamanio_parametros(t_list* parametros, int index_instruccion);
