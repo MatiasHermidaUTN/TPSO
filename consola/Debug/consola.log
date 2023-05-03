@@ -468,3 +468,6 @@
 [INFO] 06:35:16:261 Consola/(15724:15724): Proceso terminado
 [INFO] 06:35:29:266 Consola/(15727:15727): Proceso terminado
 [INFO] 06:35:42:272 Consola/(15730:15730): Proceso terminado
+[INFO] 09:06:45:647 Consola/(16084:16084): IP KERNEL: 127.0.0.1
+[INFO] 09:06:45:660 Consola/(16084:16084): Puerto KERNEL: 8000
+[ERROR] 09:06:45:707 Consola/(16084:16084): Hubo un error en el proceso

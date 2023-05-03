@@ -1810,3 +1810,4 @@
 [INFO] 06:35:42:271 Kernel/(15720:15722): PID: 3 - Signal: DISCO - Instancias: 1
 [INFO] 06:35:42:272 Kernel/(15720:15722): PID: 3 - Estado Anterior: EXEC - Estado Actual: EXIT
 [INFO] 06:35:42:273 Kernel/(15720:15722): Finaliza el proceso 3 - Motivo: SUCCESS
+[ERROR] 09:48:15:835 Kernel/(16227:16227): Kernel no pudo conectarse a Memoria

@@ -16,8 +16,8 @@ int crear_conexion(char *ip, char* puerto) {
 	getaddrinfo(ip, puerto, &hints, &server_info);
 
 	int socket_cliente = socket(server_info->ai_family,
-	                    server_info->ai_socktype,
-	                    server_info->ai_protocol);
+	                    	    server_info->ai_socktype,
+								server_info->ai_protocol);
 
 	int my_true = 1; //Defino un true para poder pasarle el puntero al true
 	setsockopt(socket_cliente, SOL_SOCKET, SO_REUSEADDR, &my_true, sizeof(int)); //Para cerrar el socket en cuanto se termine el proceso
