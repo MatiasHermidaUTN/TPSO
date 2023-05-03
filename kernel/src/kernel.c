@@ -12,15 +12,14 @@ int main (int argc, char** argv) {
 
     init_estados();
     init_semaforos();
-
     init_conexiones(lectura_de_config, logger, &socket_memoria, &socket_cpu, &socket_fileSystem);
 
     pthread_t planificador_corto;
-    pthread_create(&planificador_corto, NULL, (void*)planificar_corto,NULL);
+    pthread_create(&planificador_corto, NULL, (void*)planificar_corto, NULL);
     pthread_detach(planificador_corto);
 
     pthread_t planificador_largo;
-    pthread_create(&planificador_largo, NULL, (void*)planificar_largo,NULL);
+    pthread_create(&planificador_largo, NULL, (void*)planificar_largo, NULL);
     pthread_detach(planificador_largo);
 
     int socket_kernel = iniciar_servidor("127.0.0.1", lectura_de_config.PUERTO_ESCUCHA); //TODO: Hardcodeado

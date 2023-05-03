@@ -4,8 +4,7 @@
 // Funciones de cliente //
 //////////////////////////
 
-int crear_conexion(char *ip, char* puerto)
-{
+int crear_conexion(char *ip, char* puerto) {
 	struct addrinfo hints;
 	struct addrinfo *server_info;
 
@@ -19,6 +18,9 @@ int crear_conexion(char *ip, char* puerto)
 	int socket_cliente = socket(server_info->ai_family,
 	                    server_info->ai_socktype,
 	                    server_info->ai_protocol);
+
+	int my_true = 1; //Defino un true para poder pasarle el puntero al true
+	setsockopt(socket_cliente, SOL_SOCKET, SO_REUSEADDR, &my_true, sizeof(int)); //Para cerrar el socket en cuanto se termine el proceso
 
 	if(connect(socket_cliente, server_info->ai_addr, server_info->ai_addrlen)){
 		freeaddrinfo(server_info);

@@ -9,12 +9,16 @@ void planificar_corto() {
 		sem_wait(&sem_cant_ready); //entra solo si hay algun proceso en Ready, es una espera no activa
 		pcb = obtener_proximo_a_ejecutar();
 
-		log_info(logger, "PID: %d - Estado Anterior: READY - Estado Actual: EXEC", pcb_recibido->pid);
 		if(!pcb->tiempo_inicial_ejecucion) { //Si no viene de EXEC
+			//printf("calculando tiempo_inicial_ejecucion\n");
+			log_info(logger, "PID: %d - Estado Anterior: READY - Estado Actual: EXEC", pcb->pid);
 			pcb->tiempo_inicial_ejecucion = time(NULL); // Para calcular el tiempo en ejecucion inmediatamente antes de pasarlo a la CPU
 		} //Comienza ejecucion
+		//printf("antes de enviar_pcb\n");
 		enviar_pcb(socket_cpu, pcb, PCB_A_EJECUTAR, NULL); //NULL porque no se le pasa ningun parametro extra
+		//printf("Antes de liberar_pcb\n");
 		liberar_pcb(pcb);
+		//printf("Despues de liberar_pcb\n");
 
 		t_msj_kernel_cpu respuesta = esperar_cpu();
 
@@ -115,6 +119,8 @@ t_pcb* obtener_proximo_a_ejecutar() {
 	if(proximo_pcb_a_ejecutar_forzado) {
 		t_pcb* proximo = proximo_pcb_a_ejecutar_forzado;
 		proximo_pcb_a_ejecutar_forzado = NULL;
+		//printf("en proximo_a_ejecutar_forzado\n");
+		//printf("pid_pcb_forzado: %d\n", proximo->pid);
 		return proximo;
 	}
 	else if(!strcmp(lectura_de_config.ALGORITMO_PLANIFICACION, "FIFO")) {
@@ -204,5 +210,5 @@ void exit_proceso(t_pcb* pcb) {
 	log_info(logger, "Finaliza el proceso %d - Motivo: SUCCESS", pcb->pid); //log obligatorio
 
 	//avisarle a memoria para liberar la estructura
-	//liberar_pcb(pcb);
+	liberar_pcb(pcb);
 }
