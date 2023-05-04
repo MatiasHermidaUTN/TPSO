@@ -78,6 +78,72 @@ void planificar_corto() {
 				exit_proceso(pcb_recibido); //Aca hace el sem_post(&sem_multiprogramacion)
 				break;
 
+			case CREATE_SEGMENT_EJECUTADO:
+				pcb_recibido = recibir_pcb(socket_cpu);
+				parametros = recibir_parametros_de_instruccion();
+
+				//TODO: AVISAR A MEMORIA
+				liberar_parametros(parametros);
+
+				proximo_pcb_a_ejecutar_forzado = pcb_recibido;
+				sem_post(&sem_cant_ready); //Al no pasar por la funcion ready_list_push hay que hacerlo manualmente, vuelve a ejecutar sin pasar por ready
+
+				break;
+
+			case DELETE_SEGMENT_EJECUTADO:
+				pcb_recibido = recibir_pcb(socket_cpu);
+				parametros = recibir_parametros_de_instruccion();
+
+				//TODO: AVISAR A MEMORIA
+				liberar_parametros(parametros);
+
+				proximo_pcb_a_ejecutar_forzado = pcb_recibido;
+				sem_post(&sem_cant_ready); //Al no pasar por la funcion ready_list_push hay que hacerlo manualmente, vuelve a ejecutar sin pasar por ready
+
+				break;
+
+			case F_OPEN_EJECUTADO:
+				parametros = recibir_parametros_de_instruccion();
+				//TODO: AVISAR A FILESYSTEM
+
+				liberar_parametros(parametros);
+				break;
+
+			case F_CLOSE_EJECUTADO:
+				parametros = recibir_parametros_de_instruccion();
+				//TODO: AVISAR A FILESYSTEM
+
+				liberar_parametros(parametros);
+				break;
+
+			case F_SEEK_EJECUTADO:
+				parametros = recibir_parametros_de_instruccion();
+				//TODO: AVISAR A FILESYSTEM
+
+				liberar_parametros(parametros);
+				break;
+
+			case F_READ_EJECUTADO:
+				parametros = recibir_parametros_de_instruccion();
+				//TODO: AVISAR A FILESYSTEM
+
+				liberar_parametros(parametros);
+				break;
+
+			case F_WRITE_EJECUTADO:
+				parametros = recibir_parametros_de_instruccion();
+				//TODO: AVISAR A FILESYSTEM
+
+				liberar_parametros(parametros);
+				break;
+
+			case F_TRUNCATE_EJECUTADO:
+				parametros = recibir_parametros_de_instruccion();
+				//TODO: AVISAR A FILESYSTEM
+
+				liberar_parametros(parametros);
+				break;
+
 			default:
 				log_error(logger,"Error en la comunicacion entre el Kernel y la CPU");
 				exit(1);

@@ -116,3 +116,4 @@ char** recibir_parametros_de_instruccion() {
 
 	return parametros; //acordarse de hacerle el free del otro lado
 }
+

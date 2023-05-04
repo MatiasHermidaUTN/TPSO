@@ -18,54 +18,133 @@ void ejecutar_instrucciones(t_pcb* pcb) {
 			case SET:
 				ejecutar_set(pcb, instruccion_actual);
 				break;
+
 			case MOV_IN:
+				parametros = malloc(sizeof(char*) * 2);
+				parametros[0] = list_get(instruccion_actual->parametros,0);
+				parametros[1] = list_get(instruccion_actual->parametros,1);
+
+				//TODO: IMPLEMENTAR
+
+				liberar_parametros(parametros);
 				break;
+
 			case MOV_OUT:
+				parametros = malloc(sizeof(char*) * 2);
+				parametros[0] = list_get(instruccion_actual->parametros,0);
+				parametros[1] = list_get(instruccion_actual->parametros,1);
+
+				//TODO: IMPLEMENTAR
+
+				liberar_parametros(parametros);
 				break;
+
 			case IO:
 				//char* tiempo_a_bloquear = list_get(instruccion_actual->parametros, 0); //va con strdup?
 				//string_array_push(&parametros, tiempo_a_bloquear);
 				parametros = malloc(sizeof(char*));
 				parametros[0] = list_get(instruccion_actual->parametros, 0); //va con strdup?
 				enviar_pcb(socket_kernel, pcb, IO_EJECUTADO, parametros);
+				liberar_parametros(parametros);
 				return;
 				break;
-			case F_OPEN:
-				break;
-			case F_CLOSE:
-				break;
-			case F_SEEK:
-				break;
-			case F_READ:
-				break;
-			case F_WRITE:
-				break;
-			case F_TRUNCATE:
-				break;
+
 			case WAIT:
 				//char* recurso_a_usar = list_get(instruccion_actual->parametros, 0); //va con strdup?
 				//string_array_push(&parametros, recurso_a_usar);
 				parametros = malloc(sizeof(char*));
 				parametros[0] = list_get(instruccion_actual->parametros, 0); //recurso_a_usar //va con strdup?
 				enviar_pcb(socket_kernel, pcb, WAIT_EJECUTADO, parametros);
+				liberar_parametros(parametros);
 				return;
 				break;
+
 			case SIGNAL:
 				//char* recurso_a_desbloquear = list_get(instruccion_actual->parametros, 0); //va con strdup?
 				//string_array_push(&parametros, recurso_a_desbloquear);
 				parametros = malloc(sizeof(char*));
 				parametros[0] = list_get(instruccion_actual->parametros, 0); //recurso_a_desbloquear //va con strdup?
 				enviar_pcb(socket_kernel, pcb, SIGNAL_EJECUTADO, parametros);
+				liberar_parametros(parametros);
 				return;
 				break;
+
 			case CREATE_SEGMENT:
+				parametros = malloc(sizeof(char*) * 2);
+				parametros[0] = list_get(instruccion_actual->parametros,0);
+				parametros[1] = list_get(instruccion_actual->parametros,1);
+				enviar_pcb(socket_kernel, pcb, CREATE_SEGMENT_EJECUTADO, parametros);
+				liberar_parametros(parametros);
+				return;
 				break;
+
 			case DELETE_SEGMENT:
+				parametros = malloc(sizeof(char*));
+				parametros[0] = list_get(instruccion_actual->parametros,0);
+				enviar_pcb(socket_kernel, pcb, DELETE_SEGMENT_EJECUTADO, parametros);
+				liberar_parametros(parametros);
+				return;
 				break;
+
 			case YIELD:
 				enviar_pcb(socket_kernel, pcb, YIELD_EJECUTADO, NULL); //NULL porque no se le pasa ningun parametro
 				return;
 				break;
+
+			case F_OPEN:
+				parametros = malloc(sizeof(char*));
+				parametros[0] = list_get(instruccion_actual->parametros,0);
+				enviar_pcb(socket_kernel, pcb, F_OPEN_EJECUTADO, parametros);
+				liberar_parametros(parametros);
+				return;
+				break;
+
+			case F_CLOSE:
+				parametros = malloc(sizeof(char*));
+				parametros[0] = list_get(instruccion_actual->parametros,0);
+				enviar_pcb(socket_kernel, pcb, F_CLOSE_EJECUTADO, parametros);
+				liberar_parametros(parametros);
+				return;
+				break;
+
+			case F_SEEK:
+				parametros = malloc(sizeof(char*)*2);
+				parametros[0] = list_get(instruccion_actual->parametros,0);
+				parametros[1] = list_get(instruccion_actual->parametros,1);
+				enviar_pcb(socket_kernel, pcb, F_SEEK_EJECUTADO, parametros);
+				liberar_parametros(parametros);
+				return;
+				break;
+
+			case F_READ:
+				parametros = malloc(sizeof(char*)*3);
+				parametros[0] = list_get(instruccion_actual->parametros,0);
+				parametros[1] = list_get(instruccion_actual->parametros,1);
+				parametros[2] = list_get(instruccion_actual->parametros,2);
+				enviar_pcb(socket_kernel, pcb, F_READ_EJECUTADO, parametros);
+				liberar_parametros(parametros);
+				return;
+				break;
+
+			case F_WRITE:
+				parametros = malloc(sizeof(char*)*3);
+				parametros[0] = list_get(instruccion_actual->parametros,0);
+				parametros[1] = list_get(instruccion_actual->parametros,1);
+				parametros[2] = list_get(instruccion_actual->parametros,2);
+				enviar_pcb(socket_kernel, pcb, F_WRITE_EJECUTADO, parametros);
+				liberar_parametros(parametros);
+				return;
+				break;
+
+			case F_TRUNCATE:
+				parametros = malloc(sizeof(char*)*2);
+				parametros[0] = list_get(instruccion_actual->parametros,0);
+				parametros[1] = list_get(instruccion_actual->parametros,1);
+				enviar_pcb(socket_kernel, pcb, F_TRUNCATE_EJECUTADO, parametros);
+				liberar_parametros(parametros);
+				return;
+				break;
+
 			case EXIT:
 				enviar_pcb(socket_kernel, pcb, EXIT_EJECUTADO, NULL); //NULL porque no se le pasa ningun parametro
 				return;
