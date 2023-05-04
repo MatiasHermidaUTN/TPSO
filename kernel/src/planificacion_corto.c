@@ -9,16 +9,9 @@ void planificar_corto() {
 		sem_wait(&sem_cant_ready); //entra solo si hay algun proceso en Ready, es una espera no activa
 		pcb = obtener_proximo_a_ejecutar();
 
-		if(!pcb->tiempo_inicial_ejecucion) { //Si no viene de EXEC
-			//printf("calculando tiempo_inicial_ejecucion\n");
-			log_info(logger, "PID: %d - Estado Anterior: READY - Estado Actual: EXEC", pcb->pid);
-			pcb->tiempo_inicial_ejecucion = time(NULL); // Para calcular el tiempo en ejecucion inmediatamente antes de pasarlo a la CPU
-		} //Comienza ejecucion
-		//printf("antes de enviar_pcb\n");
+	    //Comienza ejecucion
 		enviar_pcb(socket_cpu, pcb, PCB_A_EJECUTAR, NULL); //NULL porque no se le pasa ningun parametro extra
-		//printf("Antes de liberar_pcb\n");
 		liberar_pcb(pcb);
-		//printf("Despues de liberar_pcb\n");
 
 		t_msj_kernel_cpu respuesta = esperar_cpu();
 
@@ -32,7 +25,6 @@ void planificar_corto() {
 
 				pcb_recibido = recibir_pcb(socket_cpu);
 				pcb_recibido->tiempo_real_ejecucion = time(NULL) - pcb_recibido->tiempo_inicial_ejecucion;
-				pcb_recibido->tiempo_inicial_ejecucion = 0;
 				//Finaliza ejecucion
 
 				t_args_io* args = malloc(sizeof(t_args_io));
@@ -75,7 +67,6 @@ void planificar_corto() {
 			case YIELD_EJECUTADO: //vuelve a ready
 				pcb_recibido = recibir_pcb(socket_cpu);
 				pcb_recibido->tiempo_real_ejecucion = time(NULL) - pcb_recibido->tiempo_inicial_ejecucion;
-				pcb_recibido->tiempo_inicial_ejecucion = 0;
 				//Finaliza ejecucion
 
 				ready_list_push(pcb_recibido); //Aca calcula el S (proxima rafaga), actualizo el tiempo_llegada_ready y hago sem_post(&sem_cant_ready) (solo necesito pasarle el pcb, porque ya se que es en Ready)
@@ -116,21 +107,28 @@ int calcular_tiempo_en_ready(int segundos) {
 
 t_pcb* obtener_proximo_a_ejecutar() {
 	t_pcb* pcb;
-	if(proximo_pcb_a_ejecutar_forzado) {
+	if(proximo_pcb_a_ejecutar_forzado) { //No hay que resetear el tiempo_inicial_ejecucion porque sigue ejecutando el mismo proceso
 		t_pcb* proximo = proximo_pcb_a_ejecutar_forzado;
 		proximo_pcb_a_ejecutar_forzado = NULL;
-		//printf("en proximo_a_ejecutar_forzado\n");
-		//printf("pid_pcb_forzado: %d\n", proximo->pid);
 		return proximo;
 	}
 	else if(!strcmp(lectura_de_config.ALGORITMO_PLANIFICACION, "FIFO")) {
-		return list_pop_con_mutex(ready_list, &mutex_ready_list);
+		pcb = list_pop_con_mutex(ready_list, &mutex_ready_list);
+		pcb->tiempo_inicial_ejecucion = time(NULL);
+		log_info(logger, "PID: %d - Estado Anterior: READY - Estado Actual: EXEC", pcb->pid);
+		return pcb;
+
 	}
 	else if (!strcmp(lectura_de_config.ALGORITMO_PLANIFICACION, "HRRN")) {
 		pthread_mutex_lock(&mutex_ready_list);
-		pcb = list_get_maximum(ready_list, (void*)calcular_R);
-		list_remove_element(ready_list, pcb);
+
+		//pcb = list_get_maximum(ready_list, (void*)calcular_R);
+		pcb = list_get_max_R(ready_list);
+
+		list_remove_pcb(ready_list, pcb); //lo remueve pero no lo libera
 		pthread_mutex_unlock(&mutex_ready_list);
+		pcb->tiempo_inicial_ejecucion = time(NULL);
+		log_info(logger, "PID: %d - Estado Anterior: READY - Estado Actual: EXEC", pcb->pid);
 		return pcb;
 	}
 	else log_error(logger, "Error en la lectura del algoritmo de planificacion");
@@ -152,7 +150,6 @@ void wait_recurso(t_pcb* pcb, char* nombre_recurso) {
 
 		if(recurso->cantidad_disponibles < 0) { //Si el recurso no esta disponible
 			pcb->tiempo_real_ejecucion = time(NULL) - pcb->tiempo_inicial_ejecucion;
-			pcb->tiempo_inicial_ejecucion = 0; //Indica que no sigue en EXEC
 
 			queue_push(recurso->cola_bloqueados, pcb); //Pasa a BLOCK
 			log_info(logger, "PID: %d - Estado Anterior: EXEC - Estado Actual: BLOCK", pcb->pid); //log obligatorio
@@ -211,4 +208,26 @@ void exit_proceso(t_pcb* pcb) {
 
 	//avisarle a memoria para liberar la estructura
 	liberar_pcb(pcb);
+}
+
+void list_remove_pcb(t_list *lista, t_pcb *pcb) {
+	t_pcb* elemento;
+	for(int i = 0; i < list_size(lista); i++){
+		elemento = list_get(lista, i);
+		if(elemento->pid == pcb->pid){
+			elemento = list_remove(lista, i);
+		}
+	}
+}
+
+t_pcb* list_get_max_R(t_list* lista){
+	t_pcb* pcb_max = list_get(lista, 0);
+	t_pcb* pcb;
+	for(int i = 0; i < list_size(lista); i++){
+		pcb = list_get(lista, i);
+		if(calcular_R(pcb) > calcular_R(pcb_max)){
+			pcb_max = pcb;
+		}
+	}
+	return pcb_max;
 }

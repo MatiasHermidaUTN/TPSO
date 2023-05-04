@@ -50,7 +50,7 @@ t_pcb* crear_pcb(t_list* instrucciones,int socket_consola) {
 
 	pcb->instrucciones = instrucciones;
 	pcb->pc =0;
-	//pcb->registros_cpu = init_registros_cpu(); NO HACE FALTA INICIALIZARLOS, es memoria estatica
+	//pcb->registros_cpu = init_registros_cpu();
 	pcb->tabla_segmentos = list_create();
 	pcb->estimado_prox_rafaga = lectura_de_config.ESTIMACION_INICIAL;
 	pcb->tiempo_llegada_ready = 0;
@@ -84,7 +84,7 @@ void init_conexiones(t_kernel_config lectura_de_config, t_log* logger, int* sock
 		log_error(logger, "Kernel no pudo conectarse a CPU");
 		exit(EXIT_FAILURE);
 	}
-	/* No compila el FS, por lo que por ahora lo pruebo sin este
+	/* No compila el FS, por lo que por ahora lo pruebo sin este //TODO DESCOMENTAR
 	*socket_fileSystem = crear_conexion(lectura_de_config.IP_FILESYSTEM, lectura_de_config.PUERTO_FILESYSTEM);
 	if(*socket_fileSystem == -1) {
 		log_error(logger, "Kernel no pudo conectarse a File System");

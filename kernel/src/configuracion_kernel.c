@@ -79,7 +79,7 @@ void init_estados() {
 
 	t_recurso* recurso;
 	for(int i = 0; i < string_array_size(lectura_de_config.RECURSOS); i++) {
-		recurso= malloc(sizeof(recurso));
+		recurso = malloc(sizeof(t_recurso));
 
 		recurso->nombre = lectura_de_config.RECURSOS[i]; //Hay que hacer strdup?
 		recurso->cantidad_disponibles = atoi(lectura_de_config.INSTANCIAS_RECURSOS[i]);
