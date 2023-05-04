@@ -205,4 +205,6 @@ void memcpy_archivos_abiertos_deserializar(t_list* archivos_abiertos, void* stre
 
 void print_l_instrucciones(t_list* instrucciones);
 
+int cantidad_de_punteros(char** arreglo);
+
 #endif /* UTILS_H_ */

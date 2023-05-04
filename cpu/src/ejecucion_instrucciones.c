@@ -43,9 +43,9 @@ void ejecutar_instrucciones(t_pcb* pcb) {
 				//char* tiempo_a_bloquear = list_get(instruccion_actual->parametros, 0); //va con strdup?
 				//string_array_push(&parametros, tiempo_a_bloquear);
 				parametros = malloc(sizeof(char*));
-				parametros[0] = list_get(instruccion_actual->parametros, 0); //va con strdup?
+				parametros[0] = list_get(instruccion_actual->parametros, 0);
 				enviar_pcb(socket_kernel, pcb, IO_EJECUTADO, parametros);
-				liberar_parametros(parametros);
+				free(parametros);
 				return;
 				break;
 
@@ -55,7 +55,7 @@ void ejecutar_instrucciones(t_pcb* pcb) {
 				parametros = malloc(sizeof(char*));
 				parametros[0] = list_get(instruccion_actual->parametros, 0); //recurso_a_usar //va con strdup?
 				enviar_pcb(socket_kernel, pcb, WAIT_EJECUTADO, parametros);
-				liberar_parametros(parametros);
+				free(parametros);
 				return;
 				break;
 
@@ -65,7 +65,7 @@ void ejecutar_instrucciones(t_pcb* pcb) {
 				parametros = malloc(sizeof(char*));
 				parametros[0] = list_get(instruccion_actual->parametros, 0); //recurso_a_desbloquear //va con strdup?
 				enviar_pcb(socket_kernel, pcb, SIGNAL_EJECUTADO, parametros);
-				liberar_parametros(parametros);
+				free(parametros);
 				return;
 				break;
 
@@ -74,7 +74,7 @@ void ejecutar_instrucciones(t_pcb* pcb) {
 				parametros[0] = list_get(instruccion_actual->parametros,0);
 				parametros[1] = list_get(instruccion_actual->parametros,1);
 				enviar_pcb(socket_kernel, pcb, CREATE_SEGMENT_EJECUTADO, parametros);
-				liberar_parametros(parametros);
+				free(parametros);
 				return;
 				break;
 
@@ -82,7 +82,7 @@ void ejecutar_instrucciones(t_pcb* pcb) {
 				parametros = malloc(sizeof(char*));
 				parametros[0] = list_get(instruccion_actual->parametros,0);
 				enviar_pcb(socket_kernel, pcb, DELETE_SEGMENT_EJECUTADO, parametros);
-				liberar_parametros(parametros);
+				free(parametros);
 				return;
 				break;
 
@@ -95,7 +95,7 @@ void ejecutar_instrucciones(t_pcb* pcb) {
 				parametros = malloc(sizeof(char*));
 				parametros[0] = list_get(instruccion_actual->parametros,0);
 				enviar_pcb(socket_kernel, pcb, F_OPEN_EJECUTADO, parametros);
-				liberar_parametros(parametros);
+				free(parametros);
 				return;
 				break;
 
@@ -103,7 +103,7 @@ void ejecutar_instrucciones(t_pcb* pcb) {
 				parametros = malloc(sizeof(char*));
 				parametros[0] = list_get(instruccion_actual->parametros,0);
 				enviar_pcb(socket_kernel, pcb, F_CLOSE_EJECUTADO, parametros);
-				liberar_parametros(parametros);
+				free(parametros);
 				return;
 				break;
 
@@ -112,7 +112,7 @@ void ejecutar_instrucciones(t_pcb* pcb) {
 				parametros[0] = list_get(instruccion_actual->parametros,0);
 				parametros[1] = list_get(instruccion_actual->parametros,1);
 				enviar_pcb(socket_kernel, pcb, F_SEEK_EJECUTADO, parametros);
-				liberar_parametros(parametros);
+				free(parametros);
 				return;
 				break;
 
@@ -122,7 +122,7 @@ void ejecutar_instrucciones(t_pcb* pcb) {
 				parametros[1] = list_get(instruccion_actual->parametros,1);
 				parametros[2] = list_get(instruccion_actual->parametros,2);
 				enviar_pcb(socket_kernel, pcb, F_READ_EJECUTADO, parametros);
-				liberar_parametros(parametros);
+				free(parametros);
 				return;
 				break;
 
@@ -132,7 +132,7 @@ void ejecutar_instrucciones(t_pcb* pcb) {
 				parametros[1] = list_get(instruccion_actual->parametros,1);
 				parametros[2] = list_get(instruccion_actual->parametros,2);
 				enviar_pcb(socket_kernel, pcb, F_WRITE_EJECUTADO, parametros);
-				liberar_parametros(parametros);
+				free(parametros);
 				return;
 				break;
 
@@ -141,7 +141,7 @@ void ejecutar_instrucciones(t_pcb* pcb) {
 				parametros[0] = list_get(instruccion_actual->parametros,0);
 				parametros[1] = list_get(instruccion_actual->parametros,1);
 				enviar_pcb(socket_kernel, pcb, F_TRUNCATE_EJECUTADO, parametros);
-				liberar_parametros(parametros);
+				free(parametros);
 				return;
 				break;
 

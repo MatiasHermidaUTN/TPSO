@@ -78,7 +78,7 @@ void init_estados() {
 	list_recursos = list_create();
 
 	t_recurso* recurso;
-	for(int i = 0; i < string_array_size(lectura_de_config.RECURSOS); i++) {
+	for(int i = 0; i < cantidad_de_punteros(lectura_de_config.RECURSOS); i++) {
 		recurso = malloc(sizeof(t_recurso));
 
 		recurso->nombre = lectura_de_config.RECURSOS[i]; //Hay que hacer strdup?

@@ -2877,3 +2877,976 @@
 [INFO] 15:51:39:508 Kernel/(8692:8694): PID: 5 - Signal: DISCO - Instancias: 1
 [INFO] 15:51:39:508 Kernel/(8692:8694): PID: 5 - Estado Anterior: EXEC - Estado Actual: EXIT
 [INFO] 15:51:39:509 Kernel/(8692:8694): Finaliza el proceso 5 - Motivo: SUCCESS
+[WARNING] 17:21:51:326 Kernel/(5362:5362): Kernel listo para recibir a Consolas
+[WARNING] 17:22:40:816 Kernel/(5362:5373): Se conecto una consola
+[WARNING] 17:22:40:817 Kernel/(5362:5373): Consola mando instrucciones
+[INFO] 17:22:40:817 Kernel/(5362:5373): Se crea el proceso 1 en NEW
+[INFO] 17:22:40:817 Kernel/(5362:5365): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 17:22:40:817 Kernel/(5362:5364): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 17:22:40:817 Kernel/(5362:5364): PID: 1 - Wait: DISCO - Instancias: 0
+[ERROR] 17:22:41:148 Kernel/(5362:5364): Error en la comunicacion entre el Kernel y la CPU
+[WARNING] 17:24:23:193 Kernel/(5389:5389): Kernel listo para recibir a Consolas
+[WARNING] 17:24:25:620 Kernel/(5389:5394): Se conecto una consola
+[WARNING] 17:24:25:620 Kernel/(5389:5394): Consola mando instrucciones
+[INFO] 17:24:25:621 Kernel/(5389:5394): Se crea el proceso 1 en NEW
+[INFO] 17:24:25:621 Kernel/(5389:5392): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 17:24:25:621 Kernel/(5389:5391): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 17:24:25:621 Kernel/(5389:5391): PID: 1 - Wait: DISCO - Instancias: 0
+[ERROR] 17:24:25:831 Kernel/(5389:5391): Error en la comunicacion entre el Kernel y la CPU
+[WARNING] 17:29:19:833 Kernel/(5899:5899): Kernel listo para recibir a Consolas
+[WARNING] 17:29:24:598 Kernel/(5899:5906): Se conecto una consola
+[WARNING] 17:29:24:599 Kernel/(5899:5906): Consola mando instrucciones
+[INFO] 17:29:24:599 Kernel/(5899:5906): Se crea el proceso 1 en NEW
+[INFO] 17:29:24:599 Kernel/(5899:5902): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 17:29:24:599 Kernel/(5899:5901): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 17:29:24:599 Kernel/(5899:5901): PID: 1 - Wait: DISCO - Instancias: 0
+[INFO] 17:29:24:599 Kernel/(5899:5901): PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 17:29:24:599 Kernel/(5899:5901): PID: 1 - Bloqueado por: IO
+[INFO] 17:29:24:599 Kernel/(5899:5901): PID: 1 - Ejecuta IO: 20
+[WARNING] 17:29:25:298 Kernel/(5899:5910): Se conecto una consola
+[WARNING] 17:29:25:298 Kernel/(5899:5910): Consola mando instrucciones
+[INFO] 17:29:25:298 Kernel/(5899:5910): Se crea el proceso 2 en NEW
+[INFO] 17:29:25:298 Kernel/(5899:5902): PID: 2 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 17:29:25:298 Kernel/(5899:5901): PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[ERROR] 17:29:25:299 Kernel/(5899:5901): Error en la comunicacion entre el Kernel y la CPU
+[WARNING] 17:30:28:300 Kernel/(5941:5941): Kernel listo para recibir a Consolas
+[WARNING] 17:30:33:542 Kernel/(5941:5946): Se conecto una consola
+[WARNING] 17:30:33:542 Kernel/(5941:5946): Consola mando instrucciones
+[INFO] 17:30:33:542 Kernel/(5941:5946): Se crea el proceso 1 en NEW
+[INFO] 17:30:33:543 Kernel/(5941:5944): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 17:30:33:543 Kernel/(5941:5943): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 17:30:33:543 Kernel/(5941:5943): PID: 1 - Wait: DISCO - Instancias: 0
+[INFO] 17:30:33:543 Kernel/(5941:5943): PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 17:30:33:543 Kernel/(5941:5943): PID: 1 - Bloqueado por: IO
+[INFO] 17:30:33:543 Kernel/(5941:5943): PID: 1 - Ejecuta IO: 20
+[WARNING] 17:30:34:145 Kernel/(5941:5949): Se conecto una consola
+[WARNING] 17:30:34:145 Kernel/(5941:5949): Consola mando instrucciones
+[INFO] 17:30:34:145 Kernel/(5941:5949): Se crea el proceso 2 en NEW
+[INFO] 17:30:34:145 Kernel/(5941:5944): PID: 2 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 17:30:34:145 Kernel/(5941:5943): PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 17:30:34:145 Kernel/(5941:5943): PID: 2 - Wait: DISCO - Instancias: -1
+[INFO] 17:30:34:145 Kernel/(5941:5943): PID: 2 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 17:30:34:145 Kernel/(5941:5943): PID: 2 - Bloqueado por: DISCO
+[WARNING] 17:30:34:704 Kernel/(5941:5951): Se conecto una consola
+[WARNING] 17:30:34:704 Kernel/(5941:5951): Consola mando instrucciones
+[INFO] 17:30:34:704 Kernel/(5941:5951): Se crea el proceso 3 en NEW
+[WARNING] 17:30:35:383 Kernel/(5941:5953): Se conecto una consola
+[WARNING] 17:30:35:383 Kernel/(5941:5953): Consola mando instrucciones
+[INFO] 17:30:35:384 Kernel/(5941:5953): Se crea el proceso 4 en NEW
+[WARNING] 17:30:39:752 Kernel/(5941:5955): Se conecto una consola
+[WARNING] 17:30:39:752 Kernel/(5941:5955): Consola mando instrucciones
+[INFO] 17:30:39:752 Kernel/(5941:5955): Se crea el proceso 5 en NEW
+[INFO] 17:30:53:544 Kernel/(5941:5947): PID: 1 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 17:30:53:544 Kernel/(5941:5943): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 17:30:53:544 Kernel/(5941:5943): PID: 1 - Estado Anterior: EXEC - Estado Actual: READY
+[INFO] 17:30:53:544 Kernel/(5941:5943): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 17:30:58:545 Kernel/(5941:5943): PID: 1 - Signal: DISCO - Instancias: 0
+[INFO] 17:30:58:545 Kernel/(5941:5943): PID: 2 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 17:30:58:545 Kernel/(5941:5943): PID: 1 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 17:30:58:545 Kernel/(5941:5944): PID: 3 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 17:30:58:545 Kernel/(5941:5943): Finaliza el proceso 1 - Motivo: SUCCESS
+[INFO] 17:30:58:545 Kernel/(5941:5943): PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 17:30:58:546 Kernel/(5941:5943): PID: 2 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 17:30:58:546 Kernel/(5941:5943): PID: 2 - Bloqueado por: IO
+[INFO] 17:30:58:546 Kernel/(5941:5943): PID: 2 - Ejecuta IO: 20
+[INFO] 17:30:58:546 Kernel/(5941:5943): PID: 3 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 17:30:58:546 Kernel/(5941:5943): PID: 3 - Wait: DISCO - Instancias: -1
+[INFO] 17:30:58:546 Kernel/(5941:5943): PID: 3 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 17:30:58:546 Kernel/(5941:5943): PID: 3 - Bloqueado por: DISCO
+[INFO] 17:31:18:546 Kernel/(5941:5956): PID: 2 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 17:31:18:547 Kernel/(5941:5943): PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 17:31:18:547 Kernel/(5941:5943): PID: 2 - Estado Anterior: EXEC - Estado Actual: READY
+[INFO] 17:31:18:547 Kernel/(5941:5943): PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 17:31:23:548 Kernel/(5941:5943): PID: 2 - Signal: DISCO - Instancias: 0
+[INFO] 17:31:23:548 Kernel/(5941:5943): PID: 3 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 17:31:23:548 Kernel/(5941:5943): PID: 2 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 17:31:23:548 Kernel/(5941:5944): PID: 4 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 17:31:23:548 Kernel/(5941:5943): Finaliza el proceso 2 - Motivo: SUCCESS
+[INFO] 17:31:23:548 Kernel/(5941:5943): PID: 3 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 17:31:23:549 Kernel/(5941:5943): PID: 3 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 17:31:23:549 Kernel/(5941:5943): PID: 3 - Bloqueado por: IO
+[INFO] 17:31:23:549 Kernel/(5941:5943): PID: 3 - Ejecuta IO: 20
+[INFO] 17:31:23:549 Kernel/(5941:5943): PID: 4 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 17:31:23:549 Kernel/(5941:5943): PID: 4 - Wait: DISCO - Instancias: -1
+[INFO] 17:31:23:549 Kernel/(5941:5943): PID: 4 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 17:31:23:549 Kernel/(5941:5943): PID: 4 - Bloqueado por: DISCO
+[INFO] 17:31:43:549 Kernel/(5941:5957): PID: 3 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 17:31:43:549 Kernel/(5941:5943): PID: 3 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 17:31:43:550 Kernel/(5941:5943): PID: 3 - Estado Anterior: EXEC - Estado Actual: READY
+[INFO] 17:31:43:550 Kernel/(5941:5943): PID: 3 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 17:31:48:551 Kernel/(5941:5943): PID: 3 - Signal: DISCO - Instancias: 0
+[INFO] 17:31:48:551 Kernel/(5941:5943): PID: 4 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 17:31:48:552 Kernel/(5941:5943): PID: 3 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 17:31:48:552 Kernel/(5941:5944): PID: 5 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 17:31:48:552 Kernel/(5941:5943): Finaliza el proceso 3 - Motivo: SUCCESS
+[INFO] 17:31:48:552 Kernel/(5941:5943): PID: 4 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 17:31:48:553 Kernel/(5941:5943): PID: 4 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 17:31:48:553 Kernel/(5941:5943): PID: 4 - Bloqueado por: IO
+[INFO] 17:31:48:553 Kernel/(5941:5943): PID: 4 - Ejecuta IO: 20
+[INFO] 17:31:48:553 Kernel/(5941:5943): PID: 5 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 17:31:48:553 Kernel/(5941:5943): PID: 5 - Wait: DISCO - Instancias: -1
+[INFO] 17:31:48:553 Kernel/(5941:5943): PID: 5 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 17:31:48:553 Kernel/(5941:5943): PID: 5 - Bloqueado por: DISCO
+[INFO] 17:32:08:553 Kernel/(5941:5958): PID: 4 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 17:32:08:554 Kernel/(5941:5943): PID: 4 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 17:32:08:554 Kernel/(5941:5943): PID: 4 - Estado Anterior: EXEC - Estado Actual: READY
+[INFO] 17:32:08:554 Kernel/(5941:5943): PID: 4 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 17:32:13:555 Kernel/(5941:5943): PID: 4 - Signal: DISCO - Instancias: 0
+[INFO] 17:32:13:555 Kernel/(5941:5943): PID: 5 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 17:32:13:555 Kernel/(5941:5943): PID: 4 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 17:32:13:556 Kernel/(5941:5943): Finaliza el proceso 4 - Motivo: SUCCESS
+[INFO] 17:32:13:556 Kernel/(5941:5943): PID: 5 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 17:32:13:556 Kernel/(5941:5943): PID: 5 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 17:32:13:556 Kernel/(5941:5943): PID: 5 - Bloqueado por: IO
+[INFO] 17:32:13:556 Kernel/(5941:5943): PID: 5 - Ejecuta IO: 20
+[INFO] 17:32:33:556 Kernel/(5941:5959): PID: 5 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 17:32:33:556 Kernel/(5941:5943): PID: 5 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 17:32:33:556 Kernel/(5941:5943): PID: 5 - Estado Anterior: EXEC - Estado Actual: READY
+[INFO] 17:32:33:557 Kernel/(5941:5943): PID: 5 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 17:32:38:557 Kernel/(5941:5943): PID: 5 - Signal: DISCO - Instancias: 1
+[INFO] 17:32:38:558 Kernel/(5941:5943): PID: 5 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 17:32:38:558 Kernel/(5941:5943): Finaliza el proceso 5 - Motivo: SUCCESS
+[WARNING] 17:32:42:074 Kernel/(5941:5961): Se conecto una consola
+[WARNING] 17:32:42:074 Kernel/(5941:5961): Consola mando instrucciones
+[INFO] 17:32:42:074 Kernel/(5941:5961): Se crea el proceso 6 en NEW
+[INFO] 17:32:42:074 Kernel/(5941:5944): PID: 6 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 17:32:42:074 Kernel/(5941:5943): PID: 6 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 17:32:42:074 Kernel/(5941:5943): PID: 6 - Wait: DISCO - Instancias: 0
+[INFO] 17:32:42:075 Kernel/(5941:5943): PID: 6 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 17:32:42:075 Kernel/(5941:5943): PID: 6 - Bloqueado por: IO
+[INFO] 17:32:42:075 Kernel/(5941:5943): PID: 6 - Ejecuta IO: 20
+[INFO] 17:33:02:075 Kernel/(5941:5962): PID: 6 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 17:33:02:075 Kernel/(5941:5943): PID: 6 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 17:33:02:075 Kernel/(5941:5943): PID: 6 - Estado Anterior: EXEC - Estado Actual: READY
+[INFO] 17:33:02:075 Kernel/(5941:5943): PID: 6 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 17:33:07:077 Kernel/(5941:5943): PID: 6 - Signal: DISCO - Instancias: 1
+[INFO] 17:33:07:078 Kernel/(5941:5943): PID: 6 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 17:33:07:078 Kernel/(5941:5943): Finaliza el proceso 6 - Motivo: SUCCESS
+[WARNING] 17:33:40:854 Kernel/(5941:5968): Se conecto una consola
+[WARNING] 17:33:40:854 Kernel/(5941:5968): Consola mando instrucciones
+[INFO] 17:33:40:854 Kernel/(5941:5968): Se crea el proceso 7 en NEW
+[INFO] 17:33:40:854 Kernel/(5941:5944): PID: 7 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 17:33:40:854 Kernel/(5941:5943): PID: 7 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 17:33:40:854 Kernel/(5941:5943): PID: 7 - Wait: DISCO - Instancias: 0
+[INFO] 17:33:40:855 Kernel/(5941:5943): PID: 7 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 17:33:40:855 Kernel/(5941:5943): PID: 7 - Bloqueado por: IO
+[INFO] 17:33:40:855 Kernel/(5941:5943): PID: 7 - Ejecuta IO: 20
+[WARNING] 17:33:45:463 Kernel/(5941:5971): Se conecto una consola
+[WARNING] 17:33:45:463 Kernel/(5941:5971): Consola mando instrucciones
+[INFO] 17:33:45:464 Kernel/(5941:5971): Se crea el proceso 8 en NEW
+[INFO] 17:33:45:464 Kernel/(5941:5944): PID: 8 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 17:33:45:464 Kernel/(5941:5943): PID: 8 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 17:33:45:464 Kernel/(5941:5943): PID: 8 - Wait: DISCO - Instancias: -1
+[INFO] 17:33:45:464 Kernel/(5941:5943): PID: 8 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 17:33:45:464 Kernel/(5941:5943): PID: 8 - Bloqueado por: DISCO
+[WARNING] 17:33:47:006 Kernel/(5941:5973): Se conecto una consola
+[WARNING] 17:33:47:006 Kernel/(5941:5973): Consola mando instrucciones
+[INFO] 17:33:47:006 Kernel/(5941:5973): Se crea el proceso 9 en NEW
+[WARNING] 17:33:47:798 Kernel/(5941:5975): Se conecto una consola
+[WARNING] 17:33:47:798 Kernel/(5941:5975): Consola mando instrucciones
+[INFO] 17:33:47:798 Kernel/(5941:5975): Se crea el proceso 10 en NEW
+[WARNING] 17:33:50:426 Kernel/(5941:5977): Se conecto una consola
+[WARNING] 17:33:50:426 Kernel/(5941:5977): Consola mando instrucciones
+[INFO] 17:33:50:426 Kernel/(5941:5977): Se crea el proceso 11 en NEW
+[INFO] 17:34:00:855 Kernel/(5941:5969): PID: 7 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 17:34:00:855 Kernel/(5941:5943): PID: 7 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 17:34:00:856 Kernel/(5941:5943): PID: 7 - Estado Anterior: EXEC - Estado Actual: READY
+[INFO] 17:34:00:856 Kernel/(5941:5943): PID: 7 - Estado Anterior: READY - Estado Actual: EXEC
+[WARNING] 17:35:58:675 Kernel/(6016:6016): Kernel listo para recibir a Consolas
+[WARNING] 17:36:00:697 Kernel/(6016:6021): Se conecto una consola
+[WARNING] 17:36:00:697 Kernel/(6016:6021): Consola mando instrucciones
+[INFO] 17:36:00:698 Kernel/(6016:6021): Se crea el proceso 1 en NEW
+[INFO] 17:36:00:698 Kernel/(6016:6019): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 17:36:00:698 Kernel/(6016:6018): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 17:36:00:698 Kernel/(6016:6018): PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 17:36:00:698 Kernel/(6016:6018): PID: 1 - Bloqueado por: IO
+[INFO] 17:36:00:698 Kernel/(6016:6018): PID: 1 - Ejecuta IO: 10
+[INFO] 17:36:10:699 Kernel/(6016:6022): PID: 1 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 17:36:10:699 Kernel/(6016:6018): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[WARNING] 17:41:05:306 Kernel/(6164:6164): Kernel listo para recibir a Consolas
+[WARNING] 17:41:07:416 Kernel/(6164:6169): Se conecto una consola
+[WARNING] 17:41:07:416 Kernel/(6164:6169): Consola mando instrucciones
+[INFO] 17:41:07:416 Kernel/(6164:6169): Se crea el proceso 1 en NEW
+[INFO] 17:41:07:417 Kernel/(6164:6167): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 17:41:07:417 Kernel/(6164:6166): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 17:41:07:417 Kernel/(6164:6166): PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 17:41:07:417 Kernel/(6164:6166): PID: 1 - Bloqueado por: IO
+[INFO] 17:41:07:417 Kernel/(6164:6166): PID: 1 - Ejecuta IO: 10
+[INFO] 17:41:17:417 Kernel/(6164:6170): PID: 1 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 17:41:17:417 Kernel/(6164:6166): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[WARNING] 17:43:01:412 Kernel/(6183:6183): Kernel listo para recibir a Consolas
+[WARNING] 17:43:02:252 Kernel/(6183:6188): Se conecto una consola
+[WARNING] 17:43:02:252 Kernel/(6183:6188): Consola mando instrucciones
+[INFO] 17:43:02:252 Kernel/(6183:6188): Se crea el proceso 1 en NEW
+[INFO] 17:43:02:253 Kernel/(6183:6186): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 17:43:02:253 Kernel/(6183:6185): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 17:43:02:253 Kernel/(6183:6185): PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 17:43:02:253 Kernel/(6183:6185): PID: 1 - Bloqueado por: IO
+[INFO] 17:43:02:253 Kernel/(6183:6185): PID: 1 - Ejecuta IO: 10
+[INFO] 17:43:12:253 Kernel/(6183:6189): PID: 1 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 17:43:12:254 Kernel/(6183:6185): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[WARNING] 17:47:35:140 Kernel/(6528:6528): Kernel listo para recibir a Consolas
+[WARNING] 17:47:38:117 Kernel/(6528:6533): Se conecto una consola
+[WARNING] 17:47:38:117 Kernel/(6528:6533): Consola mando instrucciones
+[INFO] 17:47:38:117 Kernel/(6528:6533): Se crea el proceso 1 en NEW
+[INFO] 17:47:38:117 Kernel/(6528:6531): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 17:47:38:117 Kernel/(6528:6530): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[WARNING] 17:54:02:734 Kernel/(6665:6665): Kernel listo para recibir a Consolas
+[WARNING] 17:55:25:954 Kernel/(6685:6685): Kernel listo para recibir a Consolas
+[WARNING] 17:55:27:247 Kernel/(6685:6690): Se conecto una consola
+[WARNING] 17:55:27:247 Kernel/(6685:6690): Consola mando instrucciones
+[INFO] 17:55:27:247 Kernel/(6685:6690): Se crea el proceso 1 en NEW
+[INFO] 17:55:27:247 Kernel/(6685:6688): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 17:55:27:247 Kernel/(6685:6687): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[ERROR] 17:55:27:248 Kernel/(6685:6687): No existe instruccion:  , en el diccionario
+[WARNING] 17:57:19:075 Kernel/(6699:6699): Kernel listo para recibir a Consolas
+[WARNING] 17:57:21:176 Kernel/(6699:6704): Se conecto una consola
+[WARNING] 17:57:21:176 Kernel/(6699:6704): Consola mando instrucciones
+[INFO] 17:57:21:176 Kernel/(6699:6704): Se crea el proceso 1 en NEW
+[INFO] 17:57:21:176 Kernel/(6699:6702): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 17:57:21:176 Kernel/(6699:6701): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[WARNING] 17:58:37:407 Kernel/(6709:6709): Kernel listo para recibir a Consolas
+[WARNING] 17:58:38:491 Kernel/(6709:6714): Se conecto una consola
+[WARNING] 17:58:38:491 Kernel/(6709:6714): Consola mando instrucciones
+[WARNING] 17:59:04:435 Kernel/(6720:6720): Kernel listo para recibir a Consolas
+[WARNING] 18:00:15:488 Kernel/(6732:6732): Kernel listo para recibir a Consolas
+[WARNING] 18:00:16:822 Kernel/(6732:6737): Se conecto una consola
+[WARNING] 18:00:16:823 Kernel/(6732:6737): Consola mando instrucciones
+[INFO] 18:00:16:823 Kernel/(6732:6737): Se crea el proceso 1 en NEW
+[INFO] 18:00:16:823 Kernel/(6732:6735): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 18:00:16:823 Kernel/(6732:6734): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[ERROR] 18:00:16:823 Kernel/(6732:6734): No existe instruccion:  , en el diccionario
+[WARNING] 18:01:28:162 Kernel/(6750:6750): Kernel listo para recibir a Consolas
+[WARNING] 18:01:31:120 Kernel/(6750:6755): Se conecto una consola
+[WARNING] 18:01:31:120 Kernel/(6750:6755): Consola mando instrucciones
+[INFO] 18:01:31:121 Kernel/(6750:6755): Se crea el proceso 1 en NEW
+[INFO] 18:01:31:121 Kernel/(6750:6753): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 18:01:31:121 Kernel/(6750:6752): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[ERROR] 18:01:36:122 Kernel/(6750:6752): No existe instruccion:  , en el diccionario
+[WARNING] 18:04:19:154 Kernel/(6808:6808): Kernel listo para recibir a Consolas
+[WARNING] 18:04:20:506 Kernel/(6808:6813): Se conecto una consola
+[WARNING] 18:04:20:506 Kernel/(6808:6813): Consola mando instrucciones
+[INFO] 18:04:20:506 Kernel/(6808:6813): Se crea el proceso 1 en NEW
+[INFO] 18:04:20:506 Kernel/(6808:6811): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 18:04:20:506 Kernel/(6808:6810): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[ERROR] 18:04:25:507 Kernel/(6808:6810): No existe instruccion:  , en el diccionario
+[WARNING] 18:06:56:156 Kernel/(6916:6916): Kernel listo para recibir a Consolas
+[WARNING] 18:06:57:036 Kernel/(6916:6921): Se conecto una consola
+[WARNING] 18:06:57:036 Kernel/(6916:6921): Consola mando instrucciones
+[INFO] 18:06:57:036 Kernel/(6916:6921): Se crea el proceso 1 en NEW
+[INFO] 18:06:57:036 Kernel/(6916:6919): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 18:06:57:036 Kernel/(6916:6918): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 18:07:02:037 Kernel/(6916:6918): PID: 1 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 18:07:02:037 Kernel/(6916:6918): Finaliza el proceso 1 - Motivo: SUCCESS
+[WARNING] 18:08:32:673 Kernel/(6955:6955): Kernel listo para recibir a Consolas
+[WARNING] 18:08:54:813 Kernel/(6955:6964): Se conecto una consola
+[WARNING] 18:08:54:814 Kernel/(6955:6964): Consola mando instrucciones
+[INFO] 18:08:54:814 Kernel/(6955:6964): Se crea el proceso 1 en NEW
+[INFO] 18:08:54:814 Kernel/(6955:6958): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 18:08:54:814 Kernel/(6955:6957): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 18:08:54:814 Kernel/(6955:6957): PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 18:08:54:814 Kernel/(6955:6957): PID: 1 - Bloqueado por: IO
+[INFO] 18:08:54:814 Kernel/(6955:6957): PID: 1 - Ejecuta IO: 20
+[WARNING] 18:08:55:592 Kernel/(6955:6967): Se conecto una consola
+[WARNING] 18:08:55:592 Kernel/(6955:6967): Consola mando instrucciones
+[INFO] 18:08:55:593 Kernel/(6955:6967): Se crea el proceso 2 en NEW
+[INFO] 18:08:55:593 Kernel/(6955:6958): PID: 2 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 18:08:55:593 Kernel/(6955:6957): PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 18:08:55:593 Kernel/(6955:6957): PID: 2 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 18:08:55:593 Kernel/(6955:6957): PID: 2 - Bloqueado por: IO
+[INFO] 18:08:55:593 Kernel/(6955:6957): PID: 2 - Ejecuta IO: 20
+[WARNING] 18:08:56:571 Kernel/(6955:6970): Se conecto una consola
+[WARNING] 18:08:56:571 Kernel/(6955:6970): Consola mando instrucciones
+[INFO] 18:08:56:571 Kernel/(6955:6970): Se crea el proceso 3 en NEW
+[WARNING] 18:08:57:412 Kernel/(6955:6972): Se conecto una consola
+[WARNING] 18:08:57:412 Kernel/(6955:6972): Consola mando instrucciones
+[INFO] 18:08:57:413 Kernel/(6955:6972): Se crea el proceso 4 en NEW
+[INFO] 18:09:14:815 Kernel/(6955:6965): PID: 1 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 18:09:14:815 Kernel/(6955:6957): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[ERROR] 18:09:14:815 Kernel/(6955:6957): Parametro 1: 1
+[ERROR] 18:09:14:815 Kernel/(6955:6957): Parametro 2: 2
+[WARNING] 18:11:07:854 Kernel/(7012:7012): Kernel listo para recibir a Consolas
+[WARNING] 18:11:09:902 Kernel/(7012:7017): Se conecto una consola
+[WARNING] 18:11:09:903 Kernel/(7012:7017): Consola mando instrucciones
+[INFO] 18:11:09:903 Kernel/(7012:7017): Se crea el proceso 1 en NEW
+[INFO] 18:11:09:903 Kernel/(7012:7015): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 18:11:09:903 Kernel/(7012:7014): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 18:11:09:903 Kernel/(7012:7014): PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 18:11:09:903 Kernel/(7012:7014): PID: 1 - Bloqueado por: IO
+[INFO] 18:11:09:903 Kernel/(7012:7014): PID: 1 - Ejecuta IO: 20
+[INFO] 18:11:29:903 Kernel/(7012:7018): PID: 1 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 18:11:29:904 Kernel/(7012:7014): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[ERROR] 18:11:29:904 Kernel/(7012:7014): Parametro 1: 1
+[ERROR] 18:11:29:904 Kernel/(7012:7014): Parametro 2: 2
+[INFO] 18:11:29:904 Kernel/(7012:7014): PID: 1 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 18:11:29:905 Kernel/(7012:7014): Finaliza el proceso 1 - Motivo: SUCCESS
+[WARNING] 18:11:33:632 Kernel/(7012:7023): Se conecto una consola
+[WARNING] 18:11:33:632 Kernel/(7012:7023): Consola mando instrucciones
+[INFO] 18:11:33:632 Kernel/(7012:7023): Se crea el proceso 2 en NEW
+[INFO] 18:11:33:633 Kernel/(7012:7015): PID: 2 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 18:11:33:633 Kernel/(7012:7014): PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 18:11:33:633 Kernel/(7012:7014): PID: 2 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 18:11:33:633 Kernel/(7012:7014): PID: 2 - Bloqueado por: IO
+[INFO] 18:11:33:633 Kernel/(7012:7014): PID: 2 - Ejecuta IO: 10
+[INFO] 18:11:43:633 Kernel/(7012:7024): PID: 2 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 18:11:43:633 Kernel/(7012:7014): PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[ERROR] 18:11:43:634 Kernel/(7012:7014): Parametro 1: 1
+[ERROR] 18:11:43:634 Kernel/(7012:7014): Parametro 2: 2
+[INFO] 18:11:43:634 Kernel/(7012:7014): PID: 2 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 18:11:43:634 Kernel/(7012:7014): Finaliza el proceso 2 - Motivo: SUCCESS
+[WARNING] 18:12:21:440 Kernel/(7012:7026): Se conecto una consola
+[WARNING] 18:12:21:440 Kernel/(7012:7026): Consola mando instrucciones
+[INFO] 18:12:21:440 Kernel/(7012:7026): Se crea el proceso 3 en NEW
+[INFO] 18:12:21:440 Kernel/(7012:7015): PID: 3 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 18:12:21:440 Kernel/(7012:7014): PID: 3 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 18:12:21:440 Kernel/(7012:7014): PID: 3 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 18:12:21:440 Kernel/(7012:7014): PID: 3 - Bloqueado por: IO
+[INFO] 18:12:21:441 Kernel/(7012:7014): PID: 3 - Ejecuta IO: 10
+[WARNING] 18:12:22:097 Kernel/(7012:7029): Se conecto una consola
+[WARNING] 18:12:22:097 Kernel/(7012:7029): Consola mando instrucciones
+[INFO] 18:12:22:097 Kernel/(7012:7029): Se crea el proceso 4 en NEW
+[INFO] 18:12:22:097 Kernel/(7012:7015): PID: 4 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 18:12:22:097 Kernel/(7012:7014): PID: 4 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 18:12:22:098 Kernel/(7012:7014): PID: 4 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 18:12:22:098 Kernel/(7012:7014): PID: 4 - Bloqueado por: IO
+[INFO] 18:12:22:098 Kernel/(7012:7014): PID: 4 - Ejecuta IO: 10
+[WARNING] 18:12:22:807 Kernel/(7012:7032): Se conecto una consola
+[WARNING] 18:12:22:807 Kernel/(7012:7032): Consola mando instrucciones
+[INFO] 18:12:22:807 Kernel/(7012:7032): Se crea el proceso 5 en NEW
+[WARNING] 18:12:23:497 Kernel/(7012:7034): Se conecto una consola
+[WARNING] 18:12:23:497 Kernel/(7012:7034): Consola mando instrucciones
+[INFO] 18:12:23:497 Kernel/(7012:7034): Se crea el proceso 6 en NEW
+[INFO] 18:12:31:450 Kernel/(7012:7027): PID: 3 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 18:12:31:450 Kernel/(7012:7014): PID: 3 - Estado Anterior: READY - Estado Actual: EXEC
+[ERROR] 18:12:31:452 Kernel/(7012:7014): Parametro 1: 1
+[ERROR] 18:12:31:452 Kernel/(7012:7014): Parametro 2: 2
+[WARNING] 18:14:17:783 Kernel/(7040:7040): Kernel listo para recibir a Consolas
+[WARNING] 18:14:27:137 Kernel/(7040:7045): Se conecto una consola
+[WARNING] 18:14:27:141 Kernel/(7040:7045): Consola mando instrucciones
+[INFO] 18:14:27:149 Kernel/(7040:7045): Se crea el proceso 1 en NEW
+[INFO] 18:14:27:154 Kernel/(7040:7043): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 18:14:27:161 Kernel/(7040:7042): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 18:14:27:186 Kernel/(7040:7042): PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 18:14:27:187 Kernel/(7040:7042): PID: 1 - Bloqueado por: IO
+[INFO] 18:14:27:187 Kernel/(7040:7042): PID: 1 - Ejecuta IO: 10
+[WARNING] 18:14:27:600 Kernel/(7040:7048): Se conecto una consola
+[WARNING] 18:14:27:607 Kernel/(7040:7048): Consola mando instrucciones
+[INFO] 18:14:27:608 Kernel/(7040:7048): Se crea el proceso 2 en NEW
+[INFO] 18:14:27:610 Kernel/(7040:7043): PID: 2 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 18:14:27:610 Kernel/(7040:7042): PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 18:14:27:611 Kernel/(7040:7042): PID: 2 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 18:14:27:611 Kernel/(7040:7042): PID: 2 - Bloqueado por: IO
+[INFO] 18:14:27:611 Kernel/(7040:7042): PID: 2 - Ejecuta IO: 10
+[WARNING] 18:14:27:985 Kernel/(7040:7051): Se conecto una consola
+[WARNING] 18:14:27:985 Kernel/(7040:7051): Consola mando instrucciones
+[INFO] 18:14:27:986 Kernel/(7040:7051): Se crea el proceso 3 en NEW
+[WARNING] 18:14:28:638 Kernel/(7040:7053): Se conecto una consola
+[WARNING] 18:14:28:638 Kernel/(7040:7053): Consola mando instrucciones
+[INFO] 18:14:28:639 Kernel/(7040:7053): Se crea el proceso 4 en NEW
+[WARNING] 18:14:30:870 Kernel/(7040:7055): Se conecto una consola
+[WARNING] 18:14:30:871 Kernel/(7040:7055): Consola mando instrucciones
+[INFO] 18:14:30:871 Kernel/(7040:7055): Se crea el proceso 5 en NEW
+[INFO] 18:14:37:201 Kernel/(7040:7042): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[ERROR] 18:14:37:203 Kernel/(7040:7042): Parametro 1: 1
+[INFO] 18:14:37:205 Kernel/(7040:7046): PID: 1 - Estado Anterior: BLOCK - Estado Actual: READY
+[ERROR] 18:14:37:206 Kernel/(7040:7042): Parametro 2: 2
+[INFO] 18:14:37:210 Kernel/(7040:7043): PID: 3 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 18:14:37:211 Kernel/(7040:7042): PID: 1 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 18:14:37:215 Kernel/(7040:7042): Finaliza el proceso 1 - Motivo: SUCCESS
+[INFO] 18:14:37:215 Kernel/(7040:7042): PID: 3 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 18:14:37:216 Kernel/(7040:7042): PID: 3 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 18:14:37:217 Kernel/(7040:7042): PID: 3 - Bloqueado por: IO
+[INFO] 18:14:37:217 Kernel/(7040:7042): PID: 3 - Ejecuta IO: 10
+[INFO] 18:14:37:660 Kernel/(7040:7049): PID: 2 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 18:14:37:660 Kernel/(7040:7042): PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[ERROR] 18:14:37:661 Kernel/(7040:7042): Parametro 1: 1
+[ERROR] 18:14:37:661 Kernel/(7040:7042): Parametro 2: 2
+[INFO] 18:14:37:663 Kernel/(7040:7043): PID: 4 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 18:14:37:664 Kernel/(7040:7042): PID: 2 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 18:14:37:664 Kernel/(7040:7042): Finaliza el proceso 2 - Motivo: SUCCESS
+[INFO] 18:14:37:664 Kernel/(7040:7042): PID: 4 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 18:14:37:666 Kernel/(7040:7042): PID: 4 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 18:14:37:666 Kernel/(7040:7042): PID: 4 - Bloqueado por: IO
+[INFO] 18:14:37:666 Kernel/(7040:7042): PID: 4 - Ejecuta IO: 10
+[INFO] 18:14:47:218 Kernel/(7040:7056): PID: 3 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 18:14:47:218 Kernel/(7040:7042): PID: 3 - Estado Anterior: READY - Estado Actual: EXEC
+[ERROR] 18:14:47:219 Kernel/(7040:7042): Parametro 1: 1
+[ERROR] 18:14:47:220 Kernel/(7040:7042): Parametro 2: 2
+[INFO] 18:14:47:221 Kernel/(7040:7043): PID: 5 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 18:14:47:222 Kernel/(7040:7042): PID: 3 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 18:14:47:223 Kernel/(7040:7042): Finaliza el proceso 3 - Motivo: SUCCESS
+[INFO] 18:14:47:223 Kernel/(7040:7042): PID: 5 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 18:14:47:224 Kernel/(7040:7042): PID: 5 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 18:14:47:225 Kernel/(7040:7042): PID: 5 - Bloqueado por: IO
+[INFO] 18:14:47:225 Kernel/(7040:7042): PID: 5 - Ejecuta IO: 10
+[INFO] 18:14:47:667 Kernel/(7040:7057): PID: 4 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 18:14:47:667 Kernel/(7040:7042): PID: 4 - Estado Anterior: READY - Estado Actual: EXEC
+[WARNING] 18:23:41:022 Kernel/(7213:7213): Kernel listo para recibir a Consolas
+[WARNING] 18:23:50:009 Kernel/(7213:7218): Se conecto una consola
+[WARNING] 18:23:50:018 Kernel/(7213:7218): Consola mando instrucciones
+[INFO] 18:23:50:046 Kernel/(7213:7218): Se crea el proceso 1 en NEW
+[INFO] 18:23:50:062 Kernel/(7213:7216): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 18:23:50:086 Kernel/(7213:7215): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 18:23:50:153 Kernel/(7213:7215): PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 18:23:50:154 Kernel/(7213:7215): PID: 1 - Bloqueado por: IO
+[INFO] 18:23:50:156 Kernel/(7213:7215): PID: 1 - Ejecuta IO: 10
+[WARNING] 18:23:50:726 Kernel/(7213:7221): Se conecto una consola
+[WARNING] 18:23:50:727 Kernel/(7213:7221): Consola mando instrucciones
+[INFO] 18:23:50:727 Kernel/(7213:7221): Se crea el proceso 2 en NEW
+[INFO] 18:23:50:728 Kernel/(7213:7216): PID: 2 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 18:23:50:728 Kernel/(7213:7215): PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 18:23:50:729 Kernel/(7213:7215): PID: 2 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 18:23:50:729 Kernel/(7213:7215): PID: 2 - Bloqueado por: IO
+[INFO] 18:23:50:730 Kernel/(7213:7215): PID: 2 - Ejecuta IO: 10
+[WARNING] 18:23:51:558 Kernel/(7213:7224): Se conecto una consola
+[WARNING] 18:23:51:559 Kernel/(7213:7224): Consola mando instrucciones
+[INFO] 18:23:51:567 Kernel/(7213:7224): Se crea el proceso 3 en NEW
+[WARNING] 18:23:52:548 Kernel/(7213:7226): Se conecto una consola
+[WARNING] 18:23:52:548 Kernel/(7213:7226): Consola mando instrucciones
+[INFO] 18:23:52:549 Kernel/(7213:7226): Se crea el proceso 4 en NEW
+[WARNING] 18:23:54:932 Kernel/(7213:7228): Se conecto una consola
+[WARNING] 18:23:54:933 Kernel/(7213:7228): Consola mando instrucciones
+[INFO] 18:23:54:933 Kernel/(7213:7228): Se crea el proceso 5 en NEW
+[INFO] 18:24:00:178 Kernel/(7213:7215): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[ERROR] 18:24:00:184 Kernel/(7213:7215): Parametro 1: 1
+[INFO] 18:24:00:188 Kernel/(7213:7219): PID: 1 - Estado Anterior: BLOCK - Estado Actual: READY
+[ERROR] 18:24:00:190 Kernel/(7213:7215): Parametro 2: 2
+[INFO] 18:24:00:202 Kernel/(7213:7216): PID: 3 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 18:24:00:211 Kernel/(7213:7215): PID: 1 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 18:24:00:212 Kernel/(7213:7215): Finaliza el proceso 1 - Motivo: SUCCESS
+[INFO] 18:24:00:214 Kernel/(7213:7215): PID: 3 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 18:24:00:225 Kernel/(7213:7215): PID: 3 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 18:24:00:226 Kernel/(7213:7215): PID: 3 - Bloqueado por: IO
+[INFO] 18:24:00:231 Kernel/(7213:7215): PID: 3 - Ejecuta IO: 10
+[INFO] 18:24:00:760 Kernel/(7213:7222): PID: 2 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 18:24:00:763 Kernel/(7213:7215): PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[ERROR] 18:24:00:769 Kernel/(7213:7215): Parametro 1: 1
+[ERROR] 18:24:00:775 Kernel/(7213:7215): Parametro 2: 2
+[INFO] 18:24:00:803 Kernel/(7213:7216): PID: 4 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 18:24:00:818 Kernel/(7213:7215): PID: 2 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 18:24:00:823 Kernel/(7213:7215): Finaliza el proceso 2 - Motivo: SUCCESS
+[INFO] 18:24:00:831 Kernel/(7213:7215): PID: 4 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 18:24:00:856 Kernel/(7213:7215): PID: 4 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 18:24:00:866 Kernel/(7213:7215): PID: 4 - Bloqueado por: IO
+[INFO] 18:24:00:877 Kernel/(7213:7215): PID: 4 - Ejecuta IO: 10
+[INFO] 18:24:10:232 Kernel/(7213:7229): PID: 3 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 18:24:10:232 Kernel/(7213:7215): PID: 3 - Estado Anterior: READY - Estado Actual: EXEC
+[ERROR] 18:24:10:234 Kernel/(7213:7215): Parametro 1: 1
+[ERROR] 18:24:10:234 Kernel/(7213:7215): Parametro 2: 2
+[INFO] 18:24:10:236 Kernel/(7213:7216): PID: 5 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 18:24:10:237 Kernel/(7213:7215): PID: 3 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 18:24:10:237 Kernel/(7213:7215): Finaliza el proceso 3 - Motivo: SUCCESS
+[INFO] 18:24:10:237 Kernel/(7213:7215): PID: 5 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 18:24:10:238 Kernel/(7213:7215): PID: 5 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 18:24:10:238 Kernel/(7213:7215): PID: 5 - Bloqueado por: IO
+[INFO] 18:24:10:239 Kernel/(7213:7215): PID: 5 - Ejecuta IO: 10
+[INFO] 18:24:10:884 Kernel/(7213:7230): PID: 4 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 18:24:10:885 Kernel/(7213:7215): PID: 4 - Estado Anterior: READY - Estado Actual: EXEC
+[WARNING] 18:27:35:055 Kernel/(7308:7308): Kernel listo para recibir a Consolas
+[WARNING] 18:27:38:940 Kernel/(7308:7313): Se conecto una consola
+[WARNING] 18:27:38:947 Kernel/(7308:7313): Consola mando instrucciones
+[INFO] 18:27:38:965 Kernel/(7308:7313): Se crea el proceso 1 en NEW
+[INFO] 18:27:38:971 Kernel/(7308:7311): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 18:27:38:998 Kernel/(7308:7310): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[ERROR] 18:27:39:020 Kernel/(7308:7310): parametro de i/o 10
+[INFO] 18:27:39:028 Kernel/(7308:7310): PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 18:27:39:028 Kernel/(7308:7310): PID: 1 - Bloqueado por: IO
+[INFO] 18:27:39:029 Kernel/(7308:7310): PID: 1 - Ejecuta IO: 10
+[WARNING] 18:27:39:657 Kernel/(7308:7316): Se conecto una consola
+[WARNING] 18:27:39:659 Kernel/(7308:7316): Consola mando instrucciones
+[INFO] 18:27:39:663 Kernel/(7308:7316): Se crea el proceso 2 en NEW
+[INFO] 18:27:39:666 Kernel/(7308:7311): PID: 2 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 18:27:39:667 Kernel/(7308:7310): PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[ERROR] 18:27:39:667 Kernel/(7308:7310): parametro de i/o 10
+[INFO] 18:27:39:668 Kernel/(7308:7310): PID: 2 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 18:27:39:668 Kernel/(7308:7310): PID: 2 - Bloqueado por: IO
+[INFO] 18:27:39:669 Kernel/(7308:7310): PID: 2 - Ejecuta IO: 10
+[WARNING] 18:27:40:349 Kernel/(7308:7319): Se conecto una consola
+[WARNING] 18:27:40:350 Kernel/(7308:7319): Consola mando instrucciones
+[INFO] 18:27:40:351 Kernel/(7308:7319): Se crea el proceso 3 en NEW
+[WARNING] 18:27:41:042 Kernel/(7308:7321): Se conecto una consola
+[WARNING] 18:27:41:043 Kernel/(7308:7321): Consola mando instrucciones
+[INFO] 18:27:41:044 Kernel/(7308:7321): Se crea el proceso 4 en NEW
+[WARNING] 18:27:43:419 Kernel/(7308:7323): Se conecto una consola
+[WARNING] 18:27:43:420 Kernel/(7308:7323): Consola mando instrucciones
+[INFO] 18:27:43:420 Kernel/(7308:7323): Se crea el proceso 5 en NEW
+[INFO] 18:27:49:035 Kernel/(7308:7310): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 18:27:49:036 Kernel/(7308:7311): PID: 3 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 18:27:49:040 Kernel/(7308:7310): PID: 1 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 18:27:49:044 Kernel/(7308:7314): PID: 1 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 18:27:49:048 Kernel/(7308:7310): Finaliza el proceso 1 - Motivo: SUCCESS
+[INFO] 18:27:49:049 Kernel/(7308:7310): PID: 3 - Estado Anterior: READY - Estado Actual: EXEC
+[ERROR] 18:27:49:054 Kernel/(7308:7310): parametro de i/o 10
+[INFO] 18:27:49:055 Kernel/(7308:7310): PID: 3 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 18:27:49:055 Kernel/(7308:7310): PID: 3 - Bloqueado por: IO
+[INFO] 18:27:49:055 Kernel/(7308:7310): PID: 3 - Ejecuta IO: 10
+[INFO] 18:27:49:754 Kernel/(7308:7317): PID: 2 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 18:27:49:754 Kernel/(7308:7310): PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 18:27:49:755 Kernel/(7308:7310): PID: 2 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 18:27:49:755 Kernel/(7308:7311): PID: 4 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 18:27:49:756 Kernel/(7308:7310): Finaliza el proceso 2 - Motivo: SUCCESS
+[INFO] 18:27:49:756 Kernel/(7308:7310): PID: 4 - Estado Anterior: READY - Estado Actual: EXEC
+[ERROR] 18:27:49:757 Kernel/(7308:7310): parametro de i/o 10
+[INFO] 18:27:49:758 Kernel/(7308:7310): PID: 4 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 18:27:49:758 Kernel/(7308:7310): PID: 4 - Bloqueado por: IO
+[INFO] 18:27:49:758 Kernel/(7308:7310): PID: 4 - Ejecuta IO: 10
+[INFO] 18:27:59:056 Kernel/(7308:7324): PID: 3 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 18:27:59:056 Kernel/(7308:7310): PID: 3 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 18:27:59:058 Kernel/(7308:7310): PID: 3 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 18:27:59:059 Kernel/(7308:7311): PID: 5 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 18:27:59:059 Kernel/(7308:7310): Finaliza el proceso 3 - Motivo: SUCCESS
+[INFO] 18:27:59:059 Kernel/(7308:7310): PID: 5 - Estado Anterior: READY - Estado Actual: EXEC
+[ERROR] 18:27:59:060 Kernel/(7308:7310): parametro de i/o 10
+[INFO] 18:27:59:061 Kernel/(7308:7310): PID: 5 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 18:27:59:061 Kernel/(7308:7310): PID: 5 - Bloqueado por: IO
+[INFO] 18:27:59:061 Kernel/(7308:7310): PID: 5 - Ejecuta IO: 10
+[INFO] 18:27:59:759 Kernel/(7308:7325): PID: 4 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 18:27:59:760 Kernel/(7308:7310): PID: 4 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 18:27:59:761 Kernel/(7308:7310): PID: 4 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 18:27:59:762 Kernel/(7308:7310): Finaliza el proceso 4 - Motivo: SUCCESS
+[INFO] 18:28:09:062 Kernel/(7308:7326): PID: 5 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 18:28:09:065 Kernel/(7308:7310): PID: 5 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 18:28:09:069 Kernel/(7308:7310): PID: 5 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 18:28:09:071 Kernel/(7308:7310): Finaliza el proceso 5 - Motivo: SUCCESS
+[WARNING] 18:36:41:895 Kernel/(7577:7577): Kernel listo para recibir a Consolas
+[WARNING] 18:36:47:072 Kernel/(7577:7582): Se conecto una consola
+[WARNING] 18:36:47:075 Kernel/(7577:7582): Consola mando instrucciones
+[INFO] 18:36:47:095 Kernel/(7577:7582): Se crea el proceso 1 en NEW
+[INFO] 18:36:47:102 Kernel/(7577:7580): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 18:36:47:109 Kernel/(7577:7579): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[ERROR] 18:36:47:133 Kernel/(7577:7579): parametro de i/o 10
+[INFO] 18:36:47:152 Kernel/(7577:7579): PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 18:36:47:160 Kernel/(7577:7579): PID: 1 - Bloqueado por: IO
+[INFO] 18:36:47:161 Kernel/(7577:7579): PID: 1 - Ejecuta IO: 10
+[WARNING] 18:36:47:512 Kernel/(7577:7585): Se conecto una consola
+[WARNING] 18:36:47:515 Kernel/(7577:7585): Consola mando instrucciones
+[INFO] 18:36:47:524 Kernel/(7577:7585): Se crea el proceso 2 en NEW
+[INFO] 18:36:47:530 Kernel/(7577:7580): PID: 2 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 18:36:47:532 Kernel/(7577:7579): PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[ERROR] 18:36:47:535 Kernel/(7577:7579): parametro de i/o 10
+[INFO] 18:36:47:536 Kernel/(7577:7579): PID: 2 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 18:36:47:544 Kernel/(7577:7579): PID: 2 - Bloqueado por: IO
+[INFO] 18:36:47:544 Kernel/(7577:7579): PID: 2 - Ejecuta IO: 10
+[WARNING] 18:36:47:955 Kernel/(7577:7588): Se conecto una consola
+[WARNING] 18:36:47:955 Kernel/(7577:7588): Consola mando instrucciones
+[INFO] 18:36:47:956 Kernel/(7577:7588): Se crea el proceso 3 en NEW
+[WARNING] 18:36:48:625 Kernel/(7577:7590): Se conecto una consola
+[WARNING] 18:36:48:625 Kernel/(7577:7590): Consola mando instrucciones
+[INFO] 18:36:48:625 Kernel/(7577:7590): Se crea el proceso 4 en NEW
+[WARNING] 18:36:50:348 Kernel/(7577:7592): Se conecto una consola
+[WARNING] 18:36:50:349 Kernel/(7577:7592): Consola mando instrucciones
+[INFO] 18:36:50:359 Kernel/(7577:7592): Se crea el proceso 5 en NEW
+[INFO] 18:36:57:171 Kernel/(7577:7579): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 18:36:57:176 Kernel/(7577:7580): PID: 3 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 18:36:57:179 Kernel/(7577:7583): PID: 1 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 18:36:57:183 Kernel/(7577:7579): PID: 1 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 18:36:57:191 Kernel/(7577:7579): Finaliza el proceso 1 - Motivo: SUCCESS
+[INFO] 18:36:57:191 Kernel/(7577:7579): PID: 3 - Estado Anterior: READY - Estado Actual: EXEC
+[ERROR] 18:36:57:192 Kernel/(7577:7579): parametro de i/o 10
+[INFO] 18:36:57:192 Kernel/(7577:7579): PID: 3 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 18:36:57:196 Kernel/(7577:7579): PID: 3 - Bloqueado por: IO
+[INFO] 18:36:57:197 Kernel/(7577:7579): PID: 3 - Ejecuta IO: 10
+[INFO] 18:36:57:600 Kernel/(7577:7586): PID: 2 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 18:36:57:600 Kernel/(7577:7579): PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 18:36:57:601 Kernel/(7577:7579): PID: 2 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 18:36:57:602 Kernel/(7577:7580): PID: 4 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 18:36:57:603 Kernel/(7577:7579): Finaliza el proceso 2 - Motivo: SUCCESS
+[INFO] 18:36:57:603 Kernel/(7577:7579): PID: 4 - Estado Anterior: READY - Estado Actual: EXEC
+[ERROR] 18:36:57:603 Kernel/(7577:7579): parametro de i/o 10
+[INFO] 18:36:57:604 Kernel/(7577:7579): PID: 4 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 18:36:57:604 Kernel/(7577:7579): PID: 4 - Bloqueado por: IO
+[INFO] 18:36:57:604 Kernel/(7577:7579): PID: 4 - Ejecuta IO: 10
+[INFO] 18:37:07:204 Kernel/(7577:7593): PID: 3 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 18:37:07:207 Kernel/(7577:7579): PID: 3 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 18:37:07:208 Kernel/(7577:7579): PID: 3 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 18:37:07:209 Kernel/(7577:7580): PID: 5 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 18:37:07:210 Kernel/(7577:7579): Finaliza el proceso 3 - Motivo: SUCCESS
+[INFO] 18:37:07:211 Kernel/(7577:7579): PID: 5 - Estado Anterior: READY - Estado Actual: EXEC
+[ERROR] 18:37:07:212 Kernel/(7577:7579): parametro de i/o 10
+[INFO] 18:37:07:213 Kernel/(7577:7579): PID: 5 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 18:37:07:214 Kernel/(7577:7579): PID: 5 - Bloqueado por: IO
+[INFO] 18:37:07:214 Kernel/(7577:7579): PID: 5 - Ejecuta IO: 10
+[INFO] 18:37:07:605 Kernel/(7577:7594): PID: 4 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 18:37:07:607 Kernel/(7577:7579): PID: 4 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 18:37:07:614 Kernel/(7577:7579): PID: 4 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 18:37:07:616 Kernel/(7577:7579): Finaliza el proceso 4 - Motivo: SUCCESS
+[INFO] 18:37:17:216 Kernel/(7577:7595): PID: 5 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 18:37:17:217 Kernel/(7577:7579): PID: 5 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 18:37:17:220 Kernel/(7577:7579): PID: 5 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 18:37:17:220 Kernel/(7577:7579): Finaliza el proceso 5 - Motivo: SUCCESS
+[WARNING] 18:41:31:939 Kernel/(7712:7712): Kernel listo para recibir a Consolas
+[WARNING] 18:41:35:263 Kernel/(7712:7717): Se conecto una consola
+[WARNING] 18:41:35:269 Kernel/(7712:7717): Consola mando instrucciones
+[INFO] 18:41:35:303 Kernel/(7712:7717): Se crea el proceso 1 en NEW
+[INFO] 18:41:35:322 Kernel/(7712:7715): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 18:41:35:350 Kernel/(7712:7714): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[ERROR] 18:41:35:429 Kernel/(7712:7714): parametro de i/o 10
+[INFO] 18:41:35:495 Kernel/(7712:7714): PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 18:41:35:496 Kernel/(7712:7714): PID: 1 - Bloqueado por: IO
+[INFO] 18:41:35:499 Kernel/(7712:7714): PID: 1 - Ejecuta IO: 10
+[WARNING] 18:41:36:004 Kernel/(7712:7720): Se conecto una consola
+[WARNING] 18:41:36:009 Kernel/(7712:7720): Consola mando instrucciones
+[INFO] 18:41:36:010 Kernel/(7712:7720): Se crea el proceso 2 en NEW
+[INFO] 18:41:36:011 Kernel/(7712:7715): PID: 2 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 18:41:36:012 Kernel/(7712:7714): PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[ERROR] 18:41:36:014 Kernel/(7712:7714): parametro de i/o 10
+[INFO] 18:41:36:016 Kernel/(7712:7714): PID: 2 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 18:41:36:018 Kernel/(7712:7714): PID: 2 - Bloqueado por: IO
+[INFO] 18:41:36:021 Kernel/(7712:7714): PID: 2 - Ejecuta IO: 10
+[WARNING] 18:41:36:644 Kernel/(7712:7723): Se conecto una consola
+[WARNING] 18:41:36:645 Kernel/(7712:7723): Consola mando instrucciones
+[INFO] 18:41:36:647 Kernel/(7712:7723): Se crea el proceso 3 en NEW
+[WARNING] 18:41:37:233 Kernel/(7712:7725): Se conecto una consola
+[WARNING] 18:41:37:234 Kernel/(7712:7725): Consola mando instrucciones
+[INFO] 18:41:37:235 Kernel/(7712:7725): Se crea el proceso 4 en NEW
+[WARNING] 18:41:39:286 Kernel/(7712:7727): Se conecto una consola
+[WARNING] 18:41:39:287 Kernel/(7712:7727): Consola mando instrucciones
+[INFO] 18:41:39:287 Kernel/(7712:7727): Se crea el proceso 5 en NEW
+[INFO] 18:41:45:525 Kernel/(7712:7714): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[ERROR] 18:41:45:527 Kernel/(7712:7714): Parametro 1: P1
+[INFO] 18:41:45:529 Kernel/(7712:7718): PID: 1 - Estado Anterior: BLOCK - Estado Actual: READY
+[ERROR] 18:41:45:530 Kernel/(7712:7714): Parametro 2: P2
+[INFO] 18:41:45:536 Kernel/(7712:7715): PID: 3 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 18:41:45:542 Kernel/(7712:7714): PID: 1 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 18:41:45:543 Kernel/(7712:7714): Finaliza el proceso 1 - Motivo: SUCCESS
+[INFO] 18:41:45:544 Kernel/(7712:7714): PID: 3 - Estado Anterior: READY - Estado Actual: EXEC
+[ERROR] 18:41:45:545 Kernel/(7712:7714): parametro de i/o 10
+[INFO] 18:41:45:547 Kernel/(7712:7714): PID: 3 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 18:41:45:548 Kernel/(7712:7714): PID: 3 - Bloqueado por: IO
+[INFO] 18:41:45:549 Kernel/(7712:7714): PID: 3 - Ejecuta IO: 10
+[INFO] 18:41:46:024 Kernel/(7712:7721): PID: 2 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 18:41:46:025 Kernel/(7712:7714): PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[ERROR] 18:41:46:028 Kernel/(7712:7714): Parametro 1: P1
+[ERROR] 18:41:46:030 Kernel/(7712:7714): Parametro 2: P2
+[INFO] 18:41:46:034 Kernel/(7712:7715): PID: 4 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 18:41:46:036 Kernel/(7712:7714): PID: 2 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 18:41:46:037 Kernel/(7712:7714): Finaliza el proceso 2 - Motivo: SUCCESS
+[INFO] 18:41:46:038 Kernel/(7712:7714): PID: 4 - Estado Anterior: READY - Estado Actual: EXEC
+[ERROR] 18:41:46:040 Kernel/(7712:7714): parametro de i/o 10
+[INFO] 18:41:46:049 Kernel/(7712:7714): PID: 4 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 18:41:46:051 Kernel/(7712:7714): PID: 4 - Bloqueado por: IO
+[INFO] 18:41:46:051 Kernel/(7712:7714): PID: 4 - Ejecuta IO: 10
+[INFO] 18:41:55:552 Kernel/(7712:7728): PID: 3 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 18:41:55:563 Kernel/(7712:7714): PID: 3 - Estado Anterior: READY - Estado Actual: EXEC
+[ERROR] 18:41:55:641 Kernel/(7712:7714): Parametro 1: P1
+[ERROR] 18:41:55:648 Kernel/(7712:7714): Parametro 2: P2
+[INFO] 18:41:55:700 Kernel/(7712:7715): PID: 5 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 18:41:55:713 Kernel/(7712:7714): PID: 3 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 18:41:55:727 Kernel/(7712:7714): Finaliza el proceso 3 - Motivo: SUCCESS
+[INFO] 18:41:55:735 Kernel/(7712:7714): PID: 5 - Estado Anterior: READY - Estado Actual: EXEC
+[ERROR] 18:41:55:738 Kernel/(7712:7714): parametro de i/o 10
+[INFO] 18:41:55:749 Kernel/(7712:7714): PID: 5 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 18:41:55:763 Kernel/(7712:7714): PID: 5 - Bloqueado por: IO
+[INFO] 18:41:55:776 Kernel/(7712:7714): PID: 5 - Ejecuta IO: 10
+[INFO] 18:41:56:053 Kernel/(7712:7729): PID: 4 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 18:41:56:054 Kernel/(7712:7714): PID: 4 - Estado Anterior: READY - Estado Actual: EXEC
+[ERROR] 18:41:56:636 Kernel/(7712:7714): parametro de i/o (null)
+[WARNING] 18:49:27:711 Kernel/(7875:7875): Kernel listo para recibir a Consolas
+[WARNING] 18:49:30:194 Kernel/(7875:7880): Se conecto una consola
+[WARNING] 18:49:30:203 Kernel/(7875:7880): Consola mando instrucciones
+[INFO] 18:49:30:233 Kernel/(7875:7880): Se crea el proceso 1 en NEW
+[INFO] 18:49:30:287 Kernel/(7875:7878): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 18:49:30:330 Kernel/(7875:7877): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[ERROR] 18:49:30:442 Kernel/(7875:7877): parametro de i/o 10
+[INFO] 18:49:30:542 Kernel/(7875:7877): PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 18:49:30:543 Kernel/(7875:7877): PID: 1 - Bloqueado por: IO
+[INFO] 18:49:30:545 Kernel/(7875:7877): PID: 1 - Ejecuta IO: 10
+[INFO] 18:49:40:568 Kernel/(7875:7877): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[ERROR] 18:49:40:570 Kernel/(7875:7877): Parametro 1: P1
+[INFO] 18:49:40:573 Kernel/(7875:7881): PID: 1 - Estado Anterior: BLOCK - Estado Actual: READY
+[ERROR] 18:49:40:575 Kernel/(7875:7877): Parametro 2: P2
+[INFO] 18:49:40:592 Kernel/(7875:7877): PID: 1 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 18:49:40:593 Kernel/(7875:7877): Finaliza el proceso 1 - Motivo: SUCCESS
+[WARNING] 19:02:06:295 Kernel/(8025:8025): Kernel listo para recibir a Consolas
+[WARNING] 19:02:07:729 Kernel/(8025:8030): Se conecto una consola
+[WARNING] 19:02:07:733 Kernel/(8025:8030): Consola mando instrucciones
+[INFO] 19:02:07:746 Kernel/(8025:8030): Se crea el proceso 1 en NEW
+[INFO] 19:02:07:753 Kernel/(8025:8028): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 19:02:07:769 Kernel/(8025:8027): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[ERROR] 19:02:07:789 Kernel/(8025:8027): parametro de i/o 10
+[INFO] 19:02:07:808 Kernel/(8025:8027): PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 19:02:07:808 Kernel/(8025:8027): PID: 1 - Bloqueado por: IO
+[INFO] 19:02:07:809 Kernel/(8025:8027): PID: 1 - Ejecuta IO: 10
+[INFO] 19:02:17:814 Kernel/(8025:8027): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 19:02:17:816 Kernel/(8025:8027): PID: 1 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 19:02:17:819 Kernel/(8025:8027): Finaliza el proceso 1 - Motivo: SUCCESS
+[INFO] 19:02:17:818 Kernel/(8025:8031): PID: 1 - Estado Anterior: BLOCK - Estado Actual: READY
+[WARNING] 19:09:48:907 Kernel/(8101:8101): Kernel listo para recibir a Consolas
+[WARNING] 19:09:52:407 Kernel/(8101:8106): Se conecto una consola
+[WARNING] 19:09:52:433 Kernel/(8101:8106): Consola mando instrucciones
+[INFO] 19:09:52:584 Kernel/(8101:8106): Se crea el proceso 1 en NEW
+[INFO] 19:09:52:644 Kernel/(8101:8104): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 19:09:52:691 Kernel/(8101:8103): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[ERROR] 19:09:52:812 Kernel/(8101:8103): parametro de i/o 10
+[INFO] 19:09:52:893 Kernel/(8101:8103): PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 19:09:52:896 Kernel/(8101:8103): PID: 1 - Bloqueado por: IO
+[INFO] 19:09:52:901 Kernel/(8101:8103): PID: 1 - Ejecuta IO: 10
+[INFO] 19:10:02:923 Kernel/(8101:8103): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 19:10:02:926 Kernel/(8101:8103): PID: 1 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 19:10:02:927 Kernel/(8101:8107): PID: 1 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 19:10:02:929 Kernel/(8101:8103): Finaliza el proceso 1 - Motivo: SUCCESS
+[WARNING] 19:28:18:783 Kernel/(8504:8504): Kernel listo para recibir a Consolas
+[WARNING] 19:28:21:742 Kernel/(8504:8509): Se conecto una consola
+[WARNING] 19:28:21:749 Kernel/(8504:8509): Consola mando instrucciones
+[INFO] 19:28:21:763 Kernel/(8504:8509): Se crea el proceso 1 en NEW
+[INFO] 19:28:21:771 Kernel/(8504:8507): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 19:28:21:786 Kernel/(8504:8506): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[ERROR] 19:28:21:831 Kernel/(8504:8506): parametro de i/o 10
+[INFO] 19:28:21:859 Kernel/(8504:8506): PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 19:28:21:860 Kernel/(8504:8506): PID: 1 - Bloqueado por: IO
+[INFO] 19:28:21:863 Kernel/(8504:8506): PID: 1 - Ejecuta IO: 10
+[INFO] 19:28:31:886 Kernel/(8504:8506): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 19:28:31:889 Kernel/(8504:8506): PID: 1 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 19:28:31:891 Kernel/(8504:8510): PID: 1 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 19:28:31:892 Kernel/(8504:8506): Finaliza el proceso 1 - Motivo: SUCCESS
+[WARNING] 19:35:09:653 Kernel/(8636:8636): Kernel listo para recibir a Consolas
+[WARNING] 19:35:12:205 Kernel/(8636:8641): Se conecto una consola
+[WARNING] 19:35:12:211 Kernel/(8636:8641): Consola mando instrucciones
+[INFO] 19:35:12:244 Kernel/(8636:8641): Se crea el proceso 1 en NEW
+[INFO] 19:35:12:262 Kernel/(8636:8639): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 19:35:12:284 Kernel/(8636:8638): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 19:35:17:505 Kernel/(8636:8638): PID: 1 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 19:35:17:514 Kernel/(8636:8638): Finaliza el proceso 1 - Motivo: SUCCESS
+[WARNING] 19:35:41:303 Kernel/(8636:8645): Se conecto una consola
+[WARNING] 19:35:41:303 Kernel/(8636:8645): Consola mando instrucciones
+[INFO] 19:35:41:304 Kernel/(8636:8645): Se crea el proceso 2 en NEW
+[INFO] 19:35:41:305 Kernel/(8636:8639): PID: 2 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 19:35:41:305 Kernel/(8636:8638): PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 19:35:41:307 Kernel/(8636:8638): PID: 2 - Estado Anterior: EXEC - Estado Actual: READY
+[INFO] 19:35:41:308 Kernel/(8636:8638): PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 19:35:41:310 Kernel/(8636:8638): PID: 2 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 19:35:41:310 Kernel/(8636:8638): Finaliza el proceso 2 - Motivo: SUCCESS
+[WARNING] 19:35:58:393 Kernel/(8636:8650): Se conecto una consola
+[WARNING] 19:35:58:400 Kernel/(8636:8650): Consola mando instrucciones
+[INFO] 19:35:58:401 Kernel/(8636:8650): Se crea el proceso 3 en NEW
+[INFO] 19:35:58:402 Kernel/(8636:8639): PID: 3 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 19:35:58:402 Kernel/(8636:8638): PID: 3 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 19:36:03:407 Kernel/(8636:8638): PID: 3 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 19:36:03:408 Kernel/(8636:8638): Finaliza el proceso 3 - Motivo: SUCCESS
+[WARNING] 19:38:51:324 Kernel/(8761:8761): Kernel listo para recibir a Consolas
+[WARNING] 19:38:53:864 Kernel/(8761:8766): Se conecto una consola
+[WARNING] 19:38:53:868 Kernel/(8761:8766): Consola mando instrucciones
+[INFO] 19:38:53:879 Kernel/(8761:8766): Se crea el proceso 1 en NEW
+[INFO] 19:38:53:887 Kernel/(8761:8764): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 19:38:53:907 Kernel/(8761:8763): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 19:38:53:950 Kernel/(8761:8763): PID: 1 - Estado Anterior: EXEC - Estado Actual: READY
+[INFO] 19:38:53:951 Kernel/(8761:8763): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 19:38:53:973 Kernel/(8761:8763): PID: 1 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 19:38:53:977 Kernel/(8761:8763): Finaliza el proceso 1 - Motivo: SUCCESS
+[WARNING] 19:39:27:398 Kernel/(8761:8773): Se conecto una consola
+[WARNING] 19:39:27:398 Kernel/(8761:8773): Consola mando instrucciones
+[INFO] 19:39:27:400 Kernel/(8761:8773): Se crea el proceso 2 en NEW
+[INFO] 19:39:27:401 Kernel/(8761:8764): PID: 2 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 19:39:27:401 Kernel/(8761:8763): PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[ERROR] 19:39:27:410 Kernel/(8761:8763): parametro de i/o 10
+[INFO] 19:39:27:415 Kernel/(8761:8763): PID: 2 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 19:39:27:416 Kernel/(8761:8763): PID: 2 - Bloqueado por: IO
+[INFO] 19:39:27:417 Kernel/(8761:8763): PID: 2 - Ejecuta IO: 10
+[INFO] 19:39:37:422 Kernel/(8761:8763): PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 19:39:37:426 Kernel/(8761:8774): PID: 2 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 19:39:37:427 Kernel/(8761:8763): PID: 2 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 19:39:37:430 Kernel/(8761:8763): Finaliza el proceso 2 - Motivo: SUCCESS
+[WARNING] 19:49:26:404 Kernel/(8937:8937): Kernel listo para recibir a Consolas
+[WARNING] 19:49:29:719 Kernel/(8937:8942): Se conecto una consola
+[WARNING] 19:49:29:720 Kernel/(8937:8942): Consola mando instrucciones
+[INFO] 19:49:29:720 Kernel/(8937:8942): Se crea el proceso 1 en NEW
+[INFO] 19:49:29:720 Kernel/(8937:8940): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 19:49:29:721 Kernel/(8937:8939): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[ERROR] 19:49:29:721 Kernel/(8937:8939): parametro de i/o 10
+[INFO] 19:49:29:721 Kernel/(8937:8939): PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 19:49:29:721 Kernel/(8937:8939): PID: 1 - Bloqueado por: IO
+[INFO] 19:49:29:721 Kernel/(8937:8939): PID: 1 - Ejecuta IO: 10
+[INFO] 19:49:39:722 Kernel/(8937:8943): PID: 1 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 19:49:39:722 Kernel/(8937:8939): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 19:49:39:722 Kernel/(8937:8939): PID: 1 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 19:49:39:723 Kernel/(8937:8939): Finaliza el proceso 1 - Motivo: SUCCESS
+[WARNING] 19:53:34:716 Kernel/(9046:9046): Kernel listo para recibir a Consolas
+[WARNING] 19:53:36:566 Kernel/(9046:9051): Se conecto una consola
+[WARNING] 19:53:36:566 Kernel/(9046:9051): Consola mando instrucciones
+[INFO] 19:53:36:567 Kernel/(9046:9051): Se crea el proceso 1 en NEW
+[INFO] 19:53:36:567 Kernel/(9046:9049): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 19:53:36:567 Kernel/(9046:9048): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[ERROR] 19:53:36:569 Kernel/(9046:9048): parametro de i/o 10
+[INFO] 19:53:36:569 Kernel/(9046:9048): PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 19:53:36:569 Kernel/(9046:9048): PID: 1 - Bloqueado por: IO
+[INFO] 19:53:36:569 Kernel/(9046:9048): PID: 1 - Ejecuta IO: 10
+[INFO] 19:53:46:569 Kernel/(9046:9052): PID: 1 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 19:53:46:569 Kernel/(9046:9048): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 19:53:46:570 Kernel/(9046:9048): PID: 1 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 19:53:46:570 Kernel/(9046:9048): Finaliza el proceso 1 - Motivo: SUCCESS
+[WARNING] 19:54:06:657 Kernel/(9046:9055): Se conecto una consola
+[WARNING] 19:54:06:657 Kernel/(9046:9055): Consola mando instrucciones
+[INFO] 19:54:06:657 Kernel/(9046:9055): Se crea el proceso 2 en NEW
+[INFO] 19:54:06:657 Kernel/(9046:9049): PID: 2 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 19:54:06:657 Kernel/(9046:9048): PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[ERROR] 19:54:06:657 Kernel/(9046:9048): parametro de i/o 10
+[INFO] 19:54:06:658 Kernel/(9046:9048): PID: 2 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 19:54:06:658 Kernel/(9046:9048): PID: 2 - Bloqueado por: IO
+[INFO] 19:54:06:658 Kernel/(9046:9048): PID: 2 - Ejecuta IO: 10
+[WARNING] 19:54:13:336 Kernel/(9046:9058): Se conecto una consola
+[WARNING] 19:54:13:336 Kernel/(9046:9058): Consola mando instrucciones
+[INFO] 19:54:13:336 Kernel/(9046:9058): Se crea el proceso 3 en NEW
+[INFO] 19:54:13:337 Kernel/(9046:9049): PID: 3 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 19:54:13:337 Kernel/(9046:9048): PID: 3 - Estado Anterior: READY - Estado Actual: EXEC
+[ERROR] 19:54:13:337 Kernel/(9046:9048): parametro de i/o 10
+[INFO] 19:54:13:337 Kernel/(9046:9048): PID: 3 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 19:54:13:337 Kernel/(9046:9048): PID: 3 - Bloqueado por: IO
+[INFO] 19:54:13:337 Kernel/(9046:9048): PID: 3 - Ejecuta IO: 10
+[WARNING] 19:54:14:148 Kernel/(9046:9061): Se conecto una consola
+[WARNING] 19:54:14:149 Kernel/(9046:9061): Consola mando instrucciones
+[INFO] 19:54:14:150 Kernel/(9046:9061): Se crea el proceso 4 en NEW
+[WARNING] 19:54:16:021 Kernel/(9046:9063): Se conecto una consola
+[WARNING] 19:54:16:022 Kernel/(9046:9063): Consola mando instrucciones
+[INFO] 19:54:16:022 Kernel/(9046:9063): Se crea el proceso 5 en NEW
+[INFO] 19:54:16:658 Kernel/(9046:9056): PID: 2 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 19:54:16:658 Kernel/(9046:9048): PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 19:54:16:658 Kernel/(9046:9048): PID: 2 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 19:54:16:658 Kernel/(9046:9049): PID: 4 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 19:54:16:659 Kernel/(9046:9048): Finaliza el proceso 2 - Motivo: SUCCESS
+[INFO] 19:54:16:659 Kernel/(9046:9048): PID: 4 - Estado Anterior: READY - Estado Actual: EXEC
+[ERROR] 19:54:16:659 Kernel/(9046:9048): parametro de i/o 10
+[INFO] 19:54:16:659 Kernel/(9046:9048): PID: 4 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 19:54:16:659 Kernel/(9046:9048): PID: 4 - Bloqueado por: IO
+[INFO] 19:54:16:659 Kernel/(9046:9048): PID: 4 - Ejecuta IO: 10
+[WARNING] 19:54:16:808 Kernel/(9046:9066): Se conecto una consola
+[WARNING] 19:54:16:808 Kernel/(9046:9066): Consola mando instrucciones
+[INFO] 19:54:16:808 Kernel/(9046:9066): Se crea el proceso 6 en NEW
+[INFO] 19:54:23:338 Kernel/(9046:9059): PID: 3 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 19:54:23:338 Kernel/(9046:9048): PID: 3 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 19:54:23:339 Kernel/(9046:9048): PID: 3 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 19:54:23:340 Kernel/(9046:9049): PID: 5 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 19:54:23:344 Kernel/(9046:9048): Finaliza el proceso 3 - Motivo: SUCCESS
+[INFO] 19:54:23:346 Kernel/(9046:9048): PID: 5 - Estado Anterior: READY - Estado Actual: EXEC
+[ERROR] 19:54:23:347 Kernel/(9046:9048): parametro de i/o 10
+[INFO] 19:54:23:347 Kernel/(9046:9048): PID: 5 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 19:54:23:348 Kernel/(9046:9048): PID: 5 - Bloqueado por: IO
+[INFO] 19:54:23:348 Kernel/(9046:9048): PID: 5 - Ejecuta IO: 10
+[INFO] 19:54:26:660 Kernel/(9046:9064): PID: 4 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 19:54:26:660 Kernel/(9046:9048): PID: 4 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 19:54:26:660 Kernel/(9046:9048): PID: 4 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 19:54:26:661 Kernel/(9046:9049): PID: 6 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 19:54:26:661 Kernel/(9046:9048): Finaliza el proceso 4 - Motivo: SUCCESS
+[INFO] 19:54:26:662 Kernel/(9046:9048): PID: 6 - Estado Anterior: READY - Estado Actual: EXEC
+[ERROR] 19:54:26:663 Kernel/(9046:9048): parametro de i/o 10
+[INFO] 19:54:26:663 Kernel/(9046:9048): PID: 6 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 19:54:26:663 Kernel/(9046:9048): PID: 6 - Bloqueado por: IO
+[INFO] 19:54:26:663 Kernel/(9046:9048): PID: 6 - Ejecuta IO: 10
+[INFO] 19:54:33:351 Kernel/(9046:9067): PID: 5 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 19:54:33:351 Kernel/(9046:9048): PID: 5 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 19:54:33:352 Kernel/(9046:9048): PID: 5 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 19:54:33:352 Kernel/(9046:9048): Finaliza el proceso 5 - Motivo: SUCCESS
+[INFO] 19:54:36:664 Kernel/(9046:9068): PID: 6 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 19:54:36:664 Kernel/(9046:9048): PID: 6 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 19:54:36:664 Kernel/(9046:9048): PID: 6 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 19:54:36:665 Kernel/(9046:9048): Finaliza el proceso 6 - Motivo: SUCCESS
+[WARNING] 19:55:09:836 Kernel/(9046:9073): Se conecto una consola
+[WARNING] 19:55:09:836 Kernel/(9046:9073): Consola mando instrucciones
+[INFO] 19:55:09:836 Kernel/(9046:9073): Se crea el proceso 7 en NEW
+[INFO] 19:55:09:836 Kernel/(9046:9049): PID: 7 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 19:55:09:836 Kernel/(9046:9048): PID: 7 - Estado Anterior: READY - Estado Actual: EXEC
+[ERROR] 19:55:09:836 Kernel/(9046:9048): parametro de i/o 10
+[INFO] 19:55:09:836 Kernel/(9046:9048): PID: 7 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 19:55:09:836 Kernel/(9046:9048): PID: 7 - Bloqueado por: IO
+[INFO] 19:55:09:836 Kernel/(9046:9048): PID: 7 - Ejecuta IO: 10
+[WARNING] 19:55:10:244 Kernel/(9046:9076): Se conecto una consola
+[WARNING] 19:55:10:244 Kernel/(9046:9076): Consola mando instrucciones
+[INFO] 19:55:10:244 Kernel/(9046:9076): Se crea el proceso 8 en NEW
+[INFO] 19:55:10:244 Kernel/(9046:9049): PID: 8 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 19:55:10:244 Kernel/(9046:9048): PID: 8 - Estado Anterior: READY - Estado Actual: EXEC
+[ERROR] 19:55:10:244 Kernel/(9046:9048): parametro de i/o 10
+[INFO] 19:55:10:244 Kernel/(9046:9048): PID: 8 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 19:55:10:244 Kernel/(9046:9048): PID: 8 - Bloqueado por: IO
+[INFO] 19:55:10:244 Kernel/(9046:9048): PID: 8 - Ejecuta IO: 10
+[WARNING] 19:55:10:732 Kernel/(9046:9079): Se conecto una consola
+[WARNING] 19:55:10:732 Kernel/(9046:9079): Consola mando instrucciones
+[INFO] 19:55:10:733 Kernel/(9046:9079): Se crea el proceso 9 en NEW
+[WARNING] 19:55:11:301 Kernel/(9046:9081): Se conecto una consola
+[WARNING] 19:55:11:302 Kernel/(9046:9081): Consola mando instrucciones
+[INFO] 19:55:11:302 Kernel/(9046:9081): Se crea el proceso 10 en NEW
+[WARNING] 19:55:13:135 Kernel/(9046:9083): Se conecto una consola
+[WARNING] 19:55:13:136 Kernel/(9046:9083): Consola mando instrucciones
+[INFO] 19:55:13:136 Kernel/(9046:9083): Se crea el proceso 11 en NEW
+[INFO] 19:55:19:837 Kernel/(9046:9074): PID: 7 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 19:55:19:837 Kernel/(9046:9048): PID: 7 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 19:55:20:244 Kernel/(9046:9077): PID: 8 - Estado Anterior: BLOCK - Estado Actual: READY
+[ERROR] 19:55:20:521 Kernel/(9046:9048): Error en la comunicacion entre el Kernel y la CPU
+[WARNING] 19:57:49:972 Kernel/(9280:9280): Kernel listo para recibir a Consolas
+[WARNING] 19:57:53:597 Kernel/(9280:9285): Se conecto una consola
+[WARNING] 19:57:53:598 Kernel/(9280:9285): Consola mando instrucciones
+[INFO] 19:57:53:598 Kernel/(9280:9285): Se crea el proceso 1 en NEW
+[INFO] 19:57:53:598 Kernel/(9280:9283): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 19:57:53:598 Kernel/(9280:9282): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[ERROR] 19:57:53:599 Kernel/(9280:9282): parametro de i/o 10
+[INFO] 19:57:53:599 Kernel/(9280:9282): PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 19:57:53:599 Kernel/(9280:9282): PID: 1 - Bloqueado por: IO
+[INFO] 19:57:53:599 Kernel/(9280:9282): PID: 1 - Ejecuta IO: 10
+[INFO] 19:58:03:601 Kernel/(9280:9286): PID: 1 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 19:58:03:601 Kernel/(9280:9282): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[ERROR] 19:58:03:601 Kernel/(9280:9282): Parametro 1: P1
+[ERROR] 19:58:03:601 Kernel/(9280:9282): Parametro 2: P2
+[INFO] 19:58:03:601 Kernel/(9280:9282): PID: 1 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 19:58:03:602 Kernel/(9280:9282): Finaliza el proceso 1 - Motivo: SUCCESS
+[WARNING] 19:59:25:832 Kernel/(9303:9303): Kernel listo para recibir a Consolas
+[WARNING] 19:59:30:858 Kernel/(9303:9308): Se conecto una consola
+[WARNING] 19:59:30:858 Kernel/(9303:9308): Consola mando instrucciones
+[INFO] 19:59:30:858 Kernel/(9303:9308): Se crea el proceso 1 en NEW
+[INFO] 19:59:30:859 Kernel/(9303:9306): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 19:59:30:859 Kernel/(9303:9305): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[ERROR] 19:59:30:859 Kernel/(9303:9305): parametro de i/o 10
+[INFO] 19:59:30:859 Kernel/(9303:9305): PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 19:59:30:859 Kernel/(9303:9305): PID: 1 - Bloqueado por: IO
+[INFO] 19:59:30:859 Kernel/(9303:9305): PID: 1 - Ejecuta IO: 10
+[WARNING] 19:59:31:364 Kernel/(9303:9311): Se conecto una consola
+[WARNING] 19:59:31:364 Kernel/(9303:9311): Consola mando instrucciones
+[INFO] 19:59:31:364 Kernel/(9303:9311): Se crea el proceso 2 en NEW
+[INFO] 19:59:31:364 Kernel/(9303:9306): PID: 2 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 19:59:31:364 Kernel/(9303:9305): PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[ERROR] 19:59:31:364 Kernel/(9303:9305): parametro de i/o 10
+[INFO] 19:59:31:365 Kernel/(9303:9305): PID: 2 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 19:59:31:365 Kernel/(9303:9305): PID: 2 - Bloqueado por: IO
+[INFO] 19:59:31:365 Kernel/(9303:9305): PID: 2 - Ejecuta IO: 10
+[WARNING] 19:59:31:865 Kernel/(9303:9314): Se conecto una consola
+[WARNING] 19:59:31:865 Kernel/(9303:9314): Consola mando instrucciones
+[INFO] 19:59:31:865 Kernel/(9303:9314): Se crea el proceso 3 en NEW
+[WARNING] 19:59:32:385 Kernel/(9303:9316): Se conecto una consola
+[WARNING] 19:59:32:386 Kernel/(9303:9316): Consola mando instrucciones
+[INFO] 19:59:32:387 Kernel/(9303:9316): Se crea el proceso 4 en NEW
+[WARNING] 19:59:34:958 Kernel/(9303:9318): Se conecto una consola
+[WARNING] 19:59:34:958 Kernel/(9303:9318): Consola mando instrucciones
+[INFO] 19:59:34:959 Kernel/(9303:9318): Se crea el proceso 5 en NEW
+[INFO] 19:59:40:859 Kernel/(9303:9309): PID: 1 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 19:59:40:859 Kernel/(9303:9305): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[ERROR] 19:59:40:860 Kernel/(9303:9305): Parametro 1: P1
+[ERROR] 19:59:40:860 Kernel/(9303:9305): Parametro 2: P2
+[WARNING] 20:03:28:293 Kernel/(9628:9628): Kernel listo para recibir a Consolas
+[WARNING] 20:03:33:247 Kernel/(9628:9633): Se conecto una consola
+[WARNING] 20:03:33:247 Kernel/(9628:9633): Consola mando instrucciones
+[INFO] 20:03:33:247 Kernel/(9628:9633): Se crea el proceso 1 en NEW
+[INFO] 20:03:33:247 Kernel/(9628:9631): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 20:03:33:247 Kernel/(9628:9630): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[ERROR] 20:03:33:247 Kernel/(9628:9630): parametro de i/o 10
+[INFO] 20:03:33:248 Kernel/(9628:9630): PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 20:03:33:248 Kernel/(9628:9630): PID: 1 - Bloqueado por: IO
+[INFO] 20:03:33:248 Kernel/(9628:9630): PID: 1 - Ejecuta IO: 10
+[WARNING] 20:03:33:692 Kernel/(9628:9636): Se conecto una consola
+[WARNING] 20:03:33:692 Kernel/(9628:9636): Consola mando instrucciones
+[INFO] 20:03:33:693 Kernel/(9628:9636): Se crea el proceso 2 en NEW
+[INFO] 20:03:33:693 Kernel/(9628:9631): PID: 2 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 20:03:33:693 Kernel/(9628:9630): PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[ERROR] 20:03:33:694 Kernel/(9628:9630): parametro de i/o 10
+[INFO] 20:03:33:694 Kernel/(9628:9630): PID: 2 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 20:03:33:694 Kernel/(9628:9630): PID: 2 - Bloqueado por: IO
+[INFO] 20:03:33:694 Kernel/(9628:9630): PID: 2 - Ejecuta IO: 10
+[WARNING] 20:03:34:362 Kernel/(9628:9639): Se conecto una consola
+[WARNING] 20:03:34:363 Kernel/(9628:9639): Consola mando instrucciones
+[INFO] 20:03:34:363 Kernel/(9628:9639): Se crea el proceso 3 en NEW
+[WARNING] 20:03:35:032 Kernel/(9628:9641): Se conecto una consola
+[WARNING] 20:03:35:032 Kernel/(9628:9641): Consola mando instrucciones
+[INFO] 20:03:35:032 Kernel/(9628:9641): Se crea el proceso 4 en NEW
+[WARNING] 20:03:37:500 Kernel/(9628:9643): Se conecto una consola
+[WARNING] 20:03:37:500 Kernel/(9628:9643): Consola mando instrucciones
+[INFO] 20:03:37:500 Kernel/(9628:9643): Se crea el proceso 5 en NEW
+[INFO] 20:03:43:248 Kernel/(9628:9634): PID: 1 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 20:03:43:248 Kernel/(9628:9630): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[ERROR] 20:03:43:249 Kernel/(9628:9630): Parametro 1: P1
+[ERROR] 20:03:43:249 Kernel/(9628:9630): Parametro 2: P2

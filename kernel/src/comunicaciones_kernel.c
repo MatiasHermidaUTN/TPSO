@@ -57,7 +57,7 @@ void deserializar_parametros(void* a_recibir, int* desplazamiento, t_instruccion
 	int* cantidadDeParametrosEsperados;
 	if(!dictionary_has_key(diccionario_instrucciones, instruccion->nombre)) {
 		//log_error(logger, "No existe instruccion: %s , en el diccionario", instruccion->nombre);
-		printf("No existe instruccion: %s , en el diccionario", instruccion->nombre);
+		log_error(logger,"No existe instruccion: %s , en el diccionario", instruccion->nombre);
 		exit(-1);
 	}
 	cantidadDeParametrosEsperados = (int*)dictionary_get(diccionario_instrucciones, instruccion->nombre);

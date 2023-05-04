@@ -18,10 +18,11 @@ void planificar_corto() {
 		switch(respuesta) {
 			case IO_EJECUTADO:
 				parametros = recibir_parametros_de_instruccion();
-				char* tiempo_como_string = strdup(parametros[0]);
-				int tiempo_a_bloquear = atoi(tiempo_como_string);
+
+				log_error(logger,"parametro de i/o %s",parametros[0]);
+
+				int tiempo_a_bloquear = atoi(parametros[0]);
 				liberar_parametros(parametros);
-				free(tiempo_como_string);
 
 				pcb_recibido = recibir_pcb(socket_cpu);
 				pcb_recibido->tiempo_real_ejecucion = time(NULL) - pcb_recibido->tiempo_inicial_ejecucion;
@@ -79,8 +80,9 @@ void planificar_corto() {
 				break;
 
 			case CREATE_SEGMENT_EJECUTADO:
-				pcb_recibido = recibir_pcb(socket_cpu);
 				parametros = recibir_parametros_de_instruccion();
+				pcb_recibido = recibir_pcb(socket_cpu);
+
 
 				//TODO: AVISAR A MEMORIA
 				liberar_parametros(parametros);
@@ -91,8 +93,9 @@ void planificar_corto() {
 				break;
 
 			case DELETE_SEGMENT_EJECUTADO:
-				pcb_recibido = recibir_pcb(socket_cpu);
 				parametros = recibir_parametros_de_instruccion();
+				pcb_recibido = recibir_pcb(socket_cpu);
+
 
 				//TODO: AVISAR A MEMORIA
 				liberar_parametros(parametros);
@@ -118,9 +121,17 @@ void planificar_corto() {
 
 			case F_SEEK_EJECUTADO:
 				parametros = recibir_parametros_de_instruccion();
-				//TODO: AVISAR A FILESYSTEM
+				pcb_recibido = recibir_pcb(socket_cpu);
 
+
+
+				//TODO: AVISAR A FILESYSTEM
+				log_error(logger,"Parametro 1: %s",parametros[0]);
+				log_error(logger,"Parametro 2: %s",parametros[1]);
 				liberar_parametros(parametros);
+
+				proximo_pcb_a_ejecutar_forzado = pcb_recibido;
+				sem_post(&sem_cant_ready); //Al no pasar por la funcion ready_list_push hay que hacerlo manualmente, vuelve a ejecutar sin pasar por ready
 				break;
 
 			case F_READ_EJECUTADO:
@@ -297,3 +308,4 @@ t_pcb* list_get_max_R(t_list* lista){
 	}
 	return pcb_max;
 }
+

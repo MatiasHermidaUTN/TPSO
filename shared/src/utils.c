@@ -282,7 +282,7 @@ void liberar_archivos_abiertos_pcb(archivos_abiertos) {
 */
 
 void liberar_parametros(char** parametros) {
-	for(int i = 0; i < string_array_size(parametros); i++) {
+	for(int i = 0; i < cantidad_de_punteros(parametros); i++) {
 		free(parametros[i]);
 	}
 
@@ -305,7 +305,8 @@ void* serializar_pcb(t_pcb* pcb, size_t* size_total, t_msj_kernel_cpu op_code, c
 
 	if(parametros_de_instruccion) { //Si hay algun parametro
 		*size_total += sizeof(size_t); //Cantidad de parametros
-		for(int i = 0; i < string_array_size(parametros_de_instruccion); i++) {
+		printf("CANTIDAD DE PARAMETROS: %d \n",cantidad_de_punteros(parametros_de_instruccion));
+		for(int i = 0; i < cantidad_de_punteros(parametros_de_instruccion); i++) {
 			*size_total += sizeof(size_t) + strlen(parametros_de_instruccion[i]) + 1; //Tamanio de parametro + longitud de parametro
 		}
 	}
@@ -322,7 +323,7 @@ void* serializar_pcb(t_pcb* pcb, size_t* size_total, t_msj_kernel_cpu op_code, c
     desplazamiento += sizeof(t_msj_kernel_cpu);
 
     if(parametros_de_instruccion) { //Si hay algun parametro
-    	size_t cantidad_de_parametros = string_array_size(parametros_de_instruccion);
+    	size_t cantidad_de_parametros = cantidad_de_punteros(parametros_de_instruccion);
     	memcpy(stream_pcb + desplazamiento, &(cantidad_de_parametros), sizeof(cantidad_de_parametros));
     	desplazamiento += sizeof(cantidad_de_parametros);
 
@@ -515,7 +516,8 @@ t_pcb* recibir_pcb(int socket_kernel) {
 }
 
 t_pcb* deserializar_pcb(void* stream, size_t size_payload) {
-	t_pcb* pcb = (t_pcb*)malloc(size_payload);
+	//t_pcb* pcb = (t_pcb*)malloc(size_payload);
+	t_pcb* pcb = (t_pcb*)malloc(sizeof(t_pcb));
 	int desplazamiento = 0;
 
 	memcpy(&(pcb->pid), stream + desplazamiento, sizeof(pcb->pid));
@@ -687,4 +689,14 @@ void print_l_instrucciones(t_list* instrucciones) {
 	    }
 	    printf("\n");
     }
+}
+
+
+int cantidad_de_punteros(char** arreglo) {
+    int cantidad = 0;
+    while (*arreglo) {  // mientras el puntero actual no sea nulo
+        cantidad++;
+        arreglo++;  // avanzar al siguiente puntero en el arreglo
+    }
+    return cantidad;
 }
