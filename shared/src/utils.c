@@ -4,8 +4,7 @@
 // Funciones de cliente //
 //////////////////////////
 
-int crear_conexion(char *ip, char* puerto)
-{
+int crear_conexion(char *ip, char* puerto) {
 	struct addrinfo hints;
 	struct addrinfo *server_info;
 
@@ -17,8 +16,11 @@ int crear_conexion(char *ip, char* puerto)
 	getaddrinfo(ip, puerto, &hints, &server_info);
 
 	int socket_cliente = socket(server_info->ai_family,
-	                    server_info->ai_socktype,
-	                    server_info->ai_protocol);
+	                    	    server_info->ai_socktype,
+								server_info->ai_protocol);
+
+	int my_true = 1; //Defino un true para poder pasarle el puntero al true
+	setsockopt(socket_cliente, SOL_SOCKET, SO_REUSEADDR, &my_true, sizeof(int)); //Para cerrar el socket en cuanto se termine el proceso
 
 	if(connect(socket_cliente, server_info->ai_addr, server_info->ai_addrlen)){
 		freeaddrinfo(server_info);
@@ -149,18 +151,18 @@ t_config* iniciar_config(char* path) {
 
 	if(!nuevo_config) {
 		printf("No se pudo crear el config.\n");
-		exit(2);
+		exit(EXIT_FAILURE);
 	}
 
 	return nuevo_config;
 }
 
-t_log* iniciar_logger(char* path,char* nombre) {
+t_log* iniciar_logger(char* path, char* nombre) {
 	t_log* nuevo_logger = log_create(path, nombre, 1, LOG_LEVEL_INFO);
 
 	if(!nuevo_logger) {
 		printf("No se pudo crear un logger.");
-		exit(1);
+		exit(EXIT_FAILURE);
 	}
 
 	return nuevo_logger;
@@ -279,9 +281,17 @@ void liberar_archivos_abiertos_pcb(archivos_abiertos) {
 }
 */
 
-void enviar_pcb(int socket, t_pcb* pcb, t_msj_kernel_cpu op_code, char* parametro_de_instruccion) {
+void liberar_parametros(char** parametros) {
+	for(int i = 0; i < string_array_size(parametros); i++) {
+		free(parametros[i]);
+	}
+
+	free(parametros);
+}
+
+void enviar_pcb(int socket, t_pcb* pcb, t_msj_kernel_cpu op_code, char** parametros_de_instruccion) {
 	size_t size_total;
-	void* stream_pcb_a_enviar = serializar_pcb(pcb, &size_total, op_code, parametro_de_instruccion);
+	void* stream_pcb_a_enviar = serializar_pcb(pcb, &size_total, op_code, parametros_de_instruccion);
 	//log_info(logger, "size_total: %d", (int)size_total);
 
 	send(socket, stream_pcb_a_enviar, size_total, 0);
@@ -289,12 +299,15 @@ void enviar_pcb(int socket, t_pcb* pcb, t_msj_kernel_cpu op_code, char* parametr
 	free(stream_pcb_a_enviar);
 }
 
-void* serializar_pcb(t_pcb* pcb, size_t* size_total, t_msj_kernel_cpu op_code, char* parametro_de_instruccion) {
+void* serializar_pcb(t_pcb* pcb, size_t* size_total, t_msj_kernel_cpu op_code, char** parametros_de_instruccion) {
 	size_t size_payload = tamanio_payload_pcb(pcb);
 	*size_total = sizeof(t_msj_kernel_cpu);
 
-	if(parametro_de_instruccion) { //Si hay algun parametro
-		*size_total += sizeof(size_t) + strlen(parametro_de_instruccion) + 1;
+	if(parametros_de_instruccion) { //Si hay algun parametro
+		*size_total += sizeof(size_t); //Cantidad de parametros
+		for(int i = 0; i < string_array_size(parametros_de_instruccion); i++) {
+			*size_total += sizeof(size_t) + strlen(parametros_de_instruccion[i]) + 1; //Tamanio de parametro + longitud de parametro
+		}
 	}
 
 	*size_total += sizeof(size_t) + size_payload;
@@ -308,15 +321,22 @@ void* serializar_pcb(t_pcb* pcb, size_t* size_total, t_msj_kernel_cpu op_code, c
     memcpy(stream_pcb + desplazamiento, &(op_code_a_enviar), sizeof(t_msj_kernel_cpu));
     desplazamiento += sizeof(t_msj_kernel_cpu);
 
-    if(parametro_de_instruccion) { //Si hay algun parametro
-    	size_t size_parametro_de_instruccion = strlen(parametro_de_instruccion) + 1;
-    	memcpy(stream_pcb + desplazamiento, &(size_parametro_de_instruccion), sizeof(size_parametro_de_instruccion));
-    	desplazamiento += sizeof(size_parametro_de_instruccion);
+    if(parametros_de_instruccion) { //Si hay algun parametro
+    	size_t cantidad_de_parametros = string_array_size(parametros_de_instruccion);
+    	memcpy(stream_pcb + desplazamiento, &(cantidad_de_parametros), sizeof(cantidad_de_parametros));
+    	desplazamiento += sizeof(cantidad_de_parametros);
 
-    	memcpy(stream_pcb + desplazamiento, parametro_de_instruccion, size_parametro_de_instruccion);
-    	desplazamiento += size_parametro_de_instruccion;
+    	size_t size_parametro_de_instruccion;
+    	for(int i = 0; i < cantidad_de_parametros; i++) {
+    		size_parametro_de_instruccion = strlen(parametros_de_instruccion[i]) + 1;
+			memcpy(stream_pcb + desplazamiento, &(size_parametro_de_instruccion), sizeof(size_parametro_de_instruccion));
+			desplazamiento += sizeof(size_parametro_de_instruccion);
 
-    	//printf("parametro_de_instruccion (deserializar): %s de %d\n", parametro_de_instruccion, size_parametro_de_instruccion);
+			memcpy(stream_pcb + desplazamiento, parametros_de_instruccion[i], size_parametro_de_instruccion);
+			desplazamiento += size_parametro_de_instruccion;
+    	}
+
+    	//string_array_destroy(parametros_de_instruccion);
     } //Para esto no hace falta deserializar en recibir_pcb, ya que esto lo hace la funcion recibir_parametro_de_instruccion
 
     memcpy(stream_pcb + desplazamiento, &(size_payload), sizeof(size_t));

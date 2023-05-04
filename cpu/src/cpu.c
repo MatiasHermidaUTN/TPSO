@@ -15,7 +15,7 @@ int main(int argc, char** argv) {
     enviar_handshake(socket_memoria, CPU);
     t_handshake respuesta = recibir_handshake(socket_memoria);
     if(respuesta == ERROR_HANDSHAKE){
-        log_error(logger,"La CPU no se pudo conectar a la memoria");
+        log_error(logger, "CPU no se pudo conectar a Memoria");
         exit(EXIT_FAILURE);
     }
 
@@ -23,14 +23,13 @@ int main(int argc, char** argv) {
     log_warning(logger, "CPU lista para recibir al Kernel");
     socket_kernel = esperar_cliente(socket_cpu);
 
-    puts("Se conecto el Kernel a la CPU");
+    log_warning(logger, "Kernel se conecto a CPU");
 
     while (1) {
     	int cod_op = recibir_operacion(socket_kernel);
-    	switch (cod_op){
+    	switch (cod_op) {
     		case PCB_A_EJECUTAR:
     			t_pcb* pcb = recibir_pcb(socket_kernel); //deserializar hace el malloc
-    			log_warning(logger, "PID RECIBIDO: %d", pcb->pid);
     			ejecutar_instrucciones(pcb);
     			liberar_pcb(pcb);
     			break;

@@ -3,23 +3,37 @@
 void planificar_corto() {
 	t_pcb* pcb;
 	t_pcb* pcb_recibido;
+	char** parametros;
+
 	while(1) {
 		sem_wait(&sem_cant_ready); //entra solo si hay algun proceso en Ready, es una espera no activa
 		pcb = obtener_proximo_a_ejecutar();
-		log_warning(logger, "Proximo a ejecutar: %d", pcb->pid);
 
+		if(!pcb->tiempo_inicial_ejecucion) { //Si no viene de EXEC
+			//printf("calculando tiempo_inicial_ejecucion\n");
+			log_info(logger, "PID: %d - Estado Anterior: READY - Estado Actual: EXEC", pcb->pid);
+			pcb->tiempo_inicial_ejecucion = time(NULL); // Para calcular el tiempo en ejecucion inmediatamente antes de pasarlo a la CPU
+		} //Comienza ejecucion
+		//printf("antes de enviar_pcb\n");
 		enviar_pcb(socket_cpu, pcb, PCB_A_EJECUTAR, NULL); //NULL porque no se le pasa ningun parametro extra
+		//printf("Antes de liberar_pcb\n");
 		liberar_pcb(pcb);
+		//printf("Despues de liberar_pcb\n");
 
 		t_msj_kernel_cpu respuesta = esperar_cpu();
 
 		switch(respuesta) {
 			case IO_EJECUTADO:
-				char* parametro = recibir_parametro_de_instruccion();
-				int tiempo_a_bloquear = atoi(parametro);
-				free(parametro);
+				parametros = recibir_parametros_de_instruccion();
+				char* tiempo_como_string = strdup(parametros[0]);
+				int tiempo_a_bloquear = atoi(tiempo_como_string);
+				liberar_parametros(parametros);
+				free(tiempo_como_string);
 
 				pcb_recibido = recibir_pcb(socket_cpu);
+				pcb_recibido->tiempo_real_ejecucion = time(NULL) - pcb_recibido->tiempo_inicial_ejecucion;
+				pcb_recibido->tiempo_inicial_ejecucion = 0;
+				//Finaliza ejecucion
 
 				t_args_io* args = malloc(sizeof(t_args_io));
 			    args->tiempo = tiempo_a_bloquear;
@@ -35,19 +49,35 @@ void planificar_corto() {
 				break;
 
 			case WAIT_EJECUTADO:
-				char* nombre_recurso_wait = recibir_parametro_de_instruccion();
+				parametros = recibir_parametros_de_instruccion();
+				//char* nombre_recurso_wait = string_array_pop(parametros);
+				//string_array_destroy(parametros);
+				char* nombre_recurso_wait = strdup(parametros[0]);
+				liberar_parametros(parametros);
+
 				pcb_recibido = recibir_pcb(socket_cpu);
 				wait_recurso(pcb_recibido, nombre_recurso_wait);
+				free(nombre_recurso_wait);
 				break;
 
 			case SIGNAL_EJECUTADO:
-				char* nombre_recurso_signal = recibir_parametro_de_instruccion();
+				parametros = recibir_parametros_de_instruccion();
+				//char* nombre_recurso_signal = string_array_pop(parametros);
+				//string_array_destroy(parametros);
+				char* nombre_recurso_signal = strdup(parametros[0]);
+				liberar_parametros(parametros);
+
 				pcb_recibido = recibir_pcb(socket_cpu);
 				signal_recurso(pcb_recibido, nombre_recurso_signal);
+				free(nombre_recurso_signal);
 				break;
 
 			case YIELD_EJECUTADO: //vuelve a ready
 				pcb_recibido = recibir_pcb(socket_cpu);
+				pcb_recibido->tiempo_real_ejecucion = time(NULL) - pcb_recibido->tiempo_inicial_ejecucion;
+				pcb_recibido->tiempo_inicial_ejecucion = 0;
+				//Finaliza ejecucion
+
 				ready_list_push(pcb_recibido); //Aca calcula el S (proxima rafaga), actualizo el tiempo_llegada_ready y hago sem_post(&sem_cant_ready) (solo necesito pasarle el pcb, porque ya se que es en Ready)
 				log_info(logger, "PID: %d - Estado Anterior: EXEC - Estado Actual: READY", pcb_recibido->pid); //log obligatorio
 				break;
@@ -86,9 +116,11 @@ int calcular_tiempo_en_ready(int segundos) {
 
 t_pcb* obtener_proximo_a_ejecutar() {
 	t_pcb* pcb;
-	if(proximo_pcb_a_ejecutar_forzado != NULL) {
+	if(proximo_pcb_a_ejecutar_forzado) {
 		t_pcb* proximo = proximo_pcb_a_ejecutar_forzado;
 		proximo_pcb_a_ejecutar_forzado = NULL;
+		//printf("en proximo_a_ejecutar_forzado\n");
+		//printf("pid_pcb_forzado: %d\n", proximo->pid);
 		return proximo;
 	}
 	else if(!strcmp(lectura_de_config.ALGORITMO_PLANIFICACION, "FIFO")) {
@@ -114,7 +146,6 @@ void manejar_io(t_args_io* args_io) {
 
 void wait_recurso(t_pcb* pcb, char* nombre_recurso) {
 	t_recurso* recurso = buscar_recurso(nombre_recurso);
-	log_error(logger, "NOMBRE DE RECURSO: %s", recurso->nombre);
 	if(recurso) {
 		recurso->cantidad_disponibles--;
 		log_info(logger, "PID: %d - Wait: %s - Instancias: %d", pcb->pid, nombre_recurso, recurso->cantidad_disponibles); //log obligatorio
@@ -128,7 +159,6 @@ void wait_recurso(t_pcb* pcb, char* nombre_recurso) {
 			log_info(logger, "PID: %d - Bloqueado por: %s", pcb->pid, nombre_recurso); //log obligatorio
 		}
 		else { //el recurso esta disponible, tiene que seguir ejecutando el mismo proceso
-			log_warning(logger, "proceso_que_sigue_en_exec = %d", pcb->pid);
 			proximo_pcb_a_ejecutar_forzado = pcb;
 			sem_post(&sem_cant_ready); //Al no pasar por la funcion ready_list_push hay que hacerlo manualmente, vuelve a ejecutar sin pasar por ready
 		}
@@ -151,7 +181,7 @@ t_recurso* buscar_recurso(char* nombre_recurso) {
 }
 
 void signal_recurso(t_pcb* pcb, char* nombre_recurso) {
-	t_recurso* recurso =  buscar_recurso(nombre_recurso);
+	t_recurso* recurso = buscar_recurso(nombre_recurso);
 
 	if(recurso) {
 		recurso->cantidad_disponibles++;
@@ -163,7 +193,6 @@ void signal_recurso(t_pcb* pcb, char* nombre_recurso) {
 			log_info(logger, "PID: %d - Estado Anterior: BLOCK - Estado Actual: READY", pcb_a_desbloquear->pid); //log obligatorio
 		}
 
-		log_warning(logger, "proceso_que_sigue_en_exec = %d", pcb->pid);
 		proximo_pcb_a_ejecutar_forzado = pcb;
 		sem_post(&sem_cant_ready); //Al no pasar por la funcion ready_list_push hay que hacerlo manualmente, vuelve a ejecutar sin pasar por ready
 	}
@@ -183,11 +212,3 @@ void exit_proceso(t_pcb* pcb) {
 	//avisarle a memoria para liberar la estructura
 	liberar_pcb(pcb);
 }
-
-int list_remove_element(t_list *self, void *element) {
-	int _is_the_element(void *data) {
-		return element == data;
-	}
-	return list_remove_by_condition(self, (void*)_is_the_element) != NULL;
-}
-

@@ -3,13 +3,11 @@
 t_log* logger;
 
 void ejecutar_instrucciones(t_pcb* pcb) {
-	if(!pcb->tiempo_inicial_ejecucion) { //Si no viene de EXEC
-		pcb->tiempo_inicial_ejecucion = time(NULL); // Para calcular el tiempo en ejecucion
-	}
-
-	int cant_instrucciones = list_size(pcb->instrucciones);
+	int cantidad_instrucciones = list_size(pcb->instrucciones);
 	t_instruccion* instruccion_actual;
-	while(pcb->pc < cant_instrucciones) {
+	char** parametros;// = string_array_new();
+
+	while(pcb->pc < cantidad_instrucciones) {
 		//Fetch
 		instruccion_actual = list_get(pcb->instrucciones, pcb->pc);
 		pcb->pc++;
@@ -19,20 +17,17 @@ void ejecutar_instrucciones(t_pcb* pcb) {
 		switch(instruccion_a_enum(instruccion_actual)) {
 			case SET:
 				ejecutar_set(pcb, instruccion_actual);
-				log_warning(logger, "Se leyo un SET\n");
 				break;
 			case MOV_IN:
 				break;
 			case MOV_OUT:
 				break;
 			case IO:
-				pcb->tiempo_real_ejecucion = time(NULL) - pcb->tiempo_inicial_ejecucion;
-				pcb->tiempo_inicial_ejecucion = 0;
-
-				char* tiempo_a_bloquear = list_get(instruccion_actual->parametros, 0); //va con strdup?
-				//printf("El tiempo a bloquear de %d es: %s.\n", pcb->pid, tiempo_a_bloquear);
-				enviar_pcb(socket_kernel, pcb, IO_EJECUTADO, tiempo_a_bloquear);
-				log_warning(logger, "Se leyo un IO\n");
+				//char* tiempo_a_bloquear = list_get(instruccion_actual->parametros, 0); //va con strdup?
+				//string_array_push(&parametros, tiempo_a_bloquear);
+				parametros = malloc(sizeof(char*));
+				parametros[0] = list_get(instruccion_actual->parametros, 0); //va con strdup?
+				enviar_pcb(socket_kernel, pcb, IO_EJECUTADO, parametros);
 				return;
 				break;
 			case F_OPEN:
@@ -48,17 +43,19 @@ void ejecutar_instrucciones(t_pcb* pcb) {
 			case F_TRUNCATE:
 				break;
 			case WAIT:
-				//No se actualiza el tiempo_real_ejecucion, ya que se considera que sigue en EXEC (Running)
-				char* recurso_a_usar = list_get(instruccion_actual->parametros, 0); //va con strdup?
-				enviar_pcb(socket_kernel, pcb, WAIT_EJECUTADO, recurso_a_usar);
-				log_warning(logger, "Se leyo un WAIT\n");
+				//char* recurso_a_usar = list_get(instruccion_actual->parametros, 0); //va con strdup?
+				//string_array_push(&parametros, recurso_a_usar);
+				parametros = malloc(sizeof(char*));
+				parametros[0] = list_get(instruccion_actual->parametros, 0); //recurso_a_usar //va con strdup?
+				enviar_pcb(socket_kernel, pcb, WAIT_EJECUTADO, parametros);
 				return;
 				break;
 			case SIGNAL:
-				//No se actualiza el tiempo_real_ejecucion, ya que se considera que sigue en EXEC (Running)
-				char* recurso_a_desbloquear = list_get(instruccion_actual->parametros, 0); //va con strdup?
-				enviar_pcb(socket_kernel, pcb, SIGNAL_EJECUTADO, recurso_a_desbloquear);
-				log_warning(logger, "Se leyo un SIGNAL\n");
+				//char* recurso_a_desbloquear = list_get(instruccion_actual->parametros, 0); //va con strdup?
+				//string_array_push(&parametros, recurso_a_desbloquear);
+				parametros = malloc(sizeof(char*));
+				parametros[0] = list_get(instruccion_actual->parametros, 0); //recurso_a_desbloquear //va con strdup?
+				enviar_pcb(socket_kernel, pcb, SIGNAL_EJECUTADO, parametros);
 				return;
 				break;
 			case CREATE_SEGMENT:
@@ -66,9 +63,6 @@ void ejecutar_instrucciones(t_pcb* pcb) {
 			case DELETE_SEGMENT:
 				break;
 			case YIELD:
-				pcb->tiempo_real_ejecucion = time(NULL) - pcb->tiempo_inicial_ejecucion;
-				pcb->tiempo_inicial_ejecucion = 0;
-				log_warning(logger, "Se leyo un YIELD\n");
 				enviar_pcb(socket_kernel, pcb, YIELD_EJECUTADO, NULL); //NULL porque no se le pasa ningun parametro
 				return;
 				break;
@@ -82,30 +76,30 @@ void ejecutar_instrucciones(t_pcb* pcb) {
 	}
 }
 
-t_enum_instruccion instruccion_a_enum(t_instruccion* instruccion){
+t_enum_instruccion instruccion_a_enum(t_instruccion* instruccion) {
 	char* nombre = instruccion->nombre;
-	if(!strcmp(nombre, "SET")) return SET;
-	if(!strcmp(nombre, "MOV_IN")) return MOV_IN;
-	if(!strcmp(nombre, "MOV_OUT")) return MOV_OUT;
-	if(!strcmp(nombre, "I/O")) return IO;
-	if(!strcmp(nombre, "F_OPEN")) return F_OPEN;
-	if(!strcmp(nombre, "F_CLOSE")) return F_CLOSE;
-	if(!strcmp(nombre, "F_SEEK")) return F_SEEK;
-	if(!strcmp(nombre, "F_READ")) return F_READ;
-	if(!strcmp(nombre, "F_WRITE")) return F_WRITE;
-	if(!strcmp(nombre, "F_TRUNCATE")) return F_TRUNCATE;
-	if(!strcmp(nombre, "WAIT")) return WAIT;
-	if(!strcmp(nombre, "SIGNAL")) return SIGNAL;
-	if(!strcmp(nombre, "CREATE_SEGMEN")) return CREATE_SEGMENT;
+	if(!strcmp(nombre, "SET")) 			  return SET;
+	if(!strcmp(nombre, "MOV_IN")) 	      return MOV_IN;
+	if(!strcmp(nombre, "MOV_OUT")) 		  return MOV_OUT;
+	if(!strcmp(nombre, "I/O")) 		  	  return IO;
+	if(!strcmp(nombre, "F_OPEN"))		  return F_OPEN;
+	if(!strcmp(nombre, "F_CLOSE")) 		  return F_CLOSE;
+	if(!strcmp(nombre, "F_SEEK")) 		  return F_SEEK;
+	if(!strcmp(nombre, "F_READ")) 		  return F_READ;
+	if(!strcmp(nombre, "F_WRITE")) 		  return F_WRITE;
+	if(!strcmp(nombre, "F_TRUNCATE")) 	  return F_TRUNCATE;
+	if(!strcmp(nombre, "WAIT")) 		  return WAIT;
+	if(!strcmp(nombre, "SIGNAL")) 		  return SIGNAL;
+	if(!strcmp(nombre, "CREATE_SEGMENT")) return CREATE_SEGMENT;
 	if(!strcmp(nombre, "DELETE_SEGMENT")) return DELETE_SEGMENT;
-	if(!strcmp(nombre, "YIELD")) return YIELD;
-	if(!strcmp(nombre, "EXIT")) return EXIT;
+	if(!strcmp(nombre, "YIELD")) 		  return YIELD;
+	if(!strcmp(nombre, "EXIT")) 		  return EXIT;
 	return INSTRUCCION_ERRONEA;
 }
 
-void ejecutar_set(t_pcb* pcb, t_instruccion* instruccion_actual){
+void ejecutar_set(t_pcb* pcb, t_instruccion* instruccion_actual) {
 	char* registro = list_get(instruccion_actual->parametros, 0);
-	char* valor = list_get(instruccion_actual->parametros, 1);
+	char* valor    = list_get(instruccion_actual->parametros, 1);
 
 	if(!strcmp(registro, "AX")){
 		memcpy(pcb->registros_cpu.AX, valor, 4*sizeof(char));

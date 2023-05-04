@@ -51,13 +51,13 @@ t_kernel_config leer_kernel_config(t_config* config) {
     char* recursos_sin_espacio = string_replace(recursos, " " , ""); //"[elem1,elem2,...]"
     free(recursos);
     lectura_de_config.RECURSOS = string_get_string_as_array(recursos_sin_espacio); //["elem1", "elem", ...]
-    free(recursos_sin_espacio); //REVISAR ESTE FREE (valgrind no se queja)
+    free(recursos_sin_espacio); //TODO: REVISAR ESTE FREE (valgrind no se queja)
 
     char* instancias_recursos             = strdup(config_get_string_value(config, "INSTANCIAS_RECURSOS"));
 	char* instancias_recursos_sin_espacio = string_replace(instancias_recursos, " " , "");
 	free(instancias_recursos);
 	lectura_de_config.INSTANCIAS_RECURSOS = string_get_string_as_array(instancias_recursos_sin_espacio);
-	free(instancias_recursos_sin_espacio); //REVISAR ESTE FREE (valgrind no se queja)
+	free(instancias_recursos_sin_espacio); //TODO: REVISAR ESTE FREE (valgrind no se queja)
 
     return lectura_de_config;
 }

@@ -19,16 +19,16 @@ void manejar_conexion(void* args) {
 	int socket_consola = ((t_args_recibir_conexiones*)args)->socket_cliente;
 	free(args);
 
-	log_info(logger, "se conecto una consola");
+	log_warning(logger, "Se conecto una consola");
 
 	t_msj_kernel_consola cod_op = recibir_operacion(socket_consola);
 	switch(cod_op) {
 		case LIST_INSTRUCCIONES:
-			log_info(logger, "Consola mando instrucciones");
+			log_warning(logger, "Consola mando instrucciones");
 			t_list* instrucciones = recibir_instrucciones(socket_consola);
 			t_pcb* pcb = crear_pcb(instrucciones, socket_consola);
 
-			log_info(logger,"Se crea el proceso %d en NEW \n",pcb->pid);
+			log_info(logger,"Se crea el proceso %d en NEW",pcb->pid); //log obligatorio
 			queue_push_con_mutex(new_queue, pcb, &mutex_new_queue);
 
 			sem_post(&sem_cant_new);
@@ -68,27 +68,27 @@ t_pcb* crear_pcb(t_list* instrucciones,int socket_consola) {
 void init_conexiones(t_kernel_config lectura_de_config, t_log* logger, int* socket_memoria, int* socket_cpu, int* socket_fileSystem) {
 	*socket_memoria = crear_conexion(lectura_de_config.IP_MEMORIA, lectura_de_config.PUERTO_MEMORIA);
 	if(*socket_memoria == -1) {
-		log_error(logger, "El kernel no pudo conectarse a la memoria");
+		log_error(logger, "Kernel no pudo conectarse a Memoria");
 		exit(EXIT_FAILURE);
 	}
 	enviar_handshake(*socket_memoria, KERNEL);
-	t_handshake rta = recibir_handshake(*socket_memoria);
-	if(rta == ERROR_HANDSHAKE){
-		log_error(logger,"El kernel no se pudo conectar a la memoria");
+	t_handshake respuesta = recibir_handshake(*socket_memoria);
+	if(respuesta == ERROR_HANDSHAKE){
+		log_error(logger,"Kernel no pudo conectarse a Memoria");
 		exit(EXIT_FAILURE);
 	}
 
 	//Para estos no hace falta handshake porque solo reciben al Kernel
 	*socket_cpu = crear_conexion(lectura_de_config.IP_CPU, lectura_de_config.PUERTO_CPU);
 	if(*socket_cpu == -1) {
-		log_error(logger, "El kernel no pudo conectarse a el CPU");
+		log_error(logger, "Kernel no pudo conectarse a CPU");
 		exit(EXIT_FAILURE);
 	}
-
+	/* No compila el FS, por lo que por ahora lo pruebo sin este
 	*socket_fileSystem = crear_conexion(lectura_de_config.IP_FILESYSTEM, lectura_de_config.PUERTO_FILESYSTEM);
 	if(*socket_fileSystem == -1) {
-		log_error(logger, "El kernel no pudo conectarse a el FileSystem");
+		log_error(logger, "Kernel no pudo conectarse a File System");
 		exit(EXIT_FAILURE);
 	}
-
+	*/
 }
