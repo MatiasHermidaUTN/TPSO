@@ -38,22 +38,23 @@ typedef enum {
 } t_handshake;
 
 typedef enum {
+	PCB_A_EJECUTAR,
+
 	IO_EJECUTADO,
-	WAIT_EJECUTADO,
-	SIGNAL_EJECUTADO,
-	YIELD_EJECUTADO,
-	EXIT_EJECUTADO,
 	MOV_IN_EJECUTADO,
 	MOV_OUT_EJECUTADO,
-	CREATE_SEGMENT_EJECUTADO,
-	DELETE_SEGMENT_EJECUTADO,
 	F_OPEN_EJECUTADO,
 	F_CLOSE_EJECUTADO,
 	F_SEEK_EJECUTADO,
 	F_READ_EJECUTADO,
 	F_WRITE_EJECUTADO,
 	F_TRUNCATE_EJECUTADO,
-	PCB_A_EJECUTAR,
+	WAIT_EJECUTADO,
+	SIGNAL_EJECUTADO,
+	CREATE_SEGMENT_EJECUTADO,
+	DELETE_SEGMENT_EJECUTADO,
+	YIELD_EJECUTADO,
+	EXIT_EJECUTADO,
 } t_msj_kernel_cpu;
 
 typedef enum {
@@ -93,9 +94,9 @@ typedef struct {
 } t_paquete;
 
 typedef struct registros_cpu {
-	char  AX[ 4],  BX[ 4],  CX[ 4],  DX[ 4];
-	char EAX[ 8], EBX[ 8], ECX[ 8], EDX [8];
-	char RAX[16], RBX[16], RCX[16], RDX[16];
+	char  AX[ 4+1],  BX[ 4+1],  CX[ 4+1],  DX[ 4+1];
+	char EAX[ 8+1], EBX[ 8+1], ECX[ 8+1], EDX[ 8+1];
+	char RAX[16+1], RBX[16+1], RCX[16+1], RDX[16+1];
 } t_registros_cpu;
 
 typedef struct pcb {
@@ -174,7 +175,6 @@ char* obtener_pids(t_list* lista_pcbs);
 int tamanio_de_pids(t_list* pcbs);
 */
 void destruir_instruccion(t_instruccion* instruccion);
-void destruir_parametro(char* parametro);
 
 void liberar_pcb(t_pcb* pcb);
 //void liberar_tabla_segmentos_pcb(tabla_segmentos);
@@ -195,7 +195,7 @@ void memcpy_archivos_abiertos_serializar(void* stream, t_list* archivos_abiertos
 
 t_pcb* recibir_pcb(int socket);
 
-t_pcb* deserializar_pcb(void* stream, size_t size_payload);
+t_pcb* deserializar_pcb(void* stream);
 t_list* deserializar_instrucciones(void* a_recibir, size_t size_payload, int* desplazamiento);
 void deserializar_parametros(void* a_recibir, int* desplazamiento, t_instruccion* instruccion, t_dictionary* diccionario_instrucciones);
 

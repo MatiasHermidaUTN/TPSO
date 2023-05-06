@@ -31,7 +31,7 @@ int main(int argc, char** argv) {
     		case PCB_A_EJECUTAR:
     			t_pcb* pcb = recibir_pcb(socket_kernel); //deserializar hace el malloc
     			ejecutar_instrucciones(pcb);
-    			liberar_pcb(pcb);
+    			liberar_pcb(pcb); //TODO: valgrind dice que se está haciendo algún free dos veces
     			break;
         }
     }

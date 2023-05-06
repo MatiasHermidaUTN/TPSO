@@ -11,8 +11,6 @@ typedef struct {
 	t_pcb* pcb;
 } t_args_io;
 
-t_registros_cpu init_registros_cpu();
-
 void planificar_corto();
 
 void ready_list_push(t_pcb* pcb_recibido);

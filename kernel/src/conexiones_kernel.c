@@ -24,7 +24,6 @@ void manejar_conexion(void* args) {
 	t_msj_kernel_consola cod_op = recibir_operacion(socket_consola);
 	switch(cod_op) {
 		case LIST_INSTRUCCIONES:
-			log_warning(logger, "Consola mando instrucciones");
 			t_list* instrucciones = recibir_instrucciones(socket_consola);
 			t_pcb* pcb = crear_pcb(instrucciones, socket_consola);
 
@@ -41,7 +40,7 @@ void manejar_conexion(void* args) {
 
 int contador_pid = 1;
 
-t_pcb* crear_pcb(t_list* instrucciones,int socket_consola) {
+t_pcb* crear_pcb(t_list* instrucciones, int socket_consola) {
 	t_pcb* pcb = malloc(sizeof(t_pcb));
 	pthread_mutex_lock(&mutex_contador_pid);
 	pcb->pid = contador_pid;
@@ -49,8 +48,8 @@ t_pcb* crear_pcb(t_list* instrucciones,int socket_consola) {
 	pthread_mutex_unlock(&mutex_contador_pid);
 
 	pcb->instrucciones = instrucciones;
-	pcb->pc =0;
-	//pcb->registros_cpu = init_registros_cpu();
+	pcb->pc = 0;
+	pcb->registros_cpu = init_registros_cpu();
 	pcb->tabla_segmentos = list_create();
 	pcb->estimado_prox_rafaga = lectura_de_config.ESTIMACION_INICIAL;
 	pcb->tiempo_llegada_ready = 0;
@@ -62,7 +61,25 @@ t_pcb* crear_pcb(t_list* instrucciones,int socket_consola) {
 	pcb->tiempo_inicial_ejecucion = 0;
 
 	return pcb;
+}
 
+t_registros_cpu init_registros_cpu() {
+	t_registros_cpu registros;
+
+	strcpy(registros.AX, "0000");
+	strcpy(registros.BX, "0000");
+	strcpy(registros.CX, "0000");
+	strcpy(registros.DX, "0000");
+	strcpy(registros.EAX, "00000000");
+	strcpy(registros.EBX, "00000000");
+	strcpy(registros.ECX, "00000000");
+	strcpy(registros.EDX, "00000000");
+	strcpy(registros.RAX, "0000000000000000");
+	strcpy(registros.RBX, "0000000000000000");
+	strcpy(registros.RCX, "0000000000000000");
+	strcpy(registros.RDX, "0000000000000000");
+
+	return registros;
 }
 
 void init_conexiones(t_kernel_config lectura_de_config, t_log* logger, int* socket_memoria, int* socket_cpu, int* socket_fileSystem) {

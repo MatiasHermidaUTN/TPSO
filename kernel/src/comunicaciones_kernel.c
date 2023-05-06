@@ -32,11 +32,9 @@ t_list* deserializar_instrucciones_kernel(void* a_recibir, int size_payload) {
 		desplazamiento += sizeof(size_t);
 	    //printf("%d\n", (int)largo_nombre);
 
-	    char* nombre_instruccion = malloc(largo_nombre);
-		memcpy(nombre_instruccion, a_recibir + desplazamiento, largo_nombre);		//pongo nombre instruccion
-	    instruccion->nombre = strdup(nombre_instruccion);
+		instruccion->nombre = malloc(largo_nombre);
+		memcpy(instruccion->nombre, a_recibir + desplazamiento, largo_nombre);		//pongo nombre instruccion
 		desplazamiento += largo_nombre;
-	    free(nombre_instruccion);
 
 	    //***PARAMETROS***
 		instruccion->parametros = list_create();
@@ -56,9 +54,8 @@ t_list* deserializar_instrucciones_kernel(void* a_recibir, int size_payload) {
 void deserializar_parametros(void* a_recibir, int* desplazamiento, t_instruccion* instruccion, t_dictionary* diccionario_instrucciones) {
 	int* cantidadDeParametrosEsperados;
 	if(!dictionary_has_key(diccionario_instrucciones, instruccion->nombre)) {
-		//log_error(logger, "No existe instruccion: %s , en el diccionario", instruccion->nombre);
-		printf("No existe instruccion: %s , en el diccionario", instruccion->nombre);
-		exit(-1);
+		log_error(logger, "No existe la instruccion: %s , en el diccionario", instruccion->nombre);
+		exit(EXIT_FAILURE);
 	}
 	cantidadDeParametrosEsperados = (int*)dictionary_get(diccionario_instrucciones, instruccion->nombre);
 
@@ -69,11 +66,9 @@ void deserializar_parametros(void* a_recibir, int* desplazamiento, t_instruccion
 		memcpy(&(largo_parametro), a_recibir + *desplazamiento, sizeof(size_t));		//pongo size de nombre parametro
 		*desplazamiento+= sizeof(size_t);
 
-		char* nombre_paramtro = malloc(largo_parametro);
-		memcpy(nombre_paramtro, a_recibir + *desplazamiento, largo_parametro);		//pongo nombre parametro
-		parametro = strdup(nombre_paramtro);
+		parametro = malloc(largo_parametro);
+		memcpy(parametro, a_recibir + *desplazamiento, largo_parametro);		//pongo nombre parametro
 		*desplazamiento += largo_parametro;
-		free(nombre_paramtro);
 
 		list_add(instruccion->parametros, parametro);
     }
@@ -88,17 +83,23 @@ t_msj_kernel_cpu esperar_cpu() {
 char** recibir_parametros_de_instruccion() {
 	size_t cantidad_de_parametros;
 	size_t tamanio_parametro;
+	char* parametro_auxiliar;
 
 	recv(socket_cpu, &cantidad_de_parametros, sizeof(size_t), MSG_WAITALL);
-	char** parametros = malloc(cantidad_de_parametros * sizeof(char*));
+	//char** parametros = malloc(cantidad_de_parametros * sizeof(char*));
+	char** parametros = string_array_new();
 
 	for(int i = 0; i < cantidad_de_parametros; i++) {
 		recv(socket_cpu, &tamanio_parametro, sizeof(size_t), MSG_WAITALL);
 
-		parametros[i] = malloc(tamanio_parametro);
-		recv(socket_cpu, parametros[i], tamanio_parametro, MSG_WAITALL);
-	}
+		parametro_auxiliar = malloc(tamanio_parametro); //se libera cuando se hace string_array_destroy
+		recv(socket_cpu, parametro_auxiliar, tamanio_parametro, MSG_WAITALL);
+		string_array_push(&parametros, parametro_auxiliar);
 
+		//parametros[i] = malloc(tamanio_parametro);
+		//recv(socket_cpu, parametros[i], tamanio_parametro, MSG_WAITALL);
+	}
+	//TODO: descomentar todovich
 	/*
 	char** parametros = string_array_new(); //Hace malloc(sizeof(char*))
 

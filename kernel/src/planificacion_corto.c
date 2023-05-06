@@ -10,7 +10,9 @@ void planificar_corto() {
 		pcb = obtener_proximo_a_ejecutar();
 
 	    //Comienza ejecucion
-		enviar_pcb(socket_cpu, pcb, PCB_A_EJECUTAR, NULL); //NULL porque no se le pasa ningun parametro extra
+		char** sin_parametros = string_array_new(); //TODO: hardcodeado nashe
+		enviar_pcb(socket_cpu, pcb, PCB_A_EJECUTAR, sin_parametros); //NULL porque no se le pasa ningun parametro extra
+		string_array_destroy(sin_parametros);
 		liberar_pcb(pcb);
 
 		t_msj_kernel_cpu respuesta = esperar_cpu();
@@ -40,6 +42,67 @@ void planificar_corto() {
 				pthread_detach(hilo_io);
 				break;
 
+			case F_OPEN_EJECUTADO:
+				parametros = recibir_parametros_de_instruccion();
+				log_warning(logger, "parametros[0]: %s", parametros[0]);
+				//TODO: AVISAR A FILESYSTEM
+
+				liberar_parametros(parametros);
+				pcb_recibido = recibir_pcb(socket_cpu);
+				proximo_pcb_a_ejecutar_forzado = pcb_recibido;
+				sem_post(&sem_cant_ready); //Al no pasar por la funcion ready_list_push hay que hacerlo manualmente, vuelve a ejecutar sin pasar por ready
+				break;
+
+			case F_CLOSE_EJECUTADO:
+				parametros = recibir_parametros_de_instruccion();
+				//TODO: AVISAR A FILESYSTEM
+
+				liberar_parametros(parametros);
+				break;
+
+			case F_SEEK_EJECUTADO:
+				parametros = recibir_parametros_de_instruccion();
+				log_warning(logger, "parametros[0]: %s", parametros[0]);
+				log_warning(logger, "parametros[1]: %s", parametros[1]);
+				//TODO: AVISAR A FILESYSTEM
+
+				liberar_parametros(parametros);
+
+				pcb_recibido = recibir_pcb(socket_cpu);
+				proximo_pcb_a_ejecutar_forzado = pcb_recibido;
+				sem_post(&sem_cant_ready); //Al no pasar por la funcion ready_list_push hay que hacerlo manualmente, vuelve a ejecutar sin pasar por ready
+				break;
+
+			case F_READ_EJECUTADO:
+				parametros = recibir_parametros_de_instruccion();
+				//TODO: AVISAR A FILESYSTEM
+
+				liberar_parametros(parametros);
+				break;
+
+			case F_WRITE_EJECUTADO:
+				parametros = recibir_parametros_de_instruccion();
+				//TODO: AVISAR A FILESYSTEM
+
+				log_warning(logger, "parametros[0]: %s", parametros[0]);
+				log_warning(logger, "parametros[1]: %s", parametros[1]);
+				log_warning(logger, "parametros[2]: %s", parametros[2]);
+				//TODO: AVISAR A FILESYSTEM
+
+				liberar_parametros(parametros);
+
+				pcb_recibido = recibir_pcb(socket_cpu);
+				proximo_pcb_a_ejecutar_forzado = pcb_recibido;
+				sem_post(&sem_cant_ready); //Al no pasar por la funcion ready_list_push hay que hacerlo manualmente, vuelve a ejecutar sin pasar por ready
+				break;
+
+			case F_TRUNCATE_EJECUTADO:
+				parametros = recibir_parametros_de_instruccion();
+				//TODO: AVISAR A FILESYSTEM
+
+				liberar_parametros(parametros);
+				break;
+
 			case WAIT_EJECUTADO:
 				parametros = recibir_parametros_de_instruccion();
 				//char* nombre_recurso_wait = string_array_pop(parametros);
@@ -64,6 +127,30 @@ void planificar_corto() {
 				free(nombre_recurso_signal);
 				break;
 
+			case CREATE_SEGMENT_EJECUTADO:
+				parametros = recibir_parametros_de_instruccion();
+				pcb_recibido = recibir_pcb(socket_cpu);
+
+				//TODO: AVISAR A MEMORIA
+				liberar_parametros(parametros);
+
+				proximo_pcb_a_ejecutar_forzado = pcb_recibido;
+				sem_post(&sem_cant_ready); //Al no pasar por la funcion ready_list_push hay que hacerlo manualmente, vuelve a ejecutar sin pasar por ready
+
+				break;
+
+			case DELETE_SEGMENT_EJECUTADO:
+				parametros = recibir_parametros_de_instruccion();
+				pcb_recibido = recibir_pcb(socket_cpu);
+
+				//TODO: AVISAR A MEMORIA
+				liberar_parametros(parametros);
+
+				proximo_pcb_a_ejecutar_forzado = pcb_recibido;
+				sem_post(&sem_cant_ready); //Al no pasar por la funcion ready_list_push hay que hacerlo manualmente, vuelve a ejecutar sin pasar por ready
+
+				break;
+
 			case YIELD_EJECUTADO: //vuelve a ready
 				pcb_recibido = recibir_pcb(socket_cpu);
 				pcb_recibido->tiempo_real_ejecucion = time(NULL) - pcb_recibido->tiempo_inicial_ejecucion;
@@ -78,74 +165,8 @@ void planificar_corto() {
 				exit_proceso(pcb_recibido); //Aca hace el sem_post(&sem_multiprogramacion)
 				break;
 
-			case CREATE_SEGMENT_EJECUTADO:
-				pcb_recibido = recibir_pcb(socket_cpu);
-				parametros = recibir_parametros_de_instruccion();
-
-				//TODO: AVISAR A MEMORIA
-				liberar_parametros(parametros);
-
-				proximo_pcb_a_ejecutar_forzado = pcb_recibido;
-				sem_post(&sem_cant_ready); //Al no pasar por la funcion ready_list_push hay que hacerlo manualmente, vuelve a ejecutar sin pasar por ready
-
-				break;
-
-			case DELETE_SEGMENT_EJECUTADO:
-				pcb_recibido = recibir_pcb(socket_cpu);
-				parametros = recibir_parametros_de_instruccion();
-
-				//TODO: AVISAR A MEMORIA
-				liberar_parametros(parametros);
-
-				proximo_pcb_a_ejecutar_forzado = pcb_recibido;
-				sem_post(&sem_cant_ready); //Al no pasar por la funcion ready_list_push hay que hacerlo manualmente, vuelve a ejecutar sin pasar por ready
-
-				break;
-
-			case F_OPEN_EJECUTADO:
-				parametros = recibir_parametros_de_instruccion();
-				//TODO: AVISAR A FILESYSTEM
-
-				liberar_parametros(parametros);
-				break;
-
-			case F_CLOSE_EJECUTADO:
-				parametros = recibir_parametros_de_instruccion();
-				//TODO: AVISAR A FILESYSTEM
-
-				liberar_parametros(parametros);
-				break;
-
-			case F_SEEK_EJECUTADO:
-				parametros = recibir_parametros_de_instruccion();
-				//TODO: AVISAR A FILESYSTEM
-
-				liberar_parametros(parametros);
-				break;
-
-			case F_READ_EJECUTADO:
-				parametros = recibir_parametros_de_instruccion();
-				//TODO: AVISAR A FILESYSTEM
-
-				liberar_parametros(parametros);
-				break;
-
-			case F_WRITE_EJECUTADO:
-				parametros = recibir_parametros_de_instruccion();
-				//TODO: AVISAR A FILESYSTEM
-
-				liberar_parametros(parametros);
-				break;
-
-			case F_TRUNCATE_EJECUTADO:
-				parametros = recibir_parametros_de_instruccion();
-				//TODO: AVISAR A FILESYSTEM
-
-				liberar_parametros(parametros);
-				break;
-
 			default:
-				log_error(logger,"Error en la comunicacion entre el Kernel y la CPU");
+				log_error(logger, "Error en la comunicacion entre el Kernel y la CPU");
 				exit(1);
 		}
 	}
@@ -266,11 +287,12 @@ void signal_recurso(t_pcb* pcb, char* nombre_recurso) {
 }
 
 void exit_proceso(t_pcb* pcb) {
-	sem_post(&sem_multiprogramacion);
 	enviar_fin_proceso(pcb->socket_consola, FINALIZACION_OK);
 
 	log_info(logger, "PID: %d - Estado Anterior: EXEC - Estado Actual: EXIT", pcb->pid); //log obligatorio
 	log_info(logger, "Finaliza el proceso %d - Motivo: SUCCESS", pcb->pid); //log obligatorio
+
+	sem_post(&sem_multiprogramacion);
 
 	//avisarle a memoria para liberar la estructura
 	liberar_pcb(pcb);
@@ -278,20 +300,20 @@ void exit_proceso(t_pcb* pcb) {
 
 void list_remove_pcb(t_list *lista, t_pcb *pcb) {
 	t_pcb* elemento;
-	for(int i = 0; i < list_size(lista); i++){
+	for(int i = 0; i < list_size(lista); i++) {
 		elemento = list_get(lista, i);
-		if(elemento->pid == pcb->pid){
+		if(elemento->pid == pcb->pid) {
 			elemento = list_remove(lista, i);
 		}
 	}
 }
 
-t_pcb* list_get_max_R(t_list* lista){
+t_pcb* list_get_max_R(t_list* lista) {
 	t_pcb* pcb_max = list_get(lista, 0);
 	t_pcb* pcb;
-	for(int i = 0; i < list_size(lista); i++){
+	for(int i = 0; i < list_size(lista); i++) {
 		pcb = list_get(lista, i);
-		if(calcular_R(pcb) > calcular_R(pcb_max)){
+		if(calcular_R(pcb) > calcular_R(pcb_max)) {
 			pcb_max = pcb;
 		}
 	}

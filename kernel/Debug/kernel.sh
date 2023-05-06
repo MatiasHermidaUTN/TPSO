@@ -1,1 +1,1 @@
-LD_LIBRARY_PATH=/home/utnso/Documents/TP-O/shared/Debug ./kernel $@
+LD_LIBRARY_PATH=/home/utnso/tp-2023-1c-Los-Matias/shared/Debug $@ ./kernel ../kernel.config

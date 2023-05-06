@@ -1,5 +1,7 @@
 WAIT DISCO
-I/O 20
+F_SEEK falopa.txt 10
+F_WRITE falopa.txt 0xabcedfg 10
+I/O 5
 YIELD
 SET AX HOLA
 SIGNAL DISCO

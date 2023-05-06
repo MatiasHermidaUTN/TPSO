@@ -31,16 +31,6 @@ int main(int argc, char** argv) {
     return 0;
 }
 
-void destruir_instruccion(t_instruccion* instruccion) { // No se porqué no me reconoce el de las utils
-	free(instruccion->nombre);
-	list_destroy_and_destroy_elements(instruccion->parametros, (void*)destruir_parametro);
-	free(instruccion);
-}
-
-void destruir_parametro(char* parametro) {
-	free(parametro);
-}
-
 void esperar_fin_proceso(int socket_kernel, t_log* logger) {
 	t_msj_kernel_consola respuesta = recibir_fin_proceso(socket_kernel);
 	if(respuesta == FINALIZACION_OK) {
