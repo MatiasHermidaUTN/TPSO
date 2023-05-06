@@ -8913,3 +8913,1912 @@
 [INFO] 01:20:48:846 Kernel/(206487:206489): PID: 8 - Signal: DISCO - Instancias: 1
 [INFO] 01:20:48:846 Kernel/(206487:206489): PID: 8 - Estado Anterior: EXEC - Estado Actual: EXIT
 [INFO] 01:20:48:847 Kernel/(206487:206489): Finaliza el proceso 8 - Motivo: SUCCESS
+[WARNING] 02:44:30:137 Kernel/(206777:206777): Kernel listo para recibir a Consolas
+[WARNING] 02:44:32:251 Kernel/(206777:206783): Se conecto una consola
+[INFO] 02:44:32:259 Kernel/(206777:206783): Se crea el proceso 1 en NEW
+[INFO] 02:44:32:262 Kernel/(206777:206780): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 02:44:32:264 Kernel/(206777:206779): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 02:44:32:308 Kernel/(206777:206779): PID: 1 - Wait: DISCO - Instancias: 0
+[WARNING] 02:44:32:311 Kernel/(206777:206779): parametros[0]: falopa.txt
+[WARNING] 02:44:32:311 Kernel/(206777:206779): parametros[1]: 10
+[WARNING] 02:44:32:315 Kernel/(206777:206779): parametros[0]: falopa.txt
+[WARNING] 02:44:32:316 Kernel/(206777:206779): parametros[1]: 0xabcedfg
+[WARNING] 02:44:32:316 Kernel/(206777:206779): parametros[2]: 10
+[INFO] 02:44:32:319 Kernel/(206777:206779): PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 02:44:32:319 Kernel/(206777:206779): PID: 1 - Bloqueado por: IO
+[INFO] 02:44:32:320 Kernel/(206777:206779): PID: 1 - Ejecuta IO: 5
+[WARNING] 02:44:33:763 Kernel/(206777:206787): Se conecto una consola
+[INFO] 02:44:33:763 Kernel/(206777:206787): Se crea el proceso 2 en NEW
+[INFO] 02:44:33:764 Kernel/(206777:206780): PID: 2 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 02:44:33:764 Kernel/(206777:206779): PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 02:44:33:765 Kernel/(206777:206779): PID: 2 - Wait: DISCO - Instancias: -1
+[INFO] 02:44:33:766 Kernel/(206777:206779): PID: 2 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 02:44:33:766 Kernel/(206777:206779): PID: 2 - Bloqueado por: DISCO
+[WARNING] 02:44:34:405 Kernel/(206777:206790): Se conecto una consola
+[INFO] 02:44:34:406 Kernel/(206777:206790): Se crea el proceso 3 en NEW
+[WARNING] 02:44:35:077 Kernel/(206777:206793): Se conecto una consola
+[INFO] 02:44:35:078 Kernel/(206777:206793): Se crea el proceso 4 en NEW
+[WARNING] 02:44:35:744 Kernel/(206777:206796): Se conecto una consola
+[INFO] 02:44:35:744 Kernel/(206777:206796): Se crea el proceso 5 en NEW
+[WARNING] 02:44:36:436 Kernel/(206777:206799): Se conecto una consola
+[INFO] 02:44:36:436 Kernel/(206777:206799): Se crea el proceso 6 en NEW
+[WARNING] 02:44:36:992 Kernel/(206777:206802): Se conecto una consola
+[INFO] 02:44:36:992 Kernel/(206777:206802): Se crea el proceso 7 en NEW
+[INFO] 02:44:37:322 Kernel/(206777:206784): PID: 1 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 02:44:37:323 Kernel/(206777:206779): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 02:44:37:325 Kernel/(206777:206779): PID: 1 - Estado Anterior: EXEC - Estado Actual: READY
+[INFO] 02:44:37:325 Kernel/(206777:206779): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 02:44:37:334 Kernel/(206777:206779): PID: 1 - Signal: DISCO - Instancias: 0
+[INFO] 02:44:37:335 Kernel/(206777:206779): PID: 2 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 02:44:37:337 Kernel/(206777:206779): PID: 1 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 02:44:37:338 Kernel/(206777:206779): Finaliza el proceso 1 - Motivo: SUCCESS
+[INFO] 02:44:37:338 Kernel/(206777:206780): PID: 3 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 02:44:37:339 Kernel/(206777:206779): PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[WARNING] 02:44:37:345 Kernel/(206777:206779): parametros[0]: falopa.txt
+[WARNING] 02:44:37:345 Kernel/(206777:206779): parametros[1]: 10
+[WARNING] 02:44:37:351 Kernel/(206777:206779): parametros[0]: falopa.txt
+[WARNING] 02:44:37:351 Kernel/(206777:206779): parametros[1]: 0xabcedfg
+[WARNING] 02:44:37:352 Kernel/(206777:206779): parametros[2]: 10
+[INFO] 02:44:37:354 Kernel/(206777:206779): PID: 2 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 02:44:37:354 Kernel/(206777:206779): PID: 2 - Bloqueado por: IO
+[INFO] 02:44:37:355 Kernel/(206777:206779): PID: 2 - Ejecuta IO: 5
+[INFO] 02:44:37:355 Kernel/(206777:206779): PID: 3 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 02:44:37:356 Kernel/(206777:206779): PID: 3 - Wait: DISCO - Instancias: -1
+[INFO] 02:44:37:357 Kernel/(206777:206779): PID: 3 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 02:44:37:357 Kernel/(206777:206779): PID: 3 - Bloqueado por: DISCO
+[WARNING] 02:44:37:603 Kernel/(206777:206806): Se conecto una consola
+[INFO] 02:44:37:604 Kernel/(206777:206806): Se crea el proceso 8 en NEW
+[INFO] 02:44:42:358 Kernel/(206777:206803): PID: 2 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 02:44:42:359 Kernel/(206777:206779): PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 02:44:42:362 Kernel/(206777:206779): PID: 2 - Estado Anterior: EXEC - Estado Actual: READY
+[INFO] 02:44:42:362 Kernel/(206777:206779): PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 02:44:42:369 Kernel/(206777:206779): PID: 2 - Signal: DISCO - Instancias: 0
+[INFO] 02:44:42:369 Kernel/(206777:206779): PID: 3 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 02:44:42:372 Kernel/(206777:206779): PID: 2 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 02:44:42:373 Kernel/(206777:206779): Finaliza el proceso 2 - Motivo: SUCCESS
+[INFO] 02:44:42:373 Kernel/(206777:206780): PID: 4 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 02:44:42:373 Kernel/(206777:206779): PID: 3 - Estado Anterior: READY - Estado Actual: EXEC
+[WARNING] 02:44:42:377 Kernel/(206777:206779): parametros[0]: falopa.txt
+[WARNING] 02:44:42:377 Kernel/(206777:206779): parametros[1]: 10
+[WARNING] 02:44:42:382 Kernel/(206777:206779): parametros[0]: falopa.txt
+[WARNING] 02:44:42:382 Kernel/(206777:206779): parametros[1]: 0xabcedfg
+[WARNING] 02:44:42:382 Kernel/(206777:206779): parametros[2]: 10
+[INFO] 02:44:42:385 Kernel/(206777:206779): PID: 3 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 02:44:42:385 Kernel/(206777:206779): PID: 3 - Bloqueado por: IO
+[INFO] 02:44:42:386 Kernel/(206777:206779): PID: 3 - Ejecuta IO: 5
+[INFO] 02:44:42:386 Kernel/(206777:206779): PID: 4 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 02:44:42:387 Kernel/(206777:206779): PID: 4 - Wait: DISCO - Instancias: -1
+[INFO] 02:44:42:388 Kernel/(206777:206779): PID: 4 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 02:44:42:388 Kernel/(206777:206779): PID: 4 - Bloqueado por: DISCO
+[INFO] 02:44:47:388 Kernel/(206777:206807): PID: 3 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 02:44:47:389 Kernel/(206777:206779): PID: 3 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 02:44:47:390 Kernel/(206777:206779): PID: 3 - Estado Anterior: EXEC - Estado Actual: READY
+[INFO] 02:44:47:390 Kernel/(206777:206779): PID: 3 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 02:44:47:396 Kernel/(206777:206779): PID: 3 - Signal: DISCO - Instancias: 0
+[INFO] 02:44:47:396 Kernel/(206777:206779): PID: 4 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 02:44:47:398 Kernel/(206777:206779): PID: 3 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 02:44:47:398 Kernel/(206777:206779): Finaliza el proceso 3 - Motivo: SUCCESS
+[INFO] 02:44:47:398 Kernel/(206777:206780): PID: 5 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 02:44:47:399 Kernel/(206777:206779): PID: 4 - Estado Anterior: READY - Estado Actual: EXEC
+[WARNING] 02:44:47:402 Kernel/(206777:206779): parametros[0]: falopa.txt
+[WARNING] 02:44:47:403 Kernel/(206777:206779): parametros[1]: 10
+[WARNING] 02:44:47:407 Kernel/(206777:206779): parametros[0]: falopa.txt
+[WARNING] 02:44:47:407 Kernel/(206777:206779): parametros[1]: 0xabcedfg
+[WARNING] 02:44:47:407 Kernel/(206777:206779): parametros[2]: 10
+[INFO] 02:44:47:410 Kernel/(206777:206779): PID: 4 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 02:44:47:410 Kernel/(206777:206779): PID: 4 - Bloqueado por: IO
+[INFO] 02:44:47:410 Kernel/(206777:206779): PID: 4 - Ejecuta IO: 5
+[INFO] 02:44:47:411 Kernel/(206777:206779): PID: 5 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 02:44:47:412 Kernel/(206777:206779): PID: 5 - Wait: DISCO - Instancias: -1
+[INFO] 02:44:47:412 Kernel/(206777:206779): PID: 5 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 02:44:47:412 Kernel/(206777:206779): PID: 5 - Bloqueado por: DISCO
+[INFO] 02:44:52:413 Kernel/(206777:206808): PID: 4 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 02:44:52:415 Kernel/(206777:206779): PID: 4 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 02:44:52:422 Kernel/(206777:206779): PID: 4 - Estado Anterior: EXEC - Estado Actual: READY
+[INFO] 02:44:52:424 Kernel/(206777:206779): PID: 4 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 02:44:52:436 Kernel/(206777:206779): PID: 4 - Signal: DISCO - Instancias: 0
+[INFO] 02:44:52:437 Kernel/(206777:206779): PID: 5 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 02:44:52:440 Kernel/(206777:206779): PID: 4 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 02:44:52:441 Kernel/(206777:206779): Finaliza el proceso 4 - Motivo: SUCCESS
+[INFO] 02:44:52:441 Kernel/(206777:206780): PID: 6 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 02:44:52:442 Kernel/(206777:206779): PID: 5 - Estado Anterior: READY - Estado Actual: EXEC
+[WARNING] 02:44:52:447 Kernel/(206777:206779): parametros[0]: falopa.txt
+[WARNING] 02:44:52:448 Kernel/(206777:206779): parametros[1]: 10
+[WARNING] 02:44:52:456 Kernel/(206777:206779): parametros[0]: falopa.txt
+[WARNING] 02:44:52:457 Kernel/(206777:206779): parametros[1]: 0xabcedfg
+[WARNING] 02:44:52:457 Kernel/(206777:206779): parametros[2]: 10
+[INFO] 02:44:52:464 Kernel/(206777:206779): PID: 5 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 02:44:52:465 Kernel/(206777:206779): PID: 5 - Bloqueado por: IO
+[INFO] 02:44:52:465 Kernel/(206777:206779): PID: 5 - Ejecuta IO: 5
+[INFO] 02:44:52:465 Kernel/(206777:206779): PID: 6 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 02:44:52:467 Kernel/(206777:206779): PID: 6 - Wait: DISCO - Instancias: -1
+[INFO] 02:44:52:467 Kernel/(206777:206779): PID: 6 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 02:44:52:467 Kernel/(206777:206779): PID: 6 - Bloqueado por: DISCO
+[INFO] 02:44:57:469 Kernel/(206777:206809): PID: 5 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 02:44:57:471 Kernel/(206777:206779): PID: 5 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 02:44:57:479 Kernel/(206777:206779): PID: 5 - Estado Anterior: EXEC - Estado Actual: READY
+[INFO] 02:44:57:481 Kernel/(206777:206779): PID: 5 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 02:44:57:491 Kernel/(206777:206779): PID: 5 - Signal: DISCO - Instancias: 0
+[INFO] 02:44:57:493 Kernel/(206777:206779): PID: 6 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 02:44:57:494 Kernel/(206777:206779): PID: 5 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 02:44:57:494 Kernel/(206777:206779): Finaliza el proceso 5 - Motivo: SUCCESS
+[INFO] 02:44:57:494 Kernel/(206777:206780): PID: 7 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 02:44:57:495 Kernel/(206777:206779): PID: 6 - Estado Anterior: READY - Estado Actual: EXEC
+[WARNING] 02:44:57:498 Kernel/(206777:206779): parametros[0]: falopa.txt
+[WARNING] 02:44:57:498 Kernel/(206777:206779): parametros[1]: 10
+[WARNING] 02:44:57:502 Kernel/(206777:206779): parametros[0]: falopa.txt
+[WARNING] 02:44:57:502 Kernel/(206777:206779): parametros[1]: 0xabcedfg
+[WARNING] 02:44:57:502 Kernel/(206777:206779): parametros[2]: 10
+[INFO] 02:44:57:505 Kernel/(206777:206779): PID: 6 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 02:44:57:506 Kernel/(206777:206779): PID: 6 - Bloqueado por: IO
+[INFO] 02:44:57:506 Kernel/(206777:206779): PID: 6 - Ejecuta IO: 5
+[INFO] 02:44:57:506 Kernel/(206777:206779): PID: 7 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 02:44:57:508 Kernel/(206777:206779): PID: 7 - Wait: DISCO - Instancias: -1
+[INFO] 02:44:57:508 Kernel/(206777:206779): PID: 7 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 02:44:57:508 Kernel/(206777:206779): PID: 7 - Bloqueado por: DISCO
+[INFO] 02:45:02:513 Kernel/(206777:206810): PID: 6 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 02:45:02:513 Kernel/(206777:206779): PID: 6 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 02:45:02:515 Kernel/(206777:206779): PID: 6 - Estado Anterior: EXEC - Estado Actual: READY
+[INFO] 02:45:02:515 Kernel/(206777:206779): PID: 6 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 02:45:02:522 Kernel/(206777:206779): PID: 6 - Signal: DISCO - Instancias: 0
+[INFO] 02:45:02:522 Kernel/(206777:206779): PID: 7 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 02:45:02:523 Kernel/(206777:206779): PID: 6 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 02:45:02:523 Kernel/(206777:206779): Finaliza el proceso 6 - Motivo: SUCCESS
+[INFO] 02:45:02:523 Kernel/(206777:206780): PID: 8 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 02:45:02:524 Kernel/(206777:206779): PID: 7 - Estado Anterior: READY - Estado Actual: EXEC
+[WARNING] 02:45:02:526 Kernel/(206777:206779): parametros[0]: falopa.txt
+[WARNING] 02:45:02:526 Kernel/(206777:206779): parametros[1]: 10
+[WARNING] 02:45:02:531 Kernel/(206777:206779): parametros[0]: falopa.txt
+[WARNING] 02:45:02:531 Kernel/(206777:206779): parametros[1]: 0xabcedfg
+[WARNING] 02:45:02:531 Kernel/(206777:206779): parametros[2]: 10
+[INFO] 02:45:02:534 Kernel/(206777:206779): PID: 7 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 02:45:02:534 Kernel/(206777:206779): PID: 7 - Bloqueado por: IO
+[INFO] 02:45:02:534 Kernel/(206777:206779): PID: 7 - Ejecuta IO: 5
+[INFO] 02:45:02:534 Kernel/(206777:206779): PID: 8 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 02:45:02:536 Kernel/(206777:206779): PID: 8 - Wait: DISCO - Instancias: -1
+[INFO] 02:45:02:536 Kernel/(206777:206779): PID: 8 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 02:45:02:536 Kernel/(206777:206779): PID: 8 - Bloqueado por: DISCO
+[INFO] 02:45:07:536 Kernel/(206777:206811): PID: 7 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 02:45:07:537 Kernel/(206777:206779): PID: 7 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 02:45:07:538 Kernel/(206777:206779): PID: 7 - Estado Anterior: EXEC - Estado Actual: READY
+[INFO] 02:45:07:539 Kernel/(206777:206779): PID: 7 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 02:45:07:545 Kernel/(206777:206779): PID: 7 - Signal: DISCO - Instancias: 0
+[INFO] 02:45:07:546 Kernel/(206777:206779): PID: 8 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 02:45:07:548 Kernel/(206777:206779): PID: 7 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 02:45:07:548 Kernel/(206777:206779): Finaliza el proceso 7 - Motivo: SUCCESS
+[INFO] 02:45:07:549 Kernel/(206777:206779): PID: 8 - Estado Anterior: READY - Estado Actual: EXEC
+[WARNING] 02:45:07:551 Kernel/(206777:206779): parametros[0]: falopa.txt
+[WARNING] 02:45:07:551 Kernel/(206777:206779): parametros[1]: 10
+[WARNING] 02:45:07:555 Kernel/(206777:206779): parametros[0]: falopa.txt
+[WARNING] 02:45:07:555 Kernel/(206777:206779): parametros[1]: 0xabcedfg
+[WARNING] 02:45:07:556 Kernel/(206777:206779): parametros[2]: 10
+[INFO] 02:45:07:559 Kernel/(206777:206779): PID: 8 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 02:45:07:559 Kernel/(206777:206779): PID: 8 - Bloqueado por: IO
+[INFO] 02:45:07:560 Kernel/(206777:206779): PID: 8 - Ejecuta IO: 5
+[INFO] 02:45:12:560 Kernel/(206777:206813): PID: 8 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 02:45:12:561 Kernel/(206777:206779): PID: 8 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 02:45:12:562 Kernel/(206777:206779): PID: 8 - Estado Anterior: EXEC - Estado Actual: READY
+[INFO] 02:45:12:563 Kernel/(206777:206779): PID: 8 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 02:45:12:569 Kernel/(206777:206779): PID: 8 - Signal: DISCO - Instancias: 1
+[INFO] 02:45:12:571 Kernel/(206777:206779): PID: 8 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 02:45:12:572 Kernel/(206777:206779): Finaliza el proceso 8 - Motivo: SUCCESS
+[WARNING] 02:48:51:717 Kernel/(206777:206921): Se conecto una consola
+[INFO] 02:48:51:719 Kernel/(206777:206921): Se crea el proceso 9 en NEW
+[INFO] 02:48:51:731 Kernel/(206777:206780): PID: 9 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 02:48:51:731 Kernel/(206777:206779): PID: 9 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 02:48:51:736 Kernel/(206777:206779): PID: 9 - Wait: DISCO - Instancias: 0
+[WARNING] 02:48:51:750 Kernel/(206777:206779): parametros[0]: falopa.txt
+[WARNING] 02:48:51:750 Kernel/(206777:206779): parametros[1]: 10
+[WARNING] 02:48:51:758 Kernel/(206777:206779): parametros[0]: falopa.txt
+[WARNING] 02:48:51:760 Kernel/(206777:206779): parametros[1]: 0xabcedfg
+[WARNING] 02:48:51:762 Kernel/(206777:206779): parametros[2]: 10
+[INFO] 02:48:51:770 Kernel/(206777:206779): PID: 9 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 02:48:51:771 Kernel/(206777:206779): PID: 9 - Bloqueado por: IO
+[INFO] 02:48:51:771 Kernel/(206777:206779): PID: 9 - Ejecuta IO: 5
+[WARNING] 02:48:52:312 Kernel/(206777:206925): Se conecto una consola
+[INFO] 02:48:52:312 Kernel/(206777:206925): Se crea el proceso 10 en NEW
+[INFO] 02:48:52:312 Kernel/(206777:206780): PID: 10 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 02:48:52:313 Kernel/(206777:206779): PID: 10 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 02:48:52:314 Kernel/(206777:206779): PID: 10 - Wait: DISCO - Instancias: -1
+[INFO] 02:48:52:314 Kernel/(206777:206779): PID: 10 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 02:48:52:315 Kernel/(206777:206779): PID: 10 - Bloqueado por: DISCO
+[WARNING] 02:48:52:999 Kernel/(206777:206928): Se conecto una consola
+[INFO] 02:48:52:999 Kernel/(206777:206928): Se crea el proceso 11 en NEW
+[WARNING] 02:48:53:619 Kernel/(206777:206931): Se conecto una consola
+[INFO] 02:48:53:621 Kernel/(206777:206931): Se crea el proceso 12 en NEW
+[WARNING] 02:48:54:663 Kernel/(206777:206934): Se conecto una consola
+[INFO] 02:48:54:663 Kernel/(206777:206934): Se crea el proceso 13 en NEW
+[WARNING] 02:48:55:344 Kernel/(206777:206937): Se conecto una consola
+[INFO] 02:48:55:344 Kernel/(206777:206937): Se crea el proceso 14 en NEW
+[WARNING] 02:48:55:937 Kernel/(206777:206940): Se conecto una consola
+[INFO] 02:48:55:938 Kernel/(206777:206940): Se crea el proceso 15 en NEW
+[WARNING] 02:48:56:599 Kernel/(206777:206943): Se conecto una consola
+[INFO] 02:48:56:599 Kernel/(206777:206943): Se crea el proceso 16 en NEW
+[INFO] 02:48:56:774 Kernel/(206777:206922): PID: 9 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 02:48:56:775 Kernel/(206777:206779): PID: 9 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 02:48:56:776 Kernel/(206777:206779): PID: 9 - Estado Anterior: EXEC - Estado Actual: READY
+[INFO] 02:48:56:776 Kernel/(206777:206779): PID: 9 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 02:48:56:782 Kernel/(206777:206779): PID: 9 - Signal: DISCO - Instancias: 0
+[INFO] 02:48:56:782 Kernel/(206777:206779): PID: 10 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 02:48:56:784 Kernel/(206777:206779): PID: 9 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 02:48:56:784 Kernel/(206777:206779): Finaliza el proceso 9 - Motivo: SUCCESS
+[INFO] 02:48:56:784 Kernel/(206777:206780): PID: 11 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 02:48:56:784 Kernel/(206777:206779): PID: 10 - Estado Anterior: READY - Estado Actual: EXEC
+[WARNING] 02:48:56:789 Kernel/(206777:206779): parametros[0]: falopa.txt
+[WARNING] 02:48:56:789 Kernel/(206777:206779): parametros[1]: 10
+[WARNING] 02:48:56:797 Kernel/(206777:206779): parametros[0]: falopa.txt
+[WARNING] 02:48:56:797 Kernel/(206777:206779): parametros[1]: 0xabcedfg
+[WARNING] 02:48:56:797 Kernel/(206777:206779): parametros[2]: 10
+[INFO] 02:48:56:800 Kernel/(206777:206779): PID: 10 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 02:48:56:800 Kernel/(206777:206779): PID: 10 - Bloqueado por: IO
+[INFO] 02:48:56:801 Kernel/(206777:206779): PID: 10 - Ejecuta IO: 5
+[INFO] 02:48:56:801 Kernel/(206777:206779): PID: 11 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 02:48:56:802 Kernel/(206777:206779): PID: 11 - Wait: DISCO - Instancias: -1
+[INFO] 02:48:56:807 Kernel/(206777:206779): PID: 11 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 02:48:56:807 Kernel/(206777:206779): PID: 11 - Bloqueado por: DISCO
+[INFO] 02:49:01:807 Kernel/(206777:206944): PID: 10 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 02:49:01:808 Kernel/(206777:206779): PID: 10 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 02:49:01:809 Kernel/(206777:206779): PID: 10 - Estado Anterior: EXEC - Estado Actual: READY
+[INFO] 02:49:01:809 Kernel/(206777:206779): PID: 10 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 02:49:01:816 Kernel/(206777:206779): PID: 10 - Signal: DISCO - Instancias: 0
+[INFO] 02:49:01:816 Kernel/(206777:206779): PID: 11 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 02:49:01:818 Kernel/(206777:206779): PID: 10 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 02:49:01:818 Kernel/(206777:206779): Finaliza el proceso 10 - Motivo: SUCCESS
+[INFO] 02:49:01:819 Kernel/(206777:206780): PID: 12 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 02:49:01:819 Kernel/(206777:206779): PID: 11 - Estado Anterior: READY - Estado Actual: EXEC
+[WARNING] 02:49:01:822 Kernel/(206777:206779): parametros[0]: falopa.txt
+[WARNING] 02:49:01:822 Kernel/(206777:206779): parametros[1]: 10
+[WARNING] 02:49:01:827 Kernel/(206777:206779): parametros[0]: falopa.txt
+[WARNING] 02:49:01:828 Kernel/(206777:206779): parametros[1]: 0xabcedfg
+[WARNING] 02:49:01:828 Kernel/(206777:206779): parametros[2]: 10
+[INFO] 02:49:01:831 Kernel/(206777:206779): PID: 11 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 02:49:01:831 Kernel/(206777:206779): PID: 11 - Bloqueado por: IO
+[INFO] 02:49:01:832 Kernel/(206777:206779): PID: 11 - Ejecuta IO: 5
+[INFO] 02:49:01:832 Kernel/(206777:206779): PID: 12 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 02:49:01:833 Kernel/(206777:206779): PID: 12 - Wait: DISCO - Instancias: -1
+[INFO] 02:49:01:833 Kernel/(206777:206779): PID: 12 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 02:49:01:833 Kernel/(206777:206779): PID: 12 - Bloqueado por: DISCO
+[INFO] 02:49:06:834 Kernel/(206777:206945): PID: 11 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 02:49:06:836 Kernel/(206777:206779): PID: 11 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 02:49:06:843 Kernel/(206777:206779): PID: 11 - Estado Anterior: EXEC - Estado Actual: READY
+[INFO] 02:49:06:845 Kernel/(206777:206779): PID: 11 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 02:49:06:860 Kernel/(206777:206779): PID: 11 - Signal: DISCO - Instancias: 0
+[INFO] 02:49:06:861 Kernel/(206777:206779): PID: 12 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 02:49:06:862 Kernel/(206777:206779): PID: 11 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 02:49:06:862 Kernel/(206777:206779): Finaliza el proceso 11 - Motivo: SUCCESS
+[INFO] 02:49:06:863 Kernel/(206777:206780): PID: 13 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 02:49:06:863 Kernel/(206777:206779): PID: 12 - Estado Anterior: READY - Estado Actual: EXEC
+[WARNING] 02:49:06:866 Kernel/(206777:206779): parametros[0]: falopa.txt
+[WARNING] 02:49:06:866 Kernel/(206777:206779): parametros[1]: 10
+[WARNING] 02:49:06:869 Kernel/(206777:206779): parametros[0]: falopa.txt
+[WARNING] 02:49:06:869 Kernel/(206777:206779): parametros[1]: 0xabcedfg
+[WARNING] 02:49:06:870 Kernel/(206777:206779): parametros[2]: 10
+[INFO] 02:49:06:877 Kernel/(206777:206779): PID: 12 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 02:49:06:879 Kernel/(206777:206779): PID: 12 - Bloqueado por: IO
+[INFO] 02:49:06:880 Kernel/(206777:206779): PID: 12 - Ejecuta IO: 5
+[INFO] 02:49:06:880 Kernel/(206777:206779): PID: 13 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 02:49:06:882 Kernel/(206777:206779): PID: 13 - Wait: DISCO - Instancias: -1
+[INFO] 02:49:06:882 Kernel/(206777:206779): PID: 13 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 02:49:06:882 Kernel/(206777:206779): PID: 13 - Bloqueado por: DISCO
+[INFO] 02:49:11:883 Kernel/(206777:206946): PID: 12 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 02:49:11:884 Kernel/(206777:206779): PID: 12 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 02:49:11:887 Kernel/(206777:206779): PID: 12 - Estado Anterior: EXEC - Estado Actual: READY
+[INFO] 02:49:11:888 Kernel/(206777:206779): PID: 12 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 02:49:11:896 Kernel/(206777:206779): PID: 12 - Signal: DISCO - Instancias: 0
+[INFO] 02:49:11:896 Kernel/(206777:206779): PID: 13 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 02:49:11:897 Kernel/(206777:206779): PID: 12 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 02:49:11:897 Kernel/(206777:206779): Finaliza el proceso 12 - Motivo: SUCCESS
+[INFO] 02:49:11:898 Kernel/(206777:206780): PID: 14 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 02:49:11:898 Kernel/(206777:206779): PID: 13 - Estado Anterior: READY - Estado Actual: EXEC
+[WARNING] 02:49:11:902 Kernel/(206777:206779): parametros[0]: falopa.txt
+[WARNING] 02:49:11:902 Kernel/(206777:206779): parametros[1]: 10
+[WARNING] 02:49:11:908 Kernel/(206777:206779): parametros[0]: falopa.txt
+[WARNING] 02:49:11:908 Kernel/(206777:206779): parametros[1]: 0xabcedfg
+[WARNING] 02:49:11:908 Kernel/(206777:206779): parametros[2]: 10
+[INFO] 02:49:11:911 Kernel/(206777:206779): PID: 13 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 02:49:11:911 Kernel/(206777:206779): PID: 13 - Bloqueado por: IO
+[INFO] 02:49:11:911 Kernel/(206777:206779): PID: 13 - Ejecuta IO: 5
+[INFO] 02:49:11:911 Kernel/(206777:206779): PID: 14 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 02:49:11:912 Kernel/(206777:206779): PID: 14 - Wait: DISCO - Instancias: -1
+[INFO] 02:49:11:913 Kernel/(206777:206779): PID: 14 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 02:49:11:913 Kernel/(206777:206779): PID: 14 - Bloqueado por: DISCO
+[INFO] 02:49:16:913 Kernel/(206777:206947): PID: 13 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 02:49:16:914 Kernel/(206777:206779): PID: 13 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 02:49:16:915 Kernel/(206777:206779): PID: 13 - Estado Anterior: EXEC - Estado Actual: READY
+[INFO] 02:49:16:916 Kernel/(206777:206779): PID: 13 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 02:49:16:922 Kernel/(206777:206779): PID: 13 - Signal: DISCO - Instancias: 0
+[INFO] 02:49:16:923 Kernel/(206777:206779): PID: 14 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 02:49:16:924 Kernel/(206777:206779): PID: 13 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 02:49:16:925 Kernel/(206777:206779): Finaliza el proceso 13 - Motivo: SUCCESS
+[INFO] 02:49:16:925 Kernel/(206777:206780): PID: 15 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 02:49:16:925 Kernel/(206777:206779): PID: 14 - Estado Anterior: READY - Estado Actual: EXEC
+[WARNING] 02:49:16:928 Kernel/(206777:206779): parametros[0]: falopa.txt
+[WARNING] 02:49:16:929 Kernel/(206777:206779): parametros[1]: 10
+[WARNING] 02:49:16:934 Kernel/(206777:206779): parametros[0]: falopa.txt
+[WARNING] 02:49:16:934 Kernel/(206777:206779): parametros[1]: 0xabcedfg
+[WARNING] 02:49:16:934 Kernel/(206777:206779): parametros[2]: 10
+[INFO] 02:49:16:937 Kernel/(206777:206779): PID: 14 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 02:49:16:937 Kernel/(206777:206779): PID: 14 - Bloqueado por: IO
+[INFO] 02:49:16:937 Kernel/(206777:206779): PID: 14 - Ejecuta IO: 5
+[INFO] 02:49:16:938 Kernel/(206777:206779): PID: 15 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 02:49:16:939 Kernel/(206777:206779): PID: 15 - Wait: DISCO - Instancias: -1
+[INFO] 02:49:16:939 Kernel/(206777:206779): PID: 15 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 02:49:16:939 Kernel/(206777:206779): PID: 15 - Bloqueado por: DISCO
+[INFO] 02:49:21:941 Kernel/(206777:206948): PID: 14 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 02:49:21:942 Kernel/(206777:206779): PID: 14 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 02:49:21:943 Kernel/(206777:206779): PID: 14 - Estado Anterior: EXEC - Estado Actual: READY
+[INFO] 02:49:21:944 Kernel/(206777:206779): PID: 14 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 02:49:21:951 Kernel/(206777:206779): PID: 14 - Signal: DISCO - Instancias: 0
+[INFO] 02:49:21:952 Kernel/(206777:206779): PID: 15 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 02:49:21:954 Kernel/(206777:206779): PID: 14 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 02:49:21:954 Kernel/(206777:206779): Finaliza el proceso 14 - Motivo: SUCCESS
+[INFO] 02:49:21:954 Kernel/(206777:206780): PID: 16 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 02:49:21:955 Kernel/(206777:206779): PID: 15 - Estado Anterior: READY - Estado Actual: EXEC
+[WARNING] 02:49:21:957 Kernel/(206777:206779): parametros[0]: falopa.txt
+[WARNING] 02:49:21:958 Kernel/(206777:206779): parametros[1]: 10
+[WARNING] 02:49:21:961 Kernel/(206777:206779): parametros[0]: falopa.txt
+[WARNING] 02:49:21:961 Kernel/(206777:206779): parametros[1]: 0xabcedfg
+[WARNING] 02:49:21:962 Kernel/(206777:206779): parametros[2]: 10
+[INFO] 02:49:21:964 Kernel/(206777:206779): PID: 15 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 02:49:21:964 Kernel/(206777:206779): PID: 15 - Bloqueado por: IO
+[INFO] 02:49:21:965 Kernel/(206777:206779): PID: 15 - Ejecuta IO: 5
+[INFO] 02:49:21:965 Kernel/(206777:206779): PID: 16 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 02:49:21:966 Kernel/(206777:206779): PID: 16 - Wait: DISCO - Instancias: -1
+[INFO] 02:49:21:966 Kernel/(206777:206779): PID: 16 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 02:49:21:967 Kernel/(206777:206779): PID: 16 - Bloqueado por: DISCO
+[INFO] 02:49:26:967 Kernel/(206777:206949): PID: 15 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 02:49:26:969 Kernel/(206777:206779): PID: 15 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 02:49:26:970 Kernel/(206777:206779): PID: 15 - Estado Anterior: EXEC - Estado Actual: READY
+[INFO] 02:49:26:970 Kernel/(206777:206779): PID: 15 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 02:49:26:977 Kernel/(206777:206779): PID: 15 - Signal: DISCO - Instancias: 0
+[INFO] 02:49:26:977 Kernel/(206777:206779): PID: 16 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 02:49:26:979 Kernel/(206777:206779): PID: 15 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 02:49:26:980 Kernel/(206777:206779): Finaliza el proceso 15 - Motivo: SUCCESS
+[INFO] 02:49:26:980 Kernel/(206777:206779): PID: 16 - Estado Anterior: READY - Estado Actual: EXEC
+[WARNING] 02:49:26:983 Kernel/(206777:206779): parametros[0]: falopa.txt
+[WARNING] 02:49:26:983 Kernel/(206777:206779): parametros[1]: 10
+[WARNING] 02:49:26:987 Kernel/(206777:206779): parametros[0]: falopa.txt
+[WARNING] 02:49:26:987 Kernel/(206777:206779): parametros[1]: 0xabcedfg
+[WARNING] 02:49:26:987 Kernel/(206777:206779): parametros[2]: 10
+[INFO] 02:49:26:990 Kernel/(206777:206779): PID: 16 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 02:49:26:990 Kernel/(206777:206779): PID: 16 - Bloqueado por: IO
+[INFO] 02:49:26:990 Kernel/(206777:206779): PID: 16 - Ejecuta IO: 5
+[INFO] 02:49:31:990 Kernel/(206777:206950): PID: 16 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 02:49:31:991 Kernel/(206777:206779): PID: 16 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 02:49:31:992 Kernel/(206777:206779): PID: 16 - Estado Anterior: EXEC - Estado Actual: READY
+[INFO] 02:49:31:993 Kernel/(206777:206779): PID: 16 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 02:49:31:999 Kernel/(206777:206779): PID: 16 - Signal: DISCO - Instancias: 1
+[INFO] 02:49:32:001 Kernel/(206777:206779): PID: 16 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 02:49:32:001 Kernel/(206777:206779): Finaliza el proceso 16 - Motivo: SUCCESS
+[WARNING] 02:54:09:777 Kernel/(207131:207131): Kernel listo para recibir a Consolas
+[WARNING] 02:54:31:467 Kernel/(207131:207139): Se conecto una consola
+[INFO] 02:54:31:475 Kernel/(207131:207139): Se crea el proceso 1 en NEW
+[INFO] 02:54:31:479 Kernel/(207131:207134): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 02:54:31:480 Kernel/(207131:207133): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 02:54:31:519 Kernel/(207131:207133): PID: 1 - Wait: DISCO - Instancias: 0
+[WARNING] 02:54:31:523 Kernel/(207131:207133): parametros[0]: falopa.txt
+[WARNING] 02:54:31:523 Kernel/(207131:207133): parametros[1]: 10
+[WARNING] 02:54:31:527 Kernel/(207131:207133): parametros[0]: falopa.txt
+[WARNING] 02:54:31:528 Kernel/(207131:207133): parametros[1]: 0xabcedfg
+[WARNING] 02:54:31:528 Kernel/(207131:207133): parametros[2]: 10
+[INFO] 02:54:31:531 Kernel/(207131:207133): PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 02:54:31:532 Kernel/(207131:207133): PID: 1 - Bloqueado por: IO
+[INFO] 02:54:31:532 Kernel/(207131:207133): PID: 1 - Ejecuta IO: 5
+[WARNING] 02:54:32:373 Kernel/(207131:207143): Se conecto una consola
+[INFO] 02:54:32:374 Kernel/(207131:207143): Se crea el proceso 2 en NEW
+[INFO] 02:54:32:375 Kernel/(207131:207134): PID: 2 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 02:54:32:375 Kernel/(207131:207133): PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 02:54:32:377 Kernel/(207131:207133): PID: 2 - Wait: DISCO - Instancias: -1
+[INFO] 02:54:32:377 Kernel/(207131:207133): PID: 2 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 02:54:32:377 Kernel/(207131:207133): PID: 2 - Bloqueado por: DISCO
+[WARNING] 02:54:32:984 Kernel/(207131:207146): Se conecto una consola
+[INFO] 02:54:32:984 Kernel/(207131:207146): Se crea el proceso 3 en NEW
+[WARNING] 02:54:33:933 Kernel/(207131:207149): Se conecto una consola
+[INFO] 02:54:33:934 Kernel/(207131:207149): Se crea el proceso 4 en NEW
+[WARNING] 02:54:34:693 Kernel/(207131:207152): Se conecto una consola
+[INFO] 02:54:34:693 Kernel/(207131:207152): Se crea el proceso 5 en NEW
+[WARNING] 02:54:35:305 Kernel/(207131:207155): Se conecto una consola
+[INFO] 02:54:35:305 Kernel/(207131:207155): Se crea el proceso 6 en NEW
+[WARNING] 02:54:35:935 Kernel/(207131:207158): Se conecto una consola
+[INFO] 02:54:35:936 Kernel/(207131:207158): Se crea el proceso 7 en NEW
+[INFO] 02:54:36:535 Kernel/(207131:207140): PID: 1 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 02:54:36:536 Kernel/(207131:207133): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 02:54:36:538 Kernel/(207131:207133): PID: 1 - Estado Anterior: EXEC - Estado Actual: READY
+[INFO] 02:54:36:539 Kernel/(207131:207133): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 02:54:36:552 Kernel/(207131:207133): PID: 1 - Signal: DISCO - Instancias: 0
+[INFO] 02:54:36:552 Kernel/(207131:207133): PID: 2 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 02:54:36:555 Kernel/(207131:207133): PID: 1 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 02:54:36:556 Kernel/(207131:207133): Finaliza el proceso 1 - Motivo: SUCCESS
+[INFO] 02:54:36:557 Kernel/(207131:207134): PID: 3 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 02:54:36:557 Kernel/(207131:207133): PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[WARNING] 02:54:36:560 Kernel/(207131:207133): parametros[0]: falopa.txt
+[WARNING] 02:54:36:561 Kernel/(207131:207133): parametros[1]: 10
+[WARNING] 02:54:36:566 Kernel/(207131:207133): parametros[0]: falopa.txt
+[WARNING] 02:54:36:567 Kernel/(207131:207133): parametros[1]: 0xabcedfg
+[WARNING] 02:54:36:567 Kernel/(207131:207133): parametros[2]: 10
+[INFO] 02:54:36:570 Kernel/(207131:207133): PID: 2 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 02:54:36:571 Kernel/(207131:207133): PID: 2 - Bloqueado por: IO
+[INFO] 02:54:36:571 Kernel/(207131:207133): PID: 2 - Ejecuta IO: 5
+[INFO] 02:54:36:573 Kernel/(207131:207133): PID: 3 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 02:54:36:581 Kernel/(207131:207133): PID: 3 - Wait: DISCO - Instancias: -1
+[INFO] 02:54:36:581 Kernel/(207131:207133): PID: 3 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 02:54:36:581 Kernel/(207131:207133): PID: 3 - Bloqueado por: DISCO
+[WARNING] 02:54:36:582 Kernel/(207131:207162): Se conecto una consola
+[INFO] 02:54:36:583 Kernel/(207131:207162): Se crea el proceso 8 en NEW
+[INFO] 02:54:41:582 Kernel/(207131:207161): PID: 2 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 02:54:41:583 Kernel/(207131:207133): PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 02:54:41:584 Kernel/(207131:207133): PID: 2 - Estado Anterior: EXEC - Estado Actual: READY
+[INFO] 02:54:41:586 Kernel/(207131:207133): PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 02:54:41:592 Kernel/(207131:207133): PID: 2 - Signal: DISCO - Instancias: 0
+[INFO] 02:54:41:592 Kernel/(207131:207133): PID: 3 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 02:54:41:594 Kernel/(207131:207133): PID: 2 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 02:54:41:594 Kernel/(207131:207133): Finaliza el proceso 2 - Motivo: SUCCESS
+[INFO] 02:54:41:594 Kernel/(207131:207134): PID: 4 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 02:54:41:595 Kernel/(207131:207133): PID: 3 - Estado Anterior: READY - Estado Actual: EXEC
+[WARNING] 02:54:41:599 Kernel/(207131:207133): parametros[0]: falopa.txt
+[WARNING] 02:54:41:600 Kernel/(207131:207133): parametros[1]: 10
+[WARNING] 02:54:41:605 Kernel/(207131:207133): parametros[0]: falopa.txt
+[WARNING] 02:54:41:605 Kernel/(207131:207133): parametros[1]: 0xabcedfg
+[WARNING] 02:54:41:605 Kernel/(207131:207133): parametros[2]: 10
+[INFO] 02:54:41:608 Kernel/(207131:207133): PID: 3 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 02:54:41:609 Kernel/(207131:207133): PID: 3 - Bloqueado por: IO
+[INFO] 02:54:41:609 Kernel/(207131:207133): PID: 3 - Ejecuta IO: 5
+[INFO] 02:54:41:609 Kernel/(207131:207133): PID: 4 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 02:54:41:610 Kernel/(207131:207133): PID: 4 - Wait: DISCO - Instancias: -1
+[INFO] 02:54:41:610 Kernel/(207131:207133): PID: 4 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 02:54:41:611 Kernel/(207131:207133): PID: 4 - Bloqueado por: DISCO
+[INFO] 02:54:46:611 Kernel/(207131:207163): PID: 3 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 02:54:46:613 Kernel/(207131:207133): PID: 3 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 02:54:46:618 Kernel/(207131:207133): PID: 3 - Estado Anterior: EXEC - Estado Actual: READY
+[INFO] 02:54:46:618 Kernel/(207131:207133): PID: 3 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 02:54:46:625 Kernel/(207131:207133): PID: 3 - Signal: DISCO - Instancias: 0
+[INFO] 02:54:46:625 Kernel/(207131:207133): PID: 4 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 02:54:46:627 Kernel/(207131:207133): PID: 3 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 02:54:46:627 Kernel/(207131:207133): Finaliza el proceso 3 - Motivo: SUCCESS
+[INFO] 02:54:46:627 Kernel/(207131:207134): PID: 5 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 02:54:46:628 Kernel/(207131:207133): PID: 4 - Estado Anterior: READY - Estado Actual: EXEC
+[WARNING] 02:54:46:631 Kernel/(207131:207133): parametros[0]: falopa.txt
+[WARNING] 02:54:46:631 Kernel/(207131:207133): parametros[1]: 10
+[WARNING] 02:54:46:635 Kernel/(207131:207133): parametros[0]: falopa.txt
+[WARNING] 02:54:46:635 Kernel/(207131:207133): parametros[1]: 0xabcedfg
+[WARNING] 02:54:46:636 Kernel/(207131:207133): parametros[2]: 10
+[INFO] 02:54:46:639 Kernel/(207131:207133): PID: 4 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 02:54:46:639 Kernel/(207131:207133): PID: 4 - Bloqueado por: IO
+[INFO] 02:54:46:639 Kernel/(207131:207133): PID: 4 - Ejecuta IO: 5
+[INFO] 02:54:46:639 Kernel/(207131:207133): PID: 5 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 02:54:46:640 Kernel/(207131:207133): PID: 5 - Wait: DISCO - Instancias: -1
+[INFO] 02:54:46:641 Kernel/(207131:207133): PID: 5 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 02:54:46:641 Kernel/(207131:207133): PID: 5 - Bloqueado por: DISCO
+[INFO] 02:54:51:641 Kernel/(207131:207164): PID: 4 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 02:54:51:642 Kernel/(207131:207133): PID: 4 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 02:54:51:643 Kernel/(207131:207133): PID: 4 - Estado Anterior: EXEC - Estado Actual: READY
+[INFO] 02:54:51:643 Kernel/(207131:207133): PID: 4 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 02:54:51:649 Kernel/(207131:207133): PID: 4 - Signal: DISCO - Instancias: 0
+[INFO] 02:54:51:650 Kernel/(207131:207133): PID: 5 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 02:54:51:651 Kernel/(207131:207133): PID: 4 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 02:54:51:651 Kernel/(207131:207133): Finaliza el proceso 4 - Motivo: SUCCESS
+[INFO] 02:54:51:651 Kernel/(207131:207134): PID: 6 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 02:54:51:652 Kernel/(207131:207133): PID: 5 - Estado Anterior: READY - Estado Actual: EXEC
+[WARNING] 02:54:51:653 Kernel/(207131:207133): parametros[0]: falopa.txt
+[WARNING] 02:54:51:654 Kernel/(207131:207133): parametros[1]: 10
+[WARNING] 02:54:51:658 Kernel/(207131:207133): parametros[0]: falopa.txt
+[WARNING] 02:54:51:658 Kernel/(207131:207133): parametros[1]: 0xabcedfg
+[WARNING] 02:54:51:658 Kernel/(207131:207133): parametros[2]: 10
+[INFO] 02:54:51:661 Kernel/(207131:207133): PID: 5 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 02:54:51:661 Kernel/(207131:207133): PID: 5 - Bloqueado por: IO
+[INFO] 02:54:51:661 Kernel/(207131:207133): PID: 5 - Ejecuta IO: 5
+[INFO] 02:54:51:662 Kernel/(207131:207133): PID: 6 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 02:54:51:663 Kernel/(207131:207133): PID: 6 - Wait: DISCO - Instancias: -1
+[INFO] 02:54:51:663 Kernel/(207131:207133): PID: 6 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 02:54:51:664 Kernel/(207131:207133): PID: 6 - Bloqueado por: DISCO
+[INFO] 02:54:56:669 Kernel/(207131:207165): PID: 5 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 02:54:56:674 Kernel/(207131:207133): PID: 5 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 02:54:56:678 Kernel/(207131:207133): PID: 5 - Estado Anterior: EXEC - Estado Actual: READY
+[INFO] 02:54:56:678 Kernel/(207131:207133): PID: 5 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 02:54:56:685 Kernel/(207131:207133): PID: 5 - Signal: DISCO - Instancias: 0
+[INFO] 02:54:56:685 Kernel/(207131:207133): PID: 6 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 02:54:56:687 Kernel/(207131:207133): PID: 5 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 02:54:56:687 Kernel/(207131:207133): Finaliza el proceso 5 - Motivo: SUCCESS
+[INFO] 02:54:56:687 Kernel/(207131:207134): PID: 7 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 02:54:56:688 Kernel/(207131:207133): PID: 6 - Estado Anterior: READY - Estado Actual: EXEC
+[WARNING] 02:54:56:694 Kernel/(207131:207133): parametros[0]: falopa.txt
+[WARNING] 02:54:56:694 Kernel/(207131:207133): parametros[1]: 10
+[WARNING] 02:54:56:706 Kernel/(207131:207133): parametros[0]: falopa.txt
+[WARNING] 02:54:56:707 Kernel/(207131:207133): parametros[1]: 0xabcedfg
+[WARNING] 02:54:56:707 Kernel/(207131:207133): parametros[2]: 10
+[INFO] 02:54:56:713 Kernel/(207131:207133): PID: 6 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 02:54:56:713 Kernel/(207131:207133): PID: 6 - Bloqueado por: IO
+[INFO] 02:54:56:713 Kernel/(207131:207133): PID: 6 - Ejecuta IO: 5
+[INFO] 02:54:56:720 Kernel/(207131:207133): PID: 7 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 02:54:56:725 Kernel/(207131:207133): PID: 7 - Wait: DISCO - Instancias: -1
+[INFO] 02:54:56:725 Kernel/(207131:207133): PID: 7 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 02:54:56:726 Kernel/(207131:207133): PID: 7 - Bloqueado por: DISCO
+[INFO] 02:55:01:730 Kernel/(207131:207235): PID: 6 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 02:55:01:730 Kernel/(207131:207133): PID: 6 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 02:55:01:731 Kernel/(207131:207133): PID: 6 - Estado Anterior: EXEC - Estado Actual: READY
+[INFO] 02:55:01:732 Kernel/(207131:207133): PID: 6 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 02:55:01:738 Kernel/(207131:207133): PID: 6 - Signal: DISCO - Instancias: 0
+[INFO] 02:55:01:738 Kernel/(207131:207133): PID: 7 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 02:55:01:739 Kernel/(207131:207133): PID: 6 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 02:55:01:739 Kernel/(207131:207133): Finaliza el proceso 6 - Motivo: SUCCESS
+[INFO] 02:55:01:739 Kernel/(207131:207134): PID: 8 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 02:55:01:740 Kernel/(207131:207133): PID: 7 - Estado Anterior: READY - Estado Actual: EXEC
+[WARNING] 02:55:01:742 Kernel/(207131:207133): parametros[0]: falopa.txt
+[WARNING] 02:55:01:742 Kernel/(207131:207133): parametros[1]: 10
+[WARNING] 02:55:01:746 Kernel/(207131:207133): parametros[0]: falopa.txt
+[WARNING] 02:55:01:747 Kernel/(207131:207133): parametros[1]: 0xabcedfg
+[WARNING] 02:55:01:747 Kernel/(207131:207133): parametros[2]: 10
+[INFO] 02:55:01:749 Kernel/(207131:207133): PID: 7 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 02:55:01:749 Kernel/(207131:207133): PID: 7 - Bloqueado por: IO
+[INFO] 02:55:01:750 Kernel/(207131:207133): PID: 7 - Ejecuta IO: 5
+[INFO] 02:55:01:750 Kernel/(207131:207133): PID: 8 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 02:55:01:751 Kernel/(207131:207133): PID: 8 - Wait: DISCO - Instancias: -1
+[INFO] 02:55:01:751 Kernel/(207131:207133): PID: 8 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 02:55:01:752 Kernel/(207131:207133): PID: 8 - Bloqueado por: DISCO
+[INFO] 02:55:06:752 Kernel/(207131:207236): PID: 7 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 02:55:06:753 Kernel/(207131:207133): PID: 7 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 02:55:06:754 Kernel/(207131:207133): PID: 7 - Estado Anterior: EXEC - Estado Actual: READY
+[INFO] 02:55:06:754 Kernel/(207131:207133): PID: 7 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 02:55:06:761 Kernel/(207131:207133): PID: 7 - Signal: DISCO - Instancias: 0
+[INFO] 02:55:06:761 Kernel/(207131:207133): PID: 8 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 02:55:06:763 Kernel/(207131:207133): PID: 7 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 02:55:06:763 Kernel/(207131:207133): Finaliza el proceso 7 - Motivo: SUCCESS
+[INFO] 02:55:06:763 Kernel/(207131:207133): PID: 8 - Estado Anterior: READY - Estado Actual: EXEC
+[WARNING] 02:55:06:766 Kernel/(207131:207133): parametros[0]: falopa.txt
+[WARNING] 02:55:06:766 Kernel/(207131:207133): parametros[1]: 10
+[WARNING] 02:55:06:770 Kernel/(207131:207133): parametros[0]: falopa.txt
+[WARNING] 02:55:06:770 Kernel/(207131:207133): parametros[1]: 0xabcedfg
+[WARNING] 02:55:06:770 Kernel/(207131:207133): parametros[2]: 10
+[INFO] 02:55:06:773 Kernel/(207131:207133): PID: 8 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 02:55:06:773 Kernel/(207131:207133): PID: 8 - Bloqueado por: IO
+[INFO] 02:55:06:773 Kernel/(207131:207133): PID: 8 - Ejecuta IO: 5
+[INFO] 02:55:11:774 Kernel/(207131:207237): PID: 8 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 02:55:11:774 Kernel/(207131:207133): PID: 8 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 02:55:11:776 Kernel/(207131:207133): PID: 8 - Estado Anterior: EXEC - Estado Actual: READY
+[INFO] 02:55:11:776 Kernel/(207131:207133): PID: 8 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 02:55:11:782 Kernel/(207131:207133): PID: 8 - Signal: DISCO - Instancias: 1
+[INFO] 02:55:11:784 Kernel/(207131:207133): PID: 8 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 02:55:11:785 Kernel/(207131:207133): Finaliza el proceso 8 - Motivo: SUCCESS
+[WARNING] 03:00:06:894 Kernel/(207648:207648): Kernel listo para recibir a Consolas
+[WARNING] 03:00:17:823 Kernel/(207648:207654): Se conecto una consola
+[INFO] 03:00:17:847 Kernel/(207648:207654): Se crea el proceso 1 en NEW
+[INFO] 03:00:17:860 Kernel/(207648:207651): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 03:00:17:866 Kernel/(207648:207650): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:00:17:927 Kernel/(207648:207650): PID: 1 - Wait: DISCO - Instancias: 0
+[WARNING] 03:00:17:932 Kernel/(207648:207650): parametros[0]: falopa.txt
+[WARNING] 03:00:17:932 Kernel/(207648:207650): parametros[1]: 10
+[WARNING] 03:00:17:936 Kernel/(207648:207650): parametros[0]: falopa.txt
+[WARNING] 03:00:17:936 Kernel/(207648:207650): parametros[1]: 0xabcedfg
+[WARNING] 03:00:17:936 Kernel/(207648:207650): parametros[2]: 10
+[INFO] 03:00:17:940 Kernel/(207648:207650): PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 03:00:17:940 Kernel/(207648:207650): PID: 1 - Bloqueado por: IO
+[INFO] 03:00:17:941 Kernel/(207648:207650): PID: 1 - Ejecuta IO: 5
+[WARNING] 03:00:18:578 Kernel/(207648:207658): Se conecto una consola
+[INFO] 03:00:18:578 Kernel/(207648:207658): Se crea el proceso 2 en NEW
+[INFO] 03:00:18:579 Kernel/(207648:207651): PID: 2 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 03:00:18:579 Kernel/(207648:207650): PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:00:18:580 Kernel/(207648:207650): PID: 2 - Wait: DISCO - Instancias: -1
+[INFO] 03:00:18:581 Kernel/(207648:207650): PID: 2 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 03:00:18:581 Kernel/(207648:207650): PID: 2 - Bloqueado por: DISCO
+[WARNING] 03:00:19:179 Kernel/(207648:207661): Se conecto una consola
+[INFO] 03:00:19:179 Kernel/(207648:207661): Se crea el proceso 3 en NEW
+[WARNING] 03:00:19:844 Kernel/(207648:207664): Se conecto una consola
+[INFO] 03:00:19:845 Kernel/(207648:207664): Se crea el proceso 4 en NEW
+[WARNING] 03:00:20:614 Kernel/(207648:207667): Se conecto una consola
+[INFO] 03:00:20:615 Kernel/(207648:207667): Se crea el proceso 5 en NEW
+[WARNING] 03:00:21:230 Kernel/(207648:207670): Se conecto una consola
+[INFO] 03:00:21:230 Kernel/(207648:207670): Se crea el proceso 6 en NEW
+[WARNING] 03:00:21:832 Kernel/(207648:207673): Se conecto una consola
+[INFO] 03:00:21:833 Kernel/(207648:207673): Se crea el proceso 7 en NEW
+[WARNING] 03:00:22:450 Kernel/(207648:207676): Se conecto una consola
+[INFO] 03:00:22:450 Kernel/(207648:207676): Se crea el proceso 8 en NEW
+[INFO] 03:00:22:947 Kernel/(207648:207655): PID: 1 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 03:00:22:948 Kernel/(207648:207650): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:00:22:951 Kernel/(207648:207650): PID: 1 - Estado Anterior: EXEC - Estado Actual: READY
+[INFO] 03:00:22:951 Kernel/(207648:207650): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:00:22:965 Kernel/(207648:207650): PID: 1 - Signal: DISCO - Instancias: 0
+[INFO] 03:00:22:966 Kernel/(207648:207650): PID: 2 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 03:00:22:968 Kernel/(207648:207650): PID: 1 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 03:00:22:969 Kernel/(207648:207650): Finaliza el proceso 1 - Motivo: SUCCESS
+[INFO] 03:00:22:969 Kernel/(207648:207651): PID: 3 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 03:00:22:970 Kernel/(207648:207650): PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[WARNING] 03:00:22:973 Kernel/(207648:207650): parametros[0]: falopa.txt
+[WARNING] 03:00:22:973 Kernel/(207648:207650): parametros[1]: 10
+[WARNING] 03:00:22:976 Kernel/(207648:207650): parametros[0]: falopa.txt
+[WARNING] 03:00:22:977 Kernel/(207648:207650): parametros[1]: 0xabcedfg
+[WARNING] 03:00:22:977 Kernel/(207648:207650): parametros[2]: 10
+[INFO] 03:00:22:983 Kernel/(207648:207650): PID: 2 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 03:00:22:984 Kernel/(207648:207650): PID: 2 - Bloqueado por: IO
+[INFO] 03:00:22:984 Kernel/(207648:207650): PID: 2 - Ejecuta IO: 5
+[INFO] 03:00:22:986 Kernel/(207648:207650): PID: 3 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:00:22:987 Kernel/(207648:207650): PID: 3 - Wait: DISCO - Instancias: -1
+[INFO] 03:00:22:987 Kernel/(207648:207650): PID: 3 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 03:00:22:988 Kernel/(207648:207650): PID: 3 - Bloqueado por: DISCO
+[INFO] 03:00:27:988 Kernel/(207648:207677): PID: 2 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 03:00:27:991 Kernel/(207648:207650): PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:00:27:997 Kernel/(207648:207650): PID: 2 - Estado Anterior: EXEC - Estado Actual: READY
+[INFO] 03:00:27:998 Kernel/(207648:207650): PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:00:28:008 Kernel/(207648:207650): PID: 2 - Signal: DISCO - Instancias: 0
+[INFO] 03:00:28:009 Kernel/(207648:207650): PID: 3 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 03:00:28:011 Kernel/(207648:207650): PID: 2 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 03:00:28:011 Kernel/(207648:207650): Finaliza el proceso 2 - Motivo: SUCCESS
+[INFO] 03:00:28:012 Kernel/(207648:207651): PID: 4 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 03:00:28:012 Kernel/(207648:207650): PID: 3 - Estado Anterior: READY - Estado Actual: EXEC
+[WARNING] 03:00:28:016 Kernel/(207648:207650): parametros[0]: falopa.txt
+[WARNING] 03:00:28:016 Kernel/(207648:207650): parametros[1]: 10
+[WARNING] 03:00:28:019 Kernel/(207648:207650): parametros[0]: falopa.txt
+[WARNING] 03:00:28:020 Kernel/(207648:207650): parametros[1]: 0xabcedfg
+[WARNING] 03:00:28:020 Kernel/(207648:207650): parametros[2]: 10
+[INFO] 03:00:28:024 Kernel/(207648:207650): PID: 3 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 03:00:28:024 Kernel/(207648:207650): PID: 3 - Bloqueado por: IO
+[INFO] 03:00:28:024 Kernel/(207648:207650): PID: 3 - Ejecuta IO: 5
+[INFO] 03:00:28:025 Kernel/(207648:207650): PID: 4 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:00:28:026 Kernel/(207648:207650): PID: 4 - Wait: DISCO - Instancias: -1
+[INFO] 03:00:28:026 Kernel/(207648:207650): PID: 4 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 03:00:28:026 Kernel/(207648:207650): PID: 4 - Bloqueado por: DISCO
+[INFO] 03:00:33:027 Kernel/(207648:207678): PID: 3 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 03:00:33:029 Kernel/(207648:207650): PID: 3 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:00:33:033 Kernel/(207648:207650): PID: 3 - Estado Anterior: EXEC - Estado Actual: READY
+[INFO] 03:00:33:033 Kernel/(207648:207650): PID: 3 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:00:33:041 Kernel/(207648:207650): PID: 3 - Signal: DISCO - Instancias: 0
+[INFO] 03:00:33:041 Kernel/(207648:207650): PID: 4 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 03:00:33:042 Kernel/(207648:207650): PID: 3 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 03:00:33:042 Kernel/(207648:207650): Finaliza el proceso 3 - Motivo: SUCCESS
+[INFO] 03:00:33:042 Kernel/(207648:207651): PID: 5 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 03:00:33:043 Kernel/(207648:207650): PID: 4 - Estado Anterior: READY - Estado Actual: EXEC
+[WARNING] 03:00:33:046 Kernel/(207648:207650): parametros[0]: falopa.txt
+[WARNING] 03:00:33:047 Kernel/(207648:207650): parametros[1]: 10
+[WARNING] 03:00:33:051 Kernel/(207648:207650): parametros[0]: falopa.txt
+[WARNING] 03:00:33:051 Kernel/(207648:207650): parametros[1]: 0xabcedfg
+[WARNING] 03:00:33:052 Kernel/(207648:207650): parametros[2]: 10
+[INFO] 03:00:33:054 Kernel/(207648:207650): PID: 4 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 03:00:33:055 Kernel/(207648:207650): PID: 4 - Bloqueado por: IO
+[INFO] 03:00:33:055 Kernel/(207648:207650): PID: 4 - Ejecuta IO: 5
+[INFO] 03:00:33:055 Kernel/(207648:207650): PID: 5 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:00:33:056 Kernel/(207648:207650): PID: 5 - Wait: DISCO - Instancias: -1
+[INFO] 03:00:33:057 Kernel/(207648:207650): PID: 5 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 03:00:33:057 Kernel/(207648:207650): PID: 5 - Bloqueado por: DISCO
+[INFO] 03:00:38:058 Kernel/(207648:207679): PID: 4 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 03:00:38:061 Kernel/(207648:207650): PID: 4 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:00:38:067 Kernel/(207648:207650): PID: 4 - Estado Anterior: EXEC - Estado Actual: READY
+[INFO] 03:00:38:069 Kernel/(207648:207650): PID: 4 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:00:38:082 Kernel/(207648:207650): PID: 4 - Signal: DISCO - Instancias: 0
+[INFO] 03:00:38:082 Kernel/(207648:207650): PID: 5 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 03:00:38:084 Kernel/(207648:207650): PID: 4 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 03:00:38:084 Kernel/(207648:207650): Finaliza el proceso 4 - Motivo: SUCCESS
+[INFO] 03:00:38:084 Kernel/(207648:207651): PID: 6 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 03:00:38:085 Kernel/(207648:207650): PID: 5 - Estado Anterior: READY - Estado Actual: EXEC
+[WARNING] 03:00:38:087 Kernel/(207648:207650): parametros[0]: falopa.txt
+[WARNING] 03:00:38:088 Kernel/(207648:207650): parametros[1]: 10
+[WARNING] 03:00:38:091 Kernel/(207648:207650): parametros[0]: falopa.txt
+[WARNING] 03:00:38:091 Kernel/(207648:207650): parametros[1]: 0xabcedfg
+[WARNING] 03:00:38:092 Kernel/(207648:207650): parametros[2]: 10
+[INFO] 03:00:38:094 Kernel/(207648:207650): PID: 5 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 03:00:38:095 Kernel/(207648:207650): PID: 5 - Bloqueado por: IO
+[INFO] 03:00:38:095 Kernel/(207648:207650): PID: 5 - Ejecuta IO: 5
+[INFO] 03:00:38:096 Kernel/(207648:207650): PID: 6 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:00:38:100 Kernel/(207648:207650): PID: 6 - Wait: DISCO - Instancias: -1
+[INFO] 03:00:38:100 Kernel/(207648:207650): PID: 6 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 03:00:38:102 Kernel/(207648:207650): PID: 6 - Bloqueado por: DISCO
+[INFO] 03:00:43:104 Kernel/(207648:207680): PID: 5 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 03:00:43:104 Kernel/(207648:207650): PID: 5 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:00:43:106 Kernel/(207648:207650): PID: 5 - Estado Anterior: EXEC - Estado Actual: READY
+[INFO] 03:00:43:106 Kernel/(207648:207650): PID: 5 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:00:43:114 Kernel/(207648:207650): PID: 5 - Signal: DISCO - Instancias: 0
+[INFO] 03:00:43:114 Kernel/(207648:207650): PID: 6 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 03:00:43:115 Kernel/(207648:207650): PID: 5 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 03:00:43:115 Kernel/(207648:207650): Finaliza el proceso 5 - Motivo: SUCCESS
+[INFO] 03:00:43:115 Kernel/(207648:207651): PID: 7 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 03:00:43:116 Kernel/(207648:207650): PID: 6 - Estado Anterior: READY - Estado Actual: EXEC
+[WARNING] 03:00:43:119 Kernel/(207648:207650): parametros[0]: falopa.txt
+[WARNING] 03:00:43:120 Kernel/(207648:207650): parametros[1]: 10
+[WARNING] 03:00:43:126 Kernel/(207648:207650): parametros[0]: falopa.txt
+[WARNING] 03:00:43:126 Kernel/(207648:207650): parametros[1]: 0xabcedfg
+[WARNING] 03:00:43:126 Kernel/(207648:207650): parametros[2]: 10
+[INFO] 03:00:43:129 Kernel/(207648:207650): PID: 6 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 03:00:43:129 Kernel/(207648:207650): PID: 6 - Bloqueado por: IO
+[INFO] 03:00:43:129 Kernel/(207648:207650): PID: 6 - Ejecuta IO: 5
+[INFO] 03:00:43:130 Kernel/(207648:207650): PID: 7 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:00:43:131 Kernel/(207648:207650): PID: 7 - Wait: DISCO - Instancias: -1
+[INFO] 03:00:43:131 Kernel/(207648:207650): PID: 7 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 03:00:43:131 Kernel/(207648:207650): PID: 7 - Bloqueado por: DISCO
+[INFO] 03:00:48:132 Kernel/(207648:207681): PID: 6 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 03:00:48:132 Kernel/(207648:207650): PID: 6 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:00:48:133 Kernel/(207648:207650): PID: 6 - Estado Anterior: EXEC - Estado Actual: READY
+[INFO] 03:00:48:134 Kernel/(207648:207650): PID: 6 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:00:48:143 Kernel/(207648:207650): PID: 6 - Signal: DISCO - Instancias: 0
+[INFO] 03:00:48:143 Kernel/(207648:207650): PID: 7 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 03:00:48:145 Kernel/(207648:207650): PID: 6 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 03:00:48:145 Kernel/(207648:207650): Finaliza el proceso 6 - Motivo: SUCCESS
+[INFO] 03:00:48:145 Kernel/(207648:207651): PID: 8 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 03:00:48:145 Kernel/(207648:207650): PID: 7 - Estado Anterior: READY - Estado Actual: EXEC
+[WARNING] 03:00:48:154 Kernel/(207648:207650): parametros[0]: falopa.txt
+[WARNING] 03:00:48:154 Kernel/(207648:207650): parametros[1]: 10
+[WARNING] 03:00:48:158 Kernel/(207648:207650): parametros[0]: falopa.txt
+[WARNING] 03:00:48:158 Kernel/(207648:207650): parametros[1]: 0xabcedfg
+[WARNING] 03:00:48:158 Kernel/(207648:207650): parametros[2]: 10
+[INFO] 03:00:48:161 Kernel/(207648:207650): PID: 7 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 03:00:48:161 Kernel/(207648:207650): PID: 7 - Bloqueado por: IO
+[INFO] 03:00:48:161 Kernel/(207648:207650): PID: 7 - Ejecuta IO: 5
+[INFO] 03:00:48:162 Kernel/(207648:207650): PID: 8 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:00:48:167 Kernel/(207648:207650): PID: 8 - Wait: DISCO - Instancias: -1
+[INFO] 03:00:48:167 Kernel/(207648:207650): PID: 8 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 03:00:48:170 Kernel/(207648:207650): PID: 8 - Bloqueado por: DISCO
+[INFO] 03:00:53:170 Kernel/(207648:207682): PID: 7 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 03:00:53:171 Kernel/(207648:207650): PID: 7 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:00:53:172 Kernel/(207648:207650): PID: 7 - Estado Anterior: EXEC - Estado Actual: READY
+[INFO] 03:00:53:172 Kernel/(207648:207650): PID: 7 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:00:53:181 Kernel/(207648:207650): PID: 7 - Signal: DISCO - Instancias: 0
+[INFO] 03:00:53:181 Kernel/(207648:207650): PID: 8 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 03:00:53:182 Kernel/(207648:207650): PID: 7 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 03:00:53:182 Kernel/(207648:207650): Finaliza el proceso 7 - Motivo: SUCCESS
+[INFO] 03:00:53:183 Kernel/(207648:207650): PID: 8 - Estado Anterior: READY - Estado Actual: EXEC
+[WARNING] 03:00:53:186 Kernel/(207648:207650): parametros[0]: falopa.txt
+[WARNING] 03:00:53:186 Kernel/(207648:207650): parametros[1]: 10
+[WARNING] 03:00:53:191 Kernel/(207648:207650): parametros[0]: falopa.txt
+[WARNING] 03:00:53:191 Kernel/(207648:207650): parametros[1]: 0xabcedfg
+[WARNING] 03:00:53:191 Kernel/(207648:207650): parametros[2]: 10
+[INFO] 03:00:53:194 Kernel/(207648:207650): PID: 8 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 03:00:53:194 Kernel/(207648:207650): PID: 8 - Bloqueado por: IO
+[INFO] 03:00:53:195 Kernel/(207648:207650): PID: 8 - Ejecuta IO: 5
+[INFO] 03:00:58:195 Kernel/(207648:207683): PID: 8 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 03:00:58:196 Kernel/(207648:207650): PID: 8 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:00:58:197 Kernel/(207648:207650): PID: 8 - Estado Anterior: EXEC - Estado Actual: READY
+[INFO] 03:00:58:197 Kernel/(207648:207650): PID: 8 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:00:58:206 Kernel/(207648:207650): PID: 8 - Signal: DISCO - Instancias: 1
+[INFO] 03:00:58:208 Kernel/(207648:207650): PID: 8 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 03:00:58:209 Kernel/(207648:207650): Finaliza el proceso 8 - Motivo: SUCCESS
+[WARNING] 03:04:45:802 Kernel/(207733:207733): Kernel listo para recibir a Consolas
+[WARNING] 03:04:47:577 Kernel/(207733:207739): Se conecto una consola
+[INFO] 03:04:47:585 Kernel/(207733:207739): Se crea el proceso 1 en NEW
+[INFO] 03:04:47:589 Kernel/(207733:207736): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 03:04:47:590 Kernel/(207733:207735): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:04:47:626 Kernel/(207733:207735): PID: 1 - Wait: DISCO - Instancias: 0
+[WARNING] 03:04:47:631 Kernel/(207733:207735): parametros[0]: falopa.txt
+[WARNING] 03:04:47:631 Kernel/(207733:207735): parametros[1]: 10
+[WARNING] 03:04:47:635 Kernel/(207733:207735): parametros[0]: falopa.txt
+[WARNING] 03:04:47:635 Kernel/(207733:207735): parametros[1]: 0xabcedfg
+[WARNING] 03:04:47:636 Kernel/(207733:207735): parametros[2]: 10
+[INFO] 03:04:47:642 Kernel/(207733:207735): PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 03:04:47:643 Kernel/(207733:207735): PID: 1 - Bloqueado por: IO
+[INFO] 03:04:47:643 Kernel/(207733:207735): PID: 1 - Ejecuta IO: 5
+[WARNING] 03:04:48:262 Kernel/(207733:207743): Se conecto una consola
+[INFO] 03:04:48:262 Kernel/(207733:207743): Se crea el proceso 2 en NEW
+[INFO] 03:04:48:263 Kernel/(207733:207736): PID: 2 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 03:04:48:263 Kernel/(207733:207735): PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:04:48:265 Kernel/(207733:207735): PID: 2 - Wait: DISCO - Instancias: -1
+[INFO] 03:04:48:265 Kernel/(207733:207735): PID: 2 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 03:04:48:266 Kernel/(207733:207735): PID: 2 - Bloqueado por: DISCO
+[WARNING] 03:04:48:873 Kernel/(207733:207746): Se conecto una consola
+[INFO] 03:04:48:874 Kernel/(207733:207746): Se crea el proceso 3 en NEW
+[WARNING] 03:04:49:585 Kernel/(207733:207749): Se conecto una consola
+[INFO] 03:04:49:586 Kernel/(207733:207749): Se crea el proceso 4 en NEW
+[WARNING] 03:04:51:468 Kernel/(207733:207752): Se conecto una consola
+[INFO] 03:04:51:470 Kernel/(207733:207752): Se crea el proceso 5 en NEW
+[WARNING] 03:04:52:081 Kernel/(207733:207755): Se conecto una consola
+[INFO] 03:04:52:082 Kernel/(207733:207755): Se crea el proceso 6 en NEW
+[WARNING] 03:04:52:619 Kernel/(207733:207758): Se conecto una consola
+[INFO] 03:04:52:620 Kernel/(207733:207758): Se crea el proceso 7 en NEW
+[INFO] 03:04:52:648 Kernel/(207733:207740): PID: 1 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 03:04:52:648 Kernel/(207733:207735): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:04:52:650 Kernel/(207733:207735): PID: 1 - Estado Anterior: EXEC - Estado Actual: READY
+[INFO] 03:04:52:651 Kernel/(207733:207735): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:04:52:667 Kernel/(207733:207735): PID: 1 - Signal: DISCO - Instancias: 0
+[INFO] 03:04:52:668 Kernel/(207733:207735): PID: 2 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 03:04:52:670 Kernel/(207733:207735): PID: 1 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 03:04:52:671 Kernel/(207733:207735): Finaliza el proceso 1 - Motivo: SUCCESS
+[INFO] 03:04:52:671 Kernel/(207733:207736): PID: 3 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 03:04:52:672 Kernel/(207733:207735): PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[WARNING] 03:04:52:681 Kernel/(207733:207735): parametros[0]: falopa.txt
+[WARNING] 03:04:52:681 Kernel/(207733:207735): parametros[1]: 10
+[WARNING] 03:04:52:684 Kernel/(207733:207735): parametros[0]: falopa.txt
+[WARNING] 03:04:52:685 Kernel/(207733:207735): parametros[1]: 0xabcedfg
+[WARNING] 03:04:52:685 Kernel/(207733:207735): parametros[2]: 10
+[INFO] 03:04:52:687 Kernel/(207733:207735): PID: 2 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 03:04:52:688 Kernel/(207733:207735): PID: 2 - Bloqueado por: IO
+[INFO] 03:04:52:688 Kernel/(207733:207735): PID: 2 - Ejecuta IO: 5
+[INFO] 03:04:52:688 Kernel/(207733:207735): PID: 3 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:04:52:690 Kernel/(207733:207735): PID: 3 - Wait: DISCO - Instancias: -1
+[INFO] 03:04:52:690 Kernel/(207733:207735): PID: 3 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 03:04:52:690 Kernel/(207733:207735): PID: 3 - Bloqueado por: DISCO
+[WARNING] 03:04:53:322 Kernel/(207733:207762): Se conecto una consola
+[INFO] 03:04:53:322 Kernel/(207733:207762): Se crea el proceso 8 en NEW
+[INFO] 03:04:57:691 Kernel/(207733:207759): PID: 2 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 03:04:57:692 Kernel/(207733:207735): PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:04:57:698 Kernel/(207733:207735): PID: 2 - Estado Anterior: EXEC - Estado Actual: READY
+[INFO] 03:04:57:705 Kernel/(207733:207735): PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:04:57:723 Kernel/(207733:207735): PID: 2 - Signal: DISCO - Instancias: 0
+[INFO] 03:04:57:724 Kernel/(207733:207735): PID: 3 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 03:04:57:732 Kernel/(207733:207735): PID: 2 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 03:04:57:735 Kernel/(207733:207735): Finaliza el proceso 2 - Motivo: SUCCESS
+[INFO] 03:04:57:736 Kernel/(207733:207736): PID: 4 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 03:04:57:736 Kernel/(207733:207735): PID: 3 - Estado Anterior: READY - Estado Actual: EXEC
+[WARNING] 03:04:57:739 Kernel/(207733:207735): parametros[0]: falopa.txt
+[WARNING] 03:04:57:739 Kernel/(207733:207735): parametros[1]: 10
+[WARNING] 03:04:57:744 Kernel/(207733:207735): parametros[0]: falopa.txt
+[WARNING] 03:04:57:744 Kernel/(207733:207735): parametros[1]: 0xabcedfg
+[WARNING] 03:04:57:744 Kernel/(207733:207735): parametros[2]: 10
+[INFO] 03:04:57:747 Kernel/(207733:207735): PID: 3 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 03:04:57:747 Kernel/(207733:207735): PID: 3 - Bloqueado por: IO
+[INFO] 03:04:57:747 Kernel/(207733:207735): PID: 3 - Ejecuta IO: 5
+[INFO] 03:04:57:748 Kernel/(207733:207735): PID: 4 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:04:57:750 Kernel/(207733:207735): PID: 4 - Wait: DISCO - Instancias: -1
+[INFO] 03:04:57:750 Kernel/(207733:207735): PID: 4 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 03:04:57:750 Kernel/(207733:207735): PID: 4 - Bloqueado por: DISCO
+[INFO] 03:05:02:751 Kernel/(207733:207763): PID: 3 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 03:05:02:754 Kernel/(207733:207735): PID: 3 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:05:02:757 Kernel/(207733:207735): PID: 3 - Estado Anterior: EXEC - Estado Actual: READY
+[INFO] 03:05:02:757 Kernel/(207733:207735): PID: 3 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:05:02:764 Kernel/(207733:207735): PID: 3 - Signal: DISCO - Instancias: 0
+[INFO] 03:05:02:765 Kernel/(207733:207735): PID: 4 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 03:05:02:766 Kernel/(207733:207735): PID: 3 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 03:05:02:766 Kernel/(207733:207735): Finaliza el proceso 3 - Motivo: SUCCESS
+[INFO] 03:05:02:767 Kernel/(207733:207736): PID: 5 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 03:05:02:767 Kernel/(207733:207735): PID: 4 - Estado Anterior: READY - Estado Actual: EXEC
+[WARNING] 03:05:02:770 Kernel/(207733:207735): parametros[0]: falopa.txt
+[WARNING] 03:05:02:770 Kernel/(207733:207735): parametros[1]: 10
+[WARNING] 03:05:02:774 Kernel/(207733:207735): parametros[0]: falopa.txt
+[WARNING] 03:05:02:774 Kernel/(207733:207735): parametros[1]: 0xabcedfg
+[WARNING] 03:05:02:774 Kernel/(207733:207735): parametros[2]: 10
+[INFO] 03:05:02:777 Kernel/(207733:207735): PID: 4 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 03:05:02:777 Kernel/(207733:207735): PID: 4 - Bloqueado por: IO
+[INFO] 03:05:02:777 Kernel/(207733:207735): PID: 4 - Ejecuta IO: 5
+[INFO] 03:05:02:778 Kernel/(207733:207735): PID: 5 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:05:02:779 Kernel/(207733:207735): PID: 5 - Wait: DISCO - Instancias: -1
+[INFO] 03:05:02:779 Kernel/(207733:207735): PID: 5 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 03:05:02:779 Kernel/(207733:207735): PID: 5 - Bloqueado por: DISCO
+[INFO] 03:05:07:780 Kernel/(207733:207764): PID: 4 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 03:05:07:781 Kernel/(207733:207735): PID: 4 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:05:07:785 Kernel/(207733:207735): PID: 4 - Estado Anterior: EXEC - Estado Actual: READY
+[INFO] 03:05:07:786 Kernel/(207733:207735): PID: 4 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:05:07:794 Kernel/(207733:207735): PID: 4 - Signal: DISCO - Instancias: 0
+[INFO] 03:05:07:794 Kernel/(207733:207735): PID: 5 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 03:05:07:795 Kernel/(207733:207735): PID: 4 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 03:05:07:796 Kernel/(207733:207735): Finaliza el proceso 4 - Motivo: SUCCESS
+[INFO] 03:05:07:796 Kernel/(207733:207736): PID: 6 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 03:05:07:796 Kernel/(207733:207735): PID: 5 - Estado Anterior: READY - Estado Actual: EXEC
+[WARNING] 03:05:07:798 Kernel/(207733:207735): parametros[0]: falopa.txt
+[WARNING] 03:05:07:798 Kernel/(207733:207735): parametros[1]: 10
+[WARNING] 03:05:07:806 Kernel/(207733:207735): parametros[0]: falopa.txt
+[WARNING] 03:05:07:806 Kernel/(207733:207735): parametros[1]: 0xabcedfg
+[WARNING] 03:05:07:806 Kernel/(207733:207735): parametros[2]: 10
+[INFO] 03:05:07:809 Kernel/(207733:207735): PID: 5 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 03:05:07:809 Kernel/(207733:207735): PID: 5 - Bloqueado por: IO
+[INFO] 03:05:07:809 Kernel/(207733:207735): PID: 5 - Ejecuta IO: 5
+[INFO] 03:05:07:810 Kernel/(207733:207735): PID: 6 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:05:07:811 Kernel/(207733:207735): PID: 6 - Wait: DISCO - Instancias: -1
+[INFO] 03:05:07:811 Kernel/(207733:207735): PID: 6 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 03:05:07:811 Kernel/(207733:207735): PID: 6 - Bloqueado por: DISCO
+[INFO] 03:05:12:812 Kernel/(207733:207765): PID: 5 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 03:05:12:813 Kernel/(207733:207735): PID: 5 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:05:12:815 Kernel/(207733:207735): PID: 5 - Estado Anterior: EXEC - Estado Actual: READY
+[INFO] 03:05:12:815 Kernel/(207733:207735): PID: 5 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:05:12:823 Kernel/(207733:207735): PID: 5 - Signal: DISCO - Instancias: 0
+[INFO] 03:05:12:823 Kernel/(207733:207735): PID: 6 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 03:05:12:824 Kernel/(207733:207735): PID: 5 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 03:05:12:824 Kernel/(207733:207735): Finaliza el proceso 5 - Motivo: SUCCESS
+[INFO] 03:05:12:825 Kernel/(207733:207736): PID: 7 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 03:05:12:825 Kernel/(207733:207735): PID: 6 - Estado Anterior: READY - Estado Actual: EXEC
+[WARNING] 03:05:12:827 Kernel/(207733:207735): parametros[0]: falopa.txt
+[WARNING] 03:05:12:827 Kernel/(207733:207735): parametros[1]: 10
+[WARNING] 03:05:12:833 Kernel/(207733:207735): parametros[0]: falopa.txt
+[WARNING] 03:05:12:833 Kernel/(207733:207735): parametros[1]: 0xabcedfg
+[WARNING] 03:05:12:834 Kernel/(207733:207735): parametros[2]: 10
+[INFO] 03:05:12:836 Kernel/(207733:207735): PID: 6 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 03:05:12:837 Kernel/(207733:207735): PID: 6 - Bloqueado por: IO
+[INFO] 03:05:12:837 Kernel/(207733:207735): PID: 6 - Ejecuta IO: 5
+[INFO] 03:05:12:837 Kernel/(207733:207735): PID: 7 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:05:12:838 Kernel/(207733:207735): PID: 7 - Wait: DISCO - Instancias: -1
+[INFO] 03:05:12:838 Kernel/(207733:207735): PID: 7 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 03:05:12:839 Kernel/(207733:207735): PID: 7 - Bloqueado por: DISCO
+[INFO] 03:05:17:839 Kernel/(207733:207767): PID: 6 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 03:05:17:840 Kernel/(207733:207735): PID: 6 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:05:17:841 Kernel/(207733:207735): PID: 6 - Estado Anterior: EXEC - Estado Actual: READY
+[INFO] 03:05:17:841 Kernel/(207733:207735): PID: 6 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:05:17:848 Kernel/(207733:207735): PID: 6 - Signal: DISCO - Instancias: 0
+[INFO] 03:05:17:848 Kernel/(207733:207735): PID: 7 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 03:05:17:849 Kernel/(207733:207735): PID: 6 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 03:05:17:850 Kernel/(207733:207735): Finaliza el proceso 6 - Motivo: SUCCESS
+[INFO] 03:05:17:850 Kernel/(207733:207736): PID: 8 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 03:05:17:850 Kernel/(207733:207735): PID: 7 - Estado Anterior: READY - Estado Actual: EXEC
+[WARNING] 03:05:17:852 Kernel/(207733:207735): parametros[0]: falopa.txt
+[WARNING] 03:05:17:852 Kernel/(207733:207735): parametros[1]: 10
+[WARNING] 03:05:17:856 Kernel/(207733:207735): parametros[0]: falopa.txt
+[WARNING] 03:05:17:857 Kernel/(207733:207735): parametros[1]: 0xabcedfg
+[WARNING] 03:05:17:857 Kernel/(207733:207735): parametros[2]: 10
+[INFO] 03:05:17:859 Kernel/(207733:207735): PID: 7 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 03:05:17:860 Kernel/(207733:207735): PID: 7 - Bloqueado por: IO
+[INFO] 03:05:17:860 Kernel/(207733:207735): PID: 7 - Ejecuta IO: 5
+[INFO] 03:05:17:860 Kernel/(207733:207735): PID: 8 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:05:17:861 Kernel/(207733:207735): PID: 8 - Wait: DISCO - Instancias: -1
+[INFO] 03:05:17:861 Kernel/(207733:207735): PID: 8 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 03:05:17:862 Kernel/(207733:207735): PID: 8 - Bloqueado por: DISCO
+[INFO] 03:05:22:862 Kernel/(207733:207768): PID: 7 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 03:05:22:862 Kernel/(207733:207735): PID: 7 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:05:22:864 Kernel/(207733:207735): PID: 7 - Estado Anterior: EXEC - Estado Actual: READY
+[INFO] 03:05:22:864 Kernel/(207733:207735): PID: 7 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:05:22:873 Kernel/(207733:207735): PID: 7 - Signal: DISCO - Instancias: 0
+[INFO] 03:05:22:873 Kernel/(207733:207735): PID: 8 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 03:05:22:875 Kernel/(207733:207735): PID: 7 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 03:05:22:875 Kernel/(207733:207735): Finaliza el proceso 7 - Motivo: SUCCESS
+[INFO] 03:05:22:875 Kernel/(207733:207735): PID: 8 - Estado Anterior: READY - Estado Actual: EXEC
+[WARNING] 03:05:22:878 Kernel/(207733:207735): parametros[0]: falopa.txt
+[WARNING] 03:05:22:878 Kernel/(207733:207735): parametros[1]: 10
+[WARNING] 03:05:22:883 Kernel/(207733:207735): parametros[0]: falopa.txt
+[WARNING] 03:05:22:883 Kernel/(207733:207735): parametros[1]: 0xabcedfg
+[WARNING] 03:05:22:884 Kernel/(207733:207735): parametros[2]: 10
+[INFO] 03:05:22:901 Kernel/(207733:207735): PID: 8 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 03:05:22:901 Kernel/(207733:207735): PID: 8 - Bloqueado por: IO
+[INFO] 03:05:22:902 Kernel/(207733:207735): PID: 8 - Ejecuta IO: 5
+[INFO] 03:05:27:905 Kernel/(207733:207769): PID: 8 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 03:05:27:905 Kernel/(207733:207735): PID: 8 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:05:27:907 Kernel/(207733:207735): PID: 8 - Estado Anterior: EXEC - Estado Actual: READY
+[INFO] 03:05:27:907 Kernel/(207733:207735): PID: 8 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:05:27:917 Kernel/(207733:207735): PID: 8 - Signal: DISCO - Instancias: 1
+[INFO] 03:05:27:918 Kernel/(207733:207735): PID: 8 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 03:05:27:918 Kernel/(207733:207735): Finaliza el proceso 8 - Motivo: SUCCESS
+[ERROR] 03:06:22:239 Kernel/(207817:207817): Kernel no pudo conectarse a CPU
+[WARNING] 03:08:24:527 Kernel/(207826:207826): Kernel listo para recibir a Consolas
+[WARNING] 03:08:25:946 Kernel/(207826:207832): Se conecto una consola
+[INFO] 03:08:25:954 Kernel/(207826:207832): Se crea el proceso 1 en NEW
+[INFO] 03:08:25:958 Kernel/(207826:207829): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 03:08:25:959 Kernel/(207826:207828): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:08:25:995 Kernel/(207826:207828): PID: 1 - Wait: DISCO - Instancias: 0
+[WARNING] 03:08:26:001 Kernel/(207826:207828): parametros[0]: falopa.txt
+[WARNING] 03:08:26:004 Kernel/(207826:207828): parametros[1]: 10
+[WARNING] 03:08:26:009 Kernel/(207826:207828): parametros[0]: falopa.txt
+[WARNING] 03:08:26:009 Kernel/(207826:207828): parametros[1]: 0xabcedfg
+[WARNING] 03:08:26:009 Kernel/(207826:207828): parametros[2]: 10
+[INFO] 03:08:26:013 Kernel/(207826:207828): PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 03:08:26:013 Kernel/(207826:207828): PID: 1 - Bloqueado por: IO
+[INFO] 03:08:26:013 Kernel/(207826:207828): PID: 1 - Ejecuta IO: 5
+[WARNING] 03:08:27:116 Kernel/(207826:207836): Se conecto una consola
+[INFO] 03:08:27:116 Kernel/(207826:207836): Se crea el proceso 2 en NEW
+[INFO] 03:08:27:117 Kernel/(207826:207829): PID: 2 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 03:08:27:117 Kernel/(207826:207828): PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:08:27:118 Kernel/(207826:207828): PID: 2 - Wait: DISCO - Instancias: -1
+[INFO] 03:08:27:119 Kernel/(207826:207828): PID: 2 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 03:08:27:119 Kernel/(207826:207828): PID: 2 - Bloqueado por: DISCO
+[WARNING] 03:08:27:713 Kernel/(207826:207839): Se conecto una consola
+[INFO] 03:08:27:714 Kernel/(207826:207839): Se crea el proceso 3 en NEW
+[WARNING] 03:08:28:377 Kernel/(207826:207842): Se conecto una consola
+[INFO] 03:08:28:378 Kernel/(207826:207842): Se crea el proceso 4 en NEW
+[WARNING] 03:08:29:000 Kernel/(207826:207845): Se conecto una consola
+[INFO] 03:08:29:000 Kernel/(207826:207845): Se crea el proceso 5 en NEW
+[WARNING] 03:08:29:561 Kernel/(207826:207848): Se conecto una consola
+[INFO] 03:08:29:561 Kernel/(207826:207848): Se crea el proceso 6 en NEW
+[WARNING] 03:08:30:184 Kernel/(207826:207851): Se conecto una consola
+[INFO] 03:08:30:185 Kernel/(207826:207851): Se crea el proceso 7 en NEW
+[WARNING] 03:08:30:728 Kernel/(207826:207854): Se conecto una consola
+[INFO] 03:08:30:728 Kernel/(207826:207854): Se crea el proceso 8 en NEW
+[INFO] 03:08:31:017 Kernel/(207826:207833): PID: 1 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 03:08:31:018 Kernel/(207826:207828): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:08:31:020 Kernel/(207826:207828): PID: 1 - Estado Anterior: EXEC - Estado Actual: READY
+[INFO] 03:08:31:021 Kernel/(207826:207828): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:08:31:036 Kernel/(207826:207828): PID: 1 - Signal: DISCO - Instancias: 0
+[INFO] 03:08:31:037 Kernel/(207826:207828): PID: 2 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 03:08:31:039 Kernel/(207826:207828): PID: 1 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 03:08:31:040 Kernel/(207826:207828): Finaliza el proceso 1 - Motivo: SUCCESS
+[INFO] 03:08:31:040 Kernel/(207826:207829): PID: 3 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 03:08:31:041 Kernel/(207826:207828): PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[WARNING] 03:08:31:043 Kernel/(207826:207828): parametros[0]: falopa.txt
+[WARNING] 03:08:31:044 Kernel/(207826:207828): parametros[1]: 10
+[WARNING] 03:08:31:047 Kernel/(207826:207828): parametros[0]: falopa.txt
+[WARNING] 03:08:31:047 Kernel/(207826:207828): parametros[1]: 0xabcedfg
+[WARNING] 03:08:31:048 Kernel/(207826:207828): parametros[2]: 10
+[INFO] 03:08:31:051 Kernel/(207826:207828): PID: 2 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 03:08:31:051 Kernel/(207826:207828): PID: 2 - Bloqueado por: IO
+[INFO] 03:08:31:051 Kernel/(207826:207828): PID: 2 - Ejecuta IO: 5
+[INFO] 03:08:31:051 Kernel/(207826:207828): PID: 3 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:08:31:052 Kernel/(207826:207828): PID: 3 - Wait: DISCO - Instancias: -1
+[INFO] 03:08:31:053 Kernel/(207826:207828): PID: 3 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 03:08:31:053 Kernel/(207826:207828): PID: 3 - Bloqueado por: DISCO
+[INFO] 03:08:36:053 Kernel/(207826:207855): PID: 2 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 03:08:36:054 Kernel/(207826:207828): PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:08:36:060 Kernel/(207826:207828): PID: 2 - Estado Anterior: EXEC - Estado Actual: READY
+[INFO] 03:08:36:060 Kernel/(207826:207828): PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:08:36:070 Kernel/(207826:207828): PID: 2 - Signal: DISCO - Instancias: 0
+[INFO] 03:08:36:070 Kernel/(207826:207828): PID: 3 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 03:08:36:074 Kernel/(207826:207828): PID: 2 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 03:08:36:074 Kernel/(207826:207828): Finaliza el proceso 2 - Motivo: SUCCESS
+[INFO] 03:08:36:074 Kernel/(207826:207829): PID: 4 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 03:08:36:074 Kernel/(207826:207828): PID: 3 - Estado Anterior: READY - Estado Actual: EXEC
+[WARNING] 03:08:36:076 Kernel/(207826:207828): parametros[0]: falopa.txt
+[WARNING] 03:08:36:077 Kernel/(207826:207828): parametros[1]: 10
+[WARNING] 03:08:36:080 Kernel/(207826:207828): parametros[0]: falopa.txt
+[WARNING] 03:08:36:080 Kernel/(207826:207828): parametros[1]: 0xabcedfg
+[WARNING] 03:08:36:081 Kernel/(207826:207828): parametros[2]: 10
+[INFO] 03:08:36:083 Kernel/(207826:207828): PID: 3 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 03:08:36:083 Kernel/(207826:207828): PID: 3 - Bloqueado por: IO
+[INFO] 03:08:36:088 Kernel/(207826:207828): PID: 3 - Ejecuta IO: 5
+[INFO] 03:08:36:088 Kernel/(207826:207828): PID: 4 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:08:36:093 Kernel/(207826:207828): PID: 4 - Wait: DISCO - Instancias: -1
+[INFO] 03:08:36:093 Kernel/(207826:207828): PID: 4 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 03:08:36:093 Kernel/(207826:207828): PID: 4 - Bloqueado por: DISCO
+[INFO] 03:08:41:094 Kernel/(207826:207856): PID: 3 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 03:08:41:094 Kernel/(207826:207828): PID: 3 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:08:41:097 Kernel/(207826:207828): PID: 3 - Estado Anterior: EXEC - Estado Actual: READY
+[INFO] 03:08:41:097 Kernel/(207826:207828): PID: 3 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:08:41:105 Kernel/(207826:207828): PID: 3 - Signal: DISCO - Instancias: 0
+[INFO] 03:08:41:105 Kernel/(207826:207828): PID: 4 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 03:08:41:107 Kernel/(207826:207828): PID: 3 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 03:08:41:107 Kernel/(207826:207828): Finaliza el proceso 3 - Motivo: SUCCESS
+[INFO] 03:08:41:107 Kernel/(207826:207829): PID: 5 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 03:08:41:107 Kernel/(207826:207828): PID: 4 - Estado Anterior: READY - Estado Actual: EXEC
+[WARNING] 03:08:41:109 Kernel/(207826:207828): parametros[0]: falopa.txt
+[WARNING] 03:08:41:109 Kernel/(207826:207828): parametros[1]: 10
+[WARNING] 03:08:41:115 Kernel/(207826:207828): parametros[0]: falopa.txt
+[WARNING] 03:08:41:115 Kernel/(207826:207828): parametros[1]: 0xabcedfg
+[WARNING] 03:08:41:115 Kernel/(207826:207828): parametros[2]: 10
+[INFO] 03:08:41:118 Kernel/(207826:207828): PID: 4 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 03:08:41:119 Kernel/(207826:207828): PID: 4 - Bloqueado por: IO
+[INFO] 03:08:41:119 Kernel/(207826:207828): PID: 4 - Ejecuta IO: 5
+[INFO] 03:08:41:119 Kernel/(207826:207828): PID: 5 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:08:41:120 Kernel/(207826:207828): PID: 5 - Wait: DISCO - Instancias: -1
+[INFO] 03:08:41:121 Kernel/(207826:207828): PID: 5 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 03:08:41:121 Kernel/(207826:207828): PID: 5 - Bloqueado por: DISCO
+[INFO] 03:08:46:121 Kernel/(207826:207857): PID: 4 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 03:08:46:122 Kernel/(207826:207828): PID: 4 - Estado Anterior: READY - Estado Actual: EXEC
+[ERROR] 03:08:46:123 Kernel/(207826:207828): Error en la comunicacion entre el Kernel y la CPU
+[WARNING] 03:29:54:467 Kernel/(208534:208534): Kernel listo para recibir a Consolas
+[WARNING] 03:29:55:818 Kernel/(208534:208540): Se conecto una consola
+[INFO] 03:29:55:828 Kernel/(208534:208540): Se crea el proceso 1 en NEW
+[INFO] 03:29:55:833 Kernel/(208534:208537): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 03:29:55:836 Kernel/(208534:208536): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:29:55:872 Kernel/(208534:208536): PID: 1 - Wait: DISCO - Instancias: 0
+[WARNING] 03:29:55:877 Kernel/(208534:208536): parametros[0]: falopa.txt
+[WARNING] 03:29:55:877 Kernel/(208534:208536): parametros[1]: 10
+[WARNING] 03:29:55:881 Kernel/(208534:208536): parametros[0]: falopa.txt
+[WARNING] 03:29:55:881 Kernel/(208534:208536): parametros[1]: 0xabcedfg
+[WARNING] 03:29:55:882 Kernel/(208534:208536): parametros[2]: 10
+[INFO] 03:29:55:885 Kernel/(208534:208536): PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 03:29:55:885 Kernel/(208534:208536): PID: 1 - Bloqueado por: IO
+[INFO] 03:29:55:886 Kernel/(208534:208536): PID: 1 - Ejecuta IO: 5
+[WARNING] 03:29:56:902 Kernel/(208534:208544): Se conecto una consola
+[INFO] 03:29:56:905 Kernel/(208534:208544): Se crea el proceso 2 en NEW
+[INFO] 03:29:56:905 Kernel/(208534:208537): PID: 2 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 03:29:56:905 Kernel/(208534:208536): PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:29:56:907 Kernel/(208534:208536): PID: 2 - Wait: DISCO - Instancias: -1
+[INFO] 03:29:56:913 Kernel/(208534:208536): PID: 2 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 03:29:56:913 Kernel/(208534:208536): PID: 2 - Bloqueado por: DISCO
+[WARNING] 03:29:57:812 Kernel/(208534:208547): Se conecto una consola
+[INFO] 03:29:57:813 Kernel/(208534:208547): Se crea el proceso 3 en NEW
+[WARNING] 03:29:58:449 Kernel/(208534:208550): Se conecto una consola
+[INFO] 03:29:58:449 Kernel/(208534:208550): Se crea el proceso 4 en NEW
+[WARNING] 03:29:59:685 Kernel/(208534:208553): Se conecto una consola
+[INFO] 03:29:59:685 Kernel/(208534:208553): Se crea el proceso 5 en NEW
+[WARNING] 03:30:00:269 Kernel/(208534:208556): Se conecto una consola
+[INFO] 03:30:00:270 Kernel/(208534:208556): Se crea el proceso 6 en NEW
+[WARNING] 03:30:00:827 Kernel/(208534:208559): Se conecto una consola
+[INFO] 03:30:00:829 Kernel/(208534:208559): Se crea el proceso 7 en NEW
+[INFO] 03:30:00:890 Kernel/(208534:208541): PID: 1 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 03:30:00:890 Kernel/(208534:208536): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:30:00:893 Kernel/(208534:208536): PID: 1 - Estado Anterior: EXEC - Estado Actual: READY
+[INFO] 03:30:00:893 Kernel/(208534:208536): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:30:00:909 Kernel/(208534:208536): PID: 1 - Signal: DISCO - Instancias: 0
+[INFO] 03:30:00:909 Kernel/(208534:208536): PID: 2 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 03:30:00:911 Kernel/(208534:208536): PID: 1 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 03:30:00:912 Kernel/(208534:208536): Finaliza el proceso 1 - Motivo: SUCCESS
+[INFO] 03:30:00:912 Kernel/(208534:208537): PID: 3 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 03:30:00:912 Kernel/(208534:208536): PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[WARNING] 03:30:00:915 Kernel/(208534:208536): parametros[0]: falopa.txt
+[WARNING] 03:30:00:915 Kernel/(208534:208536): parametros[1]: 10
+[WARNING] 03:30:00:919 Kernel/(208534:208536): parametros[0]: falopa.txt
+[WARNING] 03:30:00:919 Kernel/(208534:208536): parametros[1]: 0xabcedfg
+[WARNING] 03:30:00:920 Kernel/(208534:208536): parametros[2]: 10
+[INFO] 03:30:00:923 Kernel/(208534:208536): PID: 2 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 03:30:00:923 Kernel/(208534:208536): PID: 2 - Bloqueado por: IO
+[INFO] 03:30:00:923 Kernel/(208534:208536): PID: 2 - Ejecuta IO: 5
+[INFO] 03:30:00:924 Kernel/(208534:208536): PID: 3 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:30:00:925 Kernel/(208534:208536): PID: 3 - Wait: DISCO - Instancias: -1
+[INFO] 03:30:00:925 Kernel/(208534:208536): PID: 3 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 03:30:00:925 Kernel/(208534:208536): PID: 3 - Bloqueado por: DISCO
+[WARNING] 03:30:01:430 Kernel/(208534:208563): Se conecto una consola
+[INFO] 03:30:01:430 Kernel/(208534:208563): Se crea el proceso 8 en NEW
+[INFO] 03:30:05:926 Kernel/(208534:208560): PID: 2 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 03:30:05:927 Kernel/(208534:208536): PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:30:05:933 Kernel/(208534:208536): PID: 2 - Estado Anterior: EXEC - Estado Actual: READY
+[INFO] 03:30:05:944 Kernel/(208534:208536): PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:30:05:956 Kernel/(208534:208536): PID: 2 - Signal: DISCO - Instancias: 0
+[INFO] 03:30:05:956 Kernel/(208534:208536): PID: 3 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 03:30:05:958 Kernel/(208534:208536): PID: 2 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 03:30:05:958 Kernel/(208534:208536): Finaliza el proceso 2 - Motivo: SUCCESS
+[INFO] 03:30:05:959 Kernel/(208534:208537): PID: 4 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 03:30:05:959 Kernel/(208534:208536): PID: 3 - Estado Anterior: READY - Estado Actual: EXEC
+[WARNING] 03:30:05:962 Kernel/(208534:208536): parametros[0]: falopa.txt
+[WARNING] 03:30:05:962 Kernel/(208534:208536): parametros[1]: 10
+[WARNING] 03:30:05:966 Kernel/(208534:208536): parametros[0]: falopa.txt
+[WARNING] 03:30:05:970 Kernel/(208534:208536): parametros[1]: 0xabcedfg
+[WARNING] 03:30:05:970 Kernel/(208534:208536): parametros[2]: 10
+[INFO] 03:30:05:975 Kernel/(208534:208536): PID: 3 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 03:30:05:975 Kernel/(208534:208536): PID: 3 - Bloqueado por: IO
+[INFO] 03:30:05:975 Kernel/(208534:208536): PID: 3 - Ejecuta IO: 5
+[INFO] 03:30:05:976 Kernel/(208534:208536): PID: 4 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:30:05:977 Kernel/(208534:208536): PID: 4 - Wait: DISCO - Instancias: -1
+[INFO] 03:30:05:977 Kernel/(208534:208536): PID: 4 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 03:30:05:978 Kernel/(208534:208536): PID: 4 - Bloqueado por: DISCO
+[INFO] 03:30:10:978 Kernel/(208534:208564): PID: 3 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 03:30:10:979 Kernel/(208534:208536): PID: 3 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:30:10:980 Kernel/(208534:208536): PID: 3 - Estado Anterior: EXEC - Estado Actual: READY
+[INFO] 03:30:10:980 Kernel/(208534:208536): PID: 3 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:30:10:989 Kernel/(208534:208536): PID: 3 - Signal: DISCO - Instancias: 0
+[INFO] 03:30:10:990 Kernel/(208534:208536): PID: 4 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 03:30:10:991 Kernel/(208534:208536): PID: 3 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 03:30:10:991 Kernel/(208534:208536): Finaliza el proceso 3 - Motivo: SUCCESS
+[INFO] 03:30:10:992 Kernel/(208534:208537): PID: 5 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 03:30:10:992 Kernel/(208534:208536): PID: 4 - Estado Anterior: READY - Estado Actual: EXEC
+[WARNING] 03:30:10:995 Kernel/(208534:208536): parametros[0]: falopa.txt
+[WARNING] 03:30:10:995 Kernel/(208534:208536): parametros[1]: 10
+[WARNING] 03:30:11:002 Kernel/(208534:208536): parametros[0]: falopa.txt
+[WARNING] 03:30:11:003 Kernel/(208534:208536): parametros[1]: 0xabcedfg
+[WARNING] 03:30:11:003 Kernel/(208534:208536): parametros[2]: 10
+[INFO] 03:30:11:013 Kernel/(208534:208536): PID: 4 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 03:30:11:013 Kernel/(208534:208536): PID: 4 - Bloqueado por: IO
+[INFO] 03:30:11:013 Kernel/(208534:208536): PID: 4 - Ejecuta IO: 5
+[INFO] 03:30:11:017 Kernel/(208534:208536): PID: 5 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:30:11:019 Kernel/(208534:208536): PID: 5 - Wait: DISCO - Instancias: -1
+[INFO] 03:30:11:019 Kernel/(208534:208536): PID: 5 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 03:30:11:019 Kernel/(208534:208536): PID: 5 - Bloqueado por: DISCO
+[INFO] 03:30:16:020 Kernel/(208534:208565): PID: 4 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 03:30:16:020 Kernel/(208534:208536): PID: 4 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:30:16:022 Kernel/(208534:208536): PID: 4 - Estado Anterior: EXEC - Estado Actual: READY
+[INFO] 03:30:16:022 Kernel/(208534:208536): PID: 4 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:30:16:031 Kernel/(208534:208536): PID: 4 - Signal: DISCO - Instancias: 0
+[INFO] 03:30:16:031 Kernel/(208534:208536): PID: 5 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 03:30:16:033 Kernel/(208534:208536): PID: 4 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 03:30:16:034 Kernel/(208534:208536): Finaliza el proceso 4 - Motivo: SUCCESS
+[INFO] 03:30:16:034 Kernel/(208534:208537): PID: 6 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 03:30:16:034 Kernel/(208534:208536): PID: 5 - Estado Anterior: READY - Estado Actual: EXEC
+[WARNING] 03:30:16:037 Kernel/(208534:208536): parametros[0]: falopa.txt
+[WARNING] 03:30:16:037 Kernel/(208534:208536): parametros[1]: 10
+[WARNING] 03:30:16:041 Kernel/(208534:208536): parametros[0]: falopa.txt
+[WARNING] 03:30:16:041 Kernel/(208534:208536): parametros[1]: 0xabcedfg
+[WARNING] 03:30:16:041 Kernel/(208534:208536): parametros[2]: 10
+[INFO] 03:30:16:044 Kernel/(208534:208536): PID: 5 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 03:30:16:044 Kernel/(208534:208536): PID: 5 - Bloqueado por: IO
+[INFO] 03:30:16:044 Kernel/(208534:208536): PID: 5 - Ejecuta IO: 5
+[INFO] 03:30:16:045 Kernel/(208534:208536): PID: 6 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:30:16:046 Kernel/(208534:208536): PID: 6 - Wait: DISCO - Instancias: -1
+[INFO] 03:30:16:046 Kernel/(208534:208536): PID: 6 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 03:30:16:046 Kernel/(208534:208536): PID: 6 - Bloqueado por: DISCO
+[INFO] 03:30:21:049 Kernel/(208534:208570): PID: 5 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 03:30:21:049 Kernel/(208534:208536): PID: 5 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:30:21:050 Kernel/(208534:208536): PID: 5 - Estado Anterior: EXEC - Estado Actual: READY
+[INFO] 03:30:21:051 Kernel/(208534:208536): PID: 5 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:30:21:059 Kernel/(208534:208536): PID: 5 - Signal: DISCO - Instancias: 0
+[INFO] 03:30:21:059 Kernel/(208534:208536): PID: 6 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 03:30:21:061 Kernel/(208534:208536): PID: 5 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 03:30:21:061 Kernel/(208534:208536): Finaliza el proceso 5 - Motivo: SUCCESS
+[INFO] 03:30:21:061 Kernel/(208534:208537): PID: 7 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 03:30:21:061 Kernel/(208534:208536): PID: 6 - Estado Anterior: READY - Estado Actual: EXEC
+[WARNING] 03:30:21:065 Kernel/(208534:208536): parametros[0]: falopa.txt
+[WARNING] 03:30:21:065 Kernel/(208534:208536): parametros[1]: 10
+[WARNING] 03:30:21:070 Kernel/(208534:208536): parametros[0]: falopa.txt
+[WARNING] 03:30:21:071 Kernel/(208534:208536): parametros[1]: 0xabcedfg
+[WARNING] 03:30:21:071 Kernel/(208534:208536): parametros[2]: 10
+[INFO] 03:30:21:074 Kernel/(208534:208536): PID: 6 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 03:30:21:074 Kernel/(208534:208536): PID: 6 - Bloqueado por: IO
+[INFO] 03:30:21:074 Kernel/(208534:208536): PID: 6 - Ejecuta IO: 5
+[INFO] 03:30:21:074 Kernel/(208534:208536): PID: 7 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:30:21:076 Kernel/(208534:208536): PID: 7 - Wait: DISCO - Instancias: -1
+[INFO] 03:30:21:076 Kernel/(208534:208536): PID: 7 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 03:30:21:076 Kernel/(208534:208536): PID: 7 - Bloqueado por: DISCO
+[INFO] 03:30:26:077 Kernel/(208534:208573): PID: 6 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 03:30:26:078 Kernel/(208534:208536): PID: 6 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:30:26:080 Kernel/(208534:208536): PID: 6 - Estado Anterior: EXEC - Estado Actual: READY
+[INFO] 03:30:26:080 Kernel/(208534:208536): PID: 6 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:30:26:093 Kernel/(208534:208536): PID: 6 - Signal: DISCO - Instancias: 0
+[INFO] 03:30:26:093 Kernel/(208534:208536): PID: 7 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 03:30:26:094 Kernel/(208534:208536): PID: 6 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 03:30:26:094 Kernel/(208534:208536): Finaliza el proceso 6 - Motivo: SUCCESS
+[INFO] 03:30:26:095 Kernel/(208534:208536): PID: 7 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:30:26:095 Kernel/(208534:208537): PID: 8 - Estado Anterior: NEW - Estado Actual: READY
+[WARNING] 03:30:26:098 Kernel/(208534:208536): parametros[0]: falopa.txt
+[WARNING] 03:30:26:099 Kernel/(208534:208536): parametros[1]: 10
+[WARNING] 03:30:26:102 Kernel/(208534:208536): parametros[0]: falopa.txt
+[WARNING] 03:30:26:102 Kernel/(208534:208536): parametros[1]: 0xabcedfg
+[WARNING] 03:30:26:103 Kernel/(208534:208536): parametros[2]: 10
+[INFO] 03:30:26:109 Kernel/(208534:208536): PID: 7 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 03:30:26:109 Kernel/(208534:208536): PID: 7 - Bloqueado por: IO
+[INFO] 03:30:26:110 Kernel/(208534:208536): PID: 7 - Ejecuta IO: 5
+[INFO] 03:30:26:112 Kernel/(208534:208536): PID: 8 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:30:26:113 Kernel/(208534:208536): PID: 8 - Wait: DISCO - Instancias: -1
+[INFO] 03:30:26:114 Kernel/(208534:208536): PID: 8 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 03:30:26:114 Kernel/(208534:208536): PID: 8 - Bloqueado por: DISCO
+[INFO] 03:30:31:114 Kernel/(208534:208574): PID: 7 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 03:30:31:115 Kernel/(208534:208536): PID: 7 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:30:31:116 Kernel/(208534:208536): PID: 7 - Estado Anterior: EXEC - Estado Actual: READY
+[INFO] 03:30:31:116 Kernel/(208534:208536): PID: 7 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:30:31:125 Kernel/(208534:208536): PID: 7 - Signal: DISCO - Instancias: 0
+[INFO] 03:30:31:125 Kernel/(208534:208536): PID: 8 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 03:30:31:126 Kernel/(208534:208536): PID: 7 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 03:30:31:126 Kernel/(208534:208536): Finaliza el proceso 7 - Motivo: SUCCESS
+[INFO] 03:30:31:126 Kernel/(208534:208536): PID: 8 - Estado Anterior: READY - Estado Actual: EXEC
+[WARNING] 03:30:31:130 Kernel/(208534:208536): parametros[0]: falopa.txt
+[WARNING] 03:30:31:130 Kernel/(208534:208536): parametros[1]: 10
+[WARNING] 03:30:31:134 Kernel/(208534:208536): parametros[0]: falopa.txt
+[WARNING] 03:30:31:134 Kernel/(208534:208536): parametros[1]: 0xabcedfg
+[WARNING] 03:30:31:134 Kernel/(208534:208536): parametros[2]: 10
+[INFO] 03:30:31:137 Kernel/(208534:208536): PID: 8 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 03:30:31:137 Kernel/(208534:208536): PID: 8 - Bloqueado por: IO
+[INFO] 03:30:31:137 Kernel/(208534:208536): PID: 8 - Ejecuta IO: 5
+[INFO] 03:30:36:138 Kernel/(208534:208575): PID: 8 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 03:30:36:141 Kernel/(208534:208536): PID: 8 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:30:36:144 Kernel/(208534:208536): PID: 8 - Estado Anterior: EXEC - Estado Actual: READY
+[INFO] 03:30:36:144 Kernel/(208534:208536): PID: 8 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:30:36:151 Kernel/(208534:208536): PID: 8 - Signal: DISCO - Instancias: 1
+[INFO] 03:30:36:152 Kernel/(208534:208536): PID: 8 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 03:30:36:153 Kernel/(208534:208536): Finaliza el proceso 8 - Motivo: SUCCESS
+[WARNING] 03:38:02:528 Kernel/(209132:209132): Kernel listo para recibir a Consolas
+[WARNING] 03:38:04:088 Kernel/(209132:209138): Se conecto una consola
+[INFO] 03:38:04:101 Kernel/(209132:209138): Se crea el proceso 1 en NEW
+[INFO] 03:38:04:104 Kernel/(209132:209135): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 03:38:04:106 Kernel/(209132:209134): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:38:04:139 Kernel/(209132:209134): PID: 1 - Wait: DISCO - Instancias: 0
+[WARNING] 03:38:04:144 Kernel/(209132:209134): parametros[0]: falopa.txt
+[WARNING] 03:38:04:144 Kernel/(209132:209134): parametros[1]: 10
+[WARNING] 03:38:04:148 Kernel/(209132:209134): parametros[0]: falopa.txt
+[WARNING] 03:38:04:149 Kernel/(209132:209134): parametros[1]: 0xabcedfg
+[WARNING] 03:38:04:149 Kernel/(209132:209134): parametros[2]: 10
+[INFO] 03:38:04:151 Kernel/(209132:209134): PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 03:38:04:152 Kernel/(209132:209134): PID: 1 - Bloqueado por: IO
+[INFO] 03:38:04:152 Kernel/(209132:209134): PID: 1 - Ejecuta IO: 5
+[WARNING] 03:38:04:832 Kernel/(209132:209142): Se conecto una consola
+[INFO] 03:38:04:832 Kernel/(209132:209142): Se crea el proceso 2 en NEW
+[INFO] 03:38:04:833 Kernel/(209132:209135): PID: 2 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 03:38:04:833 Kernel/(209132:209134): PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:38:04:834 Kernel/(209132:209134): PID: 2 - Wait: DISCO - Instancias: -1
+[INFO] 03:38:04:835 Kernel/(209132:209134): PID: 2 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 03:38:04:835 Kernel/(209132:209134): PID: 2 - Bloqueado por: DISCO
+[WARNING] 03:38:05:449 Kernel/(209132:209145): Se conecto una consola
+[INFO] 03:38:05:449 Kernel/(209132:209145): Se crea el proceso 3 en NEW
+[WARNING] 03:38:06:156 Kernel/(209132:209148): Se conecto una consola
+[INFO] 03:38:06:156 Kernel/(209132:209148): Se crea el proceso 4 en NEW
+[WARNING] 03:38:06:816 Kernel/(209132:209151): Se conecto una consola
+[INFO] 03:38:06:816 Kernel/(209132:209151): Se crea el proceso 5 en NEW
+[WARNING] 03:38:07:517 Kernel/(209132:209154): Se conecto una consola
+[INFO] 03:38:07:517 Kernel/(209132:209154): Se crea el proceso 6 en NEW
+[WARNING] 03:38:08:117 Kernel/(209132:209157): Se conecto una consola
+[INFO] 03:38:08:117 Kernel/(209132:209157): Se crea el proceso 7 en NEW
+[WARNING] 03:38:08:707 Kernel/(209132:209160): Se conecto una consola
+[INFO] 03:38:08:708 Kernel/(209132:209160): Se crea el proceso 8 en NEW
+[INFO] 03:38:09:156 Kernel/(209132:209139): PID: 1 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 03:38:09:158 Kernel/(209132:209134): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:38:09:162 Kernel/(209132:209134): PID: 1 - Estado Anterior: EXEC - Estado Actual: READY
+[INFO] 03:38:09:162 Kernel/(209132:209134): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:38:09:175 Kernel/(209132:209134): PID: 1 - Signal: DISCO - Instancias: 0
+[INFO] 03:38:09:175 Kernel/(209132:209134): PID: 2 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 03:38:09:178 Kernel/(209132:209134): PID: 1 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 03:38:09:178 Kernel/(209132:209134): Finaliza el proceso 1 - Motivo: SUCCESS
+[INFO] 03:38:09:178 Kernel/(209132:209135): PID: 3 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 03:38:09:179 Kernel/(209132:209134): PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[WARNING] 03:38:09:182 Kernel/(209132:209134): parametros[0]: falopa.txt
+[WARNING] 03:38:09:183 Kernel/(209132:209134): parametros[1]: 10
+[WARNING] 03:38:09:186 Kernel/(209132:209134): parametros[0]: falopa.txt
+[WARNING] 03:38:09:186 Kernel/(209132:209134): parametros[1]: 0xabcedfg
+[WARNING] 03:38:09:186 Kernel/(209132:209134): parametros[2]: 10
+[INFO] 03:38:09:188 Kernel/(209132:209134): PID: 2 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 03:38:09:188 Kernel/(209132:209134): PID: 2 - Bloqueado por: IO
+[INFO] 03:38:09:188 Kernel/(209132:209134): PID: 2 - Ejecuta IO: 5
+[INFO] 03:38:09:188 Kernel/(209132:209134): PID: 3 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:38:09:190 Kernel/(209132:209134): PID: 3 - Wait: DISCO - Instancias: -1
+[INFO] 03:38:09:190 Kernel/(209132:209134): PID: 3 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 03:38:09:190 Kernel/(209132:209134): PID: 3 - Bloqueado por: DISCO
+[INFO] 03:38:14:191 Kernel/(209132:209161): PID: 2 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 03:38:14:193 Kernel/(209132:209134): PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:38:14:197 Kernel/(209132:209134): PID: 2 - Estado Anterior: EXEC - Estado Actual: READY
+[INFO] 03:38:14:199 Kernel/(209132:209134): PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:38:14:209 Kernel/(209132:209134): PID: 2 - Signal: DISCO - Instancias: 0
+[INFO] 03:38:14:209 Kernel/(209132:209134): PID: 3 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 03:38:14:211 Kernel/(209132:209134): PID: 2 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 03:38:14:211 Kernel/(209132:209134): Finaliza el proceso 2 - Motivo: SUCCESS
+[INFO] 03:38:14:211 Kernel/(209132:209135): PID: 4 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 03:38:14:211 Kernel/(209132:209134): PID: 3 - Estado Anterior: READY - Estado Actual: EXEC
+[WARNING] 03:38:14:214 Kernel/(209132:209134): parametros[0]: falopa.txt
+[WARNING] 03:38:14:215 Kernel/(209132:209134): parametros[1]: 10
+[WARNING] 03:38:14:219 Kernel/(209132:209134): parametros[0]: falopa.txt
+[WARNING] 03:38:14:219 Kernel/(209132:209134): parametros[1]: 0xabcedfg
+[WARNING] 03:38:14:219 Kernel/(209132:209134): parametros[2]: 10
+[INFO] 03:38:14:221 Kernel/(209132:209134): PID: 3 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 03:38:14:221 Kernel/(209132:209134): PID: 3 - Bloqueado por: IO
+[INFO] 03:38:14:221 Kernel/(209132:209134): PID: 3 - Ejecuta IO: 5
+[INFO] 03:38:14:222 Kernel/(209132:209134): PID: 4 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:38:14:223 Kernel/(209132:209134): PID: 4 - Wait: DISCO - Instancias: -1
+[INFO] 03:38:14:223 Kernel/(209132:209134): PID: 4 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 03:38:14:223 Kernel/(209132:209134): PID: 4 - Bloqueado por: DISCO
+[INFO] 03:38:19:225 Kernel/(209132:209162): PID: 3 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 03:38:19:225 Kernel/(209132:209134): PID: 3 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:38:19:226 Kernel/(209132:209134): PID: 3 - Estado Anterior: EXEC - Estado Actual: READY
+[INFO] 03:38:19:227 Kernel/(209132:209134): PID: 3 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:38:19:234 Kernel/(209132:209134): PID: 3 - Signal: DISCO - Instancias: 0
+[INFO] 03:38:19:234 Kernel/(209132:209134): PID: 4 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 03:38:19:235 Kernel/(209132:209134): PID: 3 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 03:38:19:235 Kernel/(209132:209134): Finaliza el proceso 3 - Motivo: SUCCESS
+[INFO] 03:38:19:235 Kernel/(209132:209135): PID: 5 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 03:38:19:235 Kernel/(209132:209134): PID: 4 - Estado Anterior: READY - Estado Actual: EXEC
+[WARNING] 03:38:19:237 Kernel/(209132:209134): parametros[0]: falopa.txt
+[WARNING] 03:38:19:237 Kernel/(209132:209134): parametros[1]: 10
+[WARNING] 03:38:19:240 Kernel/(209132:209134): parametros[0]: falopa.txt
+[WARNING] 03:38:19:241 Kernel/(209132:209134): parametros[1]: 0xabcedfg
+[WARNING] 03:38:19:241 Kernel/(209132:209134): parametros[2]: 10
+[INFO] 03:38:19:242 Kernel/(209132:209134): PID: 4 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 03:38:19:242 Kernel/(209132:209134): PID: 4 - Bloqueado por: IO
+[INFO] 03:38:19:242 Kernel/(209132:209134): PID: 4 - Ejecuta IO: 5
+[INFO] 03:38:19:242 Kernel/(209132:209134): PID: 5 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:38:19:243 Kernel/(209132:209134): PID: 5 - Wait: DISCO - Instancias: -1
+[INFO] 03:38:19:243 Kernel/(209132:209134): PID: 5 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 03:38:19:243 Kernel/(209132:209134): PID: 5 - Bloqueado por: DISCO
+[INFO] 03:38:24:244 Kernel/(209132:209163): PID: 4 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 03:38:24:247 Kernel/(209132:209134): PID: 4 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:38:24:253 Kernel/(209132:209134): PID: 4 - Estado Anterior: EXEC - Estado Actual: READY
+[INFO] 03:38:24:253 Kernel/(209132:209134): PID: 4 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:38:24:262 Kernel/(209132:209134): PID: 4 - Signal: DISCO - Instancias: 0
+[INFO] 03:38:24:262 Kernel/(209132:209134): PID: 5 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 03:38:24:263 Kernel/(209132:209134): PID: 4 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 03:38:24:263 Kernel/(209132:209134): Finaliza el proceso 4 - Motivo: SUCCESS
+[INFO] 03:38:24:264 Kernel/(209132:209135): PID: 6 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 03:38:24:264 Kernel/(209132:209134): PID: 5 - Estado Anterior: READY - Estado Actual: EXEC
+[WARNING] 03:38:24:267 Kernel/(209132:209134): parametros[0]: falopa.txt
+[WARNING] 03:38:24:267 Kernel/(209132:209134): parametros[1]: 10
+[WARNING] 03:38:24:270 Kernel/(209132:209134): parametros[0]: falopa.txt
+[WARNING] 03:38:24:270 Kernel/(209132:209134): parametros[1]: 0xabcedfg
+[WARNING] 03:38:24:270 Kernel/(209132:209134): parametros[2]: 10
+[INFO] 03:38:24:272 Kernel/(209132:209134): PID: 5 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 03:38:24:272 Kernel/(209132:209134): PID: 5 - Bloqueado por: IO
+[INFO] 03:38:24:272 Kernel/(209132:209134): PID: 5 - Ejecuta IO: 5
+[INFO] 03:38:24:272 Kernel/(209132:209134): PID: 6 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:38:24:278 Kernel/(209132:209134): PID: 6 - Wait: DISCO - Instancias: -1
+[INFO] 03:38:24:278 Kernel/(209132:209134): PID: 6 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 03:38:24:278 Kernel/(209132:209134): PID: 6 - Bloqueado por: DISCO
+[INFO] 03:38:29:281 Kernel/(209132:209164): PID: 5 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 03:38:29:284 Kernel/(209132:209134): PID: 5 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:38:29:287 Kernel/(209132:209134): PID: 5 - Estado Anterior: EXEC - Estado Actual: READY
+[INFO] 03:38:29:287 Kernel/(209132:209134): PID: 5 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:38:29:296 Kernel/(209132:209134): PID: 5 - Signal: DISCO - Instancias: 0
+[INFO] 03:38:29:296 Kernel/(209132:209134): PID: 6 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 03:38:29:297 Kernel/(209132:209134): PID: 5 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 03:38:29:297 Kernel/(209132:209134): Finaliza el proceso 5 - Motivo: SUCCESS
+[INFO] 03:38:29:297 Kernel/(209132:209135): PID: 7 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 03:38:29:297 Kernel/(209132:209134): PID: 6 - Estado Anterior: READY - Estado Actual: EXEC
+[WARNING] 03:38:29:299 Kernel/(209132:209134): parametros[0]: falopa.txt
+[WARNING] 03:38:29:299 Kernel/(209132:209134): parametros[1]: 10
+[WARNING] 03:38:29:302 Kernel/(209132:209134): parametros[0]: falopa.txt
+[WARNING] 03:38:29:302 Kernel/(209132:209134): parametros[1]: 0xabcedfg
+[WARNING] 03:38:29:302 Kernel/(209132:209134): parametros[2]: 10
+[INFO] 03:38:29:304 Kernel/(209132:209134): PID: 6 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 03:38:29:304 Kernel/(209132:209134): PID: 6 - Bloqueado por: IO
+[INFO] 03:38:29:304 Kernel/(209132:209134): PID: 6 - Ejecuta IO: 5
+[INFO] 03:38:29:304 Kernel/(209132:209134): PID: 7 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:38:29:305 Kernel/(209132:209134): PID: 7 - Wait: DISCO - Instancias: -1
+[INFO] 03:38:29:305 Kernel/(209132:209134): PID: 7 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 03:38:29:305 Kernel/(209132:209134): PID: 7 - Bloqueado por: DISCO
+[INFO] 03:38:34:305 Kernel/(209132:209166): PID: 6 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 03:38:34:306 Kernel/(209132:209134): PID: 6 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:38:34:309 Kernel/(209132:209134): PID: 6 - Estado Anterior: EXEC - Estado Actual: READY
+[INFO] 03:38:34:309 Kernel/(209132:209134): PID: 6 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:38:34:318 Kernel/(209132:209134): PID: 6 - Signal: DISCO - Instancias: 0
+[INFO] 03:38:34:318 Kernel/(209132:209134): PID: 7 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 03:38:34:319 Kernel/(209132:209134): PID: 6 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 03:38:34:319 Kernel/(209132:209134): Finaliza el proceso 6 - Motivo: SUCCESS
+[INFO] 03:38:34:320 Kernel/(209132:209135): PID: 8 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 03:38:34:320 Kernel/(209132:209134): PID: 7 - Estado Anterior: READY - Estado Actual: EXEC
+[WARNING] 03:38:34:323 Kernel/(209132:209134): parametros[0]: falopa.txt
+[WARNING] 03:38:34:324 Kernel/(209132:209134): parametros[1]: 10
+[WARNING] 03:38:34:331 Kernel/(209132:209134): parametros[0]: falopa.txt
+[WARNING] 03:38:34:331 Kernel/(209132:209134): parametros[1]: 0xabcedfg
+[WARNING] 03:38:34:331 Kernel/(209132:209134): parametros[2]: 10
+[INFO] 03:38:34:332 Kernel/(209132:209134): PID: 7 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 03:38:34:333 Kernel/(209132:209134): PID: 7 - Bloqueado por: IO
+[INFO] 03:38:34:333 Kernel/(209132:209134): PID: 7 - Ejecuta IO: 5
+[INFO] 03:38:34:333 Kernel/(209132:209134): PID: 8 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:38:34:334 Kernel/(209132:209134): PID: 8 - Wait: DISCO - Instancias: -1
+[INFO] 03:38:34:334 Kernel/(209132:209134): PID: 8 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 03:38:34:335 Kernel/(209132:209134): PID: 8 - Bloqueado por: DISCO
+[INFO] 03:38:39:335 Kernel/(209132:209167): PID: 7 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 03:38:39:336 Kernel/(209132:209134): PID: 7 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:38:39:337 Kernel/(209132:209134): PID: 7 - Estado Anterior: EXEC - Estado Actual: READY
+[INFO] 03:38:39:338 Kernel/(209132:209134): PID: 7 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:38:39:346 Kernel/(209132:209134): PID: 7 - Signal: DISCO - Instancias: 0
+[INFO] 03:38:39:346 Kernel/(209132:209134): PID: 8 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 03:38:39:348 Kernel/(209132:209134): PID: 7 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 03:38:39:348 Kernel/(209132:209134): Finaliza el proceso 7 - Motivo: SUCCESS
+[INFO] 03:38:39:349 Kernel/(209132:209134): PID: 8 - Estado Anterior: READY - Estado Actual: EXEC
+[WARNING] 03:38:39:353 Kernel/(209132:209134): parametros[0]: falopa.txt
+[WARNING] 03:38:39:353 Kernel/(209132:209134): parametros[1]: 10
+[WARNING] 03:38:39:356 Kernel/(209132:209134): parametros[0]: falopa.txt
+[WARNING] 03:38:39:356 Kernel/(209132:209134): parametros[1]: 0xabcedfg
+[WARNING] 03:38:39:357 Kernel/(209132:209134): parametros[2]: 10
+[INFO] 03:38:39:359 Kernel/(209132:209134): PID: 8 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 03:38:39:359 Kernel/(209132:209134): PID: 8 - Bloqueado por: IO
+[INFO] 03:38:39:359 Kernel/(209132:209134): PID: 8 - Ejecuta IO: 5
+[INFO] 03:38:44:361 Kernel/(209132:209168): PID: 8 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 03:38:44:363 Kernel/(209132:209134): PID: 8 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:38:44:370 Kernel/(209132:209134): PID: 8 - Estado Anterior: EXEC - Estado Actual: READY
+[INFO] 03:38:44:373 Kernel/(209132:209134): PID: 8 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:38:44:387 Kernel/(209132:209134): PID: 8 - Signal: DISCO - Instancias: 1
+[INFO] 03:38:44:390 Kernel/(209132:209134): PID: 8 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 03:38:44:391 Kernel/(209132:209134): Finaliza el proceso 8 - Motivo: SUCCESS
+[WARNING] 03:45:12:731 Kernel/(209489:209489): Kernel listo para recibir a Consolas
+[WARNING] 03:45:14:461 Kernel/(209489:209495): Se conecto una consola
+[INFO] 03:45:14:470 Kernel/(209489:209495): Se crea el proceso 1 en NEW
+[INFO] 03:45:14:473 Kernel/(209489:209492): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 03:45:14:475 Kernel/(209489:209491): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:45:14:516 Kernel/(209489:209491): PID: 1 - Wait: DISCO - Instancias: 0
+[WARNING] 03:47:36:902 Kernel/(209576:209576): Kernel listo para recibir a Consolas
+[WARNING] 03:47:38:144 Kernel/(209576:209582): Se conecto una consola
+[INFO] 03:47:38:152 Kernel/(209576:209582): Se crea el proceso 1 en NEW
+[INFO] 03:47:38:156 Kernel/(209576:209579): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 03:47:38:157 Kernel/(209576:209578): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:47:38:193 Kernel/(209576:209578): PID: 1 - Wait: DISCO - Instancias: 0
+[WARNING] 03:47:38:199 Kernel/(209576:209578): parametros[0]: falopa.txt
+[WARNING] 03:47:38:200 Kernel/(209576:209578): parametros[1]: 10
+[WARNING] 03:47:38:203 Kernel/(209576:209578): parametros[0]: falopa.txt
+[WARNING] 03:47:38:203 Kernel/(209576:209578): parametros[1]: 0xabcedfg
+[WARNING] 03:47:38:204 Kernel/(209576:209578): parametros[2]: 10
+[INFO] 03:47:38:206 Kernel/(209576:209578): PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 03:47:38:208 Kernel/(209576:209578): PID: 1 - Bloqueado por: IO
+[INFO] 03:47:38:209 Kernel/(209576:209578): PID: 1 - Ejecuta IO: 5
+[WARNING] 03:47:38:819 Kernel/(209576:209586): Se conecto una consola
+[INFO] 03:47:38:820 Kernel/(209576:209586): Se crea el proceso 2 en NEW
+[INFO] 03:47:38:820 Kernel/(209576:209579): PID: 2 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 03:47:38:820 Kernel/(209576:209578): PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:47:38:822 Kernel/(209576:209578): PID: 2 - Wait: DISCO - Instancias: -1
+[INFO] 03:47:38:822 Kernel/(209576:209578): PID: 2 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 03:47:38:823 Kernel/(209576:209578): PID: 2 - Bloqueado por: DISCO
+[WARNING] 03:47:39:544 Kernel/(209576:209589): Se conecto una consola
+[INFO] 03:47:39:544 Kernel/(209576:209589): Se crea el proceso 3 en NEW
+[WARNING] 03:47:40:283 Kernel/(209576:209592): Se conecto una consola
+[INFO] 03:47:40:283 Kernel/(209576:209592): Se crea el proceso 4 en NEW
+[WARNING] 03:47:40:958 Kernel/(209576:209595): Se conecto una consola
+[INFO] 03:47:40:959 Kernel/(209576:209595): Se crea el proceso 5 en NEW
+[WARNING] 03:47:41:670 Kernel/(209576:209598): Se conecto una consola
+[INFO] 03:47:41:670 Kernel/(209576:209598): Se crea el proceso 6 en NEW
+[WARNING] 03:47:42:342 Kernel/(209576:209601): Se conecto una consola
+[INFO] 03:47:42:342 Kernel/(209576:209601): Se crea el proceso 7 en NEW
+[WARNING] 03:47:42:918 Kernel/(209576:209604): Se conecto una consola
+[INFO] 03:47:42:919 Kernel/(209576:209604): Se crea el proceso 8 en NEW
+[INFO] 03:47:43:211 Kernel/(209576:209583): PID: 1 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 03:47:43:212 Kernel/(209576:209578): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:47:43:214 Kernel/(209576:209578): PID: 1 - Estado Anterior: EXEC - Estado Actual: READY
+[INFO] 03:47:43:214 Kernel/(209576:209578): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:47:43:227 Kernel/(209576:209578): PID: 1 - Signal: DISCO - Instancias: 0
+[INFO] 03:47:43:227 Kernel/(209576:209578): PID: 2 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 03:47:43:229 Kernel/(209576:209578): PID: 1 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 03:47:43:230 Kernel/(209576:209578): Finaliza el proceso 1 - Motivo: SUCCESS
+[INFO] 03:47:43:230 Kernel/(209576:209579): PID: 3 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 03:47:43:231 Kernel/(209576:209578): PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[WARNING] 03:47:43:234 Kernel/(209576:209578): parametros[0]: falopa.txt
+[WARNING] 03:47:43:234 Kernel/(209576:209578): parametros[1]: 10
+[WARNING] 03:47:43:238 Kernel/(209576:209578): parametros[0]: falopa.txt
+[WARNING] 03:47:43:238 Kernel/(209576:209578): parametros[1]: 0xabcedfg
+[WARNING] 03:47:43:238 Kernel/(209576:209578): parametros[2]: 10
+[INFO] 03:47:43:239 Kernel/(209576:209578): PID: 2 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 03:47:43:240 Kernel/(209576:209578): PID: 2 - Bloqueado por: IO
+[INFO] 03:47:43:240 Kernel/(209576:209578): PID: 2 - Ejecuta IO: 5
+[INFO] 03:47:43:240 Kernel/(209576:209578): PID: 3 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:47:43:241 Kernel/(209576:209578): PID: 3 - Wait: DISCO - Instancias: -1
+[INFO] 03:47:43:242 Kernel/(209576:209578): PID: 3 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 03:47:43:242 Kernel/(209576:209578): PID: 3 - Bloqueado por: DISCO
+[INFO] 03:47:48:242 Kernel/(209576:209605): PID: 2 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 03:47:48:242 Kernel/(209576:209578): PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:47:48:246 Kernel/(209576:209578): PID: 2 - Estado Anterior: EXEC - Estado Actual: READY
+[INFO] 03:47:48:249 Kernel/(209576:209578): PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:47:48:257 Kernel/(209576:209578): PID: 2 - Signal: DISCO - Instancias: 0
+[INFO] 03:47:48:258 Kernel/(209576:209578): PID: 3 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 03:47:48:259 Kernel/(209576:209578): PID: 2 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 03:47:48:259 Kernel/(209576:209578): Finaliza el proceso 2 - Motivo: SUCCESS
+[INFO] 03:47:48:260 Kernel/(209576:209579): PID: 4 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 03:47:48:260 Kernel/(209576:209578): PID: 3 - Estado Anterior: READY - Estado Actual: EXEC
+[WARNING] 03:47:48:263 Kernel/(209576:209578): parametros[0]: falopa.txt
+[WARNING] 03:47:48:263 Kernel/(209576:209578): parametros[1]: 10
+[WARNING] 03:47:48:266 Kernel/(209576:209578): parametros[0]: falopa.txt
+[WARNING] 03:47:48:266 Kernel/(209576:209578): parametros[1]: 0xabcedfg
+[WARNING] 03:47:48:266 Kernel/(209576:209578): parametros[2]: 10
+[INFO] 03:47:48:268 Kernel/(209576:209578): PID: 3 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 03:47:48:268 Kernel/(209576:209578): PID: 3 - Bloqueado por: IO
+[INFO] 03:47:48:268 Kernel/(209576:209578): PID: 3 - Ejecuta IO: 5
+[INFO] 03:47:48:268 Kernel/(209576:209578): PID: 4 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:47:48:269 Kernel/(209576:209578): PID: 4 - Wait: DISCO - Instancias: -1
+[INFO] 03:47:48:270 Kernel/(209576:209578): PID: 4 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 03:47:48:270 Kernel/(209576:209578): PID: 4 - Bloqueado por: DISCO
+[INFO] 03:47:53:271 Kernel/(209576:209606): PID: 3 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 03:47:53:273 Kernel/(209576:209578): PID: 3 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:47:53:279 Kernel/(209576:209578): PID: 3 - Estado Anterior: EXEC - Estado Actual: READY
+[INFO] 03:47:53:281 Kernel/(209576:209578): PID: 3 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:47:53:297 Kernel/(209576:209578): PID: 3 - Signal: DISCO - Instancias: 0
+[INFO] 03:47:53:297 Kernel/(209576:209578): PID: 4 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 03:47:53:300 Kernel/(209576:209578): PID: 3 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 03:47:53:301 Kernel/(209576:209578): Finaliza el proceso 3 - Motivo: SUCCESS
+[INFO] 03:47:53:301 Kernel/(209576:209579): PID: 5 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 03:47:53:302 Kernel/(209576:209578): PID: 4 - Estado Anterior: READY - Estado Actual: EXEC
+[WARNING] 03:47:53:306 Kernel/(209576:209578): parametros[0]: falopa.txt
+[WARNING] 03:47:53:307 Kernel/(209576:209578): parametros[1]: 10
+[WARNING] 03:47:53:319 Kernel/(209576:209578): parametros[0]: falopa.txt
+[WARNING] 03:47:53:319 Kernel/(209576:209578): parametros[1]: 0xabcedfg
+[WARNING] 03:47:53:319 Kernel/(209576:209578): parametros[2]: 10
+[INFO] 03:47:53:321 Kernel/(209576:209578): PID: 4 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 03:47:53:321 Kernel/(209576:209578): PID: 4 - Bloqueado por: IO
+[INFO] 03:47:53:321 Kernel/(209576:209578): PID: 4 - Ejecuta IO: 5
+[INFO] 03:47:53:322 Kernel/(209576:209578): PID: 5 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:47:53:323 Kernel/(209576:209578): PID: 5 - Wait: DISCO - Instancias: -1
+[INFO] 03:47:53:323 Kernel/(209576:209578): PID: 5 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 03:47:53:323 Kernel/(209576:209578): PID: 5 - Bloqueado por: DISCO
+[INFO] 03:47:58:324 Kernel/(209576:209607): PID: 4 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 03:47:58:324 Kernel/(209576:209578): PID: 4 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:47:58:329 Kernel/(209576:209578): PID: 4 - Estado Anterior: EXEC - Estado Actual: READY
+[INFO] 03:47:58:330 Kernel/(209576:209578): PID: 4 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:47:58:338 Kernel/(209576:209578): PID: 4 - Signal: DISCO - Instancias: 0
+[INFO] 03:47:58:339 Kernel/(209576:209578): PID: 5 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 03:47:58:340 Kernel/(209576:209578): PID: 4 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 03:47:58:340 Kernel/(209576:209578): Finaliza el proceso 4 - Motivo: SUCCESS
+[INFO] 03:47:58:340 Kernel/(209576:209579): PID: 6 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 03:47:58:340 Kernel/(209576:209578): PID: 5 - Estado Anterior: READY - Estado Actual: EXEC
+[WARNING] 03:47:58:344 Kernel/(209576:209578): parametros[0]: falopa.txt
+[WARNING] 03:47:58:344 Kernel/(209576:209578): parametros[1]: 10
+[WARNING] 03:47:58:350 Kernel/(209576:209578): parametros[0]: falopa.txt
+[WARNING] 03:47:58:350 Kernel/(209576:209578): parametros[1]: 0xabcedfg
+[WARNING] 03:47:58:350 Kernel/(209576:209578): parametros[2]: 10
+[INFO] 03:47:58:352 Kernel/(209576:209578): PID: 5 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 03:47:58:352 Kernel/(209576:209578): PID: 5 - Bloqueado por: IO
+[INFO] 03:47:58:352 Kernel/(209576:209578): PID: 5 - Ejecuta IO: 5
+[INFO] 03:47:58:353 Kernel/(209576:209578): PID: 6 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:47:58:354 Kernel/(209576:209578): PID: 6 - Wait: DISCO - Instancias: -1
+[INFO] 03:47:58:354 Kernel/(209576:209578): PID: 6 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 03:47:58:354 Kernel/(209576:209578): PID: 6 - Bloqueado por: DISCO
+[INFO] 03:48:03:355 Kernel/(209576:209608): PID: 5 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 03:48:03:356 Kernel/(209576:209578): PID: 5 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:48:03:357 Kernel/(209576:209578): PID: 5 - Estado Anterior: EXEC - Estado Actual: READY
+[INFO] 03:48:03:357 Kernel/(209576:209578): PID: 5 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:48:03:367 Kernel/(209576:209578): PID: 5 - Signal: DISCO - Instancias: 0
+[INFO] 03:48:03:367 Kernel/(209576:209578): PID: 6 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 03:48:03:368 Kernel/(209576:209578): PID: 5 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 03:48:03:368 Kernel/(209576:209578): Finaliza el proceso 5 - Motivo: SUCCESS
+[INFO] 03:48:03:368 Kernel/(209576:209579): PID: 7 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 03:48:03:369 Kernel/(209576:209578): PID: 6 - Estado Anterior: READY - Estado Actual: EXEC
+[WARNING] 03:48:03:372 Kernel/(209576:209578): parametros[0]: falopa.txt
+[WARNING] 03:48:03:372 Kernel/(209576:209578): parametros[1]: 10
+[WARNING] 03:48:03:376 Kernel/(209576:209578): parametros[0]: falopa.txt
+[WARNING] 03:48:03:377 Kernel/(209576:209578): parametros[1]: 0xabcedfg
+[WARNING] 03:48:03:377 Kernel/(209576:209578): parametros[2]: 10
+[INFO] 03:48:03:379 Kernel/(209576:209578): PID: 6 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 03:48:03:380 Kernel/(209576:209578): PID: 6 - Bloqueado por: IO
+[INFO] 03:48:03:381 Kernel/(209576:209578): PID: 6 - Ejecuta IO: 5
+[INFO] 03:48:03:381 Kernel/(209576:209578): PID: 7 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:48:03:392 Kernel/(209576:209578): PID: 7 - Wait: DISCO - Instancias: -1
+[INFO] 03:48:03:392 Kernel/(209576:209578): PID: 7 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 03:48:03:392 Kernel/(209576:209578): PID: 7 - Bloqueado por: DISCO
+[INFO] 03:48:08:392 Kernel/(209576:209609): PID: 6 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 03:48:08:393 Kernel/(209576:209578): PID: 6 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:48:08:394 Kernel/(209576:209578): PID: 6 - Estado Anterior: EXEC - Estado Actual: READY
+[INFO] 03:48:08:394 Kernel/(209576:209578): PID: 6 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:48:08:402 Kernel/(209576:209578): PID: 6 - Signal: DISCO - Instancias: 0
+[INFO] 03:48:08:402 Kernel/(209576:209578): PID: 7 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 03:48:08:404 Kernel/(209576:209578): PID: 6 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 03:48:08:404 Kernel/(209576:209578): Finaliza el proceso 6 - Motivo: SUCCESS
+[INFO] 03:48:08:405 Kernel/(209576:209579): PID: 8 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 03:48:08:405 Kernel/(209576:209578): PID: 7 - Estado Anterior: READY - Estado Actual: EXEC
+[WARNING] 03:48:08:409 Kernel/(209576:209578): parametros[0]: falopa.txt
+[WARNING] 03:48:08:409 Kernel/(209576:209578): parametros[1]: 10
+[WARNING] 03:48:08:415 Kernel/(209576:209578): parametros[0]: falopa.txt
+[WARNING] 03:48:08:415 Kernel/(209576:209578): parametros[1]: 0xabcedfg
+[WARNING] 03:48:08:415 Kernel/(209576:209578): parametros[2]: 10
+[INFO] 03:48:08:417 Kernel/(209576:209578): PID: 7 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 03:48:08:417 Kernel/(209576:209578): PID: 7 - Bloqueado por: IO
+[INFO] 03:48:08:417 Kernel/(209576:209578): PID: 7 - Ejecuta IO: 5
+[INFO] 03:48:08:418 Kernel/(209576:209578): PID: 8 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:48:08:419 Kernel/(209576:209578): PID: 8 - Wait: DISCO - Instancias: -1
+[INFO] 03:48:08:419 Kernel/(209576:209578): PID: 8 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 03:48:08:420 Kernel/(209576:209578): PID: 8 - Bloqueado por: DISCO
+[INFO] 03:48:13:421 Kernel/(209576:209610): PID: 7 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 03:48:13:422 Kernel/(209576:209578): PID: 7 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:48:13:424 Kernel/(209576:209578): PID: 7 - Estado Anterior: EXEC - Estado Actual: READY
+[INFO] 03:48:13:425 Kernel/(209576:209578): PID: 7 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:48:13:434 Kernel/(209576:209578): PID: 7 - Signal: DISCO - Instancias: 0
+[INFO] 03:48:13:434 Kernel/(209576:209578): PID: 8 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 03:48:13:436 Kernel/(209576:209578): PID: 7 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 03:48:13:436 Kernel/(209576:209578): Finaliza el proceso 7 - Motivo: SUCCESS
+[INFO] 03:48:13:436 Kernel/(209576:209578): PID: 8 - Estado Anterior: READY - Estado Actual: EXEC
+[WARNING] 03:48:13:439 Kernel/(209576:209578): parametros[0]: falopa.txt
+[WARNING] 03:48:13:439 Kernel/(209576:209578): parametros[1]: 10
+[WARNING] 03:48:13:442 Kernel/(209576:209578): parametros[0]: falopa.txt
+[WARNING] 03:48:13:443 Kernel/(209576:209578): parametros[1]: 0xabcedfg
+[WARNING] 03:48:13:443 Kernel/(209576:209578): parametros[2]: 10
+[INFO] 03:48:13:444 Kernel/(209576:209578): PID: 8 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 03:48:13:445 Kernel/(209576:209578): PID: 8 - Bloqueado por: IO
+[INFO] 03:48:13:445 Kernel/(209576:209578): PID: 8 - Ejecuta IO: 5
+[INFO] 03:48:18:445 Kernel/(209576:209611): PID: 8 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 03:48:18:446 Kernel/(209576:209578): PID: 8 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:48:18:448 Kernel/(209576:209578): PID: 8 - Estado Anterior: EXEC - Estado Actual: READY
+[INFO] 03:48:18:448 Kernel/(209576:209578): PID: 8 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:48:18:457 Kernel/(209576:209578): PID: 8 - Signal: DISCO - Instancias: 1
+[INFO] 03:48:18:459 Kernel/(209576:209578): PID: 8 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 03:48:18:460 Kernel/(209576:209578): Finaliza el proceso 8 - Motivo: SUCCESS
+[WARNING] 03:49:16:622 Kernel/(209742:209742): Kernel listo para recibir a Consolas
+[WARNING] 03:49:18:044 Kernel/(209742:209748): Se conecto una consola
+[INFO] 03:49:18:053 Kernel/(209742:209748): Se crea el proceso 1 en NEW
+[INFO] 03:49:18:057 Kernel/(209742:209745): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 03:49:18:059 Kernel/(209742:209744): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:49:18:095 Kernel/(209742:209744): PID: 1 - Wait: DISCO - Instancias: 0
+[WARNING] 03:49:18:098 Kernel/(209742:209744): parametros[0]: falopa.txt
+[WARNING] 03:49:18:098 Kernel/(209742:209744): parametros[1]: 10
+[WARNING] 03:49:18:102 Kernel/(209742:209744): parametros[0]: falopa.txt
+[WARNING] 03:49:18:102 Kernel/(209742:209744): parametros[1]: 0xabcedfg
+[WARNING] 03:49:18:102 Kernel/(209742:209744): parametros[2]: 10
+[INFO] 03:49:18:104 Kernel/(209742:209744): PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 03:49:18:105 Kernel/(209742:209744): PID: 1 - Bloqueado por: IO
+[INFO] 03:49:18:108 Kernel/(209742:209744): PID: 1 - Ejecuta IO: 5
+[WARNING] 03:49:18:784 Kernel/(209742:209752): Se conecto una consola
+[INFO] 03:49:18:784 Kernel/(209742:209752): Se crea el proceso 2 en NEW
+[INFO] 03:49:18:785 Kernel/(209742:209745): PID: 2 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 03:49:18:785 Kernel/(209742:209744): PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:49:18:786 Kernel/(209742:209744): PID: 2 - Wait: DISCO - Instancias: -1
+[INFO] 03:49:18:790 Kernel/(209742:209744): PID: 2 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 03:49:18:790 Kernel/(209742:209744): PID: 2 - Bloqueado por: DISCO
+[WARNING] 03:49:19:378 Kernel/(209742:209755): Se conecto una consola
+[INFO] 03:49:19:378 Kernel/(209742:209755): Se crea el proceso 3 en NEW
+[WARNING] 03:49:20:091 Kernel/(209742:209758): Se conecto una consola
+[INFO] 03:49:20:091 Kernel/(209742:209758): Se crea el proceso 4 en NEW
+[WARNING] 03:49:21:939 Kernel/(209742:209761): Se conecto una consola
+[INFO] 03:49:21:940 Kernel/(209742:209761): Se crea el proceso 5 en NEW
+[WARNING] 03:49:22:595 Kernel/(209742:209764): Se conecto una consola
+[INFO] 03:49:22:596 Kernel/(209742:209764): Se crea el proceso 6 en NEW
+[INFO] 03:49:23:113 Kernel/(209742:209749): PID: 1 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 03:49:23:115 Kernel/(209742:209744): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:49:23:118 Kernel/(209742:209744): PID: 1 - Estado Anterior: EXEC - Estado Actual: READY
+[INFO] 03:49:23:119 Kernel/(209742:209744): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:49:23:138 Kernel/(209742:209744): PID: 1 - Signal: DISCO - Instancias: 0
+[INFO] 03:49:23:139 Kernel/(209742:209744): PID: 2 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 03:49:23:141 Kernel/(209742:209744): PID: 1 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 03:49:23:142 Kernel/(209742:209744): Finaliza el proceso 1 - Motivo: SUCCESS
+[INFO] 03:49:23:142 Kernel/(209742:209745): PID: 3 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 03:49:23:142 Kernel/(209742:209744): PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[WARNING] 03:49:23:144 Kernel/(209742:209744): parametros[0]: falopa.txt
+[WARNING] 03:49:23:145 Kernel/(209742:209744): parametros[1]: 10
+[WARNING] 03:49:23:148 Kernel/(209742:209744): parametros[0]: falopa.txt
+[WARNING] 03:49:23:148 Kernel/(209742:209744): parametros[1]: 0xabcedfg
+[WARNING] 03:49:23:148 Kernel/(209742:209744): parametros[2]: 10
+[INFO] 03:49:23:149 Kernel/(209742:209744): PID: 2 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 03:49:23:150 Kernel/(209742:209744): PID: 2 - Bloqueado por: IO
+[INFO] 03:49:23:150 Kernel/(209742:209744): PID: 2 - Ejecuta IO: 5
+[INFO] 03:49:23:150 Kernel/(209742:209744): PID: 3 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:49:23:152 Kernel/(209742:209744): PID: 3 - Wait: DISCO - Instancias: -1
+[INFO] 03:49:23:152 Kernel/(209742:209744): PID: 3 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 03:49:23:155 Kernel/(209742:209744): PID: 3 - Bloqueado por: DISCO
+[WARNING] 03:49:23:394 Kernel/(209742:209768): Se conecto una consola
+[INFO] 03:49:23:394 Kernel/(209742:209768): Se crea el proceso 7 en NEW
+[WARNING] 03:49:24:019 Kernel/(209742:209771): Se conecto una consola
+[INFO] 03:49:24:020 Kernel/(209742:209771): Se crea el proceso 8 en NEW
+[INFO] 03:49:28:156 Kernel/(209742:209765): PID: 2 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 03:49:28:156 Kernel/(209742:209744): PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:49:28:157 Kernel/(209742:209744): PID: 2 - Estado Anterior: EXEC - Estado Actual: READY
+[INFO] 03:49:28:159 Kernel/(209742:209744): PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:49:28:170 Kernel/(209742:209744): PID: 2 - Signal: DISCO - Instancias: 0
+[INFO] 03:49:28:170 Kernel/(209742:209744): PID: 3 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 03:49:28:172 Kernel/(209742:209744): PID: 2 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 03:49:28:172 Kernel/(209742:209744): Finaliza el proceso 2 - Motivo: SUCCESS
+[INFO] 03:49:28:172 Kernel/(209742:209745): PID: 4 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 03:49:28:172 Kernel/(209742:209744): PID: 3 - Estado Anterior: READY - Estado Actual: EXEC
+[WARNING] 03:49:28:175 Kernel/(209742:209744): parametros[0]: falopa.txt
+[WARNING] 03:49:28:175 Kernel/(209742:209744): parametros[1]: 10
+[WARNING] 03:49:28:179 Kernel/(209742:209744): parametros[0]: falopa.txt
+[WARNING] 03:49:28:179 Kernel/(209742:209744): parametros[1]: 0xabcedfg
+[WARNING] 03:49:28:179 Kernel/(209742:209744): parametros[2]: 10
+[INFO] 03:49:28:181 Kernel/(209742:209744): PID: 3 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 03:49:28:181 Kernel/(209742:209744): PID: 3 - Bloqueado por: IO
+[INFO] 03:49:28:181 Kernel/(209742:209744): PID: 3 - Ejecuta IO: 5
+[INFO] 03:49:28:181 Kernel/(209742:209744): PID: 4 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:49:28:183 Kernel/(209742:209744): PID: 4 - Wait: DISCO - Instancias: -1
+[INFO] 03:49:28:183 Kernel/(209742:209744): PID: 4 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 03:49:28:183 Kernel/(209742:209744): PID: 4 - Bloqueado por: DISCO
+[INFO] 03:49:33:184 Kernel/(209742:209772): PID: 3 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 03:49:33:184 Kernel/(209742:209744): PID: 3 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:49:33:185 Kernel/(209742:209744): PID: 3 - Estado Anterior: EXEC - Estado Actual: READY
+[INFO] 03:49:33:185 Kernel/(209742:209744): PID: 3 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:49:33:192 Kernel/(209742:209744): PID: 3 - Signal: DISCO - Instancias: 0
+[INFO] 03:49:33:192 Kernel/(209742:209744): PID: 4 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 03:49:33:194 Kernel/(209742:209744): PID: 3 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 03:49:33:194 Kernel/(209742:209744): Finaliza el proceso 3 - Motivo: SUCCESS
+[INFO] 03:49:33:194 Kernel/(209742:209745): PID: 5 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 03:49:33:194 Kernel/(209742:209744): PID: 4 - Estado Anterior: READY - Estado Actual: EXEC
+[WARNING] 03:49:33:196 Kernel/(209742:209744): parametros[0]: falopa.txt
+[WARNING] 03:49:33:196 Kernel/(209742:209744): parametros[1]: 10
+[WARNING] 03:49:33:203 Kernel/(209742:209744): parametros[0]: falopa.txt
+[WARNING] 03:49:33:203 Kernel/(209742:209744): parametros[1]: 0xabcedfg
+[WARNING] 03:49:33:203 Kernel/(209742:209744): parametros[2]: 10
+[INFO] 03:49:33:205 Kernel/(209742:209744): PID: 4 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 03:49:33:205 Kernel/(209742:209744): PID: 4 - Bloqueado por: IO
+[INFO] 03:49:33:205 Kernel/(209742:209744): PID: 4 - Ejecuta IO: 5
+[INFO] 03:49:33:205 Kernel/(209742:209744): PID: 5 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:49:33:206 Kernel/(209742:209744): PID: 5 - Wait: DISCO - Instancias: -1
+[INFO] 03:49:33:206 Kernel/(209742:209744): PID: 5 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 03:49:33:207 Kernel/(209742:209744): PID: 5 - Bloqueado por: DISCO
+[ERROR] 03:50:35:919 Kernel/(209780:209780): Kernel no pudo conectarse a CPU
+[WARNING] 03:51:45:938 Kernel/(209788:209788): Kernel listo para recibir a Consolas
+[WARNING] 03:51:47:474 Kernel/(209788:209794): Se conecto una consola
+[INFO] 03:51:47:474 Kernel/(209788:209794): Se crea el proceso 1 en NEW
+[INFO] 03:51:47:475 Kernel/(209788:209791): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 03:51:47:475 Kernel/(209788:209790): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:51:47:475 Kernel/(209788:209790): PID: 1 - Wait: DISCO - Instancias: 0
+[WARNING] 03:51:47:475 Kernel/(209788:209790): parametros[0]: falopa.txt
+[WARNING] 03:51:47:475 Kernel/(209788:209790): parametros[1]: 10
+[WARNING] 03:51:47:475 Kernel/(209788:209790): parametros[0]: falopa.txt
+[WARNING] 03:51:47:475 Kernel/(209788:209790): parametros[1]: 0xabcedfg
+[WARNING] 03:51:47:475 Kernel/(209788:209790): parametros[2]: 10
+[INFO] 03:51:47:475 Kernel/(209788:209790): PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 03:51:47:475 Kernel/(209788:209790): PID: 1 - Bloqueado por: IO
+[INFO] 03:51:47:475 Kernel/(209788:209790): PID: 1 - Ejecuta IO: 5
+[WARNING] 03:51:48:209 Kernel/(209788:209798): Se conecto una consola
+[INFO] 03:51:48:209 Kernel/(209788:209798): Se crea el proceso 2 en NEW
+[INFO] 03:51:48:209 Kernel/(209788:209791): PID: 2 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 03:51:48:209 Kernel/(209788:209790): PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:51:48:209 Kernel/(209788:209790): PID: 2 - Wait: DISCO - Instancias: -1
+[INFO] 03:51:48:209 Kernel/(209788:209790): PID: 2 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 03:51:48:209 Kernel/(209788:209790): PID: 2 - Bloqueado por: DISCO
+[WARNING] 03:51:48:881 Kernel/(209788:209801): Se conecto una consola
+[INFO] 03:51:48:881 Kernel/(209788:209801): Se crea el proceso 3 en NEW
+[WARNING] 03:51:49:497 Kernel/(209788:209804): Se conecto una consola
+[INFO] 03:51:49:497 Kernel/(209788:209804): Se crea el proceso 4 en NEW
+[WARNING] 03:51:50:178 Kernel/(209788:209807): Se conecto una consola
+[INFO] 03:51:50:178 Kernel/(209788:209807): Se crea el proceso 5 en NEW
+[WARNING] 03:51:50:873 Kernel/(209788:209810): Se conecto una consola
+[INFO] 03:51:50:874 Kernel/(209788:209810): Se crea el proceso 6 en NEW
+[WARNING] 03:51:51:482 Kernel/(209788:209813): Se conecto una consola
+[INFO] 03:51:51:482 Kernel/(209788:209813): Se crea el proceso 7 en NEW
+[WARNING] 03:51:52:034 Kernel/(209788:209816): Se conecto una consola
+[INFO] 03:51:52:034 Kernel/(209788:209816): Se crea el proceso 8 en NEW
+[INFO] 03:51:52:476 Kernel/(209788:209795): PID: 1 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 03:51:52:476 Kernel/(209788:209790): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:51:52:476 Kernel/(209788:209790): PID: 1 - Estado Anterior: EXEC - Estado Actual: READY
+[INFO] 03:51:52:476 Kernel/(209788:209790): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:51:52:481 Kernel/(209788:209790): PID: 1 - Signal: DISCO - Instancias: 0
+[INFO] 03:51:52:481 Kernel/(209788:209790): PID: 2 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 03:51:52:481 Kernel/(209788:209790): PID: 1 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 03:51:52:482 Kernel/(209788:209790): Finaliza el proceso 1 - Motivo: SUCCESS
+[INFO] 03:51:52:482 Kernel/(209788:209790): PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:51:52:482 Kernel/(209788:209791): PID: 3 - Estado Anterior: NEW - Estado Actual: READY
+[WARNING] 03:51:52:482 Kernel/(209788:209790): parametros[0]: falopa.txt
+[WARNING] 03:51:52:482 Kernel/(209788:209790): parametros[1]: 10
+[WARNING] 03:51:52:482 Kernel/(209788:209790): parametros[0]: falopa.txt
+[WARNING] 03:51:52:482 Kernel/(209788:209790): parametros[1]: 0xabcedfg
+[WARNING] 03:51:52:482 Kernel/(209788:209790): parametros[2]: 10
+[INFO] 03:51:52:483 Kernel/(209788:209790): PID: 2 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 03:51:52:483 Kernel/(209788:209790): PID: 2 - Bloqueado por: IO
+[INFO] 03:51:52:483 Kernel/(209788:209790): PID: 2 - Ejecuta IO: 5
+[INFO] 03:51:52:483 Kernel/(209788:209790): PID: 3 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:51:52:483 Kernel/(209788:209790): PID: 3 - Wait: DISCO - Instancias: -1
+[INFO] 03:51:52:483 Kernel/(209788:209790): PID: 3 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 03:51:52:483 Kernel/(209788:209790): PID: 3 - Bloqueado por: DISCO
+[INFO] 03:51:57:483 Kernel/(209788:209817): PID: 2 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 03:51:57:483 Kernel/(209788:209790): PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:51:57:483 Kernel/(209788:209790): PID: 2 - Estado Anterior: EXEC - Estado Actual: READY
+[INFO] 03:51:57:483 Kernel/(209788:209790): PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:51:57:489 Kernel/(209788:209790): PID: 2 - Signal: DISCO - Instancias: 0
+[INFO] 03:51:57:489 Kernel/(209788:209790): PID: 3 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 03:51:57:489 Kernel/(209788:209790): PID: 2 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 03:51:57:489 Kernel/(209788:209790): Finaliza el proceso 2 - Motivo: SUCCESS
+[INFO] 03:51:57:489 Kernel/(209788:209790): PID: 3 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:51:57:489 Kernel/(209788:209791): PID: 4 - Estado Anterior: NEW - Estado Actual: READY
+[WARNING] 03:51:57:489 Kernel/(209788:209790): parametros[0]: falopa.txt
+[WARNING] 03:51:57:489 Kernel/(209788:209790): parametros[1]: 10
+[WARNING] 03:51:57:489 Kernel/(209788:209790): parametros[0]: falopa.txt
+[WARNING] 03:51:57:489 Kernel/(209788:209790): parametros[1]: 0xabcedfg
+[WARNING] 03:51:57:489 Kernel/(209788:209790): parametros[2]: 10
+[INFO] 03:51:57:489 Kernel/(209788:209790): PID: 3 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 03:51:57:490 Kernel/(209788:209790): PID: 3 - Bloqueado por: IO
+[INFO] 03:51:57:490 Kernel/(209788:209790): PID: 3 - Ejecuta IO: 5
+[INFO] 03:51:57:490 Kernel/(209788:209790): PID: 4 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:51:57:490 Kernel/(209788:209790): PID: 4 - Wait: DISCO - Instancias: -1
+[INFO] 03:51:57:490 Kernel/(209788:209790): PID: 4 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 03:51:57:490 Kernel/(209788:209790): PID: 4 - Bloqueado por: DISCO
+[INFO] 03:52:02:490 Kernel/(209788:209818): PID: 3 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 03:52:02:490 Kernel/(209788:209790): PID: 3 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:52:02:490 Kernel/(209788:209790): PID: 3 - Estado Anterior: EXEC - Estado Actual: READY
+[INFO] 03:52:02:490 Kernel/(209788:209790): PID: 3 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:52:02:497 Kernel/(209788:209790): PID: 3 - Signal: DISCO - Instancias: 0
+[INFO] 03:52:02:497 Kernel/(209788:209790): PID: 4 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 03:52:02:497 Kernel/(209788:209790): PID: 3 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 03:52:02:497 Kernel/(209788:209790): Finaliza el proceso 3 - Motivo: SUCCESS
+[INFO] 03:52:02:497 Kernel/(209788:209790): PID: 4 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:52:02:498 Kernel/(209788:209791): PID: 5 - Estado Anterior: NEW - Estado Actual: READY
+[WARNING] 03:52:02:498 Kernel/(209788:209790): parametros[0]: falopa.txt
+[WARNING] 03:52:02:498 Kernel/(209788:209790): parametros[1]: 10
+[WARNING] 03:52:02:498 Kernel/(209788:209790): parametros[0]: falopa.txt
+[WARNING] 03:52:02:498 Kernel/(209788:209790): parametros[1]: 0xabcedfg
+[WARNING] 03:52:02:498 Kernel/(209788:209790): parametros[2]: 10
+[INFO] 03:52:02:498 Kernel/(209788:209790): PID: 4 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 03:52:02:498 Kernel/(209788:209790): PID: 4 - Bloqueado por: IO
+[INFO] 03:52:02:498 Kernel/(209788:209790): PID: 4 - Ejecuta IO: 5
+[INFO] 03:52:02:498 Kernel/(209788:209790): PID: 5 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:52:02:498 Kernel/(209788:209790): PID: 5 - Wait: DISCO - Instancias: -1
+[INFO] 03:52:02:498 Kernel/(209788:209790): PID: 5 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 03:52:02:498 Kernel/(209788:209790): PID: 5 - Bloqueado por: DISCO
+[INFO] 03:52:07:499 Kernel/(209788:209819): PID: 4 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 03:52:07:499 Kernel/(209788:209790): PID: 4 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:52:07:499 Kernel/(209788:209790): PID: 4 - Estado Anterior: EXEC - Estado Actual: READY
+[INFO] 03:52:07:500 Kernel/(209788:209790): PID: 4 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:52:07:505 Kernel/(209788:209790): PID: 4 - Signal: DISCO - Instancias: 0
+[INFO] 03:52:07:505 Kernel/(209788:209790): PID: 5 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 03:52:07:505 Kernel/(209788:209790): PID: 4 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 03:52:07:506 Kernel/(209788:209790): Finaliza el proceso 4 - Motivo: SUCCESS
+[INFO] 03:52:07:506 Kernel/(209788:209790): PID: 5 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:52:07:506 Kernel/(209788:209791): PID: 6 - Estado Anterior: NEW - Estado Actual: READY
+[WARNING] 03:52:07:506 Kernel/(209788:209790): parametros[0]: falopa.txt
+[WARNING] 03:52:07:506 Kernel/(209788:209790): parametros[1]: 10
+[WARNING] 03:52:07:506 Kernel/(209788:209790): parametros[0]: falopa.txt
+[WARNING] 03:52:07:506 Kernel/(209788:209790): parametros[1]: 0xabcedfg
+[WARNING] 03:52:07:506 Kernel/(209788:209790): parametros[2]: 10
+[INFO] 03:52:07:506 Kernel/(209788:209790): PID: 5 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 03:52:07:506 Kernel/(209788:209790): PID: 5 - Bloqueado por: IO
+[INFO] 03:52:07:506 Kernel/(209788:209790): PID: 5 - Ejecuta IO: 5
+[INFO] 03:52:07:506 Kernel/(209788:209790): PID: 6 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:52:07:506 Kernel/(209788:209790): PID: 6 - Wait: DISCO - Instancias: -1
+[INFO] 03:52:07:506 Kernel/(209788:209790): PID: 6 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 03:52:07:506 Kernel/(209788:209790): PID: 6 - Bloqueado por: DISCO
+[INFO] 03:52:12:507 Kernel/(209788:209820): PID: 5 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 03:52:12:508 Kernel/(209788:209790): PID: 5 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:52:12:508 Kernel/(209788:209790): PID: 5 - Estado Anterior: EXEC - Estado Actual: READY
+[INFO] 03:52:12:508 Kernel/(209788:209790): PID: 5 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:52:12:513 Kernel/(209788:209790): PID: 5 - Signal: DISCO - Instancias: 0
+[INFO] 03:52:12:513 Kernel/(209788:209790): PID: 6 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 03:52:12:513 Kernel/(209788:209790): PID: 5 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 03:52:12:514 Kernel/(209788:209790): Finaliza el proceso 5 - Motivo: SUCCESS
+[INFO] 03:52:12:514 Kernel/(209788:209790): PID: 6 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:52:12:514 Kernel/(209788:209791): PID: 7 - Estado Anterior: NEW - Estado Actual: READY
+[WARNING] 03:52:12:515 Kernel/(209788:209790): parametros[0]: falopa.txt
+[WARNING] 03:52:12:515 Kernel/(209788:209790): parametros[1]: 10
+[WARNING] 03:52:12:515 Kernel/(209788:209790): parametros[0]: falopa.txt
+[WARNING] 03:52:12:515 Kernel/(209788:209790): parametros[1]: 0xabcedfg
+[WARNING] 03:52:12:515 Kernel/(209788:209790): parametros[2]: 10
+[INFO] 03:52:12:515 Kernel/(209788:209790): PID: 6 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 03:52:12:515 Kernel/(209788:209790): PID: 6 - Bloqueado por: IO
+[INFO] 03:52:12:515 Kernel/(209788:209790): PID: 6 - Ejecuta IO: 5
+[INFO] 03:52:12:515 Kernel/(209788:209790): PID: 7 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:52:12:515 Kernel/(209788:209790): PID: 7 - Wait: DISCO - Instancias: -1
+[INFO] 03:52:12:515 Kernel/(209788:209790): PID: 7 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 03:52:12:515 Kernel/(209788:209790): PID: 7 - Bloqueado por: DISCO
+[INFO] 03:52:17:516 Kernel/(209788:209821): PID: 6 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 03:52:17:516 Kernel/(209788:209790): PID: 6 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:52:17:516 Kernel/(209788:209790): PID: 6 - Estado Anterior: EXEC - Estado Actual: READY
+[INFO] 03:52:17:516 Kernel/(209788:209790): PID: 6 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:52:17:522 Kernel/(209788:209790): PID: 6 - Signal: DISCO - Instancias: 0
+[INFO] 03:52:17:522 Kernel/(209788:209790): PID: 7 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 03:52:17:522 Kernel/(209788:209790): PID: 6 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 03:52:17:522 Kernel/(209788:209790): Finaliza el proceso 6 - Motivo: SUCCESS
+[INFO] 03:52:17:522 Kernel/(209788:209790): PID: 7 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:52:17:522 Kernel/(209788:209791): PID: 8 - Estado Anterior: NEW - Estado Actual: READY
+[WARNING] 03:52:17:523 Kernel/(209788:209790): parametros[0]: falopa.txt
+[WARNING] 03:52:17:523 Kernel/(209788:209790): parametros[1]: 10
+[WARNING] 03:52:17:523 Kernel/(209788:209790): parametros[0]: falopa.txt
+[WARNING] 03:52:17:523 Kernel/(209788:209790): parametros[1]: 0xabcedfg
+[WARNING] 03:52:17:523 Kernel/(209788:209790): parametros[2]: 10
+[INFO] 03:52:17:523 Kernel/(209788:209790): PID: 7 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 03:52:17:523 Kernel/(209788:209790): PID: 7 - Bloqueado por: IO
+[INFO] 03:52:17:523 Kernel/(209788:209790): PID: 7 - Ejecuta IO: 5
+[INFO] 03:52:17:523 Kernel/(209788:209790): PID: 8 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:52:17:523 Kernel/(209788:209790): PID: 8 - Wait: DISCO - Instancias: -1
+[INFO] 03:52:17:523 Kernel/(209788:209790): PID: 8 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 03:52:17:523 Kernel/(209788:209790): PID: 8 - Bloqueado por: DISCO
+[INFO] 03:52:22:525 Kernel/(209788:209823): PID: 7 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 03:52:22:525 Kernel/(209788:209790): PID: 7 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:52:22:526 Kernel/(209788:209790): PID: 7 - Estado Anterior: EXEC - Estado Actual: READY
+[INFO] 03:52:22:526 Kernel/(209788:209790): PID: 7 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:52:22:531 Kernel/(209788:209790): PID: 7 - Signal: DISCO - Instancias: 0
+[INFO] 03:52:22:531 Kernel/(209788:209790): PID: 8 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 03:52:22:531 Kernel/(209788:209790): PID: 7 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 03:52:22:532 Kernel/(209788:209790): Finaliza el proceso 7 - Motivo: SUCCESS
+[INFO] 03:52:22:532 Kernel/(209788:209790): PID: 8 - Estado Anterior: READY - Estado Actual: EXEC
+[WARNING] 03:52:22:532 Kernel/(209788:209790): parametros[0]: falopa.txt
+[WARNING] 03:52:22:532 Kernel/(209788:209790): parametros[1]: 10
+[WARNING] 03:52:22:532 Kernel/(209788:209790): parametros[0]: falopa.txt
+[WARNING] 03:52:22:532 Kernel/(209788:209790): parametros[1]: 0xabcedfg
+[WARNING] 03:52:22:532 Kernel/(209788:209790): parametros[2]: 10
+[INFO] 03:52:22:532 Kernel/(209788:209790): PID: 8 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 03:52:22:532 Kernel/(209788:209790): PID: 8 - Bloqueado por: IO
+[INFO] 03:52:22:532 Kernel/(209788:209790): PID: 8 - Ejecuta IO: 5
+[INFO] 03:52:27:532 Kernel/(209788:209827): PID: 8 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 03:52:27:533 Kernel/(209788:209790): PID: 8 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:52:27:534 Kernel/(209788:209790): PID: 8 - Estado Anterior: EXEC - Estado Actual: READY
+[INFO] 03:52:27:534 Kernel/(209788:209790): PID: 8 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:52:27:539 Kernel/(209788:209790): PID: 8 - Signal: DISCO - Instancias: 1
+[INFO] 03:52:27:540 Kernel/(209788:209790): PID: 8 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 03:52:27:541 Kernel/(209788:209790): Finaliza el proceso 8 - Motivo: SUCCESS

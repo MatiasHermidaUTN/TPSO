@@ -86,7 +86,6 @@ char** recibir_parametros_de_instruccion() {
 	char* parametro_auxiliar;
 
 	recv(socket_cpu, &cantidad_de_parametros, sizeof(size_t), MSG_WAITALL);
-	//char** parametros = malloc(cantidad_de_parametros * sizeof(char*));
 	char** parametros = string_array_new();
 
 	for(int i = 0; i < cantidad_de_parametros; i++) {
@@ -96,24 +95,11 @@ char** recibir_parametros_de_instruccion() {
 		recv(socket_cpu, parametro_auxiliar, tamanio_parametro, MSG_WAITALL);
 		string_array_push(&parametros, parametro_auxiliar);
 
+		//NO DESCOMENTAR
+		//Me parece que esto rompía
 		//parametros[i] = malloc(tamanio_parametro);
 		//recv(socket_cpu, parametros[i], tamanio_parametro, MSG_WAITALL);
 	}
-	//TODO: descomentar todovich
-	/*
-	char** parametros = string_array_new(); //Hace malloc(sizeof(char*))
-
-	recv(socket_cpu, &cantidad_de_parametros, sizeof(size_t), MSG_WAITALL);
-
-	for(int i = 0; i < cantidad_de_parametros; i++) {
-		recv(socket_cpu, &tamanio_parametro, sizeof(size_t), MSG_WAITALL);
-
-		char* parametro = malloc(tamanio_parametro);
-		recv(socket_cpu, parametro, tamanio_parametro, MSG_WAITALL);
-		string_array_push(&parametros, parametro); //Hace malloc del nuevo parametro y realloc del char**
-		free(parametro);
-	}
-	*/
 
 	return parametros; //acordarse de hacerle el free del otro lado
 }

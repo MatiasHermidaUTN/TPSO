@@ -22,7 +22,7 @@ void planificar_corto() {
 				parametros = recibir_parametros_de_instruccion();
 				char* tiempo_como_string = strdup(parametros[0]);
 				int tiempo_a_bloquear = atoi(tiempo_como_string);
-				liberar_parametros(parametros);
+				string_array_destroy(parametros);
 				free(tiempo_como_string);
 
 				pcb_recibido = recibir_pcb(socket_cpu);
@@ -47,7 +47,7 @@ void planificar_corto() {
 				log_warning(logger, "parametros[0]: %s", parametros[0]);
 				//TODO: AVISAR A FILESYSTEM
 
-				liberar_parametros(parametros);
+				string_array_destroy(parametros);
 				pcb_recibido = recibir_pcb(socket_cpu);
 				proximo_pcb_a_ejecutar_forzado = pcb_recibido;
 				sem_post(&sem_cant_ready); //Al no pasar por la funcion ready_list_push hay que hacerlo manualmente, vuelve a ejecutar sin pasar por ready
@@ -57,7 +57,7 @@ void planificar_corto() {
 				parametros = recibir_parametros_de_instruccion();
 				//TODO: AVISAR A FILESYSTEM
 
-				liberar_parametros(parametros);
+				string_array_destroy(parametros);
 				break;
 
 			case F_SEEK_EJECUTADO:
@@ -66,7 +66,7 @@ void planificar_corto() {
 				log_warning(logger, "parametros[1]: %s", parametros[1]);
 				//TODO: AVISAR A FILESYSTEM
 
-				liberar_parametros(parametros);
+				string_array_destroy(parametros);
 
 				pcb_recibido = recibir_pcb(socket_cpu);
 				proximo_pcb_a_ejecutar_forzado = pcb_recibido;
@@ -77,7 +77,7 @@ void planificar_corto() {
 				parametros = recibir_parametros_de_instruccion();
 				//TODO: AVISAR A FILESYSTEM
 
-				liberar_parametros(parametros);
+				string_array_destroy(parametros);
 				break;
 
 			case F_WRITE_EJECUTADO:
@@ -89,7 +89,7 @@ void planificar_corto() {
 				log_warning(logger, "parametros[2]: %s", parametros[2]);
 				//TODO: AVISAR A FILESYSTEM
 
-				liberar_parametros(parametros);
+				string_array_destroy(parametros);
 
 				pcb_recibido = recibir_pcb(socket_cpu);
 				proximo_pcb_a_ejecutar_forzado = pcb_recibido;
@@ -100,15 +100,14 @@ void planificar_corto() {
 				parametros = recibir_parametros_de_instruccion();
 				//TODO: AVISAR A FILESYSTEM
 
-				liberar_parametros(parametros);
+				string_array_destroy(parametros);
 				break;
 
 			case WAIT_EJECUTADO:
 				parametros = recibir_parametros_de_instruccion();
-				//char* nombre_recurso_wait = string_array_pop(parametros);
-				//string_array_destroy(parametros);
+				//char* nombre_recurso_wait = string_array_pop(parametros); //TODO: fijarse si anda
 				char* nombre_recurso_wait = strdup(parametros[0]);
-				liberar_parametros(parametros);
+				string_array_destroy(parametros);
 
 				pcb_recibido = recibir_pcb(socket_cpu);
 				wait_recurso(pcb_recibido, nombre_recurso_wait);
@@ -117,10 +116,9 @@ void planificar_corto() {
 
 			case SIGNAL_EJECUTADO:
 				parametros = recibir_parametros_de_instruccion();
-				//char* nombre_recurso_signal = string_array_pop(parametros);
-				//string_array_destroy(parametros);
+				//char* nombre_recurso_signal = string_array_pop(parametros); //TODO: fijarse si anda
 				char* nombre_recurso_signal = strdup(parametros[0]);
-				liberar_parametros(parametros);
+				string_array_destroy(parametros);
 
 				pcb_recibido = recibir_pcb(socket_cpu);
 				signal_recurso(pcb_recibido, nombre_recurso_signal);
@@ -132,7 +130,7 @@ void planificar_corto() {
 				pcb_recibido = recibir_pcb(socket_cpu);
 
 				//TODO: AVISAR A MEMORIA
-				liberar_parametros(parametros);
+				string_array_destroy(parametros);
 
 				proximo_pcb_a_ejecutar_forzado = pcb_recibido;
 				sem_post(&sem_cant_ready); //Al no pasar por la funcion ready_list_push hay que hacerlo manualmente, vuelve a ejecutar sin pasar por ready
@@ -144,7 +142,7 @@ void planificar_corto() {
 				pcb_recibido = recibir_pcb(socket_cpu);
 
 				//TODO: AVISAR A MEMORIA
-				liberar_parametros(parametros);
+				string_array_destroy(parametros);
 
 				proximo_pcb_a_ejecutar_forzado = pcb_recibido;
 				sem_post(&sem_cant_ready); //Al no pasar por la funcion ready_list_push hay que hacerlo manualmente, vuelve a ejecutar sin pasar por ready
@@ -209,6 +207,7 @@ t_pcb* obtener_proximo_a_ejecutar() {
 	else if (!strcmp(lectura_de_config.ALGORITMO_PLANIFICACION, "HRRN")) {
 		pthread_mutex_lock(&mutex_ready_list);
 
+		//TODO: me hace ruido que tengamos que usar nuestras propias funciones
 		//pcb = list_get_maximum(ready_list, (void*)calcular_R);
 		pcb = list_get_max_R(ready_list);
 
@@ -224,8 +223,8 @@ t_pcb* obtener_proximo_a_ejecutar() {
 
 void manejar_io(t_args_io* args_io) {
 	sleep(args_io->tiempo);
-	ready_list_push(args_io->pcb); //Aca calcula el S (proxima rafaga), actualizo el tiempo_llegada_ready y hago sem_post(&sem_cant_ready)
 	log_info(logger, "PID: %d - Estado Anterior: BLOCK - Estado Actual: READY", args_io->pcb->pid); //log obligatorio
+	ready_list_push(args_io->pcb); //Aca calcula el S (proxima rafaga), actualizo el tiempo_llegada_ready y hago sem_post(&sem_cant_ready)
 	free(args_io);
 }
 
@@ -294,7 +293,7 @@ void exit_proceso(t_pcb* pcb) {
 
 	sem_post(&sem_multiprogramacion);
 
-	//avisarle a memoria para liberar la estructura
+	//TODO: avisarle a memoria para liberar la estructura
 	liberar_pcb(pcb);
 }
 

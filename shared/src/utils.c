@@ -262,6 +262,8 @@ void destruir_instruccion(t_instruccion* instruccion) {
 
 void liberar_pcb(t_pcb* pcb) {//TODO: a veces valgrind me tira el warning: Invalid read of size 4
 	list_destroy_and_destroy_elements(pcb->instrucciones, (void*)destruir_instruccion);
+	//list_destroy(pcb->tabla_segmentos);  //TODO: fijarse si hay que liberar los elementos también
+	//list_destroy(pcb->archivos_abiertos);//TODO: fijarse si hay que liberar los elementos también
 	//TODO: liberar_tabla_segmentos_pcb(pcb->tabla_segmentos);
 	//TODO: liberar_archivos_abiertos_pcb(pcb->archivos_abiertos);
 
@@ -288,8 +290,6 @@ void liberar_parametros(char** parametros) {
 void enviar_pcb(int socket, t_pcb* pcb, t_msj_kernel_cpu op_code, char** parametros_de_instruccion) {
 	size_t size_total;
 	void* stream_pcb_a_enviar = serializar_pcb(pcb, &size_total, op_code, parametros_de_instruccion);
-	//log_info(logger, "size_total: %d", (int)size_total);
-	//printf("despues de serializar\n");
 
 	send(socket, stream_pcb_a_enviar, size_total, 0);
 
@@ -300,17 +300,11 @@ void* serializar_pcb(t_pcb* pcb, size_t* size_total, t_msj_kernel_cpu op_code, c
 	size_t size_payload = tamanio_payload_pcb(pcb);
 	*size_total = sizeof(t_msj_kernel_cpu);
 
-	//printf("##string_array_size(parametros_de_instruccion): %d\n", string_array_size(parametros_de_instruccion));
 	if(string_array_size(parametros_de_instruccion)) { //Si hay algun parametro
-		//int cantidad_de_pijas = cantidad_de_punteros(parametros_de_instruccion);
-		//printf("dentro de if(parametros_de_instruccion)1: %d\n", cantidad_de_pijas);
-
 		*size_total += sizeof(size_t); //Cantidad de parametros
 		for(int i = 0; i < string_array_size(parametros_de_instruccion); i++) {
-			//printf("en for de if(parametros_de_instruccion)1\n");
 			*size_total += sizeof(size_t) + strlen(parametros_de_instruccion[i]) + 1; //Tamanio de parametro + longitud de parametro
 		}
-		//printf("terminando if(parametros_de_instruccion)1\n");
 	}
 
 	*size_total += sizeof(size_t) + size_payload;
@@ -322,15 +316,11 @@ void* serializar_pcb(t_pcb* pcb, size_t* size_total, t_msj_kernel_cpu op_code, c
 
     memcpy(stream_pcb + desplazamiento, &(op_code), sizeof(op_code));
     desplazamiento += sizeof(op_code);
-    //printf("##op_code = %d\n", op_code);
 
-    //printf("antes if(parametros_de_instruccion)2\n");
     if(string_array_size(parametros_de_instruccion)) { //Si hay algun parametro
     	size_t cantidad_de_parametros = string_array_size(parametros_de_instruccion);
     	memcpy(stream_pcb + desplazamiento, &(cantidad_de_parametros), sizeof(cantidad_de_parametros));
     	desplazamiento += sizeof(cantidad_de_parametros);
-
-    	//printf("en medio de if(parametros_de_instruccion)\n");
 
     	size_t size_parametro_de_instruccion;
     	for(int i = 0; i < cantidad_de_parametros; i++) {
@@ -340,7 +330,6 @@ void* serializar_pcb(t_pcb* pcb, size_t* size_total, t_msj_kernel_cpu op_code, c
 
 			memcpy(stream_pcb + desplazamiento, parametros_de_instruccion[i], size_parametro_de_instruccion);
 			desplazamiento += size_parametro_de_instruccion;
-			//printf("##parametro_de_instruccion: %s\n", parametros_de_instruccion[i]);
     	}
 
     	//string_array_destroy(parametros_de_instruccion);
@@ -391,7 +380,7 @@ size_t tamanio_payload_pcb(t_pcb* pcb) {
 	size_t size = sizeof(pcb->pid) + tamanio_instrucciones(pcb->instrucciones);
 	size += sizeof(int); //para el tamanio_instrucciones_en_bytes
 	size += sizeof(pcb->pc);
-	size += sizeof(char)*(4+1 + 8+1 + 16+1)*4; // Por todos los char[] de los registros (?
+	size += sizeof(char)*16*7; // Por todos los char[] de los registros (?
 	size += sizeof(pcb->estimado_prox_rafaga) + sizeof(pcb->tiempo_llegada_ready) + sizeof(pcb->socket_consola);
 	size += sizeof(pcb->tiempo_real_ejecucion) + sizeof(pcb->tiempo_inicial_ejecucion);
 	return size; // + sizeof(tabla_segmentos) + sizeof(archivos_abiertos);
@@ -444,41 +433,41 @@ void memcpy_instrucciones_serializar(void* stream_pcb, t_list* instrucciones, in
 }
 
 void memcpy_registros_serializar(void* stream_pcb, t_registros_cpu registros_cpu, int* desplazamiento) {
-	memcpy(stream_pcb + *desplazamiento, registros_cpu.AX, sizeof(char) * 4+1); //Fijarse si se puede hacer pcb->registros_cpu.AX o hay que hacer un strdup antes o algo así.
-	*desplazamiento += sizeof(char) * 4+1;
+	memcpy(stream_pcb + *desplazamiento, registros_cpu.AX, sizeof(char) * 4); //Fijarse si se puede hacer pcb->registros_cpu.AX o hay que hacer un strdup antes o algo así.
+	*desplazamiento += sizeof(char) * 4;
 
-	memcpy(stream_pcb + *desplazamiento, registros_cpu.BX, sizeof(char) * 4+1);
-	*desplazamiento += sizeof(char) * 4+1;
+	memcpy(stream_pcb + *desplazamiento, registros_cpu.BX, sizeof(char) * 4);
+	*desplazamiento += sizeof(char) * 4;
 
-	memcpy(stream_pcb + *desplazamiento, registros_cpu.CX, sizeof(char) * 4+1);
-	*desplazamiento += sizeof(char) * 4+1;
+	memcpy(stream_pcb + *desplazamiento, registros_cpu.CX, sizeof(char) * 4);
+	*desplazamiento += sizeof(char) * 4;
 
-	memcpy(stream_pcb + *desplazamiento, registros_cpu.DX, sizeof(char) * 4+1);
-	*desplazamiento += sizeof(char) * 4+1;
+	memcpy(stream_pcb + *desplazamiento, registros_cpu.DX, sizeof(char) * 4);
+	*desplazamiento += sizeof(char) * 4;
 
-	memcpy(stream_pcb + *desplazamiento, registros_cpu.EAX, sizeof(char) * 8+1);
-	*desplazamiento += sizeof(char) * 8+1;
+	memcpy(stream_pcb + *desplazamiento, registros_cpu.EAX, sizeof(char) * 8);
+	*desplazamiento += sizeof(char) * 8;
 
-	memcpy(stream_pcb + *desplazamiento, registros_cpu.EBX, sizeof(char) * 8+1);
-	*desplazamiento += sizeof(char) * 8+1;
+	memcpy(stream_pcb + *desplazamiento, registros_cpu.EBX, sizeof(char) * 8);
+	*desplazamiento += sizeof(char) * 8;
 
-	memcpy(stream_pcb + *desplazamiento, registros_cpu.ECX, sizeof(char) * 8+1);
-	*desplazamiento += sizeof(char) * 8+1;
+	memcpy(stream_pcb + *desplazamiento, registros_cpu.ECX, sizeof(char) * 8);
+	*desplazamiento += sizeof(char) * 8;
 
-	memcpy(stream_pcb + *desplazamiento, registros_cpu.EDX, sizeof(char) * 8+1);
-	*desplazamiento += sizeof(char) * 8+1;
+	memcpy(stream_pcb + *desplazamiento, registros_cpu.EDX, sizeof(char) * 8);
+	*desplazamiento += sizeof(char) * 8;
 
-	memcpy(stream_pcb + *desplazamiento, registros_cpu.RAX, sizeof(char) * 16+1);
-	*desplazamiento += sizeof(char) * 16+1;
+	memcpy(stream_pcb + *desplazamiento, registros_cpu.RAX, sizeof(char) * 16);
+	*desplazamiento += sizeof(char) * 16;
 
-	memcpy(stream_pcb + *desplazamiento, registros_cpu.RBX, sizeof(char) * 16+1);
-	*desplazamiento += sizeof(char) * 16+1;
+	memcpy(stream_pcb + *desplazamiento, registros_cpu.RBX, sizeof(char) * 16);
+	*desplazamiento += sizeof(char) * 16;
 
-	memcpy(stream_pcb + *desplazamiento, registros_cpu.RCX, sizeof(char) * 16+1);
-	*desplazamiento += sizeof(char) * 16+1;
+	memcpy(stream_pcb + *desplazamiento, registros_cpu.RCX, sizeof(char) * 16);
+	*desplazamiento += sizeof(char) * 16;
 
-	memcpy(stream_pcb + *desplazamiento, registros_cpu.RDX, sizeof(char) * 16+1);
-	*desplazamiento += sizeof(char) * 16+1;
+	memcpy(stream_pcb + *desplazamiento, registros_cpu.RDX, sizeof(char) * 16);
+	*desplazamiento += sizeof(char) * 16;
 }
 
 void memcpy_tabla_segmentos_serializar(void* stream, t_list* tabla_segmentos, int* desplazamiento) {
@@ -620,41 +609,41 @@ void deserializar_parametros(void* a_recibir, int* desplazamiento, t_instruccion
 }
 
 void memcpy_registros_deserializar(t_registros_cpu* registros_cpu, void* stream_pcb, int* desplazamiento) {
-	memcpy(registros_cpu->AX, stream_pcb + *desplazamiento, sizeof(char) * 4+1); //Fijarse si se puede hacer pcb->registros_cpu.AX o hay que hacer un strdup antes o algo así.
-	*desplazamiento += sizeof(char) * 4+1;
+	memcpy(registros_cpu->AX, stream_pcb + *desplazamiento, sizeof(char) * 4); //Fijarse si se puede hacer pcb->registros_cpu.AX o hay que hacer un strdup antes o algo así.
+	*desplazamiento += sizeof(char) * 4;
 
-	memcpy(registros_cpu->BX, stream_pcb + *desplazamiento, sizeof(char) * 4+1);
-	*desplazamiento += sizeof(char) * 4+1;
+	memcpy(registros_cpu->BX, stream_pcb + *desplazamiento, sizeof(char) * 4);
+	*desplazamiento += sizeof(char) * 4;
 
-	memcpy(registros_cpu->CX, stream_pcb + *desplazamiento, sizeof(char) * 4+1);
-	*desplazamiento += sizeof(char) * 4+1;
+	memcpy(registros_cpu->CX, stream_pcb + *desplazamiento, sizeof(char) * 4);
+	*desplazamiento += sizeof(char) * 4;
 
-	memcpy(registros_cpu->DX, stream_pcb + *desplazamiento, sizeof(char) * 4+1);
-	*desplazamiento += sizeof(char) * 4+1;
+	memcpy(registros_cpu->DX, stream_pcb + *desplazamiento, sizeof(char) * 4);
+	*desplazamiento += sizeof(char) * 4;
 
-	memcpy(registros_cpu->EAX, stream_pcb + *desplazamiento, sizeof(char) * 8+1);
-	*desplazamiento += sizeof(char) * 8+1;
+	memcpy(registros_cpu->EAX, stream_pcb + *desplazamiento, sizeof(char) * 8);
+	*desplazamiento += sizeof(char) * 8;
 
-	memcpy(registros_cpu->EBX, stream_pcb + *desplazamiento, sizeof(char) * 8+1);
-	*desplazamiento += sizeof(char) * 8+1;
+	memcpy(registros_cpu->EBX, stream_pcb + *desplazamiento, sizeof(char) * 8);
+	*desplazamiento += sizeof(char) * 8;
 
-	memcpy(registros_cpu->ECX, stream_pcb + *desplazamiento, sizeof(char) * 8+1);
-	*desplazamiento += sizeof(char) * 8+1;
+	memcpy(registros_cpu->ECX, stream_pcb + *desplazamiento, sizeof(char) * 8);
+	*desplazamiento += sizeof(char) * 8;
 
-	memcpy(registros_cpu->EDX, stream_pcb + *desplazamiento, sizeof(char) * 8+1);
-	*desplazamiento += sizeof(char) * 8+1;
+	memcpy(registros_cpu->EDX, stream_pcb + *desplazamiento, sizeof(char) * 8);
+	*desplazamiento += sizeof(char) * 8;
 
-	memcpy(registros_cpu->RAX, stream_pcb + *desplazamiento, sizeof(char) * 16+1);
-	*desplazamiento += sizeof(char) * 16+1;
+	memcpy(registros_cpu->RAX, stream_pcb + *desplazamiento, sizeof(char) * 16);
+	*desplazamiento += sizeof(char) * 16;
 
-	memcpy(registros_cpu->RBX, stream_pcb + *desplazamiento, sizeof(char) * 16+1);
-	*desplazamiento += sizeof(char) * 16+1;
+	memcpy(registros_cpu->RBX, stream_pcb + *desplazamiento, sizeof(char) * 16);
+	*desplazamiento += sizeof(char) * 16;
 
-	memcpy(registros_cpu->RCX, stream_pcb + *desplazamiento, sizeof(char) * 16+1);
-	*desplazamiento += sizeof(char) * 16+1;
+	memcpy(registros_cpu->RCX, stream_pcb + *desplazamiento, sizeof(char) * 16);
+	*desplazamiento += sizeof(char) * 16;
 
-	memcpy(registros_cpu->RDX, stream_pcb + *desplazamiento, sizeof(char) * 16+1);
-	*desplazamiento += sizeof(char) * 16+1;
+	memcpy(registros_cpu->RDX, stream_pcb + *desplazamiento, sizeof(char) * 16);
+	*desplazamiento += sizeof(char) * 16;
 }
 
 void memcpy_tabla_segmentos_deserializar(t_list* tabla_segmentos, void* stream, int* desplazamiento) {

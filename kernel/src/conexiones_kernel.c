@@ -50,10 +50,10 @@ t_pcb* crear_pcb(t_list* instrucciones, int socket_consola) {
 	pcb->instrucciones = instrucciones;
 	pcb->pc = 0;
 	pcb->registros_cpu = init_registros_cpu();
-	pcb->tabla_segmentos = list_create();
+	pcb->tabla_segmentos = list_create(); //TODO: falta liberar en liberar_pcb
 	pcb->estimado_prox_rafaga = lectura_de_config.ESTIMACION_INICIAL;
 	pcb->tiempo_llegada_ready = 0;
-	pcb->archivos_abiertos = list_create();
+	pcb->archivos_abiertos = list_create(); //TODO: falta liberar en liberar_pcb
 
 	pcb->socket_consola = socket_consola;
 
@@ -66,18 +66,24 @@ t_pcb* crear_pcb(t_list* instrucciones, int socket_consola) {
 t_registros_cpu init_registros_cpu() {
 	t_registros_cpu registros;
 
-	strcpy(registros.AX, "0000");
-	strcpy(registros.BX, "0000");
-	strcpy(registros.CX, "0000");
-	strcpy(registros.DX, "0000");
-	strcpy(registros.EAX, "00000000");
-	strcpy(registros.EBX, "00000000");
-	strcpy(registros.ECX, "00000000");
-	strcpy(registros.EDX, "00000000");
-	strcpy(registros.RAX, "0000000000000000");
-	strcpy(registros.RBX, "0000000000000000");
-	strcpy(registros.RCX, "0000000000000000");
-	strcpy(registros.RDX, "0000000000000000");
+	for(int i = 0; i < 4; i++) {
+		registros.AX[i] = '0';
+		registros.BX[i] = '0';
+		registros.CX[i] = '0';
+		registros.DX[i] = '0';
+	}
+	for(int i = 0; i < 8; i++) {
+		registros.EAX[i] = '0';
+		registros.EBX[i] = '0';
+		registros.ECX[i] = '0';
+		registros.EDX[i] = '0';
+	}
+	for(int i = 0; i < 16; i++) {
+		registros.RAX[i] = '0';
+		registros.RBX[i] = '0';
+		registros.RCX[i] = '0';
+		registros.RDX[i] = '0';
+	}
 
 	return registros;
 }
