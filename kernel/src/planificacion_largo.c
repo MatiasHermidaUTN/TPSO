@@ -16,14 +16,13 @@ void planificar_largo() {
 			pcb->tiempo_llegada_ready = time(NULL);
 
 			list_push_con_mutex(ready_list, pcb, &mutex_ready_list);
-			log_info(logger, "PID: %d - Estado Anterior: NEW - Estado Actual: READY", pcb->pid);
-
-			//log_info(logger, "Cola Ready %s: [%s]", lectura_de_config.ALGORITMO_PLANIFICACION, obtener_pids(ready_list));
+			log_info(logger, "PID: %d - Estado Anterior: NEW - Estado Actual: READY", pcb->pid); //log obligatorio
+			log_pids(); //log obligatorio
 
 			sem_post(&sem_cant_ready);
 		}
 		else {
-			log_error(logger, "Error en la lista new");
+			log_error(logger, "Error en la lista NEW");
 		}
 	}
 }

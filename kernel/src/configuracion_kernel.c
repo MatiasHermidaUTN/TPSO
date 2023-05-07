@@ -103,3 +103,25 @@ void liberar_estructura_config(t_kernel_config config){
 	//free(config.INSTANCIAS_RECURSOS); //hay que liberar todos
 	string_array_destroy(config.INSTANCIAS_RECURSOS);
 }
+
+void log_pids() {
+	char* pids = obtener_pids(ready_list);
+	log_info(logger, "Cola Ready %s: [%s]", lectura_de_config.ALGORITMO_PLANIFICACION, pids);
+	free(pids);
+}
+
+char* obtener_pids(t_list* pcbs) {
+    t_pcb* pcb;
+	char* pids = string_new();
+
+	for(int i = 0; i < list_size(pcbs); i++) {
+		pcb = list_get(pcbs, i);
+		string_append(&pids, string_itoa(pcb->pid));
+		if(i != list_size(pcbs) - 1) { //Para que no ponga coma a lo ultimo
+			string_append(&pids, ", ");
+		}
+	}
+
+	return pids;
+}
+

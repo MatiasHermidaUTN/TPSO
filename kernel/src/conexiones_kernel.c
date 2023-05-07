@@ -27,7 +27,7 @@ void manejar_conexion(void* args) {
 			t_list* instrucciones = recibir_instrucciones(socket_consola);
 			t_pcb* pcb = crear_pcb(instrucciones, socket_consola);
 
-			log_info(logger,"Se crea el proceso %d en NEW",pcb->pid); //log obligatorio
+			log_info(logger, "Se crea el proceso %d en NEW", pcb->pid); //log obligatorio
 			queue_push_con_mutex(new_queue, pcb, &mutex_new_queue);
 
 			sem_post(&sem_cant_new);
@@ -66,7 +66,8 @@ t_pcb* crear_pcb(t_list* instrucciones, int socket_consola) {
 t_registros_cpu init_registros_cpu() {
 	t_registros_cpu registros;
 
-	for(int i = 0; i < 4; i++) {
+	/*
+	for(int i = 0; i < 4; i++) {//TODO: usar memcpy
 		registros.AX[i] = '0';
 		registros.BX[i] = '0';
 		registros.CX[i] = '0';
@@ -84,6 +85,27 @@ t_registros_cpu init_registros_cpu() {
 		registros.RCX[i] = '0';
 		registros.RDX[i] = '0';
 	}
+	*/
+	char* valor_inicial_4 = strdup("0000");
+	memcpy(registros.AX, valor_inicial_4, 4*sizeof(char));
+	memcpy(registros.BX, valor_inicial_4, 4*sizeof(char));
+	memcpy(registros.CX, valor_inicial_4, 4*sizeof(char));
+	memcpy(registros.DX, valor_inicial_4, 4*sizeof(char));
+	free(valor_inicial_4);
+
+	char* valor_inicial_8 = strdup("00000000");
+	memcpy(registros.EAX, valor_inicial_8, 8*sizeof(char));
+	memcpy(registros.EBX, valor_inicial_8, 8*sizeof(char));
+	memcpy(registros.ECX, valor_inicial_8, 8*sizeof(char));
+	memcpy(registros.EDX, valor_inicial_8, 8*sizeof(char));
+	free(valor_inicial_8);
+
+	char* valor_inicial_16 = strdup("0000000000000000");
+	memcpy(registros.RAX, valor_inicial_16, 16*sizeof(char));
+	memcpy(registros.RBX, valor_inicial_16, 16*sizeof(char));
+	memcpy(registros.RCX, valor_inicial_16, 16*sizeof(char));
+	memcpy(registros.RDX, valor_inicial_16, 16*sizeof(char));
+	free(valor_inicial_16);
 
 	return registros;
 }

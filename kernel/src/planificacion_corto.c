@@ -62,8 +62,8 @@ void planificar_corto() {
 
 			case F_SEEK_EJECUTADO:
 				parametros = recibir_parametros_de_instruccion();
-				log_warning(logger, "parametros[0]: %s", parametros[0]);
-				log_warning(logger, "parametros[1]: %s", parametros[1]);
+				//log_warning(logger, "parametros[0]: %s", parametros[0]);
+				//log_warning(logger, "parametros[1]: %s", parametros[1]);
 				//TODO: AVISAR A FILESYSTEM
 
 				string_array_destroy(parametros);
@@ -84,9 +84,9 @@ void planificar_corto() {
 				parametros = recibir_parametros_de_instruccion();
 				//TODO: AVISAR A FILESYSTEM
 
-				log_warning(logger, "parametros[0]: %s", parametros[0]);
-				log_warning(logger, "parametros[1]: %s", parametros[1]);
-				log_warning(logger, "parametros[2]: %s", parametros[2]);
+				//log_warning(logger, "parametros[0]: %s", parametros[0]);
+				//log_warning(logger, "parametros[1]: %s", parametros[1]);
+				//log_warning(logger, "parametros[2]: %s", parametros[2]);
 				//TODO: AVISAR A FILESYSTEM
 
 				string_array_destroy(parametros);
@@ -156,6 +156,7 @@ void planificar_corto() {
 
 				ready_list_push(pcb_recibido); //Aca calcula el S (proxima rafaga), actualizo el tiempo_llegada_ready y hago sem_post(&sem_cant_ready) (solo necesito pasarle el pcb, porque ya se que es en Ready)
 				log_info(logger, "PID: %d - Estado Anterior: EXEC - Estado Actual: READY", pcb_recibido->pid); //log obligatorio
+				log_pids(); //log obligatorio
 				break;
 
 			case EXIT_EJECUTADO:
@@ -165,7 +166,7 @@ void planificar_corto() {
 
 			default:
 				log_error(logger, "Error en la comunicacion entre el Kernel y la CPU");
-				exit(1);
+				exit(EXIT_FAILURE);
 		}
 	}
 }
@@ -225,6 +226,7 @@ void manejar_io(t_args_io* args_io) {
 	sleep(args_io->tiempo);
 	log_info(logger, "PID: %d - Estado Anterior: BLOCK - Estado Actual: READY", args_io->pcb->pid); //log obligatorio
 	ready_list_push(args_io->pcb); //Aca calcula el S (proxima rafaga), actualizo el tiempo_llegada_ready y hago sem_post(&sem_cant_ready)
+	log_pids(); //log obligatorio
 	free(args_io);
 }
 
@@ -274,6 +276,7 @@ void signal_recurso(t_pcb* pcb, char* nombre_recurso) {
 			t_pcb* pcb_a_desbloquear = queue_pop(recurso->cola_bloqueados);
 			ready_list_push(pcb_a_desbloquear); //hace el sem_post(&sem_cant_ready)
 			log_info(logger, "PID: %d - Estado Anterior: BLOCK - Estado Actual: READY", pcb_a_desbloquear->pid); //log obligatorio
+			log_pids(); //log obligatorio
 		}
 
 		proximo_pcb_a_ejecutar_forzado = pcb;

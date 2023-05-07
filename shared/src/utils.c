@@ -19,9 +19,6 @@ int crear_conexion(char *ip, char* puerto) {
 	                    	    server_info->ai_socktype,
 								server_info->ai_protocol);
 
-	//int my_true = 1; //Defino un true para poder pasarle el puntero al true
-	//setsockopt(socket_cliente, SOL_SOCKET, SO_REUSEADDR, &my_true, sizeof(int)); //Para cerrar el socket en cuanto se termine el proceso
-
 	if(connect(socket_cliente, server_info->ai_addr, server_info->ai_addrlen)){
 		freeaddrinfo(server_info);
 		return -1;
@@ -74,6 +71,9 @@ int iniciar_servidor(char* IP, char* PUERTO) {
 	socket_servidor = socket(servinfo->ai_family,
 							 servinfo->ai_socktype,
 							 servinfo->ai_protocol);
+
+	int my_true = 1; //Defino un true para poder pasarle el puntero al true
+	setsockopt(socket_servidor, SOL_SOCKET, SO_REUSEADDR, &my_true, sizeof(int)); //Para cerrar el socket en cuanto se termine el proceso
 
 	// Asociamos el socket a un puerto
 
@@ -217,42 +217,6 @@ void list_push_con_mutex(t_list* lista,void* elemento , pthread_mutex_t* mutex) 
     pthread_mutex_unlock(mutex);
     return;
 }
-
-/*
-char* obtener_pids(t_list* pcbs) {
-    t_pcb* pcb;
-	char* pids = malloc(tamanio_de_pids(pcbs));
-	char* pid_leido;
-	char* coma = ",";
-	int desplazamiento = 0;
-
-    for (int i = 0; i < list_size(pcbs); i++) {
-    	pcb = list_get(pcbs, i);
-    	pid_leido = string_itoa(pcb->pid);
-    	memcpy(pids + desplazamiento, &(pid_leido), strlen(pid_leido)+1);
-    	desplazamiento += strlen(pid_leido)+1;
-
-    	if(i != list_size(pcbs) - 1) {//para que no ponga una coma al final
-    		memcpy(pids + desplazamiento, &(coma), strlen(coma)+1);
-    		desplazamiento += strlen(coma)+1;
-    	}
-    }
-
-    return (char*)pids;
-}
-
-int tamanio_de_pids(t_list* pcbs) {
-	int tamanio = list_size(pcbs) - 1; //por cada coma entre los pids
-	t_pcb* pcb;
-
-	for(int j = 0; j < list_size(pcbs); j++) {
-		pcb = list_get(pcbs, j);
-		tamanio += log10(pcb->pid) + 1; //cantidad de digitos del pid
-	} //TODO: ver porque no me lo reconoce en el resto de modulos
-
-	return tamanio;
-}
-*/
 
 void destruir_instruccion(t_instruccion* instruccion) {
 	free(instruccion->nombre);

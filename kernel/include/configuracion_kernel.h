@@ -60,4 +60,8 @@ void init_estados();
 
 void liberar_estructura_config(t_kernel_config config);
 
+void log_pids();
+
+char* obtener_pids(t_list* lista_pcbs);
+
 #endif /* CONFIGURACION_KERNEL_H_ */

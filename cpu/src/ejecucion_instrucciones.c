@@ -10,22 +10,16 @@ void ejecutar_instrucciones(t_pcb* pcb) {
 		//Fetch
 		instruccion_actual = list_get(pcb->instrucciones, pcb->pc);
 		pcb->pc++;
-		log_info(logger, "PID: %d - Ejecutando: %s - <PARAMETROS>", pcb->pid, instruccion_actual->nombre); //log obligatorio
-		//TODO: emitir los parametros
+		char* parametros_a_emitir = obtener_parametros_a_emitir(instruccion_actual->parametros);
+		log_info(logger, "PID: %d - Ejecutando: %s - %s", pcb->pid, instruccion_actual->nombre, parametros_a_emitir); //log obligatorio
+		free(parametros_a_emitir);
+
 		//Decode y Execute
 		switch(instruccion_a_enum(instruccion_actual)) {
 			case SET:
-				log_warning(logger, "AX: %c", pcb->registros_cpu.AX[0]);
-				log_warning(logger, "AX: %c", pcb->registros_cpu.AX[1]);
-				log_warning(logger, "AX: %c", pcb->registros_cpu.AX[2]);
-				log_warning(logger, "AX: %c", pcb->registros_cpu.AX[3]);
-				//log_warning(logger, "AX: %s", pcb->registros_cpu.AX); //Valgrind tira warning de conditional jump
+				log_warning(logger, "AX: %c%c%c%c", pcb->registros_cpu.AX[0], pcb->registros_cpu.AX[1], pcb->registros_cpu.AX[2], pcb->registros_cpu.AX[3]);
 				ejecutar_set(pcb, instruccion_actual);
-				log_warning(logger, "AX: %c", pcb->registros_cpu.AX[0]);
-				log_warning(logger, "AX: %c", pcb->registros_cpu.AX[1]);
-				log_warning(logger, "AX: %c", pcb->registros_cpu.AX[2]);
-				log_warning(logger, "AX: %c", pcb->registros_cpu.AX[3]);
-				//log_warning(logger, "AX: %s", pcb->registros_cpu.AX);
+				log_warning(logger, "AX: %c%c%c%c", pcb->registros_cpu.AX[0], pcb->registros_cpu.AX[1], pcb->registros_cpu.AX[2], pcb->registros_cpu.AX[3]);
 
 				break;
 
@@ -188,8 +182,19 @@ void enviar_pcb_a_kernel(t_pcb* pcb, t_msj_kernel_cpu mensaje, t_list* list_para
 
 	enviar_pcb(socket_kernel, pcb, mensaje, parametros);
 
-	free(parametros); //TODO: valgrind dice que estoy haciendo 2 veces free
+	free(parametros);
 	//hay que hacer un free y no un string_array_destroy porque sino estraría liberando los de el pcb
 }
 
+char* obtener_parametros_a_emitir(t_list* parametros_actuales) {
+	char* parametros_a_emitir = string_new();
+	for(int i = 0; i < list_size(parametros_actuales); i++) {
+		string_append(&parametros_a_emitir, list_get(parametros_actuales, i));
+		if(i != list_size(parametros_actuales) - 1) {
+			string_append(&parametros_a_emitir, " ");
+		}
+	}
+
+	return parametros_a_emitir;
+}
 

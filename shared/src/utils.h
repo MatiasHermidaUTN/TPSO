@@ -94,9 +94,9 @@ typedef struct {
 } t_paquete;
 
 typedef struct registros_cpu {
-	char  AX[ 4+1],  BX[ 4+1],  CX[ 4+1],  DX[ 4+1];
-	char EAX[ 8+1], EBX[ 8+1], ECX[ 8+1], EDX[ 8+1];
-	char RAX[16+1], RBX[16+1], RCX[16+1], RDX[16+1];
+	char  AX[ 4],  BX[ 4],  CX[ 4],  DX[ 4];
+	char EAX[ 8], EBX[ 8], ECX[ 8], EDX[ 8];
+	char RAX[16], RBX[16], RCX[16], RDX[16];
 } t_registros_cpu;
 
 typedef struct pcb {
@@ -170,10 +170,7 @@ void *queue_pop_con_mutex(t_queue* queue, pthread_mutex_t* mutex);
 void queue_push_con_mutex(t_queue* queue,void* elemento, pthread_mutex_t* mutex);
 void *list_pop_con_mutex(t_list* lista, pthread_mutex_t* mutex);
 void list_push_con_mutex(t_list* lista,void* elemento, pthread_mutex_t* mutex);
-/*
-char* obtener_pids(t_list* lista_pcbs);
-int tamanio_de_pids(t_list* pcbs);
-*/
+
 void destruir_instruccion(t_instruccion* instruccion);
 
 void liberar_pcb(t_pcb* pcb);

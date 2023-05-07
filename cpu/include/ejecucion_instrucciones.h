@@ -18,4 +18,6 @@ void ejecutar_set(t_pcb* pcb, t_instruccion* instruccion_actual);
 
 void enviar_pcb_a_kernel(t_pcb* pcb, t_msj_kernel_cpu mensaje, t_list* list_parametros, int cantidad_de_parametros);
 
+char* obtener_parametros_a_emitir(t_list* parametros_actuales);
+
 #endif /* EJECUCION_INSTRUCCIONES_H_ */
