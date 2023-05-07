@@ -154,9 +154,8 @@ void planificar_corto() {
 				pcb_recibido->tiempo_real_ejecucion = time(NULL) - pcb_recibido->tiempo_inicial_ejecucion;
 				//Finaliza ejecucion
 
-				ready_list_push(pcb_recibido); //Aca calcula el S (proxima rafaga), actualizo el tiempo_llegada_ready y hago sem_post(&sem_cant_ready) (solo necesito pasarle el pcb, porque ya se que es en Ready)
 				log_info(logger, "PID: %d - Estado Anterior: EXEC - Estado Actual: READY", pcb_recibido->pid); //log obligatorio
-				log_pids(); //log obligatorio
+				ready_list_push(pcb_recibido); //Aca calcula el S (proxima rafaga), actualizo el tiempo_llegada_ready y hago sem_post(&sem_cant_ready) (solo necesito pasarle el pcb, porque ya se que es en Ready)
 				break;
 
 			case EXIT_EJECUTADO:
@@ -174,7 +173,10 @@ void planificar_corto() {
 void ready_list_push(t_pcb* pcb_recibido) {
 	pcb_recibido->tiempo_llegada_ready = time(NULL); //Actualizo el momento en que llega a Ready
 	calcular_prox_rafaga(pcb_recibido); //S se calcula solo al que entra a Ready
+
 	list_push_con_mutex(ready_list, pcb_recibido, &mutex_ready_list);
+	log_pids(); //log obligatorio
+
 	sem_post(&sem_cant_ready); //Dice que hay un nuevo proceso en Ready
 }
 
@@ -226,7 +228,6 @@ void manejar_io(t_args_io* args_io) {
 	sleep(args_io->tiempo);
 	log_info(logger, "PID: %d - Estado Anterior: BLOCK - Estado Actual: READY", args_io->pcb->pid); //log obligatorio
 	ready_list_push(args_io->pcb); //Aca calcula el S (proxima rafaga), actualizo el tiempo_llegada_ready y hago sem_post(&sem_cant_ready)
-	log_pids(); //log obligatorio
 	free(args_io);
 }
 
@@ -274,9 +275,8 @@ void signal_recurso(t_pcb* pcb, char* nombre_recurso) {
 
 		if(recurso->cantidad_disponibles <= 0) { //Si habia al menos un proceso que estaba bloqueado
 			t_pcb* pcb_a_desbloquear = queue_pop(recurso->cola_bloqueados);
-			ready_list_push(pcb_a_desbloquear); //hace el sem_post(&sem_cant_ready)
 			log_info(logger, "PID: %d - Estado Anterior: BLOCK - Estado Actual: READY", pcb_a_desbloquear->pid); //log obligatorio
-			log_pids(); //log obligatorio
+			ready_list_push(pcb_a_desbloquear); //hace el sem_post(&sem_cant_ready)
 		}
 
 		proximo_pcb_a_ejecutar_forzado = pcb;

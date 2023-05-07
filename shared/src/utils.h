@@ -120,27 +120,9 @@ typedef struct {
 	t_list* parametros;
 } t_instruccion;
 
-
-/*
-int crear_conexion(char* ip, char* puerto);
-void enviar_mensaje(char* mensaje, int socket_cliente);
-t_paquete* crear_paquete(void);
-t_paquete* crear_super_paquete(void);
-void agregar_a_paquete(t_paquete* paquete, void* valor, int tamanio);
-void enviar_paquete(t_paquete* paquete, int socket_cliente);
-void liberar_conexion(int socket_cliente);
-void eliminar_paquete(t_paquete* paquete);
-
 //////////////////////////
 // Utils.c del servidor //
 //////////////////////////
-
-t_log* iniciar_logger(void);
-t_config* iniciar_config(void);
-void leer_consola(t_log*);
-void paquete(int);
-void terminar_programa(int, t_log*, t_config*);*/
-
 
 int crear_conexion(char *ip, char* puerto);
 
@@ -166,10 +148,18 @@ void enviar_handshake(int socket, t_handshake t_handshake);
 t_msj_kernel_consola recibir_fin_proceso(int socket_cliente);
 void enviar_fin_proceso(int socket, t_msj_kernel_consola msj);
 
+//////////////////////
+// Listas de estado //
+//////////////////////
+
 void *queue_pop_con_mutex(t_queue* queue, pthread_mutex_t* mutex);
 void queue_push_con_mutex(t_queue* queue,void* elemento, pthread_mutex_t* mutex);
 void *list_pop_con_mutex(t_list* lista, pthread_mutex_t* mutex);
 void list_push_con_mutex(t_list* lista,void* elemento, pthread_mutex_t* mutex);
+
+///////////////////
+// Liberar datos //
+///////////////////
 
 void destruir_instruccion(t_instruccion* instruccion);
 
@@ -177,6 +167,10 @@ void liberar_pcb(t_pcb* pcb);
 //void liberar_tabla_segmentos_pcb(tabla_segmentos);
 //void liberar_archivos_abiertos_pcb(archivos_abiertos);
 void liberar_parametros(char** parametros);
+
+/////////
+// pcb //
+/////////
 
 void enviar_pcb(int socket, t_pcb* pcb, t_msj_kernel_cpu op_code, char** parametros_de_instruccion);
 

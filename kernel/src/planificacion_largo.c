@@ -15,8 +15,8 @@ void planificar_largo() {
 			t_pcb* pcb = queue_pop_con_mutex(new_queue, &mutex_new_queue);
 			pcb->tiempo_llegada_ready = time(NULL);
 
-			list_push_con_mutex(ready_list, pcb, &mutex_ready_list);
 			log_info(logger, "PID: %d - Estado Anterior: NEW - Estado Actual: READY", pcb->pid); //log obligatorio
+			list_push_con_mutex(ready_list, pcb, &mutex_ready_list);
 			log_pids(); //log obligatorio
 
 			sem_post(&sem_cant_ready);

@@ -19,7 +19,7 @@ int main(int argc, char** argv) {
         exit(EXIT_FAILURE);
     }
 
-    int socket_cpu = iniciar_servidor("127.0.0.1",lectura_de_config.PUERTO_ESCUCHA);
+    int socket_cpu = iniciar_servidor("127.0.0.1", lectura_de_config.PUERTO_ESCUCHA); //TODO: hardcodeado
     log_warning(logger, "CPU lista para recibir al Kernel");
     socket_kernel = esperar_cliente(socket_cpu);
 

@@ -169,25 +169,25 @@ t_log* iniciar_logger(char* path, char* nombre) {
 }
 
 t_handshake recibir_handshake(int socket_cliente) {
-	t_handshake rta_handshake;
-	recv(socket_cliente, &rta_handshake, sizeof(rta_handshake), MSG_WAITALL);
-	return rta_handshake;
+	t_handshake respuesta_handshake;
+	recv(socket_cliente, &respuesta_handshake, sizeof(respuesta_handshake), MSG_WAITALL);
+	return respuesta_handshake;
 }
 
-void enviar_handshake(int socket, t_handshake msg_hanshake) {
+void enviar_handshake(int socket, t_handshake mensaje_handshake) {
 	//TODO: Falta fijarse si da error
-	send(socket, &msg_hanshake, sizeof(msg_hanshake), 0);
+	send(socket, &mensaje_handshake, sizeof(mensaje_handshake), 0);
 }
 
 t_msj_kernel_consola recibir_fin_proceso(int socket_cliente) {
-	t_msj_kernel_consola msj;
-	recv(socket_cliente, &msj, sizeof(t_msj_kernel_consola), MSG_WAITALL);
-	return msj;
+	t_msj_kernel_consola mensaje;
+	recv(socket_cliente, &mensaje, sizeof(t_msj_kernel_consola), MSG_WAITALL);
+	return mensaje;
 }
 
-void enviar_fin_proceso(int socket, t_msj_kernel_consola msj) {
+void enviar_fin_proceso(int socket, t_msj_kernel_consola mensaje) {
 	//TODO: Falta fijarse si da error
-	send(socket, &msj, sizeof(msj), 0);
+	send(socket, &mensaje, sizeof(mensaje), 0);
 }
 
 void *queue_pop_con_mutex(t_queue* queue, pthread_mutex_t* mutex) {
@@ -224,8 +224,10 @@ void destruir_instruccion(t_instruccion* instruccion) {
 	free(instruccion);
 }
 
-void liberar_pcb(t_pcb* pcb) {//TODO: a veces valgrind me tira el warning: Invalid read of size 4
+void liberar_pcb(t_pcb* pcb) {
 	list_destroy_and_destroy_elements(pcb->instrucciones, (void*)destruir_instruccion);
+	//free(pcb->tabla_segmentos);   //TODO: fijarse si hay que liberar los elementos también
+	//free(pcb->archivos_abiertos); //TODO: fijarse si hay que liberar los elementos también
 	//list_destroy(pcb->tabla_segmentos);  //TODO: fijarse si hay que liberar los elementos también
 	//list_destroy(pcb->archivos_abiertos);//TODO: fijarse si hay que liberar los elementos también
 	//TODO: liberar_tabla_segmentos_pcb(pcb->tabla_segmentos);
