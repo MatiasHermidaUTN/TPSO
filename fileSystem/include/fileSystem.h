@@ -5,7 +5,9 @@
 #include <stdlib.h>
 #include <stdint.h>
 #include <stdbool.h>
+#include <pthread.h>
 #include <math.h>
+#include <time.h>
 #include <sys/mman.h>
 #include <unistd.h>
 #include <fcntl.h>
@@ -15,6 +17,10 @@
 #include <commons/string.h>
 #include <utils.h>
 #include "../include/configuracion_fileSystem.h"
+
+extern pthread_mutex_t mutex_new_queue;
+extern pthread_mutex_t mutex_ready_list;
+//TODO extern de TODAS LAS VAR DE FS.c
 
 typedef struct {
 	char* nombre_archivo;
@@ -37,10 +43,26 @@ struct super_bloque_info {
 	int block_size;
 	int block_count;
 }super_bloque_info;
+
+typedef struct args_recibir_mensajes {
+	t_instrucciones cod_op;
+	char* nombre_archivo;
+	int nuevo_tamanio_archivo;
+	int apartir_de_donde_X;
+	int cuanto_X;
+	int dir_fisica_memoria;
+} t_mensajes;
+
 //fcb
 uint32_t config_get_uint_value(t_config *self, char *key);
 char* obtener_path_FCB_sin_free(char* nombre_archivo);
+//hilos
+int recibir_mensajes();
+int manejar_mensaje();
+void escuchar_kernel();
 //
+uint32_t conseguir_ptr_secundario_para_indirecto(uint32_t puntero_indirecto, int nro_de_ptr_secundario);
+void guardar_ptr_secundario_para_indirecto(uint32_t puntero_secundairo, uint32_t puntero_indirecto, int nro_de_ptr_secundario);
 //bitmap
 bool checkear_espacio(int cuanto_escribir);
 uint32_t dame_un_bloque_libre();
@@ -56,8 +78,8 @@ void achicas_archivo(t_config* archivo_FCB, char* nombre_archivo, int nuevo_tama
 void agrandas_archivo(t_config* archivo_FCB, char* nombre_archivo, int nuevo_tamanio_archivo);
 //leer
 char* leer_archivo(char* nombre_archivo, int apartir_de_donde_leer, int cuanto_leer);
-void leer_indirecto(char* buffer, t_config* archivo_FCB, int bloque_secundario_donde_leer, int* cuanto_leer);
-void leer_bloque(char* buffer, uint32_t puntero, int apartir_de_donde_leer_relativo_a_bloque, int* cuanto_leer);
+void leer_indirecto(char* buffer, t_config* archivo_FCB, int bloque_secundario_donde_leer, int* cuanto_leer, int* cantidad_leida);
+void leer_bloque(char* buffer, uint32_t puntero, int apartir_de_donde_leer_relativo_a_bloque, int* cuanto_leer, int* cantidad_leida);
 //escribir
 void escribir_archivo(char* buffer, char* nombre_archivo, int apartir_de_donde_escribir, int cuanto_escribir);
 void sobreescribir_indirecto(char* buffer, t_config* archivo_FCB, int bloque_secundario_donde_escribir, int* cuanto_escribir, int* cantidad_escrita);
