@@ -28,16 +28,19 @@ void manejar_conexion(void* args){
 			enviar_handshake(socket_cliente,OK_HANDSHAKE);
 			manejar_conexion_kernel(socket_cliente, logger);
 			break;
+
 		case CPU:
 			log_info(logger, "La CPU se conecto a memoria");
 			enviar_handshake(socket_cliente,OK_HANDSHAKE);
 			manejar_conexion_cpu(socket_cliente, logger);
 			break;
+
 		case FILESYSTEM:
 			log_info(logger, "El Filesystem se conecto a memoria");
 			enviar_handshake(socket_cliente,OK_HANDSHAKE);
 			manejar_conexion_fileSystem(socket_cliente, logger);
 			break;
+			
 		default:
 			log_error(logger, "Error en el handshake");
 			enviar_handshake(socket_cliente,ERROR_HANDSHAKE);
