@@ -714,6 +714,8 @@ void enviar_msj_con_parametros(int op_code,char** parametros,int socket){
 	}
 
 	send(socket, stream, size_total, 0);
+
+	free(stream);
 }
 
 

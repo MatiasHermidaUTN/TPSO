@@ -130,11 +130,10 @@ void init_conexiones(t_kernel_config lectura_de_config, t_log* logger, int* sock
 		log_error(logger, "Kernel no pudo conectarse a CPU");
 		exit(EXIT_FAILURE);
 	}
-	/* No compila el FS, por lo que por ahora lo pruebo sin este //TODO DESCOMENTAR
 	*socket_fileSystem = crear_conexion(lectura_de_config.IP_FILESYSTEM, lectura_de_config.PUERTO_FILESYSTEM);
 	if(*socket_fileSystem == -1) {
 		log_error(logger, "Kernel no pudo conectarse a File System");
 		exit(EXIT_FAILURE);
 	}
-	*/
+
 }

@@ -29,4 +29,6 @@ void signal_recurso(t_pcb* pcb, char* recurso);
 void exit_proceso(t_pcb* pcb);
 void list_remove_pcb(t_list *lista, t_pcb *pcb);
 t_pcb* list_get_max_R(t_list* lista);
+void list_remove_recurso(t_list *lista, t_recurso *recurso);
+void eliminar_archivo(t_pcb *pcb, char* nombre);
 #endif /* PLANIFICACION_CORTO_H_ */

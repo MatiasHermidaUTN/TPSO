@@ -44,7 +44,6 @@ void planificar_corto() {
 
 			case F_OPEN_EJECUTADO:
 				parametros = recibir_parametros_de_instruccion();
-				log_warning(logger, "parametros[0]: %s", parametros[0]);
 				pcb_recibido = recibir_pcb(socket_cpu);
 
 				t_recurso* archivo_a_abrir = buscar_recurso(parametros[0], list_archivos);
@@ -57,12 +56,15 @@ void planificar_corto() {
 				if(archivo_a_abrir){//el archivo esta abierto
 
 					archivo_a_abrir->cantidad_disponibles--;
+					pcb_recibido->tiempo_real_ejecucion = time(NULL) - pcb_recibido->tiempo_inicial_ejecucion;
 					queue_push(archivo_a_abrir->cola_bloqueados,pcb_recibido);
 
-
-
 				}else{ //el archivo no esta abierto
-					enviar_msj(EXISTE_ARCHIVO,socket_fileSystem);
+
+					char** parametros_a_enviar = string_array_new();
+					string_array_push(&parametros_a_enviar,parametros[0]);
+					enviar_msj_con_parametros(EXISTE_ARCHIVO,parametros_a_enviar,socket_fileSystem);
+
 					int msj_recibido = recibir_msj(socket_fileSystem);
 
 					t_recurso* archivo = malloc(sizeof(t_recurso));
@@ -71,8 +73,6 @@ void planificar_corto() {
 					list_add(list_archivos,archivo);
 
 					if(msj_recibido == EL_ARCHIVO_NO_EXISTE){
-						char** parametros_a_enviar = string_array_new();
-						string_array_push(&parametros_a_enviar,parametros[0]);
 						enviar_msj_con_parametros(CREAR_ARCHIVO,parametros_a_enviar,socket_fileSystem);
 
 						int rta = recibir_msj(socket_fileSystem);
@@ -83,14 +83,11 @@ void planificar_corto() {
 							exit(EXIT_FAILURE);
 						}
 
-
-						string_array_destroy(parametros_a_enviar);
-
 					} else {
 						log_error(logger,"Error en la comunicacion entre el kernel y el file system");
 						exit(EXIT_FAILURE);
 					}
-
+					string_array_destroy(parametros_a_enviar);
 					proximo_pcb_a_ejecutar_forzado = pcb_recibido;
 					sem_post(&sem_cant_ready);
 
@@ -101,17 +98,24 @@ void planificar_corto() {
 
 			case F_CLOSE_EJECUTADO:
 				parametros = recibir_parametros_de_instruccion();
-				//TODO: AVISAR A FILESYSTEM
+				pcb_recibido = recibir_pcb(socket_cpu);
+				eliminar_archivo(pcb_recibido, parametros[0]);
 
+				t_recurso* archivo_a_cerrar = buscar_recurso(parametros[0], list_archivos);
+				archivo_a_cerrar->cantidad_disponibles ++;
+				if(queue_is_empty(archivo_a_cerrar->cola_bloqueados)){
+					list_remove_recurso(list_recursos, archivo_a_cerrar);
+				}else{
+					t_pcb* pcb_a_desbloquear = queue_pop(archivo_a_cerrar->cola_bloqueados);
+					ready_list_push(pcb_a_desbloquear);
+				}
+				proximo_pcb_a_ejecutar_forzado = pcb_recibido;
+				sem_post(&sem_cant_ready);
 				string_array_destroy(parametros);
 				break;
 
 			case F_SEEK_EJECUTADO:
 				parametros = recibir_parametros_de_instruccion();
-				//log_warning(logger, "parametros[0]: %s", parametros[0]);
-				//log_warning(logger, "parametros[1]: %s", parametros[1]);
-				//TODO: AVISAR A FILESYSTEM
-
 				string_array_destroy(parametros);
 
 				pcb_recibido = recibir_pcb(socket_cpu);
@@ -351,6 +355,26 @@ void list_remove_pcb(t_list *lista, t_pcb *pcb) {
 	for(int i = 0; i < list_size(lista); i++) {
 		elemento = list_get(lista, i);
 		if(elemento->pid == pcb->pid) {
+			elemento = list_remove(lista, i);
+		}
+	}
+}
+
+void eliminar_archivo(t_pcb *pcb, char* nombre) {
+	t_archivo_abierto* elemento;
+	for(int i = 0; i < list_size(pcb->archivos_abiertos); i++) {
+		elemento = list_get(pcb->archivos_abiertos, i);
+		if(!strcmp(elemento->nombre_archivo, nombre)) {
+			elemento = list_remove(pcb->archivos_abiertos, i);
+		}
+	}
+}
+
+void list_remove_recurso(t_list *lista, t_recurso *recurso) {
+	t_recurso* elemento;
+	for(int i = 0; i < list_size(lista); i++) {
+		elemento = list_get(lista, i);
+		if(!strcmp(elemento->nombre, recurso->nombre)){
 			elemento = list_remove(lista, i);
 		}
 	}

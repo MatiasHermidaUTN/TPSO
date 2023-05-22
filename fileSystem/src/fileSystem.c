@@ -633,11 +633,16 @@ void recibir_parametros(t_instrucciones cod_op, char** nombre_archivo, int* tama
 		return;
 	}
 
+	printf("111111111111111 \n");
+
 	void* a_recibir = malloc(size_payload);
 	if (recv(kernel, a_recibir, size_payload, 0) != size_payload) {
+		printf("44444444444444 \n");
 		free(a_recibir);
 		return;
 	}
+
+	printf("222222222222 \n");
 
 	deserializar_instrucciones_kernel(a_recibir, size_payload, cod_op, nombre_archivo, tamanio_nuevo_archivo, apartir_de_donde_X, cuanto_X, dir_fisica_memoria);
 
@@ -647,8 +652,8 @@ void recibir_parametros(t_instrucciones cod_op, char** nombre_archivo, int* tama
 
 void deserializar_instrucciones_kernel(void* a_recibir, int size_payload, t_instrucciones cod_op, char** nombre_archivo, int* tamanio_nuevo_archivo, int* apartir_de_donde_X, int* cuanto_X, int* dir_fisica_memoria){
 	switch(cod_op){
-		case ABRIR:
-		case CREAR:
+		case EXISTE_ARCHIVO:
+		case CREAR_ARCHIVO:
 		default:
 			int desplazamiento = 0;
 			//recibo largo del char* del nombre del file
@@ -680,8 +685,8 @@ void deserializar_instrucciones_kernel(void* a_recibir, int size_payload, t_inst
 					memcpy(dir_fisica_memoria, a_recibir + desplazamiento, sizeof(int));
 					desplazamiento += sizeof(int);
 					break;
-				case ABRIR:
-				case CREAR:
+				case EXISTE_ARCHIVO:
+				case CREAR_ARCHIVO:
 				case ERROR:
 					break;
 			}

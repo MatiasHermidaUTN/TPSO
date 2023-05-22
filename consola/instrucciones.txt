@@ -1,4 +1,5 @@
 WAIT DISCO
+F_OPEN ARCHIVO_PRUEBA
 I/O 5
 F_SEEK falopa.txt 10
 F_WRITE falopa.txt 0xabcedfg 10
