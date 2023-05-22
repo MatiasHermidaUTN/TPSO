@@ -206,7 +206,7 @@ void deserializar_parametros(void* a_recibir, int* desplazamiento, t_instruccion
 
 void memcpy_registros_deserializar(t_registros_cpu* registros_cpu, void* stream_pcb, int* desplazamiento);
 void memcpy_tabla_segmentos_deserializar(t_list* tabla_segmentos, void* stream, int* desplazamiento);
-void memcpy_archivos_abiertos_deserializar(t_list* archivos_abiertos, void* stream, int* desplazamiento);
+void memcpy_archivos_abiertos_deserializar(t_pcb* pcb, void* stream, int* desplazamiento);
 
 void print_l_instrucciones(t_list* instrucciones);
 
@@ -214,4 +214,5 @@ void enviar_msj(int msj,int socket);
 int recibir_msj(int socket);
 void enviar_msj_con_parametros(int op_code,char** parametros,int socket);
 
+void destruir_archivo_abierto(t_archivo_abierto* arch);
 #endif /* UTILS_H_ */

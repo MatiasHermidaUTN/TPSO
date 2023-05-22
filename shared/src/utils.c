@@ -226,6 +226,7 @@ void destruir_instruccion(t_instruccion* instruccion) {
 
 void liberar_pcb(t_pcb* pcb) {
 	list_destroy_and_destroy_elements(pcb->instrucciones, (void*)destruir_instruccion);
+	list_destroy_and_destroy_elements(pcb->archivos_abiertos,(void*)destruir_archivo_abierto);
 	//free(pcb->tabla_segmentos);   //TODO: fijarse si hay que liberar los elementos también
 	//free(pcb->archivos_abiertos); //TODO: fijarse si hay que liberar los elementos también
 	//list_destroy(pcb->tabla_segmentos);  //TODO: fijarse si hay que liberar los elementos también
@@ -328,7 +329,7 @@ void* serializar_pcb(t_pcb* pcb, size_t* size_total, t_msj_kernel_cpu op_code, c
 	memcpy(stream_pcb + desplazamiento, &(pcb->tiempo_llegada_ready), sizeof(int));
 	desplazamiento += sizeof(int);
 
-	//memcpy_archivos_abiertos_serializar(stream_pcb, pcb->archivos_abiertos, &desplazamiento); //TODO: interpretar qué es t_archivo y hacer memcpy
+	memcpy_archivos_abiertos_serializar(stream_pcb, pcb->archivos_abiertos, &desplazamiento);
 
 	memcpy(stream_pcb + desplazamiento, &(pcb->socket_consola), sizeof(pcb->socket_consola));
 	desplazamiento += sizeof(pcb->socket_consola);
@@ -349,8 +350,16 @@ size_t tamanio_payload_pcb(t_pcb* pcb) {
 	size += sizeof(char)*16*7; // Por todos los char[] de los registros (?
 	size += sizeof(pcb->estimado_prox_rafaga) + sizeof(pcb->tiempo_llegada_ready) + sizeof(pcb->socket_consola);
 	size += sizeof(pcb->tiempo_real_ejecucion) + sizeof(pcb->tiempo_inicial_ejecucion);
-	return size; // + sizeof(tabla_segmentos) + sizeof(archivos_abiertos);
-	//TODO: los 2 sizeofs de arriba
+
+	size += sizeof(int); // cantidad de archivos abiertos
+	for(int i=0; i< list_size(pcb->archivos_abiertos);i++){
+		t_archivo_abierto* archivo_abierto =  list_get(pcb->archivos_abiertos,i);
+		size += sizeof(int) + sizeof(int) + strlen(archivo_abierto->nombre_archivo) + 1; //posicion actual, tamanio nombre y nombre del archivo
+	}
+
+
+	return size; // + sizeof(tabla_segmentos);
+	//TODO: sizeof de arriba
 }
 
 size_t tamanio_instrucciones(t_list* instrucciones) {
@@ -448,13 +457,18 @@ void memcpy_tabla_segmentos_serializar(void* stream, t_list* tabla_segmentos, in
 }
 
 void memcpy_archivos_abiertos_serializar(void* stream, t_list* archivos_abiertos, int* desplazamiento) {
-	for(int i = 0; i < archivos_abiertos->elements_count; i++) {
-		//TODO: memcpy
-		/*
-		t_archivo* archivo = (t_archivo*)list_get(archivos_abiertos, i);
-		memcpy(stream + *desplazamiento, archivo, sizeof(t_archivo));
-		*desplazamiento += sizeof(t_archivo);
-		*/
+	int tamanio_lista = list_size(archivos_abiertos);
+	memcpy(stream + *desplazamiento,&tamanio_lista,sizeof(int));
+	*desplazamiento += sizeof(int);
+	for(int i = 0; i < list_size(archivos_abiertos); i++) {
+		t_archivo_abierto* archivo_abierto = list_get(archivos_abiertos,i);
+		memcpy(stream + *desplazamiento,&(archivo_abierto->posicion_actual),sizeof(int));
+		*desplazamiento += sizeof(int);
+		int tamanio_nombre = strlen(archivo_abierto->nombre_archivo) + 1;
+		memcpy(stream + *desplazamiento, &tamanio_nombre ,sizeof(int));
+		*desplazamiento += sizeof(int);
+		memcpy(stream + *desplazamiento,archivo_abierto->nombre_archivo,tamanio_nombre);
+		*desplazamiento += tamanio_nombre;
 	}
 }
 
@@ -504,7 +518,7 @@ t_pcb* deserializar_pcb(void* stream) {
 	memcpy(&(pcb->tiempo_llegada_ready), stream + desplazamiento, sizeof(pcb->tiempo_llegada_ready));
 	desplazamiento += sizeof(pcb->tiempo_llegada_ready);
 
-	//memcpy_archivos_abiertos_deserializar(pcb->archivos_abiertos, stream, &desplazamiento);
+	memcpy_archivos_abiertos_deserializar(pcb, stream, &desplazamiento);
 
 	memcpy(&(pcb->socket_consola), stream + desplazamiento, sizeof(pcb->socket_consola));
 	desplazamiento += sizeof(pcb->socket_consola);
@@ -623,14 +637,23 @@ void memcpy_tabla_segmentos_deserializar(t_list* tabla_segmentos, void* stream, 
 	}
 }
 
-void memcpy_archivos_abiertos_deserializar(t_list* archivos_abiertos, void* stream, int* desplazamiento) {
-	for(int i = 0; i < archivos_abiertos->elements_count; i++) {
-		//TODO: memcpy
-		/*
-		t_archivo* archivo = (t_archivo*)list_get(archivos_abiertos, i);
-		memcpy(archivo, stream + *desplazamiento, sizeof(t_archivo));
-		*desplazamiento += sizeof(t_archivo);
-		*/
+void memcpy_archivos_abiertos_deserializar(t_pcb* pcb, void* stream, int* desplazamiento) {
+	int cant_archivos_abiertos;
+	pcb->archivos_abiertos = list_create();
+	memcpy(&cant_archivos_abiertos,stream + *desplazamiento,sizeof(int));
+	*desplazamiento += sizeof(int);
+
+	for(int i = 0; i < cant_archivos_abiertos; i++) {
+		t_archivo_abierto* archivo_abierto = malloc(sizeof(t_archivo_abierto));
+		memcpy(&(archivo_abierto->posicion_actual),stream+*desplazamiento, sizeof(int));
+		*desplazamiento += sizeof(int);
+		int tamanio_nombre;
+		memcpy(&tamanio_nombre,stream+*desplazamiento,sizeof(int));
+		*desplazamiento += sizeof(int);
+		memcpy(archivo_abierto->nombre_archivo,stream+*desplazamiento,tamanio_nombre);
+		*desplazamiento += tamanio_nombre;
+
+		list_add(pcb->archivos_abiertos,archivo_abierto);
 	}
 }
 
@@ -691,4 +714,10 @@ void enviar_msj_con_parametros(int op_code,char** parametros,int socket){
 	}
 
 	send(socket, stream, size_total, 0);
+}
+
+
+void destruir_archivo_abierto(t_archivo_abierto* arch){
+	free(arch->nombre_archivo);
+	free(arch);
 }

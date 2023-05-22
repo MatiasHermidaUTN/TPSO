@@ -172,23 +172,23 @@ int manejar_mensaje(){
 	char* buffer;
 
 	switch (cod_op) {
-		case ABRIR:{
+		case EXISTE_ARCHIVO:{
 			printf("abrir nombre_archivo: %s\n",nombre_archivo);
 			if (existe_archivo(nombre_archivo)) {	//existe FCB?
-				enviar_mensaje_kernel(kernel, "OK El archivo ya existe");
+				enviar_msj(EL_ARCHIVO_YA_EXISTE,kernel);
 				printf("abierto %s\n",nombre_archivo);
 			} else {
-				enviar_mensaje_kernel(kernel, "ERROR El archivo NO existe");
+				enviar_msj(EL_ARCHIVO_NO_EXISTE,kernel);
 				printf("no existe %s\n",nombre_archivo);
 			}
 			printf("\n");
 			free(nombre_archivo);
 			break;
 		}
-		case CREAR:{
+		case CREAR_ARCHIVO:{
 			printf("crear nombre_archivo: %s \n", nombre_archivo);
 			crear_archivo(nombre_archivo);	//crear FCB y poner tamaño 0 y sin bloques asociados.
-			enviar_mensaje_kernel(kernel, "OK Archivo creado");
+			enviar_msj(EL_ARCHIVO_FUE_CREADO,kernel);
 			printf("archivo creado: %s\n",nombre_archivo);
 			printf("unos dsp crear: %d\n", cant_unos_en_bitmap());
 			printf("\n");

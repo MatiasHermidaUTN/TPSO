@@ -13409,3 +13409,168 @@
 [INFO] 13:05:43:489 Kernel/(4166:4167): PID: 1 - Signal: DISCO - Instancias: 1
 [INFO] 13:05:43:489 Kernel/(4166:4167): PID: 1 - Estado Anterior: EXEC - Estado Actual: EXIT
 [INFO] 13:05:43:490 Kernel/(4166:4167): Finaliza el proceso 1 - Motivo: SUCCESS
+[WARNING] 16:01:25:608 Kernel/(11089:11089): Kernel listo para recibir a Consolas
+[WARNING] 16:01:29:097 Kernel/(11089:11093): Se conecto una consola
+[INFO] 16:01:29:098 Kernel/(11089:11093): Se crea el proceso 1 en NEW
+[INFO] 16:01:29:098 Kernel/(11089:11091): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 16:01:29:098 Kernel/(11089:11091): Cola Ready HRRN: [1]
+[INFO] 16:01:29:098 Kernel/(11089:11090): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[ERROR] 16:01:29:497 Kernel/(11089:11090): Error en la comunicacion entre el Kernel y la CPU
+[ERROR] 16:02:13:311 Kernel/(11095:11095): Kernel no pudo conectarse a CPU
+[WARNING] 16:02:23:008 Kernel/(11097:11097): Kernel listo para recibir a Consolas
+[WARNING] 16:02:26:473 Kernel/(11097:11101): Se conecto una consola
+[INFO] 16:02:26:487 Kernel/(11097:11101): Se crea el proceso 1 en NEW
+[INFO] 16:02:26:491 Kernel/(11097:11099): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 16:02:26:493 Kernel/(11097:11099): Cola Ready HRRN: [1]
+[INFO] 16:02:26:503 Kernel/(11097:11098): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[ERROR] 16:02:26:928 Kernel/(11097:11098): Error en la comunicacion entre el Kernel y la CPU
+[WARNING] 16:09:05:403 Kernel/(11296:11296): Kernel listo para recibir a Consolas
+[WARNING] 16:09:08:647 Kernel/(11296:11300): Se conecto una consola
+[INFO] 16:09:08:659 Kernel/(11296:11300): Se crea el proceso 1 en NEW
+[INFO] 16:09:08:665 Kernel/(11296:11298): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 16:09:08:671 Kernel/(11296:11298): Cola Ready HRRN: [1]
+[INFO] 16:09:08:674 Kernel/(11296:11297): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[ERROR] 16:09:09:254 Kernel/(11296:11297): Error en la comunicacion entre el Kernel y la CPU
+[WARNING] 16:10:17:210 Kernel/(11304:11304): Kernel listo para recibir a Consolas
+[WARNING] 16:10:20:656 Kernel/(11304:11308): Se conecto una consola
+[INFO] 16:10:20:666 Kernel/(11304:11308): Se crea el proceso 1 en NEW
+[INFO] 16:10:20:675 Kernel/(11304:11306): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 16:10:20:677 Kernel/(11304:11306): Cola Ready HRRN: [1]
+[INFO] 16:10:20:683 Kernel/(11304:11305): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[ERROR] 16:10:20:935 Kernel/(11304:11305): Error en la comunicacion entre el Kernel y la CPU
+[WARNING] 16:13:35:046 Kernel/(11398:11398): Kernel listo para recibir a Consolas
+[WARNING] 16:13:36:383 Kernel/(11398:11402): Se conecto una consola
+[INFO] 16:13:36:398 Kernel/(11398:11402): Se crea el proceso 1 en NEW
+[INFO] 16:13:36:404 Kernel/(11398:11400): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 16:13:36:413 Kernel/(11398:11400): Cola Ready HRRN: [1]
+[INFO] 16:13:36:415 Kernel/(11398:11399): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[ERROR] 16:13:36:871 Kernel/(11398:11399): Error en la comunicacion entre el Kernel y la CPU
+[WARNING] 16:19:32:523 Kernel/(11541:11541): Kernel listo para recibir a Consolas
+[WARNING] 16:19:34:328 Kernel/(11541:11545): Se conecto una consola
+[INFO] 16:19:34:328 Kernel/(11541:11545): Se crea el proceso 1 en NEW
+[INFO] 16:19:34:328 Kernel/(11541:11543): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 16:19:34:329 Kernel/(11541:11543): Cola Ready HRRN: [1]
+[INFO] 16:19:34:329 Kernel/(11541:11542): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[ERROR] 16:19:37:353 Kernel/(11541:11542): Error en la comunicacion entre el Kernel y la CPU
+[WARNING] 16:25:27:510 Kernel/(11693:11693): Kernel listo para recibir a Consolas
+[WARNING] 16:25:28:997 Kernel/(11693:11697): Se conecto una consola
+[INFO] 16:25:28:997 Kernel/(11693:11697): Se crea el proceso 1 en NEW
+[INFO] 16:25:28:997 Kernel/(11693:11695): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 16:25:28:997 Kernel/(11693:11695): Cola Ready HRRN: [1]
+[INFO] 16:25:28:998 Kernel/(11693:11694): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[ERROR] 16:25:30:482 Kernel/(11693:11694): Error en la comunicacion entre el Kernel y la CPU
+[WARNING] 16:26:32:748 Kernel/(11766:11766): Kernel listo para recibir a Consolas
+[WARNING] 16:26:34:399 Kernel/(11766:11770): Se conecto una consola
+[INFO] 16:26:34:400 Kernel/(11766:11770): Se crea el proceso 1 en NEW
+[INFO] 16:26:34:400 Kernel/(11766:11768): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 16:26:34:400 Kernel/(11766:11768): Cola Ready HRRN: [1]
+[INFO] 16:26:34:400 Kernel/(11766:11767): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[WARNING] 16:26:44:911 Kernel/(11773:11773): Kernel listo para recibir a Consolas
+[WARNING] 16:26:47:391 Kernel/(11773:11777): Se conecto una consola
+[INFO] 16:26:47:392 Kernel/(11773:11777): Se crea el proceso 1 en NEW
+[INFO] 16:26:47:392 Kernel/(11773:11775): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 16:26:47:392 Kernel/(11773:11775): Cola Ready HRRN: [1]
+[INFO] 16:26:47:392 Kernel/(11773:11774): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[WARNING] 16:28:35:732 Kernel/(11822:11822): Kernel listo para recibir a Consolas
+[WARNING] 16:28:37:484 Kernel/(11822:11826): Se conecto una consola
+[INFO] 16:28:37:484 Kernel/(11822:11826): Se crea el proceso 1 en NEW
+[INFO] 16:28:37:484 Kernel/(11822:11824): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 16:28:37:484 Kernel/(11822:11824): Cola Ready HRRN: [1]
+[INFO] 16:28:37:484 Kernel/(11822:11823): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[ERROR] 16:28:38:842 Kernel/(11822:11823): Error en la comunicacion entre el Kernel y la CPU
+[WARNING] 16:36:09:337 Kernel/(11963:11963): Kernel listo para recibir a Consolas
+[WARNING] 16:36:11:421 Kernel/(11963:11967): Se conecto una consola
+[INFO] 16:36:11:421 Kernel/(11963:11967): Se crea el proceso 1 en NEW
+[INFO] 16:36:11:421 Kernel/(11963:11965): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 16:36:11:421 Kernel/(11963:11965): Cola Ready HRRN: [1]
+[INFO] 16:36:11:421 Kernel/(11963:11964): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[ERROR] 16:36:12:822 Kernel/(11963:11964): Error en la comunicacion entre el Kernel y la CPU
+[WARNING] 16:39:32:775 Kernel/(12023:12023): Kernel listo para recibir a Consolas
+[WARNING] 16:39:34:311 Kernel/(12023:12027): Se conecto una consola
+[INFO] 16:39:34:311 Kernel/(12023:12027): Se crea el proceso 1 en NEW
+[INFO] 16:39:34:311 Kernel/(12023:12025): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 16:39:34:311 Kernel/(12023:12025): Cola Ready HRRN: [1]
+[INFO] 16:39:34:311 Kernel/(12023:12024): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[ERROR] 16:39:35:776 Kernel/(12023:12024): Error en la comunicacion entre el Kernel y la CPU
+[WARNING] 16:40:29:288 Kernel/(12106:12106): Kernel listo para recibir a Consolas
+[WARNING] 16:40:31:015 Kernel/(12106:12110): Se conecto una consola
+[INFO] 16:40:31:015 Kernel/(12106:12110): Se crea el proceso 1 en NEW
+[INFO] 16:40:31:015 Kernel/(12106:12108): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 16:40:31:015 Kernel/(12106:12108): Cola Ready HRRN: [1]
+[INFO] 16:40:31:015 Kernel/(12106:12107): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[ERROR] 16:40:32:434 Kernel/(12106:12107): Error en la comunicacion entre el Kernel y la CPU
+[WARNING] 16:50:35:080 Kernel/(12640:12640): Kernel listo para recibir a Consolas
+[WARNING] 16:50:36:860 Kernel/(12640:12644): Se conecto una consola
+[INFO] 16:50:36:860 Kernel/(12640:12644): Se crea el proceso 1 en NEW
+[INFO] 16:50:36:860 Kernel/(12640:12642): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 16:50:36:860 Kernel/(12640:12642): Cola Ready HRRN: [1]
+[INFO] 16:50:36:860 Kernel/(12640:12641): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 16:50:36:901 Kernel/(12640:12641): PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 16:50:36:902 Kernel/(12640:12641): PID: 1 - Bloqueado por: IO
+[INFO] 16:50:36:903 Kernel/(12640:12641): PID: 1 - Ejecuta IO: 5
+[INFO] 16:50:41:906 Kernel/(12640:12645): PID: 1 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 16:50:41:906 Kernel/(12640:12645): Cola Ready HRRN: [1]
+[INFO] 16:50:41:906 Kernel/(12640:12641): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 16:50:41:918 Kernel/(12640:12641): PID: 1 - Estado Anterior: EXEC - Estado Actual: READY
+[INFO] 16:50:41:918 Kernel/(12640:12641): Cola Ready HRRN: [1]
+[INFO] 16:50:41:918 Kernel/(12640:12641): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 16:50:41:947 Kernel/(12640:12641): PID: 1 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 16:50:41:948 Kernel/(12640:12641): Finaliza el proceso 1 - Motivo: SUCCESS
+[WARNING] 16:51:53:685 Kernel/(12653:12653): Kernel listo para recibir a Consolas
+[WARNING] 16:51:55:908 Kernel/(12653:12657): Se conecto una consola
+[INFO] 16:51:55:909 Kernel/(12653:12657): Se crea el proceso 1 en NEW
+[INFO] 16:51:55:909 Kernel/(12653:12655): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 16:51:55:909 Kernel/(12653:12655): Cola Ready HRRN: [1]
+[INFO] 16:51:55:909 Kernel/(12653:12654): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 16:51:55:910 Kernel/(12653:12654): PID: 1 - Wait: DISCO - Instancias: 0
+[INFO] 16:51:55:910 Kernel/(12653:12654): PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 16:51:55:910 Kernel/(12653:12654): PID: 1 - Bloqueado por: IO
+[INFO] 16:51:55:910 Kernel/(12653:12654): PID: 1 - Ejecuta IO: 5
+[INFO] 16:52:00:910 Kernel/(12653:12658): PID: 1 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 16:52:00:911 Kernel/(12653:12658): Cola Ready HRRN: [1]
+[INFO] 16:52:00:911 Kernel/(12653:12654): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 16:52:00:912 Kernel/(12653:12654): PID: 1 - Estado Anterior: EXEC - Estado Actual: READY
+[INFO] 16:52:00:912 Kernel/(12653:12654): Cola Ready HRRN: [1]
+[INFO] 16:52:00:912 Kernel/(12653:12654): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 16:52:00:924 Kernel/(12653:12654): PID: 1 - Signal: DISCO - Instancias: 1
+[INFO] 16:52:00:924 Kernel/(12653:12654): PID: 1 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 16:52:00:924 Kernel/(12653:12654): Finaliza el proceso 1 - Motivo: SUCCESS
+[ERROR] 16:52:10:424 Kernel/(12659:12659): Kernel no pudo conectarse a CPU
+[WARNING] 16:52:18:525 Kernel/(12661:12661): Kernel listo para recibir a Consolas
+[WARNING] 16:52:23:018 Kernel/(12661:12665): Se conecto una consola
+[INFO] 16:52:23:018 Kernel/(12661:12665): Se crea el proceso 1 en NEW
+[INFO] 16:52:23:018 Kernel/(12661:12663): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 16:52:23:018 Kernel/(12661:12663): Cola Ready HRRN: [1]
+[INFO] 16:52:23:018 Kernel/(12661:12662): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 16:52:23:063 Kernel/(12661:12662): PID: 1 - Wait: DISCO - Instancias: 0
+[INFO] 16:52:23:068 Kernel/(12661:12662): PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 16:52:23:068 Kernel/(12661:12662): PID: 1 - Bloqueado por: IO
+[INFO] 16:52:23:068 Kernel/(12661:12662): PID: 1 - Ejecuta IO: 5
+[INFO] 16:52:28:069 Kernel/(12661:12666): PID: 1 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 16:52:28:069 Kernel/(12661:12666): Cola Ready HRRN: [1]
+[INFO] 16:52:28:069 Kernel/(12661:12662): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 16:52:28:079 Kernel/(12661:12662): PID: 1 - Estado Anterior: EXEC - Estado Actual: READY
+[INFO] 16:52:28:080 Kernel/(12661:12662): Cola Ready HRRN: [1]
+[INFO] 16:52:28:080 Kernel/(12661:12662): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 16:52:28:096 Kernel/(12661:12662): PID: 1 - Signal: DISCO - Instancias: 1
+[INFO] 16:52:28:098 Kernel/(12661:12662): PID: 1 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 16:52:28:099 Kernel/(12661:12662): Finaliza el proceso 1 - Motivo: SUCCESS
+[WARNING] 16:53:42:437 Kernel/(12712:12712): Kernel listo para recibir a Consolas
+[WARNING] 16:53:43:580 Kernel/(12712:12716): Se conecto una consola
+[INFO] 16:53:43:581 Kernel/(12712:12716): Se crea el proceso 1 en NEW
+[INFO] 16:53:43:581 Kernel/(12712:12714): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 16:53:43:581 Kernel/(12712:12714): Cola Ready HRRN: [1]
+[INFO] 16:53:43:581 Kernel/(12712:12713): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 16:53:43:660 Kernel/(12712:12713): PID: 1 - Wait: DISCO - Instancias: 0
+[INFO] 16:53:43:684 Kernel/(12712:12713): PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 16:53:43:684 Kernel/(12712:12713): PID: 1 - Bloqueado por: IO
+[INFO] 16:53:43:684 Kernel/(12712:12713): PID: 1 - Ejecuta IO: 5
+[INFO] 16:53:48:685 Kernel/(12712:12717): PID: 1 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 16:53:48:685 Kernel/(12712:12717): Cola Ready HRRN: [1]
+[INFO] 16:53:48:685 Kernel/(12712:12713): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 16:53:48:696 Kernel/(12712:12713): PID: 1 - Estado Anterior: EXEC - Estado Actual: READY
+[INFO] 16:53:48:696 Kernel/(12712:12713): Cola Ready HRRN: [1]
+[INFO] 16:53:48:696 Kernel/(12712:12713): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 16:53:48:718 Kernel/(12712:12713): PID: 1 - Signal: DISCO - Instancias: 1
+[INFO] 16:53:48:722 Kernel/(12712:12713): PID: 1 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 16:53:48:723 Kernel/(12712:12713): Finaliza el proceso 1 - Motivo: SUCCESS
