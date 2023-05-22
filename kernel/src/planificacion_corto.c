@@ -45,12 +45,58 @@ void planificar_corto() {
 			case F_OPEN_EJECUTADO:
 				parametros = recibir_parametros_de_instruccion();
 				log_warning(logger, "parametros[0]: %s", parametros[0]);
-				//TODO: AVISAR A FILESYSTEM
+				pcb_recibido = recibir_pcb(socket_cpu);
+
+				t_recurso* archivo_a_abrir = buscar_recurso(parametros[0], list_archivos);
+
+				t_archivo_abierto* archivo_abierto = malloc(sizeof(t_archivo_abierto));
+				archivo_abierto->nombre_archivo = strdup(parametros[0]);
+				archivo_abierto->posicion_actual = 0;
+				list_add(pcb_recibido->archivos_abiertos,archivo_abierto);
+
+				if(archivo_a_abrir){//el archivo esta abierto
+
+					archivo_a_abrir->cantidad_disponibles--;
+					queue_push(archivo_a_abrir->cola_bloqueados,pcb_recibido);
+
+
+
+				}else{ //el archivo no esta abierto
+					enviar_msj(EXISTE_ARCHIVO,socket_fileSystem);
+					int msj_recibido = recibir_msj(socket_fileSystem);
+
+					t_recurso* archivo = malloc(sizeof(t_recurso));
+					archivo->nombre = strdup(parametros[0]);
+					archivo->cantidad_disponibles = 0;
+					list_add(list_archivos,archivo);
+
+					if(msj_recibido == EL_ARCHIVO_NO_EXISTE){
+						char** parametros_a_enviar = string_array_new();
+						string_array_push(&parametros_a_enviar,parametros[0]);
+						enviar_msj_con_parametros(CREAR_ARCHIVO,parametros_a_enviar,socket_fileSystem);
+
+						int rta = recibir_msj(socket_fileSystem);
+						if(rta == EL_ARCHIVO_FUE_CREADO){
+							log_info(logger,"Se abrio el archivo"); //en realidad nunca va a fallar. esto tendria que haberse hecho con un solo mensaje pero lo separaron en abrir y crear.
+						} else{
+							log_error(logger,"El filesystem no pudo crear el archivo");
+							exit(EXIT_FAILURE);
+						}
+
+
+						string_array_destroy(parametros_a_enviar);
+
+					} else {
+						log_error(logger,"Error en la comunicacion entre el kernel y el file system");
+						exit(EXIT_FAILURE);
+					}
+
+					proximo_pcb_a_ejecutar_forzado = pcb_recibido;
+					sem_post(&sem_cant_ready);
+
+				}
 
 				string_array_destroy(parametros);
-				pcb_recibido = recibir_pcb(socket_cpu);
-				proximo_pcb_a_ejecutar_forzado = pcb_recibido;
-				sem_post(&sem_cant_ready); //Al no pasar por la funcion ready_list_push hay que hacerlo manualmente, vuelve a ejecutar sin pasar por ready
 				break;
 
 			case F_CLOSE_EJECUTADO:
@@ -232,7 +278,7 @@ void manejar_io(t_args_io* args_io) {
 }
 
 void wait_recurso(t_pcb* pcb, char* nombre_recurso) {
-	t_recurso* recurso = buscar_recurso(nombre_recurso);
+	t_recurso* recurso = buscar_recurso(nombre_recurso,list_recursos);
 	if(recurso) {
 		recurso->cantidad_disponibles--;
 		log_info(logger, "PID: %d - Wait: %s - Instancias: %d", pcb->pid, nombre_recurso, recurso->cantidad_disponibles); //log obligatorio
@@ -255,10 +301,10 @@ void wait_recurso(t_pcb* pcb, char* nombre_recurso) {
 	}
 }
 
-t_recurso* buscar_recurso(char* nombre_recurso) {
+t_recurso* buscar_recurso(char* nombre_recurso, t_list* lista) {
 	t_recurso* recurso;
-	for(int i = 0; i < list_size(list_recursos); i++) {
-		recurso = list_get(list_recursos, i);
+	for(int i = 0; i < list_size(lista); i++) {
+		recurso = list_get(lista, i);
 		if(!strcmp(recurso->nombre, nombre_recurso)) {
 			return recurso;
 		}
@@ -267,7 +313,7 @@ t_recurso* buscar_recurso(char* nombre_recurso) {
 }
 
 void signal_recurso(t_pcb* pcb, char* nombre_recurso) {
-	t_recurso* recurso = buscar_recurso(nombre_recurso);
+	t_recurso* recurso = buscar_recurso(nombre_recurso,list_recursos);
 
 	if(recurso) {
 		recurso->cantidad_disponibles++;
@@ -321,3 +367,4 @@ t_pcb* list_get_max_R(t_list* lista) {
 	}
 	return pcb_max;
 }
+

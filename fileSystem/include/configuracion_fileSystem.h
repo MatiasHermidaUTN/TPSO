@@ -3,6 +3,7 @@
 
 #include <commons/config.h>
 
+
 typedef struct fileSystem_config {
 	char* IP_MEMORIA;
 	char* PUERTO_MEMORIA;

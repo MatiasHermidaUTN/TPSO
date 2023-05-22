@@ -24,7 +24,7 @@ t_pcb* obtener_proximo_a_ejecutar();
 void manejar_io(t_args_io* args_io);
 
 void wait_recurso(t_pcb* pcb, char* recurso);
-t_recurso* buscar_recurso(char* nombre_recurso);
+t_recurso* buscar_recurso(char* nombre_recurso, t_list* lista);
 void signal_recurso(t_pcb* pcb, char* recurso);
 void exit_proceso(t_pcb* pcb);
 void list_remove_pcb(t_list *lista, t_pcb *pcb);

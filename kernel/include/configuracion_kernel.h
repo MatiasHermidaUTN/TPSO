@@ -51,6 +51,7 @@ extern int socket_fileSystem;
 extern t_pcb* proximo_pcb_a_ejecutar_forzado;
 
 extern t_list* list_recursos;
+extern t_list* list_archivos;
 
 t_kernel_config leer_kernel_config(t_config* config);
 

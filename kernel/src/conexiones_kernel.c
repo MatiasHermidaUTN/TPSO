@@ -53,7 +53,7 @@ t_pcb* crear_pcb(t_list* instrucciones, int socket_consola) {
 	pcb->tabla_segmentos = NULL; //list_create(); //TODO: falta liberar en liberar_pcb, genera definitely lost
 	pcb->estimado_prox_rafaga = lectura_de_config.ESTIMACION_INICIAL;
 	pcb->tiempo_llegada_ready = 0;
-	pcb->archivos_abiertos = NULL; //list_create(); //TODO: falta liberar en liberar_pcb, genera definitely lost
+	pcb->archivos_abiertos = list_create(); //TODO: falta liberar en liberar_pcb, genera definitely lost
 
 	pcb->socket_consola = socket_consola;
 
@@ -111,17 +111,18 @@ t_registros_cpu init_registros_cpu() {
 }
 
 void init_conexiones(t_kernel_config lectura_de_config, t_log* logger, int* socket_memoria, int* socket_cpu, int* socket_fileSystem) {
-	*socket_memoria = crear_conexion(lectura_de_config.IP_MEMORIA, lectura_de_config.PUERTO_MEMORIA);
-	if(*socket_memoria == -1) {
-		log_error(logger, "Kernel no pudo conectarse a Memoria");
-		exit(EXIT_FAILURE);
-	}
-	enviar_handshake(*socket_memoria, KERNEL);
-	t_handshake respuesta = recibir_handshake(*socket_memoria);
-	if(respuesta == ERROR_HANDSHAKE){
-		log_error(logger,"Kernel no pudo conectarse a Memoria");
-		exit(EXIT_FAILURE);
-	}
+	//TODO: DESCOMENTAR
+	//*socket_memoria = crear_conexion(lectura_de_config.IP_MEMORIA, lectura_de_config.PUERTO_MEMORIA);
+	//if(*socket_memoria == -1) {
+	//	log_error(logger, "Kernel no pudo conectarse a Memoria");
+	//	exit(EXIT_FAILURE);
+	//}
+	//enviar_handshake(*socket_memoria, KERNEL);
+	//t_handshake respuesta = recibir_handshake(*socket_memoria);
+	//if(respuesta == ERROR_HANDSHAKE){
+	//	log_error(logger,"Kernel no pudo conectarse a Memoria");
+	//	exit(EXIT_FAILURE);
+	//}
 
 	//Para estos no hace falta handshake porque solo reciben al Kernel
 	*socket_cpu = crear_conexion(lectura_de_config.IP_CPU, lectura_de_config.PUERTO_CPU);

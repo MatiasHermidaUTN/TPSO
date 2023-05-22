@@ -23,6 +23,7 @@ t_queue* new_queue;
 t_list* ready_list;
 
 t_list* list_recursos;
+t_list* list_archivos;
 
 //SOCKETS//////////////////////////////////
 int socket_memoria;
@@ -76,6 +77,7 @@ void init_estados() {
 	ready_list = list_create();
 
 	list_recursos = list_create();
+	list_archivos = list_create();
 
 	t_recurso* recurso;
 	for(int i = 0; i < string_array_size(lectura_de_config.RECURSOS); i++) {

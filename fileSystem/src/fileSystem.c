@@ -45,6 +45,8 @@ int main(int argc, char** argv) {
 
 	//CHQUEO DE QUE LOS PATHS A LOS DIFERENTES ARCHIVOS EXISTEN(SUPERBLOQUE, DIRECTORIO_FCB, BITMAP, BLOQUES)
 	//SUPERBLOQUE
+
+
 	if (archivo_se_puede_leer(lectura_de_config.PATH_SUPERBLOQUE)){
 		superbloque = iniciar_config(lectura_de_config.PATH_SUPERBLOQUE);
 		super_bloque_info.block_size = config_get_int_value(superbloque, "BLOCK_SIZE");
@@ -105,11 +107,12 @@ int main(int argc, char** argv) {
 
 	//SE CONECTA AL SERIVDOR MEMORIA
 
-	socket_memoria = crear_conexion(lectura_de_config.IP_MEMORIA, lectura_de_config.PUERTO_MEMORIA);
-	if(socket_memoria == -1){
-		printf("No conectado a memoria\n");
-	}
-    enviar_handshake(socket_memoria, FILESYSTEM);
+	//TODO: DESCOMENTAR
+	//socket_memoria = crear_conexion(lectura_de_config.IP_MEMORIA, lectura_de_config.PUERTO_MEMORIA);
+	//if(socket_memoria == -1){
+	//	printf("No conectado a memoria\n");
+	//}
+    //enviar_handshake(socket_memoria, FILESYSTEM);
 
 	//SE HACE SERVIDOR Y ESPERA LA CONEXION DEL KERNEL
 

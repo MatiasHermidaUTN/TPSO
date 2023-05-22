@@ -645,3 +645,50 @@ void print_l_instrucciones(t_list* instrucciones) {
 	    printf("\n");
     }
 }
+
+void enviar_msj(int msj,int socket){
+	send(socket, &msj, sizeof(int), 0);
+}
+
+int recibir_msj(int socket){
+	int msj;
+	recv(socket, &msj, sizeof(int), MSG_WAITALL);
+	return msj;
+}
+
+void enviar_msj_con_parametros(int op_code,char** parametros,int socket){
+	int size_total;
+	size_total = sizeof(int)*2; //op_code y size_payload
+
+		if(string_array_size(parametros)) { //Si hay algun parametro
+			for(int i = 0; i < string_array_size(parametros); i++) {
+				size_total += sizeof(size_t) + strlen(parametros[i]) + 1; //Tamanio de parametro + longitud de parametro
+			}
+		}
+	size_t size_payload = size_total - 2 * sizeof(int);
+
+	void* stream = malloc(size_total);
+	int desplazamiento = 0;
+
+	memcpy(stream + desplazamiento, &(op_code), sizeof(int));
+	desplazamiento += sizeof(op_code);
+
+	memcpy(stream + desplazamiento, &size_payload,sizeof(int));
+	desplazamiento += sizeof(int);
+
+	if(string_array_size(parametros)) { //Si hay algun parametro
+		size_t cantidad_de_parametros = string_array_size(parametros);
+
+		size_t size_parametro_de_instruccion;
+		for(int i = 0; i < cantidad_de_parametros; i++) {
+			size_parametro_de_instruccion = strlen(parametros[i]) + 1;
+			memcpy(stream + desplazamiento, &(size_parametro_de_instruccion), sizeof(size_parametro_de_instruccion));
+			desplazamiento += sizeof(size_parametro_de_instruccion);
+
+			memcpy(stream + desplazamiento, parametros[i], size_parametro_de_instruccion);
+			desplazamiento += size_parametro_de_instruccion;
+		}
+	}
+
+	send(socket, stream, size_total, 0);
+}

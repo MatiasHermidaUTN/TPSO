@@ -82,6 +82,15 @@ typedef enum {
 	INSTRUCCION_ERRONEA,
 } t_enum_instruccion;
 
+typedef enum {
+	EXISTE_ARCHIVO,
+	CREAR_ARCHIVO,
+	EL_ARCHIVO_YA_EXISTE,
+	EL_ARCHIVO_NO_EXISTE,
+	EL_ARCHIVO_FUE_CREADO,
+
+}t_msj_kernel_fileSystem;
+
 
 typedef struct {
 	int size;
@@ -119,6 +128,11 @@ typedef struct {
 	char* nombre;
 	t_list* parametros;
 } t_instruccion;
+
+typedef struct archivo_abierto{
+	char* nombre_archivo;
+	int posicion_actual;
+}t_archivo_abierto;
 
 //////////////////////////
 // Utils.c del servidor //
@@ -195,5 +209,9 @@ void memcpy_tabla_segmentos_deserializar(t_list* tabla_segmentos, void* stream, 
 void memcpy_archivos_abiertos_deserializar(t_list* archivos_abiertos, void* stream, int* desplazamiento);
 
 void print_l_instrucciones(t_list* instrucciones);
+
+void enviar_msj(int msj,int socket);
+int recibir_msj(int socket);
+void enviar_msj_con_parametros(int op_code,char** parametros,int socket);
 
 #endif /* UTILS_H_ */
