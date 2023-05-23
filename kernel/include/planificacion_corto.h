@@ -31,4 +31,5 @@ void list_remove_pcb(t_list *lista, t_pcb *pcb);
 t_pcb* list_get_max_R(t_list* lista);
 void list_remove_recurso(t_list *lista, t_recurso *recurso);
 void eliminar_archivo(t_pcb *pcb, char* nombre);
+t_archivo_abierto* bucsar_archivo_en_pcb(t_pcb* pcb, char* nombre);
 #endif /* PLANIFICACION_CORTO_H_ */

@@ -116,9 +116,13 @@ void planificar_corto() {
 
 			case F_SEEK_EJECUTADO:
 				parametros = recibir_parametros_de_instruccion();
+				pcb_recibido = recibir_pcb(socket_cpu);
+				t_archivo_abierto* archivo_a_modificar = bucsar_archivo_en_pcb(pcb_recibido, parametros[0]);
+				archivo_a_modificar->posicion_actual = atoi(parametros[1]);
+
 				string_array_destroy(parametros);
 
-				pcb_recibido = recibir_pcb(socket_cpu);
+
 				proximo_pcb_a_ejecutar_forzado = pcb_recibido;
 				sem_post(&sem_cant_ready); //Al no pasar por la funcion ready_list_push hay que hacerlo manualmente, vuelve a ejecutar sin pasar por ready
 				break;
@@ -392,3 +396,13 @@ t_pcb* list_get_max_R(t_list* lista) {
 	return pcb_max;
 }
 
+t_archivo_abierto* bucsar_archivo_en_pcb(t_pcb* pcb, char* nombre){
+	t_archivo_abierto* elemento;
+	for(int i = 0; i < list_size(pcb->archivos_abiertos); i++) {
+			elemento = list_get(pcb->archivos_abiertos, i);
+			if(!strcmp(elemento->nombre_archivo, nombre)){
+				elemento = list_get(pcb->archivos_abiertos, i);
+			}
+	}
+	return elemento;
+}
