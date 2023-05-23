@@ -131,6 +131,7 @@ int main(int argc, char** argv) {
 
 	while(manejar_mensaje());
 
+
 	log_destroy(logger);
     config_destroy(config);
 	config_destroy(superbloque);
@@ -612,8 +613,6 @@ int cant_unos_en_bitmap(){
 	return contador;
 }
 
-
-
 t_instrucciones recibir_cod_op(int socket_cliente)
 {
 	t_instrucciones cod_op;
@@ -629,71 +628,67 @@ t_instrucciones recibir_cod_op(int socket_cliente)
 
 void recibir_parametros(t_instrucciones cod_op, char** nombre_archivo, int* tamanio_nuevo_archivo, int* apartir_de_donde_X, int* cuanto_X, int* dir_fisica_memoria){
 	size_t size_payload;
-	if (recv(kernel, &size_payload, sizeof(size_t), 0) != sizeof(size_t)){
+	if (recv(kernel, &size_payload, sizeof(size_payload), 0) != sizeof(size_payload)){
 		return;
 	}
 
-	printf("111111111111111 \n");
-
 	void* a_recibir = malloc(size_payload);
 	if (recv(kernel, a_recibir, size_payload, 0) != size_payload) {
-		printf("44444444444444 \n");
+		log_error(log_error, "Error al recibir el payload");
 		free(a_recibir);
 		return;
 	}
 
-	printf("222222222222 \n");
-
-	deserializar_instrucciones_kernel(a_recibir, size_payload, cod_op, nombre_archivo, tamanio_nuevo_archivo, apartir_de_donde_X, cuanto_X, dir_fisica_memoria);
+	deserializar_parametros_kernel(a_recibir, cod_op, nombre_archivo, tamanio_nuevo_archivo, apartir_de_donde_X, cuanto_X, dir_fisica_memoria);
 
 	free(a_recibir);
 	return;
 }
 
-void deserializar_instrucciones_kernel(void* a_recibir, int size_payload, t_instrucciones cod_op, char** nombre_archivo, int* tamanio_nuevo_archivo, int* apartir_de_donde_X, int* cuanto_X, int* dir_fisica_memoria){
+void deserializar_parametros_kernel(void* a_recibir, t_instrucciones cod_op, char** nombre_archivo, int* tamanio_nuevo_archivo, int* apartir_de_donde_X, int* cuanto_X, int* dir_fisica_memoria){
+	int desplazamiento = 0;
+	
+	size_t largo;
+	memcpy(&largo, a_recibir + desplazamiento, sizeof(largo));
+	desplazamiento += sizeof(largo);
+	char* aux_nombre_file = malloc(largo);
+	memcpy(aux_nombre_file, a_recibir + desplazamiento, largo);
+	desplazamiento += largo;
+	*nombre_archivo = strdup(aux_nombre_file);
+	free(aux_nombre_file);
+
 	switch(cod_op){
+		case TRUNCAR:
+			//recibo nuevo tamanio archivo
+			deserializar_un_parametro_atoi(a_recibir, &desplazamiento, tamanio_nuevo_archivo);
+			break;
+		case LEER:
+		case ESCRIBIR:
+			//recibo apartir_de_donde_X
+			deserializar_un_parametro_atoi(a_recibir, &desplazamiento, apartir_de_donde_X);
+			//recibo cuanto_X
+			deserializar_un_parametro_atoi(a_recibir, &desplazamiento, cuanto_X);
+			//recibo dir_fisica_memoria
+			deserializar_un_parametro_atoi(a_recibir, &desplazamiento, dir_fisica_memoria);
+			break;
 		case EXISTE_ARCHIVO:
 		case CREAR_ARCHIVO:
-		default:
-			int desplazamiento = 0;
-			//recibo largo del char* del nombre del file
-			size_t largo_nombre;
-			memcpy(&largo_nombre, a_recibir + desplazamiento, sizeof(largo_nombre));
-			desplazamiento += sizeof(largo_nombre);
-			//recibo nombre del file
-			char* aux_nombre_file = malloc(largo_nombre);
-			memcpy(aux_nombre_file, a_recibir + desplazamiento, largo_nombre);
-			desplazamiento += largo_nombre;
-			*nombre_archivo = strdup(aux_nombre_file);
-			free(aux_nombre_file);
-
-			switch(cod_op){
-				case TRUNCAR:
-					//recibo nuevo tamanio archivo
-					memcpy(tamanio_nuevo_archivo, a_recibir + desplazamiento, sizeof(int));
-					desplazamiento += sizeof(int);
-					break;
-				case LEER:
-				case ESCRIBIR:
-					//recibo apartir_de_donde_X
-					memcpy(apartir_de_donde_X, a_recibir + desplazamiento, sizeof(int));
-					desplazamiento += sizeof(int);
-					//recibo cuanto_X
-					memcpy(cuanto_X, a_recibir + desplazamiento, sizeof(int));
-					desplazamiento += sizeof(int);
-					//recibo dir_fisica_memoria
-					memcpy(dir_fisica_memoria, a_recibir + desplazamiento, sizeof(int));
-					desplazamiento += sizeof(int);
-					break;
-				case EXISTE_ARCHIVO:
-				case CREAR_ARCHIVO:
-				case ERROR:
-					break;
-			}
-			break;
 		case ERROR:
 			break;
-		}
+	}
+	break;
+}
+
+void deserializar_un_parametro_atoi(void* a_recibir, int* desplazamiento, int* parametro){
+	size_t largo;
+	memcpy(&largo, a_recibir + *desplazamiento, sizeof(largo));
+	*desplazamiento += sizeof(largo);
+	char* aux = malloc(largo);
+	memcpy(aux, a_recibir + *desplazamiento, largo);
+	*desplazamiento += largo;
+	*parametro = atoi(aux);
+	free(aux);
+	return;
 }
 
 void enviar_mensaje_kernel(int kernel, char* msj){

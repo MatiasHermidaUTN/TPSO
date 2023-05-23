@@ -679,28 +679,29 @@ int recibir_msj(int socket){
 	return msj;
 }
 
-void enviar_msj_con_parametros(int op_code,char** parametros,int socket){
-	int size_total;
-	size_total = sizeof(int)*2; //op_code y size_payload
+void enviar_msj_con_parametros(t_msj_kernel_fileSystem op_code, char** parametros, int socket){
+	size_t size_total;
+	size_total = sizeof(t_msj_kernel_fileSystem) + sizeof(size_t); //op_code y size_payload
+	size_t size_payload = 0;
 
-		if(string_array_size(parametros)) { //Si hay algun parametro
-			for(int i = 0; i < string_array_size(parametros); i++) {
-				size_total += sizeof(size_t) + strlen(parametros[i]) + 1; //Tamanio de parametro + longitud de parametro
-			}
+	if(string_array_size(parametros)) { //Si hay algun parametro
+		for(int i = 0; i < string_array_size(parametros); i++) {
+			size_payload += sizeof(size_t) + strlen(parametros[i]) + 1; //Tamanio de parametro + longitud de parametro
 		}
-	size_t size_payload = size_total - 2 * sizeof(int);
+	}
+	size_t size_total += size_payload;
 
 	void* stream = malloc(size_total);
 	int desplazamiento = 0;
 
-	memcpy(stream + desplazamiento, &(op_code), sizeof(int));
+	memcpy(stream + desplazamiento, &(op_code), sizeof(op_code));
 	desplazamiento += sizeof(op_code);
 
-	memcpy(stream + desplazamiento, &size_payload,sizeof(int));
-	desplazamiento += sizeof(int);
+	memcpy(stream + desplazamiento, &size_payload, sizeof(size_payload));
+	desplazamiento += sizeof(size_payload);
 
-	if(string_array_size(parametros)) { //Si hay algun parametro
-		size_t cantidad_de_parametros = string_array_size(parametros);
+	int cantidad_de_parametros = string_array_size(parametros);
+	if(cantidad_de_parametros) { //Si hay algun parametro
 
 		size_t size_parametro_de_instruccion;
 		for(int i = 0; i < cantidad_de_parametros; i++) {
@@ -717,7 +718,6 @@ void enviar_msj_con_parametros(int op_code,char** parametros,int socket){
 
 	free(stream);
 }
-
 
 void destruir_archivo_abierto(t_archivo_abierto* arch){
 	free(arch->nombre_archivo);
