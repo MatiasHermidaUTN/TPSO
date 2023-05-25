@@ -54,7 +54,6 @@ void planificar_corto() {
 				list_add(pcb_recibido->archivos_abiertos,archivo_abierto);
 
 				if(archivo_a_abrir){//el archivo esta abierto
-
 					archivo_a_abrir->cantidad_disponibles--;
 					pcb_recibido->tiempo_real_ejecucion = time(NULL) - pcb_recibido->tiempo_inicial_ejecucion;
 					log_info(logger, "PID: %d - Estado Anterior: EXEC - Estado Actual: BLOCK", pcb_recibido->pid); //log obligatorio
@@ -102,7 +101,7 @@ void planificar_corto() {
 				t_recurso* archivo_a_cerrar = buscar_recurso(parametros[0], list_archivos);
 				archivo_a_cerrar->cantidad_disponibles ++;
 				if(queue_is_empty(archivo_a_cerrar->cola_bloqueados)){
-					list_remove_recurso(list_recursos, archivo_a_cerrar);
+					list_remove_recurso(list_archivos, archivo_a_cerrar);
 				}else{
 					t_pcb* pcb_a_desbloquear = queue_pop(archivo_a_cerrar->cola_bloqueados);
 					log_info(logger, "PID: %d - Estado Anterior: BLOCK - Estado Actual: READY", pcb_a_desbloquear->pid); //log obligatorio
