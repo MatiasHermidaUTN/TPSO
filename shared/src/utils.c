@@ -680,13 +680,13 @@ int recibir_msj(int socket){
 }
 
 void enviar_msj_con_parametros(t_msj_kernel_fileSystem op_code, char** parametros, int socket){
-	size_t size_total;
-	size_total = sizeof(t_msj_kernel_fileSystem) + sizeof(size_t); //op_code y size_payload
-	size_t size_payload = 0;
+	int size_total;
+	size_total = sizeof(t_msj_kernel_fileSystem) + sizeof(int); //op_code y size_payload
+	int size_payload = 0;
 
 	if(string_array_size(parametros)) { //Si hay algun parametro
 		for(int i = 0; i < string_array_size(parametros); i++) {
-			size_payload += sizeof(size_t) + strlen(parametros[i]) + 1; //Tamanio de parametro + longitud de parametro
+			size_payload += sizeof(int) + strlen(parametros[i]) + 1; //Tamanio de parametro + longitud de parametro
 		}
 	}
 	size_total += size_payload;
@@ -703,7 +703,7 @@ void enviar_msj_con_parametros(t_msj_kernel_fileSystem op_code, char** parametro
 	int cantidad_de_parametros = string_array_size(parametros);
 	if(cantidad_de_parametros) { //Si hay algun parametro
 
-		size_t size_parametro_de_instruccion;
+		int size_parametro_de_instruccion;
 		for(int i = 0; i < cantidad_de_parametros; i++) {
 			size_parametro_de_instruccion = strlen(parametros[i]) + 1;
 			memcpy(stream + desplazamiento, &(size_parametro_de_instruccion), sizeof(size_parametro_de_instruccion));
@@ -722,4 +722,27 @@ void enviar_msj_con_parametros(t_msj_kernel_fileSystem op_code, char** parametro
 void destruir_archivo_abierto(t_archivo_abierto* arch){
 	free(arch->nombre_archivo);
 	free(arch);
+}
+
+char** recibir_parametros_de_mensaje(int socket) {
+	int tamanio_payload = 0;
+	int desplazamiento = 0;
+	recv(socket, &tamanio_payload, sizeof(int), MSG_WAITALL);
+	void* stream = malloc(tamanio_payload);
+	recv(socket, stream, tamanio_payload, MSG_WAITALL);
+	char ** parametros = string_array_new();
+	while(desplazamiento < tamanio_payload){
+		int tamanio_param;
+		memcpy(&tamanio_param, stream + desplazamiento, sizeof(int));
+
+		printf("TAMANIO_PARAM= %d \n", tamanio_param);
+
+		desplazamiento += sizeof(int);
+		char* parametro = malloc(tamanio_param);
+		memcpy(parametro, stream + desplazamiento, tamanio_param);
+		desplazamiento += tamanio_param;
+		string_array_push(&parametros, parametro);
+	}
+	free(stream);
+	return parametros;
 }

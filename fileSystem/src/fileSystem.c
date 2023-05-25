@@ -144,9 +144,9 @@ int main(int argc, char** argv) {
 void escuchar_kernel() {
 	while(1){
 		t_mensajes* args = malloc(sizeof(t_mensajes));
-		args->cod_op = recibir_cod_op(kernel);
+		args->cod_op = recibir_msj(kernel);
+		args->parametros = recibir_parametros_de_mensaje(kernel);
 		printf("msj recibido\n");
-		recibir_parametros(args->cod_op, &args->nombre_archivo, &args->nuevo_tamanio_archivo, &args->apartir_de_donde_X, &args->cuanto_X, &args->dir_fisica_memoria);
 		list_push_con_mutex(lista_fifo_msj, args, &mutex_cola_msj);
 		sem_post(&sem_sincro_cant_msj);
 	}
@@ -161,19 +161,16 @@ int manejar_mensaje(){
 
 	t_mensajes* args = list_pop_con_mutex(lista_fifo_msj, &mutex_cola_msj);
 
-	t_instrucciones cod_op = ((t_mensajes*)args)->cod_op;
-	char* nombre_archivo = strdup(((t_mensajes*)args)->nombre_archivo);
-	int nuevo_tamanio_archivo = ((t_mensajes*)args)->nuevo_tamanio_archivo;
-	int apartir_de_donde_X = ((t_mensajes*)args)->apartir_de_donde_X;
-	int cuanto_X = ((t_mensajes*)args)->cuanto_X;
-	int dir_fisica_memoria = ((t_mensajes*)args)->dir_fisica_memoria;
-	free(((t_mensajes*)args)->nombre_archivo);
-	free(args);
+	char* nombre_archivo;
+	int nuevo_tamanio_archivo;
+	int apartir_de_donde_X;
+	int cuanto_X;
+	int dir_fisica_memoria;
 
 	char* buffer;
-
-	switch (cod_op) {
+	switch (args->cod_op) {
 		case EXISTE_ARCHIVO:{
+			nombre_archivo = args->parametros[0];
 			printf("abrir nombre_archivo: %s\n",nombre_archivo);
 			if (existe_archivo(nombre_archivo)) {	//existe FCB?
 				enviar_msj(EL_ARCHIVO_YA_EXISTE,kernel);
@@ -183,33 +180,41 @@ int manejar_mensaje(){
 				printf("no existe %s\n",nombre_archivo);
 			}
 			printf("\n");
-			free(nombre_archivo);
 			break;
 		}
 		case CREAR_ARCHIVO:{
+			nombre_archivo = args->parametros[0];
 			printf("crear nombre_archivo: %s \n", nombre_archivo);
 			crear_archivo(nombre_archivo);	//crear FCB y poner tamaño 0 y sin bloques asociados.
 			enviar_msj(EL_ARCHIVO_FUE_CREADO,kernel);
 			printf("archivo creado: %s\n",nombre_archivo);
 			printf("unos dsp crear: %d\n", cant_unos_en_bitmap());
 			printf("\n");
-			free(nombre_archivo);
 			break;
 		}
 		case TRUNCAR_ARCHIVO:{
+			nombre_archivo = args->parametros[0];
+			nuevo_tamanio_archivo = atoi(args->parametros[1]);
+
 			printf("truncar nombre_archivo: %s\n", nombre_archivo);
 			printf("nuevo_tamanio_archivo: %d\n", nuevo_tamanio_archivo);
 			printf("unos antes truncar: %d\n", cant_unos_en_bitmap());
 			truncar(nombre_archivo, nuevo_tamanio_archivo);
 			char ** parametros_a_enviar = string_array_new();
 			string_array_push(&parametros_a_enviar, nombre_archivo);
+			string_array_push(&parametros_a_enviar, args->parametros[2]); //parametros[2] es el PID
 			enviar_msj_con_parametros(EL_ARCHIVO_FUE_TRUNCADO, parametros_a_enviar, kernel);
-			string_array_destroy(parametros_a_enviar);
+			free(parametros_a_enviar);
 			printf("\n");
-			free(nombre_archivo);
 			break;
 		}
 		case LEER:{
+			nombre_archivo = (args->parametros)[0];
+			apartir_de_donde_X = atoi(args->parametros[1]);
+			cuanto_X = atoi(args->parametros[2]);
+			dir_fisica_memoria = atoi(args->parametros[3]);
+
+
 			printf("leer nombre_archivo: %s\n", nombre_archivo);
 			printf("apartir_de_donde_leer: %d\n", apartir_de_donde_X);
 			printf("cuanto_leer: %d\n", cuanto_X);
@@ -217,7 +222,7 @@ int manejar_mensaje(){
 			buffer = leer_archivo(nombre_archivo, apartir_de_donde_X, cuanto_X);	//malloc se hace en leer_archivo
 			mandar_a_memoria(socket_memoria, ESCRIBIR, buffer, cuanto_X, dir_fisica_memoria);
 			//esperar rta de memoria
-			enviar_mensaje_kernel(kernel, "OK Archivo leido");
+			//enviar_mensaje_kernel(kernel, "OK Archivo leido");
 			printf("\n");
 			printf("leido: ");
 			for(int i = 0 ; i < cuanto_X ; i++){
@@ -226,22 +231,25 @@ int manejar_mensaje(){
 			printf("\n");
 			printf("\n");
 			free(buffer);
-			free(nombre_archivo);
 			break;
 		}
 		case ESCRIBIR:{
+			nombre_archivo = args->parametros[0];
+			apartir_de_donde_X = atoi(args->parametros[1]);
+			cuanto_X = atoi(args->parametros[2]);
+			dir_fisica_memoria = atoi(args->parametros[3]);
+
 			printf("escribir nombre_archivo: %s\n", nombre_archivo);
 			printf("apartir_de_donde_escribir: %d\n", apartir_de_donde_X);
 			printf("cuanto_escribir: %d\n", cuanto_X);
 			printf("dir_fisica_memoria: %d\n", dir_fisica_memoria);
 			buffer = leer_de_memoria(socket_memoria, LEER, cuanto_X, dir_fisica_memoria);	//malloc se hace en leer_de_memoria
 			escribir_archivo(buffer, nombre_archivo, apartir_de_donde_X, cuanto_X);
-			enviar_mensaje_kernel(kernel, "OK Archivo escrito");
+			//enviar_mensaje_kernel(kernel, "OK Archivo escrito");
 			printf("\n");
 			printf("escrito: %s\n", buffer);
 			printf("\n");
 			free(buffer);
-			free(nombre_archivo);
 			break;
 		}
 		case ERROR:
@@ -250,6 +258,9 @@ int manejar_mensaje(){
 		default:
 			return 0;	//?
 	}
+
+	string_array_destroy(args->parametros);
+	free(args);
 
 	return 1;
 }
@@ -623,71 +634,7 @@ t_instrucciones recibir_cod_op(int socket_cliente)
 	return cod_op;
 }
 
-void recibir_parametros(t_instrucciones cod_op, char** nombre_archivo, int* tamanio_nuevo_archivo, int* apartir_de_donde_X, int* cuanto_X, int* dir_fisica_memoria){
-	size_t size_payload;
-	if (recv(kernel, &size_payload, sizeof(size_payload), 0) != sizeof(size_payload)){
-		exit(-1);
-	}
-	void* a_recibir = malloc(size_payload);
-	if (recv(kernel, a_recibir, size_payload, 0) != size_payload) {
-		free(a_recibir);
-		exit(-1);
-	}
 
-	deserializar_parametros_kernel(a_recibir, cod_op, nombre_archivo, tamanio_nuevo_archivo, apartir_de_donde_X, cuanto_X, dir_fisica_memoria);
-
-	free(a_recibir);
-	return;
-}
-
-void deserializar_parametros_kernel(void* a_recibir, t_instrucciones cod_op, char** nombre_archivo, int* tamanio_nuevo_archivo, int* apartir_de_donde_X, int* cuanto_X, int* dir_fisica_memoria){
-	int desplazamiento = 0;
-	
-	size_t largo;
-	memcpy(&largo, a_recibir + desplazamiento, sizeof(largo));
-	desplazamiento += sizeof(largo);
-	char* aux_nombre_file = malloc(largo);
-	memcpy(aux_nombre_file, a_recibir + desplazamiento, largo);
-	desplazamiento += largo;
-	*nombre_archivo = strdup(aux_nombre_file);
-	free(aux_nombre_file);
-
-	switch(cod_op){
-		case TRUNCAR:
-			//recibo nuevo tamanio archivo
-			deserializar_un_parametro_atoi(a_recibir, &desplazamiento, tamanio_nuevo_archivo);
-			break;
-		case LEER:
-		case ESCRIBIR:
-			//recibo apartir_de_donde_X
-			deserializar_un_parametro_atoi(a_recibir, &desplazamiento, apartir_de_donde_X);
-			//recibo cuanto_X
-			deserializar_un_parametro_atoi(a_recibir, &desplazamiento, cuanto_X);
-			//recibo dir_fisica_memoria
-			deserializar_un_parametro_atoi(a_recibir, &desplazamiento, dir_fisica_memoria);
-			break;
-		case EXISTE_ARCHIVO:
-		case CREAR_ARCHIVO:
-		case ERROR:
-			break;
-	}
-}
-
-void deserializar_un_parametro_atoi(void* a_recibir, int* desplazamiento, int* parametro){
-	size_t largo;
-	memcpy(&largo, a_recibir + *desplazamiento, sizeof(largo));
-	*desplazamiento += sizeof(largo);
-	char* aux = malloc(largo);
-	memcpy(aux, a_recibir + *desplazamiento, largo);
-	*desplazamiento += largo;
-	*parametro = atoi(aux);
-	free(aux);
-	return;
-}
-
-void enviar_mensaje_kernel(int kernel, char* msj){
-	return;
-}
 char* leer_de_memoria(int socket_memoria, t_instrucciones cod_op, int cuanto_escribir, int dir_fisica_memoria){
 	char* buffer = malloc(cuanto_escribir);
 	switch (cuanto_escribir){

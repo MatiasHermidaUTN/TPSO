@@ -3,6 +3,7 @@
 #include "../include/conexiones_kernel.h"
 #include "../include/kernel.h"
 #include "../include/configuracion_kernel.h"
+#include "../include/escuchador_de_filesystem.h"
 
 int main (int argc, char** argv) {
     t_config* config = iniciar_config(argv[1]);

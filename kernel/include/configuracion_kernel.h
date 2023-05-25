@@ -7,7 +7,6 @@
 #include <commons/collections/queue.h>
 #include "planificacion_largo.h"
 #include <semaphore.h>
-#include "escuchador_de_filesystem.h"
 
 typedef struct kernel_config {
     char* IP_MEMORIA;

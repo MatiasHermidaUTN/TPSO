@@ -158,12 +158,18 @@ void planificar_corto() {
 				break;
 
 			case F_TRUNCATE_EJECUTADO:
-				//parametros = recibir_parametros_de_instruccion();
-				//enviar_msj_con_parametros(TRUNCAR_ARCHIVO , parametros, socket_fileSystem);
-				//t_recurso* archivo_a_truncar = buscar_recurso(parametros[0], list_archivos);
-				//int posicion = obtener_posicion_recurso(list_archivos, archivo_a_abrir);
-				//queue_push_con_mutex(archivo_a_truncar->cola_bloqueados, archivo_a_truncar, list_get(mutex_list_archivos, posicion));
-				//string_array_destroy(parametros);
+				parametros = recibir_parametros_de_instruccion();
+				pcb_recibido = recibir_pcb(socket_cpu);
+
+				//char* pid_a_enviar = malloc(sizeof(int));
+				char* pid_a_enviar = string_itoa(pcb_recibido->pid);
+
+				string_array_push(&parametros, pid_a_enviar);
+				enviar_msj_con_parametros(TRUNCAR_ARCHIVO , parametros, socket_fileSystem);
+				t_recurso* archivo_a_truncar = buscar_recurso(parametros[0], list_archivos);
+				int posicion = obtener_posicion_recurso(list_archivos, archivo_a_truncar);
+				queue_push_con_mutex(archivo_a_truncar->cola_bloqueados, pcb_recibido, list_get(mutex_list_archivos, posicion));
+				string_array_destroy(parametros);
 				break;
 
 			case WAIT_EJECUTADO:

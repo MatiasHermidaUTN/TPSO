@@ -45,12 +45,8 @@ struct super_bloque_info {
 }super_bloque_info;
 
 typedef struct args_recibir_mensajes {
-	t_instrucciones cod_op;
-	char* nombre_archivo;
-	int nuevo_tamanio_archivo;
-	int apartir_de_donde_X;
-	int cuanto_X;
-	int dir_fisica_memoria;
+	int cod_op;
+	char** parametros;
 } t_mensajes;
 
 //fcb
