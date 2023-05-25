@@ -212,7 +212,6 @@ void print_l_instrucciones(t_list* instrucciones);
 
 void enviar_msj(int msj,int socket);
 int recibir_msj(int socket);
-void enviar_msj_con_parametros(int op_code,char** parametros,int socket);
-
+void enviar_msj_con_parametros(t_msj_kernel_fileSystem op_code, char** parametros, int socket);
 void destruir_archivo_abierto(t_archivo_abierto* arch);
 #endif /* UTILS_H_ */

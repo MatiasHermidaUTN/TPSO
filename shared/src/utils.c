@@ -650,9 +650,9 @@ void memcpy_archivos_abiertos_deserializar(t_pcb* pcb, void* stream, int* despla
 		int tamanio_nombre;
 		memcpy(&tamanio_nombre,stream+*desplazamiento,sizeof(int));
 		*desplazamiento += sizeof(int);
+		archivo_abierto->nombre_archivo = malloc(tamanio_nombre);
 		memcpy(archivo_abierto->nombre_archivo,stream+*desplazamiento,tamanio_nombre);
 		*desplazamiento += tamanio_nombre;
-
 		list_add(pcb->archivos_abiertos,archivo_abierto);
 	}
 }
@@ -689,7 +689,7 @@ void enviar_msj_con_parametros(t_msj_kernel_fileSystem op_code, char** parametro
 			size_payload += sizeof(size_t) + strlen(parametros[i]) + 1; //Tamanio de parametro + longitud de parametro
 		}
 	}
-	size_t size_total += size_payload;
+	size_total += size_payload;
 
 	void* stream = malloc(size_total);
 	int desplazamiento = 0;

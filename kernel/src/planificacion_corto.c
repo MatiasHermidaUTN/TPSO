@@ -57,23 +57,23 @@ void planificar_corto() {
 
 					archivo_a_abrir->cantidad_disponibles--;
 					pcb_recibido->tiempo_real_ejecucion = time(NULL) - pcb_recibido->tiempo_inicial_ejecucion;
+					log_info(logger, "PID: %d - Estado Anterior: EXEC - Estado Actual: BLOCK", pcb_recibido->pid); //log obligatorio
 					queue_push(archivo_a_abrir->cola_bloqueados,pcb_recibido);
 
 				}else{ //el archivo no esta abierto
 
-					char** parametros_a_enviar = string_array_new();
-					string_array_push(&parametros_a_enviar,parametros[0]);
-					enviar_msj_con_parametros(EXISTE_ARCHIVO,parametros_a_enviar,socket_fileSystem);
+					enviar_msj_con_parametros(EXISTE_ARCHIVO,parametros,socket_fileSystem);
 
 					int msj_recibido = recibir_msj(socket_fileSystem);
 
 					t_recurso* archivo = malloc(sizeof(t_recurso));
 					archivo->nombre = strdup(parametros[0]);
 					archivo->cantidad_disponibles = 0;
+					archivo->cola_bloqueados = queue_create();
 					list_add(list_archivos,archivo);
 
 					if(msj_recibido == EL_ARCHIVO_NO_EXISTE){
-						enviar_msj_con_parametros(CREAR_ARCHIVO,parametros_a_enviar,socket_fileSystem);
+						enviar_msj_con_parametros(CREAR_ARCHIVO,parametros,socket_fileSystem);
 
 						int rta = recibir_msj(socket_fileSystem);
 						if(rta == EL_ARCHIVO_FUE_CREADO){
@@ -84,10 +84,8 @@ void planificar_corto() {
 						}
 
 					} else {
-						log_error(logger,"Error en la comunicacion entre el kernel y el file system");
-						exit(EXIT_FAILURE);
+						log_info(logger, "Se abrio un archivo que ya existia en el filesystem");
 					}
-					string_array_destroy(parametros_a_enviar);
 					proximo_pcb_a_ejecutar_forzado = pcb_recibido;
 					sem_post(&sem_cant_ready);
 
@@ -107,6 +105,7 @@ void planificar_corto() {
 					list_remove_recurso(list_recursos, archivo_a_cerrar);
 				}else{
 					t_pcb* pcb_a_desbloquear = queue_pop(archivo_a_cerrar->cola_bloqueados);
+					log_info(logger, "PID: %d - Estado Anterior: BLOCK - Estado Actual: READY", pcb_a_desbloquear->pid); //log obligatorio
 					ready_list_push(pcb_a_desbloquear);
 				}
 				proximo_pcb_a_ejecutar_forzado = pcb_recibido;

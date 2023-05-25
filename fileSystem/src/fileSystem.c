@@ -461,7 +461,7 @@ bool existe_archivo(char* nombre_archivo) {
 }
 
 char* obtener_path_FCB_sin_free(char* nombre_archivo){
-	char* path = malloc(strlen(lectura_de_config.PATH_FCB) + strlen(nombre_archivo));
+	char* path = malloc(strlen(lectura_de_config.PATH_FCB) + strlen(nombre_archivo) + 1);
 	strcpy(path, lectura_de_config.PATH_FCB);
 	strcat(path, nombre_archivo);		//se asume que en la FS.config el path_fcb tiene / al final quedando: "/home/utnso/fs/fcb/"
 	return path;
@@ -616,27 +616,19 @@ int cant_unos_en_bitmap(){
 t_instrucciones recibir_cod_op(int socket_cliente)
 {
 	t_instrucciones cod_op;
-	if(recv(socket_cliente, &cod_op, sizeof(t_instrucciones), 0x100) > 0)
-		return cod_op;
-	else
-	{
-		close(socket_cliente);
-		return -1;
-	}
-	return -1;
+	recv(socket_cliente, &cod_op, sizeof(t_instrucciones), 0);
+	return cod_op;
 }
 
 void recibir_parametros(t_instrucciones cod_op, char** nombre_archivo, int* tamanio_nuevo_archivo, int* apartir_de_donde_X, int* cuanto_X, int* dir_fisica_memoria){
 	size_t size_payload;
 	if (recv(kernel, &size_payload, sizeof(size_payload), 0) != sizeof(size_payload)){
-		return;
+		exit(-1);
 	}
-
 	void* a_recibir = malloc(size_payload);
 	if (recv(kernel, a_recibir, size_payload, 0) != size_payload) {
-		log_error(log_error, "Error al recibir el payload");
 		free(a_recibir);
-		return;
+		exit(-1);
 	}
 
 	deserializar_parametros_kernel(a_recibir, cod_op, nombre_archivo, tamanio_nuevo_archivo, apartir_de_donde_X, cuanto_X, dir_fisica_memoria);
@@ -676,7 +668,6 @@ void deserializar_parametros_kernel(void* a_recibir, t_instrucciones cod_op, cha
 		case ERROR:
 			break;
 	}
-	break;
 }
 
 void deserializar_un_parametro_atoi(void* a_recibir, int* desplazamiento, int* parametro){
