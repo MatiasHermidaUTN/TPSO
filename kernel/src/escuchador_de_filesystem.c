@@ -9,18 +9,23 @@ void escuchar_de_filesystem(){
 				sem_post(&sem_rta_filesystem);
 				break;
 			case EL_ARCHIVO_NO_EXISTE:
-				rta_filesystem_global = EL_ARCHIVO_YA_EXISTE;
+				rta_filesystem_global = EL_ARCHIVO_NO_EXISTE;
 				sem_post(&sem_rta_filesystem);
 				break;
 			case EL_ARCHIVO_FUE_CREADO:
-				rta_filesystem_global = EL_ARCHIVO_YA_EXISTE;
+				rta_filesystem_global = EL_ARCHIVO_FUE_CREADO;
 				sem_post(&sem_rta_filesystem);
 				break;
 			case EL_ARCHIVO_FUE_TRUNCADO:
 				char** parametros;
 				parametros = recibir_parametros_de_mensaje(socket_fileSystem);
 				t_recurso* archivo = buscar_recurso(parametros[0], list_archivos);
+
+				int pos = obtener_posicion_recurso(list_archivos, archivo);
+				pthread_mutex_t* mutex = list_get(mutex_list_archivos, pos);
+				pthread_mutex_lock(mutex);
 				t_pcb* pcb = obtener_pcb_de_cola(archivo, atoi(parametros[1]));
+				pthread_mutex_unlock(mutex);
 
 				ready_list_push(pcb);
 				string_array_destroy(parametros);

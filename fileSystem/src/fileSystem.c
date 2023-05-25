@@ -169,7 +169,7 @@ int manejar_mensaje(){
 
 	char* buffer;
 	switch (args->cod_op) {
-		case EXISTE_ARCHIVO:{
+		case EXISTE_ARCHIVO:
 			nombre_archivo = args->parametros[0];
 			printf("abrir nombre_archivo: %s\n",nombre_archivo);
 			if (existe_archivo(nombre_archivo)) {	//existe FCB?
@@ -181,8 +181,8 @@ int manejar_mensaje(){
 			}
 			printf("\n");
 			break;
-		}
-		case CREAR_ARCHIVO:{
+
+		case CREAR_ARCHIVO:
 			nombre_archivo = args->parametros[0];
 			printf("crear nombre_archivo: %s \n", nombre_archivo);
 			crear_archivo(nombre_archivo);	//crear FCB y poner tamaño 0 y sin bloques asociados.
@@ -191,8 +191,8 @@ int manejar_mensaje(){
 			printf("unos dsp crear: %d\n", cant_unos_en_bitmap());
 			printf("\n");
 			break;
-		}
-		case TRUNCAR_ARCHIVO:{
+
+		case TRUNCAR_ARCHIVO:
 			nombre_archivo = args->parametros[0];
 			nuevo_tamanio_archivo = atoi(args->parametros[1]);
 
@@ -207,8 +207,8 @@ int manejar_mensaje(){
 			free(parametros_a_enviar);
 			printf("\n");
 			break;
-		}
-		case LEER:{
+
+		case LEER:
 			nombre_archivo = (args->parametros)[0];
 			apartir_de_donde_X = atoi(args->parametros[1]);
 			cuanto_X = atoi(args->parametros[2]);
@@ -232,8 +232,8 @@ int manejar_mensaje(){
 			printf("\n");
 			free(buffer);
 			break;
-		}
-		case ESCRIBIR:{
+
+		case ESCRIBIR:
 			nombre_archivo = args->parametros[0];
 			apartir_de_donde_X = atoi(args->parametros[1]);
 			cuanto_X = atoi(args->parametros[2]);
@@ -251,7 +251,7 @@ int manejar_mensaje(){
 			printf("\n");
 			free(buffer);
 			break;
-		}
+
 		case ERROR:
 			//return 0; //?
 			break;
@@ -453,7 +453,6 @@ void agrandas_archivo(t_config* archivo_FCB, char* nombre_archivo, int nuevo_tam
 
 void crear_archivo(char* nombre_archivo) {
 	char* path = obtener_path_FCB_sin_free(nombre_archivo);
-
 	//semaforo FCB_default
 	//pthread_mutex_lock(&mutex_FCB_default);
 	t_config* FCBdefault = iniciar_config("../FCBdefault");
