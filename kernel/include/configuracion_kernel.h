@@ -7,6 +7,7 @@
 #include <commons/collections/queue.h>
 #include "planificacion_largo.h"
 #include <semaphore.h>
+#include "escuchador_de_filesystem.h"
 
 typedef struct kernel_config {
     char* IP_MEMORIA;
@@ -37,6 +38,8 @@ extern pthread_mutex_t mutex_ready_list;
 extern sem_t sem_cant_ready;
 extern sem_t sem_cant_new;
 extern sem_t sem_multiprogramacion;
+extern sem_t sem_rta_filesystem;
+
 
 extern t_kernel_config lectura_de_config;
 extern t_log* logger;
@@ -52,6 +55,10 @@ extern t_pcb* proximo_pcb_a_ejecutar_forzado;
 
 extern t_list* list_recursos;
 extern t_list* list_archivos;
+extern t_list* mutex_list_archivos;
+
+
+extern t_msj_kernel_fileSystem rta_filesystem_global;
 
 t_kernel_config leer_kernel_config(t_config* config);
 

@@ -57,25 +57,29 @@ void planificar_corto() {
 					archivo_a_abrir->cantidad_disponibles--;
 					pcb_recibido->tiempo_real_ejecucion = time(NULL) - pcb_recibido->tiempo_inicial_ejecucion;
 					log_info(logger, "PID: %d - Estado Anterior: EXEC - Estado Actual: BLOCK", pcb_recibido->pid); //log obligatorio
-					queue_push(archivo_a_abrir->cola_bloqueados,pcb_recibido);
+
+					queue_push_con_mutex(archivo_a_abrir->cola_bloqueados, pcb_recibido, list_get(mutex_list_archivos, obtener_posicion_recurso(list_archivos, archivo_a_abrir)));
+					//queue_push(archivo_a_abrir->cola_bloqueados,pcb_recibido);
 
 				}else{ //el archivo no esta abierto
 
 					enviar_msj_con_parametros(EXISTE_ARCHIVO,parametros,socket_fileSystem);
 
-					int msj_recibido = recibir_msj(socket_fileSystem);
+					sem_wait(&sem_rta_filesystem);
 
 					t_recurso* archivo = malloc(sizeof(t_recurso));
 					archivo->nombre = strdup(parametros[0]);
 					archivo->cantidad_disponibles = 0;
 					archivo->cola_bloqueados = queue_create();
 					list_add(list_archivos,archivo);
+					pthread_mutex_t mutex_archivo;
+					pthread_mutex_init(&mutex_archivo, NULL);
+					list_add(mutex_list_archivos, &mutex_archivo);
 
-					if(msj_recibido == EL_ARCHIVO_NO_EXISTE){
+					if(rta_filesystem_global == EL_ARCHIVO_NO_EXISTE){
 						enviar_msj_con_parametros(CREAR_ARCHIVO,parametros,socket_fileSystem);
-
-						int rta = recibir_msj(socket_fileSystem);
-						if(rta == EL_ARCHIVO_FUE_CREADO){
+						sem_wait(&sem_rta_filesystem);
+						if(rta_filesystem_global == EL_ARCHIVO_FUE_CREADO){
 							log_info(logger,"Se abrio el archivo"); //en realidad nunca va a fallar. esto tendria que haberse hecho con un solo mensaje pero lo separaron en abrir y crear.
 						} else{
 							log_error(logger,"El filesystem no pudo crear el archivo");
@@ -101,9 +105,14 @@ void planificar_corto() {
 				t_recurso* archivo_a_cerrar = buscar_recurso(parametros[0], list_archivos);
 				archivo_a_cerrar->cantidad_disponibles ++;
 				if(queue_is_empty(archivo_a_cerrar->cola_bloqueados)){
+
+					int posicion = obtener_posicion_recurso(list_archivos, archivo_a_cerrar);
+					list_remove(mutex_list_archivos, posicion);
 					list_remove_recurso(list_archivos, archivo_a_cerrar);
+
 				}else{
-					t_pcb* pcb_a_desbloquear = queue_pop(archivo_a_cerrar->cola_bloqueados);
+					t_pcb* pcb_a_desbloquear = queue_pop_con_mutex(archivo_a_cerrar->cola_bloqueados, list_get(mutex_list_archivos, obtener_posicion_recurso(list_archivos, archivo_a_cerrar)));
+					//t_pcb* pcb_a_desbloquear = queue_pop(archivo_a_cerrar->cola_bloqueados);
 					log_info(logger, "PID: %d - Estado Anterior: BLOCK - Estado Actual: READY", pcb_a_desbloquear->pid); //log obligatorio
 					ready_list_push(pcb_a_desbloquear);
 				}
@@ -149,10 +158,12 @@ void planificar_corto() {
 				break;
 
 			case F_TRUNCATE_EJECUTADO:
-				parametros = recibir_parametros_de_instruccion();
-				//TODO: AVISAR A FILESYSTEM
-
-				string_array_destroy(parametros);
+				//parametros = recibir_parametros_de_instruccion();
+				//enviar_msj_con_parametros(TRUNCAR_ARCHIVO , parametros, socket_fileSystem);
+				//t_recurso* archivo_a_truncar = buscar_recurso(parametros[0], list_archivos);
+				//int posicion = obtener_posicion_recurso(list_archivos, archivo_a_abrir);
+				//queue_push_con_mutex(archivo_a_truncar->cola_bloqueados, archivo_a_truncar, list_get(mutex_list_archivos, posicion));
+				//string_array_destroy(parametros);
 				break;
 
 			case WAIT_EJECUTADO:
@@ -403,4 +414,15 @@ t_archivo_abierto* bucsar_archivo_en_pcb(t_pcb* pcb, char* nombre){
 			}
 	}
 	return elemento;
+}
+
+int obtener_posicion_recurso(t_list* lista, t_recurso* recurso) {
+	t_recurso* elemento;
+	for(int i = 0; i < list_size(lista); i++) {
+			elemento = list_get(lista, i);
+			if(!strcmp(recurso->nombre, elemento->nombre)){
+				return i;
+			}
+	}
+	return -1;
 }

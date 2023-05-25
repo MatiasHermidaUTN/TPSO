@@ -196,12 +196,15 @@ int manejar_mensaje(){
 			free(nombre_archivo);
 			break;
 		}
-		case TRUNCAR:{
+		case TRUNCAR_ARCHIVO:{
 			printf("truncar nombre_archivo: %s\n", nombre_archivo);
 			printf("nuevo_tamanio_archivo: %d\n", nuevo_tamanio_archivo);
 			printf("unos antes truncar: %d\n", cant_unos_en_bitmap());
 			truncar(nombre_archivo, nuevo_tamanio_archivo);
-			enviar_mensaje_kernel(kernel, "OK Archivo truncado");
+			char ** parametros_a_enviar = string_array_new();
+			string_array_push(&parametros_a_enviar, nombre_archivo);
+			enviar_msj_con_parametros(EL_ARCHIVO_FUE_TRUNCADO, parametros_a_enviar, kernel);
+			string_array_destroy(parametros_a_enviar);
 			printf("\n");
 			free(nombre_archivo);
 			break;

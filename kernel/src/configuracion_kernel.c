@@ -9,6 +9,7 @@ pthread_mutex_t mutex_new_queue;
 sem_t sem_cant_ready;
 sem_t sem_cant_new;
 sem_t sem_multiprogramacion;
+sem_t sem_rta_filesystem;
 ///////////////////////////////////////////
 
 //CONFIG///////////////////////////////////
@@ -24,6 +25,7 @@ t_list* ready_list;
 
 t_list* list_recursos;
 t_list* list_archivos;
+t_list* mutex_list_archivos;
 
 //SOCKETS//////////////////////////////////
 int socket_memoria;
@@ -31,6 +33,8 @@ int socket_cpu;
 int socket_fileSystem;
 ///////////////////////////////////////////
 t_pcb* proximo_pcb_a_ejecutar_forzado = NULL;
+t_msj_kernel_fileSystem rta_filesystem_global;
+
 ///////////////////////////////////////////
 t_kernel_config leer_kernel_config(t_config* config) {
     t_kernel_config lectura_de_config;
@@ -69,6 +73,7 @@ void init_semaforos() {
 	pthread_mutex_init(&mutex_new_queue, NULL);
 	sem_init(&sem_cant_ready, 0, 0);
 	sem_init(&sem_cant_new, 0, 0);
+	sem_init(&sem_rta_filesystem, 0, 0);
 	sem_init(&sem_multiprogramacion, 0, lectura_de_config.GRADO_MAX_MULTIPROGRAMACION);
 }
 
@@ -78,6 +83,7 @@ void init_estados() {
 
 	list_recursos = list_create();
 	list_archivos = list_create();
+	mutex_list_archivos = list_create();
 
 	t_recurso* recurso;
 	for(int i = 0; i < string_array_size(lectura_de_config.RECURSOS); i++) {

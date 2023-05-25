@@ -104,3 +104,22 @@ char** recibir_parametros_de_instruccion() {
 	return parametros; //acordarse de hacerle el free del otro lado
 }
 
+char** recibir_parametros_de_mensaje(int socket) {
+	int tamanio_payload;
+	int desplazamiento = 0;
+	recv(socket, &tamanio_payload, sizeof(int), MSG_WAITALL);
+	void* stream = malloc(tamanio_payload);
+	recv(socket, stream, tamanio_payload, MSG_WAITALL);
+	char ** parametros = string_array_new();
+	while(desplazamiento < tamanio_payload){
+		int tamanio_param;
+		memcpy(&tamanio_param, stream + desplazamiento, sizeof(int));
+		desplazamiento += sizeof(int);
+		char* parametro = malloc(tamanio_param);
+		memcpy(parametro, stream + desplazamiento, tamanio_param);
+		desplazamiento += tamanio_param;
+		string_array_push(&parametros, parametro);
+	}
+	return parametros;
+}
+

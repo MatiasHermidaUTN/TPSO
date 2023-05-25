@@ -22,6 +22,10 @@ int main (int argc, char** argv) {
     pthread_create(&planificador_largo, NULL, (void*)planificar_largo, NULL);
     pthread_detach(planificador_largo);
 
+    pthread_t escuchador_de_filesystem;
+	pthread_create(&escuchador_de_filesystem, NULL, (void*)escuchar_de_filesystem, NULL);
+	pthread_detach(escuchador_de_filesystem);
+
     int socket_kernel = iniciar_servidor("127.0.0.1", lectura_de_config.PUERTO_ESCUCHA); //TODO: Hardcodeado
     log_warning(logger, "Kernel listo para recibir a Consolas");
     while(recibir_conexiones(socket_kernel)); //Recibe conexiones de consolas y crea hilos para manejarlas
