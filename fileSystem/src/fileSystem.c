@@ -241,11 +241,12 @@ int manejar_mensaje(){
 			free(buffer);
 			break;
 
-		case ESCRIBIR:
+		case ESCRIBIR_ARCHIVO:
 			nombre_archivo = args->parametros[0];
-			apartir_de_donde_X = atoi(args->parametros[1]);
+			dir_fisica_memoria = atoi(args->parametros[1]);
 			cuanto_X = atoi(args->parametros[2]);
-			dir_fisica_memoria = atoi(args->parametros[3]);
+			apartir_de_donde_X = atoi(args->parametros[3]);
+			char* pid_escribir = args->parametros[4];
 
 			printf("escribir nombre_archivo: %s\n", nombre_archivo);
 			printf("apartir_de_donde_escribir: %d\n", apartir_de_donde_X);
@@ -253,7 +254,14 @@ int manejar_mensaje(){
 			printf("dir_fisica_memoria: %d\n", dir_fisica_memoria);
 			buffer = leer_de_memoria(socket_memoria, LEER, cuanto_X, dir_fisica_memoria);	//malloc se hace en leer_de_memoria
 			escribir_archivo(buffer, nombre_archivo, apartir_de_donde_X, cuanto_X);
-			//enviar_mensaje_kernel(kernel, "OK Archivo escrito");
+
+
+			char** parametros_a_enviar_escribir = string_array_new();
+			string_array_push(&parametros_a_enviar_escribir, args->parametros[0]); //nombre del archivo
+			string_array_push(&parametros_a_enviar_escribir, pid_escribir); //pid para desbloquearlo despues
+			enviar_msj_con_parametros(EL_ARCHIVO_FUE_ESCRITO, parametros_a_enviar_escribir, kernel);
+			free(parametros_a_enviar_escribir);
+
 			printf("\n");
 			printf("escrito: %s\n", buffer);
 			printf("\n");
@@ -345,6 +353,7 @@ void escribir_bloque(char* buffer, uint32_t puntero, int apartir_de_donde_escrib
 		*cuanto_escribir = 0;
 	}
 	//pthread_mutex_unlock(&mutex_bloques);
+	free(copia_buffer);
 	return;
 }
 
@@ -645,7 +654,7 @@ t_instrucciones recibir_cod_op(int socket_cliente)
 
 
 char* leer_de_memoria(int socket_memoria, t_instrucciones cod_op, int cuanto_escribir, int dir_fisica_memoria){
-	char* buffer = malloc(cuanto_escribir);
+	char* buffer = malloc(cuanto_escribir + 1); //puse el +1 porque el strcpy copia el \0 tambien entonces en realidad estan copiando un caracter mas
 	switch (cuanto_escribir){
 	case 1:
 		strcpy(buffer, "1");

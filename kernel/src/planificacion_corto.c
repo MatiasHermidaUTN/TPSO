@@ -148,18 +148,15 @@ void planificar_corto() {
 
 			case F_WRITE_EJECUTADO:
 				parametros = recibir_parametros_de_instruccion();
-				//TODO: AVISAR A FILESYSTEM
-
-				//log_warning(logger, "parametros[0]: %s", parametros[0]);
-				//log_warning(logger, "parametros[1]: %s", parametros[1]);
-				//log_warning(logger, "parametros[2]: %s", parametros[2]);
-				//TODO: AVISAR A FILESYSTEM
-
-				string_array_destroy(parametros);
-
 				pcb_recibido = recibir_pcb(socket_cpu);
-				proximo_pcb_a_ejecutar_forzado = pcb_recibido;
-				sem_post(&sem_cant_ready); //Al no pasar por la funcion ready_list_push hay que hacerlo manualmente, vuelve a ejecutar sin pasar por ready
+
+				t_archivo_abierto* archivo_a_escribir = bucsar_archivo_en_pcb(pcb_recibido, parametros[0]);
+
+				string_array_push(&parametros,string_itoa(archivo_a_escribir->posicion_actual));
+				string_array_push(&parametros, string_itoa(pcb_recibido->pid));
+				bloquear_pcb_por_archivo(pcb_recibido, parametros[0]);
+				enviar_msj_con_parametros(ESCRIBIR_ARCHIVO,parametros, socket_fileSystem);
+				string_array_destroy(parametros);
 				break;
 
 			case F_TRUNCATE_EJECUTADO:

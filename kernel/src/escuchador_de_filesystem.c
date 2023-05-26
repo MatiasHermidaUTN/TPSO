@@ -31,6 +31,13 @@ void escuchar_de_filesystem(){
 				string_array_destroy(parametros_leer);
 				break;
 
+			case EL_ARCHIVO_FUE_ESCRITO:
+				char** parametros_escribir;
+				parametros_escribir = recibir_parametros_de_mensaje(socket_fileSystem);
+				desbloquear_pcb_por_archivo(parametros_escribir[0], atoi(parametros_escribir[1]));
+				string_array_destroy(parametros_escribir);
+				break;
+
 			default:
 				exit(-1);
 		}

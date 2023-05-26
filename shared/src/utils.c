@@ -735,8 +735,6 @@ char** recibir_parametros_de_mensaje(int socket) {
 		int tamanio_param;
 		memcpy(&tamanio_param, stream + desplazamiento, sizeof(int));
 
-		printf("TAMANIO_PARAM= %d \n", tamanio_param);
-
 		desplazamiento += sizeof(int);
 		char* parametro = malloc(tamanio_param);
 		memcpy(parametro, stream + desplazamiento, tamanio_param);
