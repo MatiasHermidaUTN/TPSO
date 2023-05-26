@@ -54,12 +54,7 @@ void planificar_corto() {
 				list_add(pcb_recibido->archivos_abiertos,archivo_abierto);
 
 				if(archivo_a_abrir){//el archivo esta abierto
-					archivo_a_abrir->cantidad_disponibles--;
-					pcb_recibido->tiempo_real_ejecucion = time(NULL) - pcb_recibido->tiempo_inicial_ejecucion;
-					log_info(logger, "PID: %d - Estado Anterior: EXEC - Estado Actual: BLOCK", pcb_recibido->pid); //log obligatorio
-
-					queue_push_con_mutex(archivo_a_abrir->cola_bloqueados, pcb_recibido, list_get(mutex_list_archivos, obtener_posicion_recurso(list_archivos, archivo_a_abrir)));
-					//queue_push(archivo_a_abrir->cola_bloqueados,pcb_recibido);
+					bloquear_pcb_por_archivo(pcb_recibido,archivo_a_abrir->nombre);
 
 				}else{ //el archivo no esta abierto
 
@@ -110,6 +105,10 @@ void planificar_corto() {
 					list_remove(mutex_list_archivos, posicion);
 					list_remove_recurso(list_archivos, archivo_a_cerrar);
 
+					queue_destroy(archivo_a_cerrar->cola_bloqueados);
+					free(archivo_a_cerrar->nombre);
+					free(archivo_a_cerrar);
+
 				}else{
 					t_pcb* pcb_a_desbloquear = queue_pop_con_mutex(archivo_a_cerrar->cola_bloqueados, list_get(mutex_list_archivos, obtener_posicion_recurso(list_archivos, archivo_a_cerrar)));
 					//t_pcb* pcb_a_desbloquear = queue_pop(archivo_a_cerrar->cola_bloqueados);
@@ -136,8 +135,14 @@ void planificar_corto() {
 
 			case F_READ_EJECUTADO:
 				parametros = recibir_parametros_de_instruccion();
-				//TODO: AVISAR A FILESYSTEM
+				pcb_recibido = recibir_pcb(socket_cpu);
 
+				t_archivo_abierto* archivo_a_leer = bucsar_archivo_en_pcb(pcb_recibido, parametros[0]);
+
+				string_array_push(&parametros,string_itoa(archivo_a_leer->posicion_actual));
+				string_array_push(&parametros, string_itoa(pcb_recibido->pid));
+				bloquear_pcb_por_archivo(pcb_recibido, parametros[0]);
+				enviar_msj_con_parametros(LEER_ARCHIVO,parametros, socket_fileSystem);
 				string_array_destroy(parametros);
 				break;
 
@@ -160,15 +165,11 @@ void planificar_corto() {
 			case F_TRUNCATE_EJECUTADO:
 				parametros = recibir_parametros_de_instruccion();
 				pcb_recibido = recibir_pcb(socket_cpu);
-
-				//char* pid_a_enviar = malloc(sizeof(int));
 				char* pid_a_enviar = string_itoa(pcb_recibido->pid);
 
 				string_array_push(&parametros, pid_a_enviar);
+				bloquear_pcb_por_archivo(pcb_recibido, parametros[0]);
 				enviar_msj_con_parametros(TRUNCAR_ARCHIVO , parametros, socket_fileSystem);
-				t_recurso* archivo_a_truncar = buscar_recurso(parametros[0], list_archivos);
-				int posicion = obtener_posicion_recurso(list_archivos, archivo_a_truncar);
-				queue_push_con_mutex(archivo_a_truncar->cola_bloqueados, pcb_recibido, list_get(mutex_list_archivos, posicion));
 				string_array_destroy(parametros);
 				break;
 
@@ -385,6 +386,7 @@ void eliminar_archivo(t_pcb *pcb, char* nombre) {
 		elemento = list_get(pcb->archivos_abiertos, i);
 		if(!strcmp(elemento->nombre_archivo, nombre)) {
 			elemento = list_remove(pcb->archivos_abiertos, i);
+			destruir_archivo_abierto(elemento);
 		}
 	}
 }
@@ -431,4 +433,15 @@ int obtener_posicion_recurso(t_list* lista, t_recurso* recurso) {
 			}
 	}
 	return -1;
+}
+
+void bloquear_pcb_por_archivo(t_pcb* pcb, char* nombre_archivo){
+	pcb->tiempo_real_ejecucion = time(NULL) - pcb->tiempo_inicial_ejecucion;
+	t_recurso* archivo = buscar_recurso(nombre_archivo, list_archivos);
+	int posicion = obtener_posicion_recurso(list_archivos, archivo);
+	queue_push_con_mutex(archivo->cola_bloqueados, pcb, list_get(mutex_list_archivos, posicion));
+	archivo->cantidad_disponibles--;
+	log_info(logger, "PID: %d - Estado Anterior: EXEC - Estado Actual: BLOCK", pcb->pid); //log obligatorio
+
+
 }

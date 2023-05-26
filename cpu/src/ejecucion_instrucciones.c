@@ -58,7 +58,15 @@ void ejecutar_instrucciones(t_pcb* pcb) {
 				break;
 
 			case F_READ:
-				enviar_pcb_a_kernel(pcb, F_READ_EJECUTADO, instruccion_actual->parametros, 3);
+				char* dir_fisca = "10"; //TODO: LA CALCULA LA MMU
+				t_list* parametros_a_enviar = list_create();
+				list_add(parametros_a_enviar, list_get(instruccion_actual->parametros,0));
+				list_add(parametros_a_enviar, dir_fisca);
+				list_add(parametros_a_enviar, list_get(instruccion_actual->parametros,2));
+
+				enviar_pcb_a_kernel(pcb, F_READ_EJECUTADO, parametros_a_enviar, 3);
+
+				list_destroy(parametros_a_enviar);
 				return;
 				break;
 

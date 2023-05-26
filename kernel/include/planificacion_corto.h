@@ -33,4 +33,5 @@ void list_remove_recurso(t_list *lista, t_recurso *recurso);
 void eliminar_archivo(t_pcb *pcb, char* nombre);
 t_archivo_abierto* bucsar_archivo_en_pcb(t_pcb* pcb, char* nombre);
 int obtener_posicion_recurso(t_list* lista, t_recurso* recurso);
+void bloquear_pcb_por_archivo(t_pcb* pcb, char* nombre_archivo);
 #endif /* PLANIFICACION_CORTO_H_ */

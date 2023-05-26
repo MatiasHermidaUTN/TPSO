@@ -195,6 +195,7 @@ int manejar_mensaje(){
 		case TRUNCAR_ARCHIVO:
 			nombre_archivo = args->parametros[0];
 			nuevo_tamanio_archivo = atoi(args->parametros[1]);
+			char* pid_truncar = args->parametros[2];
 
 			printf("truncar nombre_archivo: %s\n", nombre_archivo);
 			printf("nuevo_tamanio_archivo: %d\n", nuevo_tamanio_archivo);
@@ -202,17 +203,18 @@ int manejar_mensaje(){
 			truncar(nombre_archivo, nuevo_tamanio_archivo);
 			char ** parametros_a_enviar = string_array_new();
 			string_array_push(&parametros_a_enviar, nombre_archivo);
-			string_array_push(&parametros_a_enviar, args->parametros[2]); //parametros[2] es el PID
+			string_array_push(&parametros_a_enviar, pid_truncar);
 			enviar_msj_con_parametros(EL_ARCHIVO_FUE_TRUNCADO, parametros_a_enviar, kernel);
 			free(parametros_a_enviar);
 			printf("\n");
 			break;
 
-		case LEER:
-			nombre_archivo = (args->parametros)[0];
-			apartir_de_donde_X = atoi(args->parametros[1]);
+		case LEER_ARCHIVO:
+			nombre_archivo = args->parametros[0];
+			dir_fisica_memoria = atoi(args->parametros[1]);
 			cuanto_X = atoi(args->parametros[2]);
-			dir_fisica_memoria = atoi(args->parametros[3]);
+			apartir_de_donde_X = atoi(args->parametros[3]);
+			char* pid_leer = args->parametros[4];
 
 
 			printf("leer nombre_archivo: %s\n", nombre_archivo);
@@ -220,9 +222,15 @@ int manejar_mensaje(){
 			printf("cuanto_leer: %d\n", cuanto_X);
 			printf("dir_fisica_memoria: %d\n", dir_fisica_memoria);
 			buffer = leer_archivo(nombre_archivo, apartir_de_donde_X, cuanto_X);	//malloc se hace en leer_archivo
-			mandar_a_memoria(socket_memoria, ESCRIBIR, buffer, cuanto_X, dir_fisica_memoria);
+			//TODO:DESCOMENTAR mandar_a_memoria(socket_memoria, ESCRIBIR, buffer, cuanto_X, dir_fisica_memoria);
 			//esperar rta de memoria
-			//enviar_mensaje_kernel(kernel, "OK Archivo leido");
+
+			char** parametros_a_enviar_leer = string_array_new();
+			string_array_push(&parametros_a_enviar_leer, args->parametros[0]); //nombre del archivo
+			string_array_push(&parametros_a_enviar_leer, pid_leer); //pid para desbloquearlo despues
+			enviar_msj_con_parametros(EL_ARCHIVO_FUE_LEIDO, parametros_a_enviar_leer, kernel);
+			free(parametros_a_enviar_leer);
+
 			printf("\n");
 			printf("leido: ");
 			for(int i = 0 ; i < cuanto_X ; i++){
@@ -353,7 +361,9 @@ void truncar(char* nombre_archivo, int nuevo_tamanio_archivo){
 		achicas_archivo(archivo_FCB, nombre_archivo, nuevo_tamanio_archivo);
 	}
 
-	config_set_value(archivo_FCB, "TAMANIO_ARCHIVO", string_itoa(nuevo_tamanio_archivo));
+	char* nuevo_tamanio_string = string_itoa(nuevo_tamanio_archivo);
+	config_set_value(archivo_FCB, "TAMANIO_ARCHIVO", nuevo_tamanio_string);
+	free(nuevo_tamanio_string); //itoa creo que hace malloc y si lo pones directo en la funcion no lo podes liberar despues
 	config_save_in_file(archivo_FCB, path);
 	config_destroy(archivo_FCB);
 	free(path);
