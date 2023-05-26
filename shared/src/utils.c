@@ -227,24 +227,9 @@ void destruir_instruccion(t_instruccion* instruccion) {
 void liberar_pcb(t_pcb* pcb) {
 	list_destroy_and_destroy_elements(pcb->instrucciones, (void*)destruir_instruccion);
 	list_destroy_and_destroy_elements(pcb->archivos_abiertos,(void*)destruir_archivo_abierto);
-	//free(pcb->tabla_segmentos);   //TODO: fijarse si hay que liberar los elementos también
-	//free(pcb->archivos_abiertos); //TODO: fijarse si hay que liberar los elementos también
-	//list_destroy(pcb->tabla_segmentos);  //TODO: fijarse si hay que liberar los elementos también
-	//list_destroy(pcb->archivos_abiertos);//TODO: fijarse si hay que liberar los elementos también
-	//TODO: liberar_tabla_segmentos_pcb(pcb->tabla_segmentos);
-	//TODO: liberar_archivos_abiertos_pcb(pcb->archivos_abiertos);
-
+	list_destroy(pcb->tabla_segmentos);
 	free(pcb);
 }
-/*
-void liberar_tabla_segmentos_pcb(tabla_segmentos) {
-	//TODO
-}
-
-void liberar_archivos_abiertos_pcb(archivos_abiertos) {
-	//TODO
-}
-*/
 
 void liberar_parametros(char** parametros) {
 	for(int i = 0; i < string_array_size(parametros); i++) {
@@ -319,9 +304,9 @@ void* serializar_pcb(t_pcb* pcb, size_t* size_total, t_msj_kernel_cpu op_code, c
 	memcpy(stream_pcb + desplazamiento, &(pcb->pc), sizeof(int));
 	desplazamiento += sizeof(int);
 
-	memcpy_registros_serializar(stream_pcb, pcb->registros_cpu, &desplazamiento); // TODO: fijarse si está bien
+	memcpy_registros_serializar(stream_pcb, pcb->registros_cpu, &desplazamiento);
 
-	//memcpy_tabla_segmentos_serializar(stream_pcb, pcb->tabla_segmentos, &desplazamiento); //TODO: interpretar qué es t_segmento y hacer memcpy
+	memcpy_tabla_segmentos_serializar(stream_pcb, pcb->tabla_segmentos, &desplazamiento);
 
 	memcpy(stream_pcb + desplazamiento, &(pcb->estimado_prox_rafaga), sizeof(int));
 	desplazamiento += sizeof(int);
@@ -357,6 +342,8 @@ size_t tamanio_payload_pcb(t_pcb* pcb) {
 		size += sizeof(int) + sizeof(int) + strlen(archivo_abierto->nombre_archivo) + 1; //posicion actual, tamanio nombre y nombre del archivo
 	}
 
+	size+= sizeof(int); //cantidad de segmentos
+	size+= list_size(pcb->tabla_segmentos) * sizeof(int) * 3; //id, dir_base, tamanio
 
 	return size; // + sizeof(tabla_segmentos);
 	//TODO: sizeof de arriba
@@ -446,13 +433,18 @@ void memcpy_registros_serializar(void* stream_pcb, t_registros_cpu registros_cpu
 }
 
 void memcpy_tabla_segmentos_serializar(void* stream, t_list* tabla_segmentos, int* desplazamiento) {
-	for(int i = 0; i < tabla_segmentos->elements_count; i++) {
-		//TODO: memcpy
-		/*
-		t_segmento* segmento = (t_segmento*)list_get(tabla_segmentos, i);
-		memcpy(stream + *desplazamiento, segmento, sizeof(t_segmento));
-		*desplazamiento += sizeof(t_segmento);
-		*/
+	int cant_seg = list_size(tabla_segmentos);
+	memcpy(stream + *desplazamiento, &cant_seg,sizeof(int));
+	*desplazamiento += sizeof(int);
+
+	for(int i = 0; i < cant_seg; i++) {
+		t_segmento* segmento = list_get(tabla_segmentos,i);
+		memcpy(stream + *desplazamiento, &(segmento->id),sizeof(int));
+		*desplazamiento += sizeof(int);
+		memcpy(stream + *desplazamiento, &(segmento->dir_base),sizeof(int));
+		*desplazamiento += sizeof(int);
+		memcpy(stream + *desplazamiento, &(segmento->tamanio),sizeof(int));
+		*desplazamiento += sizeof(int);
 	}
 }
 
@@ -510,7 +502,7 @@ t_pcb* deserializar_pcb(void* stream) {
 
 	memcpy_registros_deserializar(&(pcb->registros_cpu), stream, &desplazamiento);
 
-	//memcpy_tabla_segmentos_deserializar(pcb->tabla_segmentos, stream, &desplazamiento);
+	memcpy_tabla_segmentos_deserializar(pcb, stream, &desplazamiento);
 
 	memcpy(&(pcb->estimado_prox_rafaga), stream + desplazamiento, sizeof(pcb->estimado_prox_rafaga));
 	desplazamiento += sizeof(pcb->estimado_prox_rafaga);
@@ -626,14 +618,21 @@ void memcpy_registros_deserializar(t_registros_cpu* registros_cpu, void* stream_
 	*desplazamiento += sizeof(char) * 16;
 }
 
-void memcpy_tabla_segmentos_deserializar(t_list* tabla_segmentos, void* stream, int* desplazamiento) {
-	for(int i = 0; i < tabla_segmentos->elements_count; i++) {
-		//TODO: memcpy
-		/*
-		t_segmento* segmento = (t_segmento*)list_get(tabla_segmentos, i);
-		memcpy(segmento, stream + *desplazamiento, sizeof(t_segmento));
-		*desplazamiento += sizeof(t_segmento);
-		*/
+void memcpy_tabla_segmentos_deserializar(t_pcb* pcb, void* stream, int* desplazamiento) {
+	int cant_seg;
+	memcpy(&cant_seg,stream + *desplazamiento,sizeof(int));
+	*desplazamiento += sizeof(int);
+	pcb->tabla_segmentos = list_create();
+
+	for(int i = 0; i < cant_seg; i++) {
+		t_segmento* segmento = malloc(sizeof(t_segmento));
+		memcpy(&(segmento->id),stream + *desplazamiento, sizeof(int));
+		*desplazamiento += sizeof(int);
+		memcpy(&(segmento->dir_base),stream + *desplazamiento, sizeof(int));
+		*desplazamiento += sizeof(int);
+		memcpy(&(segmento->tamanio),stream + *desplazamiento, sizeof(int));
+		*desplazamiento += sizeof(int);
+		list_add(pcb->tabla_segmentos,segmento);
 	}
 }
 

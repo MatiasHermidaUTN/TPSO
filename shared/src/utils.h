@@ -139,6 +139,12 @@ typedef struct archivo_abierto{
 	int posicion_actual;
 }t_archivo_abierto;
 
+typedef struct segmento{
+	int id;
+	int dir_base;
+	int tamanio;
+}t_segmento;
+
 //////////////////////////
 // Utils.c del servidor //
 //////////////////////////
@@ -210,7 +216,7 @@ t_list* deserializar_instrucciones(void* a_recibir, size_t size_payload, int* de
 void deserializar_parametros(void* a_recibir, int* desplazamiento, t_instruccion* instruccion, t_dictionary* diccionario_instrucciones);
 
 void memcpy_registros_deserializar(t_registros_cpu* registros_cpu, void* stream_pcb, int* desplazamiento);
-void memcpy_tabla_segmentos_deserializar(t_list* tabla_segmentos, void* stream, int* desplazamiento);
+void memcpy_tabla_segmentos_deserializar(t_pcb* pcb, void* stream, int* desplazamiento);
 void memcpy_archivos_abiertos_deserializar(t_pcb* pcb, void* stream, int* desplazamiento);
 
 void print_l_instrucciones(t_list* instrucciones);

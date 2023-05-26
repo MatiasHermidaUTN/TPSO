@@ -50,7 +50,7 @@ t_pcb* crear_pcb(t_list* instrucciones, int socket_consola) {
 	pcb->instrucciones = instrucciones;
 	pcb->pc = 0;
 	pcb->registros_cpu = init_registros_cpu();
-	pcb->tabla_segmentos = NULL; //list_create(); //TODO: falta liberar en liberar_pcb, genera definitely lost
+	pcb->tabla_segmentos = list_create();
 	pcb->estimado_prox_rafaga = lectura_de_config.ESTIMACION_INICIAL;
 	pcb->tiempo_llegada_ready = 0;
 	pcb->archivos_abiertos = list_create();

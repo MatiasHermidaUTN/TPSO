@@ -124,7 +124,9 @@ char* obtener_pids(t_list* pcbs) {
 
 	for(int i = 0; i < list_size(pcbs); i++) {
 		pcb = list_get(pcbs, i);
-		string_append(&pids, string_itoa(pcb->pid));
+		char* pid = string_itoa(pcb->pid);
+		string_append(&pids, pid);
+		free(pid);
 		if(i != list_size(pcbs) - 1) { //Para que no ponga coma a lo ultimo
 			string_append(&pids, ", ");
 		}
