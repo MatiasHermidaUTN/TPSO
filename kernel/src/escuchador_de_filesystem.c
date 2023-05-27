@@ -47,14 +47,14 @@ void escuchar_de_filesystem(){
 t_pcb* obtener_pcb_de_cola(t_recurso* archivo, int pid){ //Busca al pcb en la cola y lo devuelve (sacandolo de la cola)
 	t_pcb* pcb_a_devolver = NULL;
 	t_pcb* pcb_aux;
-	int tamanio_cola = queue_size(archivo->cola_bloqueados);
-	for(int i = 0; i< tamanio_cola; i++){
+
+	for(int i = 0; i < queue_size(archivo->cola_bloqueados); i++) {
 		pcb_aux = queue_pop(archivo->cola_bloqueados);
 
-		if(pcb_aux->pid == pid){
+		if(pcb_aux->pid == pid) {
 			pcb_a_devolver = pcb_aux;
 		}
-		else{
+		else { //Tiene que seguir popeando y pusheando el resto de pcbs para que la cola quede en el mismo orden
 			queue_push(archivo->cola_bloqueados, pcb_aux);
 		}
 	}

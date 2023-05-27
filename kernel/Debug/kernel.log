@@ -17932,3 +17932,565 @@
 [INFO] 14:51:57:372 Kernel/(16467:16469): PID: 4 - Estado Anterior: READY - Estado Actual: EXEC
 [INFO] 14:52:02:373 Kernel/(16467:16469): PID: 4 - Estado Anterior: EXEC - Estado Actual: EXIT
 [INFO] 14:52:02:376 Kernel/(16467:16469): Finaliza el proceso 4 - Motivo: SUCCESS
+[WARNING] 15:57:25:449 Kernel/(10199:10199): Kernel listo para recibir a Consolas
+[WARNING] 15:57:47:121 Kernel/(10199:10222): Se conecto una consola
+[INFO] 15:57:47:122 Kernel/(10199:10222): Se crea el proceso 1 en NEW
+[INFO] 15:57:47:122 Kernel/(10199:10202): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 15:57:47:122 Kernel/(10199:10202): Cola Ready HRRN: [1]
+[INFO] 15:57:47:122 Kernel/(10199:10201): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 15:57:47:123 Kernel/(10199:10201): Se abrio un archivo que ya existia en el File System
+[INFO] 15:57:47:123 Kernel/(10199:10201): PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 15:57:47:123 Kernel/(10199:10201): PID: 1 - Bloqueado por: IO
+[INFO] 15:57:47:123 Kernel/(10199:10201): PID: 1 - Ejecuta IO: 5
+[INFO] 15:57:52:123 Kernel/(10199:10223): PID: 1 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 15:57:52:125 Kernel/(10199:10223): Cola Ready HRRN: [1]
+[INFO] 15:57:52:125 Kernel/(10199:10201): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 15:57:52:127 Kernel/(10199:10201): PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCKKK
+[INFO] 15:57:52:127 Kernel/(10199:10201): PID: 1 - Bloqueado por: ARCHIVO_PRUEBA2
+[INFO] 15:57:52:130 Kernel/(10199:10203): PID: 1 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 15:57:52:130 Kernel/(10199:10203): Cola Ready HRRN: [1]
+[INFO] 15:57:52:130 Kernel/(10199:10201): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 15:57:52:130 Kernel/(10199:10201): PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCKKK
+[INFO] 15:57:52:130 Kernel/(10199:10201): PID: 1 - Bloqueado por: ARCHIVO_PRUEBA2
+[INFO] 15:58:07:132 Kernel/(10199:10203): PID: 1 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 15:58:07:133 Kernel/(10199:10203): Cola Ready HRRN: [1]
+[INFO] 15:58:07:133 Kernel/(10199:10201): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 15:58:07:134 Kernel/(10199:10201): PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCKKK
+[INFO] 15:58:07:135 Kernel/(10199:10201): PID: 1 - Bloqueado por: ARCHIVO_PRUEBA2
+[INFO] 15:58:22:137 Kernel/(10199:10203): PID: 1 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 15:58:22:137 Kernel/(10199:10203): Cola Ready HRRN: [1]
+[INFO] 15:58:22:137 Kernel/(10199:10201): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 15:58:22:137 Kernel/(10199:10201): PID: 1 - Estado Anterior: EXEC - Estado Actual: EXITTTTT
+[INFO] 15:58:22:138 Kernel/(10199:10201): Finaliza el proceso 1 - Motivo: SUCCESS
+[WARNING] 15:58:54:015 Kernel/(10272:10272): Kernel listo para recibir a Consolas
+[WARNING] 15:58:56:474 Kernel/(10272:10279): Se conecto una consola
+[INFO] 15:58:56:474 Kernel/(10272:10279): Se crea el proceso 1 en NEW
+[INFO] 15:58:56:474 Kernel/(10272:10275): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 15:58:56:474 Kernel/(10272:10275): Cola Ready HRRN: [1]
+[INFO] 15:58:56:474 Kernel/(10272:10274): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 15:58:56:475 Kernel/(10272:10274): Se abrio un archivo que ya existia en el File System
+[INFO] 15:58:56:475 Kernel/(10272:10274): PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 15:58:56:475 Kernel/(10272:10274): PID: 1 - Bloqueado por: IO
+[INFO] 15:58:56:475 Kernel/(10272:10274): PID: 1 - Ejecuta IO: 5
+[INFO] 15:59:01:475 Kernel/(10272:10280): PID: 1 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 15:59:01:475 Kernel/(10272:10280): Cola Ready HRRN: [1]
+[INFO] 15:59:01:475 Kernel/(10272:10274): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 15:59:01:476 Kernel/(10272:10274): PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 15:59:01:476 Kernel/(10272:10274): PID: 1 - Bloqueado por: ARCHIVO_PRUEBA2
+[INFO] 15:59:01:478 Kernel/(10272:10276): PID: 1 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 15:59:01:478 Kernel/(10272:10276): Cola Ready HRRN: [1]
+[INFO] 15:59:01:478 Kernel/(10272:10274): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 15:59:01:478 Kernel/(10272:10274): PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 15:59:01:478 Kernel/(10272:10274): PID: 1 - Bloqueado por: ARCHIVO_PRUEBA2
+[INFO] 15:59:16:480 Kernel/(10272:10276): PID: 1 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 15:59:16:481 Kernel/(10272:10276): Cola Ready HRRN: [1]
+[INFO] 15:59:16:481 Kernel/(10272:10274): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 15:59:16:481 Kernel/(10272:10274): PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 15:59:16:481 Kernel/(10272:10274): PID: 1 - Bloqueado por: ARCHIVO_PRUEBA2
+[INFO] 15:59:31:482 Kernel/(10272:10276): PID: 1 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 15:59:31:483 Kernel/(10272:10276): Cola Ready HRRN: [1]
+[INFO] 15:59:31:483 Kernel/(10272:10274): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 15:59:31:485 Kernel/(10272:10274): PID: 1 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 15:59:31:486 Kernel/(10272:10274): Finaliza el proceso 1 - Motivo: SUCCESS
+[WARNING] 15:59:59:591 Kernel/(10272:10283): Se conecto una consola
+[INFO] 15:59:59:591 Kernel/(10272:10283): Se crea el proceso 2 en NEW
+[INFO] 15:59:59:591 Kernel/(10272:10275): PID: 2 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 15:59:59:591 Kernel/(10272:10275): Cola Ready HRRN: [2]
+[INFO] 15:59:59:591 Kernel/(10272:10274): PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 15:59:59:591 Kernel/(10272:10274): PID: 2 - Wait: DISCO - Instancias: 0
+[INFO] 15:59:59:591 Kernel/(10272:10274): PID: 2 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 15:59:59:591 Kernel/(10272:10274): PID: 2 - Bloqueado por: IO
+[INFO] 15:59:59:591 Kernel/(10272:10274): PID: 2 - Ejecuta IO: 5
+[INFO] 16:00:04:591 Kernel/(10272:10284): PID: 2 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 16:00:04:592 Kernel/(10272:10284): Cola Ready HRRN: [2]
+[INFO] 16:00:04:592 Kernel/(10272:10274): PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 16:00:04:592 Kernel/(10272:10274): PID: 2 - Wait: RECURSO_1 - Instancias: 0
+[INFO] 16:00:04:592 Kernel/(10272:10274): PID: 2 - Signal: DISCO - Instancias: 1
+[INFO] 16:00:04:592 Kernel/(10272:10274): PID: 2 - Signal: RECURSO_1 - Instancias: 1
+[INFO] 16:00:04:592 Kernel/(10272:10274): PID: 2 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 16:00:04:593 Kernel/(10272:10274): Finaliza el proceso 2 - Motivo: SUCCESS
+[WARNING] 16:06:58:205 Kernel/(10358:10358): Kernel listo para recibir a Consolas
+[WARNING] 16:07:11:132 Kernel/(10370:10370): Kernel listo para recibir a Consolas
+[WARNING] 16:07:14:690 Kernel/(10370:10377): Se conecto una consola
+[INFO] 16:07:14:705 Kernel/(10370:10377): Se crea el proceso 1 en NEW
+[INFO] 16:07:14:708 Kernel/(10370:10373): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 16:07:14:709 Kernel/(10370:10373): Cola Ready HRRN: [1]
+[INFO] 16:07:14:714 Kernel/(10370:10372): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 16:07:14:753 Kernel/(10370:10372): PID: 1 - Wait: DISCO - Instancias: 0
+[INFO] 16:07:14:755 Kernel/(10370:10372): PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 16:07:14:755 Kernel/(10370:10372): PID: 1 - Bloqueado por: IO
+[INFO] 16:07:14:756 Kernel/(10370:10372): PID: 1 - Ejecuta IO: 5
+[INFO] 16:07:19:761 Kernel/(10370:10378): PID: 1 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 16:07:19:762 Kernel/(10370:10378): Cola Ready HRRN: [1]
+[INFO] 16:07:19:762 Kernel/(10370:10372): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 16:07:19:763 Kernel/(10370:10372): PID: 1 - Wait: RECURSO_1 - Instancias: 0
+[INFO] 16:07:19:765 Kernel/(10370:10372): PID: 1 - Signal: DISCO - Instancias: 1
+[INFO] 16:07:19:766 Kernel/(10370:10372): PID: 1 - Signal: RECURSO_1 - Instancias: 1
+[INFO] 16:07:19:769 Kernel/(10370:10372): PID: 1 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 16:07:19:769 Kernel/(10370:10372): Finaliza el proceso 1 - Motivo: SUCCESS
+[WARNING] 16:07:49:336 Kernel/(10370:10382): Se conecto una consola
+[INFO] 16:07:49:337 Kernel/(10370:10382): Se crea el proceso 2 en NEW
+[INFO] 16:07:49:337 Kernel/(10370:10373): PID: 2 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 16:07:49:337 Kernel/(10370:10373): Cola Ready HRRN: [2]
+[INFO] 16:07:49:338 Kernel/(10370:10372): PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 16:07:49:349 Kernel/(10370:10372): Se abrio un archivo que ya existia en el File System
+[INFO] 16:07:49:353 Kernel/(10370:10372): PID: 2 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 16:07:49:353 Kernel/(10370:10372): PID: 2 - Bloqueado por: IO
+[INFO] 16:07:49:354 Kernel/(10370:10372): PID: 2 - Ejecuta IO: 5
+[INFO] 16:07:54:354 Kernel/(10370:10383): PID: 2 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 16:07:54:358 Kernel/(10370:10383): Cola Ready HRRN: [2]
+[INFO] 16:07:54:360 Kernel/(10370:10372): PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 16:07:54:381 Kernel/(10370:10372): PID: 2 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 16:07:54:383 Kernel/(10370:10372): PID: 2 - Bloqueado por: ARCHIVO_PRUEBA2
+[INFO] 16:07:54:394 Kernel/(10370:10374): PID: 2 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 16:07:54:398 Kernel/(10370:10374): Cola Ready HRRN: [2]
+[INFO] 16:07:54:399 Kernel/(10370:10372): PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 16:07:54:407 Kernel/(10370:10372): PID: 2 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 16:07:54:408 Kernel/(10370:10372): PID: 2 - Bloqueado por: ARCHIVO_PRUEBA2
+[INFO] 16:08:09:416 Kernel/(10370:10374): PID: 2 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 16:08:09:418 Kernel/(10370:10374): Cola Ready HRRN: [2]
+[INFO] 16:08:09:419 Kernel/(10370:10372): PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 16:08:09:426 Kernel/(10370:10372): PID: 2 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 16:08:09:426 Kernel/(10370:10372): PID: 2 - Bloqueado por: ARCHIVO_PRUEBA2
+[INFO] 16:08:24:439 Kernel/(10370:10374): PID: 2 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 16:08:24:441 Kernel/(10370:10374): Cola Ready HRRN: [2]
+[INFO] 16:08:24:441 Kernel/(10370:10372): PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 16:08:24:446 Kernel/(10370:10372): PID: 2 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 16:08:24:446 Kernel/(10370:10372): Finaliza el proceso 2 - Motivo: SUCCESS
+[WARNING] 17:12:59:757 Kernel/(12986:12986): Kernel listo para recibir a Consolas
+[WARNING] 17:13:02:559 Kernel/(12986:12993): Se conecto una consola
+[INFO] 17:13:02:580 Kernel/(12986:12993): Se crea el proceso 1 en NEW
+[INFO] 17:13:02:585 Kernel/(12986:12989): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 17:13:02:588 Kernel/(12986:12989): Cola Ready HRRN: [1]
+[INFO] 17:13:02:592 Kernel/(12986:12988): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 17:13:02:635 Kernel/(12986:12988): Se abrio un archivo que ya existia en el File System
+[INFO] 17:13:02:639 Kernel/(12986:12988): PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 17:13:02:639 Kernel/(12986:12988): PID: 1 - Bloqueado por: IO
+[INFO] 17:13:02:640 Kernel/(12986:12988): PID: 1 - Ejecuta IO: 5
+[INFO] 17:13:07:650 Kernel/(12986:12994): PID: 1 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 17:13:07:652 Kernel/(12986:12994): Cola Ready HRRN: [1]
+[INFO] 17:13:07:653 Kernel/(12986:12988): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 17:13:07:657 Kernel/(12986:12988): PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 17:13:07:657 Kernel/(12986:12988): PID: 1 - Bloqueado por: ARCHIVO_PRUEBA2
+[INFO] 17:13:07:664 Kernel/(12986:12990): PID: 1 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 17:13:07:665 Kernel/(12986:12990): Cola Ready HRRN: [1]
+[INFO] 17:13:07:665 Kernel/(12986:12988): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 17:13:07:677 Kernel/(12986:12988): PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 17:13:07:677 Kernel/(12986:12988): PID: 1 - Bloqueado por: ARCHIVO_PRUEBA2
+[INFO] 17:13:22:692 Kernel/(12986:12990): PID: 1 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 17:13:22:694 Kernel/(12986:12990): Cola Ready HRRN: [1]
+[INFO] 17:13:22:695 Kernel/(12986:12988): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 17:13:22:703 Kernel/(12986:12988): PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 17:13:22:704 Kernel/(12986:12988): PID: 1 - Bloqueado por: ARCHIVO_PRUEBA2
+[INFO] 17:13:37:715 Kernel/(12986:12990): PID: 1 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 17:13:37:717 Kernel/(12986:12990): Cola Ready HRRN: [1]
+[INFO] 17:13:37:717 Kernel/(12986:12988): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 17:13:37:725 Kernel/(12986:12988): PID: 1 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 17:13:37:726 Kernel/(12986:12988): Finaliza el proceso 1 - Motivo: SUCCESS
+[WARNING] 17:14:11:673 Kernel/(12986:12998): Se conecto una consola
+[INFO] 17:14:11:673 Kernel/(12986:12998): Se crea el proceso 2 en NEW
+[INFO] 17:14:11:674 Kernel/(12986:12989): PID: 2 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 17:14:11:674 Kernel/(12986:12989): Cola Ready HRRN: [2]
+[INFO] 17:14:11:674 Kernel/(12986:12988): PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 17:14:11:676 Kernel/(12986:12988): PID: 2 - Wait: DISCO - Instancias: 0
+[INFO] 17:14:11:678 Kernel/(12986:12988): PID: 2 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 17:14:11:678 Kernel/(12986:12988): PID: 2 - Bloqueado por: IO
+[INFO] 17:14:11:678 Kernel/(12986:12988): PID: 2 - Ejecuta IO: 5
+[INFO] 17:14:16:713 Kernel/(12986:12999): PID: 2 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 17:14:16:716 Kernel/(12986:12999): Cola Ready HRRN: [2]
+[INFO] 17:14:16:717 Kernel/(12986:12988): PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 17:14:16:718 Kernel/(12986:12988): PID: 2 - Wait: RECURSO_1 - Instancias: 0
+[INFO] 17:14:16:720 Kernel/(12986:12988): PID: 2 - Signal: DISCO - Instancias: 1
+[INFO] 17:14:16:721 Kernel/(12986:12988): PID: 2 - Signal: RECURSO_1 - Instancias: 1
+[INFO] 17:14:16:723 Kernel/(12986:12988): PID: 2 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 17:14:16:723 Kernel/(12986:12988): Finaliza el proceso 2 - Motivo: SUCCESS
+[WARNING] 17:17:32:425 Kernel/(12986:13025): Se conecto una consola
+[INFO] 17:17:32:445 Kernel/(12986:13025): Se crea el proceso 3 en NEW
+[INFO] 17:17:32:448 Kernel/(12986:12989): PID: 3 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 17:17:32:449 Kernel/(12986:12989): Cola Ready HRRN: [3]
+[INFO] 17:17:32:540 Kernel/(12986:12988): PID: 3 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 17:17:32:859 Kernel/(12986:12988): PID: 3 - Wait: RECURSO_1 - Instancias: 0
+[INFO] 17:17:33:295 Kernel/(12986:12988): PID: 3 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 17:17:33:295 Kernel/(12986:12988): PID: 3 - Bloqueado por: IO
+[INFO] 17:17:33:296 Kernel/(12986:12988): PID: 3 - Ejecuta IO: 5
+[INFO] 17:17:38:298 Kernel/(12986:13026): PID: 3 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 17:17:38:300 Kernel/(12986:13026): Cola Ready HRRN: [3]
+[INFO] 17:17:38:300 Kernel/(12986:12988): PID: 3 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 17:17:38:302 Kernel/(12986:12988): PID: 3 - Wait: DISCO - Instancias: 0
+[INFO] 17:17:38:304 Kernel/(12986:12988): PID: 3 - Signal: RECURSO_1 - Instancias: 1
+[INFO] 17:17:38:305 Kernel/(12986:12988): PID: 3 - Signal: DISCO - Instancias: 1
+[INFO] 17:17:38:308 Kernel/(12986:12988): PID: 3 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 17:17:38:308 Kernel/(12986:12988): Finaliza el proceso 3 - Motivo: SUCCESS
+[WARNING] 17:18:21:440 Kernel/(12986:13029): Se conecto una consola
+[INFO] 17:18:21:441 Kernel/(12986:13029): Se crea el proceso 4 en NEW
+[INFO] 17:18:21:441 Kernel/(12986:12989): PID: 4 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 17:18:21:441 Kernel/(12986:12989): Cola Ready HRRN: [4]
+[INFO] 17:18:21:441 Kernel/(12986:12988): PID: 4 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 17:18:21:443 Kernel/(12986:12988): PID: 4 - Wait: DISCO - Instancias: 0
+[INFO] 17:18:21:444 Kernel/(12986:12988): PID: 4 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 17:18:21:445 Kernel/(12986:12988): PID: 4 - Bloqueado por: IO
+[INFO] 17:18:21:445 Kernel/(12986:12988): PID: 4 - Ejecuta IO: 5
+[WARNING] 17:18:21:964 Kernel/(12986:13033): Se conecto una consola
+[INFO] 17:18:21:966 Kernel/(12986:13033): Se crea el proceso 5 en NEW
+[INFO] 17:18:21:967 Kernel/(12986:12989): PID: 5 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 17:18:21:967 Kernel/(12986:12989): Cola Ready HRRN: [5]
+[INFO] 17:18:21:967 Kernel/(12986:12988): PID: 5 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 17:18:21:968 Kernel/(12986:12988): PID: 5 - Wait: RECURSO_1 - Instancias: 0
+[INFO] 17:18:21:969 Kernel/(12986:12988): PID: 5 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 17:18:21:971 Kernel/(12986:12988): PID: 5 - Bloqueado por: IO
+[INFO] 17:18:21:971 Kernel/(12986:12988): PID: 5 - Ejecuta IO: 5
+[INFO] 17:18:26:445 Kernel/(12986:13030): PID: 4 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 17:18:26:446 Kernel/(12986:13030): Cola Ready HRRN: [4]
+[INFO] 17:18:26:446 Kernel/(12986:12988): PID: 4 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 17:18:26:467 Kernel/(12986:12988): PID: 4 - Wait: RECURSO_1 - Instancias: -1
+[INFO] 17:18:26:469 Kernel/(12986:12988): PID: 4 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 17:18:26:470 Kernel/(12986:12988): PID: 4 - Bloqueado por: RECURSO_1
+[INFO] 17:18:27:003 Kernel/(12986:13034): PID: 5 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 17:18:27:008 Kernel/(12986:13034): Cola Ready HRRN: [5]
+[INFO] 17:18:27:008 Kernel/(12986:12988): PID: 5 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 17:18:27:027 Kernel/(12986:12988): PID: 5 - Wait: DISCO - Instancias: -1
+[INFO] 17:18:27:028 Kernel/(12986:12988): PID: 5 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 17:18:27:028 Kernel/(12986:12988): PID: 5 - Bloqueado por: DISCO
+[WARNING] 17:19:26:013 Kernel/(13043:13043): Kernel listo para recibir a Consolas
+[WARNING] 17:19:30:903 Kernel/(13043:13050): Se conecto una consola
+[INFO] 17:19:30:910 Kernel/(13043:13050): Se crea el proceso 1 en NEW
+[INFO] 17:19:30:914 Kernel/(13043:13046): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 17:19:30:916 Kernel/(13043:13046): Cola Ready HRRN: [1]
+[INFO] 17:19:30:920 Kernel/(13043:13045): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 17:19:35:968 Kernel/(13043:13045): PID: 1 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 17:19:35:968 Kernel/(13043:13045): Finaliza el proceso 1 - Motivo: SUCCESS
+[WARNING] 17:20:08:609 Kernel/(13043:13053): Se conecto una consola
+[INFO] 17:20:08:610 Kernel/(13043:13053): Se crea el proceso 2 en NEW
+[INFO] 17:20:08:610 Kernel/(13043:13046): PID: 2 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 17:20:08:611 Kernel/(13043:13046): Cola Ready HRRN: [2]
+[INFO] 17:20:08:611 Kernel/(13043:13045): PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 17:20:08:616 Kernel/(13043:13045): PID: 2 - Wait: DISCO - Instancias: 0
+[INFO] 17:20:08:622 Kernel/(13043:13045): PID: 2 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 17:20:08:625 Kernel/(13043:13045): PID: 2 - Bloqueado por: IO
+[INFO] 17:20:08:625 Kernel/(13043:13045): PID: 2 - Ejecuta IO: 5
+[WARNING] 17:20:10:000 Kernel/(13043:13057): Se conecto una consola
+[INFO] 17:20:10:000 Kernel/(13043:13057): Se crea el proceso 3 en NEW
+[INFO] 17:20:10:001 Kernel/(13043:13046): PID: 3 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 17:20:10:001 Kernel/(13043:13046): Cola Ready HRRN: [3]
+[INFO] 17:20:10:001 Kernel/(13043:13045): PID: 3 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 17:20:10:005 Kernel/(13043:13045): PID: 3 - Wait: DISCO - Instancias: -1
+[INFO] 17:20:10:005 Kernel/(13043:13045): PID: 3 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 17:20:10:006 Kernel/(13043:13045): PID: 3 - Bloqueado por: DISCO
+[WARNING] 17:20:10:808 Kernel/(13043:13060): Se conecto una consola
+[INFO] 17:20:10:808 Kernel/(13043:13060): Se crea el proceso 4 en NEW
+[INFO] 17:20:10:808 Kernel/(13043:13046): PID: 4 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 17:20:10:809 Kernel/(13043:13046): Cola Ready HRRN: [4]
+[INFO] 17:20:10:809 Kernel/(13043:13045): PID: 4 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 17:20:10:810 Kernel/(13043:13045): PID: 4 - Wait: DISCO - Instancias: -2
+[INFO] 17:20:10:811 Kernel/(13043:13045): PID: 4 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 17:20:10:811 Kernel/(13043:13045): PID: 4 - Bloqueado por: DISCO
+[INFO] 17:20:13:630 Kernel/(13043:13054): PID: 2 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 17:20:13:634 Kernel/(13043:13054): Cola Ready HRRN: [2]
+[INFO] 17:20:13:636 Kernel/(13043:13045): PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 17:20:13:644 Kernel/(13043:13045): PID: 2 - Wait: RECURSO_1 - Instancias: 0
+[INFO] 17:20:13:655 Kernel/(13043:13045): PID: 2 - Signal: DISCO - Instancias: -1
+[INFO] 17:20:13:656 Kernel/(13043:13045): PID: 3 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 17:20:13:659 Kernel/(13043:13045): Cola Ready HRRN: [3]
+[INFO] 17:20:13:664 Kernel/(13043:13045): PID: 2 - Signal: RECURSO_1 - Instancias: 1
+[INFO] 17:20:13:670 Kernel/(13043:13045): PID: 2 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 17:20:13:671 Kernel/(13043:13045): Finaliza el proceso 2 - Motivo: SUCCESS
+[INFO] 17:20:13:671 Kernel/(13043:13045): PID: 3 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 17:20:13:681 Kernel/(13043:13045): PID: 3 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 17:20:13:685 Kernel/(13043:13045): PID: 3 - Bloqueado por: IO
+[INFO] 17:20:13:685 Kernel/(13043:13045): PID: 3 - Ejecuta IO: 5
+[INFO] 17:20:18:686 Kernel/(13043:13061): PID: 3 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 17:20:18:688 Kernel/(13043:13061): Cola Ready HRRN: [3]
+[INFO] 17:20:18:689 Kernel/(13043:13045): PID: 3 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 17:20:18:690 Kernel/(13043:13045): PID: 3 - Wait: RECURSO_1 - Instancias: 0
+[INFO] 17:20:18:690 Kernel/(13043:13045): PID: 3 - Signal: DISCO - Instancias: 0
+[INFO] 17:20:18:691 Kernel/(13043:13045): PID: 4 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 17:20:18:691 Kernel/(13043:13045): Cola Ready HRRN: [4]
+[INFO] 17:20:18:691 Kernel/(13043:13045): PID: 3 - Signal: RECURSO_1 - Instancias: 1
+[INFO] 17:20:18:693 Kernel/(13043:13045): PID: 3 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 17:20:18:693 Kernel/(13043:13045): Finaliza el proceso 3 - Motivo: SUCCESS
+[INFO] 17:20:18:693 Kernel/(13043:13045): PID: 4 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 17:20:18:696 Kernel/(13043:13045): PID: 4 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 17:20:18:696 Kernel/(13043:13045): PID: 4 - Bloqueado por: IO
+[INFO] 17:20:18:697 Kernel/(13043:13045): PID: 4 - Ejecuta IO: 5
+[INFO] 17:20:23:697 Kernel/(13043:13062): PID: 4 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 17:20:23:700 Kernel/(13043:13062): Cola Ready HRRN: [4]
+[INFO] 17:20:23:702 Kernel/(13043:13045): PID: 4 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 17:20:23:703 Kernel/(13043:13045): PID: 4 - Wait: RECURSO_1 - Instancias: 0
+[INFO] 17:20:23:704 Kernel/(13043:13045): PID: 4 - Signal: DISCO - Instancias: 1
+[INFO] 17:20:23:705 Kernel/(13043:13045): PID: 4 - Signal: RECURSO_1 - Instancias: 1
+[INFO] 17:20:23:708 Kernel/(13043:13045): PID: 4 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 17:20:23:709 Kernel/(13043:13045): Finaliza el proceso 4 - Motivo: SUCCESS
+[WARNING] 17:20:33:239 Kernel/(13043:13067): Se conecto una consola
+[INFO] 17:20:33:240 Kernel/(13043:13067): Se crea el proceso 5 en NEW
+[INFO] 17:20:33:240 Kernel/(13043:13046): PID: 5 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 17:20:33:240 Kernel/(13043:13046): Cola Ready HRRN: [5]
+[INFO] 17:20:33:241 Kernel/(13043:13045): PID: 5 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 17:20:33:242 Kernel/(13043:13045): PID: 5 - Wait: DISCO - Instancias: 0
+[INFO] 17:20:33:243 Kernel/(13043:13045): PID: 5 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 17:20:33:243 Kernel/(13043:13045): PID: 5 - Bloqueado por: IO
+[INFO] 17:20:33:243 Kernel/(13043:13045): PID: 5 - Ejecuta IO: 5
+[INFO] 17:20:38:244 Kernel/(13043:13068): PID: 5 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 17:20:38:247 Kernel/(13043:13068): Cola Ready HRRN: [5]
+[INFO] 17:20:38:249 Kernel/(13043:13045): PID: 5 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 17:20:38:255 Kernel/(13043:13045): PID: 5 - Wait: RECURSO_1 - Instancias: 0
+[INFO] 17:20:38:264 Kernel/(13043:13045): PID: 5 - Signal: DISCO - Instancias: 1
+[INFO] 17:20:38:269 Kernel/(13043:13045): PID: 5 - Signal: RECURSO_1 - Instancias: 1
+[INFO] 17:20:38:278 Kernel/(13043:13045): PID: 5 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 17:20:38:279 Kernel/(13043:13045): Finaliza el proceso 5 - Motivo: SUCCESS
+[WARNING] 17:21:42:648 Kernel/(13043:13071): Se conecto una consola
+[INFO] 17:21:42:649 Kernel/(13043:13071): Se crea el proceso 6 en NEW
+[INFO] 17:21:42:649 Kernel/(13043:13046): PID: 6 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 17:21:42:650 Kernel/(13043:13046): Cola Ready HRRN: [6]
+[INFO] 17:21:42:650 Kernel/(13043:13045): PID: 6 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 17:21:42:656 Kernel/(13043:13045): Se abrio un archivo que ya existia en el File System
+[INFO] 17:21:42:661 Kernel/(13043:13045): PID: 6 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 17:21:42:661 Kernel/(13043:13045): PID: 6 - Bloqueado por: IO
+[INFO] 17:21:42:661 Kernel/(13043:13045): PID: 6 - Ejecuta IO: 5
+[WARNING] 17:21:43:183 Kernel/(13043:13075): Se conecto una consola
+[INFO] 17:21:43:183 Kernel/(13043:13075): Se crea el proceso 7 en NEW
+[INFO] 17:21:43:184 Kernel/(13043:13046): PID: 7 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 17:21:43:184 Kernel/(13043:13046): Cola Ready HRRN: [7]
+[INFO] 17:21:43:184 Kernel/(13043:13045): PID: 7 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 17:21:43:186 Kernel/(13043:13045): PID: 7 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 17:21:43:187 Kernel/(13043:13045): PID: 7 - Bloqueado por: ARCHIVO_PRUEBA2
+[WARNING] 17:21:43:880 Kernel/(13043:13078): Se conecto una consola
+[INFO] 17:21:43:880 Kernel/(13043:13078): Se crea el proceso 8 en NEW
+[INFO] 17:21:43:881 Kernel/(13043:13046): PID: 8 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 17:21:43:881 Kernel/(13043:13046): Cola Ready HRRN: [8]
+[INFO] 17:21:43:881 Kernel/(13043:13045): PID: 8 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 17:21:43:883 Kernel/(13043:13045): PID: 8 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 17:21:43:883 Kernel/(13043:13045): PID: 8 - Bloqueado por: ARCHIVO_PRUEBA2
+[WARNING] 17:21:44:686 Kernel/(13043:13081): Se conecto una consola
+[INFO] 17:21:44:687 Kernel/(13043:13081): Se crea el proceso 9 en NEW
+[INFO] 17:21:44:687 Kernel/(13043:13046): PID: 9 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 17:21:44:687 Kernel/(13043:13046): Cola Ready HRRN: [9]
+[INFO] 17:21:44:687 Kernel/(13043:13045): PID: 9 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 17:21:44:688 Kernel/(13043:13045): PID: 9 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 17:21:44:689 Kernel/(13043:13045): PID: 9 - Bloqueado por: ARCHIVO_PRUEBA2
+[INFO] 17:21:47:662 Kernel/(13043:13072): PID: 6 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 17:21:47:662 Kernel/(13043:13072): Cola Ready HRRN: [6]
+[INFO] 17:21:47:663 Kernel/(13043:13045): PID: 6 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 17:21:47:666 Kernel/(13043:13045): PID: 6 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 17:21:47:666 Kernel/(13043:13045): PID: 6 - Bloqueado por: ARCHIVO_PRUEBA2
+[INFO] 17:21:47:672 Kernel/(13043:13047): PID: 6 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 17:21:47:675 Kernel/(13043:13047): Cola Ready HRRN: [6]
+[INFO] 17:21:47:675 Kernel/(13043:13045): PID: 6 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 17:21:47:681 Kernel/(13043:13045): PID: 6 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 17:21:47:682 Kernel/(13043:13045): PID: 6 - Bloqueado por: ARCHIVO_PRUEBA2
+[INFO] 17:22:02:689 Kernel/(13043:13047): PID: 6 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 17:22:02:691 Kernel/(13043:13047): Cola Ready HRRN: [6]
+[INFO] 17:22:02:691 Kernel/(13043:13045): PID: 6 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 17:22:02:700 Kernel/(13043:13045): PID: 6 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 17:22:02:703 Kernel/(13043:13045): PID: 6 - Bloqueado por: ARCHIVO_PRUEBA2
+[INFO] 17:22:17:712 Kernel/(13043:13047): PID: 6 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 17:22:17:713 Kernel/(13043:13047): Cola Ready HRRN: [6]
+[INFO] 17:22:17:713 Kernel/(13043:13045): PID: 6 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 17:22:17:716 Kernel/(13043:13045): PID: 7 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 17:22:17:716 Kernel/(13043:13045): Cola Ready HRRN: [7]
+[INFO] 17:22:17:718 Kernel/(13043:13045): PID: 6 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 17:22:17:718 Kernel/(13043:13045): Finaliza el proceso 6 - Motivo: SUCCESS
+[INFO] 17:22:17:718 Kernel/(13043:13045): PID: 7 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 17:22:17:720 Kernel/(13043:13045): PID: 7 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 17:22:17:720 Kernel/(13043:13045): PID: 7 - Bloqueado por: IO
+[INFO] 17:22:17:720 Kernel/(13043:13045): PID: 7 - Ejecuta IO: 5
+[INFO] 17:22:22:721 Kernel/(13043:13083): PID: 7 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 17:22:22:723 Kernel/(13043:13083): Cola Ready HRRN: [7]
+[INFO] 17:22:22:724 Kernel/(13043:13045): PID: 7 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 17:22:22:728 Kernel/(13043:13045): PID: 7 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 17:22:22:728 Kernel/(13043:13045): PID: 7 - Bloqueado por: ARCHIVO_PRUEBA2
+[INFO] 17:22:22:731 Kernel/(13043:13047): PID: 7 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 17:22:22:732 Kernel/(13043:13047): Cola Ready HRRN: [7]
+[INFO] 17:22:22:734 Kernel/(13043:13045): PID: 7 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 17:22:22:739 Kernel/(13043:13045): PID: 7 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 17:22:22:739 Kernel/(13043:13045): PID: 7 - Bloqueado por: ARCHIVO_PRUEBA2
+[INFO] 17:22:37:746 Kernel/(13043:13047): PID: 7 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 17:22:37:749 Kernel/(13043:13047): Cola Ready HRRN: [7]
+[INFO] 17:22:37:750 Kernel/(13043:13045): PID: 7 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 17:22:37:756 Kernel/(13043:13045): PID: 7 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 17:22:37:756 Kernel/(13043:13045): PID: 7 - Bloqueado por: ARCHIVO_PRUEBA2
+[INFO] 17:22:52:767 Kernel/(13043:13047): PID: 7 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 17:22:52:769 Kernel/(13043:13047): Cola Ready HRRN: [7]
+[INFO] 17:22:52:771 Kernel/(13043:13045): PID: 7 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 17:22:52:773 Kernel/(13043:13045): PID: 8 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 17:22:52:773 Kernel/(13043:13045): Cola Ready HRRN: [8]
+[INFO] 17:22:52:774 Kernel/(13043:13045): PID: 7 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 17:22:52:774 Kernel/(13043:13045): Finaliza el proceso 7 - Motivo: SUCCESS
+[INFO] 17:22:52:775 Kernel/(13043:13045): PID: 8 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 17:22:52:776 Kernel/(13043:13045): PID: 8 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 17:22:52:776 Kernel/(13043:13045): PID: 8 - Bloqueado por: IO
+[INFO] 17:22:52:776 Kernel/(13043:13045): PID: 8 - Ejecuta IO: 5
+[INFO] 17:22:57:777 Kernel/(13043:13084): PID: 8 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 17:22:57:778 Kernel/(13043:13084): Cola Ready HRRN: [8]
+[INFO] 17:22:57:779 Kernel/(13043:13045): PID: 8 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 17:22:57:783 Kernel/(13043:13045): PID: 8 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 17:22:57:783 Kernel/(13043:13045): PID: 8 - Bloqueado por: ARCHIVO_PRUEBA2
+[INFO] 17:22:57:787 Kernel/(13043:13047): PID: 8 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 17:22:57:787 Kernel/(13043:13047): Cola Ready HRRN: [8]
+[INFO] 17:22:57:787 Kernel/(13043:13045): PID: 8 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 17:22:57:796 Kernel/(13043:13045): PID: 8 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 17:22:57:796 Kernel/(13043:13045): PID: 8 - Bloqueado por: ARCHIVO_PRUEBA2
+[INFO] 17:23:12:802 Kernel/(13043:13047): PID: 8 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 17:23:12:802 Kernel/(13043:13047): Cola Ready HRRN: [8]
+[INFO] 17:23:12:803 Kernel/(13043:13045): PID: 8 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 17:23:12:812 Kernel/(13043:13045): PID: 8 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 17:23:12:812 Kernel/(13043:13045): PID: 8 - Bloqueado por: ARCHIVO_PRUEBA2
+[INFO] 17:23:27:823 Kernel/(13043:13047): PID: 8 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 17:23:27:823 Kernel/(13043:13047): Cola Ready HRRN: [8]
+[INFO] 17:23:27:825 Kernel/(13043:13045): PID: 8 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 17:23:27:828 Kernel/(13043:13045): PID: 9 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 17:23:27:828 Kernel/(13043:13045): Cola Ready HRRN: [9]
+[INFO] 17:23:27:829 Kernel/(13043:13045): PID: 8 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 17:23:27:830 Kernel/(13043:13045): Finaliza el proceso 8 - Motivo: SUCCESS
+[INFO] 17:23:27:831 Kernel/(13043:13045): PID: 9 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 17:23:27:834 Kernel/(13043:13045): PID: 9 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 17:23:27:834 Kernel/(13043:13045): PID: 9 - Bloqueado por: IO
+[INFO] 17:23:27:834 Kernel/(13043:13045): PID: 9 - Ejecuta IO: 5
+[INFO] 17:23:32:835 Kernel/(13043:13101): PID: 9 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 17:23:32:835 Kernel/(13043:13101): Cola Ready HRRN: [9]
+[INFO] 17:23:32:836 Kernel/(13043:13045): PID: 9 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 17:23:32:838 Kernel/(13043:13045): PID: 9 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 17:23:32:839 Kernel/(13043:13045): PID: 9 - Bloqueado por: ARCHIVO_PRUEBA2
+[INFO] 17:23:32:842 Kernel/(13043:13047): PID: 9 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 17:23:32:843 Kernel/(13043:13047): Cola Ready HRRN: [9]
+[INFO] 17:23:32:843 Kernel/(13043:13045): PID: 9 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 17:23:32:849 Kernel/(13043:13045): PID: 9 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 17:23:32:850 Kernel/(13043:13045): PID: 9 - Bloqueado por: ARCHIVO_PRUEBA2
+[INFO] 17:23:47:856 Kernel/(13043:13047): PID: 9 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 17:23:47:856 Kernel/(13043:13047): Cola Ready HRRN: [9]
+[INFO] 17:23:47:856 Kernel/(13043:13045): PID: 9 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 17:23:47:866 Kernel/(13043:13045): PID: 9 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 17:23:47:868 Kernel/(13043:13045): PID: 9 - Bloqueado por: ARCHIVO_PRUEBA2
+[INFO] 17:24:02:877 Kernel/(13043:13047): PID: 9 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 17:24:02:878 Kernel/(13043:13047): Cola Ready HRRN: [9]
+[INFO] 17:24:02:878 Kernel/(13043:13045): PID: 9 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 17:24:02:885 Kernel/(13043:13045): PID: 9 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 17:24:02:886 Kernel/(13043:13045): Finaliza el proceso 9 - Motivo: SUCCESS
+[WARNING] 18:21:16:976 Kernel/(14289:14289): Kernel listo para recibir a Consolas
+[WARNING] 18:21:22:509 Kernel/(14289:14296): Se conecto una consola
+[INFO] 18:21:22:517 Kernel/(14289:14296): Se crea el proceso 1 en NEW
+[INFO] 18:21:22:520 Kernel/(14289:14292): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 18:21:22:522 Kernel/(14289:14292): Cola Ready HRRN: [1]
+[INFO] 18:21:22:529 Kernel/(14289:14291): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 18:21:22:572 Kernel/(14289:14291): Se abrio un archivo que ya existia en el File System
+[INFO] 18:21:22:577 Kernel/(14289:14291): PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 18:21:22:581 Kernel/(14289:14291): PID: 1 - Bloqueado por: IO
+[INFO] 18:21:22:582 Kernel/(14289:14291): PID: 1 - Ejecuta IO: 5
+[WARNING] 18:21:23:779 Kernel/(14289:14300): Se conecto una consola
+[INFO] 18:21:23:779 Kernel/(14289:14300): Se crea el proceso 2 en NEW
+[INFO] 18:21:23:780 Kernel/(14289:14292): PID: 2 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 18:21:23:780 Kernel/(14289:14292): Cola Ready HRRN: [2]
+[INFO] 18:21:23:781 Kernel/(14289:14291): PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 18:21:23:783 Kernel/(14289:14291): PID: 2 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 18:21:23:790 Kernel/(14289:14291): PID: 2 - Bloqueado por: ARCHIVO_PRUEBA2
+[WARNING] 18:21:24:983 Kernel/(14289:14303): Se conecto una consola
+[INFO] 18:21:24:983 Kernel/(14289:14303): Se crea el proceso 3 en NEW
+[INFO] 18:21:24:983 Kernel/(14289:14292): PID: 3 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 18:21:24:984 Kernel/(14289:14292): Cola Ready HRRN: [3]
+[INFO] 18:21:24:984 Kernel/(14289:14291): PID: 3 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 18:21:24:985 Kernel/(14289:14291): PID: 3 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 18:21:24:985 Kernel/(14289:14291): PID: 3 - Bloqueado por: ARCHIVO_PRUEBA2
+[WARNING] 18:21:25:773 Kernel/(14289:14306): Se conecto una consola
+[INFO] 18:21:25:774 Kernel/(14289:14306): Se crea el proceso 4 en NEW
+[INFO] 18:21:25:774 Kernel/(14289:14292): PID: 4 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 18:21:25:775 Kernel/(14289:14292): Cola Ready HRRN: [4]
+[INFO] 18:21:25:775 Kernel/(14289:14291): PID: 4 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 18:21:25:777 Kernel/(14289:14291): PID: 4 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 18:21:25:777 Kernel/(14289:14291): PID: 4 - Bloqueado por: ARCHIVO_PRUEBA2
+[INFO] 18:21:27:590 Kernel/(14289:14297): PID: 1 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 18:21:27:592 Kernel/(14289:14297): Cola Ready HRRN: [1]
+[INFO] 18:21:27:593 Kernel/(14289:14291): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 18:21:27:596 Kernel/(14289:14291): PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 18:21:27:597 Kernel/(14289:14291): PID: 1 - Bloqueado por: ARCHIVO_PRUEBA2
+[INFO] 18:21:27:603 Kernel/(14289:14293): PID: 1 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 18:21:27:604 Kernel/(14289:14293): Cola Ready HRRN: [1]
+[INFO] 18:21:27:605 Kernel/(14289:14291): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 18:21:27:611 Kernel/(14289:14291): PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 18:21:27:611 Kernel/(14289:14291): PID: 1 - Bloqueado por: ARCHIVO_PRUEBA2
+[INFO] 18:21:42:619 Kernel/(14289:14293): PID: 1 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 18:21:42:619 Kernel/(14289:14293): Cola Ready HRRN: [1]
+[INFO] 18:21:42:619 Kernel/(14289:14291): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 18:21:42:627 Kernel/(14289:14291): PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 18:21:42:627 Kernel/(14289:14291): PID: 1 - Bloqueado por: ARCHIVO_PRUEBA2
+[INFO] 18:21:57:636 Kernel/(14289:14293): PID: 1 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 18:21:57:636 Kernel/(14289:14293): Cola Ready HRRN: [1]
+[INFO] 18:21:57:637 Kernel/(14289:14291): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 18:21:57:639 Kernel/(14289:14291): PID: 2 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 18:21:57:640 Kernel/(14289:14291): Cola Ready HRRN: [2]
+[INFO] 18:21:57:642 Kernel/(14289:14291): PID: 1 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 18:21:57:643 Kernel/(14289:14291): Finaliza el proceso 1 - Motivo: SUCCESS
+[INFO] 18:21:57:644 Kernel/(14289:14291): PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 18:21:57:645 Kernel/(14289:14291): PID: 2 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 18:21:57:645 Kernel/(14289:14291): PID: 2 - Bloqueado por: IO
+[INFO] 18:21:57:649 Kernel/(14289:14291): PID: 2 - Ejecuta IO: 5
+[INFO] 18:22:02:652 Kernel/(14289:14307): PID: 2 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 18:22:02:653 Kernel/(14289:14307): Cola Ready HRRN: [2]
+[INFO] 18:22:02:653 Kernel/(14289:14291): PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 18:22:02:657 Kernel/(14289:14291): PID: 2 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 18:22:02:657 Kernel/(14289:14291): PID: 2 - Bloqueado por: ARCHIVO_PRUEBA2
+[INFO] 18:22:02:662 Kernel/(14289:14293): PID: 2 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 18:22:02:662 Kernel/(14289:14293): Cola Ready HRRN: [2]
+[INFO] 18:22:02:663 Kernel/(14289:14291): PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 18:22:02:670 Kernel/(14289:14291): PID: 2 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 18:22:02:671 Kernel/(14289:14291): PID: 2 - Bloqueado por: ARCHIVO_PRUEBA2
+[INFO] 18:22:17:677 Kernel/(14289:14293): PID: 2 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 18:22:17:677 Kernel/(14289:14293): Cola Ready HRRN: [2]
+[INFO] 18:22:17:678 Kernel/(14289:14291): PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 18:22:17:699 Kernel/(14289:14291): PID: 2 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 18:22:17:699 Kernel/(14289:14291): PID: 2 - Bloqueado por: ARCHIVO_PRUEBA2
+[INFO] 18:22:32:709 Kernel/(14289:14293): PID: 2 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 18:22:32:709 Kernel/(14289:14293): Cola Ready HRRN: [2]
+[INFO] 18:22:32:709 Kernel/(14289:14291): PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 18:22:32:711 Kernel/(14289:14291): PID: 3 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 18:22:32:711 Kernel/(14289:14291): Cola Ready HRRN: [3]
+[INFO] 18:22:32:712 Kernel/(14289:14291): PID: 2 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 18:22:32:713 Kernel/(14289:14291): Finaliza el proceso 2 - Motivo: SUCCESS
+[INFO] 18:22:32:713 Kernel/(14289:14291): PID: 3 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 18:22:32:715 Kernel/(14289:14291): PID: 3 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 18:22:32:715 Kernel/(14289:14291): PID: 3 - Bloqueado por: IO
+[INFO] 18:22:32:715 Kernel/(14289:14291): PID: 3 - Ejecuta IO: 5
+[INFO] 18:22:37:716 Kernel/(14289:14310): PID: 3 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 18:22:37:718 Kernel/(14289:14310): Cola Ready HRRN: [3]
+[INFO] 18:22:37:720 Kernel/(14289:14291): PID: 3 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 18:22:37:724 Kernel/(14289:14291): PID: 3 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 18:22:37:724 Kernel/(14289:14291): PID: 3 - Bloqueado por: ARCHIVO_PRUEBA2
+[INFO] 18:22:37:728 Kernel/(14289:14293): PID: 3 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 18:22:37:728 Kernel/(14289:14293): Cola Ready HRRN: [3]
+[INFO] 18:22:37:729 Kernel/(14289:14291): PID: 3 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 18:22:37:736 Kernel/(14289:14291): PID: 3 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 18:22:37:736 Kernel/(14289:14291): PID: 3 - Bloqueado por: ARCHIVO_PRUEBA2
+[INFO] 18:22:52:742 Kernel/(14289:14293): PID: 3 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 18:22:52:742 Kernel/(14289:14293): Cola Ready HRRN: [3]
+[INFO] 18:22:52:743 Kernel/(14289:14291): PID: 3 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 18:22:52:748 Kernel/(14289:14291): PID: 3 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 18:22:52:749 Kernel/(14289:14291): PID: 3 - Bloqueado por: ARCHIVO_PRUEBA2
+[INFO] 18:23:07:759 Kernel/(14289:14293): PID: 3 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 18:23:07:759 Kernel/(14289:14293): Cola Ready HRRN: [3]
+[INFO] 18:23:07:760 Kernel/(14289:14291): PID: 3 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 18:23:07:761 Kernel/(14289:14291): PID: 4 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 18:23:07:762 Kernel/(14289:14291): Cola Ready HRRN: [4]
+[INFO] 18:23:07:764 Kernel/(14289:14291): PID: 3 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 18:23:07:764 Kernel/(14289:14291): Finaliza el proceso 3 - Motivo: SUCCESS
+[INFO] 18:23:07:765 Kernel/(14289:14291): PID: 4 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 18:23:07:767 Kernel/(14289:14291): PID: 4 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 18:23:07:767 Kernel/(14289:14291): PID: 4 - Bloqueado por: IO
+[INFO] 18:23:07:767 Kernel/(14289:14291): PID: 4 - Ejecuta IO: 5
+[INFO] 18:23:12:769 Kernel/(14289:14311): PID: 4 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 18:23:12:773 Kernel/(14289:14311): Cola Ready HRRN: [4]
+[INFO] 18:23:12:775 Kernel/(14289:14291): PID: 4 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 18:23:12:791 Kernel/(14289:14291): PID: 4 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 18:23:12:791 Kernel/(14289:14291): PID: 4 - Bloqueado por: ARCHIVO_PRUEBA2
+[INFO] 18:23:12:811 Kernel/(14289:14293): PID: 4 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 18:23:12:811 Kernel/(14289:14293): Cola Ready HRRN: [4]
+[INFO] 18:23:12:811 Kernel/(14289:14291): PID: 4 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 18:23:12:817 Kernel/(14289:14291): PID: 4 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 18:23:12:817 Kernel/(14289:14291): PID: 4 - Bloqueado por: ARCHIVO_PRUEBA2
+[INFO] 18:23:27:824 Kernel/(14289:14293): PID: 4 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 18:23:27:826 Kernel/(14289:14293): Cola Ready HRRN: [4]
+[INFO] 18:23:27:827 Kernel/(14289:14291): PID: 4 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 18:23:27:859 Kernel/(14289:14291): PID: 4 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 18:23:27:859 Kernel/(14289:14291): PID: 4 - Bloqueado por: ARCHIVO_PRUEBA2
+[INFO] 18:23:42:875 Kernel/(14289:14293): PID: 4 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 18:23:42:877 Kernel/(14289:14293): Cola Ready HRRN: [4]
+[INFO] 18:23:42:878 Kernel/(14289:14291): PID: 4 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 18:23:42:904 Kernel/(14289:14291): PID: 4 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 18:23:42:904 Kernel/(14289:14291): Finaliza el proceso 4 - Motivo: SUCCESS

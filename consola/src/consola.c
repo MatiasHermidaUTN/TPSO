@@ -33,10 +33,19 @@ int main(int argc, char** argv) {
 
 void esperar_fin_proceso(int socket_kernel, t_log* logger) {
 	t_msj_kernel_consola respuesta = recibir_fin_proceso(socket_kernel);
-	if(respuesta == FINALIZACION_OK) {
-		log_info(logger, "Proceso terminado");
-	}
-	else {
-		log_error(logger, "Hubo un error en el proceso"); //falta enviar el handshake en el Kernel cuando se termina el proceso
+
+	switch(respuesta) {
+		case SUCCESS:
+			log_info(logger, "Proceso terminado exitosamente");
+			break;
+		case OUT_OF_MEMORY:
+			log_info(logger, "Proceso terminado por falta de memoria");
+			break;
+		case SEG_FAULT:
+			log_info(logger, "Proceso terminado por Segmentation Fault");
+			break;
+		default:
+			log_error(logger, "Hubo un error en el proceso"); //falta enviar el handshake en el Kernel cuando se termina el proceso
+			exit(EXIT_FAILURE);
 	}
 }

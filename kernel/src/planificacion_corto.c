@@ -10,8 +10,8 @@ void planificar_corto() {
 		pcb = obtener_proximo_a_ejecutar();
 
 	    //Comienza ejecucion
-		char** sin_parametros = string_array_new(); //TODO: hardcodeado nashe
-		enviar_pcb(socket_cpu, pcb, PCB_A_EJECUTAR, sin_parametros); //NULL porque no se le pasa ningun parametro extra
+		char** sin_parametros = string_array_new(); //hardcodeado nashe
+		enviar_pcb(socket_cpu, pcb, PCB_A_EJECUTAR, sin_parametros);
 		string_array_destroy(sin_parametros);
 		liberar_pcb(pcb);
 
@@ -53,40 +53,42 @@ void planificar_corto() {
 				archivo_abierto->posicion_actual = 0;
 				list_add(pcb_recibido->archivos_abiertos,archivo_abierto);
 
-				if(archivo_a_abrir){//el archivo esta abierto
-					bloquear_pcb_por_archivo(pcb_recibido,archivo_a_abrir->nombre);
+				if(archivo_a_abrir) { //si el archivo esta abierto
+					bloquear_pcb_por_archivo(pcb_recibido, archivo_a_abrir->nombre);
 
-				}else{ //el archivo no esta abierto
-
-					enviar_msj_con_parametros(EXISTE_ARCHIVO,parametros,socket_fileSystem);
-
+				}
+				else { //si no esta abierto
+					enviar_msj_con_parametros(socket_fileSystem, EXISTE_ARCHIVO, parametros);
 					sem_wait(&sem_rta_filesystem);
 
 					t_recurso* archivo = malloc(sizeof(t_recurso));
 					archivo->nombre = strdup(parametros[0]);
 					archivo->cantidad_disponibles = 0;
 					archivo->cola_bloqueados = queue_create();
-					list_add(list_archivos,archivo);
+					list_add(list_archivos, archivo);
+
 					pthread_mutex_t mutex_archivo;
 					pthread_mutex_init(&mutex_archivo, NULL);
 					list_add(mutex_list_archivos, &mutex_archivo);
 
-					if(rta_filesystem_global == EL_ARCHIVO_NO_EXISTE){
-						enviar_msj_con_parametros(CREAR_ARCHIVO,parametros,socket_fileSystem);
+					if(rta_filesystem_global == EL_ARCHIVO_NO_EXISTE) {
+						enviar_msj_con_parametros(socket_fileSystem, CREAR_ARCHIVO, parametros);
 						sem_wait(&sem_rta_filesystem);
-						if(rta_filesystem_global == EL_ARCHIVO_FUE_CREADO){
-							log_info(logger,"Se abrio el archivo"); //en realidad nunca va a fallar. esto tendria que haberse hecho con un solo mensaje pero lo separaron en abrir y crear.
-						} else{
-							log_error(logger,"El filesystem no pudo crear el archivo");
+
+						if(rta_filesystem_global == EL_ARCHIVO_FUE_CREADO) {
+							log_info(logger, "Se abrio el archivo"); //en realidad nunca va a fallar. esto tendria que haberse hecho con un solo mensaje pero lo separaron en abrir y crear.
+						}
+						else {
+							log_error(logger, "El File System no pudo crear el archivo");
 							exit(EXIT_FAILURE);
 						}
 
-					} else {
-						log_info(logger, "Se abrio un archivo que ya existia en el filesystem");
 					}
-					proximo_pcb_a_ejecutar_forzado = pcb_recibido;
-					sem_post(&sem_cant_ready);
+					else {
+						log_info(logger, "Se abrio un archivo que ya existia en el File System");
+					}
 
+					mantener_pcb_en_exec(pcb_recibido);
 				}
 
 				string_array_destroy(parametros);
@@ -98,8 +100,9 @@ void planificar_corto() {
 				eliminar_archivo(pcb_recibido, parametros[0]);
 
 				t_recurso* archivo_a_cerrar = buscar_recurso(parametros[0], list_archivos);
-				archivo_a_cerrar->cantidad_disponibles ++;
-				if(queue_is_empty(archivo_a_cerrar->cola_bloqueados)){
+				archivo_a_cerrar->cantidad_disponibles++;
+
+				if(queue_is_empty(archivo_a_cerrar->cola_bloqueados)) {
 
 					int posicion = obtener_posicion_recurso(list_archivos, archivo_a_cerrar);
 					list_remove(mutex_list_archivos, posicion);
@@ -108,41 +111,41 @@ void planificar_corto() {
 					queue_destroy(archivo_a_cerrar->cola_bloqueados);
 					free(archivo_a_cerrar->nombre);
 					free(archivo_a_cerrar);
-
-				}else{
+				}
+				else {
 					t_pcb* pcb_a_desbloquear = queue_pop_con_mutex(archivo_a_cerrar->cola_bloqueados, list_get(mutex_list_archivos, obtener_posicion_recurso(list_archivos, archivo_a_cerrar)));
 					//t_pcb* pcb_a_desbloquear = queue_pop(archivo_a_cerrar->cola_bloqueados);
 					log_info(logger, "PID: %d - Estado Anterior: BLOCK - Estado Actual: READY", pcb_a_desbloquear->pid); //log obligatorio
 					ready_list_push(pcb_a_desbloquear);
 				}
-				proximo_pcb_a_ejecutar_forzado = pcb_recibido;
-				sem_post(&sem_cant_ready);
+
+				mantener_pcb_en_exec(pcb_recibido);
+
 				string_array_destroy(parametros);
 				break;
 
 			case F_SEEK_EJECUTADO:
 				parametros = recibir_parametros_de_instruccion();
 				pcb_recibido = recibir_pcb(socket_cpu);
-				t_archivo_abierto* archivo_a_modificar = bucsar_archivo_en_pcb(pcb_recibido, parametros[0]);
+				t_archivo_abierto* archivo_a_modificar = buscar_archivo_en_pcb(pcb_recibido, parametros[0]);
 				archivo_a_modificar->posicion_actual = atoi(parametros[1]);
 
 				string_array_destroy(parametros);
 
-
-				proximo_pcb_a_ejecutar_forzado = pcb_recibido;
-				sem_post(&sem_cant_ready); //Al no pasar por la funcion ready_list_push hay que hacerlo manualmente, vuelve a ejecutar sin pasar por ready
+				mantener_pcb_en_exec(pcb_recibido);
 				break;
 
 			case F_READ_EJECUTADO:
 				parametros = recibir_parametros_de_instruccion();
 				pcb_recibido = recibir_pcb(socket_cpu);
 
-				t_archivo_abierto* archivo_a_leer = bucsar_archivo_en_pcb(pcb_recibido, parametros[0]);
+				t_archivo_abierto* archivo_a_leer = buscar_archivo_en_pcb(pcb_recibido, parametros[0]);
 
 				string_array_push(&parametros,string_itoa(archivo_a_leer->posicion_actual));
 				string_array_push(&parametros, string_itoa(pcb_recibido->pid));
 				bloquear_pcb_por_archivo(pcb_recibido, parametros[0]);
-				enviar_msj_con_parametros(LEER_ARCHIVO,parametros, socket_fileSystem);
+				enviar_msj_con_parametros(socket_fileSystem, LEER_ARCHIVO,parametros);
+
 				string_array_destroy(parametros);
 				break;
 
@@ -150,12 +153,13 @@ void planificar_corto() {
 				parametros = recibir_parametros_de_instruccion();
 				pcb_recibido = recibir_pcb(socket_cpu);
 
-				t_archivo_abierto* archivo_a_escribir = bucsar_archivo_en_pcb(pcb_recibido, parametros[0]);
+				t_archivo_abierto* archivo_a_escribir = buscar_archivo_en_pcb(pcb_recibido, parametros[0]);
 
-				string_array_push(&parametros,string_itoa(archivo_a_escribir->posicion_actual));
+				string_array_push(&parametros, string_itoa(archivo_a_escribir->posicion_actual));
 				string_array_push(&parametros, string_itoa(pcb_recibido->pid));
 				bloquear_pcb_por_archivo(pcb_recibido, parametros[0]);
-				enviar_msj_con_parametros(ESCRIBIR_ARCHIVO,parametros, socket_fileSystem);
+				enviar_msj_con_parametros(socket_fileSystem, ESCRIBIR_ARCHIVO, parametros);
+
 				string_array_destroy(parametros);
 				break;
 
@@ -166,7 +170,8 @@ void planificar_corto() {
 
 				string_array_push(&parametros, pid_a_enviar);
 				bloquear_pcb_por_archivo(pcb_recibido, parametros[0]);
-				enviar_msj_con_parametros(TRUNCAR_ARCHIVO , parametros, socket_fileSystem);
+				enviar_msj_con_parametros(socket_fileSystem, TRUNCAR_ARCHIVO, parametros);
+
 				string_array_destroy(parametros);
 				break;
 
@@ -178,6 +183,7 @@ void planificar_corto() {
 
 				pcb_recibido = recibir_pcb(socket_cpu);
 				wait_recurso(pcb_recibido, nombre_recurso_wait);
+
 				free(nombre_recurso_wait);
 				break;
 
@@ -196,11 +202,49 @@ void planificar_corto() {
 				parametros = recibir_parametros_de_instruccion();
 				pcb_recibido = recibir_pcb(socket_cpu);
 
-				//TODO: AVISAR A MEMORIA
-				string_array_destroy(parametros);
+				//TODO: descomentar y testear cuando esté memoria lista
 
-				proximo_pcb_a_ejecutar_forzado = pcb_recibido;
-				sem_post(&sem_cant_ready); //Al no pasar por la funcion ready_list_push hay que hacerlo manualmente, vuelve a ejecutar sin pasar por ready
+				/*
+				enviar_msj_con_parametros(socket_memoria, CREAR_SEGMENTO, parametros); //Solo importa enviar parametros[1], que es el tamanio
+
+				t_msj_kernel_memoria mensaje_recibido = recibir_msj(socket_memoria);
+
+				switch(mensaje_recibido) {
+					case SEGMENTO_CREADO:
+						char** parametros_recibidos_de_memoria = recibir_parametros_de_mensaje(socket_memoria);
+
+						t_segmento* segmento_a_crear;
+						segmento_a_crear->id = atoi(parametros[0]);
+						segmento_a_crear->dir_base = atoi(parametros_recibidos_de_memoria[0]);
+						segmento_a_crear->tamanio = atoi(parametros[1]);
+
+						list_add(pcb_recibido->tabla_segmentos, segmento_a_crear);
+
+						mantener_pcb_en_exec(pcb_recibido);
+						break;
+
+					case NO_HAY_ESPACIO_DISPONIBLE:
+						exit_proceso(pcb_recibido, OUT_OF_MEMORY);
+						break;
+
+					case HAY_ESPACIO_DISPONIBLE:
+
+						//wait(FS termine de hacer F_READ o F_WRITE);
+						//enviar_msj(
+						//solicitar nuevamente CREaR_SEGMENTO
+						//esto último capaz se puede hacer con una función que haga todo este switch y en este case se llame recursivamente
+
+						//mantener_pcb_en_exec(pcb_recibido);
+
+						break;
+
+					default:
+						log_error(logger, "Error en el recibo de mensaje de memoria");
+						exit(EXIT_FAILURE);
+				}
+				*/
+
+				string_array_destroy(parametros);
 
 				break;
 
@@ -208,11 +252,17 @@ void planificar_corto() {
 				parametros = recibir_parametros_de_instruccion();
 				pcb_recibido = recibir_pcb(socket_cpu);
 
-				//TODO: AVISAR A MEMORIA
+				//TODO: descomentar y testear cuando esté memoria lista
+				/*
+				enviar_msj_con_parametros(socket_memoria, ELIMINAR_SEGMENTO, parametros); //Es un solo parametro, que es el id
+
+				eliminar_segmento(pcb_recibido, atoi(parametros[0]));
+				//TODO: fijarse si hace falta que reciba realmente algo de memoria
+				*/
+
 				string_array_destroy(parametros);
 
-				proximo_pcb_a_ejecutar_forzado = pcb_recibido;
-				sem_post(&sem_cant_ready); //Al no pasar por la funcion ready_list_push hay que hacerlo manualmente, vuelve a ejecutar sin pasar por ready
+				mantener_pcb_en_exec(pcb_recibido);
 
 				break;
 
@@ -227,7 +277,7 @@ void planificar_corto() {
 
 			case EXIT_EJECUTADO:
 				pcb_recibido = recibir_pcb(socket_cpu);
-				exit_proceso(pcb_recibido); //Aca hace el sem_post(&sem_multiprogramacion)
+				exit_proceso(pcb_recibido, SUCCESS); //Aca hace el sem_post(&sem_multiprogramacion)
 				break;
 
 			default:
@@ -235,6 +285,11 @@ void planificar_corto() {
 				exit(EXIT_FAILURE);
 		}
 	}
+}
+
+void mantener_pcb_en_exec(t_pcb* pcb_recibido) {
+	proximo_pcb_a_ejecutar_forzado = pcb_recibido;
+	sem_post(&sem_cant_ready); //Al no pasar por la funcion ready_list_push hay que hacerlo manualmente, vuelve a ejecutar sin pasar por ready
 }
 
 void ready_list_push(t_pcb* pcb_recibido) {
@@ -312,13 +367,12 @@ void wait_recurso(t_pcb* pcb, char* nombre_recurso) {
 			log_info(logger, "PID: %d - Bloqueado por: %s", pcb->pid, nombre_recurso); //log obligatorio
 		}
 		else { //el recurso esta disponible, tiene que seguir ejecutando el mismo proceso
-			proximo_pcb_a_ejecutar_forzado = pcb;
-			sem_post(&sem_cant_ready); //Al no pasar por la funcion ready_list_push hay que hacerlo manualmente, vuelve a ejecutar sin pasar por ready
+			mantener_pcb_en_exec(pcb);
 		}
 	}
 	else {
 		log_error(logger, "El recurso %s no existe", nombre_recurso);
-		exit_proceso(pcb); //no existe el recurso
+		exit_proceso(pcb, SUCCESS); //no existe el recurso
 	}
 }
 
@@ -346,25 +400,38 @@ void signal_recurso(t_pcb* pcb, char* nombre_recurso) {
 			ready_list_push(pcb_a_desbloquear); //hace el sem_post(&sem_cant_ready)
 		}
 
-		proximo_pcb_a_ejecutar_forzado = pcb;
-		sem_post(&sem_cant_ready); //Al no pasar por la funcion ready_list_push hay que hacerlo manualmente, vuelve a ejecutar sin pasar por ready
+		mantener_pcb_en_exec(pcb);
 	}
 	else {
 		log_error(logger, "El recurso %s no existe", nombre_recurso);
-		exit_proceso(pcb); //no existe el recurso
+		exit_proceso(pcb, SUCCESS); //no existe el recurso
 	}
 }
 
-void exit_proceso(t_pcb* pcb) {
-	enviar_fin_proceso(pcb->socket_consola, FINALIZACION_OK);
+void exit_proceso(t_pcb* pcb, t_msj_kernel_consola mensaje) {
+	enviar_fin_proceso(pcb->socket_consola, mensaje);
 
 	log_info(logger, "PID: %d - Estado Anterior: EXEC - Estado Actual: EXIT", pcb->pid); //log obligatorio
-	log_info(logger, "Finaliza el proceso %d - Motivo: SUCCESS", pcb->pid); //log obligatorio
+	log_info(logger, "Finaliza el proceso %d - Motivo: %s", pcb->pid, mensaje_de_finalizacion_a_string(mensaje)); //log obligatorio
 
 	sem_post(&sem_multiprogramacion);
 
 	//TODO: avisarle a memoria para liberar la estructura
 	liberar_pcb(pcb);
+}
+
+char* mensaje_de_finalizacion_a_string(t_msj_kernel_consola mensaje) {
+	switch(mensaje) {
+		case SUCCESS:
+			return "SUCCESS";
+		case OUT_OF_MEMORY:
+			return "OUT_OF_MEMORY";
+		case SEG_FAULT:
+			return "SEG_FAULT";
+		default:
+			log_error(logger, "Error en el envio de mensaje de finalizacion");
+			exit(EXIT_FAILURE);
+	}
 }
 
 void list_remove_pcb(t_list *lista, t_pcb *pcb) {
@@ -378,12 +445,12 @@ void list_remove_pcb(t_list *lista, t_pcb *pcb) {
 }
 
 void eliminar_archivo(t_pcb *pcb, char* nombre) {
-	t_archivo_abierto* elemento;
+	t_archivo_abierto* archivo_a_eliminar;
 	for(int i = 0; i < list_size(pcb->archivos_abiertos); i++) {
-		elemento = list_get(pcb->archivos_abiertos, i);
-		if(!strcmp(elemento->nombre_archivo, nombre)) {
-			elemento = list_remove(pcb->archivos_abiertos, i);
-			destruir_archivo_abierto(elemento);
+		archivo_a_eliminar = list_get(pcb->archivos_abiertos, i);
+		if(!strcmp(archivo_a_eliminar->nombre_archivo, nombre)) {
+			archivo_a_eliminar = list_remove(pcb->archivos_abiertos, i);
+			destruir_archivo_abierto(archivo_a_eliminar);
 		}
 	}
 }
@@ -410,13 +477,13 @@ t_pcb* list_get_max_R(t_list* lista) {
 	return pcb_max;
 }
 
-t_archivo_abierto* bucsar_archivo_en_pcb(t_pcb* pcb, char* nombre){
+t_archivo_abierto* buscar_archivo_en_pcb(t_pcb* pcb, char* nombre) {
 	t_archivo_abierto* elemento;
 	for(int i = 0; i < list_size(pcb->archivos_abiertos); i++) {
+		elemento = list_get(pcb->archivos_abiertos, i);
+		if(!strcmp(elemento->nombre_archivo, nombre)) {
 			elemento = list_get(pcb->archivos_abiertos, i);
-			if(!strcmp(elemento->nombre_archivo, nombre)){
-				elemento = list_get(pcb->archivos_abiertos, i);
-			}
+		}
 	}
 	return elemento;
 }
@@ -424,21 +491,33 @@ t_archivo_abierto* bucsar_archivo_en_pcb(t_pcb* pcb, char* nombre){
 int obtener_posicion_recurso(t_list* lista, t_recurso* recurso) {
 	t_recurso* elemento;
 	for(int i = 0; i < list_size(lista); i++) {
-			elemento = list_get(lista, i);
-			if(!strcmp(recurso->nombre, elemento->nombre)){
-				return i;
-			}
+		elemento = list_get(lista, i);
+		if(!strcmp(recurso->nombre, elemento->nombre)){
+			return i;
+		}
 	}
 	return -1;
 }
 
-void bloquear_pcb_por_archivo(t_pcb* pcb, char* nombre_archivo){
+void bloquear_pcb_por_archivo(t_pcb* pcb, char* nombre_archivo) {
 	pcb->tiempo_real_ejecucion = time(NULL) - pcb->tiempo_inicial_ejecucion;
+
 	t_recurso* archivo = buscar_recurso(nombre_archivo, list_archivos);
 	int posicion = obtener_posicion_recurso(list_archivos, archivo);
+
 	queue_push_con_mutex(archivo->cola_bloqueados, pcb, list_get(mutex_list_archivos, posicion));
 	archivo->cantidad_disponibles--;
+
 	log_info(logger, "PID: %d - Estado Anterior: EXEC - Estado Actual: BLOCK", pcb->pid); //log obligatorio
+	log_info(logger, "PID: %d - Bloqueado por: %s", pcb->pid, nombre_archivo); //log obligatorio
+}
 
-
+void eliminar_segmento(t_pcb* pcb, int id) {
+	t_segmento* segmento_a_eliminar;
+	for(int i = 0; i < list_size(pcb->tabla_segmentos); i++) {
+		segmento_a_eliminar = list_get(pcb->tabla_segmentos, i);
+		if(segmento_a_eliminar->id == id) {
+			list_remove(pcb->tabla_segmentos, i);
+		}
+	}
 }

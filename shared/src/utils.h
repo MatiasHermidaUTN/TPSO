@@ -59,7 +59,9 @@ typedef enum {
 
 typedef enum {
 	LIST_INSTRUCCIONES,
-	FINALIZACION_OK,
+	SUCCESS,
+	OUT_OF_MEMORY,
+	SEG_FAULT,
 } t_msj_kernel_consola;
 
 typedef enum {
@@ -79,6 +81,7 @@ typedef enum {
 	DELETE_SEGMENT,
 	YIELD,
 	EXIT,
+
 	INSTRUCCION_ERRONEA,
 } t_enum_instruccion;
 
@@ -94,8 +97,16 @@ typedef enum {
 	EL_ARCHIVO_FUE_TRUNCADO,
 	EL_ARCHIVO_FUE_LEIDO,
 	EL_ARCHIVO_FUE_ESCRITO,
-}t_msj_kernel_fileSystem;
+} t_msj_kernel_fileSystem;
 
+typedef enum {
+	CREAR_SEGMENTO,
+	ELIMINAR_SEGMENTO,
+
+	SEGMENTO_CREADO,
+	NO_HAY_ESPACIO_DISPONIBLE,
+	HAY_ESPACIO_DISPONIBLE,
+} t_msj_kernel_memoria;
 
 typedef struct {
 	int size;
@@ -134,16 +145,16 @@ typedef struct {
 	t_list* parametros;
 } t_instruccion;
 
-typedef struct archivo_abierto{
+typedef struct archivo_abierto {
 	char* nombre_archivo;
 	int posicion_actual;
-}t_archivo_abierto;
+} t_archivo_abierto;
 
-typedef struct segmento{
+typedef struct segmento {
 	int id;
 	int dir_base;
 	int tamanio;
-}t_segmento;
+} t_segmento;
 
 //////////////////////////
 // Utils.c del servidor //
@@ -221,9 +232,14 @@ void memcpy_archivos_abiertos_deserializar(t_pcb* pcb, void* stream, int* despla
 
 void print_l_instrucciones(t_list* instrucciones);
 
-void enviar_msj(int msj,int socket);
+//////////////
+// Mensajes //
+//////////////
+
+void enviar_msj(int socket, int msj);
 int recibir_msj(int socket);
-void enviar_msj_con_parametros(t_msj_kernel_fileSystem op_code, char** parametros, int socket);
-void destruir_archivo_abierto(t_archivo_abierto* arch);
+void enviar_msj_con_parametros(int socket, int op_code, char** parametros);
+void destruir_archivo_abierto(t_archivo_abierto* archivo);
 char** recibir_parametros_de_mensaje(int socket);
+
 #endif /* UTILS_H_ */

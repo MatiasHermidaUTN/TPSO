@@ -337,16 +337,15 @@ size_t tamanio_payload_pcb(t_pcb* pcb) {
 	size += sizeof(pcb->tiempo_real_ejecucion) + sizeof(pcb->tiempo_inicial_ejecucion);
 
 	size += sizeof(int); // cantidad de archivos abiertos
-	for(int i=0; i< list_size(pcb->archivos_abiertos);i++){
+	for(int i = 0; i < list_size(pcb->archivos_abiertos); i++) {
 		t_archivo_abierto* archivo_abierto =  list_get(pcb->archivos_abiertos,i);
-		size += sizeof(int) + sizeof(int) + strlen(archivo_abierto->nombre_archivo) + 1; //posicion actual, tamanio nombre y nombre del archivo
+		size += sizeof(int) + sizeof(int) + strlen(archivo_abierto->nombre_archivo) + 1; //posicion actual + tamanio nombre + nombre del archivo
 	}
 
-	size+= sizeof(int); //cantidad de segmentos
-	size+= list_size(pcb->tabla_segmentos) * sizeof(int) * 3; //id, dir_base, tamanio
+	size += sizeof(int); //cantidad de segmentos
+	size += list_size(pcb->tabla_segmentos) * sizeof(int) * 3; //*3 por id + dir_base + tamanio
 
-	return size; // + sizeof(tabla_segmentos);
-	//TODO: sizeof de arriba
+	return size;
 }
 
 size_t tamanio_instrucciones(t_list* instrucciones) {
@@ -433,33 +432,38 @@ void memcpy_registros_serializar(void* stream_pcb, t_registros_cpu registros_cpu
 }
 
 void memcpy_tabla_segmentos_serializar(void* stream, t_list* tabla_segmentos, int* desplazamiento) {
-	int cant_seg = list_size(tabla_segmentos);
-	memcpy(stream + *desplazamiento, &cant_seg,sizeof(int));
+	int cantidad_segmentos = list_size(tabla_segmentos);
+	memcpy(stream + *desplazamiento, &cantidad_segmentos, sizeof(int));
 	*desplazamiento += sizeof(int);
 
-	for(int i = 0; i < cant_seg; i++) {
-		t_segmento* segmento = list_get(tabla_segmentos,i);
-		memcpy(stream + *desplazamiento, &(segmento->id),sizeof(int));
+	for(int i = 0; i < cantidad_segmentos; i++) {
+		t_segmento* segmento = list_get(tabla_segmentos, i);
+		memcpy(stream + *desplazamiento, &(segmento->id), sizeof(int));
 		*desplazamiento += sizeof(int);
-		memcpy(stream + *desplazamiento, &(segmento->dir_base),sizeof(int));
+
+		memcpy(stream + *desplazamiento, &(segmento->dir_base), sizeof(int));
 		*desplazamiento += sizeof(int);
-		memcpy(stream + *desplazamiento, &(segmento->tamanio),sizeof(int));
+
+		memcpy(stream + *desplazamiento, &(segmento->tamanio), sizeof(int));
 		*desplazamiento += sizeof(int);
 	}
 }
 
 void memcpy_archivos_abiertos_serializar(void* stream, t_list* archivos_abiertos, int* desplazamiento) {
 	int tamanio_lista = list_size(archivos_abiertos);
-	memcpy(stream + *desplazamiento,&tamanio_lista,sizeof(int));
+	memcpy(stream + *desplazamiento, &tamanio_lista, sizeof(int));
 	*desplazamiento += sizeof(int);
-	for(int i = 0; i < list_size(archivos_abiertos); i++) {
-		t_archivo_abierto* archivo_abierto = list_get(archivos_abiertos,i);
-		memcpy(stream + *desplazamiento,&(archivo_abierto->posicion_actual),sizeof(int));
+
+	for(int i = 0; i < tamanio_lista; i++) {
+		t_archivo_abierto* archivo_abierto = list_get(archivos_abiertos, i);
+		memcpy(stream + *desplazamiento, &(archivo_abierto->posicion_actual), sizeof(int));
 		*desplazamiento += sizeof(int);
+
 		int tamanio_nombre = strlen(archivo_abierto->nombre_archivo) + 1;
-		memcpy(stream + *desplazamiento, &tamanio_nombre ,sizeof(int));
+		memcpy(stream + *desplazamiento, &tamanio_nombre, sizeof(int));
 		*desplazamiento += sizeof(int);
-		memcpy(stream + *desplazamiento,archivo_abierto->nombre_archivo,tamanio_nombre);
+
+		memcpy(stream + *desplazamiento, archivo_abierto->nombre_archivo, tamanio_nombre);
 		*desplazamiento += tamanio_nombre;
 	}
 }
@@ -467,13 +471,13 @@ void memcpy_archivos_abiertos_serializar(void* stream, t_list* archivos_abiertos
 t_pcb* recibir_pcb(int socket_kernel) {
 	size_t size_payload;
     if (recv(socket_kernel, &size_payload, sizeof(size_t), 0) != sizeof(size_t)) {
-        return false; //TODO: false? o exit(algo) ?
+        exit(EXIT_FAILURE);
     }
 
 	void* stream_pcb_a_recibir = malloc(size_payload);
     if (recv(socket_kernel, stream_pcb_a_recibir, size_payload, 0) != size_payload) {
         free(stream_pcb_a_recibir);
-        return false;
+        exit(EXIT_FAILURE);
     }
 
     t_pcb* pcb = deserializar_pcb(stream_pcb_a_recibir);
@@ -494,8 +498,6 @@ t_pcb* deserializar_pcb(void* stream) {
 	desplazamiento += sizeof(int);
 
 	pcb->instrucciones = deserializar_instrucciones(stream, tamanio_instrucciones_en_bytes + desplazamiento, &desplazamiento);
-
-	//print_l_instrucciones(pcb->instrucciones);
 
 	memcpy(&(pcb->pc), stream + desplazamiento, sizeof(pcb->pc));
 	desplazamiento += sizeof(pcb->pc);
@@ -552,20 +554,19 @@ t_list* deserializar_instrucciones(void* a_recibir, size_t size_payload, int* de
 
     dictionary_destroy_and_destroy_elements(diccionario_instrucciones, (void*)destruir_diccionario);
 
-
     return instrucciones;
 }
 
 void deserializar_parametros(void* a_recibir, int* desplazamiento, t_instruccion* instruccion, t_dictionary* diccionario_instrucciones) {
-	int* cantidadDeParametrosEsperados;
+	int* cantidad_de_parametros_esperados;
 	if(!dictionary_has_key(diccionario_instrucciones, instruccion->nombre)) {
 		//log_error(logger, "No existe instruccion: %s , en el diccionario", instruccion->nombre);
 		printf("No existe instruccion: %s , en el diccionario", instruccion->nombre);
 		exit(-1);
 	}
-	cantidadDeParametrosEsperados = (int*)dictionary_get(diccionario_instrucciones, instruccion->nombre);
+	cantidad_de_parametros_esperados = (int*)dictionary_get(diccionario_instrucciones, instruccion->nombre);
 
-	for(int j = 0; j < *cantidadDeParametrosEsperados; j++) {
+	for(int j = 0; j < *cantidad_de_parametros_esperados; j++) {
 		char* parametro;
 		size_t largo_parametro;
 
@@ -619,40 +620,48 @@ void memcpy_registros_deserializar(t_registros_cpu* registros_cpu, void* stream_
 }
 
 void memcpy_tabla_segmentos_deserializar(t_pcb* pcb, void* stream, int* desplazamiento) {
-	int cant_seg;
-	memcpy(&cant_seg,stream + *desplazamiento,sizeof(int));
+	int cantidad_segmentos;
+	memcpy(&cantidad_segmentos, stream + *desplazamiento, sizeof(int));
 	*desplazamiento += sizeof(int);
+
 	pcb->tabla_segmentos = list_create();
 
-	for(int i = 0; i < cant_seg; i++) {
+	for(int i = 0; i < cantidad_segmentos; i++) {
 		t_segmento* segmento = malloc(sizeof(t_segmento));
-		memcpy(&(segmento->id),stream + *desplazamiento, sizeof(int));
+		memcpy(&(segmento->id), stream + *desplazamiento, sizeof(int));
 		*desplazamiento += sizeof(int);
-		memcpy(&(segmento->dir_base),stream + *desplazamiento, sizeof(int));
+
+		memcpy(&(segmento->dir_base), stream + *desplazamiento, sizeof(int));
 		*desplazamiento += sizeof(int);
-		memcpy(&(segmento->tamanio),stream + *desplazamiento, sizeof(int));
+
+		memcpy(&(segmento->tamanio), stream + *desplazamiento, sizeof(int));
 		*desplazamiento += sizeof(int);
-		list_add(pcb->tabla_segmentos,segmento);
+
+		list_add(pcb->tabla_segmentos, segmento);
 	}
 }
 
 void memcpy_archivos_abiertos_deserializar(t_pcb* pcb, void* stream, int* desplazamiento) {
-	int cant_archivos_abiertos;
+	int cantidad_archivos_abiertos;
 	pcb->archivos_abiertos = list_create();
-	memcpy(&cant_archivos_abiertos,stream + *desplazamiento,sizeof(int));
+
+	memcpy(&cantidad_archivos_abiertos, stream + *desplazamiento, sizeof(int));
 	*desplazamiento += sizeof(int);
 
-	for(int i = 0; i < cant_archivos_abiertos; i++) {
+	for(int i = 0; i < cantidad_archivos_abiertos; i++) {
 		t_archivo_abierto* archivo_abierto = malloc(sizeof(t_archivo_abierto));
-		memcpy(&(archivo_abierto->posicion_actual),stream+*desplazamiento, sizeof(int));
+		memcpy(&(archivo_abierto->posicion_actual), stream + *desplazamiento, sizeof(int));
 		*desplazamiento += sizeof(int);
+
 		int tamanio_nombre;
-		memcpy(&tamanio_nombre,stream+*desplazamiento,sizeof(int));
+		memcpy(&tamanio_nombre, stream + *desplazamiento, sizeof(int));
 		*desplazamiento += sizeof(int);
+
 		archivo_abierto->nombre_archivo = malloc(tamanio_nombre);
-		memcpy(archivo_abierto->nombre_archivo,stream+*desplazamiento,tamanio_nombre);
+		memcpy(archivo_abierto->nombre_archivo, stream + *desplazamiento, tamanio_nombre);
 		*desplazamiento += tamanio_nombre;
-		list_add(pcb->archivos_abiertos,archivo_abierto);
+
+		list_add(pcb->archivos_abiertos, archivo_abierto);
 	}
 }
 
@@ -668,25 +677,22 @@ void print_l_instrucciones(t_list* instrucciones) {
     }
 }
 
-void enviar_msj(int msj,int socket){
+void enviar_msj(int socket, int msj) {
 	send(socket, &msj, sizeof(int), 0);
 }
 
-int recibir_msj(int socket){
+int recibir_msj(int socket) {
 	int msj;
 	recv(socket, &msj, sizeof(int), MSG_WAITALL);
 	return msj;
 }
 
-void enviar_msj_con_parametros(t_msj_kernel_fileSystem op_code, char** parametros, int socket){
-	int size_total;
-	size_total = sizeof(t_msj_kernel_fileSystem) + sizeof(int); //op_code y size_payload
+void enviar_msj_con_parametros(int socket, int op_code, char** parametros) {
 	int size_payload = 0;
+	int size_total = sizeof(op_code) + sizeof(size_payload);
 
-	if(string_array_size(parametros)) { //Si hay algun parametro
-		for(int i = 0; i < string_array_size(parametros); i++) {
-			size_payload += sizeof(int) + strlen(parametros[i]) + 1; //Tamanio de parametro + longitud de parametro
-		}
+	for(int i = 0; i < string_array_size(parametros); i++) {
+		size_payload += sizeof(int) + strlen(parametros[i]) + 1; //Tamanio de parametro + longitud de parametro
 	}
 	size_total += size_payload;
 
@@ -699,18 +705,14 @@ void enviar_msj_con_parametros(t_msj_kernel_fileSystem op_code, char** parametro
 	memcpy(stream + desplazamiento, &size_payload, sizeof(size_payload));
 	desplazamiento += sizeof(size_payload);
 
-	int cantidad_de_parametros = string_array_size(parametros);
-	if(cantidad_de_parametros) { //Si hay algun parametro
+	int size_parametro_de_instruccion;
+	for(int i = 0; i < string_array_size(parametros); i++) {
+		size_parametro_de_instruccion = strlen(parametros[i]) + 1;
+		memcpy(stream + desplazamiento, &(size_parametro_de_instruccion), sizeof(size_parametro_de_instruccion));
+		desplazamiento += sizeof(size_parametro_de_instruccion);
 
-		int size_parametro_de_instruccion;
-		for(int i = 0; i < cantidad_de_parametros; i++) {
-			size_parametro_de_instruccion = strlen(parametros[i]) + 1;
-			memcpy(stream + desplazamiento, &(size_parametro_de_instruccion), sizeof(size_parametro_de_instruccion));
-			desplazamiento += sizeof(size_parametro_de_instruccion);
-
-			memcpy(stream + desplazamiento, parametros[i], size_parametro_de_instruccion);
-			desplazamiento += size_parametro_de_instruccion;
-		}
+		memcpy(stream + desplazamiento, parametros[i], size_parametro_de_instruccion);
+		desplazamiento += size_parametro_de_instruccion;
 	}
 
 	send(socket, stream, size_total, 0);
@@ -718,28 +720,34 @@ void enviar_msj_con_parametros(t_msj_kernel_fileSystem op_code, char** parametro
 	free(stream);
 }
 
-void destruir_archivo_abierto(t_archivo_abierto* arch){
-	free(arch->nombre_archivo);
-	free(arch);
-}
-
 char** recibir_parametros_de_mensaje(int socket) {
-	int tamanio_payload = 0;
 	int desplazamiento = 0;
+
+	int tamanio_payload = 0;
 	recv(socket, &tamanio_payload, sizeof(int), MSG_WAITALL);
+
 	void* stream = malloc(tamanio_payload);
 	recv(socket, stream, tamanio_payload, MSG_WAITALL);
-	char ** parametros = string_array_new();
-	while(desplazamiento < tamanio_payload){
-		int tamanio_param;
-		memcpy(&tamanio_param, stream + desplazamiento, sizeof(int));
 
+	char ** parametros = string_array_new();
+
+	while(desplazamiento < tamanio_payload) {
+		int tamanio_parametros;
+		memcpy(&tamanio_parametros, stream + desplazamiento, sizeof(int));
 		desplazamiento += sizeof(int);
-		char* parametro = malloc(tamanio_param);
-		memcpy(parametro, stream + desplazamiento, tamanio_param);
-		desplazamiento += tamanio_param;
+
+		char* parametro = malloc(tamanio_parametros);
+		memcpy(parametro, stream + desplazamiento, tamanio_parametros);
+		desplazamiento += tamanio_parametros;
+
 		string_array_push(&parametros, parametro);
 	}
+
 	free(stream);
 	return parametros;
+}
+
+void destruir_archivo_abierto(t_archivo_abierto* archivo){
+	free(archivo->nombre_archivo);
+	free(archivo);
 }

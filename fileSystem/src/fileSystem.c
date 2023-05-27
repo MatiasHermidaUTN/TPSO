@@ -53,7 +53,7 @@ int main(int argc, char** argv) {
 		super_bloque_info.block_count = config_get_int_value(superbloque, "BLOCK_COUNT");
 		log_info(logger, "SuperBloque leido");
 	} else {
-		log_error(logger, "SuperBloque no esiste");
+		log_error(logger, "SuperBloque no existe");
 		//destroy everything in reality
 		return EXIT_FAILURE;
 	}
@@ -173,10 +173,10 @@ int manejar_mensaje(){
 			nombre_archivo = args->parametros[0];
 			printf("abrir nombre_archivo: %s\n",nombre_archivo);
 			if (existe_archivo(nombre_archivo)) {	//existe FCB?
-				enviar_msj(EL_ARCHIVO_YA_EXISTE,kernel);
+				enviar_msj(kernel, EL_ARCHIVO_YA_EXISTE);
 				printf("abierto %s\n",nombre_archivo);
 			} else {
-				enviar_msj(EL_ARCHIVO_NO_EXISTE,kernel);
+				enviar_msj(kernel, EL_ARCHIVO_NO_EXISTE);
 				printf("no existe %s\n",nombre_archivo);
 			}
 			printf("\n");
@@ -186,7 +186,7 @@ int manejar_mensaje(){
 			nombre_archivo = args->parametros[0];
 			printf("crear nombre_archivo: %s \n", nombre_archivo);
 			crear_archivo(nombre_archivo);	//crear FCB y poner tamaño 0 y sin bloques asociados.
-			enviar_msj(EL_ARCHIVO_FUE_CREADO,kernel);
+			enviar_msj(kernel, EL_ARCHIVO_FUE_CREADO);
 			printf("archivo creado: %s\n",nombre_archivo);
 			printf("unos dsp crear: %d\n", cant_unos_en_bitmap());
 			printf("\n");
@@ -204,7 +204,7 @@ int manejar_mensaje(){
 			char ** parametros_a_enviar = string_array_new();
 			string_array_push(&parametros_a_enviar, nombre_archivo);
 			string_array_push(&parametros_a_enviar, pid_truncar);
-			enviar_msj_con_parametros(EL_ARCHIVO_FUE_TRUNCADO, parametros_a_enviar, kernel);
+			enviar_msj_con_parametros(kernel, EL_ARCHIVO_FUE_TRUNCADO, parametros_a_enviar);
 			free(parametros_a_enviar);
 			printf("\n");
 			break;
@@ -228,7 +228,7 @@ int manejar_mensaje(){
 			char** parametros_a_enviar_leer = string_array_new();
 			string_array_push(&parametros_a_enviar_leer, args->parametros[0]); //nombre del archivo
 			string_array_push(&parametros_a_enviar_leer, pid_leer); //pid para desbloquearlo despues
-			enviar_msj_con_parametros(EL_ARCHIVO_FUE_LEIDO, parametros_a_enviar_leer, kernel);
+			enviar_msj_con_parametros(kernel, EL_ARCHIVO_FUE_LEIDO, parametros_a_enviar_leer);
 			free(parametros_a_enviar_leer);
 
 			printf("\n");
@@ -259,7 +259,7 @@ int manejar_mensaje(){
 			char** parametros_a_enviar_escribir = string_array_new();
 			string_array_push(&parametros_a_enviar_escribir, args->parametros[0]); //nombre del archivo
 			string_array_push(&parametros_a_enviar_escribir, pid_escribir); //pid para desbloquearlo despues
-			enviar_msj_con_parametros(EL_ARCHIVO_FUE_ESCRITO, parametros_a_enviar_escribir, kernel);
+			enviar_msj_con_parametros(kernel, EL_ARCHIVO_FUE_ESCRITO, parametros_a_enviar_escribir);
 			free(parametros_a_enviar_escribir);
 
 			printf("\n");

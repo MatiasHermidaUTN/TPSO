@@ -13,6 +13,7 @@ typedef struct {
 
 void planificar_corto();
 
+void mantener_pcb_en_exec(t_pcb* pcb_recibido);
 void ready_list_push(t_pcb* pcb_recibido);
 
 void calcular_prox_rafaga(t_pcb* pcb);
@@ -26,12 +27,18 @@ void manejar_io(t_args_io* args_io);
 void wait_recurso(t_pcb* pcb, char* recurso);
 t_recurso* buscar_recurso(char* nombre_recurso, t_list* lista);
 void signal_recurso(t_pcb* pcb, char* recurso);
-void exit_proceso(t_pcb* pcb);
+void exit_proceso(t_pcb* pcb, t_msj_kernel_consola mensaje);
+char* mensaje_de_finalizacion_a_string(t_msj_kernel_consola mensaje);
+
 void list_remove_pcb(t_list *lista, t_pcb *pcb);
 t_pcb* list_get_max_R(t_list* lista);
+
 void list_remove_recurso(t_list *lista, t_recurso *recurso);
 void eliminar_archivo(t_pcb *pcb, char* nombre);
-t_archivo_abierto* bucsar_archivo_en_pcb(t_pcb* pcb, char* nombre);
+t_archivo_abierto* buscar_archivo_en_pcb(t_pcb* pcb, char* nombre);
 int obtener_posicion_recurso(t_list* lista, t_recurso* recurso);
 void bloquear_pcb_por_archivo(t_pcb* pcb, char* nombre_archivo);
+
+void eliminar_segmento(t_pcb* pcb, int id);
+
 #endif /* PLANIFICACION_CORTO_H_ */
