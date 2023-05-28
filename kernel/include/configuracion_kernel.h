@@ -28,6 +28,7 @@ typedef struct {
 	char* nombre;
 	int cantidad_disponibles;
 	t_queue* cola_bloqueados;
+	pthread_mutex_t mutex_archivo;
 } t_recurso;
 
 extern pthread_mutex_t mutex_contador_pid;
@@ -54,7 +55,6 @@ extern t_pcb* proximo_pcb_a_ejecutar_forzado;
 
 extern t_list* list_recursos;
 extern t_list* list_archivos;
-extern t_list* mutex_list_archivos;
 
 
 extern t_msj_kernel_fileSystem rta_filesystem_global;

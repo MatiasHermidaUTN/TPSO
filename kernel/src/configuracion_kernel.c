@@ -25,7 +25,6 @@ t_list* ready_list;
 
 t_list* list_recursos;
 t_list* list_archivos;
-t_list* mutex_list_archivos;
 
 //SOCKETS//////////////////////////////////
 int socket_memoria;
@@ -83,7 +82,6 @@ void init_estados() {
 
 	list_recursos = list_create();
 	list_archivos = list_create();
-	mutex_list_archivos = list_create();
 
 	t_recurso* recurso;
 	for(int i = 0; i < string_array_size(lectura_de_config.RECURSOS); i++) {
@@ -107,7 +105,7 @@ void liberar_estructura_config(t_kernel_config config){
 	free(config.PUERTO_ESCUCHA);
 	free(config.ALGORITMO_PLANIFICACION);
 	//free(config.RECURSOS);
-	string_array_destroy(config.RECURSOS);
+	string_array_destroy(config.RECURSOS); //TODO
 	//free(config.INSTANCIAS_RECURSOS); //hay que liberar todos
 	string_array_destroy(config.INSTANCIAS_RECURSOS);
 }

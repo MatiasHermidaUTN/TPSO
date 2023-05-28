@@ -34,9 +34,9 @@ void list_remove_pcb(t_list *lista, t_pcb *pcb);
 t_pcb* list_get_max_R(t_list* lista);
 
 void list_remove_recurso(t_list *lista, t_recurso *recurso);
-void eliminar_archivo(t_pcb *pcb, char* nombre);
+
+void cerrar_archivo(t_pcb* pcb_recibido, char* nombre_archivo);void eliminar_archivo(t_pcb *pcb, char* nombre);
 t_archivo_abierto* buscar_archivo_en_pcb(t_pcb* pcb, char* nombre);
-int obtener_posicion_recurso(t_list* lista, t_recurso* recurso);
 void bloquear_pcb_por_archivo(t_pcb* pcb, char* nombre_archivo);
 
 void eliminar_segmento(t_pcb* pcb, int id);

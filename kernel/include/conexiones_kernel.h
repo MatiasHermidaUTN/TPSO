@@ -26,6 +26,6 @@ t_pcb* crear_pcb(t_list* instrucciones,int socket_consola);
 
 t_registros_cpu init_registros_cpu();
 
-void init_conexiones(t_kernel_config lectura_de_config, t_log* logger, int* socket_memoria, int* socket_cpu, int* socket_fileSystem);
+void init_conexiones();
 
 #endif /* CONEXIONES_KERNEL_H_ */
