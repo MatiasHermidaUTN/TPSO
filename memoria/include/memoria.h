@@ -16,8 +16,9 @@
 #include <commons/config.h>
 #include <commons/string.h>
 #include <utils.h>
-#include "../include/configuracion_memoria.h"
-#include "../include/conexiones_memoria.h"
+#include "configuracion_memoria.h"
+#include "conexiones_memoria.h"
+#include "comunicaciones_memoria.h"
 
 typedef struct nodoSegmento {
 	int id;
@@ -34,53 +35,40 @@ typedef struct nodoProceso {
 
 typedef enum
 {
-	INICIALIZAR_EL_PROCESO,
-	CREAR_SEGMENTO,
-	ELIMINAR_SEGMENTO,
-	ELIMINAR_PROCESO,
-	ESCRIBIR,
-	LEER,
-	COMPACTAR,
-	ERROR,
-} t_instrucciones;
-
-typedef enum
-{
 	FIRST,
 	BEST,
 	WORST,
 } t_algoritmo_asignacion;
 
-typedef enum
-{
-	KERNEL,
-	CPU,
-	FILESYSTEM,
-} t_origen_mensaje;
+extern nodoProceso* lista_procesos;
 
-typedef struct t_mensaje {
-	t_instrucciones cod_op;
-	int pid;
-	int id_segmento;
-	int tamanio_segmento;
-	int dir_fisica;	
-	int tamanio_buffer;
-	char* buffer;
-	t_origen_mensaje origen_mensaje;
-} t_mensajes;
+extern void* memoria_principal;
+
+extern void* bitmap_pointer;
+extern t_bitarray* bitarray_de_bitmap;
+
+extern t_memoria_config lectura_de_config;
+
+extern int socket_memoria;
+
+extern pthread_mutex_t mutex_cola_msj;
+extern sem_t sem_cant_msj;
+extern t_list* lista_fifo_msj;
+extern t_log* logger;
 
 //MEMORIA
 int manejar_mensaje();
-void log_compactacion()
+void log_compactacion();
 void compactar();
 int hay_seg_fault(int pid, int id_segmento, int dir_fisica, int tamanio_buffer);
 void eliminar_segmento(int pid, int id_segmento);
 int tengo_espacio_contiguo(int tamanio_segmento);
 int tengo_espacio_general(int tamanio_segmento);
 nodoProceso* crear_proceso(int pid);
-crear_segmento(int pid, int tamanio_segmento);
+int crear_segmento(int pid, int id_segmento, int tamanio_segmento);
 int asignar_espacio_en_memoria(int tamanio_segmento);
-void asignar_id_segmento(int pid);
+int asignar_id_segmento(int pid);
+void eliminar_proceso(int pid);
 
 //ALGORITMOS LISTAS
 nodoProceso* buscar_por_pid(nodoProceso* lista_procesos, int pid);
@@ -89,6 +77,7 @@ void borrar_nodo_segmento(nodoSegmento** referenciaListaSeg, nodoSegmento* nodo_
 void borrar_nodo_proceso(nodoProceso** lista_procesos, nodoProceso* nodo_a_borrar);
 int length_segmento(nodoSegmento* nodoS);
 void buscar_por_base(nodoProceso* nodoP, int base, int* pid, int* id_segmento);
+void buscar_pid_por_dir_fisica(int dir_fisica, int *pid);
 void push_segmento(nodoSegmento** referencia_lista, nodoSegmento* nodoS);
 void push_proceso(nodoProceso** referencia_lista, nodoProceso* nodoP);
 void eliminar_lista_proceso(nodoProceso** lista_procesos);
@@ -98,4 +87,7 @@ void imprimir_bitmap();
 void imprimir_lista();
 void imprimir_memoria(int desde, int hasta);
 
-#endif /* MEMORIA_H_ */
+void prueba();
+
+#endif /* MEMORIA_H_ */
+

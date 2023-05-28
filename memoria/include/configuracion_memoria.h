@@ -15,4 +15,4 @@ typedef struct memoria_config {
 
 t_memoria_config leer_memoria_config(t_config* config);
 
-#endif /* CONFIGURACION_MEMORIA_H_ */
+#endif /* CONFIGURACION_MEMORIA_H_ */
