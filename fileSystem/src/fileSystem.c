@@ -3,12 +3,10 @@
 #define DESDE_EL_INICIO 0
 
 t_config* superbloque;
-//FILE* bitmap;
 void* bitmap;
 void* bitmap_pointer;
 t_bitarray* bitarray_de_bitmap;
 FILE* bloques;
-//t_config* directorio_FCB;
 int tamanioBitmap;
 
 t_log* logger;
@@ -18,20 +16,12 @@ t_fileSystem_config lectura_de_config;
 int kernel;
 int socket_memoria;
 
-//pthread_mutex_t mutex_bloques;
-//pthread_mutex_t mutex_bitmap;
-//pthread_mutex_t mutex_FCB_default;
-
 pthread_mutex_t mutex_cola_msj;
 sem_t sem_sincro_cant_msj;
 
 t_list* lista_fifo_msj;
 
 int main(int argc, char** argv) {
-
-	//pthread_mutex_init(&mutex_bloques, NULL);
-	//pthread_mutex_init(&mutex_bitmap, NULL);
-	//pthread_mutex_init(&mutex_FCB_default, NULL);
 
 	//LECTURA DE CONFIG DEL FILESYSTEM
 	logger = iniciar_logger("FileSystem.log", "FS");
@@ -40,13 +30,11 @@ int main(int argc, char** argv) {
 
 	lista_fifo_msj = list_create();
 
-	sem_init(&sem_sincro_cant_msj, 0, 0); 		//msj == tarea a ejecutar(escribir, leer, etc.)
+	sem_init(&sem_sincro_cant_msj, 0, 0); 		//msj es tarea a ejecutar(escribir, leer, etc.)
 	pthread_mutex_init(&mutex_cola_msj, NULL);
 
 	//CHQUEO DE QUE LOS PATHS A LOS DIFERENTES ARCHIVOS EXISTEN(SUPERBLOQUE, DIRECTORIO_FCB, BITMAP, BLOQUES)
 	//SUPERBLOQUE
-
-
 	if (archivo_se_puede_leer(lectura_de_config.PATH_SUPERBLOQUE)){
 		superbloque = iniciar_config(lectura_de_config.PATH_SUPERBLOQUE);
 		super_bloque_info.block_size = config_get_int_value(superbloque, "BLOCK_SIZE");
@@ -101,21 +89,14 @@ int main(int argc, char** argv) {
 	system(comando);
 	free(comando);
 
-	//**************TODO DEBUG**************
-	printf("unos inicial: %d\n", cant_unos_en_bitmap());
-	//**************TODO DEBUG**************
-
 	//SE CONECTA AL SERIVDOR MEMORIA
-
-	//TODO: DESCOMENTAR
-	//socket_memoria = crear_conexion(lectura_de_config.IP_MEMORIA, lectura_de_config.PUERTO_MEMORIA);
-	//if(socket_memoria == -1){
-	//	printf("No conectado a memoria\n");
-	//}
-    //enviar_handshake(socket_memoria, FILESYSTEM);
+	socket_memoria = crear_conexion(lectura_de_config.IP_MEMORIA, lectura_de_config.PUERTO_MEMORIA);
+	if(socket_memoria == -1){
+		printf("No conectado a memoria\n");
+	}
+    enviar_handshake(socket_memoria, FILESYSTEM);
 
 	//SE HACE SERVIDOR Y ESPERA LA CONEXION DEL KERNEL
-
 	int server = iniciar_servidor("127.0.0.1", lectura_de_config.PUERTO_ESCUCHA);
 	printf("Servidor listo para recibir al cliente, puerto: %s\n", lectura_de_config.PUERTO_ESCUCHA);
 	kernel = esperar_cliente(server);
@@ -128,9 +109,7 @@ int main(int argc, char** argv) {
     pthread_create(&hilo_escuchar_kernel, NULL, (void*)escuchar_kernel, NULL);
     pthread_detach(hilo_escuchar_kernel);
 
-
 	while(manejar_mensaje());
-
 
 	log_destroy(logger);
     config_destroy(config);
@@ -146,7 +125,6 @@ void escuchar_kernel() {
 		t_mensajes* args = malloc(sizeof(t_mensajes));
 		args->cod_op = recibir_msj(kernel);
 		args->parametros = recibir_parametros_de_mensaje(kernel);
-		printf("msj recibido\n");
 		list_push_con_mutex(lista_fifo_msj, args, &mutex_cola_msj);
 		sem_post(&sem_sincro_cant_msj);
 	}
@@ -154,10 +132,7 @@ void escuchar_kernel() {
 }
 
 int manejar_mensaje(){
-	printf("esperando msj\n");
 	sem_wait(&sem_sincro_cant_msj);
-
-	printf("manejando msj\n");
 
 	t_mensajes* args = list_pop_con_mutex(lista_fifo_msj, &mutex_cola_msj);
 
@@ -174,10 +149,8 @@ int manejar_mensaje(){
 			printf("abrir nombre_archivo: %s\n",nombre_archivo);
 			if (existe_archivo(nombre_archivo)) {	//existe FCB?
 				enviar_msj(kernel, EL_ARCHIVO_YA_EXISTE);
-				printf("abierto %s\n",nombre_archivo);
 			} else {
 				enviar_msj(kernel, EL_ARCHIVO_NO_EXISTE);
-				printf("no existe %s\n",nombre_archivo);
 			}
 			printf("\n");
 			break;
@@ -201,6 +174,7 @@ int manejar_mensaje(){
 			printf("nuevo_tamanio_archivo: %d\n", nuevo_tamanio_archivo);
 			printf("unos antes truncar: %d\n", cant_unos_en_bitmap());
 			truncar(nombre_archivo, nuevo_tamanio_archivo);
+
 			char ** parametros_a_enviar = string_array_new();
 			string_array_push(&parametros_a_enviar, nombre_archivo);
 			string_array_push(&parametros_a_enviar, pid_truncar);
@@ -216,17 +190,15 @@ int manejar_mensaje(){
 			apartir_de_donde_X = atoi(args->parametros[3]);
 			char* pid_leer = args->parametros[4];
 
-
 			printf("leer nombre_archivo: %s\n", nombre_archivo);
 			printf("apartir_de_donde_leer: %d\n", apartir_de_donde_X);
 			printf("cuanto_leer: %d\n", cuanto_X);
 			printf("dir_fisica_memoria: %d\n", dir_fisica_memoria);
 			buffer = leer_archivo(nombre_archivo, apartir_de_donde_X, cuanto_X);	//malloc se hace en leer_archivo
-			//TODO:DESCOMENTAR mandar_a_memoria(socket_memoria, ESCRIBIR, buffer, cuanto_X, dir_fisica_memoria);
-			//esperar rta de memoria
+			mandar_a_memoria(dir_fisica_memoria, cuanto_X, buffer);
 
 			char** parametros_a_enviar_leer = string_array_new();
-			string_array_push(&parametros_a_enviar_leer, args->parametros[0]); //nombre del archivo
+			string_array_push(&parametros_a_enviar_leer, nombre_archivo); //nombre del archivo
 			string_array_push(&parametros_a_enviar_leer, pid_leer); //pid para desbloquearlo despues
 			enviar_msj_con_parametros(kernel, EL_ARCHIVO_FUE_LEIDO, parametros_a_enviar_leer);
 			free(parametros_a_enviar_leer);
@@ -252,9 +224,8 @@ int manejar_mensaje(){
 			printf("apartir_de_donde_escribir: %d\n", apartir_de_donde_X);
 			printf("cuanto_escribir: %d\n", cuanto_X);
 			printf("dir_fisica_memoria: %d\n", dir_fisica_memoria);
-			buffer = leer_de_memoria(socket_memoria, LEER, cuanto_X, dir_fisica_memoria);	//malloc se hace en leer_de_memoria
+			buffer = escribir_en_memoria(dir_fisica_memoria, cuanto_X);	//malloc se hace en leer_de_memoria
 			escribir_archivo(buffer, nombre_archivo, apartir_de_donde_X, cuanto_X);
-
 
 			char** parametros_a_enviar_escribir = string_array_new();
 			string_array_push(&parametros_a_enviar_escribir, args->parametros[0]); //nombre del archivo
@@ -266,10 +237,6 @@ int manejar_mensaje(){
 			printf("escrito: %s\n", buffer);
 			printf("\n");
 			free(buffer);
-			break;
-
-		case ERROR:
-			//return 0; //?
 			break;
 		default:
 			return 0;	//?
@@ -652,35 +619,40 @@ t_instrucciones recibir_cod_op(int socket_cliente)
 	return cod_op;
 }
 
+char* leer_de_memoria(int cuanto_X, int dir_fisica_memoria){
+	char ** parametros_a_enviar = string_array_new();
+	string_array_push(&parametros_a_enviar, atoi(dir_fisica_memoria));
+	string_array_push(&parametros_a_enviar, atoi(cuanto_X));
+	enviar_msj_con_parametros(socket_kernel, LEER, parametros_a_enviar);
+	free(parametros_a_enviar_leer);
 
-char* leer_de_memoria(int socket_memoria, t_instrucciones cod_op, int cuanto_escribir, int dir_fisica_memoria){
-	char* buffer = malloc(cuanto_escribir + 1); //puse el +1 porque el strcpy copia el \0 tambien entonces en realidad estan copiando un caracter mas
-	switch (cuanto_escribir){
-	case 1:
-		strcpy(buffer, "1");
-		break;
-	case 2:
-		strcpy(buffer, "22");
-		break;
-	case 3:
-		strcpy(buffer, "Que");
-		break;
-	case 4:
-		strcpy(buffer, "bobo");
-		break;
-	case 5:
-		strcpy(buffer, "miras");
-		break;
-	case 160:
-		strcpy(buffer, "Nukess accelerators use 2 powerful magnets and electric fields to propel particles at high speeds, causing them to collide and release energy and radiation, XD.");
-		break;
-	default:
-		strcpy(buffer, "hola");
-		break;
-	}
+	char* buffer = malloc(cuanto_X);
+	t_mensajes* mensaje = malloc(sizeof(t_mensajes));
+
+	mensaje->cod_op = recibir_msj(socket_memoria);
+	if(mensaje->cod_op != LEIDO)
+		//kaboom??? TODO
+	mensaje->parametros = recibir_parametros_de_mensaje(socket_memoria);
+
+	memcpy(buffer, parametros[0], cuanto_X);
+	string_array_destroy(parametros);
+
 	return buffer;
 }
-void mandar_a_memoria(int socket_memoria, t_instrucciones cod_op, char* buffer, int cuanto_leer, int dir_fisica_memoria){
+
+void escribir_en_memoria(int dir_fisica_memoria, int cuanto_leer, char* buffer){
+	char ** parametros_a_enviar = string_array_new();
+	string_array_push(&parametros_a_enviar, atoi(dir_fisica_memoria));
+	string_array_push(&parametros_a_enviar, atoi(cuanto_X));
+	string_array_push(&parametros_a_enviar, buffer);
+	enviar_msj_con_parametros(socket_kernel, ESCRIBIR, parametros_a_enviar);
+	free(parametros_a_enviar_leer);
+
+	t_mensajes* mensaje = malloc(sizeof(t_mensajes));
+	mensaje->cod_op = recibir_msj(socket_memoria);
+	if(mensaje->cod_op != ESCRITO_OK)
+		//kaboom??? TODO
+
 	return;
 }
 
