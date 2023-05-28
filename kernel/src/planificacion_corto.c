@@ -207,7 +207,7 @@ void planificar_corto() {
 				/*
 				enviar_msj_con_parametros(socket_memoria, CREAR_SEGMENTO, parametros); //Solo importa enviar parametros[1], que es el tamanio
 
-				t_msj_kernel_memoria mensaje_recibido = recibir_msj(socket_memoria);
+				t_msj_memoria mensaje_recibido = recibir_msj(socket_memoria);
 
 				switch(mensaje_recibido) {
 					case SEGMENTO_CREADO:
@@ -227,10 +227,10 @@ void planificar_corto() {
 						exit_proceso(pcb_recibido, OUT_OF_MEMORY);
 						break;
 
-					case HAY_ESPACIO_DISPONIBLE:
+					case HAY_QUE_COMPACTAR:
 
 						//wait(FS termine de hacer F_READ o F_WRITE);
-						//enviar_msj(
+						//enviar_msj(socket_memoria, COMPACTAR);?
 						//solicitar nuevamente CREaR_SEGMENTO
 						//esto último capaz se puede hacer con una función que haga todo este switch y en este case se llame recursivamente
 

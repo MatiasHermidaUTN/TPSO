@@ -77,7 +77,7 @@ void borrar_nodo_segmento(nodoSegmento** referenciaListaSeg, nodoSegmento* nodo_
 void borrar_nodo_proceso(nodoProceso** lista_procesos, nodoProceso* nodo_a_borrar);
 int length_segmento(nodoSegmento* nodoS);
 void buscar_por_base(nodoProceso* nodoP, int base, int* pid, int* id_segmento);
-void buscar_pid_por_dir_fisica(int dir_fisica, int *pid);
+int buscar_pid_por_dir_fisica(int dir_fisica);
 void push_segmento(nodoSegmento** referencia_lista, nodoSegmento* nodoS);
 void push_proceso(nodoProceso** referencia_lista, nodoProceso* nodoP);
 void eliminar_lista_proceso(nodoProceso** lista_procesos);

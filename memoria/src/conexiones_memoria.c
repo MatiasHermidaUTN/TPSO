@@ -1,5 +1,9 @@
 #include "../include/conexiones_memoria.h"
 
+int socket_kernel;
+int socket_cpu;
+int socket_fileSystem;
+
 int recibir_conexiones(int socket_memoria, t_log* logger){
 	int socket_cliente = esperar_cliente(socket_memoria);
 	if(socket_cliente != -1){ //TODO: checkear -1 es error
@@ -25,20 +29,23 @@ void manejar_conexion(void* args){
 	switch(rta_handshake){
 		case KERNEL:
 			log_info(logger, "El Kernel se conecto a memoria");
-			enviar_handshake(socket_cliente,OK_HANDSHAKE);
-			manejar_conexion_kernel(socket_cliente, logger);
+			enviar_handshake(socket_cliente, OK_HANDSHAKE);
+			socket_kernel = socket_cliente;
+			manejar_conexion_kernel(logger);
 			break;
 
 		case CPU:
 			log_info(logger, "La CPU se conecto a memoria");
-			enviar_handshake(socket_cliente,OK_HANDSHAKE);
-			manejar_conexion_cpu(socket_cliente, logger);
+			enviar_handshake(socket_cliente, OK_HANDSHAKE);
+			socket_cpu = socket_cliente;
+			manejar_conexion_cpu(logger);
 			break;
 
 		case FILESYSTEM:
 			log_info(logger, "El Filesystem se conecto a memoria");
-			enviar_handshake(socket_cliente,OK_HANDSHAKE);
-			manejar_conexion_fileSystem(socket_cliente, logger);
+			enviar_handshake(socket_cliente, OK_HANDSHAKE);
+			socket_fileSystem = socket_cliente;
+			manejar_conexion_fileSystem(logger);
 			break;
 			
 		default:

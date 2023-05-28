@@ -11,6 +11,10 @@ typedef struct args_recibir_conexiones {
 	t_log* logger;
 } t_args_recibir_conexiones;
 
+extern int socket_kernel;
+extern int socket_cpu;
+extern int socket_fileSystem;
+
 int recibir_conexiones(int socket_memoria, t_log* logger);
 
 void manejar_conexion(void* args);

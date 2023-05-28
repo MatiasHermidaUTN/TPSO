@@ -28,15 +28,15 @@ int main(int argc, char** argv) {
 	memset(memoria_principal, 0, atoi(lectura_de_config.TAM_MEMORIA)); //seteo memoria en 0
 
 	//INICIO SEMAFORO FIFO de MENSAJES DE KERNEL, CPU y FS
-	sem_init(&sem_cant_msj, 0, 0); 		//msj == tarea a ejecutar(escribir, leer, etc.)
+	sem_init(&sem_cant_msj, 0, 0); 		//msj es tarea a ejecutar(escribir, leer, etc.)
 	pthread_mutex_init(&mutex_cola_msj, NULL);
 
 	//CREO SERVIDOR Y ESPERO CLIENTES
     socket_memoria = iniciar_servidor("127.0.0.1", lectura_de_config.PUERTO_ESCUCHA); 
 	log_warning(logger, "Memoria lista para recibir al cliente");
-	/*for(int i = 0 ; i<3 ; ){		//3 pq hay que aceptar 1 de cada: Kernel, CPU y FileSystem
-		i += recibir_conexiones(socket_memoria, logger); //Recibe conexiones (es bloqueante) y crea hilos para manejarlas
-	}*/
+	for(int i = 0 ; i<3 ; ){		//3 pq hay que aceptar 1 de cada: Kernel, CPU y FileSystem
+		i += recibir_conexiones(socket_memoria, logger); //Recibe conexiones (es bloqueante) y crea hilos para manejarlas, devuelve 1 con cada conexion recibida
+	}
 
 	//BITMAP
 	int tamanio_bitmap = (int)(atoi(lectura_de_config.TAM_MEMORIA) / 8);
@@ -46,19 +46,13 @@ int main(int argc, char** argv) {
 	}
 	bitarray_de_bitmap = bitarray_create_with_mode(bitmap_pointer, tamanio_bitmap, MSB_FIRST);
 
-	log_info(logger, "Bitmap creado");
+	log_info(logger, "Bitmap creado"); //BORRAR
 
 	//Segmento 0
 	for(int i = 0; i < atoi(lectura_de_config.TAM_SEGMENTO_0); i++){
 		bitarray_set_bit(bitarray_de_bitmap, i);
 	}
-	log_info(logger, "segmento 0 creado en el bitmap");
-
-	//TODO tests
-	printf("empezando pruebas:\n");
-	prueba();
-	//sleep(3);
-	//tests
+	log_info(logger, "segmento 0 creado en el bitmap"); //BORRAR
 
 	while(manejar_mensaje());
 
@@ -71,68 +65,71 @@ int main(int argc, char** argv) {
 }
 
 int manejar_mensaje() { //pinta bien
-	printf("\nesperando\n");
 	sem_wait(&sem_cant_msj);
 
-	void* mensaje = list_pop_con_mutex(lista_fifo_msj, &mutex_cola_msj);
-	t_instrucciones cod_op = ((t_mensajes*)mensaje)->cod_op;
-	printf("cod_op: %d\n", cod_op);
-	int pid = ((t_mensajes*)mensaje)->pid;
-	printf("pid: %d\n", pid);
-	int id_segmento = ((t_mensajes*)mensaje)->id_segmento;
-	printf("id_segmento: %d\n", id_segmento);
-	int tamanio_segmento = ((t_mensajes*)mensaje)->tamanio_segmento;
-	printf("tamanio_segmento: %d\n", tamanio_segmento);
-	int dir_fisica = ((t_mensajes*)mensaje)->dir_fisica;
-	printf("dir_fisica: %d\n", dir_fisica);
-	int tamanio_buffer = ((t_mensajes*)mensaje)->tamanio_buffer;
-	printf("tamanio_buffer: %d\n", tamanio_buffer);
-	char* buffer = strdup(((t_mensajes*)mensaje)->buffer);
-	printf("buffer: %s\n", buffer);
-	t_handshake origen_mensaje = ((t_mensajes*)mensaje)->origen_mensaje;
-	printf("origen_mensaje: %d\n", origen_mensaje);
+	t_mensaje* mensaje = list_pop_con_mutex(lista_fifo_msj, &mutex_cola_msj);
 
-	char* bufferLectura = malloc(tamanio_buffer + 1);		//TODO borrar el +1 cuando hagas serializar envio de lectura
+	int pid;
+	int id_segmento;
+	int tamanio_segmento;
+	int dir_fisica;
+	int tamanio_buffer;
+	char* buffer;
 
-	free(mensaje);
-	sleep(1);
-
-	switch (cod_op) {
+	switch (mensaje->cod_op) {
 		case INICIALIZAR_EL_PROCESO:{
-			//parametros a recibir (necesarios) en este caso: pid, origen_mensaje 	
+			//parametros a recibir (necesarios) en este caso: pid
+			pid = mensaje->parametros[0];
 
 			log_info(logger, "Creación de Proceso PID: <%d>", pid); //log obligatorio
 
 			nodoProceso* nodoP = crear_proceso(pid);
 
-			//msj kernel proceso creado y tabla actualizada
+			char ** parametros_a_enviar = string_array_new();
+			string_array_push(&parametros_a_enviar, atoi(pid));
+			string_array_push_para_lista_segmentos(&parametros_a_enviar, nodoP->tabla_segmentos);
+			enviar_msj_con_parametros(socket_kernel, PROCESO_INICIALIZADO, parametros_a_enviar);
+			string_array_destroy(parametros_a_enviar);
 
 			free(buffer);
-			free(bufferLectura);
 			break;
 		}
-		case CREAR_SEG:{
-			//parametros a recibir (necesarios) en este caso: pid, id_segmento, tamanio_segmento, origen_mensaje
+		case CREAR_SEGMENTO:{
+			//parametros a recibir (necesarios) en este caso: pid, id_segmento, tamanio_segmento
+			pid = mensaje->parametros[0];
+			id_segmento = mensaje->parametros[1];
+			tamanio_segmento = mensaje->parametros[2];
+
 			if(!tengo_espacio_general(tamanio_segmento)) {
 				//error?
 				log_error(logger, "no hay espacio para segmento");
+				enviar_msj(socket_kernel, NO_HAY_ESPACIO_DISPONIBLE);
+				break;
 			}
 			if(!tengo_espacio_contiguo(tamanio_segmento)) {
-				//msj kernel compactacion
-				log_error(logger, "no hay espacio para segmento contiguo");
+				
+				enviar_msj(socket_kernel, HAY_QUE_COMPACTAR); 
+				break;
 			}
 			int base = crear_segmento(pid, id_segmento, tamanio_segmento); //TODO definir id_segmento yo
 
 			log_info(logger, "PID: <%d> - Crear Segmento: <%d> - Base: <%d> - TAMAÑO: <%d>", pid, id_segmento, base, tamanio_segmento); //log obligatorio
 
-			//msj kernel segmento creado y base
+			char ** parametros_a_enviar = string_array_new();
+			string_array_push(&parametros_a_enviar, atoi(pid));
+			string_array_push(&parametros_a_enviar, atoi(id_segmento));
+			string_array_push(&parametros_a_enviar, atoi(tamanio_segmento));
+			string_array_push(&parametros_a_enviar, atoi(base));
+			enviar_msj_con_parametros(socket_kernel, SEGMENTO_CREADO, parametros_a_enviar);
+			string_array_destroy(parametros_a_enviar);
 
 			free(buffer);
-			free(bufferLectura);
 			break;
 		}
-		case ELIMINAR_SEG:{
-			//parametros a recibir (necesarios) en este caso: pid, id_segmento, origen_mensaje
+		case ELIMINAR_SEGMENTO:{
+			//parametros a recibir (necesarios) en este caso: pid, id_segmento
+			pid = mensaje->parametros[0];
+			id_segmento = mensaje->parametros[1];
 
 			nodoProceso* nodoP = buscar_por_pid(lista_procesos, pid);
 			nodoSegmento* nodoS = buscar_por_id(nodoP->lista_segmentos, id_segmento);
@@ -146,95 +143,129 @@ int manejar_mensaje() { //pinta bien
 
 			log_info(logger, "PID: <%d> - Eliminar Segmento: <%d> - Base: <%d> - TAMAÑO: <%d>", pid, id_segmento, base, tamanio_segmento); //log obligatorio
 
-			//msj kernel segmento eliminado y tabla actualizada (nodop->lista_segmentos)
+			char ** parametros_a_enviar = string_array_new();
+			string_array_push(&parametros_a_enviar, atoi(pid));
+			string_array_push_para_lista_segmentos(&parametros_a_enviar, nodoP->tabla_segmentos);
+			enviar_msj_con_parametros(socket_kernel, SEGMENTO_ELIMINADO, parametros_a_enviar);
+			string_array_destroy(parametros_a_enviar);
 
 			free(buffer);
-			free(bufferLectura);
 			break;
 		}
 		case ELIMINAR_PROCESO:{
-			//parametros a recibir (necesarios) en este caso: pid, id_segmento, origen_mensaje
+			//parametros a recibir (necesarios) en este caso: pid
+			pid = mensaje->parametros[0];
 
 			eliminar_proceso(pid);
 
 			log_info(logger, "Eliminación de Proceso PID: <%d>", pid); //log obligatorio
 
-			//msj kernel proceso eliminado 
+			enviar_msj(socket_kernel, PROCESO_ELIMINADO);
 
 			free(buffer);
-			free(bufferLectura);
 			break;
 		}
 		case ESCRIBIR:{
 			//parametros a recibir (necesarios) en este caso: dir_fisica, buffer, tamanio_buffer, origen_mensaje
-			int pid;
-			buscar_pid_por_dir_fisica(dir_fisica, &pid);
+			dir_fisica = mensaje->parametros[0];
+			tamanio_buffer = mensaje->parametros[1]; //TODO ver si el resto del grupo agregan un +1 por el \0 o no
+			buffer = mensaje->parametros[2];
+
+			pid = buscar_pid_por_dir_fisica(dir_fisica);
 
 			memcpy(memoria_principal + dir_fisica, buffer, tamanio_buffer);
 
-			log_info(logger, "PID: <%d> - Acción: <ESCRIBIR> - Dirección física: <%d> - Tamaño: <%d> - Origen: <%d>", pid, dir_fisica, tamanio_buffer, origen_mensaje); //log obligatorio
+			log_info(logger, "PID: <%d> - Acción: <ESCRIBIR> - Dirección física: <%d> - Tamaño: <%d> - Origen: <%d>", pid, dir_fisica, tamanio_buffer, mensaje->origen_mensaje); //log obligatorio
 
-			//msj kernel escrito
+			switch (mensaje->origen_mensaje){
+				case CPU:
+					enviar_msj(socket_cpu, ESCRITO_OK);
+					break;
+				case FILESYSTEM:
+					enviar_msj(socket_fileSystem, ESCRITO_OK);
+					break;
+				default:
+					//error?
+					break;
+			}
 
-			free(buffer);
-			free(bufferLectura);
 			break;
 		}
 		case LEER:{
 			//parametros a recibir (necesarios) en este caso: dir_fisica, buffer, tamanio_buffer, origen_mensaje
-			int pid;
-			buscar_pid_por_dir_fisica(dir_fisica, &pid);
+			dir_fisica = mensaje->parametros[0];
+			tamanio_buffer = mensaje->parametros[1];
+
+			char* bufferLectura = malloc(tamanio_buffer);
+
+			pid = buscar_pid_por_dir_fisica(dir_fisica);
 
 			memcpy(bufferLectura, memoria_principal + dir_fisica, tamanio_buffer);
 
-			log_info(logger, "PID: <%d> - Acción: <LEER> - Dirección física: <%d> - Tamaño: <%d> - Origen: <%d>", pid, dir_fisica, tamanio_buffer, origen_mensaje); //log obligatorio
+			log_info(logger, "PID: <%d> - Acción: <LEER> - Dirección física: <%d> - Tamaño: <%d> - Origen: <%d>", pid, dir_fisica, tamanio_buffer, mensaje->origen_mensaje); //log obligatorio
 
-			//enviar bufferLectura, hay que agregar 1 byte más con el \0 en el envío del msj
-			memcpy(bufferLectura + tamanio_buffer, "\0", 1);	//TODO esto puede q sea una forrada, ver si sacarlo o hacerlo en otro lado
-			printf("bufferLectura: %s\n", bufferLectura);
+			char ** parametros_a_enviar = string_array_new();
+			string_array_push(&parametros_a_enviar, bufferLectura);		//TODO puede haber seg_fault pq bufferLectura no tiene \0
+			switch (mensaje->origen_mensaje){
+				case CPU:
+					enviar_msj_con_parametros(socket_cpu, LEIDO, parametros_a_enviar);
+					break;
+				case FILESYSTEM:
+					enviar_msj_con_parametros(socket_fileSystem, LEIDO, parametros_a_enviar);
+					break;
+				default:
+					//error?
+					break;
+			}
+			string_array_destroy(parametros_a_enviar);
 
 			free(buffer);
 			free(bufferLectura);
 			break;
 		}
 		case COMPACTAR:{
-			//parametros a recibir (necesarios) en este caso: origen_mensaje
+			//parametros a recibir (necesarios) en este caso:
 			log_info(logger, "Solicitud de Compactación"); //log obligatorio
 
 			compactar();
 
 			log_compactacion(); //log obligatorio			
 
-			//msj kernel compactacion done y devuelvo lista_procesos
+			char ** parametros_a_enviar = string_array_new();
+
+			nodoProceso* nodoP = lista_procesos;
+			while (nodoP != NULL)
+			{
+				string_array_push(&parametros_a_enviar, atoi(nodoP->pid));
+				string_array_push_para_lista_segmentos(&parametros_a_enviar, nodoP->tabla_segmentos);
+				nodoP = nodoP->siguiente;
+			}
+			enviar_msj_con_parametros(socket_kernel, MEMORIA_COMPACTADA, parametros_a_enviar);
+			string_array_destroy(parametros_a_enviar);
 
 			free(buffer);
-			free(bufferLectura);
-
-			break;
-		}
-		case ERROR:{
-			//msj kernel error
-
-			free(buffer);
-			free(bufferLectura);
 
 			break;
 		}
 		default:{ 
 			free(buffer);
-			free(bufferLectura);
 			return 0;
 		}
 	}
-	printf("\n");
-	imprimir_bitmap();
-	printf("\n");
-	printf("\n");
-	imprimir_memoria(0, 400);
-	printf("\n");
+	string_array_destroy(parametros);
+	free(mensaje);
 	return 1;
 }
 
+void string_array_push_para_lista_segmentos(char ***parametros_a_enviar, nodoSegmento* nodoS){
+	while(nodoS != NULL){  
+		string_array_push(*parametros_a_enviar, atoi(nodoS->id_segmento));
+		string_array_push(*parametros_a_enviar, atoi(nodoS->base));
+		string_array_push(*parametros_a_enviar, atoi(nodoS->tamanio));
+		
+		nodoS = nodoS->siguiente;
+	}
+}
 
 void compactar() { //CHEQUEADA
 	int pid;
@@ -556,7 +587,7 @@ void buscar_por_base(nodoProceso* nodoP, int base, int* pid, int* id_segmento) {
 	}
 }
 
-void buscar_pid_por_dir_fisica(int dir_fisica, int *pid) {
+int buscar_pid_por_dir_fisica(int dir_fisica) {
 	nodoProceso* nodoP = lista_procesos;
 
 	while(nodoP != NULL){
@@ -564,8 +595,7 @@ void buscar_pid_por_dir_fisica(int dir_fisica, int *pid) {
 
 		while(nodoS != NULL){
 			if((nodoS->base <= dir_fisica) && (dir_fisica <= (nodoS->base + nodoS->tamanio))){
-				*pid = nodoP->pid;
-				return;
+				return nodoP->pid;
 			}
 			nodoS = nodoS->siguiente;
 		}
@@ -575,6 +605,7 @@ void buscar_pid_por_dir_fisica(int dir_fisica, int *pid) {
 	if(nodoP == NULL){
 		//error?
 	}
+	return 0;
 }
 
 void push_segmento(nodoSegmento** referencia_lista, nodoSegmento* nodoS) { //pinta bien
@@ -691,9 +722,10 @@ void imprimir_memoria(int desde, int hasta) {
 	}
 }
 
+/* DEPRECATED
 void prueba(){
 	//TODO test
-	/*for(int i = atoi(lectura_de_config.TAM_SEGMENTO_0)+1; i < atoi(lectura_de_config.TAM_SEGMENTO_0)+1+3; i++){
+	for(int i = atoi(lectura_de_config.TAM_SEGMENTO_0)+1; i < atoi(lectura_de_config.TAM_SEGMENTO_0)+1+3; i++){
 		bitarray_set_bit(bitarray_de_bitmap, i);
 	}
 	for(int i = atoi(lectura_de_config.TAM_SEGMENTO_0)+1+3+5; i < atoi(lectura_de_config.TAM_SEGMENTO_0)+1+3+5+7; i++){
@@ -701,7 +733,7 @@ void prueba(){
 	}
 	for(int i = atoi(lectura_de_config.TAM_SEGMENTO_0)+1+3+5+7+4; i < atoi(lectura_de_config.TAM_SEGMENTO_0)+1+3+5+7+4+2; i++){
 		bitarray_set_bit(bitarray_de_bitmap, i);
-	}*/
+	}
 
 	printf("\n");
 	imprimir_bitmap();
@@ -844,6 +876,7 @@ void prueba(){
 
 	return;
 }
+*/
 
 /* DEPRECATED
 int asignar_id_segmento(int pid){
