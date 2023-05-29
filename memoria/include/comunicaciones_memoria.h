@@ -1,10 +1,19 @@
 #ifndef COMUNICACIONES_MEMORIA_H_
 #define COMUNICACIONES_MEMORIA_H_
 
+#include "memoria.h"
+#include "conexiones_memoria.h"
 #include <commons/log.h>
 
-void manejar_conexion_kernel(int socket_kernel, t_log* logger);
-void manejar_conexion_cpu(int socket_cpu, t_log* logger);
-void manejar_conexion_fileSystem(int socket_fileSystem, t_log* logger);
+typedef struct t_mensaje {
+	t_msj_memoria cod_op;
+	t_handshake origen_mensaje;
+	char** parametros;
+} t_mensajes;
+
+void manejar_conexion_kernel(t_log* logger);
+void manejar_conexion_cpu(t_log* logger);
+void manejar_conexion_fileSystem(t_log* logger);
 
 #endif /* COMUNICACIONES_MEMORIA_H_ */
+

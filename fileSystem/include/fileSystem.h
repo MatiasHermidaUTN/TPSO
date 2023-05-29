@@ -16,11 +16,13 @@
 #include <commons/config.h>
 #include <commons/string.h>
 #include <utils.h>
-#include "../include/configuracion_fileSystem.h"
 
-extern pthread_mutex_t mutex_new_queue;
-extern pthread_mutex_t mutex_ready_list;
-//TODO extern de TODAS LAS VAR DE FS.c
+#include "configuracion_fileSystem.h"
+#include "manejar_mensajes.h"
+#include "conexiones_fileSystem.h"
+
+#define PRIMER_BLOQUE_SECUNDARIO 1
+#define DESDE_EL_INICIO 0
 
 typedef struct {
 	char* nombre_archivo;
@@ -29,70 +31,38 @@ typedef struct {
 	uint32_t puntero_indirecto;
 } t_fcb;
 
-typedef enum
-{
-	ABRIR,
-	CREAR,
-	TRUNCAR,
-	LEER,
-	ESCRIBIR,
-	ERROR,
-} t_instrucciones;
-
 struct super_bloque_info {
 	int block_size;
 	int block_count;
-}super_bloque_info;
+} super_bloque_info;
 
-typedef struct args_recibir_mensajes {
-	int cod_op;
-	char** parametros;
-} t_mensajes;
+extern pthread_mutex_t mutex_new_queue;
+extern pthread_mutex_t mutex_ready_list;
 
-//fcb
-uint32_t config_get_uint_value(t_config *self, char *key);
-char* obtener_path_FCB_sin_free(char* nombre_archivo);
-//hilos
-int recibir_mensajes();
-int manejar_mensaje();
-void escuchar_kernel();
-//
-uint32_t conseguir_ptr_secundario_para_indirecto(uint32_t puntero_indirecto, int nro_de_ptr_secundario);
-void guardar_ptr_secundario_para_indirecto(uint32_t puntero_secundairo, uint32_t puntero_indirecto, int nro_de_ptr_secundario);
-//bitmap
-bool checkear_espacio(int cuanto_escribir);
-uint32_t dame_un_bloque_libre();
-void liberar_bloque(uint32_t puntero);
-//abrir
-bool existe_archivo(char* nombre_archivo);
-bool archivo_se_puede_leer(char* path);
-//crear
-void crear_archivo(char* nombre_archivo);
-//truncar
-void truncar(char* nombre_archivo, int nuevo_tamanio_archivo);
-void achicas_archivo(t_config* archivo_FCB, char* nombre_archivo, int nuevo_tamanio_archivo);
-void agrandas_archivo(t_config* archivo_FCB, char* nombre_archivo, int nuevo_tamanio_archivo);
-//leer
-char* leer_archivo(char* nombre_archivo, int apartir_de_donde_leer, int cuanto_leer);
-void leer_indirecto(char* buffer, t_config* archivo_FCB, int bloque_secundario_donde_leer, int* cuanto_leer, int* cantidad_leida);
-void leer_bloque(char* buffer, uint32_t puntero, int apartir_de_donde_leer_relativo_a_bloque, int* cuanto_leer, int* cantidad_leida);
-//escribir
-void escribir_archivo(char* buffer, char* nombre_archivo, int apartir_de_donde_escribir, int cuanto_escribir);
-void sobreescribir_indirecto(char* buffer, t_config* archivo_FCB, int bloque_secundario_donde_escribir, int* cuanto_escribir, int* cantidad_escrita);
-void escribir_bloque(char* buffer, uint32_t puntero, int apartir_de_donde_escribir_relativo_a_puntero, int* cuanto_escribir, int* cantidad_escrita);
+extern t_config* superbloque;
+extern void* bitmap;
+extern void* bitmap_pointer;
+extern t_bitarray* bitarray_de_bitmap;
+extern FILE* bloques;
+extern int tamanioBitmap;
+
+extern t_log* logger;
+extern t_config* config;
+extern t_fileSystem_config lectura_de_config;
+
+extern int kernel;
+extern int socket_memoria;
+
+extern pthread_mutex_t mutex_cola_msj;
+extern sem_t sem_sincro_cant_msj;
+
+extern t_list* lista_fifo_msj;
 
 //comunicaciones
-t_instrucciones recibir_cod_op(int socket_cliente);
-void recibir_parametros(t_instrucciones cod_op, char** nombre_archivo, int* tamanio_nuevo_archivo, int* apartir_de_donde_X, int* cuanto_X, int* dir_fisica_memoria);
-void deserializar_instrucciones_kernel(void* a_recibir, t_instrucciones cod_op, char** nombre_archivo, int* tamanio_nuevo_archivo, int* apartir_de_donde_X, int* cuanto_X, int* dir_fisica_memoria);
-void enviar_mensaje_kernel(int socket_kernel, char* msj);
-char* leer_de_memoria(int socket_memoria, t_instrucciones LEER, int cuanto_escribir, int dir_fisica_memoria);
-void mandar_a_memoria(int socket_memoria, t_instrucciones ESCRIBIR, char* buffer, int cuanto_leer, int dir_fisica_memoria);
-void deserializar_parametros_kernel(void* a_recibir, t_instrucciones cod_op, char** nombre_archivo, int* tamanio_nuevo_archivo, int* apartir_de_donde_X, int* cuanto_X, int* dir_fisica_memoria);
-void deserializar_un_parametro_atoi(void* a_recibir, int* desplazamiento, int* parametro);
+char* leer_de_memoria(int cuanto_X, int dir_fisica_memoria);
+void escribir_en_memoria(int dir_fisica_memoria, int cuanto_leer, char* buffer);
 
 //debug
 int cant_unos_en_bitmap();
-void limpiar_bitmap();
 
 #endif /* FILESYSTEM_H_ */
