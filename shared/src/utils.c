@@ -441,7 +441,7 @@ void memcpy_tabla_segmentos_serializar(void* stream, t_list* tabla_segmentos, in
 		memcpy(stream + *desplazamiento, &(segmento->id), sizeof(int));
 		*desplazamiento += sizeof(int);
 
-		memcpy(stream + *desplazamiento, &(segmento->dir_base), sizeof(int));
+		memcpy(stream + *desplazamiento, &(segmento->direccion_base), sizeof(int));
 		*desplazamiento += sizeof(int);
 
 		memcpy(stream + *desplazamiento, &(segmento->tamanio), sizeof(int));
@@ -468,14 +468,14 @@ void memcpy_archivos_abiertos_serializar(void* stream, t_list* archivos_abiertos
 	}
 }
 
-t_pcb* recibir_pcb(int socket_kernel) {
+t_pcb* recibir_pcb(int socket) {
 	size_t size_payload;
-    if (recv(socket_kernel, &size_payload, sizeof(size_t), 0) != sizeof(size_t)) {
+    if (recv(socket, &size_payload, sizeof(size_t), 0) != sizeof(size_t)) {
         exit(EXIT_FAILURE);
     }
 
 	void* stream_pcb_a_recibir = malloc(size_payload);
-    if (recv(socket_kernel, stream_pcb_a_recibir, size_payload, 0) != size_payload) {
+    if (recv(socket, stream_pcb_a_recibir, size_payload, 0) != size_payload) {
         free(stream_pcb_a_recibir);
         exit(EXIT_FAILURE);
     }
@@ -631,7 +631,7 @@ void memcpy_tabla_segmentos_deserializar(t_pcb* pcb, void* stream, int* desplaza
 		memcpy(&(segmento->id), stream + *desplazamiento, sizeof(int));
 		*desplazamiento += sizeof(int);
 
-		memcpy(&(segmento->dir_base), stream + *desplazamiento, sizeof(int));
+		memcpy(&(segmento->direccion_base), stream + *desplazamiento, sizeof(int));
 		*desplazamiento += sizeof(int);
 
 		memcpy(&(segmento->tamanio), stream + *desplazamiento, sizeof(int));
@@ -751,3 +751,131 @@ void destruir_archivo_abierto(t_archivo_abierto* archivo){
 	free(archivo->nombre_archivo);
 	free(archivo);
 }
+
+void enviar_procesos_con_segmentos(int socket, t_list* procesos_actualizados) {
+	size_t size_total;
+	void* stream = serializar_procesos_con_segmentos(procesos_actualizados, &size_total);
+
+	send(socket, stream, size_total, 0);
+
+	free(stream);
+	list_destroy(procesos_actualizados);
+}
+
+void* serializar_procesos_con_segmentos(t_list* procesos_actualizados, size_t* size_total) {
+	size_t size_payload = 0;
+	*size_total = sizeof(op_code) + sizeof(size_payload);
+
+	t_proceso_actualizado* proceso;
+	for(int i = 0; i < list_size(procesos_actualizados); i++) {
+		size_payload += sizeof(int) * 2; //pid + cantidad_segmentos
+
+		proceso = list_get(procesos_actualizados, i);
+		size_payload += list_size(proceso->tabla_segmentos) * sizeof(int) * 3; //id + direccion_base + tamanio
+	}
+
+	*size_total += size_payload;
+
+	void* stream = malloc(*size_total);
+	int desplazamiento = 0;
+
+	t_msj_kernel_memoria op_code = MEMORIA_COMPACTADA;
+	memcpy(stream + desplazamiento, &(op_code), sizeof(op_code));
+	desplazamiento += sizeof(op_code);
+
+	memcpy(stream + desplazamiento, &size_payload, sizeof(size_payload));
+	desplazamiento += sizeof(size_payload);
+
+	t_segmento* segmento;
+	int cantidad_segmentos;
+	for(int i = 0; i < list_size(procesos_actualizados); i++) {
+		proceso = list_get(procesos_actualizados, i);
+		memcpy(stream + desplazamiento, &(proceso->pid), sizeof(proceso->pid));
+		desplazamiento += sizeof(proceso->pid);
+
+		cantidad_segmentos = list_size(proceso->tabla_segmentos);
+		memcpy(stream + desplazamiento, &cantidad_segmentos, sizeof(cantidad_segmentos));
+		desplazamiento += sizeof(cantidad_segmentos);
+
+		for(int j = 0; j < cantidad_segmentos; j++) {
+			segmento = list_get(proceso->tabla_segmentos, i);
+
+			memcpy(stream + desplazamiento, &(segmento->id), sizeof(segmento->id));
+			desplazamiento += sizeof(segmento->id);
+
+			memcpy(stream + desplazamiento, &(segmento->direccion_base), sizeof(segmento->direccion_base));
+			desplazamiento += sizeof(segmento->direccion_base);
+
+			memcpy(stream + desplazamiento, &(segmento->tamanio), sizeof(segmento->tamanio));
+			desplazamiento += sizeof(segmento->tamanio);
+		}
+	}
+
+	return stream;
+}
+
+t_list* recibir_procesos_con_segmentos(int socket) {
+	size_t size_payload;
+    if (recv(socket, &size_payload, sizeof(size_t), 0) != sizeof(size_t)) {
+        exit(EXIT_FAILURE);
+    }
+
+	void* stream_a_recibir = malloc(size_payload);
+    if (recv(socket, stream_a_recibir, size_payload, 0) != size_payload) {
+        free(stream_a_recibir);
+        exit(EXIT_FAILURE);
+    }
+
+    t_list* procesos = deserializar_procesos_con_segmentos(stream_a_recibir);
+
+	free(stream_a_recibir);
+	return procesos;
+}
+
+t_list* deserializar_procesos_con_segmentos(void* stream) {
+	size_t desplazamiento = 0;
+
+	size_t size_payload;
+	memcpy(stream + desplazamiento, &size_payload, sizeof(size_payload));
+	desplazamiento += sizeof(size_payload);
+
+	t_list* procesos_actualizados = list_create();
+
+	t_proceso_actualizado* proceso;
+	t_segmento* segmento;
+	int cantidad_segmentos;
+
+	while(desplazamiento < size_payload) {
+		proceso = malloc(sizeof(t_proceso_actualizado));
+
+		memcpy(&(proceso->pid), stream + desplazamiento, sizeof(proceso->pid));
+		desplazamiento += sizeof(proceso->pid);
+
+		memcpy(&cantidad_segmentos, stream + desplazamiento, sizeof(cantidad_segmentos));
+		desplazamiento += sizeof(cantidad_segmentos);
+
+		proceso->tabla_segmentos = list_create();
+		for(int j = 0; j < cantidad_segmentos; j++) {
+			segmento = malloc(sizeof(t_segmento));
+
+			memcpy(&(segmento->id), stream + desplazamiento, sizeof(segmento->id));
+			desplazamiento += sizeof(segmento->id);
+
+			memcpy(&(segmento->direccion_base), stream + desplazamiento, sizeof(segmento->direccion_base));
+			desplazamiento += sizeof(segmento->direccion_base);
+
+			memcpy(&(segmento->tamanio), stream + desplazamiento, sizeof(segmento->tamanio));
+			desplazamiento += sizeof(segmento->tamanio);
+
+			list_add(proceso->tabla_segmentos, segmento);
+		}
+
+		list_add(procesos_actualizados, proceso);
+	}
+
+	return procesos_actualizados;
+}
+
+
+
+

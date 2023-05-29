@@ -24,7 +24,6 @@
 #include <pthread.h>
 #include "diccionario_instrucciones.h"
 
-
 typedef enum {
 	MENSAJE,
 } op_code;
@@ -104,15 +103,25 @@ typedef enum {
 typedef enum {
 	CREAR_SEGMENTO,
 	ELIMINAR_SEGMENTO,
+	INICIALIZAR_PROCESO,
+	ELIMINAR_PROCESO,
+	COMPACTAR,
 
 	SEGMENTO_CREADO,
 	NO_HAY_ESPACIO_DISPONIBLE,
-	HAY_ESPACIO_DISPONIBLE,
+	HAY_QUE_COMPACTAR,
+	SEGMENTO_ELIMINADO,
+	PROCESO_INICIALIZADO,
+	PROCESO_ELIMINADO,
+	MEMORIA_COMPACTADA,
 } t_msj_kernel_memoria;
 
 typedef enum {
 	LEER_VALOR,
 	ESCRIBIR_VALOR,
+
+	ESCRITO_OK,
+	LEIDO_OK,
 } t_msj_cpu_memoria;
 
 typedef struct {
@@ -159,9 +168,14 @@ typedef struct archivo_abierto {
 
 typedef struct segmento {
 	int id;
-	int dir_base;
+	int direccion_base;
 	int tamanio;
 } t_segmento;
+
+typedef struct {
+	int pid;
+	t_list* tabla_segmentos;
+} t_proceso_actualizado;
 
 //////////////////////////
 // Utils.c del servidor //
@@ -248,5 +262,14 @@ int recibir_msj(int socket);
 void enviar_msj_con_parametros(int socket, int op_code, char** parametros);
 void destruir_archivo_abierto(t_archivo_abierto* archivo);
 char** recibir_parametros_de_mensaje(int socket);
+
+////////////////////////////////////////
+// Procesos con segmentos actualizdos //
+////////////////////////////////////////
+
+void enviar_procesos_con_segmentos(int socket, t_list* procesos_actualizados);
+void* serializar_procesos_con_segmentos(t_list* procesos_actualizados, size_t* size_total);
+t_list* recibir_procesos_con_segmentos(int socket);
+t_list* deserializar_procesos_con_segmentos(void* stream);
 
 #endif /* UTILS_H_ */

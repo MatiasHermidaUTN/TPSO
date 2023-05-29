@@ -86,7 +86,7 @@ void ejecutar_instrucciones(t_pcb* pcb) {
 				int direccion_fisica = tamanio_segmento * numero_segmento + desplazamiento_segmento;
 
 
-				//Me fijo si es F_READ o F_WRITE (hice todo esto para evitar mucha repetición de lógica)
+				//Me fijo si es F_READ o F_WRITE (hice esto para evitar mucha repetición de lógica)
 				t_msj_kernel_cpu mensaje_a_mandar;
 				log_acceso_memoria(&mensaje_a_mandar, instruccion_actual->nombre, pcb->pid, numero_segmento, direccion_fisica); //log obligatorio
 

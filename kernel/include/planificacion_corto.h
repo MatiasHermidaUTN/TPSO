@@ -13,10 +13,6 @@ typedef struct {
 
 void planificar_corto();
 
-void mantener_pcb_en_exec(t_pcb* pcb_recibido);
-void ready_list_push(t_pcb* pcb_recibido);
-
-void calcular_prox_rafaga(t_pcb* pcb);
 int calcular_R(t_pcb* pcb);
 int calcular_tiempo_en_ready(int segundos);
 
@@ -39,6 +35,13 @@ void cerrar_archivo(t_pcb* pcb_recibido, char* nombre_archivo);void eliminar_arc
 t_archivo_abierto* buscar_archivo_en_pcb(t_pcb* pcb, char* nombre);
 void bloquear_pcb_por_archivo(t_pcb* pcb, char* nombre_archivo);
 
+void crear_segmento(t_pcb* pcb_recibido, char** parametros);
 void eliminar_segmento(t_pcb* pcb, int id);
+void actualizar_segmentos(t_pcb* pcb_en_exec);
+void actualizar_segmentos_de_lista(t_list* lista, t_list* procesos);
+void actualizar_segmentos_de_cola(t_queue* cola, t_list* procesos);
+void actualizar_segmentos_de_pcb(t_pcb* pcb, t_list* segmentos);
+
+t_proceso_actualizado* list_remove_if_pid_equals_to(t_list* procesos, int pid);
 
 #endif /* PLANIFICACION_CORTO_H_ */

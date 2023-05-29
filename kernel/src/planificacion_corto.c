@@ -59,7 +59,7 @@ void planificar_corto() {
 				}
 				else { //si no esta abierto
 					enviar_msj_con_parametros(socket_fileSystem, EXISTE_ARCHIVO, parametros);
-					sem_wait(&sem_rta_filesystem);
+					sem_wait(&sem_respuesta_fs);
 
 					log_info(logger, "PID: %d - Abrir Archivo: %s", pcb_recibido->pid, archivo_abierto->nombre_archivo); //log obligatorio
 
@@ -70,12 +70,12 @@ void planificar_corto() {
 					pthread_mutex_init(&(archivo->mutex_archivo), NULL);
 					list_add(list_archivos, archivo);
 
-					if(rta_filesystem_global == EL_ARCHIVO_NO_EXISTE) {
+					if(respuesta_fs_global == EL_ARCHIVO_NO_EXISTE) {
 						enviar_msj_con_parametros(socket_fileSystem, CREAR_ARCHIVO, parametros);
-						sem_wait(&sem_rta_filesystem);
+						sem_wait(&sem_respuesta_fs);
 
-						if(rta_filesystem_global == EL_ARCHIVO_FUE_CREADO) {
-							log_info(logger, "Se abrio el archivo"); //en realidad nunca va a fallar. Esto tendria que haberse hecho con un solo mensaje pero lo separaron en abrir y crear.
+						if(respuesta_fs_global == EL_ARCHIVO_FUE_CREADO) {
+							log_warning(logger, "Se abrio el archivo"); //en realidad nunca va a fallar. Esto tendria que haberse hecho con un solo mensaje pero lo separaron en abrir y crear.
 						}
 						else {
 							log_error(logger, "El File System no pudo crear el archivo");
@@ -84,7 +84,7 @@ void planificar_corto() {
 
 					}
 					else { // EL_ARCHIVO_YA_EXISTE
-						log_info(logger, "Se abrio un archivo que ya existia en el File System");
+						log_warning(logger, "Se abrio un archivo que ya existia en el File System");
 					}
 
 					mantener_pcb_en_exec(pcb_recibido);
@@ -122,7 +122,7 @@ void planificar_corto() {
 				F_READ lee del archivo y escribe en memoria
 				F_WRITE lee de memoria y escribe en archivo
 				*/
-				//Me fijo si es F_READ o F_WRITE (hice todo esto para evitar mucha repetición de lógica)
+				//Me fijo si es F_READ o F_WRITE (hice esto para evitar mucha repetición de lógica)
 				char* accion;
 				t_msj_kernel_fileSystem mensaje_a_mandar;
 				if(respuesta == F_READ_EJECUTADO) {
@@ -133,6 +133,13 @@ void planificar_corto() {
 					mensaje_a_mandar = ESCRIBIR_ARCHIVO;
 					accion = strdup("Escribir");
 				}
+
+				pthread_mutex_lock(&mutex_cantidad_de_reads_writes);
+				if(!cantidad_de_reads_writes) {
+					sem_wait(&sem_compactacion); //solo avisa si habían 0 operaciones
+				} //Solo sirve para que luego CREATE_SEGMENT tenga que hacer un wait y, si habían operaciones, se quede esperando a que finalicen
+				cantidad_de_reads_writes++;
+				pthread_mutex_unlock(&mutex_cantidad_de_reads_writes);
 
 
 				parametros = recibir_parametros_de_instruccion();
@@ -195,51 +202,7 @@ void planificar_corto() {
 				pcb_recibido = recibir_pcb(socket_cpu);
 
 				//TODO: testear cuando esté memoria lista
-
-				enviar_msj_con_parametros(socket_memoria, CREAR_SEGMENTO, parametros); //Solo importa enviar parametros[1], que es el tamanio
-
-				t_msj_kernel_memoria mensaje_recibido = recibir_msj(socket_memoria);
-
-				switch(mensaje_recibido) {
-					case SEGMENTO_CREADO:
-						char** parametros_recibidos_de_memoria = recibir_parametros_de_mensaje(socket_memoria);
-
-						t_segmento* segmento_a_crear = malloc(sizeof(t_segmento)); //Se libera en DELETE_SEGMENT en eliminar_segmento()
-						segmento_a_crear->id = atoi(parametros[0]);
-						segmento_a_crear->dir_base = atoi(parametros_recibidos_de_memoria[0]);
-						segmento_a_crear->tamanio = atoi(parametros[1]);
-
-						list_add(pcb_recibido->tabla_segmentos, segmento_a_crear);
-						log_info(logger, "PID: %d - Crear Segmento - Id: %d - Tamaño: %d", pcb_recibido->pid, segmento_a_crear->id, segmento_a_crear->tamanio); //log obligatorio
-
-						mantener_pcb_en_exec(pcb_recibido);
-						break;
-
-					case NO_HAY_ESPACIO_DISPONIBLE:
-						exit_proceso(pcb_recibido, OUT_OF_MEMORY);
-						break;
-
-					case HAY_ESPACIO_DISPONIBLE:
-						/*
-						log_info(logger, "Compactación: Se solicitó compactación"); //log obligatorio
-
-						wait(FS termine de hacer F_READ o F_WRITE);
-						log_info(logger, "Compactación: Esperando Fin de Operaciones de FS"); //log obligatorio
-
-						enviar_msj(
-						solicitar nuevamente CREAR_SEGMENTO
-						esto último capaz se puede hacer con una función que haga todo este switch y en este case se llame recursivamente
-
-						log_info(logger, "Se finalizó el proceso de compactación"); //log obligatorio
-
-						mantener_pcb_en_exec(pcb_recibido);
-						*/
-						break;
-
-					default:
-						log_error(logger, "Error en el recibo de mensaje de memoria");
-						exit(EXIT_FAILURE);
-				}
+				crear_segmento(pcb_recibido, parametros);
 
 				string_array_destroy(parametros);
 
@@ -296,28 +259,6 @@ void planificar_corto() {
 	}
 }
 
-void mantener_pcb_en_exec(t_pcb* pcb_recibido) {
-	proximo_pcb_a_ejecutar_forzado = pcb_recibido;
-	sem_post(&sem_cant_ready); //Al no pasar por la funcion ready_list_push hay que hacerlo manualmente, vuelve a ejecutar sin pasar por ready
-}
-
-void ready_list_push(t_pcb* pcb_recibido) {
-	log_info(logger, "PID: %d - Estado Anterior: BLOCK - Estado Actual: READY", pcb_recibido->pid); //log obligatorio
-
-	pcb_recibido->tiempo_llegada_ready = time(NULL); //Actualizo el momento en que llega a Ready
-	calcular_prox_rafaga(pcb_recibido); //S se calcula solo al que entra a Ready. Si es la primera vez que entra a Ready, se mantiene la Estimación Inicial
-
-	list_push_con_mutex(ready_list, pcb_recibido, &mutex_ready_list);
-	log_pids(); //log obligatorio
-
-	sem_post(&sem_cant_ready); //Dice que hay un nuevo proceso en Ready
-}
-
-void calcular_prox_rafaga(t_pcb* pcb) {
-	int alpha = lectura_de_config.HRRN_ALFA;
-	pcb->estimado_prox_rafaga = alpha * pcb->tiempo_real_ejecucion + (1-alpha) * pcb->estimado_prox_rafaga; //pcb->estimado_prox_rafaga aca es como el estimado anterior
-}
-
 int calcular_R(t_pcb* pcb) {
 	return (calcular_tiempo_en_ready(pcb->tiempo_llegada_ready) + pcb->estimado_prox_rafaga) / pcb->estimado_prox_rafaga;
 }
@@ -336,7 +277,7 @@ t_pcb* obtener_proximo_a_ejecutar() {
 	else if(!strcmp(lectura_de_config.ALGORITMO_PLANIFICACION, "FIFO")) {
 		pcb = list_pop_con_mutex(ready_list, &mutex_ready_list);
 		pcb->tiempo_inicial_ejecucion = time(NULL);
-		log_info(logger, "PID: %d - Estado Anterior: READY - Estado Actual: EXEC", pcb->pid);
+		log_info(logger, "PID: %d - Estado Anterior: READY - Estado Actual: EXEC", pcb->pid); //log obligatorio
 		return pcb;
 
 	}
@@ -350,7 +291,7 @@ t_pcb* obtener_proximo_a_ejecutar() {
 		list_remove_pcb(ready_list, pcb); //lo remueve pero no lo libera
 		pthread_mutex_unlock(&mutex_ready_list);
 		pcb->tiempo_inicial_ejecucion = time(NULL);
-		log_info(logger, "PID: %d - Estado Anterior: READY - Estado Actual: EXEC", pcb->pid);
+		log_info(logger, "PID: %d - Estado Anterior: READY - Estado Actual: EXEC", pcb->pid); //log obligatorio
 		return pcb;
 	}
 	else log_error(logger, "Error en la lectura del algoritmo de planificacion");
@@ -398,7 +339,7 @@ t_recurso* buscar_recurso(char* nombre_recurso, t_list* lista) {
 }
 
 void signal_recurso(t_pcb* pcb, char* nombre_recurso) {
-	t_recurso* recurso = buscar_recurso(nombre_recurso,list_recursos);
+	t_recurso* recurso = buscar_recurso(nombre_recurso, list_recursos);
 
 	if(recurso) {
 		recurso->cantidad_disponibles++;
@@ -536,6 +477,62 @@ void bloquear_pcb_por_archivo(t_pcb* pcb, char* nombre_archivo) {
 	log_info(logger, "PID: %d - Bloqueado por: %s", pcb->pid, nombre_archivo); //log obligatorio
 }
 
+void crear_segmento(t_pcb* pcb_recibido, char** parametros) {
+	enviar_msj_con_parametros(socket_memoria, CREAR_SEGMENTO, parametros); //Solo importa enviar parametros[1], que es el tamanio
+
+	t_msj_kernel_memoria mensaje_recibido = recibir_msj(socket_memoria);
+
+	switch(mensaje_recibido) {
+		case SEGMENTO_CREADO:
+			char** parametros_recibidos_de_memoria = recibir_parametros_de_mensaje(socket_memoria);
+
+			t_segmento* segmento_a_crear = malloc(sizeof(t_segmento)); //Se libera en DELETE_SEGMENT en eliminar_segmento()
+			segmento_a_crear->id = atoi(parametros[0]);
+			segmento_a_crear->direccion_base = atoi(parametros_recibidos_de_memoria[0]);
+			segmento_a_crear->tamanio = atoi(parametros[1]);
+
+			list_add(pcb_recibido->tabla_segmentos, segmento_a_crear);
+			log_info(logger, "PID: %d - Crear Segmento - Id: %d - Tamaño: %d", pcb_recibido->pid, segmento_a_crear->id, segmento_a_crear->tamanio); //log obligatorio
+
+			string_array_destroy(parametros_recibidos_de_memoria);
+
+			mantener_pcb_en_exec(pcb_recibido);
+			break;
+
+		case NO_HAY_ESPACIO_DISPONIBLE:
+			exit_proceso(pcb_recibido, OUT_OF_MEMORY);
+			break;
+
+		case HAY_QUE_COMPACTAR:
+
+			log_info(logger, "Compactación: Esperando Fin de Operaciones de FS"); //log obligatorio
+			sem_wait(&sem_compactacion);
+
+			log_info(logger, "Compactación: Se solicitó compactación"); //log obligatorio
+
+			enviar_msj(socket_memoria, COMPACTAR);
+
+			if(recibir_msj(socket_memoria) == MEMORIA_COMPACTADA) {
+				log_info(logger, "Se finalizó el proceso de compactación"); //log obligatorio
+				sem_post(&sem_compactacion);
+
+				actualizar_segmentos(pcb_recibido);
+
+				crear_segmento(pcb_recibido, parametros);
+			}
+			else {
+				log_error(logger, "Error en la compactacion");
+				exit(EXIT_FAILURE);
+			}
+
+			break;
+
+		default:
+			log_error(logger, "Error en el recibo de mensaje de memoria");
+			exit(EXIT_FAILURE);
+	}
+}
+
 void eliminar_segmento(t_pcb* pcb, int id) {
 	t_segmento* segmento_a_eliminar;
 	for(int i = 0; i < list_size(pcb->tabla_segmentos); i++) {
@@ -546,3 +543,83 @@ void eliminar_segmento(t_pcb* pcb, int id) {
 		}
 	}
 }
+
+void actualizar_segmentos(t_pcb* pcb_en_exec) {
+	 //TODO: recibe una lista de procesos (id + tabla_segmentos)
+
+	t_list* procesos = recibir_procesos_con_segmentos(socket_memoria);
+
+	t_proceso_actualizado* proceso; //es distinto a t_pcb, pues solo tiene id + tabla_segmentos
+
+	proceso = list_remove_if_pid_equals_to(procesos, pcb_en_exec->pid);
+	actualizar_segmentos_de_pcb(pcb_en_exec, proceso->tabla_segmentos);
+
+	actualizar_segmentos_de_lista(ready_list, procesos);
+
+	t_recurso* recurso;
+	for(int i = 0; i < list_size(list_recursos); i++) {
+		recurso = list_get(list_recursos, i);
+		actualizar_segmentos_de_cola(recurso->cola_bloqueados, procesos);
+	}
+	for(int i = 0; i < list_size(list_archivos); i++) {
+		recurso = list_get(list_archivos, i);
+		actualizar_segmentos_de_cola(recurso->cola_bloqueados, procesos);
+	}
+}
+
+void actualizar_segmentos_de_lista(t_list* lista, t_list* procesos) {
+	t_pcb* pcb;
+
+	t_proceso_actualizado* proceso; //es distinto a t_pcb, pues solo tiene id + tabla_segmentos
+
+	for(int i = 0; i < list_size(lista); i++) {
+		pcb = list_remove(lista, 0);
+
+		proceso = list_remove_if_pid_equals_to(procesos, pcb->pid);
+
+		actualizar_segmentos_de_pcb(pcb, proceso->tabla_segmentos);
+		list_add(lista, pcb);
+	}
+}
+
+void actualizar_segmentos_de_cola(t_queue* cola, t_list* procesos) {
+	t_pcb* pcb;
+
+	t_proceso_actualizado* proceso; //es distinto a t_pcb, pues solo tiene id + tabla_segmentos
+
+	for(int i = 0; i < queue_size(cola); i++) {
+		pcb = queue_pop(cola);
+
+		proceso = list_remove_if_pid_equals_to(procesos, pcb->pid);
+
+		actualizar_segmentos_de_pcb(pcb, proceso->tabla_segmentos);
+		queue_push(cola, pcb);
+	}
+}
+
+void actualizar_segmentos_de_pcb(t_pcb* pcb, t_list* segmentos) {
+	for(int i = 0; i < list_size(pcb->tabla_segmentos); i++) {
+		list_remove(pcb->tabla_segmentos, 0); //Elimina el primero
+		list_add(pcb->tabla_segmentos, list_remove(segmentos, 0)); //Lo agrega al final
+		//No me importa el orden
+	}
+}
+
+t_proceso_actualizado* list_remove_if_pid_equals_to(t_list* procesos, int pid) {
+	t_proceso_actualizado* proceso;
+	for(int i = 0; i < list_size(procesos); i++) {
+		proceso = list_get(procesos, i);
+		if(proceso->pid == pid) {
+			return list_remove(procesos, i);
+		}
+	}
+
+	log_error(logger, "Error al obtener pid de proceso con segmentos actualizado");
+	exit(EXIT_FAILURE);
+	return proceso; //no debería llegar acá
+}
+
+
+
+
+

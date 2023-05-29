@@ -6,11 +6,22 @@ void escuchar_de_filesystem() {
 		switch(op_code_recibido){
 			case EL_ARCHIVO_YA_EXISTE: case EL_ARCHIVO_NO_EXISTE: case EL_ARCHIVO_FUE_CREADO:
 
-				rta_filesystem_global = op_code_recibido;
-				sem_post(&sem_rta_filesystem);
+				respuesta_fs_global = op_code_recibido;
+				sem_post(&sem_respuesta_fs);
 				break;
 
-			case EL_ARCHIVO_FUE_TRUNCADO: case EL_ARCHIVO_FUE_LEIDO: case EL_ARCHIVO_FUE_ESCRITO:
+			case EL_ARCHIVO_FUE_LEIDO: case EL_ARCHIVO_FUE_ESCRITO:
+				pthread_mutex_lock(&mutex_cantidad_de_reads_writes);
+				cantidad_de_reads_writes--;
+				pthread_mutex_unlock(&mutex_cantidad_de_reads_writes); //TODO: fijarse si el unlock va después del if (estoy casi seguro que no)
+				if(!cantidad_de_reads_writes) {
+					sem_post(&sem_compactacion); //solo avisa que se puede hacer compactacion si no hay operaciones en proceso
+				}
+
+				//No debe haber break, porque de igual forma tiene que hacer exactamente lo mismo que el proximo case
+
+			case EL_ARCHIVO_FUE_TRUNCADO: //TODO: fijarse si también debería hacer lo que hace el case de arriba,
+				//ya que también desbloquea pcb y capaz genera conflictos a la hora de actualizar las tablas de segmentos de los pcbs de todas las listas
 
 				char** parametros = recibir_parametros_de_mensaje(socket_fileSystem);
 				desbloquear_pcb_por_archivo(parametros[0], atoi(parametros[1]));
