@@ -42,6 +42,7 @@ int contador_pid = 1;
 
 t_pcb* crear_pcb(t_list* instrucciones, int socket_consola) {
 	t_pcb* pcb = malloc(sizeof(t_pcb));
+
 	pthread_mutex_lock(&mutex_contador_pid);
 	pcb->pid = contador_pid;
 	contador_pid++;
@@ -50,14 +51,14 @@ t_pcb* crear_pcb(t_list* instrucciones, int socket_consola) {
 	pcb->instrucciones = instrucciones;
 	pcb->pc = 0;
 	pcb->registros_cpu = init_registros_cpu();
-	pcb->tabla_segmentos = list_create();
+	pcb->tabla_segmentos = list_create(); //TODO: fijarse si lo tiene que hacer Memoria
 	pcb->estimado_prox_rafaga = lectura_de_config.ESTIMACION_INICIAL;
 	pcb->tiempo_llegada_ready = 0;
 	pcb->archivos_abiertos = list_create();
 
 	pcb->socket_consola = socket_consola;
 
-	pcb->tiempo_real_ejecucion = 0; // No hace falta igual, porque no se usa hasta que sea modificado por la CPU
+	pcb->tiempo_real_ejecucion = lectura_de_config.ESTIMACION_INICIAL; //Por si es la primera vez que entra a Ready
 	pcb->tiempo_inicial_ejecucion = 0;
 
 	return pcb;
@@ -110,30 +111,33 @@ t_registros_cpu init_registros_cpu() {
 	return registros;
 }
 
-void init_conexiones(t_kernel_config lectura_de_config, t_log* logger, int* socket_memoria, int* socket_cpu, int* socket_fileSystem) {
+void init_conexiones() {
 	//TODO: DESCOMENTAR
-	//*socket_memoria = crear_conexion(lectura_de_config.IP_MEMORIA, lectura_de_config.PUERTO_MEMORIA);
-	//if(*socket_memoria == -1) {
-	//	log_error(logger, "Kernel no pudo conectarse a Memoria");
-	//	exit(EXIT_FAILURE);
-	//}
-	//enviar_handshake(*socket_memoria, KERNEL);
-	//t_handshake respuesta = recibir_handshake(*socket_memoria);
-	//if(respuesta == ERROR_HANDSHAKE){
-	//	log_error(logger,"Kernel no pudo conectarse a Memoria");
-	//	exit(EXIT_FAILURE);
-	//}
+/*
+	socket_memoria = crear_conexion(lectura_de_config.IP_MEMORIA, lectura_de_config.PUERTO_MEMORIA);
+	if(socket_memoria == -1) {
+		log_error(logger, "Kernel no pudo conectarse a Memoria");
+		exit(EXIT_FAILURE);
+	}
+
+	enviar_handshake(socket_memoria, KERNEL);
+	t_handshake respuesta = recibir_handshake(socket_memoria);
+	if(respuesta == ERROR_HANDSHAKE){
+		log_error(logger,"Kernel no pudo conectarse a Memoria");
+		exit(EXIT_FAILURE);
+	}
+*/
 
 	//Para estos no hace falta handshake porque solo reciben al Kernel
-	*socket_cpu = crear_conexion(lectura_de_config.IP_CPU, lectura_de_config.PUERTO_CPU);
-	if(*socket_cpu == -1) {
+	socket_cpu = crear_conexion(lectura_de_config.IP_CPU, lectura_de_config.PUERTO_CPU);
+	if(socket_cpu == -1) {
 		log_error(logger, "Kernel no pudo conectarse a CPU");
 		exit(EXIT_FAILURE);
 	}
-	*socket_fileSystem = crear_conexion(lectura_de_config.IP_FILESYSTEM, lectura_de_config.PUERTO_FILESYSTEM);
-	if(*socket_fileSystem == -1) {
+
+	socket_fileSystem = crear_conexion(lectura_de_config.IP_FILESYSTEM, lectura_de_config.PUERTO_FILESYSTEM);
+	if(socket_fileSystem == -1) {
 		log_error(logger, "Kernel no pudo conectarse a File System");
 		exit(EXIT_FAILURE);
 	}
-
 }

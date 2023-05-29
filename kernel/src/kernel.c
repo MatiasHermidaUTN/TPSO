@@ -13,7 +13,7 @@ int main (int argc, char** argv) {
 
     init_estados();
     init_semaforos();
-    init_conexiones(lectura_de_config, logger, &socket_memoria, &socket_cpu, &socket_fileSystem);
+    init_conexiones();
 
     pthread_t planificador_corto;
     pthread_create(&planificador_corto, NULL, (void*)planificar_corto, NULL);

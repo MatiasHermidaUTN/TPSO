@@ -24,7 +24,6 @@
 #include <pthread.h>
 #include "diccionario_instrucciones.h"
 
-
 typedef enum {
 	MENSAJE,
 } op_code;
@@ -55,6 +54,8 @@ typedef enum {
 	DELETE_SEGMENT_EJECUTADO,
 	YIELD_EJECUTADO,
 	EXIT_EJECUTADO,
+
+	EXIT_CON_SEG_FAULT_EJECUTADO,
 } t_msj_kernel_cpu;
 
 typedef enum {
@@ -102,7 +103,7 @@ typedef enum {
 typedef enum {
 	CREAR_SEGMENTO,
 	ELIMINAR_SEGMENTO,
-	INICIALIZAR_EL_PROCESO,
+	INICIALIZAR_PROCESO,
 	ELIMINAR_PROCESO,
 	COMPACTAR,
 
@@ -113,13 +114,15 @@ typedef enum {
 	PROCESO_INICIALIZADO,
 	PROCESO_ELIMINADO,
 	MEMORIA_COMPACTADA,
+} t_msj_kernel_memoria;
 
-	ESCRIBIR,
-	LEER,
+typedef enum {
+	LEER_VALOR,
+	ESCRIBIR_VALOR,
 
 	ESCRITO_OK,
-	LEIDO,
-} t_msj_memoria;
+	LEIDO_OK,
+} t_msj_cpu_memoria;
 
 typedef struct {
 	int size;
@@ -165,9 +168,14 @@ typedef struct archivo_abierto {
 
 typedef struct segmento {
 	int id;
-	int dir_base;
+	int direccion_base;
 	int tamanio;
 } t_segmento;
+
+typedef struct {
+	int pid;
+	t_list* tabla_segmentos;
+} t_proceso_actualizado;
 
 //////////////////////////
 // Utils.c del servidor //
@@ -202,9 +210,9 @@ void enviar_fin_proceso(int socket, t_msj_kernel_consola msj);
 //////////////////////
 
 void *queue_pop_con_mutex(t_queue* queue, pthread_mutex_t* mutex);
-void queue_push_con_mutex(t_queue* queue,void* elemento, pthread_mutex_t* mutex);
+void queue_push_con_mutex(t_queue* queue, void* elemento, pthread_mutex_t* mutex);
 void *list_pop_con_mutex(t_list* lista, pthread_mutex_t* mutex);
-void list_push_con_mutex(t_list* lista,void* elemento, pthread_mutex_t* mutex);
+void list_push_con_mutex(t_list* lista, void* elemento, pthread_mutex_t* mutex);
 
 ///////////////////
 // Liberar datos //
@@ -254,5 +262,14 @@ int recibir_msj(int socket);
 void enviar_msj_con_parametros(int socket, int op_code, char** parametros);
 void destruir_archivo_abierto(t_archivo_abierto* archivo);
 char** recibir_parametros_de_mensaje(int socket);
+
+////////////////////////////////////////
+// Procesos con segmentos actualizdos //
+////////////////////////////////////////
+
+void enviar_procesos_con_segmentos(int socket, t_list* procesos_actualizados);
+void* serializar_procesos_con_segmentos(t_list* procesos_actualizados, size_t* size_total);
+t_list* recibir_procesos_con_segmentos(int socket);
+t_list* deserializar_procesos_con_segmentos(void* stream);
 
 #endif /* UTILS_H_ */

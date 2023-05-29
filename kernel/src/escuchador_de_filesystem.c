@@ -1,50 +1,52 @@
 #include "../include/escuchador_de_filesystem.h"
 
-void escuchar_de_filesystem(){
-	while(1){
+void escuchar_de_filesystem() {
+	while(1) {
 		int op_code_recibido = recibir_msj(socket_fileSystem);
 		switch(op_code_recibido){
-			case EL_ARCHIVO_YA_EXISTE:
-				rta_filesystem_global = EL_ARCHIVO_YA_EXISTE;
-				sem_post(&sem_rta_filesystem);
-				break;
-			case EL_ARCHIVO_NO_EXISTE:
-				rta_filesystem_global = EL_ARCHIVO_NO_EXISTE;
-				sem_post(&sem_rta_filesystem);
-				break;
-			case EL_ARCHIVO_FUE_CREADO:
-				rta_filesystem_global = EL_ARCHIVO_FUE_CREADO;
-				sem_post(&sem_rta_filesystem);
-				break;
-			case EL_ARCHIVO_FUE_TRUNCADO:
-				char** parametros_truncar;
-				parametros_truncar = recibir_parametros_de_mensaje(socket_fileSystem);
-				desbloquear_pcb_por_archivo(parametros_truncar[0], atoi(parametros_truncar[1]));
-				string_array_destroy(parametros_truncar);
+			case EL_ARCHIVO_YA_EXISTE: case EL_ARCHIVO_NO_EXISTE: case EL_ARCHIVO_FUE_CREADO:
 
+				respuesta_fs_global = op_code_recibido;
+				sem_post(&sem_respuesta_fs);
 				break;
 
-			case EL_ARCHIVO_FUE_LEIDO:
-				char** parametros_leer;
-				parametros_leer = recibir_parametros_de_mensaje(socket_fileSystem);
-				desbloquear_pcb_por_archivo(parametros_leer[0], atoi(parametros_leer[1]));
-				string_array_destroy(parametros_leer);
-				break;
+			case EL_ARCHIVO_FUE_LEIDO: case EL_ARCHIVO_FUE_ESCRITO:
+				pthread_mutex_lock(&mutex_cantidad_de_reads_writes);
+				cantidad_de_reads_writes--;
+				pthread_mutex_unlock(&mutex_cantidad_de_reads_writes); //TODO: fijarse si el unlock va después del if (estoy casi seguro que no)
+				if(!cantidad_de_reads_writes) {
+					sem_post(&sem_compactacion); //solo avisa que se puede hacer compactacion si no hay operaciones en proceso
+				}
 
-			case EL_ARCHIVO_FUE_ESCRITO:
-				char** parametros_escribir;
-				parametros_escribir = recibir_parametros_de_mensaje(socket_fileSystem);
-				desbloquear_pcb_por_archivo(parametros_escribir[0], atoi(parametros_escribir[1]));
-				string_array_destroy(parametros_escribir);
+				//No debe haber break, porque de igual forma tiene que hacer exactamente lo mismo que el proximo case
+
+			case EL_ARCHIVO_FUE_TRUNCADO: //TODO: fijarse si también debería hacer lo que hace el case de arriba,
+				//ya que también desbloquea pcb y capaz genera conflictos a la hora de actualizar las tablas de segmentos de los pcbs de todas las listas
+
+				char** parametros = recibir_parametros_de_mensaje(socket_fileSystem);
+				desbloquear_pcb_por_archivo(parametros[0], atoi(parametros[1]));
+
+				string_array_destroy(parametros);
 				break;
 
 			default:
-				exit(-1);
+				exit(EXIT_FAILURE);
 		}
 	}
 }
 
-t_pcb* obtener_pcb_de_cola(t_recurso* archivo, int pid){ //Busca al pcb en la cola y lo devuelve (sacandolo de la cola)
+void desbloquear_pcb_por_archivo(char* nombre_archivo, int pid) {
+	t_recurso* archivo = buscar_recurso(nombre_archivo, list_archivos);
+	archivo->cantidad_disponibles++;
+
+	pthread_mutex_lock(&(archivo->mutex_archivo));
+	t_pcb* pcb = obtener_pcb_de_cola(archivo, pid);
+	pthread_mutex_unlock(&(archivo->mutex_archivo));
+
+	ready_list_push(pcb);
+}
+
+t_pcb* obtener_pcb_de_cola(t_recurso* archivo, int pid) { //Busca al pcb en la cola y lo devuelve (sacandolo de la cola)
 	t_pcb* pcb_a_devolver = NULL;
 	t_pcb* pcb_aux;
 
@@ -59,17 +61,4 @@ t_pcb* obtener_pcb_de_cola(t_recurso* archivo, int pid){ //Busca al pcb en la co
 		}
 	}
 	return pcb_a_devolver;
-}
-
-void desbloquear_pcb_por_archivo(char* nombre_archivo,int pid){
-	t_recurso* archivo = buscar_recurso(nombre_archivo, list_archivos);
-	archivo->cantidad_disponibles++;
-	int pos = obtener_posicion_recurso(list_archivos, archivo);
-	pthread_mutex_t* mutex = list_get(mutex_list_archivos, pos);
-	pthread_mutex_lock(mutex);
-	t_pcb* pcb = obtener_pcb_de_cola(archivo, pid);
-	pthread_mutex_unlock(mutex);
-	log_info(logger, "PID: %d - Estado Anterior: BLOCK - Estado Actual: READY", pid); //log obligatorio
-	ready_list_push(pcb);
-
 }
