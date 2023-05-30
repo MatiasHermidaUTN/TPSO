@@ -24,7 +24,10 @@ void escuchar_de_filesystem() {
 				//ya que también desbloquea pcb y capaz genera conflictos a la hora de actualizar las tablas de segmentos de los pcbs de todas las listas
 
 				char** parametros = recibir_parametros_de_mensaje(socket_fileSystem);
+
+				sem_wait(&sem_compactacion); //TODO: hace falta?? porque puede que se esté compactando y se estaría cambiando la lista de bloqueados. Funcionaría como un mutex en este caso
 				desbloquear_pcb_por_archivo(parametros[0], atoi(parametros[1]));
+				sem_post(&sem_compactacion);
 
 				string_array_destroy(parametros);
 				break;

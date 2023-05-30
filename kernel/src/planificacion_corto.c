@@ -147,7 +147,7 @@ void planificar_corto() {
 
 				t_archivo_abierto* archivo = buscar_archivo_en_pcb(pcb_recibido, parametros[0]);
 
-				string_array_push(&parametros, string_itoa(archivo->posicion_actual));
+				string_array_push(&parametros, string_itoa(archivo->posicion_actual)); //TODO: duda, cambiamos la posicion actual?
 				string_array_push(&parametros, string_itoa(pcb_recibido->pid));
 				bloquear_pcb_por_archivo(pcb_recibido, parametros[0]);
 				enviar_msj_con_parametros(socket_fileSystem, mensaje_a_mandar, parametros);
@@ -389,7 +389,7 @@ void list_remove_pcb(t_list *lista, t_pcb *pcb) {
 	for(int i = 0; i < list_size(lista); i++) {
 		elemento = list_get(lista, i);
 		if(elemento->pid == pcb->pid) {
-			elemento = list_remove(lista, i);
+			list_remove(lista, i);
 		}
 	}
 }
@@ -545,14 +545,14 @@ void eliminar_segmento(t_pcb* pcb, int id) {
 }
 
 void actualizar_segmentos(t_pcb* pcb_en_exec) {
-	 //TODO: recibe una lista de procesos (id + tabla_segmentos)
-
 	t_list* procesos = recibir_procesos_con_segmentos(socket_memoria);
 
 	t_proceso_actualizado* proceso; //es distinto a t_pcb, pues solo tiene id + tabla_segmentos
 
 	proceso = list_remove_if_pid_equals_to(procesos, pcb_en_exec->pid);
 	actualizar_segmentos_de_pcb(pcb_en_exec, proceso->tabla_segmentos);
+
+	free(proceso);
 
 	actualizar_segmentos_de_lista(ready_list, procesos);
 
@@ -565,6 +565,8 @@ void actualizar_segmentos(t_pcb* pcb_en_exec) {
 		recurso = list_get(list_archivos, i);
 		actualizar_segmentos_de_cola(recurso->cola_bloqueados, procesos);
 	}
+
+	list_destroy(procesos);
 }
 
 void actualizar_segmentos_de_lista(t_list* lista, t_list* procesos) {
@@ -578,6 +580,9 @@ void actualizar_segmentos_de_lista(t_list* lista, t_list* procesos) {
 		proceso = list_remove_if_pid_equals_to(procesos, pcb->pid);
 
 		actualizar_segmentos_de_pcb(pcb, proceso->tabla_segmentos);
+
+		free(proceso); //TODO: fijarse si está bien
+
 		list_add(lista, pcb);
 	}
 }
@@ -593,16 +598,26 @@ void actualizar_segmentos_de_cola(t_queue* cola, t_list* procesos) {
 		proceso = list_remove_if_pid_equals_to(procesos, pcb->pid);
 
 		actualizar_segmentos_de_pcb(pcb, proceso->tabla_segmentos);
+
+		free(proceso);
+
 		queue_push(cola, pcb);
 	}
 }
 
 void actualizar_segmentos_de_pcb(t_pcb* pcb, t_list* segmentos) {
-	for(int i = 0; i < list_size(pcb->tabla_segmentos); i++) {
-		list_remove(pcb->tabla_segmentos, 0); //Elimina el primero
+	t_segmento* segmento;
+
+	//list_size(pcb->tabla_segmentos) == list_size(segmentos)
+	for(int i = 0; i < list_size(segmentos); i++) {
+		segmento = list_remove(pcb->tabla_segmentos, 0); //Elimina el primero
+		free(segmento);
+
 		list_add(pcb->tabla_segmentos, list_remove(segmentos, 0)); //Lo agrega al final
 		//No me importa el orden
 	}
+
+	list_destroy(segmentos);
 }
 
 t_proceso_actualizado* list_remove_if_pid_equals_to(t_list* procesos, int pid) {

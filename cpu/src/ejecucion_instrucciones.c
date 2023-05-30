@@ -28,14 +28,19 @@ void ejecutar_instrucciones(t_pcb* pcb) {
 				char* registro_mov_in = list_get(instruccion_actual->parametros, 0);
 				char* direccion_logica_mov_in = list_get(instruccion_actual->parametros, 1);
 
+				t_datos_mmu datos_mmu_mov_in = mmu(instruccion_actual, pcb, atoi(direccion_logica_mov_in));
+
 				char** parametros_mov_in = string_array_new();
-				string_array_push(&parametros_mov_in, direccion_logica_mov_in); //TODO: fijarse si se envía la dirección lógica o física
+				string_array_push(&parametros_mov_in, string_itoa(datos_mmu_mov_in.direccion_fisica));
+				string_array_push(&parametros_mov_in, string_itoa(tamanio_registro(registro_mov_in)));
 
 				enviar_msj_con_parametros(socket_memoria, LEER_VALOR, parametros_mov_in);
 
 				string_array_destroy(parametros_mov_in);
 
-				parametros_mov_in = recibir_parametros_de_mensaje(socket_memoria); //TODO: fijarse si memoria debería tener dos hilos: uno para escuchar a FS y otro para CPU
+				recibir_msj(socket_memoria); //LEIDO_OK
+				//TODO: fijarse si es al pedo recibirlo
+				parametros_mov_in = recibir_parametros_de_mensaje(socket_memoria);
 
 				char* valor_mov_in = parametros_mov_in[0];
 				set_registro(pcb, registro_mov_in, valor_mov_in);
@@ -46,8 +51,11 @@ void ejecutar_instrucciones(t_pcb* pcb) {
 				char* direccion_logica_mov_out = list_get(instruccion_actual->parametros, 0);
 				char* registro_mov_out = list_get(instruccion_actual->parametros, 1);
 
+				t_datos_mmu datos_mmu_mov_out = mmu(instruccion_actual, pcb, atoi(direccion_logica_mov_out));
+
 				char** parametros_mov_out = string_array_new();
-				string_array_push(&parametros_mov_out, direccion_logica_mov_out); //TODO: fijarse si se envía la dirección lógica o física
+				string_array_push(&parametros_mov_out, string_itoa(datos_mmu_mov_out.direccion_fisica));
+				string_array_push(&parametros_mov_out, string_itoa(tamanio_registro(registro_mov_out)));
 
 				char* valor_mov_out = leer_registro(pcb, registro_mov_out);
 				string_array_push(&parametros_mov_out, valor_mov_out);
@@ -57,6 +65,8 @@ void ejecutar_instrucciones(t_pcb* pcb) {
 
 				string_array_destroy(parametros_mov_out);
 
+				recibir_msj(socket_memoria); //ESCRITO_OK
+				//TODO: fijarse si es al pedo recibirlo
 				break;
 
 			case IO:
@@ -76,36 +86,31 @@ void ejecutar_instrucciones(t_pcb* pcb) {
 				return;
 
 			case F_READ: case F_WRITE:
-				//MMU
 				int direccion_logica = atoi(list_get(instruccion_actual->parametros, 1)); //TODO: fijarse si es hexadecimal y no int
 
-				int numero_segmento = direccion_logica / lectura_de_config.TAM_MAX_SEGMENTO; //al asignarle a un int se obtiene el floor
-				int desplazamiento_segmento = direccion_logica % lectura_de_config.TAM_MAX_SEGMENTO;
-				int tamanio_segmento = buscar_tamanio_segmento(pcb->tabla_segmentos, numero_segmento);
-
-				int direccion_fisica = tamanio_segmento * numero_segmento + desplazamiento_segmento;
-
+				t_datos_mmu datos_mmu = mmu(instruccion_actual, pcb, direccion_logica);
 
 				//Me fijo si es F_READ o F_WRITE (hice esto para evitar mucha repetición de lógica)
 				t_msj_kernel_cpu mensaje_a_mandar;
-				log_acceso_memoria(&mensaje_a_mandar, instruccion_actual->nombre, pcb->pid, numero_segmento, direccion_fisica); //log obligatorio
+				log_acceso_memoria(&mensaje_a_mandar, instruccion_actual->nombre, pcb->pid, datos_mmu.numero_segmento, datos_mmu.direccion_fisica); //log obligatorio
 
-				int offset_total = desplazamiento_segmento + atoi(list_get(instruccion_actual->parametros, 2));
+				char* cantidad_de_bytes = list_get(instruccion_actual->parametros, 2);
+				int offset_total = datos_mmu.desplazamiento_segmento + atoi(cantidad_de_bytes);
 				//if(offset_total > tamanio_segmento) { //TODO: calcula mal el tamanio_segmento porque no encuentra el id del segmento. Resolver duda sobre quién crea la tabla de segmentos (si Memoria, quien debería manejar todo, o Kernel con t_list y fue)
 				if(0) {
-					log_info(logger, "PID: %d - Error SEG_FAULT - Segmento: %d - Offset: %d - Tamaño: %d", pcb->pid, numero_segmento, offset_total - tamanio_segmento, tamanio_segmento); //log obligatorio
-					//TODO: fijarse si es correcto el OFFSET
+					log_info(logger, "PID: %d - Error SEG_FAULT - Segmento: %d - Offset: %d - Tamaño: %s", pcb->pid, datos_mmu.numero_segmento, offset_total - datos_mmu.tamanio_segmento, cantidad_de_bytes); //log obligatorio
+					//TODO: fijarse si es correcto el OFFSET y el tamanio
 
 					enviar_pcb_a_kernel(pcb, EXIT_CON_SEG_FAULT_EJECUTADO, instruccion_actual->parametros, 3);
 				}
 				else {
 					t_list* parametros_a_enviar = list_create();
 
-					char* str_direccion_fisica = string_itoa(direccion_fisica);
+					char* str_direccion_fisica = string_itoa(datos_mmu.direccion_fisica);
 
 					list_add(parametros_a_enviar, list_get(instruccion_actual->parametros, 0));
 					list_add(parametros_a_enviar, str_direccion_fisica);
-					list_add(parametros_a_enviar, list_get(instruccion_actual->parametros, 2));
+					list_add(parametros_a_enviar, cantidad_de_bytes);
 
 					enviar_pcb_a_kernel(pcb, mensaje_a_mandar, parametros_a_enviar, 3);
 
@@ -216,59 +221,57 @@ void set_registro(t_pcb* pcb, char* registro, char* valor) {
 }
 
 char* leer_registro(t_pcb* pcb, char* registro) {
-	char* valor;
+	char* valor = malloc(tamanio_registro(registro) * sizeof(char));
 
 	if(!strcmp(registro, "AX")) {
-		valor = malloc(4 * sizeof(char));
 		memcpy(valor, pcb->registros_cpu.AX, 4 * sizeof(char));
 	}
 	else if(!strcmp(registro, "BX")) {
-		valor = malloc(4 * sizeof(char));
 		memcpy(valor, pcb->registros_cpu.BX, 4 * sizeof(char));
 	}
 	else if(!strcmp(registro, "CX")) {
-		valor = malloc(4 * sizeof(char));
 		memcpy(valor, pcb->registros_cpu.CX, 4 * sizeof(char));
 	}
 	else if(!strcmp(registro, "DX")) {
-		valor = malloc(4 * sizeof(char));
 		memcpy(valor, pcb->registros_cpu.DX, 4 * sizeof(char));
 	}
 	else if(!strcmp(registro, "EAX")) {
-		valor = malloc(8 * sizeof(char));
 		memcpy(valor, pcb->registros_cpu.EAX, 8 * sizeof(char));
 	}
 	else if(!strcmp(registro, "EBX")) {
-		valor = malloc(8 * sizeof(char));
 		memcpy(valor, pcb->registros_cpu.EBX, 8 * sizeof(char));
 	}
 	else if(!strcmp(registro, "ECX")) {
-		valor = malloc(8 * sizeof(char));
 		memcpy(valor, pcb->registros_cpu.ECX, 8 * sizeof(char));
 	}
 	else if(!strcmp(registro, "EDX")) {
-		valor = malloc(8 * sizeof(char));
 		memcpy(valor, pcb->registros_cpu.EDX, 8 * sizeof(char));
 	}
 	else if(!strcmp(registro, "RAX")) {
-		valor = malloc(16 * sizeof(char));
 		memcpy(valor, pcb->registros_cpu.RAX, 16 * sizeof(char));
 	}
 	else if(!strcmp(registro, "RBX")) {
-		valor = malloc(16 * sizeof(char));
 		memcpy(valor, pcb->registros_cpu.RBX, 16 * sizeof(char));
 	}
 	else if(!strcmp(registro, "RCX")) {
-		valor = malloc(16 * sizeof(char));
 		memcpy(valor, pcb->registros_cpu.RCX, 16 * sizeof(char));
 	}
 	else if(!strcmp(registro, "RDX")) {
-		valor = malloc(16 * sizeof(char));
 		memcpy(valor, pcb->registros_cpu.RDX, 16 * sizeof(char));
 	}
 
 	usleep(lectura_de_config.RETARDO_INSTRUCCION * 1000);
 	return valor;
+}
+
+int tamanio_registro(char* nombre_registro) {
+	if(strlen(nombre_registro) == 2) {
+		return 4;
+	}
+	if(nombre_registro[0] == 'E') {
+		return 8;
+	}
+	return 16;
 }
 
 void enviar_pcb_a_kernel(t_pcb* pcb, t_msj_kernel_cpu mensaje, t_list* list_parametros, int cantidad_de_parametros) {
@@ -324,5 +327,23 @@ void log_acceso_memoria(t_msj_kernel_cpu* mensaje_a_mandar, char* nombre_instruc
 	log_info(logger, "PID: %d - Acción: %s - Segmento: %d - Dirección Física: %d - Valor: <VALOR LEIDO / ESCRITO>", pid, accion, numero_segmento, direccion_fisica); //log obligatorio
 	//TODO: falta <VALOR LEIDO / ESCRITO>
 	free(accion);
+}
+
+t_datos_mmu mmu(t_instruccion* instruccion_actual, t_pcb* pcb, int direccion_logica) {
+	t_datos_mmu datos;
+
+	datos.numero_segmento = direccion_logica / lectura_de_config.TAM_MAX_SEGMENTO; //al asignarle a un int se obtiene el floor
+	datos.desplazamiento_segmento = direccion_logica % lectura_de_config.TAM_MAX_SEGMENTO;
+
+	datos.tamanio_segmento = buscar_tamanio_segmento(pcb->tabla_segmentos, datos.numero_segmento);
+
+	datos.direccion_fisica = datos.tamanio_segmento * datos.numero_segmento + datos.desplazamiento_segmento; //TODO: fijarse si está bien o si se lo tengo que preguntar a memoria
+
+	/* Otra forma que capaz podría ser es que me lo diga memoria
+	pedir_direccion_fisica(pcb->pid, datos.numero_segmento);
+	datos.direccion_fisica = recibir_direccion_fisica();
+	*/
+
+	return datos;
 }
 
