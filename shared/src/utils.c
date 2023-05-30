@@ -1,8 +1,8 @@
 #include "utils.h"
 
-//////////////////////////
-// Funciones de cliente //
-//////////////////////////
+/////////////
+// Cliente //
+/////////////
 
 int crear_conexion(char *ip, char* puerto) {
 	struct addrinfo hints;
@@ -29,8 +29,7 @@ int crear_conexion(char *ip, char* puerto) {
 	return socket_cliente;
 }
 
-void enviar_mensaje(char* mensaje, int socket_cliente)
-{
+void enviar_mensaje(char* mensaje, int socket_cliente) {
 	t_paquete* paquete = malloc(sizeof(t_paquete));
 
 	paquete->codigo_operacion = MENSAJE;
@@ -50,7 +49,7 @@ void enviar_mensaje(char* mensaje, int socket_cliente)
 }
 
 ///////////////////////////
-// Funciones de servidor //
+// Servidor //
 ///////////////////////////
 
 int iniciar_servidor(char* IP, char* PUERTO) {
@@ -190,6 +189,10 @@ void enviar_fin_proceso(int socket, t_msj_kernel_consola mensaje) {
 	send(socket, &mensaje, sizeof(mensaje), 0);
 }
 
+//////////////////////
+// Listas de estado //
+//////////////////////
+
 void *queue_pop_con_mutex(t_queue* queue, pthread_mutex_t* mutex) {
     pthread_mutex_lock(mutex);
     void *elemento = queue_pop(queue);
@@ -218,6 +221,10 @@ void list_push_con_mutex(t_list* lista,void* elemento , pthread_mutex_t* mutex) 
     return;
 }
 
+///////////////////
+// Liberar datos //
+///////////////////
+
 void destruir_instruccion(t_instruccion* instruccion) {
 	free(instruccion->nombre);
 	list_destroy_and_destroy_elements(instruccion->parametros, (void*)free);
@@ -226,7 +233,7 @@ void destruir_instruccion(t_instruccion* instruccion) {
 
 void liberar_pcb(t_pcb* pcb) {
 	list_destroy_and_destroy_elements(pcb->instrucciones, (void*)destruir_instruccion);
-	list_destroy_and_destroy_elements(pcb->archivos_abiertos,(void*)destruir_archivo_abierto);
+	list_destroy_and_destroy_elements(pcb->archivos_abiertos, (void*)destruir_archivo_abierto);
 	list_destroy(pcb->tabla_segmentos);
 	free(pcb);
 }
@@ -238,6 +245,19 @@ void liberar_parametros(char** parametros) {
 
 	free(parametros);
 }
+
+void destruir_archivo_abierto(t_archivo_abierto* archivo){
+	free(archivo->nombre_archivo);
+	free(archivo);
+}
+
+void liberar_tabla_segmentos(t_list* tabla_segmentos) {
+	list_destroy_and_destroy_elements(tabla_segmentos, (void*)free);
+}
+
+/////////
+// pcb //
+/////////
 
 void enviar_pcb(int socket, t_pcb* pcb, t_msj_kernel_cpu op_code, char** parametros_de_instruccion) {
 	size_t size_total;
@@ -677,6 +697,10 @@ void print_l_instrucciones(t_list* instrucciones) {
     }
 }
 
+//////////////
+// Mensajes //
+//////////////
+
 void enviar_msj(int socket, int msj) {
 	send(socket, &msj, sizeof(int), 0);
 }
@@ -747,9 +771,97 @@ char** recibir_parametros_de_mensaje(int socket) {
 	return parametros;
 }
 
-void destruir_archivo_abierto(t_archivo_abierto* archivo){
-	free(archivo->nombre_archivo);
-	free(archivo);
+///////////////////////////
+// Segmentos actualizdos //
+///////////////////////////
+
+void enviar_tabla_segmentos(int socket, t_list* tabla_segmentos) {
+	size_t size_total;
+	void* stream = serializar_procesos_con_segmentos(tabla_segmentos, &size_total);
+
+	send(socket, stream, size_total, 0);
+
+	free(stream);
+	list_destroy_and_destroy_elements(tabla_segmentos, (void*)free);
+}
+
+void* serializar_tabla_segmentos(t_list* tabla_segmentos, size_t* size_total) {
+	size_t size_payload = 0;
+	*size_total = sizeof(size_payload);
+
+	size_payload += list_size(tabla_segmentos) * sizeof(int) * 3; //id + direccion_base + tamanio
+
+	*size_total += size_payload;
+
+	void* stream = malloc(*size_total);
+	int desplazamiento = 0;
+
+	memcpy(stream + desplazamiento, &size_payload, sizeof(size_payload));
+	desplazamiento += sizeof(size_payload);
+
+	t_segmento* segmento;
+
+	for(int i = 0; i < list_size(tabla_segmentos); i++) {
+		segmento = list_get(tabla_segmentos, i);
+
+		memcpy(stream + desplazamiento, &(segmento->id), sizeof(segmento->id));
+		desplazamiento += sizeof(segmento->id);
+
+		memcpy(stream + desplazamiento, &(segmento->direccion_base), sizeof(segmento->direccion_base));
+		desplazamiento += sizeof(segmento->direccion_base);
+
+		memcpy(stream + desplazamiento, &(segmento->tamanio), sizeof(segmento->tamanio));
+		desplazamiento += sizeof(segmento->tamanio);
+	}
+
+	return stream;
+}
+
+t_list* recibir_tabla_segmentos(int socket) {
+	size_t size_payload;
+    if (recv(socket, &size_payload, sizeof(size_t), 0) != sizeof(size_t)) {
+        exit(EXIT_FAILURE);
+    }
+
+	void* stream_a_recibir = malloc(size_payload);
+    if (recv(socket, stream_a_recibir, size_payload, 0) != size_payload) {
+        free(stream_a_recibir);
+        exit(EXIT_FAILURE);
+    }
+
+    t_list* tabla_segmentos = deserializar_tabla_segmentos(stream_a_recibir);
+
+	free(stream_a_recibir);
+	return tabla_segmentos;
+}
+
+t_list* deserializar_tabla_segmentos(void* stream) {
+	size_t desplazamiento = 0;
+
+	size_t size_payload;
+	memcpy(stream + desplazamiento, &size_payload, sizeof(size_payload));
+	desplazamiento += sizeof(size_payload);
+
+	t_list* tabla_segmentos = list_create();
+
+	t_segmento* segmento;
+
+	while(desplazamiento < size_payload) {
+		segmento = malloc(sizeof(t_segmento));
+
+		memcpy(&(segmento->id), stream + desplazamiento, sizeof(segmento->id));
+		desplazamiento += sizeof(segmento->id);
+
+		memcpy(&(segmento->direccion_base), stream + desplazamiento, sizeof(segmento->direccion_base));
+		desplazamiento += sizeof(segmento->direccion_base);
+
+		memcpy(&(segmento->tamanio), stream + desplazamiento, sizeof(segmento->tamanio));
+		desplazamiento += sizeof(segmento->tamanio);
+
+		list_add(tabla_segmentos, segmento);
+	}
+
+	return tabla_segmentos;
 }
 
 void enviar_procesos_con_segmentos(int socket, t_list* procesos_actualizados) {
@@ -759,7 +871,7 @@ void enviar_procesos_con_segmentos(int socket, t_list* procesos_actualizados) {
 	send(socket, stream, size_total, 0);
 
 	free(stream);
-	list_destroy(procesos_actualizados);
+	list_destroy_and_destroy_elements(procesos_actualizados, (void*)liberar_tabla_segmentos);
 }
 
 void* serializar_procesos_con_segmentos(t_list* procesos_actualizados, size_t* size_total) {

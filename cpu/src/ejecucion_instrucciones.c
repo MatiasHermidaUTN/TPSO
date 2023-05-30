@@ -86,7 +86,7 @@ void ejecutar_instrucciones(t_pcb* pcb) {
 				return;
 
 			case F_READ: case F_WRITE:
-				int direccion_logica = atoi(list_get(instruccion_actual->parametros, 1)); //TODO: fijarse si es hexadecimal y no int
+				int direccion_logica = atoi(list_get(instruccion_actual->parametros, 1));
 
 				t_datos_mmu datos_mmu = mmu(instruccion_actual, pcb, direccion_logica);
 
@@ -95,11 +95,9 @@ void ejecutar_instrucciones(t_pcb* pcb) {
 				log_acceso_memoria(&mensaje_a_mandar, instruccion_actual->nombre, pcb->pid, datos_mmu.numero_segmento, datos_mmu.direccion_fisica); //log obligatorio
 
 				char* cantidad_de_bytes = list_get(instruccion_actual->parametros, 2);
-				int offset_total = datos_mmu.desplazamiento_segmento + atoi(cantidad_de_bytes);
-				//if(offset_total > tamanio_segmento) { //TODO: calcula mal el tamanio_segmento porque no encuentra el id del segmento. Resolver duda sobre quién crea la tabla de segmentos (si Memoria, quien debería manejar todo, o Kernel con t_list y fue)
+				//if(datos_mmu.desplazamiento_segmento + atoi(cantidad_de_bytes) > tamanio_segmento) { //TODO: calcula mal el tamanio_segmento porque no encuentra el id del segmento.
 				if(0) {
-					log_info(logger, "PID: %d - Error SEG_FAULT - Segmento: %d - Offset: %d - Tamaño: %s", pcb->pid, datos_mmu.numero_segmento, offset_total - datos_mmu.tamanio_segmento, cantidad_de_bytes); //log obligatorio
-					//TODO: fijarse si es correcto el OFFSET y el tamanio
+					log_info(logger, "PID: %d - Error SEG_FAULT - Segmento: %d - Offset: %d - Tamaño: %d", pcb->pid, datos_mmu.numero_segmento, datos_mmu.desplazamiento_segmento, datos_mmu.tamanio_segmento); //log obligatorio
 
 					enviar_pcb_a_kernel(pcb, EXIT_CON_SEG_FAULT_EJECUTADO, instruccion_actual->parametros, 3);
 				}
@@ -299,13 +297,18 @@ char* obtener_parametros_a_emitir(t_list* parametros_actuales) {
 	return parametros_a_emitir;
 }
 
-int buscar_tamanio_segmento(t_list* segmentos, int id) {
+int buscar_campo_de_segmento(t_list* segmentos, char* campo, int id) {
 	t_segmento* segmento;
 
 	for(int i = 0; i < list_size(segmentos); i++) {
 		segmento = list_get(segmentos, i);
 		if(segmento->id == id) {
-			return segmento->tamanio;
+			if(!strcmp(campo, "base")) {
+				return segmento->tamanio;
+			}
+			if(!strcmp(campo, "tamanio")) {
+				return segmento->tamanio;
+			}
 		}
 	}
 
@@ -335,15 +338,9 @@ t_datos_mmu mmu(t_instruccion* instruccion_actual, t_pcb* pcb, int direccion_log
 	datos.numero_segmento = direccion_logica / lectura_de_config.TAM_MAX_SEGMENTO; //al asignarle a un int se obtiene el floor
 	datos.desplazamiento_segmento = direccion_logica % lectura_de_config.TAM_MAX_SEGMENTO;
 
-	datos.tamanio_segmento = buscar_tamanio_segmento(pcb->tabla_segmentos, datos.numero_segmento);
+	datos.tamanio_segmento = buscar_campo_de_segmento(pcb->tabla_segmentos, "tamanio", datos.numero_segmento);
 
-	datos.direccion_fisica = datos.tamanio_segmento * datos.numero_segmento + datos.desplazamiento_segmento; //TODO: fijarse si está bien o si se lo tengo que preguntar a memoria
-
-	/* Otra forma que capaz podría ser es que me lo diga memoria
-	pedir_direccion_fisica(pcb->pid, datos.numero_segmento);
-	datos.direccion_fisica = recibir_direccion_fisica();
-	*/
+	datos.direccion_fisica = datos.desplazamiento_segmento + buscar_campo_de_segmento(pcb->tabla_segmentos, "base", datos.numero_segmento);
 
 	return datos;
 }
-

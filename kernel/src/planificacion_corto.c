@@ -147,14 +147,17 @@ void planificar_corto() {
 
 				t_archivo_abierto* archivo = buscar_archivo_en_pcb(pcb_recibido, parametros[0]);
 
-				string_array_push(&parametros, string_itoa(archivo->posicion_actual)); //TODO: duda, cambiamos la posicion actual?
+				string_array_push(&parametros, string_itoa(archivo->posicion_actual));
 				string_array_push(&parametros, string_itoa(pcb_recibido->pid));
+
+				int cantidad_bytes = atoi(parametros[2]);
+				archivo->posicion_actual += cantidad_bytes;
+
 				bloquear_pcb_por_archivo(pcb_recibido, parametros[0]);
 				enviar_msj_con_parametros(socket_fileSystem, mensaje_a_mandar, parametros);
 
-				log_info(logger, "PID: %d - %s Archivo: %s - Puntero %d - Dirección Memoria %s - Tamaño %s", pcb_recibido->pid, accion, archivo->nombre_archivo, archivo->posicion_actual, parametros[1], parametros[2]); //log obligatorio
-				//TODO: el log (y el puntero) tiene que ser antes o después de haber leido?
-				//TODO: dirección de memoria es lo mismo que dirección física?
+				log_info(logger, "PID: %d - %s Archivo: %s - Puntero %d - Dirección Memoria %s - Tamaño %d", pcb_recibido->pid, accion, archivo->nombre_archivo, archivo->posicion_actual, parametros[1], cantidad_bytes); //log obligatorio
+
 
 				free(accion);
 				string_array_destroy(parametros);
@@ -216,10 +219,9 @@ void planificar_corto() {
 
 				enviar_msj_con_parametros(socket_memoria, ELIMINAR_SEGMENTO, parametros); //Es un solo parametro, que es el id
 
-				int id_segmento_a_eliminar = atoi(parametros[0]);
-				eliminar_segmento(pcb_recibido, id_segmento_a_eliminar);
-				log_info(logger, "PID: %d - Eliminar Segmento - Id Segmento: %d", pcb_recibido->pid, id_segmento_a_eliminar); //log obligatorio
-				//TODO: fijarse si hace falta que reciba realmente algo de memoria
+				actualizar_segmentos_de_pcb(pcb_recibido, recibir_tabla_segmentos(socket_memoria));
+
+				log_info(logger, "PID: %d - Eliminar Segmento - Id Segmento: %s", pcb_recibido->pid, parametros[0]); //log obligatorio
 
 				string_array_destroy(parametros);
 
@@ -244,8 +246,7 @@ void planificar_corto() {
 				parametros = recibir_parametros_de_instruccion();
 				pcb_recibido = recibir_pcb(socket_cpu);
 
-				cerrar_archivo(pcb_recibido, parametros[0]);
-				//TODO: fijarse si realmente tiene que cerrar el archivo, o matar al kernel o que el archivo se quede abierto para siempre
+				cerrar_todos_los_archivos(pcb_recibido);
 
 				exit_proceso(pcb_recibido, SEG_FAULT); //Aca hace el sem_post(&sem_multiprogramacion)
 
@@ -395,6 +396,7 @@ void list_remove_pcb(t_list *lista, t_pcb *pcb) {
 }
 
 void cerrar_archivo(t_pcb* pcb_recibido, char* nombre_archivo) {
+	//Elimina al archivo de la lista de archivos abiertos del pcb
 	eliminar_archivo(pcb_recibido, nombre_archivo);
 
 	t_recurso* archivo_a_cerrar = buscar_recurso(nombre_archivo, list_archivos);
@@ -402,22 +404,31 @@ void cerrar_archivo(t_pcb* pcb_recibido, char* nombre_archivo) {
 
 	log_info(logger, "PID: %d - Cerrar Archivo: %s", pcb_recibido->pid, archivo_a_cerrar->nombre); //log obligatorio
 
-	if(queue_is_empty(archivo_a_cerrar->cola_bloqueados)) {
+	if(queue_is_empty(archivo_a_cerrar->cola_bloqueados)) { //Si nadie está usando el archivo
 		// Elimina al archivo de la lista global de archivos abiertos
 		list_remove_recurso(list_archivos, archivo_a_cerrar);
 
-		// Elimina toda referencia al archivo
+		// Elimina toda referencia al archivo y lo libera
 		queue_destroy(archivo_a_cerrar->cola_bloqueados);
 		free(archivo_a_cerrar->nombre);
 		free(archivo_a_cerrar);
 	}
-	else {
+	else { //Si había al menos un pcb esperando abrir el archivo
+		//Desbloquea el primer pcb de la cola de bloqueados
 		t_pcb* pcb_a_desbloquear = queue_pop_con_mutex(archivo_a_cerrar->cola_bloqueados, &(archivo_a_cerrar->mutex_archivo));
 
 		ready_list_push(pcb_a_desbloquear);
 
 		log_info(logger, "PID: %d - Abrir Archivo: %s", pcb_a_desbloquear->pid, archivo_a_cerrar->nombre); //log obligatorio
 		//TODO: me suena raro que tenga que poner que abrio el archivo estando en Ready
+	}
+}
+
+void cerrar_todos_los_archivos(t_pcb* pcb) {
+	t_archivo_abierto* archivo;
+	for(int i = 0; i < list_size(pcb->archivos_abiertos); i++) {
+		archivo = list_get(pcb->archivos_abiertos, 0); //0 pues cerrar_archivo va a ir eliminándolo de la lista de archivos_abiertos
+		cerrar_archivo(pcb, archivo->nombre_archivo);
 	}
 }
 
@@ -455,14 +466,15 @@ t_pcb* list_get_max_R(t_list* lista) {
 }
 
 t_archivo_abierto* buscar_archivo_en_pcb(t_pcb* pcb, char* nombre) {
-	t_archivo_abierto* elemento;
+	t_archivo_abierto* archivo = NULL;
 	for(int i = 0; i < list_size(pcb->archivos_abiertos); i++) {
-		elemento = list_get(pcb->archivos_abiertos, i);
-		if(!strcmp(elemento->nombre_archivo, nombre)) {
-			elemento = list_get(pcb->archivos_abiertos, i);
+		archivo = list_get(pcb->archivos_abiertos, i);
+		if(!strcmp(archivo->nombre_archivo, nombre)) {
+			return archivo;
 		}
 	}
-	return elemento;
+
+	return archivo; //error
 }
 
 void bloquear_pcb_por_archivo(t_pcb* pcb, char* nombre_archivo) {
@@ -484,17 +496,9 @@ void crear_segmento(t_pcb* pcb_recibido, char** parametros) {
 
 	switch(mensaje_recibido) {
 		case SEGMENTO_CREADO:
-			char** parametros_recibidos_de_memoria = recibir_parametros_de_mensaje(socket_memoria);
+			actualizar_segmentos_de_pcb(pcb_recibido, recibir_tabla_segmentos(socket_memoria));
 
-			t_segmento* segmento_a_crear = malloc(sizeof(t_segmento)); //Se libera en DELETE_SEGMENT en eliminar_segmento()
-			segmento_a_crear->id = atoi(parametros[0]);
-			segmento_a_crear->direccion_base = atoi(parametros_recibidos_de_memoria[0]);
-			segmento_a_crear->tamanio = atoi(parametros[1]);
-
-			list_add(pcb_recibido->tabla_segmentos, segmento_a_crear);
-			log_info(logger, "PID: %d - Crear Segmento - Id: %d - Tamaño: %d", pcb_recibido->pid, segmento_a_crear->id, segmento_a_crear->tamanio); //log obligatorio
-
-			string_array_destroy(parametros_recibidos_de_memoria);
+			log_info(logger, "PID: %d - Crear Segmento - Id: %s - Tamaño: %s", pcb_recibido->pid, parametros[0], parametros[1]); //log obligatorio
 
 			mantener_pcb_en_exec(pcb_recibido);
 			break;
@@ -533,28 +537,19 @@ void crear_segmento(t_pcb* pcb_recibido, char** parametros) {
 	}
 }
 
-void eliminar_segmento(t_pcb* pcb, int id) {
-	t_segmento* segmento_a_eliminar;
-	for(int i = 0; i < list_size(pcb->tabla_segmentos); i++) {
-		segmento_a_eliminar = list_get(pcb->tabla_segmentos, i);
-		if(segmento_a_eliminar->id == id) {
-			list_remove(pcb->tabla_segmentos, i);
-			free(segmento_a_eliminar);
-		}
-	}
-}
-
 void actualizar_segmentos(t_pcb* pcb_en_exec) {
 	t_list* procesos = recibir_procesos_con_segmentos(socket_memoria);
 
-	t_proceso_actualizado* proceso; //es distinto a t_pcb, pues solo tiene id + tabla_segmentos
+	t_proceso_actualizado* proceso_en_exec; //es distinto a t_pcb, pues solo tiene id + tabla_segmentos
 
-	proceso = list_remove_if_pid_equals_to(procesos, pcb_en_exec->pid);
-	actualizar_segmentos_de_pcb(pcb_en_exec, proceso->tabla_segmentos);
+	proceso_en_exec = list_remove_if_pid_equals_to(procesos, pcb_en_exec->pid);
+	actualizar_segmentos_de_pcb(pcb_en_exec, proceso_en_exec->tabla_segmentos);
 
-	free(proceso);
+	free(proceso_en_exec);
 
+	pthread_mutex_lock(&mutex_ready_list); //Se hace el mutex acá afuera para que ningún pcb entre de New mientras se está actualizando la lista de ready
 	actualizar_segmentos_de_lista(ready_list, procesos);
+	pthread_mutex_unlock(&mutex_ready_list);
 
 	t_recurso* recurso;
 	for(int i = 0; i < list_size(list_recursos); i++) {
@@ -566,35 +561,31 @@ void actualizar_segmentos(t_pcb* pcb_en_exec) {
 		actualizar_segmentos_de_cola(recurso->cola_bloqueados, procesos);
 	}
 
-	list_destroy(procesos);
+	list_destroy(procesos); //Los procesos dentro de la lista se van liberando en el medio del proceso de arriba
 }
 
 void actualizar_segmentos_de_lista(t_list* lista, t_list* procesos) {
 	t_pcb* pcb;
-
 	t_proceso_actualizado* proceso; //es distinto a t_pcb, pues solo tiene id + tabla_segmentos
 
 	for(int i = 0; i < list_size(lista); i++) {
 		pcb = list_remove(lista, 0);
-
 		proceso = list_remove_if_pid_equals_to(procesos, pcb->pid);
 
 		actualizar_segmentos_de_pcb(pcb, proceso->tabla_segmentos);
 
-		free(proceso); //TODO: fijarse si está bien
+		free(proceso);
 
-		list_add(lista, pcb);
+		list_add(lista, pcb); //Al tocar la ready_list hay que usar mutex, pero se lo utiliza en la llamada a esta función
 	}
 }
 
 void actualizar_segmentos_de_cola(t_queue* cola, t_list* procesos) {
 	t_pcb* pcb;
-
 	t_proceso_actualizado* proceso; //es distinto a t_pcb, pues solo tiene id + tabla_segmentos
 
 	for(int i = 0; i < queue_size(cola); i++) {
 		pcb = queue_pop(cola);
-
 		proceso = list_remove_if_pid_equals_to(procesos, pcb->pid);
 
 		actualizar_segmentos_de_pcb(pcb, proceso->tabla_segmentos);
@@ -606,18 +597,8 @@ void actualizar_segmentos_de_cola(t_queue* cola, t_list* procesos) {
 }
 
 void actualizar_segmentos_de_pcb(t_pcb* pcb, t_list* segmentos) {
-	t_segmento* segmento;
-
-	//list_size(pcb->tabla_segmentos) == list_size(segmentos)
-	for(int i = 0; i < list_size(segmentos); i++) {
-		segmento = list_remove(pcb->tabla_segmentos, 0); //Elimina el primero
-		free(segmento);
-
-		list_add(pcb->tabla_segmentos, list_remove(segmentos, 0)); //Lo agrega al final
-		//No me importa el orden
-	}
-
-	list_destroy(segmentos);
+	list_destroy_and_destroy_elements(pcb->tabla_segmentos, (void*)free);
+	pcb->tabla_segmentos = segmentos;
 }
 
 t_proceso_actualizado* list_remove_if_pid_equals_to(t_list* procesos, int pid) {

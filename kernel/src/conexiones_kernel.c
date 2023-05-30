@@ -51,7 +51,10 @@ t_pcb* crear_pcb(t_list* instrucciones, int socket_consola) {
 	pcb->instrucciones = instrucciones;
 	pcb->pc = 0;
 	pcb->registros_cpu = init_registros_cpu();
-	pcb->tabla_segmentos = list_create(); //TODO: fijarse si lo tiene que hacer Memoria
+
+	enviar_msj(socket_memoria, INICIALIZAR_PROCESO);
+	pcb->tabla_segmentos = recibir_tabla_segmentos(socket_memoria);
+
 	pcb->estimado_prox_rafaga = lectura_de_config.ESTIMACION_INICIAL;
 	pcb->tiempo_llegada_ready = 0;
 	pcb->archivos_abiertos = list_create();

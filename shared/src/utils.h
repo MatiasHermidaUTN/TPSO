@@ -179,13 +179,17 @@ typedef struct {
 	t_list* tabla_segmentos;
 } t_proceso_actualizado;
 
-//////////////////////////
-// Utils.c del servidor //
-//////////////////////////
+/////////////
+// Cliente //
+/////////////
 
 int crear_conexion(char *ip, char* puerto);
 
 void enviar_mensaje(char* mensaje, int socket_cliente);
+
+//////////////
+// Servidor //
+//////////////
 
 int iniciar_servidor(char* IP, char* PUERTO);
 
@@ -221,11 +225,10 @@ void list_push_con_mutex(t_list* lista, void* elemento, pthread_mutex_t* mutex);
 ///////////////////
 
 void destruir_instruccion(t_instruccion* instruccion);
-
 void liberar_pcb(t_pcb* pcb);
-//void liberar_tabla_segmentos_pcb(tabla_segmentos);
-//void liberar_archivos_abiertos_pcb(archivos_abiertos);
 void liberar_parametros(char** parametros);
+void destruir_archivo_abierto(t_archivo_abierto* archivo);
+void liberar_tabla_segmentos(t_list* tabla_segmentos);
 
 /////////
 // pcb //
@@ -262,12 +265,16 @@ void print_l_instrucciones(t_list* instrucciones);
 void enviar_msj(int socket, int msj);
 int recibir_msj(int socket);
 void enviar_msj_con_parametros(int socket, int op_code, char** parametros);
-void destruir_archivo_abierto(t_archivo_abierto* archivo);
 char** recibir_parametros_de_mensaje(int socket);
 
-////////////////////////////////////////
-// Procesos con segmentos actualizdos //
-////////////////////////////////////////
+///////////////////////////
+// Segmentos actualizdos //
+///////////////////////////
+
+void enviar_tabla_segmentos(int socket, t_list* tabla_segmentos);
+void* serializar_tabla_segmentos(t_list* tabla_segmentos, size_t* size_total);
+t_list* recibir_tabla_segmentos(int socket);
+t_list* deserializar_tabla_segmentos(void* stream);
 
 void enviar_procesos_con_segmentos(int socket, t_list* procesos_actualizados);
 void* serializar_procesos_con_segmentos(t_list* procesos_actualizados, size_t* size_total);

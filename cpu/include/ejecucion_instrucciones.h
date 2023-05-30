@@ -29,7 +29,7 @@ void enviar_pcb_a_kernel(t_pcb* pcb, t_msj_kernel_cpu mensaje, t_list* list_para
 
 char* obtener_parametros_a_emitir(t_list* parametros_actuales);
 
-int buscar_tamanio_segmento(t_list* segmentos, int indice);
+int buscar_campo_de_segmento(t_list* segmentos, char* campo, int id);
 
 void log_acceso_memoria(t_msj_kernel_cpu* respuesta_a_mandar, char* nombre_instruccion, int pid, int numero_segmento, int direccion_fisica);
 
