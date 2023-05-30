@@ -76,29 +76,31 @@ int manejar_mensaje() { //pinta bien
 	int tamanio_buffer;
 	char* buffer;
 
+	char ** parametros_a_enviar = string_array_new();
+	nodoProceso* nodoP;
+	int base;
+
+	if(mensaje->origen_mensaje == KERNEL)
 	switch (mensaje->cod_op) {
-		case INICIALIZAR_EL_PROCESO:{
+		case INICIALIZAR_PROCESO:
 			//parametros a recibir (necesarios) en este caso: pid
-			pid = mensaje->parametros[0];
+			pid = atoi(mensaje->parametros[0]);
 
-			log_info(logger, "Creación de Proceso PID: <%d>", pid); //log obligatorio
+			log_info(logger, "Creación de Proceso PID: %d", pid); //log obligatorio
 
-			nodoProceso* nodoP = crear_proceso(pid);
+			nodoP = crear_proceso(pid);
 
-			char ** parametros_a_enviar = string_array_new();
-			string_array_push(&parametros_a_enviar, atoi(pid));
+			string_array_push(&parametros_a_enviar, string_itoa(pid));
 			string_array_push_para_lista_segmentos(&parametros_a_enviar, nodoP->tabla_segmentos);
 			enviar_msj_con_parametros(socket_kernel, PROCESO_INICIALIZADO, parametros_a_enviar);
-			string_array_destroy(parametros_a_enviar);
 
-			free(buffer);
 			break;
-		}
-		case CREAR_SEGMENTO:{
+
+		case CREAR_SEGMENTO:
 			//parametros a recibir (necesarios) en este caso: pid, id_segmento, tamanio_segmento
-			pid = mensaje->parametros[0];
-			id_segmento = mensaje->parametros[1];
-			tamanio_segmento = mensaje->parametros[2];
+			pid = atoi(mensaje->parametros[0]);
+			id_segmento = atoi(mensaje->parametros[1]);
+			tamanio_segmento = atoi(mensaje->parametros[2]);
 
 			if(!tengo_espacio_general(tamanio_segmento)) {
 				//error?
@@ -111,71 +113,87 @@ int manejar_mensaje() { //pinta bien
 				enviar_msj(socket_kernel, HAY_QUE_COMPACTAR); 
 				break;
 			}
-			int base = crear_segmento(pid, id_segmento, tamanio_segmento); //TODO definir id_segmento yo
+			base = crear_segmento(pid, id_segmento, tamanio_segmento); //TODO definir id_segmento yo
 
-			log_info(logger, "PID: <%d> - Crear Segmento: <%d> - Base: <%d> - TAMAÑO: <%d>", pid, id_segmento, base, tamanio_segmento); //log obligatorio
+			log_info(logger, "PID: %d - Crear Segmento: %d - Base: %d - Tamaño: %d", pid, id_segmento, base, tamanio_segmento); //log obligatorio
 
-			char ** parametros_a_enviar = string_array_new();
-			string_array_push(&parametros_a_enviar, atoi(pid));
-			string_array_push(&parametros_a_enviar, atoi(id_segmento));
-			string_array_push(&parametros_a_enviar, atoi(tamanio_segmento));
-			string_array_push(&parametros_a_enviar, atoi(base));
+			string_array_push(&parametros_a_enviar, string_itoa(pid));
+			string_array_push(&parametros_a_enviar, string_itoa(id_segmento));
+			string_array_push(&parametros_a_enviar, string_itoa(tamanio_segmento));
+			string_array_push(&parametros_a_enviar, string_itoa(base));
 			enviar_msj_con_parametros(socket_kernel, SEGMENTO_CREADO, parametros_a_enviar);
-			string_array_destroy(parametros_a_enviar);
 
-			free(buffer);
 			break;
-		}
-		case ELIMINAR_SEGMENTO:{
+
+		case ELIMINAR_SEGMENTO:
 			//parametros a recibir (necesarios) en este caso: pid, id_segmento
-			pid = mensaje->parametros[0];
-			id_segmento = mensaje->parametros[1];
+			pid = atoi(mensaje->parametros[0]);
+			id_segmento = atoi(mensaje->parametros[1]);
 
-			nodoProceso* nodoP = buscar_por_pid(lista_procesos, pid);
-			nodoSegmento* nodoS = buscar_por_id(nodoP->lista_segmentos, id_segmento);
+			nodoP = buscar_por_pid(lista_procesos, pid);
+			nodoSegmento* nodoS = buscar_por_id(nodoP->tabla_segmentos, id_segmento);
 
-			int base = nodoS->base;
+			base = nodoS->base;
 			int tamanio_segmento = nodoS->tamanio;
 			
 			eliminar_segmento(pid, id_segmento);
 
 			nodoP = buscar_por_pid(lista_procesos, pid);
 
-			log_info(logger, "PID: <%d> - Eliminar Segmento: <%d> - Base: <%d> - TAMAÑO: <%d>", pid, id_segmento, base, tamanio_segmento); //log obligatorio
+			log_info(logger, "PID: %d - Eliminar Segmento: %d - Base: %d - TAMAÑO: %d", pid, id_segmento, base, tamanio_segmento); //log obligatorio
 
-			char ** parametros_a_enviar = string_array_new();
-			string_array_push(&parametros_a_enviar, atoi(pid));
+			string_array_push(&parametros_a_enviar, string_itoa(pid));
 			string_array_push_para_lista_segmentos(&parametros_a_enviar, nodoP->tabla_segmentos);
 			enviar_msj_con_parametros(socket_kernel, SEGMENTO_ELIMINADO, parametros_a_enviar);
-			string_array_destroy(parametros_a_enviar);
 
-			free(buffer);
 			break;
-		}
-		case ELIMINAR_PROCESO:{
+
+		case ELIMINAR_PROCESO:
 			//parametros a recibir (necesarios) en este caso: pid
-			pid = mensaje->parametros[0];
+			pid = atoi(mensaje->parametros[0]);
 
 			eliminar_proceso(pid);
 
-			log_info(logger, "Eliminación de Proceso PID: <%d>", pid); //log obligatorio
+			log_info(logger, "Eliminación de Proceso PID: %d", pid); //log obligatorio
 
 			enviar_msj(socket_kernel, PROCESO_ELIMINADO);
 
-			free(buffer);
 			break;
-		}
-		case ESCRIBIR:{
+
+		case COMPACTAR:
+			//parametros a recibir (necesarios) en este caso:
+			log_info(logger, "Solicitud de Compactación"); //log obligatorio
+
+			compactar();
+
+			log_compactacion(); //log obligatorio
+
+			char ** parametros_a_enviar = string_array_new();
+
+			nodoProceso* nodoP = lista_procesos;
+			while (nodoP) {
+				string_array_push(&parametros_a_enviar, string_itoa(nodoP->pid));
+				string_array_push_para_lista_segmentos(&parametros_a_enviar, nodoP->tabla_segmentos);
+				nodoP = nodoP->siguiente;
+			}
+			enviar_msj_con_parametros(socket_kernel, MEMORIA_COMPACTADA, parametros_a_enviar);
+			string_array_destroy(parametros_a_enviar);
+
+			break;
+	}
+	else //CPU o FS
+	switch (mensaje->cod_op) {
+		case ESCRIBIR_VALOR:
 			//parametros a recibir (necesarios) en este caso: dir_fisica, buffer, tamanio_buffer, origen_mensaje
-			dir_fisica = mensaje->parametros[0];
-			tamanio_buffer = mensaje->parametros[1]; //TODO ver si el resto del grupo agregan un +1 por el \0 o no
+			dir_fisica = atoi(mensaje->parametros[0]);
+			tamanio_buffer = atoi(mensaje->parametros[1]); //TODO ver si el resto del grupo agregan un +1 por el \0 o no
 			buffer = mensaje->parametros[2];
 
 			pid = buscar_pid_por_dir_fisica(dir_fisica);
 
 			memcpy(memoria_principal + dir_fisica, buffer, tamanio_buffer);
 
-			log_info(logger, "PID: <%d> - Acción: <ESCRIBIR> - Dirección física: <%d> - Tamaño: <%d> - Origen: <%d>", pid, dir_fisica, tamanio_buffer, mensaje->origen_mensaje); //log obligatorio
+			log_info(logger, "PID: %d - Acción: ESCRIBIR - Dirección física: %d - Tamaño: %d - Origen: %d", pid, dir_fisica, tamanio_buffer, mensaje->origen_mensaje); //log obligatorio
 
 			switch (mensaje->origen_mensaje){
 				case CPU:
@@ -190,11 +208,11 @@ int manejar_mensaje() { //pinta bien
 			}
 
 			break;
-		}
-		case LEER:{
+
+		case LEER_VALOR:
 			//parametros a recibir (necesarios) en este caso: dir_fisica, buffer, tamanio_buffer, origen_mensaje
-			dir_fisica = mensaje->parametros[0];
-			tamanio_buffer = mensaje->parametros[1];
+			dir_fisica = atoi(mensaje->parametros[0]);
+			tamanio_buffer = atoi(mensaje->parametros[1]);
 
 			char* bufferLectura = malloc(tamanio_buffer);
 
@@ -202,16 +220,16 @@ int manejar_mensaje() { //pinta bien
 
 			memcpy(bufferLectura, memoria_principal + dir_fisica, tamanio_buffer);
 
-			log_info(logger, "PID: <%d> - Acción: <LEER> - Dirección física: <%d> - Tamaño: <%d> - Origen: <%d>", pid, dir_fisica, tamanio_buffer, mensaje->origen_mensaje); //log obligatorio
+			log_info(logger, "PID: %d - Acción: LEER - Dirección física: %d - Tamaño: %d - Origen: %d", pid, dir_fisica, tamanio_buffer, mensaje->origen_mensaje); //log obligatorio
 
 			char ** parametros_a_enviar = string_array_new();
 			string_array_push(&parametros_a_enviar, bufferLectura);		//TODO puede haber seg_fault pq bufferLectura no tiene \0
 			switch (mensaje->origen_mensaje){
 				case CPU:
-					enviar_msj_con_parametros(socket_cpu, LEIDO, parametros_a_enviar);
+					enviar_msj_con_parametros(socket_cpu, LEIDO_OK, parametros_a_enviar);
 					break;
 				case FILESYSTEM:
-					enviar_msj_con_parametros(socket_fileSystem, LEIDO, parametros_a_enviar);
+					enviar_msj_con_parametros(socket_fileSystem, LEIDO_OK, parametros_a_enviar);
 					break;
 				default:
 					//error?
@@ -219,49 +237,23 @@ int manejar_mensaje() { //pinta bien
 			}
 			string_array_destroy(parametros_a_enviar);
 
-			free(buffer);
 			free(bufferLectura);
 			break;
-		}
-		case COMPACTAR:{
-			//parametros a recibir (necesarios) en este caso:
-			log_info(logger, "Solicitud de Compactación"); //log obligatorio
 
-			compactar();
-
-			log_compactacion(); //log obligatorio			
-
-			char ** parametros_a_enviar = string_array_new();
-
-			nodoProceso* nodoP = lista_procesos;
-			while (nodoP != NULL)
-			{
-				string_array_push(&parametros_a_enviar, atoi(nodoP->pid));
-				string_array_push_para_lista_segmentos(&parametros_a_enviar, nodoP->tabla_segmentos);
-				nodoP = nodoP->siguiente;
-			}
-			enviar_msj_con_parametros(socket_kernel, MEMORIA_COMPACTADA, parametros_a_enviar);
-			string_array_destroy(parametros_a_enviar);
-
-			free(buffer);
-
-			break;
-		}
-		default:{ 
-			free(buffer);
-			return 0;
-		}
+		default:
+			return -1;
 	}
-	string_array_destroy(parametros);
+
+	string_array_destroy(parametros_a_enviar);
 	free(mensaje);
 	return 1;
 }
 
-void string_array_push_para_lista_segmentos(char ***parametros_a_enviar, nodoSegmento* nodoS){
-	while(nodoS != NULL){  
-		string_array_push(*parametros_a_enviar, atoi(nodoS->id_segmento));
-		string_array_push(*parametros_a_enviar, atoi(nodoS->base));
-		string_array_push(*parametros_a_enviar, atoi(nodoS->tamanio));
+void string_array_push_para_lista_segmentos(char*** parametros_a_enviar, nodoSegmento* nodoS) {
+	while(nodoS) {
+		string_array_push(parametros_a_enviar, string_itoa(nodoS->id));
+		string_array_push(parametros_a_enviar, string_itoa(nodoS->base));
+		string_array_push(parametros_a_enviar, string_itoa(nodoS->tamanio));
 		
 		nodoS = nodoS->siguiente;
 	}
@@ -277,7 +269,7 @@ void compactar() { //CHEQUEADA
 					buscar_por_base(lista_procesos, j, &pid, &id_segmento);
 
 					nodoProceso* nodoP = buscar_por_pid(lista_procesos, pid);
-					nodoSegmento* nodoS = buscar_por_id(nodoP->lista_segmentos, id_segmento);
+					nodoSegmento* nodoS = buscar_por_id(nodoP->tabla_segmentos, id_segmento);
 
 					void* buffer = malloc(nodoS->tamanio);
 					memcpy(buffer, memoria_principal + j, nodoS->tamanio);
@@ -303,9 +295,9 @@ void compactar() { //CHEQUEADA
 
 void eliminar_segmento(int pid, int id_segmento) { //CHEQUEADA
 	nodoProceso* nodoP = buscar_por_pid(lista_procesos, pid);
-	nodoSegmento* nodoS = buscar_por_id(nodoP->lista_segmentos, id_segmento);
+	nodoSegmento* nodoS = buscar_por_id(nodoP->tabla_segmentos, id_segmento);
 
-	if(nodoS->id != 0){
+	if(nodoS->id) {
 		for(int i = nodoS->base; i < nodoS->base + nodoS->tamanio; i++){
 			bitarray_clean_bit(bitarray_de_bitmap, i);
 		}
@@ -313,14 +305,14 @@ void eliminar_segmento(int pid, int id_segmento) { //CHEQUEADA
 		memset(memoria_principal + nodoS->base, 0, nodoS->tamanio);
 	}
 
-	borrar_nodo_segmento(&(nodoP->lista_segmentos), nodoS);	
+	borrar_nodo_segmento(&(nodoP->tabla_segmentos), nodoS);
 }
 
 void eliminar_proceso(int pid) {
 	nodoProceso* nodoP = buscar_por_pid(lista_procesos, pid);
 
-	while(nodoP->lista_segmentos != NULL){
-		eliminar_segmento(pid, nodoP->lista_segmentos->id); //borro siempre el primer nodo, funca pero no se si es lo mejor
+	while(nodoP->tabla_segmentos != NULL){
+		eliminar_segmento(pid, nodoP->tabla_segmentos->id); //borro siempre el primer nodo, funca pero no se si es lo mejor
 	}
 
 	borrar_nodo_proceso(&lista_procesos, nodoP);
@@ -374,7 +366,7 @@ nodoProceso* crear_proceso(int pid){ //CHEQUEADA
 	nodoS->tamanio = atoi(lectura_de_config.TAM_SEGMENTO_0);
 	nodoS->siguiente = NULL;
 
-	nodoP->lista_segmentos = nodoS;
+	nodoP->tabla_segmentos = nodoS;
 	nodoP->siguiente = NULL;
 
 	push_proceso(&lista_procesos, nodoP);
@@ -385,7 +377,7 @@ int crear_segmento(int pid, int id_segmento, int tamanio_segmento) { //CHEQUEADA
 	nodoProceso* nodoP = buscar_por_pid(lista_procesos, pid);
 	int base = asignar_espacio_en_memoria(tamanio_segmento);
 
-	if (length_segmento(nodoP->lista_segmentos) >= atoi(lectura_de_config.CANT_SEGMENTOS)) {
+	if (length_segmento(nodoP->tabla_segmentos) >= atoi(lectura_de_config.CANT_SEGMENTOS)) {
 		//error
 		log_error(logger, "Max Cant de Segmentos alcanzada");
 	}
@@ -404,7 +396,7 @@ int crear_segmento(int pid, int id_segmento, int tamanio_segmento) { //CHEQUEADA
 	nodoS->tamanio = tamanio_segmento;
 	nodoS->siguiente = NULL;
 
-	push_segmento(&(nodoP->lista_segmentos), nodoS);
+	push_segmento(&(nodoP->tabla_segmentos), nodoS);
 
 	return base;
 }
@@ -413,75 +405,63 @@ int asignar_espacio_en_memoria(int tamanio_segmento) { //CHEQUEADA
 	int contador = 0;
 	int base = -1;
 	int espacio_libre = 0;
-	t_algoritmo_asignacion algoritmo_asignacion;
 	
-	if(!strcmp("FIRST", lectura_de_config.ALGORITMO_ASIGNACION))
-		algoritmo_asignacion = FIRST;
-	else if(!strcmp("BEST", lectura_de_config.ALGORITMO_ASIGNACION))
-		algoritmo_asignacion = BEST;
-	else if(!strcmp("WORST", lectura_de_config.ALGORITMO_ASIGNACION))
-		algoritmo_asignacion = WORST;
-
-	switch(algoritmo_asignacion){
-		default:
-		case FIRST:{
-			for(int i = 0; i < bitarray_get_max_bit(bitarray_de_bitmap); i++) {
-				if(bitarray_test_bit(bitarray_de_bitmap, i) == 0) {
-					contador++;
-				}
-				else {
-					contador = 0;
-				}
-				if(contador == tamanio_segmento) {
-					base = i - contador + 1;
-					break;
-				}
+	if(!strcmp("FIRST", lectura_de_config.ALGORITMO_ASIGNACION)) {
+		for(int i = 0; i < bitarray_get_max_bit(bitarray_de_bitmap); i++) {
+			if(bitarray_test_bit(bitarray_de_bitmap, i) == 0) {
+				contador++;
 			}
-			return base;
-		}
-		case BEST:{
-			for(int i = 0; i < bitarray_get_max_bit(bitarray_de_bitmap); i++) {
-				if(bitarray_test_bit(bitarray_de_bitmap, i) == 0) {
-					contador++;
-				}
-				else {
-					if(contador >= tamanio_segmento && (espacio_libre == 0 || contador < espacio_libre)) {
-						espacio_libre = contador;
-						base = i - contador;
-					}
-					contador = 0;
-				}
-				if(i == bitarray_get_max_bit(bitarray_de_bitmap) - 1){		//caso final de archivo, por si el ultimo es 0
-					if(contador >= tamanio_segmento && (espacio_libre == 0 || contador < espacio_libre)) {
-						espacio_libre = contador;
-						base = i - contador + 1;
-					}
-				}
+			else {
+				contador = 0;
 			}
-			return base;
-		}
-		case WORST:{
-			for(int i = 0; i < bitarray_get_max_bit(bitarray_de_bitmap); i++) {
-				if(bitarray_test_bit(bitarray_de_bitmap, i) == 0) {
-					contador++;
-				}
-				else {
-					if(contador >= tamanio_segmento && contador > espacio_libre) {
-						espacio_libre = contador;
-						base = i - contador;
-					}
-					contador = 0;
-				}
-				if(i == bitarray_get_max_bit(bitarray_de_bitmap) - 1){		//caso final de archivo, por si el ultimo es 0
-					if(contador >= tamanio_segmento && contador > espacio_libre) {
-						espacio_libre = contador;
-						base = i - contador + 1;
-					}
-				}
+			if(contador == tamanio_segmento) {
+				base = i - contador + 1;
+				break;
 			}
-			return base;
 		}
 	}
+	else if(!strcmp("BEST", lectura_de_config.ALGORITMO_ASIGNACION)) {
+		for(int i = 0; i < bitarray_get_max_bit(bitarray_de_bitmap); i++) {
+			if(bitarray_test_bit(bitarray_de_bitmap, i) == 0) {
+				contador++;
+			}
+			else {
+				if(contador >= tamanio_segmento && (espacio_libre == 0 || contador < espacio_libre)) {
+					espacio_libre = contador;
+					base = i - contador;
+				}
+				contador = 0;
+			}
+			if(i == bitarray_get_max_bit(bitarray_de_bitmap) - 1){		//caso final de archivo, por si el ultimo es 0
+				if(contador >= tamanio_segmento && (espacio_libre == 0 || contador < espacio_libre)) {
+					espacio_libre = contador;
+					base = i - contador + 1;
+				}
+			}
+		}
+	}
+	else { //WORST
+		for(int i = 0; i < bitarray_get_max_bit(bitarray_de_bitmap); i++) {
+			if(bitarray_test_bit(bitarray_de_bitmap, i) == 0) {
+				contador++;
+			}
+			else {
+				if(contador >= tamanio_segmento && contador > espacio_libre) {
+					espacio_libre = contador;
+					base = i - contador;
+				}
+				contador = 0;
+			}
+			if(i == bitarray_get_max_bit(bitarray_de_bitmap) - 1){		//caso final de archivo, por si el ultimo es 0
+				if(contador >= tamanio_segmento && contador > espacio_libre) {
+					espacio_libre = contador;
+					base = i - contador + 1;
+				}
+			}
+		}
+	}
+
+	return base;
 }
 
 //ALGORITMOS LISTAS
@@ -489,7 +469,7 @@ int asignar_espacio_en_memoria(int tamanio_segmento) { //CHEQUEADA
 nodoProceso* buscar_por_pid(nodoProceso* lista_procesos, int pid) { //CHEQUEADA
 	nodoProceso* nodoP = lista_procesos;
 
-	while(nodoP != NULL && nodoP->pid != pid){
+	while(nodoP != NULL && nodoP->pid != pid) {
 		nodoP = nodoP->siguiente;
 	}
 
@@ -520,14 +500,12 @@ void borrar_nodo_segmento(nodoSegmento** referenciaListaSeg, nodoSegmento* nodo_
 	nodoSegmento* nodoS = *referenciaListaSeg;
 	nodoSegmento* nodoAnterior = NULL;
 
-	while (nodoS && (nodoS != nodo_a_borrar))
-	{
+	while (nodoS && (nodoS != nodo_a_borrar)) {
 		nodoAnterior = nodoS;
 		nodoS = nodoS->siguiente;
 	}
 
-	if (nodoS)
-	{
+	if (nodoS) {
 		if (nodoAnterior)  // check principio de la lista (!= NULL)
 			nodoAnterior->siguiente = nodoS->siguiente;
 		else
@@ -574,7 +552,7 @@ int length_segmento(nodoSegmento* nodoS) { //CHEQUEADA
 
 void buscar_por_base(nodoProceso* nodoP, int base, int* pid, int* id_segmento) { //CHEQUEADA
 	while(nodoP != NULL){
-		nodoSegmento* nodoS = nodoP->lista_segmentos;
+		nodoSegmento* nodoS = nodoP->tabla_segmentos;
 		while(nodoS != NULL){
 			if(nodoS->base == base){
 				*pid = nodoP->pid;
@@ -591,7 +569,7 @@ int buscar_pid_por_dir_fisica(int dir_fisica) {
 	nodoProceso* nodoP = lista_procesos;
 
 	while(nodoP != NULL){
-		nodoSegmento* nodoS = nodoP->lista_segmentos;
+		nodoSegmento* nodoS = nodoP->tabla_segmentos;
 
 		while(nodoS != NULL){
 			if((nodoS->base <= dir_fisica) && (dir_fisica <= (nodoS->base + nodoS->tamanio))){
@@ -648,7 +626,7 @@ void eliminar_lista_proceso(nodoProceso** lista_procesos){ //pinta bien
 	nodoSegmento* nodoS2 = NULL;
 
 	while(nodoP != NULL){
-		nodoS = nodoP->lista_segmentos;
+		nodoS = nodoP->tabla_segmentos;
 
 		while(nodoS != NULL){
 			nodoS2 = nodoS->siguiente;
@@ -669,13 +647,13 @@ void log_compactacion(){ //CHEQUEADA
 	nodoProceso* nodoP = lista_procesos;
 	while(nodoP != NULL){
 		int pid =  nodoP->pid;
-		nodoSegmento* nodoS = nodoP->lista_segmentos;
+		nodoSegmento* nodoS = nodoP->tabla_segmentos;
 		while(nodoS != NULL){
 			int id_segmento =  nodoS->id;
 			int base =  nodoS->base;
 			int tamanio_segmento = nodoS->tamanio;
 
-			log_info(logger, "PID: <%d> - Segmento: <%d> - Base: <%d> - Tamaño <%d>", pid, id_segmento, base, tamanio_segmento); //log obligatorio
+			log_info(logger, "PID: %d - Segmento: %d - Base: %d - Tamaño %d", pid, id_segmento, base, tamanio_segmento); //log obligatorio
 
 			nodoS = nodoS->siguiente;
 		}
@@ -699,7 +677,7 @@ void imprimir_lista() {
 	nodoProceso* nodoP = lista_procesos;
 	while(nodoP != NULL){
 		printf("PID: %d\n", nodoP->pid);
-		nodoSegmento* nodoS = nodoP->lista_segmentos;
+		nodoSegmento* nodoS = nodoP->tabla_segmentos;
 		while(nodoS != NULL){
 			printf("ID: %d\n", nodoS->id);
 			printf("Base: %d\n", nodoS->base);

@@ -29,16 +29,9 @@ typedef struct nodoSegmento {
 
 typedef struct nodoProceso {
 	int pid;
-	struct nodoSegmento* lista_segmentos;
+	struct nodoSegmento* tabla_segmentos;
 	struct nodoProceso* siguiente;
 } nodoProceso;
-
-typedef enum
-{
-	FIRST,
-	BEST,
-	WORST,
-} t_algoritmo_asignacion;
 
 extern nodoProceso* lista_procesos;
 
@@ -59,6 +52,7 @@ extern t_log* logger;
 //MEMORIA
 int manejar_mensaje();
 void log_compactacion();
+void string_array_push_para_lista_segmentos(char*** parametros_a_enviar, nodoSegmento* nodoS);
 void compactar();
 int hay_seg_fault(int pid, int id_segmento, int dir_fisica, int tamanio_buffer);
 void eliminar_segmento(int pid, int id_segmento);

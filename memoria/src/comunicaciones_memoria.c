@@ -2,7 +2,7 @@
 
 void manejar_conexion_kernel(t_log* logger){
 	while(1){
-		t_mensajes* mensaje = malloc(sizeof(t_mensajes));
+		t_mensaje* mensaje = malloc(sizeof(t_mensaje));
 
 		mensaje->cod_op = recibir_msj(socket_kernel);
 		mensaje->origen_mensaje = KERNEL;
@@ -14,9 +14,9 @@ void manejar_conexion_kernel(t_log* logger){
 	//por ahi vendria bien agregar algun tipo de break para exitear el while
 }
 
-void manejar_conexion_cpu(t_log* logger){
-	while(1){
-		t_mensajes* mensaje = malloc(sizeof(t_mensajes));
+void manejar_conexion_cpu(t_log* logger) {
+	while(1) {
+		t_mensaje* mensaje = malloc(sizeof(t_mensaje));
 
 		mensaje->cod_op = recibir_msj(socket_cpu);
 		mensaje->origen_mensaje = CPU;
@@ -28,9 +28,9 @@ void manejar_conexion_cpu(t_log* logger){
 	//por ahi vendria bien agregar algun tipo de break para exitear el while
 }
 
-void manejar_conexion_fileSystem(t_log* logger){
-	while(1){
-		t_mensajes* mensaje = malloc(sizeof(t_mensajes));
+void manejar_conexion_fileSystem(t_log* logger) {
+	while(1) {
+		t_mensaje* mensaje = malloc(sizeof(t_mensaje));
 
 		mensaje->cod_op = recibir_msj(socket_fileSystem);
 		mensaje->origen_mensaje = FILESYSTEM;

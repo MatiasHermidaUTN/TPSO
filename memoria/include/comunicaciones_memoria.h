@@ -6,10 +6,10 @@
 #include <commons/log.h>
 
 typedef struct t_mensaje {
-	t_msj_memoria cod_op;
+	int cod_op;
 	t_handshake origen_mensaje;
 	char** parametros;
-} t_mensajes;
+} t_mensaje;
 
 void manejar_conexion_kernel(t_log* logger);
 void manejar_conexion_cpu(t_log* logger);
