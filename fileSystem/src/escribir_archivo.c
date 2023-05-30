@@ -1,4 +1,4 @@
-#include "escribir_archivo.h"
+#include "../include/escribir_archivo.h"
 
 void escribir_archivo(char* buffer, char* nombre_archivo, int apartir_de_donde_escribir, int cuanto_escribir) {	//llega del switch
 	char* path = obtener_path_FCB_sin_free(nombre_archivo);

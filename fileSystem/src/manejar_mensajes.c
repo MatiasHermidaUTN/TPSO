@@ -1,10 +1,10 @@
-#include "manejar_mensajes.h"
+#include "../include/manejar_mensajes.h"
 
 void escuchar_kernel() {
 	while(1){
 		t_mensajes* args = malloc(sizeof(t_mensajes));
-		args->cod_op = recibir_msj(kernel);
-		args->parametros = recibir_parametros_de_mensaje(kernel);
+		args->cod_op = recibir_msj(socket_kernel);
+		args->parametros = recibir_parametros_de_mensaje(socket_kernel);
 		list_push_con_mutex(lista_fifo_msj, args, &mutex_cola_msj);
 		sem_post(&sem_sincro_cant_msj);
 	}
@@ -28,9 +28,9 @@ int manejar_mensaje(){
 			nombre_archivo = args->parametros[0];
 			printf("abrir nombre_archivo: %s\n",nombre_archivo);
 			if (existe_archivo(nombre_archivo)) {	//existe FCB?
-				enviar_msj(kernel, EL_ARCHIVO_YA_EXISTE);
+				enviar_msj(socket_kernel, EL_ARCHIVO_YA_EXISTE);
 			} else {
-				enviar_msj(kernel, EL_ARCHIVO_NO_EXISTE);
+				enviar_msj(socket_kernel, EL_ARCHIVO_NO_EXISTE);
 			}
 			printf("\n");
 			break;
@@ -39,7 +39,7 @@ int manejar_mensaje(){
 			nombre_archivo = args->parametros[0];
 			printf("crear nombre_archivo: %s \n", nombre_archivo);
 			crear_archivo(nombre_archivo);	//crear FCB y poner tamaño 0 y sin bloques asociados.
-			enviar_msj(kernel, EL_ARCHIVO_FUE_CREADO);
+			enviar_msj(socket_kernel, EL_ARCHIVO_FUE_CREADO);
 			printf("archivo creado: %s\n",nombre_archivo);
 			printf("unos dsp crear: %d\n", cant_unos_en_bitmap());
 			printf("\n");
@@ -58,7 +58,7 @@ int manejar_mensaje(){
 			char ** parametros_a_enviar = string_array_new();
 			string_array_push(&parametros_a_enviar, nombre_archivo);
 			string_array_push(&parametros_a_enviar, pid_truncar);
-			enviar_msj_con_parametros(kernel, EL_ARCHIVO_FUE_TRUNCADO, parametros_a_enviar);
+			enviar_msj_con_parametros(socket_kernel, EL_ARCHIVO_FUE_TRUNCADO, parametros_a_enviar);
 			free(parametros_a_enviar);
 			printf("\n");
 			break;
@@ -75,12 +75,12 @@ int manejar_mensaje(){
 			printf("cuanto_leer: %d\n", cuanto_X);
 			printf("dir_fisica_memoria: %d\n", dir_fisica_memoria);
 			buffer = leer_archivo(nombre_archivo, apartir_de_donde_X, cuanto_X);	//malloc se hace en leer_archivo
-			mandar_a_memoria(dir_fisica_memoria, cuanto_X, buffer);
+			escribir_en_memoria(dir_fisica_memoria, cuanto_X, buffer);
 
 			char** parametros_a_enviar_leer = string_array_new();
 			string_array_push(&parametros_a_enviar_leer, nombre_archivo); //nombre del archivo
 			string_array_push(&parametros_a_enviar_leer, pid_leer); //pid para desbloquearlo despues
-			enviar_msj_con_parametros(kernel, EL_ARCHIVO_FUE_LEIDO, parametros_a_enviar_leer);
+			enviar_msj_con_parametros(socket_kernel, EL_ARCHIVO_FUE_LEIDO, parametros_a_enviar_leer);
 			free(parametros_a_enviar_leer);
 
 			printf("\n");
@@ -104,13 +104,13 @@ int manejar_mensaje(){
 			printf("apartir_de_donde_escribir: %d\n", apartir_de_donde_X);
 			printf("cuanto_escribir: %d\n", cuanto_X);
 			printf("dir_fisica_memoria: %d\n", dir_fisica_memoria);
-			buffer = escribir_en_memoria(dir_fisica_memoria, cuanto_X);	//malloc se hace en leer_de_memoria
+			escribir_en_memoria(dir_fisica_memoria, cuanto_X, buffer);	//malloc se hace en leer_de_memoria //TODO: buffer no está inicializado
 			escribir_archivo(buffer, nombre_archivo, apartir_de_donde_X, cuanto_X);
 
 			char** parametros_a_enviar_escribir = string_array_new();
 			string_array_push(&parametros_a_enviar_escribir, args->parametros[0]); //nombre del archivo
 			string_array_push(&parametros_a_enviar_escribir, pid_escribir); //pid para desbloquearlo despues
-			enviar_msj_con_parametros(kernel, EL_ARCHIVO_FUE_ESCRITO, parametros_a_enviar_escribir);
+			enviar_msj_con_parametros(socket_kernel, EL_ARCHIVO_FUE_ESCRITO, parametros_a_enviar_escribir);
 			free(parametros_a_enviar_escribir);
 
 			printf("\n");

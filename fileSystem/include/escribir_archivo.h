@@ -2,6 +2,7 @@
 #define ESCRBIR_ARCHIVO_H_
 
 #include "fileSystem.h"
+#include "configuracion_fileSystem.h"
 
 //escribir
 void escribir_archivo(char* buffer, char* nombre_archivo, int apartir_de_donde_escribir, int cuanto_escribir);

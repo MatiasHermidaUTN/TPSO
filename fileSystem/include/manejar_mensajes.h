@@ -2,14 +2,14 @@
 #define MANEJAR_MENSAJES_H_
 
 #include "fileSystem.h"
+#include "configuracion_fileSystem.h"
 #include "arbir_crear_archivo.h"
 #include "truncar_archivo.h"
 #include "leer_archivo.h"
 #include "escribir_archivo.h"
 #include "manejo_punteros.h"
 
-typedef enum
-{
+typedef enum {
 	ABRIR,
 	CREAR,
 	TRUNCAR,

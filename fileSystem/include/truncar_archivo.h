@@ -2,6 +2,7 @@
 #define TRUNCAR_ARCHIVO_H_
 
 #include "fileSystem.h"
+#include "configuracion_fileSystem.h"
 
 //truncar
 void truncar(char* nombre_archivo, int nuevo_tamanio_archivo);

@@ -1,4 +1,4 @@
-#include "truncar_archivo.h"
+#include "../include/truncar_archivo.h"
 
 void truncar(char* nombre_archivo, int nuevo_tamanio_archivo){
 	char* path = obtener_path_FCB_sin_free(nombre_archivo);

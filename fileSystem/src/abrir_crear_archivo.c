@@ -1,4 +1,4 @@
-#include "arbir_crear_archivo.h"
+#include "../include/arbir_crear_archivo.h"
 
 bool existe_archivo(char* nombre_archivo) {
 	char* path = obtener_path_FCB_sin_free(nombre_archivo);
@@ -7,8 +7,7 @@ bool existe_archivo(char* nombre_archivo) {
 	return retorno;
 }
 
-bool archivo_se_puede_leer(char* path)
-{
+bool archivo_se_puede_leer(char* path) {
 	FILE* f = fopen(path, "r");
 	if(f != NULL){
 		fclose(f);

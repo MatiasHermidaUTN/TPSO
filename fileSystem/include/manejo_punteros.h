@@ -2,6 +2,7 @@
 #define MANMEJO_PUNTEROS_H_
 
 #include "fileSystem.h"
+#include "configuracion_fileSystem.h"
 
 //manejo de punteros
 uint32_t config_get_uint_value(t_config *self, char *key);

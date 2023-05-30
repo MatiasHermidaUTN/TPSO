@@ -1,7 +1,8 @@
 #ifndef ABRIR_CREAR_ARCHIVO_H_
 #define ABRIR_CREAR_ARCHIVO_H_
 
-#include "fileSystem.h"
+#include "configuracion_fileSystem.h"
+#include "manejo_punteros.h"
 
 //abrir
 bool existe_archivo(char* nombre_archivo);

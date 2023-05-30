@@ -1,4 +1,4 @@
-#include "leer_archivo.h"
+#include "../include/leer_archivo.h"
 
 char* leer_archivo(char* nombre_archivo, int apartir_de_donde_leer, int cuanto_leer) {
 	char* path = obtener_path_FCB_sin_free(nombre_archivo);

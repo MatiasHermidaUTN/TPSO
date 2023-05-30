@@ -2,6 +2,7 @@
 #define LEER_ARCHIVO_H_
 
 #include "fileSystem.h"
+#include "configuracion_fileSystem.h"
 
 //leer
 char* leer_archivo(char* nombre_archivo, int apartir_de_donde_leer, int cuanto_leer);

@@ -1,29 +1,29 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdint.h>
+#include <stdbool.h>
+#include <pthread.h>
+#include <math.h>
+#include <time.h>
+#include <sys/mman.h>
+#include <unistd.h>
+#include <fcntl.h>
+#include <commons/bitarray.h>
+#include <commons/log.h>
+#include <commons/config.h>
+#include <commons/string.h>
+#include <utils.h>
+
+#include "../include/manejar_mensajes.h"
+#include "../include/conexiones_fileSystem.h"
 #include "../include/fileSystem.h"
-
-t_config* superbloque;
-void* bitmap;
-void* bitmap_pointer;
-t_bitarray* bitarray_de_bitmap;
-FILE* bloques;
-int tamanioBitmap;
-
-t_log* logger;
-t_config* config;
-t_fileSystem_config lectura_de_config;
-
-int kernel;
-int socket_memoria;
-
-pthread_mutex_t mutex_cola_msj;
-sem_t sem_sincro_cant_msj;
-
-t_list* lista_fifo_msj;
+#include "../include/configuracion_fileSystem.h"
 
 int main(int argc, char** argv) {
 
 	//LECTURA DE CONFIG DEL FILESYSTEM
-	logger = iniciar_logger("FileSystem.log", "FS");
-	config = iniciar_config("../fileSystem.config");
+	iniciar_logger("FileSystem.log", "FS");
+	iniciar_config("../fileSystem.config");
     lectura_de_config = leer_fileSystem_config(config);
 
 	lista_fifo_msj = list_create();
@@ -48,54 +48,4 @@ int main(int argc, char** argv) {
 	munmap(bitmap_pointer, tamanioBitmap);
 	fclose(bloques);
 	return EXIT_SUCCESS;
-}
-
-//comunicaciones
-char* leer_de_memoria(int cuanto_X, int dir_fisica_memoria){
-	char ** parametros_a_enviar = string_array_new();
-	string_array_push(&parametros_a_enviar, atoi(dir_fisica_memoria));
-	string_array_push(&parametros_a_enviar, atoi(cuanto_X));
-	enviar_msj_con_parametros(socket_kernel, LEER, parametros_a_enviar);
-	free(parametros_a_enviar_leer);
-
-	char* buffer = malloc(cuanto_X);
-	t_mensajes* mensaje = malloc(sizeof(t_mensajes));
-
-	mensaje->cod_op = recibir_msj(socket_memoria);
-	if(mensaje->cod_op != LEIDO)
-		//kaboom??? TODO
-		
-	mensaje->parametros = recibir_parametros_de_mensaje(socket_memoria);
-
-	memcpy(buffer, parametros[0], cuanto_X);
-	string_array_destroy(parametros);
-
-	return buffer;
-}
-
-void escribir_en_memoria(int dir_fisica_memoria, int cuanto_leer, char* buffer){
-	char ** parametros_a_enviar = string_array_new();
-	string_array_push(&parametros_a_enviar, atoi(dir_fisica_memoria));
-	string_array_push(&parametros_a_enviar, atoi(cuanto_X));
-	string_array_push(&parametros_a_enviar, buffer);
-	enviar_msj_con_parametros(socket_kernel, ESCRIBIR, parametros_a_enviar);
-	free(parametros_a_enviar_leer);
-
-	t_mensajes* mensaje = malloc(sizeof(t_mensajes));
-	mensaje->cod_op = recibir_msj(socket_memoria);
-	if(mensaje->cod_op != ESCRITO_OK)
-		//kaboom??? TODO
-
-	return;
-}
-
-//TODO debug
-int cant_unos_en_bitmap(){
-	int contador = 0;
-	for (int i = 0; i < bitarray_get_max_bit(bitarray_de_bitmap); i++) {
-		if (bitarray_test_bit(bitarray_de_bitmap, i) == 1) {
-			contador++;
-		}
-	}
-	return contador;
 }

@@ -1,4 +1,4 @@
-#include "manejo_punteros.h"
+#include "../include/manejo_punteros.h"
 
 uint32_t config_get_uint_value(t_config *self, char *key) {
 	char *value = config_get_string_value(self, key);
