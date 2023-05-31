@@ -2,6 +2,14 @@
 #define CONFIGURACION_MEMORIA_H_
 
 #include <commons/config.h>
+#include <commons/log.h>
+#include <commons/string.h>
+#include <commons/collections/list.h>
+#include <pthread.h>
+#include <semaphore.h>
+#include <utils.h>
+#include <stdio.h>
+#include <stdlib.h>
 
 typedef struct memoria_config {
     char* PUERTO_ESCUCHA;
@@ -13,6 +21,20 @@ typedef struct memoria_config {
     char* ALGORITMO_ASIGNACION;
 } t_memoria_config;
 
-t_memoria_config leer_memoria_config(t_config* config);
+extern t_memoria_config lectura_de_config;
+
+extern int socket_memoria;
+extern int socket_kernel;
+extern int socket_cpu;
+extern int socket_fileSystem;
+
+extern pthread_mutex_t mutex_cola_msj;
+extern sem_t sem_cant_msj;
+extern t_list* lista_fifo_msj;
+
+extern t_log* logger;
+
+void leer_memoria_config(t_config* config);
+void liberar_estructura_config();
 
 #endif /* CONFIGURACION_MEMORIA_H_ */
