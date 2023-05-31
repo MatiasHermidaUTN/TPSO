@@ -95,10 +95,10 @@ int manejar_mensaje() { //pinta bien
 			break;
 		}
 		case CREAR_SEGMENTO:{
-			//parametros a recibir (necesarios) en este caso: pid, id_segmento, tamanio_segmento
-			pid = mensaje->parametros[0];
-			id_segmento = mensaje->parametros[1];
-			tamanio_segmento = mensaje->parametros[2];
+			//parametros a recibir (necesarios) en este caso: id_segmento, tamanio_segmento, pid
+			id_segmento = mensaje->parametros[0];
+			tamanio_segmento = mensaje->parametros[1];
+			pid = mensaje->parametros[2];
 
 			if(!tengo_espacio_general(tamanio_segmento)) {
 				//error?
@@ -127,9 +127,9 @@ int manejar_mensaje() { //pinta bien
 			break;
 		}
 		case ELIMINAR_SEGMENTO:{
-			//parametros a recibir (necesarios) en este caso: pid, id_segmento
-			pid = mensaje->parametros[0];
-			id_segmento = mensaje->parametros[1];
+			//parametros a recibir (necesarios) en este caso: id_segmento, pid
+			id_segmento = mensaje->parametros[0];
+			pid = mensaje->parametros[1];
 
 			nodoProceso* nodoP = buscar_por_pid(lista_procesos, pid);
 			nodoSegmento* nodoS = buscar_por_id(nodoP->lista_segmentos, id_segmento);

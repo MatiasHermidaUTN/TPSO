@@ -53,7 +53,10 @@ t_pcb* crear_pcb(t_list* instrucciones, int socket_consola) {
 	pcb->registros_cpu = init_registros_cpu();
 
 	//pthread_mutex_lock(&mutex_msj_memoria); TODO: DESCOMENTAR
-	//enviar_msj(socket_memoria, INICIALIZAR_PROCESO);
+	//char** parametros_crear_pcb = string_array_new();
+	//string_array_push(&parametros_crear_pcb,string_itoa(pcb->pid));
+	//enviar_msj_con_parametros(socket_memoria, INICIALIZAR_PROCESO, parametros_crear_pcb);
+	//string_array_destroy(parametros_crear_pcb);
 	//pcb->tabla_segmentos = recibir_tabla_segmentos(socket_memoria);
 	//pthread_mutex_unlock(&mutex_msj_memoria);
 	pcb->tabla_segmentos = list_create(); //TODO: SACAR

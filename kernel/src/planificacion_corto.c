@@ -207,6 +207,7 @@ void planificar_corto() {
 			case CREATE_SEGMENT_EJECUTADO:
 				parametros = recibir_parametros_de_instruccion();
 				pcb_recibido = recibir_pcb(socket_cpu);
+				string_array_push(&parametros,string_itoa(pcb_recibido->pid));
 
 				//TODO: testear cuando esté memoria lista
 				crear_segmento(pcb_recibido, parametros);
@@ -218,11 +219,12 @@ void planificar_corto() {
 			case DELETE_SEGMENT_EJECUTADO:
 				parametros = recibir_parametros_de_instruccion();
 				pcb_recibido = recibir_pcb(socket_cpu);
+				string_array_push(&parametros,string_itoa(pcb_recibido->pid));
 
 				//TODO: testear cuando esté memoria lista
 
 				pthread_mutex_lock(&mutex_msj_memoria);
-				enviar_msj_con_parametros(socket_memoria, ELIMINAR_SEGMENTO, parametros); //Es un solo parametro, que es el id
+				enviar_msj_con_parametros(socket_memoria, ELIMINAR_SEGMENTO, parametros); //id pid
 				actualizar_segmentos_de_pcb(pcb_recibido, recibir_tabla_segmentos(socket_memoria));
 				pthread_mutex_unlock(&mutex_msj_memoria);
 
@@ -376,7 +378,11 @@ void exit_proceso(t_pcb* pcb, t_msj_kernel_consola mensaje) {
 
 	sem_post(&sem_multiprogramacion);
 
-	//TODO: avisarle a memoria para liberar la estructura
+	char** parametros_exit = string_array_new();
+	string_array_push(&parametros_exit, string_itoa(pcb->pid));
+	enviar_msj_con_parametros(socket_memoria, ELIMINAR_PROCESO, parametros_exit);
+	string_array_destroy(parametros_exit);
+
 	liberar_pcb(pcb);
 }
 
@@ -500,7 +506,7 @@ void bloquear_pcb_por_archivo(t_pcb* pcb, char* nombre_archivo) {
 
 void crear_segmento(t_pcb* pcb_recibido, char** parametros) {
 	pthread_mutex_lock(&mutex_msj_memoria);
-	enviar_msj_con_parametros(socket_memoria, CREAR_SEGMENTO, parametros); //Solo importa enviar parametros[1], que es el tamanio
+	enviar_msj_con_parametros(socket_memoria, CREAR_SEGMENTO, parametros); // id, tamanio, pid
 	t_msj_kernel_memoria mensaje_recibido = recibir_msj(socket_memoria);
 	t_list* tabla_segmentos;
 	if(mensaje_recibido == SEGMENTO_CREADO){
