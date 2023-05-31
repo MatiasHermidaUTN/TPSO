@@ -17,11 +17,12 @@ void escuchar_de_filesystem() {
 				if(!cantidad_de_reads_writes) {
 					sem_post(&sem_compactacion); //solo avisa que se puede hacer compactacion si no hay operaciones en proceso
 				}
-				pthread_mutex_unlock(&mutex_cantidad_de_reads_writes);
 
+				pthread_mutex_unlock(&mutex_cantidad_de_reads_writes);
 
 				//No debe haber break, porque de igual forma tiene que hacer exactamente lo mismo que el proximo case
 
+			//no break (para ignorar el warning)
 			case EL_ARCHIVO_FUE_TRUNCADO: //TODO: fijarse si también debería hacer lo que hace el case de arriba,
 				//ya que también desbloquea pcb y capaz genera conflictos a la hora de actualizar las tablas de segmentos de los pcbs de todas las listas
 

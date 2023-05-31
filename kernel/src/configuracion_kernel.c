@@ -54,8 +54,8 @@ t_kernel_config leer_kernel_config(t_config* config) {
 
     lectura_de_config.PUERTO_ESCUCHA              = strdup(config_get_string_value(config, "PUERTO_ESCUCHA"));
     lectura_de_config.ALGORITMO_PLANIFICACION     = strdup(config_get_string_value(config, "ALGORITMO_PLANIFICACION"));
-    lectura_de_config.ESTIMACION_INICIAL          = config_get_int_value(config, "ESTIMACION_INICIAL");
-    lectura_de_config.HRRN_ALFA                   = config_get_int_value(config, "HRRN_ALFA");
+    lectura_de_config.ESTIMACION_INICIAL          = config_get_double_value(config, "ESTIMACION_INICIAL");
+    lectura_de_config.HRRN_ALFA                   = config_get_double_value(config, "HRRN_ALFA");
     lectura_de_config.GRADO_MAX_MULTIPROGRAMACION = config_get_int_value(config, "GRADO_MAX_MULTIPROGRAMACION");
 
     char* recursos             = strdup(config_get_string_value(config, "RECURSOS")); //"[elem1, elem2, ...]"
@@ -159,7 +159,7 @@ void ready_list_push(t_pcb* pcb_recibido) {
 	}
 	else { //Si no es la primera vez
 		estado_anterior = strdup("BLOCK");
-		calcular_prox_rafaga(pcb_recibido); //S se calcula solo al que entra a Ready. Si es la primera vez que entra a Ready, se mantiene la Estimación Inicial
+		//calcular_prox_rafaga(pcb_recibido); //S se calcula solo al que entra a Ready. Si es la primera vez que entra a Ready, se mantiene la Estimación Inicial
 	}
 
 	log_info(logger, "PID: %d - Estado Anterior: %s - Estado Actual: READY", pcb_recibido->pid, estado_anterior); //log obligatorio
@@ -167,6 +167,7 @@ void ready_list_push(t_pcb* pcb_recibido) {
 
 	pcb_recibido->tiempo_llegada_ready = time(NULL); //Actualizo el momento en que llega a Ready
 
+	calcular_prox_rafaga(pcb_recibido); //S se calcula solo al que entra a Ready. Si es la primera vez que entra a Ready, se mantiene la Estimación Inicial
 
 	list_push_con_mutex(ready_list, pcb_recibido, &mutex_ready_list);
 	log_pids(); //log obligatorio
@@ -175,7 +176,9 @@ void ready_list_push(t_pcb* pcb_recibido) {
 }
 
 void calcular_prox_rafaga(t_pcb* pcb) {
-	int alpha = lectura_de_config.HRRN_ALFA;
+	log_error(logger, "TIEMPO REAL DE EJECUCION: %f PID: %d", pcb->tiempo_real_ejecucion, pcb->pid);
+	double alpha = lectura_de_config.HRRN_ALFA;
 	pcb->estimado_prox_rafaga = alpha * pcb->tiempo_real_ejecucion + (1-alpha) * pcb->estimado_prox_rafaga; //pcb->estimado_prox_rafaga aca es como el estimado anterior
+	log_error(logger, "ESTIMADO PROX RAFAGA: %f PID: %d", pcb->estimado_prox_rafaga,pcb->pid);
 }
 

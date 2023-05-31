@@ -148,14 +148,14 @@ typedef struct pcb {
 	int pc;
 	t_registros_cpu registros_cpu;
 	t_list* tabla_segmentos;
-	int estimado_prox_rafaga;
-	int tiempo_llegada_ready;
+	double estimado_prox_rafaga;
+	double tiempo_llegada_ready;
 	t_list* archivos_abiertos;
 
 	int socket_consola; //para mandarle mensaje que cuando termina
 
-	int tiempo_real_ejecucion;
-	int tiempo_inicial_ejecucion;
+	double tiempo_real_ejecucion;
+	double tiempo_inicial_ejecucion;
 } t_pcb;
 
 typedef struct {

@@ -17,8 +17,8 @@ typedef struct kernel_config {
     char* PUERTO_FILESYSTEM;
     char* PUERTO_ESCUCHA;
     char* ALGORITMO_PLANIFICACION;
-    int   ESTIMACION_INICIAL;
-    int   HRRN_ALFA;
+    double   ESTIMACION_INICIAL;
+    double   HRRN_ALFA;
     int   GRADO_MAX_MULTIPROGRAMACION;
     char** RECURSOS;
     char** INSTANCIAS_RECURSOS;

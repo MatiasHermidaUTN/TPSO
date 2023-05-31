@@ -67,7 +67,8 @@ t_pcb* crear_pcb(t_list* instrucciones, int socket_consola) {
 
 	pcb->socket_consola = socket_consola;
 
-	pcb->tiempo_real_ejecucion = 0;
+	//pcb->tiempo_real_ejecucion = 0;
+	pcb->tiempo_real_ejecucion = lectura_de_config.ESTIMACION_INICIAL;
 	pcb->tiempo_inicial_ejecucion = 0;
 
 	return pcb;

@@ -328,11 +328,11 @@ void* serializar_pcb(t_pcb* pcb, size_t* size_total, t_msj_kernel_cpu op_code, c
 
 	memcpy_tabla_segmentos_serializar(stream_pcb, pcb->tabla_segmentos, &desplazamiento);
 
-	memcpy(stream_pcb + desplazamiento, &(pcb->estimado_prox_rafaga), sizeof(int));
-	desplazamiento += sizeof(int);
+	memcpy(stream_pcb + desplazamiento, &(pcb->estimado_prox_rafaga), sizeof(pcb->estimado_prox_rafaga));
+	desplazamiento += sizeof(pcb->estimado_prox_rafaga);
 
-	memcpy(stream_pcb + desplazamiento, &(pcb->tiempo_llegada_ready), sizeof(int));
-	desplazamiento += sizeof(int);
+	memcpy(stream_pcb + desplazamiento, &(pcb->tiempo_llegada_ready), sizeof(pcb->tiempo_llegada_ready));
+	desplazamiento += sizeof(pcb->tiempo_llegada_ready);
 
 	memcpy_archivos_abiertos_serializar(stream_pcb, pcb->archivos_abiertos, &desplazamiento);
 

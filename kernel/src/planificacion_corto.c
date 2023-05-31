@@ -269,7 +269,8 @@ void planificar_corto() {
 }
 
 int calcular_R(t_pcb* pcb) {
-	return (calcular_tiempo_en_ready(pcb->tiempo_llegada_ready) + pcb->estimado_prox_rafaga) / pcb->estimado_prox_rafaga;
+	log_error(logger,"R: %f PID: %d",(double) ((calcular_tiempo_en_ready(pcb->tiempo_llegada_ready) + pcb->estimado_prox_rafaga) / pcb->estimado_prox_rafaga) ,pcb->pid);
+	return (double)((calcular_tiempo_en_ready(pcb->tiempo_llegada_ready) + pcb->estimado_prox_rafaga) / pcb->estimado_prox_rafaga);
 }
 
 int calcular_tiempo_en_ready(int segundos) {
@@ -641,7 +642,7 @@ t_proceso_actualizado* list_remove_if_pid_equals_to(t_list* procesos, int pid) {
 
 	log_error(logger, "Error al obtener pid de proceso con segmentos actualizado");
 	exit(EXIT_FAILURE);
-	return proceso; //no debería llegar acá
+	return proceso; //no deberia llegar aca
 }
 
 
