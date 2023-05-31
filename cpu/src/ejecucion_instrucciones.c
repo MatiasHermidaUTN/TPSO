@@ -28,7 +28,7 @@ void ejecutar_instrucciones(t_pcb* pcb) {
 				char* registro_mov_in = list_get(instruccion_actual->parametros, 0);
 				char* direccion_logica_mov_in = list_get(instruccion_actual->parametros, 1);
 
-				t_datos_mmu datos_mmu_mov_in = mmu(instruccion_actual, pcb, atoi(direccion_logica_mov_in));
+				t_datos_mmu datos_mmu_mov_in = mmu(pcb, atoi(direccion_logica_mov_in));
 
 				char** parametros_mov_in = string_array_new();
 				string_array_push(&parametros_mov_in, string_itoa(datos_mmu_mov_in.direccion_fisica));
@@ -51,7 +51,7 @@ void ejecutar_instrucciones(t_pcb* pcb) {
 				char* direccion_logica_mov_out = list_get(instruccion_actual->parametros, 0);
 				char* registro_mov_out = list_get(instruccion_actual->parametros, 1);
 
-				t_datos_mmu datos_mmu_mov_out = mmu(instruccion_actual, pcb, atoi(direccion_logica_mov_out));
+				t_datos_mmu datos_mmu_mov_out = mmu(pcb, atoi(direccion_logica_mov_out));
 
 				char** parametros_mov_out = string_array_new();
 				string_array_push(&parametros_mov_out, string_itoa(datos_mmu_mov_out.direccion_fisica));
@@ -88,7 +88,7 @@ void ejecutar_instrucciones(t_pcb* pcb) {
 			case F_READ: case F_WRITE:
 				int direccion_logica = atoi(list_get(instruccion_actual->parametros, 1));
 
-				t_datos_mmu datos_mmu = mmu(instruccion_actual, pcb, direccion_logica);
+				t_datos_mmu datos_mmu = mmu(pcb, direccion_logica);
 
 				//Me fijo si es F_READ o F_WRITE (hice esto para evitar mucha repetición de lógica)
 				t_msj_kernel_cpu mensaje_a_mandar;
@@ -332,7 +332,7 @@ void log_acceso_memoria(t_msj_kernel_cpu* mensaje_a_mandar, char* nombre_instruc
 	free(accion);
 }
 
-t_datos_mmu mmu(t_instruccion* instruccion_actual, t_pcb* pcb, int direccion_logica) {
+t_datos_mmu mmu(t_pcb* pcb, int direccion_logica) {
 	t_datos_mmu datos;
 
 	datos.numero_segmento = direccion_logica / lectura_de_config.TAM_MAX_SEGMENTO; //al asignarle a un int se obtiene el floor

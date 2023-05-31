@@ -33,6 +33,6 @@ int buscar_campo_de_segmento(t_list* segmentos, char* campo, int id);
 
 void log_acceso_memoria(t_msj_kernel_cpu* respuesta_a_mandar, char* nombre_instruccion, int pid, int numero_segmento, int direccion_fisica);
 
-t_datos_mmu mmu(t_instruccion* instruccion_actual, t_pcb* pcb, int direccion_logica);
+t_datos_mmu mmu(t_pcb* pcb, int direccion_logica);
 
 #endif /* EJECUCION_INSTRUCCIONES_H_ */
