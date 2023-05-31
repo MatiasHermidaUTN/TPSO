@@ -61,7 +61,7 @@ t_pcb* crear_pcb(t_list* instrucciones, int socket_consola) {
 
 	pcb->socket_consola = socket_consola;
 
-	pcb->tiempo_real_ejecucion = lectura_de_config.ESTIMACION_INICIAL; //Por si es la primera vez que entra a Ready
+	pcb->tiempo_real_ejecucion = 0;
 	pcb->tiempo_inicial_ejecucion = 0;
 
 	return pcb;
@@ -138,9 +138,9 @@ void init_conexiones() {
 		exit(EXIT_FAILURE);
 	}
 
-	socket_fileSystem = crear_conexion(lectura_de_config.IP_FILESYSTEM, lectura_de_config.PUERTO_FILESYSTEM);
-	if(socket_fileSystem == -1) {
-		log_error(logger, "Kernel no pudo conectarse a File System");
-		exit(EXIT_FAILURE);
-	}
+	//socket_fileSystem = crear_conexion(lectura_de_config.IP_FILESYSTEM, lectura_de_config.PUERTO_FILESYSTEM);
+	//if(socket_fileSystem == -1) {
+	//	log_error(logger, "Kernel no pudo conectarse a File System");
+	//	exit(EXIT_FAILURE);
+	//}
 }
