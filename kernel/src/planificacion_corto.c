@@ -29,6 +29,10 @@ void planificar_corto() {
 				pcb_recibido->tiempo_real_ejecucion = time(NULL) - pcb_recibido->tiempo_inicial_ejecucion;
 				//Finaliza ejecucion
 
+				pthread_mutex_lock(&mutex_pcbs_en_io);
+				list_add(pcbs_en_io,pcb_recibido); //para actualizar los segmentos en la compactacion
+				pthread_mutex_unlock(&mutex_pcbs_en_io);
+
 				t_args_io* args = malloc(sizeof(t_args_io));
 			    args->tiempo = tiempo_a_bloquear;
 				args->pcb = pcb_recibido;
@@ -304,6 +308,9 @@ t_pcb* obtener_proximo_a_ejecutar() {
 void manejar_io(t_args_io* args_io) {
 	sleep(args_io->tiempo);
 	ready_list_push(args_io->pcb); //Aca calcula el S (proxima rafaga), actualizo el tiempo_llegada_ready y hago sem_post(&sem_cant_ready)
+	pthread_mutex_lock(&mutex_pcbs_en_io);
+	list_remove_pcb(pcbs_en_io, args_io->pcb);
+	pthread_mutex_unlock(&mutex_pcbs_en_io);
 	free(args_io);
 }
 
@@ -572,6 +579,12 @@ void actualizar_segmentos(t_pcb* pcb_en_exec, t_list* procesos) {
 		recurso = list_get(list_archivos, i);
 		actualizar_segmentos_de_cola(recurso->cola_bloqueados, procesos);
 	}
+	pthread_mutex_lock(&mutex_pcbs_en_io);
+	for(int i = 0; i < list_size(pcbs_en_io); i++) {
+		recurso = list_get(pcbs_en_io, i);
+		actualizar_segmentos_de_cola(recurso->cola_bloqueados, procesos);
+	}
+	pthread_mutex_unlock(&mutex_pcbs_en_io);
 
 	list_destroy(procesos); //Los procesos dentro de la lista se van liberando en el medio del proceso de arriba
 }

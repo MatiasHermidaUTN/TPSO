@@ -14,10 +14,11 @@ void escuchar_de_filesystem() {
 			case EL_ARCHIVO_FUE_LEIDO: case EL_ARCHIVO_FUE_ESCRITO:
 				pthread_mutex_lock(&mutex_cantidad_de_reads_writes);
 				cantidad_de_reads_writes--;
-				pthread_mutex_unlock(&mutex_cantidad_de_reads_writes); //TODO: fijarse si el unlock va después del if (estoy casi seguro que no)
 				if(!cantidad_de_reads_writes) {
 					sem_post(&sem_compactacion); //solo avisa que se puede hacer compactacion si no hay operaciones en proceso
 				}
+				pthread_mutex_unlock(&mutex_cantidad_de_reads_writes);
+
 
 				//No debe haber break, porque de igual forma tiene que hacer exactamente lo mismo que el proximo case
 

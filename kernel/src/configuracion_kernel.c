@@ -8,6 +8,7 @@ pthread_mutex_t mutex_ready_list; //por si quieren agregar y eliminar de la list
 pthread_mutex_t mutex_new_queue;
 pthread_mutex_t mutex_cantidad_de_reads_writes;
 pthread_mutex_t mutex_msj_memoria;
+pthread_mutex_t mutex_pcbs_en_io;
 sem_t sem_cant_ready;
 sem_t sem_cant_new;
 sem_t sem_multiprogramacion;
@@ -33,6 +34,8 @@ t_list* ready_list;
 
 t_list* list_recursos;
 t_list* list_archivos;
+
+t_list* pcbs_en_io;
 ///////////////////////////////////////////
 t_pcb* proximo_pcb_a_ejecutar_forzado = NULL;
 t_msj_kernel_fileSystem respuesta_fs_global;
@@ -76,6 +79,8 @@ void init_semaforos() {
 	pthread_mutex_init(&mutex_new_queue, NULL);
 	pthread_mutex_init(&mutex_cantidad_de_reads_writes, NULL);
 	pthread_mutex_init(&mutex_msj_memoria, NULL);
+	pthread_mutex_init(&mutex_pcbs_en_io, NULL);
+
 	sem_init(&sem_cant_ready, 0, 0);
 	sem_init(&sem_cant_new, 0, 0);
 	sem_init(&sem_multiprogramacion, 0, lectura_de_config.GRADO_MAX_MULTIPROGRAMACION);
@@ -89,6 +94,8 @@ void init_estados() {
 
 	list_recursos = list_create();
 	list_archivos = list_create();
+
+	pcbs_en_io = list_create();
 
 	t_recurso* recurso;
 	for(int i = 0; i < string_array_size(lectura_de_config.RECURSOS); i++) {

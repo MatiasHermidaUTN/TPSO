@@ -36,6 +36,7 @@ extern pthread_mutex_t mutex_new_queue;
 extern pthread_mutex_t mutex_ready_list;
 extern pthread_mutex_t mutex_cantidad_de_reads_writes;
 extern pthread_mutex_t mutex_msj_memoria;
+extern pthread_mutex_t mutex_pcbs_en_io;
 
 
 extern sem_t sem_cant_ready;
@@ -57,6 +58,9 @@ extern int socket_fileSystem;
 
 extern t_list* list_recursos;
 extern t_list* list_archivos;
+
+extern t_list* pcbs_en_io;
+
 
 extern t_pcb* proximo_pcb_a_ejecutar_forzado;
 extern t_msj_kernel_fileSystem respuesta_fs_global;
