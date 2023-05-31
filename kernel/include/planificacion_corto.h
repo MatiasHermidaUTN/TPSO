@@ -37,7 +37,7 @@ t_archivo_abierto* buscar_archivo_en_pcb(t_pcb* pcb, char* nombre);
 void bloquear_pcb_por_archivo(t_pcb* pcb, char* nombre_archivo);
 
 void crear_segmento(t_pcb* pcb_recibido, char** parametros);
-void actualizar_segmentos(t_pcb* pcb_en_exec);
+void actualizar_segmentos(t_pcb* pcb_en_exec, t_list* procesos);
 void actualizar_segmentos_de_lista(t_list* lista, t_list* procesos);
 void actualizar_segmentos_de_cola(t_queue* cola, t_list* procesos);
 void actualizar_segmentos_de_pcb(t_pcb* pcb, t_list* segmentos);

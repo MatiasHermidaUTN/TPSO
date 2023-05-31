@@ -2,6 +2,7 @@
 
 void escuchar_de_filesystem() {
 	while(1) {
+		while(1); //TODO: DESCOMENTAR!!!!!!
 		int op_code_recibido = recibir_msj(socket_fileSystem);
 		switch(op_code_recibido){
 			case EL_ARCHIVO_YA_EXISTE: case EL_ARCHIVO_NO_EXISTE: case EL_ARCHIVO_FUE_CREADO:

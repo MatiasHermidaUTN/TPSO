@@ -52,8 +52,11 @@ t_pcb* crear_pcb(t_list* instrucciones, int socket_consola) {
 	pcb->pc = 0;
 	pcb->registros_cpu = init_registros_cpu();
 
-	enviar_msj(socket_memoria, INICIALIZAR_PROCESO);
-	pcb->tabla_segmentos = recibir_tabla_segmentos(socket_memoria);
+	//pthread_mutex_lock(&mutex_msj_memoria); TODO: DESCOMENTAR
+	//enviar_msj(socket_memoria, INICIALIZAR_PROCESO);
+	//pcb->tabla_segmentos = recibir_tabla_segmentos(socket_memoria);
+	//pthread_mutex_unlock(&mutex_msj_memoria);
+	pcb->tabla_segmentos = list_create(); //TODO: SACAR
 
 	pcb->estimado_prox_rafaga = lectura_de_config.ESTIMACION_INICIAL;
 	pcb->tiempo_llegada_ready = 0;
@@ -61,7 +64,7 @@ t_pcb* crear_pcb(t_list* instrucciones, int socket_consola) {
 
 	pcb->socket_consola = socket_consola;
 
-	pcb->tiempo_real_ejecucion = 0;
+	pcb->tiempo_real_ejecucion = 0; //TODO: CAMBIAR
 	pcb->tiempo_inicial_ejecucion = 0;
 
 	return pcb;

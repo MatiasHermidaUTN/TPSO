@@ -7,6 +7,7 @@ pthread_mutex_t mutex_contador_pid; //para que dos procesos no tengan el mismo I
 pthread_mutex_t mutex_ready_list; //por si quieren agregar y eliminar de la lista al mismo tiempo.
 pthread_mutex_t mutex_new_queue;
 pthread_mutex_t mutex_cantidad_de_reads_writes;
+pthread_mutex_t mutex_msj_memoria;
 sem_t sem_cant_ready;
 sem_t sem_cant_new;
 sem_t sem_multiprogramacion;
@@ -74,6 +75,7 @@ void init_semaforos() {
 	pthread_mutex_init(&mutex_ready_list, NULL);
 	pthread_mutex_init(&mutex_new_queue, NULL);
 	pthread_mutex_init(&mutex_cantidad_de_reads_writes, NULL);
+	pthread_mutex_init(&mutex_msj_memoria, NULL);
 	sem_init(&sem_cant_ready, 0, 0);
 	sem_init(&sem_cant_new, 0, 0);
 	sem_init(&sem_multiprogramacion, 0, lectura_de_config.GRADO_MAX_MULTIPROGRAMACION);

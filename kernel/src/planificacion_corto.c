@@ -217,9 +217,11 @@ void planificar_corto() {
 
 				//TODO: testear cuando esté memoria lista
 
+				pthread_mutex_lock(&mutex_msj_memoria);
 				enviar_msj_con_parametros(socket_memoria, ELIMINAR_SEGMENTO, parametros); //Es un solo parametro, que es el id
-
 				actualizar_segmentos_de_pcb(pcb_recibido, recibir_tabla_segmentos(socket_memoria));
+				pthread_mutex_unlock(&mutex_msj_memoria);
+
 
 				log_info(logger, "PID: %d - Eliminar Segmento - Id Segmento: %s", pcb_recibido->pid, parametros[0]); //log obligatorio
 
@@ -490,13 +492,18 @@ void bloquear_pcb_por_archivo(t_pcb* pcb, char* nombre_archivo) {
 }
 
 void crear_segmento(t_pcb* pcb_recibido, char** parametros) {
+	pthread_mutex_lock(&mutex_msj_memoria);
 	enviar_msj_con_parametros(socket_memoria, CREAR_SEGMENTO, parametros); //Solo importa enviar parametros[1], que es el tamanio
-
 	t_msj_kernel_memoria mensaje_recibido = recibir_msj(socket_memoria);
+	t_list* tabla_segmentos;
+	if(mensaje_recibido == SEGMENTO_CREADO){
+		tabla_segmentos = recibir_tabla_segmentos(socket_memoria);
+	}
+	pthread_mutex_unlock(&mutex_msj_memoria);
 
 	switch(mensaje_recibido) {
 		case SEGMENTO_CREADO:
-			actualizar_segmentos_de_pcb(pcb_recibido, recibir_tabla_segmentos(socket_memoria));
+			actualizar_segmentos_de_pcb(pcb_recibido, tabla_segmentos);
 
 			log_info(logger, "PID: %d - Crear Segmento - Id: %s - Tamaño: %s", pcb_recibido->pid, parametros[0], parametros[1]); //log obligatorio
 
@@ -514,13 +521,20 @@ void crear_segmento(t_pcb* pcb_recibido, char** parametros) {
 
 			log_info(logger, "Compactación: Se solicitó compactación"); //log obligatorio
 
+			pthread_mutex_lock(&mutex_msj_memoria);
 			enviar_msj(socket_memoria, COMPACTAR);
+			int rta_compactacion = recibir_msj(socket_memoria);
+			t_list* procesos;
+			if(rta_compactacion == MEMORIA_COMPACTADA){
+				procesos = recibir_procesos_con_segmentos(socket_memoria);
+			}
+			pthread_mutex_unlock(&mutex_msj_memoria);
 
-			if(recibir_msj(socket_memoria) == MEMORIA_COMPACTADA) {
+			if(rta_compactacion == MEMORIA_COMPACTADA) {
 				log_info(logger, "Se finalizó el proceso de compactación"); //log obligatorio
 				sem_post(&sem_compactacion);
 
-				actualizar_segmentos(pcb_recibido);
+				actualizar_segmentos(pcb_recibido, procesos);
 
 				crear_segmento(pcb_recibido, parametros);
 			}
@@ -537,9 +551,7 @@ void crear_segmento(t_pcb* pcb_recibido, char** parametros) {
 	}
 }
 
-void actualizar_segmentos(t_pcb* pcb_en_exec) {
-	t_list* procesos = recibir_procesos_con_segmentos(socket_memoria);
-
+void actualizar_segmentos(t_pcb* pcb_en_exec, t_list* procesos) {
 	t_proceso_actualizado* proceso_en_exec; //es distinto a t_pcb, pues solo tiene id + tabla_segmentos
 
 	proceso_en_exec = list_remove_if_pid_equals_to(procesos, pcb_en_exec->pid);

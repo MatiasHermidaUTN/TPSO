@@ -35,6 +35,8 @@ extern pthread_mutex_t mutex_contador_pid;
 extern pthread_mutex_t mutex_new_queue;
 extern pthread_mutex_t mutex_ready_list;
 extern pthread_mutex_t mutex_cantidad_de_reads_writes;
+extern pthread_mutex_t mutex_msj_memoria;
+
 
 extern sem_t sem_cant_ready;
 extern sem_t sem_cant_new;
