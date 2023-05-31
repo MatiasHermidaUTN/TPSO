@@ -570,6 +570,10 @@ void actualizar_segmentos(t_pcb* pcb_en_exec, t_list* procesos) {
 	actualizar_segmentos_de_lista(ready_list, procesos);
 	pthread_mutex_unlock(&mutex_ready_list);
 
+	pthread_mutex_lock(&mutex_pcbs_en_io);
+	actualizar_segmentos_de_lista(pcbs_en_io, procesos);
+	pthread_mutex_unlock(&mutex_pcbs_en_io);
+
 	t_recurso* recurso;
 	for(int i = 0; i < list_size(list_recursos); i++) {
 		recurso = list_get(list_recursos, i);
@@ -579,12 +583,6 @@ void actualizar_segmentos(t_pcb* pcb_en_exec, t_list* procesos) {
 		recurso = list_get(list_archivos, i);
 		actualizar_segmentos_de_cola(recurso->cola_bloqueados, procesos);
 	}
-	pthread_mutex_lock(&mutex_pcbs_en_io);
-	for(int i = 0; i < list_size(pcbs_en_io); i++) {
-		recurso = list_get(pcbs_en_io, i);
-		actualizar_segmentos_de_cola(recurso->cola_bloqueados, procesos);
-	}
-	pthread_mutex_unlock(&mutex_pcbs_en_io);
 
 	list_destroy(procesos); //Los procesos dentro de la lista se van liberando en el medio del proceso de arriba
 }
