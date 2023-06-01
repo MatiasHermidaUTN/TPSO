@@ -83,10 +83,7 @@ int manejar_mensaje() { //pinta bien
 			nodoProceso* nodoP = crear_proceso(pid);
 
 			//-----SALIDA-----//			
-			char ** parametros_a_enviar = string_array_new();
-			string_array_push_para_lista_segmentos(&parametros_a_enviar, nodoP->lista_segmentos);
-			enviar_msj_con_parametros(socket_kernel, PROCESO_INICIALIZADO, parametros_a_enviar);
-			string_array_destroy(parametros_a_enviar);
+			enviar_tabla_segmentos(socket_kernel, nodoP->lista_segmentos, PROCESO_INICIALIZADO);
 			//----------------//
 
 			break;
@@ -114,11 +111,10 @@ int manejar_mensaje() { //pinta bien
 
 			log_info(logger, "PID: %d - Crear Segmento: %d - Base: %d - TAMAÑO: %d", pid, id_segmento, base, tamanio_segmento); //log obligatorio
 			
+			nodoProceso* nodoP = buscar_por_pid(pid);
+
 			//-----SALIDA-----//	
-			char ** parametros_a_enviar = string_array_new();
-			string_array_push_para_lista_segmentos(&parametros_a_enviar, nodoP->lista_segmentos);
-			enviar_msj_con_parametros(socket_kernel, SEGMENTO_CREADO, parametros_a_enviar);
-			string_array_destroy(parametros_a_enviar);
+			enviar_tabla_segmentos(socket_kernel, nodoP->lista_segmentos, SEGMENTO_CREADO);
 			//----------------//
 
 			break;
@@ -140,10 +136,7 @@ int manejar_mensaje() { //pinta bien
 			log_info(logger, "PID: %d - Eliminar Segmento: %d - Base: %d - TAMAÑO: %d", pid, id_segmento, base, tamanio_segmento); //log obligatorio
 
 			//-----SALIDA-----//	
-			char ** parametros_a_enviar = string_array_new();
-			string_array_push_para_lista_segmentos(&parametros_a_enviar, nodoP->lista_segmentos);
-			enviar_msj_con_parametros(socket_kernel, SEGMENTO_CREADO, parametros_a_enviar);
-			string_array_destroy(parametros_a_enviar);
+			enviar_tabla_segmentos(socket_kernel, nodoP->lista_segmentos, SEGMENTO_ELIMINADO);
 			//----------------//			
 
 			break;
@@ -158,7 +151,7 @@ int manejar_mensaje() { //pinta bien
 			log_info(logger, "Eliminación de Proceso PID: %d", pid); //log obligatorio
 			
 			//-----SALIDA-----//	
-			enviar_msj(socket_kernel, PROCESO_ELIMINADO);
+			//enviar_msj(socket_kernel, PROCESO_ELIMINADO); Parece q no se necesita
 			//----------------//
 
 			break;
@@ -166,8 +159,9 @@ int manejar_mensaje() { //pinta bien
 		case ESCRIBIR_VALOR:
 			//-----ENTRADA-----//
 			dir_fisica = atoi(mensaje->parametros[0]);
-			tamanio_buffer = atoi(mensaje->parametros[1]); //TODO ver si el resto del grupo agregan un +1 por el \0 o no
-			buffer = mensaje->parametros[2];
+			buffer = mensaje->parametros[1];
+
+			tamanio_buffer = string_length(buffer); //Saca el /0 (eso es bueno)
 			//-----------------//
 
 			buscar_pid_y_id_segmento_por_dir_fisica(dir_fisica, &pid, &id_segmento);
@@ -198,10 +192,10 @@ int manejar_mensaje() { //pinta bien
 		case LEER_VALOR:
 			//-----ENTRADA-----//
 			dir_fisica = atoi(mensaje->parametros[0]);
-			tamanio_buffer = atoi(mensaje->parametros[1]);
+			tamanio_buffer = atoi(mensaje->parametros[1]); //tamanio del buffer a leer sin /0
 			//-----------------//
 
-			buffer = malloc(tamanio_buffer);
+			buffer = malloc(tamanio_buffer + 1);
 
 			buscar_pid_y_id_segmento_por_dir_fisica(dir_fisica, &pid, &id_segmento);
 
@@ -209,11 +203,13 @@ int manejar_mensaje() { //pinta bien
 
 			memcpy(buffer, memoria_principal + dir_fisica, tamanio_buffer);
 
+			memcpy(buffer + tamanio_buffer, "\0", 1); //agrega el /0 al final del buffer
+
 			log_info(logger, "PID: %d - Acción: LEER - Dirección física: %d - Tamaño: %d - Origen: %d", pid, dir_fisica, tamanio_buffer, mensaje->origen_mensaje); //log obligatorio
 
 			//-----SALIDA-----//
 			char ** parametros_a_enviar = string_array_new();
-			string_array_push(&parametros_a_enviar, buffer);		//TODO puede haber seg_fault pq buffer no tiene \0
+			string_array_push(&parametros_a_enviar, buffer);		
 			switch (mensaje->origen_mensaje){
 				case CPU:
 					enviar_msj_con_parametros(socket_cpu, LEIDO_OK, parametros_a_enviar);
@@ -260,14 +256,6 @@ int manejar_mensaje() { //pinta bien
 	return 1;
 }
 
-void string_array_push_para_lista_segmentos(char ***parametros_a_enviar, t_list* lista_segmentos) {
-	for(int i = 0; i < list_size(lista_segmentos); i++){
-		nodoSegmento* nodoS = list_get(lista_segmentos, i);
-		string_array_push(*parametros_a_enviar, string_itoa(nodoS->id_segmento));
-		string_array_push(*parametros_a_enviar, string_itoa(nodoS->base));
-		string_array_push(*parametros_a_enviar, string_itoa(nodoS->tamanio));
-	}	
-}
 
 void compactar() { //CHEQUEADA 2.0
 	int pid;

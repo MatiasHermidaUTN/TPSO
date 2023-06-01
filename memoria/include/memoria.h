@@ -18,10 +18,8 @@ typedef struct nodoProceso {
 	t_list* lista_segmentos;
 } nodoProceso;
 
-eliminar_lista_procesos
 //MEMORIA
 int manejar_mensaje();
-void string_array_push_para_lista_segmentos(char ***parametros_a_enviar, t_list* lista_segmentos);
 void compactar();
 void eliminar_segmento(int pid, int id_segmento);
 void eliminar_proceso(int pid);
