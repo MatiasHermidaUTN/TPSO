@@ -2,46 +2,67 @@
 #include <commons/log.h>
 #include <commons/collections/queue.h>
 
-//SEMAFOROS////////////////////////////////
+////////////
+// CONFIG //
+////////////
+
+t_kernel_config lectura_de_config;
+
+////////////
+// LOGGER //
+////////////
+
+t_log* logger;
+
+/////////////
+// SOCKETS //
+/////////////
+
+int socket_memoria;
+int socket_cpu;
+int socket_fileSystem;
+
+///////////////
+// SEMAFOROS //
+///////////////
+
 pthread_mutex_t mutex_contador_pid; //para que dos procesos no tengan el mismo ID
-pthread_mutex_t mutex_ready_list; //por si quieren agregar y eliminar de la lista al mismo tiempo.
-pthread_mutex_t mutex_new_queue;
+pthread_mutex_t mutex_new_queue; //por si quieren agregar y eliminar de la lista al mismo tiempo.
+pthread_mutex_t mutex_ready_list;
 pthread_mutex_t mutex_cantidad_de_reads_writes;
 pthread_mutex_t mutex_msj_memoria;
 pthread_mutex_t mutex_pcbs_en_io;
+
 sem_t sem_cant_ready;
 sem_t sem_cant_new;
 sem_t sem_multiprogramacion;
 sem_t sem_respuesta_fs;
 sem_t sem_compactacion;
-///////////////////////////////////////////
 
-//CONFIG///////////////////////////////////
-t_kernel_config lectura_de_config;
-///////////////////////////////////////////
-
-//LOGGER///////////////////////////////////
-t_log* logger;
-
-//SOCKETS/////////////////////////////////
-int socket_memoria;
-int socket_cpu;
-int socket_fileSystem;
-//////////////////////////////////////////
+////////////////////
+// LISTAS Y COLAS //
+////////////////////
 
 t_queue* new_queue;
 t_list* ready_list;
 
+t_list* list_pcbs_en_io;
+
 t_list* list_recursos;
 t_list* list_archivos;
 
-t_list* pcbs_en_io;
-///////////////////////////////////////////
+//////////////////////////////////////
+// VARIABLES COMPARTIDAS / GLOBALES //
+//////////////////////////////////////
+
 t_pcb* proximo_pcb_a_ejecutar_forzado = NULL;
 t_msj_kernel_fileSystem respuesta_fs_global;
 int cantidad_de_reads_writes = 0;
 
-///////////////////////////////////////////
+///////////////
+// FUNCIONES //
+///////////////
+
 t_kernel_config leer_kernel_config(t_config* config) {
     t_kernel_config lectura_de_config;
 
@@ -95,7 +116,7 @@ void init_estados() {
 	list_recursos = list_create();
 	list_archivos = list_create();
 
-	pcbs_en_io = list_create();
+	list_pcbs_en_io = list_create();
 
 	t_recurso* recurso;
 	for(int i = 0; i < string_array_size(lectura_de_config.RECURSOS); i++) {

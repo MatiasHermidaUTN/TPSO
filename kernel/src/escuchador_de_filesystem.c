@@ -1,10 +1,10 @@
 #include "../include/escuchador_de_filesystem.h"
 
 void escuchar_de_filesystem() {
+	// TODO: DESCOMENTAR!!!!!! (cuando funcione File System)
 	while(1) {
-		while(1); //TODO: DESCOMENTAR!!!!!!
 		int op_code_recibido = recibir_msj(socket_fileSystem);
-		switch(op_code_recibido){
+		switch(op_code_recibido) {
 			case EL_ARCHIVO_YA_EXISTE: case EL_ARCHIVO_NO_EXISTE: case EL_ARCHIVO_FUE_CREADO:
 
 				respuesta_fs_global = op_code_recibido;
@@ -19,17 +19,15 @@ void escuchar_de_filesystem() {
 				}
 				pthread_mutex_unlock(&mutex_cantidad_de_reads_writes);
 
-
 				//No debe haber break, porque de igual forma tiene que hacer exactamente lo mismo que el proximo case
 
-			case EL_ARCHIVO_FUE_TRUNCADO: //TODO: fijarse si también debería hacer lo que hace el case de arriba,
-				//ya que también desbloquea pcb y capaz genera conflictos a la hora de actualizar las tablas de segmentos de los pcbs de todas las listas
-
+			case EL_ARCHIVO_FUE_TRUNCADO:
 				char** parametros = recibir_parametros_de_mensaje(socket_fileSystem);
 
-				sem_wait(&sem_compactacion); //TODO: hace falta?? porque puede que se esté compactando y se estaría cambiando la lista de bloqueados. Funcionaría como un mutex en este caso
+				//Puede que se esté compactando y se estaría cambiando la lista de bloqueados.
+				sem_wait(&sem_compactacion); //Funcionaría como un mutex en este caso
 				desbloquear_pcb_por_archivo(parametros[0], atoi(parametros[1]));
-				sem_post(&sem_compactacion);
+				sem_post(&sem_compactacion); //Funcionaría como un mutex en este caso
 
 				string_array_destroy(parametros);
 				break;
@@ -38,6 +36,7 @@ void escuchar_de_filesystem() {
 				exit(EXIT_FAILURE);
 		}
 	}
+	*/
 }
 
 void desbloquear_pcb_por_archivo(char* nombre_archivo, int pid) {

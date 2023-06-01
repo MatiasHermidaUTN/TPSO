@@ -84,19 +84,19 @@ void ejecutar_instrucciones(t_pcb* pcb) {
 				break;
 
 			case IO:
-				enviar_pcb_a_kernel(pcb, IO_EJECUTADO, instruccion_actual->parametros, 1);
+				enviar_pcb_a_kernel(pcb, IO_EJECUTADO, instruccion_actual->parametros);
 				return;
 
 			case F_OPEN:
-				enviar_pcb_a_kernel(pcb, F_OPEN_EJECUTADO, instruccion_actual->parametros, 1);
+				enviar_pcb_a_kernel(pcb, F_OPEN_EJECUTADO, instruccion_actual->parametros);
 				return;
 
 			case F_CLOSE:
-				enviar_pcb_a_kernel(pcb, F_CLOSE_EJECUTADO, instruccion_actual->parametros, 1);
+				enviar_pcb_a_kernel(pcb, F_CLOSE_EJECUTADO, instruccion_actual->parametros);
 				return;
 
 			case F_SEEK:
-				enviar_pcb_a_kernel(pcb, F_SEEK_EJECUTADO, instruccion_actual->parametros, 2);
+				enviar_pcb_a_kernel(pcb, F_SEEK_EJECUTADO, instruccion_actual->parametros);
 				return;
 
 			case F_READ: case F_WRITE:
@@ -104,27 +104,27 @@ void ejecutar_instrucciones(t_pcb* pcb) {
 
 				t_datos_mmu datos_mmu = mmu(pcb, direccion_logica);
 
-				//Me fijo si es F_READ o F_WRITE (hice esto para evitar mucha repetición de lógica)
-				t_msj_kernel_cpu mensaje_a_mandar;
-				log_acceso_memoria(&mensaje_a_mandar, instruccion_actual->nombre, pcb->pid, datos_mmu.numero_segmento, datos_mmu.direccion_fisica); //log obligatorio
-
 				char* cantidad_de_bytes = list_get(instruccion_actual->parametros, 2);
 				//if(datos_mmu.desplazamiento_segmento + atoi(cantidad_de_bytes) > tamanio_segmento) { //TODO: calcula mal el tamanio_segmento porque no encuentra el id del segmento pq no se crearon. Ya debería funcionar bien igual.
 				if(0) {
 					log_info(logger, "PID: %d - Error SEG_FAULT - Segmento: %d - Offset: %d - Tamaño: %d", pcb->pid, datos_mmu.numero_segmento, datos_mmu.desplazamiento_segmento, datos_mmu.tamanio_segmento); //log obligatorio
 
-					enviar_pcb_a_kernel(pcb, EXIT_CON_SEG_FAULT_EJECUTADO, instruccion_actual->parametros, 3);
+					enviar_pcb_a_kernel(pcb, EXIT_CON_SEG_FAULT_EJECUTADO, instruccion_actual->parametros);
 				}
 				else {
+					//Me fijo si es F_READ o F_WRITE (hice esto para evitar mucha repetición de lógica)
+					t_msj_kernel_cpu mensaje_a_mandar;
+					log_acceso_memoria(&mensaje_a_mandar, instruccion_actual->nombre, pcb->pid, datos_mmu.numero_segmento, datos_mmu.direccion_fisica); //log obligatorio
+
 					t_list* parametros_a_enviar = list_create();
 
 					char* str_direccion_fisica = string_itoa(datos_mmu.direccion_fisica);
 
-					list_add(parametros_a_enviar, list_get(instruccion_actual->parametros, 0));
+					list_add(parametros_a_enviar, list_get(instruccion_actual->parametros, 0)); //Nombre del archivo
 					list_add(parametros_a_enviar, str_direccion_fisica);
-					list_add(parametros_a_enviar, cantidad_de_bytes);
+					list_add(parametros_a_enviar, cantidad_de_bytes); //Es un char*
 
-					enviar_pcb_a_kernel(pcb, mensaje_a_mandar, parametros_a_enviar, 3);
+					enviar_pcb_a_kernel(pcb, mensaje_a_mandar, parametros_a_enviar);
 
 					list_destroy(parametros_a_enviar);
 					free(str_direccion_fisica);
@@ -133,32 +133,32 @@ void ejecutar_instrucciones(t_pcb* pcb) {
 				return;
 
 			case F_TRUNCATE:
-				enviar_pcb_a_kernel(pcb, F_TRUNCATE_EJECUTADO, instruccion_actual->parametros, 2);
+				enviar_pcb_a_kernel(pcb, F_TRUNCATE_EJECUTADO, instruccion_actual->parametros);
 				return;
 
 			case WAIT:
-				enviar_pcb_a_kernel(pcb, WAIT_EJECUTADO, instruccion_actual->parametros, 1);
+				enviar_pcb_a_kernel(pcb, WAIT_EJECUTADO, instruccion_actual->parametros);
 				return;
 
 			case SIGNAL:
-				enviar_pcb_a_kernel(pcb, SIGNAL_EJECUTADO, instruccion_actual->parametros, 1);
+				enviar_pcb_a_kernel(pcb, SIGNAL_EJECUTADO, instruccion_actual->parametros);
 				return;
 				break;
 
 			case CREATE_SEGMENT:
-				enviar_pcb_a_kernel(pcb, CREATE_SEGMENT_EJECUTADO, instruccion_actual->parametros, 2);
+				enviar_pcb_a_kernel(pcb, CREATE_SEGMENT_EJECUTADO, instruccion_actual->parametros);
 				return;
 
 			case DELETE_SEGMENT:
-				enviar_pcb_a_kernel(pcb, DELETE_SEGMENT_EJECUTADO, instruccion_actual->parametros, 1);
+				enviar_pcb_a_kernel(pcb, DELETE_SEGMENT_EJECUTADO, instruccion_actual->parametros);
 				return;
 
 			case YIELD:
-				enviar_pcb_a_kernel(pcb, YIELD_EJECUTADO, instruccion_actual->parametros, 0);
+				enviar_pcb_a_kernel(pcb, YIELD_EJECUTADO, instruccion_actual->parametros);
 				return;
 
 			case EXIT:
-				enviar_pcb_a_kernel(pcb, EXIT_EJECUTADO, instruccion_actual->parametros, 0);
+				enviar_pcb_a_kernel(pcb, EXIT_EJECUTADO, instruccion_actual->parametros);
 				return;
 
 			default:
@@ -289,10 +289,10 @@ int tamanio_registro(char* nombre_registro) {
 	return 16;
 }
 
-void enviar_pcb_a_kernel(t_pcb* pcb, t_msj_kernel_cpu mensaje, t_list* list_parametros, int cantidad_de_parametros) {
+void enviar_pcb_a_kernel(t_pcb* pcb, t_msj_kernel_cpu mensaje, t_list* list_parametros) {
 	char** parametros = string_array_new();
 
-	for(int i = 0; i < cantidad_de_parametros; i++) {
+	for(int i = 0; i < list_size(list_parametros); i++) {
 		string_array_push(&parametros, list_get(list_parametros, i));
 	}
 

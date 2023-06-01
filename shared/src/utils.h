@@ -1,7 +1,3 @@
-/////////////////////////
-// Utils.c del cliente //
-/////////////////////////
-
 #ifndef UTILS_H_
 #define UTILS_H_
 
@@ -23,6 +19,10 @@
 #include <stdint.h>
 #include <pthread.h>
 #include "diccionario_instrucciones.h"
+
+///////////
+// ENUMS //
+///////////
 
 typedef enum {
 	MENSAJE,
@@ -126,6 +126,9 @@ typedef enum {
 	LEIDO_OK,
 } t_msj_memoria;
 
+//////////////
+// STRUCTS //
+//////////////
 
 typedef struct {
 	int size;

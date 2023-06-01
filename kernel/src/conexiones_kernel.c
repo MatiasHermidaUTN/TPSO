@@ -65,6 +65,7 @@ t_pcb* crear_pcb(t_list* instrucciones, int socket_consola) {
 	}
 	else {
 		log_error(logger, "Error en el uso de segmentos");
+		exit(EXIT_FAILURE);
 	}
 
 	pthread_mutex_unlock(&mutex_msj_memoria);

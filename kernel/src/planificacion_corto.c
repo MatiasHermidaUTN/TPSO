@@ -29,10 +29,6 @@ void planificar_corto() {
 				pcb_recibido->tiempo_real_ejecucion = time(NULL) - pcb_recibido->tiempo_inicial_ejecucion;
 				//Finaliza ejecucion
 
-				pthread_mutex_lock(&mutex_pcbs_en_io);
-				list_add(pcbs_en_io,pcb_recibido); //para actualizar los segmentos en la compactacion
-				pthread_mutex_unlock(&mutex_pcbs_en_io);
-
 				t_args_io* args = malloc(sizeof(t_args_io));
 			    args->tiempo = tiempo_a_bloquear;
 				args->pcb = pcb_recibido;
@@ -161,7 +157,6 @@ void planificar_corto() {
 				enviar_msj_con_parametros(socket_fileSystem, mensaje_a_mandar, parametros);
 
 				log_info(logger, "PID: %d - %s Archivo: %s - Puntero %d - Dirección Memoria %s - Tamaño %d", pcb_recibido->pid, accion, archivo->nombre_archivo, archivo->posicion_actual, parametros[1], cantidad_bytes); //log obligatorio
-
 
 				free(accion);
 				string_array_destroy(parametros);
@@ -315,11 +310,17 @@ t_pcb* obtener_proximo_a_ejecutar() {
 }
 
 void manejar_io(t_args_io* args_io) {
+	pthread_mutex_lock(&mutex_pcbs_en_io);
+	list_add(list_pcbs_en_io, args_io->pcb); //para actualizar los segmentos en la compactacion
+	pthread_mutex_unlock(&mutex_pcbs_en_io);
+
 	sleep(args_io->tiempo);
 	ready_list_push(args_io->pcb); //Aca calcula el S (proxima rafaga), actualizo el tiempo_llegada_ready y hago sem_post(&sem_cant_ready)
+
 	pthread_mutex_lock(&mutex_pcbs_en_io);
-	list_remove_pcb(pcbs_en_io, args_io->pcb);
+	list_remove_pcb(list_pcbs_en_io, args_io->pcb);
 	pthread_mutex_unlock(&mutex_pcbs_en_io);
+
 	free(args_io);
 }
 
@@ -541,24 +542,20 @@ void crear_segmento(t_pcb* pcb_recibido, char** parametros) {
 			break;
 
 		case HAY_QUE_COMPACTAR:
-
 			log_info(logger, "Compactación: Esperando Fin de Operaciones de FS"); //log obligatorio
-			sem_wait(&sem_compactacion);
+			sem_wait(&sem_compactacion); //Funcionaría como un mutex en este caso
 
 			log_info(logger, "Compactación: Se solicitó compactación"); //log obligatorio
 
 			pthread_mutex_lock(&mutex_msj_memoria);
 			enviar_msj(socket_memoria, COMPACTAR);
-			int rta_compactacion = recibir_msj(socket_memoria);
-			t_list* procesos;
-			if(rta_compactacion == MEMORIA_COMPACTADA){
-				procesos = recibir_procesos_con_segmentos(socket_memoria);
-			}
-			pthread_mutex_unlock(&mutex_msj_memoria);
 
-			if(rta_compactacion == MEMORIA_COMPACTADA) {
+			if(recibir_msj(socket_memoria) == MEMORIA_COMPACTADA) {
 				log_info(logger, "Se finalizó el proceso de compactación"); //log obligatorio
-				sem_post(&sem_compactacion);
+				sem_post(&sem_compactacion); //Funcionaría como un mutex en este caso
+
+				t_list* procesos = recibir_procesos_con_segmentos(socket_memoria);
+				pthread_mutex_unlock(&mutex_msj_memoria);
 
 				actualizar_segmentos(pcb_recibido, procesos);
 
@@ -566,7 +563,9 @@ void crear_segmento(t_pcb* pcb_recibido, char** parametros) {
 			}
 			else {
 				log_error(logger, "Error en la compactacion");
-				exit(EXIT_FAILURE);
+				sem_post(&sem_compactacion); // Por las dudas (?
+				pthread_mutex_unlock(&mutex_msj_memoria); // Por las dudas (?
+				exit(EXIT_FAILURE); //Total rompe todo, osea son al pedo los por las dudas
 			}
 
 			break;
@@ -590,7 +589,7 @@ void actualizar_segmentos(t_pcb* pcb_en_exec, t_list* procesos) {
 	pthread_mutex_unlock(&mutex_ready_list);
 
 	pthread_mutex_lock(&mutex_pcbs_en_io);
-	actualizar_segmentos_de_lista(pcbs_en_io, procesos);
+	actualizar_segmentos_de_lista(list_pcbs_en_io, procesos);
 	pthread_mutex_unlock(&mutex_pcbs_en_io);
 
 	t_recurso* recurso;

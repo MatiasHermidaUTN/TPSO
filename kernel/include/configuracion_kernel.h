@@ -8,6 +8,10 @@
 #include "planificacion_largo.h"
 #include <semaphore.h>
 
+/////////////
+// STRUCTS //
+/////////////
+
 typedef struct kernel_config {
     char* IP_MEMORIA;
     char* PUERTO_MEMORIA;
@@ -31,6 +35,30 @@ typedef struct {
 	pthread_mutex_t mutex_archivo;
 } t_recurso;
 
+/////////////
+// CONFIG //
+/////////////
+
+extern t_kernel_config lectura_de_config;
+
+////////////
+// LOGGER //
+////////////
+
+extern t_log* logger;
+
+/////////////
+// SOCKETS //
+/////////////
+
+extern int socket_memoria;
+extern int socket_cpu;
+extern int socket_fileSystem;
+
+///////////////
+// SEMAFOROS //
+///////////////
+
 extern pthread_mutex_t mutex_contador_pid;
 extern pthread_mutex_t mutex_new_queue;
 extern pthread_mutex_t mutex_ready_list;
@@ -38,34 +66,35 @@ extern pthread_mutex_t mutex_cantidad_de_reads_writes;
 extern pthread_mutex_t mutex_msj_memoria;
 extern pthread_mutex_t mutex_pcbs_en_io;
 
-
 extern sem_t sem_cant_ready;
 extern sem_t sem_cant_new;
 extern sem_t sem_multiprogramacion;
 extern sem_t sem_respuesta_fs;
 extern sem_t sem_compactacion;
 
-
-extern t_kernel_config lectura_de_config;
-extern t_log* logger;
+////////////////////
+// LISTAS Y COLAS //
+////////////////////
 
 extern t_queue* new_queue;
 extern t_list* ready_list;
 
-extern int socket_memoria;
-extern int socket_cpu;
-extern int socket_fileSystem;
+extern t_list* list_pcbs_en_io;
 
 extern t_list* list_recursos;
 extern t_list* list_archivos;
 
-extern t_list* pcbs_en_io;
-
+//////////////////////////////////////
+// VARIABLES COMPARTIDAS / GLOBALES //
+//////////////////////////////////////
 
 extern t_pcb* proximo_pcb_a_ejecutar_forzado;
 extern t_msj_kernel_fileSystem respuesta_fs_global;
 extern int cantidad_de_reads_writes;
 
+///////////////
+// FUNCIONES //
+///////////////
 
 t_kernel_config leer_kernel_config(t_config* config);
 void init_semaforos(void);

@@ -25,7 +25,7 @@ void set_registro(t_pcb* pcb, char* registro, char* valor);
 char* leer_registro(t_pcb* pcb, char* registro);
 int tamanio_registro(char* nombre_registro);
 
-void enviar_pcb_a_kernel(t_pcb* pcb, t_msj_kernel_cpu mensaje, t_list* list_parametros, int cantidad_de_parametros);
+void enviar_pcb_a_kernel(t_pcb* pcb, t_msj_kernel_cpu mensaje, t_list* list_parametros);
 
 char* obtener_parametros_a_emitir(t_list* parametros_actuales);
 
