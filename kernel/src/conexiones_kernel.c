@@ -70,8 +70,7 @@ t_pcb* crear_pcb(t_list* instrucciones, int socket_consola) {
 
 	pthread_mutex_unlock(&mutex_msj_memoria);
 	*/
-
-	pcb->tabla_segmentos = list_create(); //TODO: SACAR
+	pcb->tabla_segmentos = list_create(); //TODO: SACAR!!
 
 	pcb->estimado_prox_rafaga = lectura_de_config.ESTIMACION_INICIAL;
 	pcb->tiempo_llegada_ready = 0;

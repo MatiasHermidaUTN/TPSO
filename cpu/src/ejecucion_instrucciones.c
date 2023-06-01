@@ -52,7 +52,7 @@ void ejecutar_instrucciones(t_pcb* pcb) {
 				else {
 					//Todovich lo de acceso_memoria solo sirve para el log obligatorio (te das cuenta?)
 
-					//TODO: no es necesario usar el hilo para MOV_IN y MOV_OUT, pero ya tengo toda la lógica hecha, así q aprovecho y la uso
+					//No es necesario usar el hilo para MOV_IN y MOV_OUT, pero ya tengo toda la lógica hecha, así que aprovecho y la uso
 					// log_acceso_memoria
 					t_args_log_acceso_memoria* args = malloc(sizeof(t_args_log_acceso_memoria));
 					args->pcb = pcb;
@@ -67,7 +67,7 @@ void ejecutar_instrucciones(t_pcb* pcb) {
 				    }
 
 				    //Pusheo antes de ejecutar para asegurarme que Memoria no me responda antes de haber ingresado la solicitud a la lista
-				    list_push_con_mutex(list_solicitudes_acceso_memoria, args, mutex_list_solicitudes_acceso_memoria);
+				    list_push_con_mutex(list_solicitudes_acceso_memoria, args, &mutex_list_solicitudes_acceso_memoria);
 
 
 					//Atentos a la mayor villereada de todos los tiempos!!
@@ -75,16 +75,21 @@ void ejecutar_instrucciones(t_pcb* pcb) {
 				    // EJECUCION INSTRUCCION
 					if(instruccion_actual == MOV_IN) {
 						ejecutar_mov_in(pcb, datos_mmu.direccion_fisica, obtener_registro(instruccion_actual, parametros_actuales));
+
+						break;
 					}
 					else if(instruccion_actual == MOV_OUT) {
 						ejecutar_mov_out(pcb, datos_mmu.direccion_fisica, obtener_registro(instruccion_actual, parametros_actuales));
+
+						break;
 					}
 					else {
 						ejecutar_fread_o_fwrite(pcb, datos_mmu.direccion_fisica, instruccion_actual, parametros_actuales);
+						return;
 					}
 				}
 
-				break;
+				break; //No va a llegar nunca acá, pero sino me tira warning
 
 			case IO: case F_OPEN: case F_CLOSE: case F_SEEK: case F_TRUNCATE: case WAIT:
 			case SIGNAL: case CREATE_SEGMENT: case DELETE_SEGMENT: case YIELD: case EXIT:
@@ -208,7 +213,7 @@ char* leer_registro(t_pcb* pcb, char* registro) {
 	}
 
 	char barra_cero = '\0';
-	memcpy(valor + tamanio_registro(registro) + 1, &barra_cero, sizeof(char)); //Para que pueda funcionar bien con las funciones de string_array
+	memcpy(valor + tamanio_registro(registro), &barra_cero, sizeof(char)); //Para que pueda funcionar bien con las funciones de string_array
 
 	usleep(lectura_de_config.RETARDO_INSTRUCCION * 1000);
 	return valor;

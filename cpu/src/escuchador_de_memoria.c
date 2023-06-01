@@ -1,17 +1,20 @@
 #include "../include/escuchador_de_memoria.h"
 
 void log_acceso_memoria() {
+	/* TODO: DESCOMENTAR!!!! (cuando esté memoria lista)
 	while(1) {
 		t_msj_memoria instruccion_realizada = recibir_msj(socket_memoria); //Es bloqueante, por lo que me sirve como sistema productor-consumidor para la lista
-		char** parametros_memoria = recibir_parametros_de_mensaje(socket_memoria); //pid, valor escrito/leido
+		char** parametros_memoria = recibir_parametros_de_mensaje(socket_memoria); //pid + valor escrito/leido
 
-		pthread_mutex_lock(mutex_list_solicitudes_acceso_memoria);
-		t_args_log_acceso_memoria* args = list_remove_solicitud(atoi(parametros_memoria[0]));
-		pthread_mutex_unlock(mutex_list_solicitudes_acceso_memoria);
-		/*
-		Hace falta buscar por pid, porque, aunque el que va a llegar (terminar de leer/escribir) siempre va a ser el primero (porque se ejecutan secuencialmente),
-		eso solo pasa con F_WRITE y F_READ, pero también uso MOV_IN y MOV_OUT para esto.
-		*/
+		int pid = atoi(parametros_memoria[0]);
+
+		pthread_mutex_lock(&mutex_list_solicitudes_acceso_memoria);
+		t_args_log_acceso_memoria* args = list_remove_solicitud(pid);
+		pthread_mutex_unlock(&mutex_list_solicitudes_acceso_memoria);
+
+		//Hace falta buscar por pid, porque, aunque el que va a llegar (terminar de leer/escribir) siempre va a ser el primero (porque se ejecutan secuencialmente),
+		//eso solo pasa con F_WRITE y F_READ, pero también uso MOV_IN y MOV_OUT para esto.
+
 
 		char* accion;
 		if(instruccion_realizada == LEIDO_OK) { //Lo hago con if y no con switch directamente para que no me tire un warning bíblico
@@ -25,7 +28,7 @@ void log_acceso_memoria() {
 		}
 
 		char* valor = parametros_memoria[1];
-		log_info(logger, "PID: %d - Acción: %s - Segmento: %d - Dirección Física: %d - Valor: %s", args->pcb->pid, accion, args->numero_segmento, args->direccion_fisica, valor); //log obligatorio
+		log_info(logger, "PID: %d - Acción: %s - Segmento: %d - Dirección Física: %d - Valor: %s", pid, accion, args->numero_segmento, args->direccion_fisica, valor); //log obligatorio
 
 		if(args->nombre_registro) { //Si se ejecutó MOV_IN
 			set_registro(args->pcb, args->nombre_registro, valor);
@@ -35,6 +38,7 @@ void log_acceso_memoria() {
 		free(accion);
 		free(args);
 	}
+	*/
 }
 
 t_args_log_acceso_memoria* list_remove_solicitud(int pid) {

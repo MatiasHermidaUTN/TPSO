@@ -20,10 +20,8 @@ void planificar_corto() {
 		switch(respuesta) {
 			case IO:
 				parametros = recibir_parametros_de_instruccion();
-				char* tiempo_como_string = strdup(parametros[0]);
-				int tiempo_a_bloquear = atoi(tiempo_como_string);
+				int tiempo_a_bloquear = atoi(parametros[0]);
 				string_array_destroy(parametros);
-				free(tiempo_como_string);
 
 				pcb_recibido = recibir_pcb(socket_cpu);
 				pcb_recibido->tiempo_real_ejecucion = time(NULL) - pcb_recibido->tiempo_inicial_ejecucion;
@@ -32,6 +30,10 @@ void planificar_corto() {
 				log_info(logger, "PID: %d - Estado Anterior: EXEC - Estado Actual: BLOCK", pcb_recibido->pid); //log obligatorio
 				log_info(logger, "PID: %d - Bloqueado por: IO", pcb_recibido->pid); //log obligatorio
 				log_info(logger, "PID: %d - Ejecuta IO: %d", pcb_recibido->pid, tiempo_a_bloquear); //log obligatorio
+
+				pthread_mutex_lock(&mutex_pcbs_en_io);
+				list_add(list_pcbs_en_io, pcb_recibido); //para actualizar los segmentos en la compactacion
+				pthread_mutex_unlock(&mutex_pcbs_en_io);
 
 				t_args_io* args = malloc(sizeof(t_args_io));
 			    args->tiempo = tiempo_a_bloquear;
@@ -168,6 +170,7 @@ void planificar_corto() {
 				char* pid_a_enviar = string_itoa(pcb_recibido->pid);
 
 				string_array_push(&parametros, pid_a_enviar);
+				//TODO: agregar mutex para compactacion
 				bloquear_pcb_por_archivo(pcb_recibido, parametros[0]);
 				enviar_msj_con_parametros(socket_fileSystem, TRUNCAR_ARCHIVO, parametros);
 
@@ -214,12 +217,13 @@ void planificar_corto() {
 			case DELETE_SEGMENT:
 				parametros = recibir_parametros_de_instruccion();
 				pcb_recibido = recibir_pcb(socket_cpu);
-				string_array_push(&parametros,string_itoa(pcb_recibido->pid));
+
+				string_array_push(&parametros, string_itoa(pcb_recibido->pid));
 
 				//TODO: testear cuando esté memoria lista
 
 				pthread_mutex_lock(&mutex_msj_memoria);
-				enviar_msj_con_parametros(socket_memoria, ELIMINAR_SEGMENTO, parametros); //id pid
+				enviar_msj_con_parametros(socket_memoria, ELIMINAR_SEGMENTO, parametros); //id + pid
 
 				if(recibir_msj(socket_memoria) == SEGMENTO_ELIMINADO) { //No hace falta pero bueno, recibe un mensaje sí o sí
 					actualizar_segmentos_de_pcb(pcb_recibido, recibir_tabla_segmentos(socket_memoria));
@@ -245,6 +249,7 @@ void planificar_corto() {
 				//Finaliza ejecucion
 
 				ready_list_push(pcb_recibido); //Aca calcula el S (proxima rafaga), actualizo el tiempo_llegada_ready y hago sem_post(&sem_cant_ready) (solo necesito pasarle el pcb, porque ya sé que es en Ready)
+
 				break;
 
 			case EXIT:
@@ -310,9 +315,6 @@ t_pcb* obtener_proximo_a_ejecutar() {
 }
 
 void manejar_io(t_args_io* args) {
-	pthread_mutex_lock(&mutex_pcbs_en_io);
-	list_add(list_pcbs_en_io, args->pcb); //para actualizar los segmentos en la compactacion
-	pthread_mutex_unlock(&mutex_pcbs_en_io);
 
 	sleep(args->tiempo);
 	ready_list_push(args->pcb); //Aca calcula el S (proxima rafaga), actualizo el tiempo_llegada_ready y hago sem_post(&sem_cant_ready)
@@ -320,6 +322,9 @@ void manejar_io(t_args_io* args) {
 	pthread_mutex_lock(&mutex_pcbs_en_io);
 	list_remove_pcb(list_pcbs_en_io, args->pcb);
 	pthread_mutex_unlock(&mutex_pcbs_en_io);
+
+	//TODO: puede que nunca se actualice al pcb que está saliend de IO para READY en compactación.
+	//Hay que agregar mutex para compactación
 
 	free(args);
 }
@@ -408,11 +413,11 @@ char* mensaje_de_finalizacion_a_string(t_msj_kernel_consola mensaje) {
 	}
 }
 
-void list_remove_pcb(t_list *lista, t_pcb *pcb) {
-	t_pcb* elemento;
+void list_remove_pcb(t_list* lista, t_pcb* pcb_en_lista) {
+	t_pcb* pcb;
 	for(int i = 0; i < list_size(lista); i++) {
-		elemento = list_get(lista, i);
-		if(elemento->pid == pcb->pid) {
+		pcb = list_get(lista, i);
+		if(pcb->pid == pcb_en_lista->pid) {
 			list_remove(lista, i);
 		}
 	}
@@ -584,7 +589,7 @@ void actualizar_segmentos(t_pcb* pcb_en_exec, t_list* procesos) {
 
 	free(proceso_en_exec);
 
-	pthread_mutex_lock(&mutex_ready_list); //Se hace el mutex acá afuera para que ningún pcb entre de New mientras se está actualizando la lista de ready
+	pthread_mutex_lock(&mutex_ready_list); //Se hace el mutex acá afuera para que ningún pcb entre de NEW mientras se está actualizando la lista de READY
 	actualizar_segmentos_de_lista(ready_list, procesos);
 	pthread_mutex_unlock(&mutex_ready_list);
 

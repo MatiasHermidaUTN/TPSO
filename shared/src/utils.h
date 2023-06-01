@@ -224,11 +224,11 @@ void* list_pop_con_mutex(t_list* lista, pthread_mutex_t* mutex);
 // Liberar datos //
 ///////////////////
 
-void destruir_instruccion(t_instruccion* instruccion);
 void liberar_pcb(t_pcb* pcb);
-void liberar_parametros(char** parametros);
+void destruir_instruccion(t_instruccion* instruccion);
 void destruir_archivo_abierto(t_archivo_abierto* archivo);
 void liberar_tabla_segmentos(t_list* tabla_segmentos);
+void liberar_parametros(char** parametros);
 
 /////////
 // pcb //

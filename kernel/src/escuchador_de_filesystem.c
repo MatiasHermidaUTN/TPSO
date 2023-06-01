@@ -24,6 +24,7 @@ void escuchar_de_filesystem() {
 			case EL_ARCHIVO_FUE_TRUNCADO:
 				char** parametros = recibir_parametros_de_mensaje(socket_fileSystem);
 
+				//TODO: habría que usar otro mutex?? porque si se está leyendo ya se hace wait, por lo que no entraría acá hasta que se terminen de leer todos los archivos
 				//Puede que se esté compactando y se estaría cambiando la lista de bloqueados.
 				sem_wait(&sem_compactacion); //Funcionaría como un mutex en este caso
 				desbloquear_pcb_por_archivo(parametros[0], atoi(parametros[1]));

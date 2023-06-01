@@ -225,25 +225,17 @@ void list_push_con_mutex(t_list* lista,void* elemento , pthread_mutex_t* mutex) 
 // Liberar datos //
 ///////////////////
 
+void liberar_pcb(t_pcb* pcb) {
+	list_destroy_and_destroy_elements(pcb->instrucciones, (void*)destruir_instruccion);
+	list_destroy_and_destroy_elements(pcb->archivos_abiertos, (void*)destruir_archivo_abierto);
+	liberar_tabla_segmentos(pcb->tabla_segmentos);
+	free(pcb);
+}
+
 void destruir_instruccion(t_instruccion* instruccion) {
 	free(instruccion->nombre);
 	list_destroy_and_destroy_elements(instruccion->parametros, (void*)free);
 	free(instruccion);
-}
-
-void liberar_pcb(t_pcb* pcb) {
-	list_destroy_and_destroy_elements(pcb->instrucciones, (void*)destruir_instruccion);
-	list_destroy_and_destroy_elements(pcb->archivos_abiertos, (void*)destruir_archivo_abierto);
-	list_destroy(pcb->tabla_segmentos);
-	free(pcb);
-}
-
-void liberar_parametros(char** parametros) {
-	for(int i = 0; i < string_array_size(parametros); i++) {
-		free(parametros[i]);
-	}
-
-	free(parametros);
 }
 
 void destruir_archivo_abierto(t_archivo_abierto* archivo){
@@ -253,6 +245,14 @@ void destruir_archivo_abierto(t_archivo_abierto* archivo){
 
 void liberar_tabla_segmentos(t_list* tabla_segmentos) {
 	list_destroy_and_destroy_elements(tabla_segmentos, (void*)free);
+}
+
+void liberar_parametros(char** parametros) {
+	for(int i = 0; i < string_array_size(parametros); i++) {
+		free(parametros[i]);
+	}
+
+	free(parametros);
 }
 
 /////////
