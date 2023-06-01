@@ -13,6 +13,7 @@ sem_t sem_cant_msj;
 t_list* lista_fifo_msj;
 
 t_log* logger;
+t_log* logger_no_obligatorio;
 //-------------------------------
 
 void leer_memoria_config(t_config* config) {

@@ -60,28 +60,28 @@ void manejar_conexion(int* socket_cliente) {
 	t_handshake rta_handshake = recibir_handshake(*socket_cliente);
 	switch(rta_handshake){
 		case KERNEL:
-			log_info(logger, "El Kernel se conecto a memoria");
+			log_info(logger_no_obligatorio, "El Kernel se conecto a memoria");
 			enviar_handshake(*socket_cliente, OK_HANDSHAKE);
 			socket_kernel = *socket_cliente;
 			manejar_conexion_kernel();
 			break;
 
 		case CPU:
-			log_info(logger, "La CPU se conecto a memoria");
+			log_info(logger_no_obligatorio, "La CPU se conecto a memoria");
 			enviar_handshake(*socket_cliente, OK_HANDSHAKE);
 			socket_cpu = *socket_cliente;
 			manejar_conexion_cpu();
 			break;
 
 		case FILESYSTEM:
-			log_info(logger, "El Filesystem se conecto a memoria");
+			log_info(logger_no_obligatorio, "El Filesystem se conecto a memoria");
 			enviar_handshake(*socket_cliente, OK_HANDSHAKE);
 			socket_fileSystem = *socket_cliente;
 			manejar_conexion_fileSystem();
 			break;
 			
 		default:
-			log_error(logger, "Error en el handshake");
+			log_error(logger_no_obligatorio, "Error en el handshake");
 			enviar_handshake(*socket_cliente, ERROR_HANDSHAKE);
 	}
 
