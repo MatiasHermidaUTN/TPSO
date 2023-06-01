@@ -25,6 +25,8 @@ void ejecutar_instrucciones(t_pcb* pcb) {
 				break;
 
 			case MOV_IN:
+				//Lee de Memoria y escribe en el registro
+
 				char* registro_mov_in = list_get(instruccion_actual->parametros, 0);
 				char* direccion_logica_mov_in = list_get(instruccion_actual->parametros, 1);
 
@@ -38,9 +40,9 @@ void ejecutar_instrucciones(t_pcb* pcb) {
 
 				string_array_destroy(parametros_mov_in);
 
-				recibir_msj(socket_memoria); //LEIDO_OK
-				//TODO: fijarse si es al pedo recibirlo
-				parametros_mov_in = recibir_parametros_de_mensaje(socket_memoria);
+				if(recibir_msj(socket_memoria) == LEIDO_OK) { //No hace falta pero bueno, recibe un mensaje sí o sí
+					parametros_mov_in = recibir_parametros_de_mensaje(socket_memoria);
+				}
 
 				char* valor_mov_in = parametros_mov_in[0];
 				set_registro(pcb, registro_mov_in, valor_mov_in);
@@ -48,6 +50,8 @@ void ejecutar_instrucciones(t_pcb* pcb) {
 				break;
 
 			case MOV_OUT:
+				//Lee del registro y escribe en Memoria
+
 				char* direccion_logica_mov_out = list_get(instruccion_actual->parametros, 0);
 				char* registro_mov_out = list_get(instruccion_actual->parametros, 1);
 
@@ -55,7 +59,7 @@ void ejecutar_instrucciones(t_pcb* pcb) {
 
 				char** parametros_mov_out = string_array_new();
 				string_array_push(&parametros_mov_out, string_itoa(datos_mmu_mov_out.direccion_fisica));
-				string_array_push(&parametros_mov_out, string_itoa(tamanio_registro(registro_mov_out)));
+				string_array_push(&parametros_mov_out, string_itoa(tamanio_registro(registro_mov_out))); //No hace falta igual, lo puede calcular memoria con strlen
 
 				char* valor_mov_out = leer_registro(pcb, registro_mov_out);
 				string_array_push(&parametros_mov_out, valor_mov_out);
@@ -65,8 +69,10 @@ void ejecutar_instrucciones(t_pcb* pcb) {
 
 				string_array_destroy(parametros_mov_out);
 
-				recibir_msj(socket_memoria); //ESCRITO_OK
-				//TODO: fijarse si es al pedo recibirlo
+				if(recibir_msj(socket_memoria) != ESCRITO_OK) { //No hace falta pero bueno, recibe un mensaje sí o sí
+					log_error(logger, "Error en el uso de segmentos");
+				}
+
 				break;
 
 			case IO:
@@ -95,7 +101,7 @@ void ejecutar_instrucciones(t_pcb* pcb) {
 				log_acceso_memoria(&mensaje_a_mandar, instruccion_actual->nombre, pcb->pid, datos_mmu.numero_segmento, datos_mmu.direccion_fisica); //log obligatorio
 
 				char* cantidad_de_bytes = list_get(instruccion_actual->parametros, 2);
-				//if(datos_mmu.desplazamiento_segmento + atoi(cantidad_de_bytes) > tamanio_segmento) { //TODO: calcula mal el tamanio_segmento porque no encuentra el id del segmento.
+				//if(datos_mmu.desplazamiento_segmento + atoi(cantidad_de_bytes) > tamanio_segmento) { //TODO: calcula mal el tamanio_segmento porque no encuentra el id del segmento pq no se crearon. Ya debería funcionar bien igual.
 				if(0) {
 					log_info(logger, "PID: %d - Error SEG_FAULT - Segmento: %d - Offset: %d - Tamaño: %d", pcb->pid, datos_mmu.numero_segmento, datos_mmu.desplazamiento_segmento, datos_mmu.tamanio_segmento); //log obligatorio
 
@@ -219,7 +225,7 @@ void set_registro(t_pcb* pcb, char* registro, char* valor) {
 }
 
 char* leer_registro(t_pcb* pcb, char* registro) {
-	char* valor = malloc(tamanio_registro(registro) * sizeof(char));
+	char* valor = malloc(tamanio_registro(registro) * sizeof(char) + 1); //+1 para el '\0'
 
 	if(!strcmp(registro, "AX")) {
 		memcpy(valor, pcb->registros_cpu.AX, 4 * sizeof(char));
@@ -257,6 +263,9 @@ char* leer_registro(t_pcb* pcb, char* registro) {
 	else if(!strcmp(registro, "RDX")) {
 		memcpy(valor, pcb->registros_cpu.RDX, 16 * sizeof(char));
 	}
+
+	char barra_cero = '\0';
+	memcpy(valor + tamanio_registro(registro) + 1, &barra_cero, sizeof(char)); //Para que pueda funcionar bien con las funciones de string_array
 
 	usleep(lectura_de_config.RETARDO_INSTRUCCION * 1000);
 	return valor;

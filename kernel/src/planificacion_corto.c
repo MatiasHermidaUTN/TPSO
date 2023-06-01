@@ -225,7 +225,14 @@ void planificar_corto() {
 
 				pthread_mutex_lock(&mutex_msj_memoria);
 				enviar_msj_con_parametros(socket_memoria, ELIMINAR_SEGMENTO, parametros); //id pid
-				actualizar_segmentos_de_pcb(pcb_recibido, recibir_tabla_segmentos(socket_memoria));
+
+				if(recibir_msj(socket_memoria) == SEGMENTO_ELIMINADO) { //No hace falta pero bueno, recibe un mensaje sí o sí
+					actualizar_segmentos_de_pcb(pcb_recibido, recibir_tabla_segmentos(socket_memoria));
+				}
+				else {
+					log_error(logger, "Error en el uso de segmentos");
+				}
+
 				pthread_mutex_unlock(&mutex_msj_memoria);
 
 
@@ -506,12 +513,18 @@ void bloquear_pcb_por_archivo(t_pcb* pcb, char* nombre_archivo) {
 
 void crear_segmento(t_pcb* pcb_recibido, char** parametros) {
 	pthread_mutex_lock(&mutex_msj_memoria);
+
 	enviar_msj_con_parametros(socket_memoria, CREAR_SEGMENTO, parametros); // id, tamanio, pid
-	t_msj_kernel_memoria mensaje_recibido = recibir_msj(socket_memoria);
+	t_msj_memoria mensaje_recibido = recibir_msj(socket_memoria);
+
 	t_list* tabla_segmentos;
 	if(mensaje_recibido == SEGMENTO_CREADO){
 		tabla_segmentos = recibir_tabla_segmentos(socket_memoria);
 	}
+	else {
+		log_error(logger, "Error en el uso de segmentos");
+	}
+
 	pthread_mutex_unlock(&mutex_msj_memoria);
 
 	switch(mensaje_recibido) {

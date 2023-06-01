@@ -124,31 +124,8 @@ typedef enum {
 
 	ESCRITO_OK,
 	LEIDO_OK,
-} t_msj_memoria;
+} t_msj_memoria;
 
-/*typedef enum {
-	CREAR_SEGMENTO,
-	ELIMINAR_SEGMENTO,
-	INICIALIZAR_PROCESO,
-	ELIMINAR_PROCESO,
-	COMPACTAR,
-
-	SEGMENTO_CREADO,
-	NO_HAY_ESPACIO_DISPONIBLE,
-	HAY_QUE_COMPACTAR,
-	SEGMENTO_ELIMINADO,
-	PROCESO_INICIALIZADO,
-	PROCESO_ELIMINADO,
-	MEMORIA_COMPACTADA,
-} t_msj_kernel_memoria;
-
-typedef enum {
-	LEER_VALOR,
-	ESCRIBIR_VALOR,
-
-	ESCRITO_OK,
-	LEIDO_OK,
-} t_msj_cpu_memoria;*/
 
 typedef struct {
 	int size;
@@ -295,8 +272,8 @@ char** recibir_parametros_de_mensaje(int socket);
 // Segmentos actualizdos //
 ///////////////////////////
 
-void enviar_tabla_segmentos(int socket, t_list* tabla_segmentos);
-void* serializar_tabla_segmentos(t_list* tabla_segmentos, size_t* size_total);
+void enviar_tabla_segmentos(int socket, t_list* tabla_segmentos, t_msj_memoria mensaje);
+void* serializar_tabla_segmentos(t_list* tabla_segmentos, t_msj_memoria mensaje, size_t* size_total);
 t_list* recibir_tabla_segmentos(int socket);
 t_list* deserializar_tabla_segmentos(void* stream);
 

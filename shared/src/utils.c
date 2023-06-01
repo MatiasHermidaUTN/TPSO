@@ -775,9 +775,9 @@ char** recibir_parametros_de_mensaje(int socket) {
 // Segmentos actualizdos //
 ///////////////////////////
 
-void enviar_tabla_segmentos(int socket, t_list* tabla_segmentos) {
+void enviar_tabla_segmentos(int socket, t_list* tabla_segmentos, t_msj_memoria mensaje) {
 	size_t size_total;
-	void* stream = serializar_procesos_con_segmentos(tabla_segmentos, &size_total);
+	void* stream = serializar_tabla_segmentos(tabla_segmentos, mensaje, &size_total);
 
 	send(socket, stream, size_total, 0);
 
@@ -785,9 +785,9 @@ void enviar_tabla_segmentos(int socket, t_list* tabla_segmentos) {
 	list_destroy_and_destroy_elements(tabla_segmentos, (void*)free);
 }
 
-void* serializar_tabla_segmentos(t_list* tabla_segmentos, size_t* size_total) {
+void* serializar_tabla_segmentos(t_list* tabla_segmentos, t_msj_memoria mensaje, size_t* size_total) {
 	size_t size_payload = 0;
-	*size_total = sizeof(size_payload);
+	*size_total = sizeof(mensaje) + sizeof(size_payload);
 
 	size_payload += list_size(tabla_segmentos) * sizeof(int) * 3; //id + direccion_base + tamanio
 
@@ -795,6 +795,9 @@ void* serializar_tabla_segmentos(t_list* tabla_segmentos, size_t* size_total) {
 
 	void* stream = malloc(*size_total);
 	int desplazamiento = 0;
+
+	memcpy(stream + desplazamiento, &(mensaje), sizeof(mensaje));
+	desplazamiento += sizeof(mensaje);
 
 	memcpy(stream + desplazamiento, &size_payload, sizeof(size_payload));
 	desplazamiento += sizeof(size_payload);
@@ -891,7 +894,7 @@ void* serializar_procesos_con_segmentos(t_list* procesos_actualizados, size_t* s
 	void* stream = malloc(*size_total);
 	int desplazamiento = 0;
 
-	t_msj_kernel_memoria op_code = MEMORIA_COMPACTADA;
+	t_msj_memoria op_code = MEMORIA_COMPACTADA;
 	memcpy(stream + desplazamiento, &(op_code), sizeof(op_code));
 	desplazamiento += sizeof(op_code);
 
