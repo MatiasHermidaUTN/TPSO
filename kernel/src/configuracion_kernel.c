@@ -154,19 +154,18 @@ void mantener_pcb_en_exec(t_pcb* pcb_recibido) {
 
 void ready_list_push(t_pcb* pcb_recibido) {
 	char* estado_anterior;
-	if(pcb_recibido->pc == 0) { //si el proceso viene de New
+	if(pcb_recibido->pc == 0) { //si es la primera vez / el proceso viene de NEW
 		estado_anterior = strdup("NEW");
 	}
-	else { //Si no es la primera vez
+	else { //Si no es la primera vez / el proceso viene de BLOCK
 		estado_anterior = strdup("BLOCK");
-		calcular_prox_rafaga(pcb_recibido); //S se calcula solo al que entra a Ready. Si es la primera vez que entra a Ready, se mantiene la Estimación Inicial
 	}
 
 	log_info(logger, "PID: %d - Estado Anterior: %s - Estado Actual: READY", pcb_recibido->pid, estado_anterior); //log obligatorio
 	free(estado_anterior);
 
 	pcb_recibido->tiempo_llegada_ready = time(NULL); //Actualizo el momento en que llega a Ready
-
+	calcular_prox_rafaga(pcb_recibido); //S se calcula solo al que entra a Ready. Si es la primera vez que entra a Ready, se obtiene la Estimación Inicial de todas formas
 
 	list_push_con_mutex(ready_list, pcb_recibido, &mutex_ready_list);
 	log_pids(); //log obligatorio

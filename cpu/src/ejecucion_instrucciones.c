@@ -36,6 +36,10 @@ void ejecutar_instrucciones(t_pcb* pcb) {
 				string_array_push(&parametros_mov_in, string_itoa(datos_mmu_mov_in.direccion_fisica));
 				string_array_push(&parametros_mov_in, string_itoa(tamanio_registro(registro_mov_in)));
 
+				//TODO:
+				//-agregar log_acceso_memoria y log(SEG_FAULT)
+				//recibir VALOR LEIDO
+
 				enviar_msj_con_parametros(socket_memoria, LEER_VALOR, parametros_mov_in);
 
 				string_array_destroy(parametros_mov_in);
@@ -64,6 +68,10 @@ void ejecutar_instrucciones(t_pcb* pcb) {
 				char* valor_mov_out = leer_registro(pcb, registro_mov_out);
 				string_array_push(&parametros_mov_out, valor_mov_out);
 				free(valor_mov_out);
+
+				//TODO:
+				//-agregar log_acceso_memoria y log(SEG_FAULT)
+				//recibir VALOR ESCRITO
 
 				enviar_msj_con_parametros(socket_memoria, ESCRIBIR_VALOR, parametros_mov_out);
 
