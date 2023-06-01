@@ -18,7 +18,7 @@ void planificar_corto() {
 		t_msj_kernel_cpu respuesta = esperar_cpu();
 
 		switch(respuesta) {
-			case IO_EJECUTADO:
+			case IO:
 				parametros = recibir_parametros_de_instruccion();
 				char* tiempo_como_string = strdup(parametros[0]);
 				int tiempo_a_bloquear = atoi(tiempo_como_string);
@@ -29,20 +29,20 @@ void planificar_corto() {
 				pcb_recibido->tiempo_real_ejecucion = time(NULL) - pcb_recibido->tiempo_inicial_ejecucion;
 				//Finaliza ejecucion
 
+				log_info(logger, "PID: %d - Estado Anterior: EXEC - Estado Actual: BLOCK", pcb_recibido->pid); //log obligatorio
+				log_info(logger, "PID: %d - Bloqueado por: IO", pcb_recibido->pid); //log obligatorio
+				log_info(logger, "PID: %d - Ejecuta IO: %d", pcb_recibido->pid, tiempo_a_bloquear); //log obligatorio
+
 				t_args_io* args = malloc(sizeof(t_args_io));
 			    args->tiempo = tiempo_a_bloquear;
 				args->pcb = pcb_recibido;
-
-				log_info(logger, "PID: %d - Estado Anterior: EXEC - Estado Actual: BLOCK", pcb_recibido->pid); //log obligatorio
-				log_info(logger, "PID: %d - Bloqueado por: IO", pcb_recibido->pid); //log obligatorio
-				log_info(logger, "PID: %d - Ejecuta IO: %d", pcb_recibido->pid, args->tiempo); //log obligatorio
 
 				pthread_t hilo_io;
 				pthread_create(&hilo_io, NULL, (void*)manejar_io, (void*)args);
 				pthread_detach(hilo_io);
 				break;
 
-			case F_OPEN_EJECUTADO:
+			case F_OPEN:
 				parametros = recibir_parametros_de_instruccion();
 				pcb_recibido = recibir_pcb(socket_cpu);
 
@@ -93,7 +93,7 @@ void planificar_corto() {
 				string_array_destroy(parametros);
 				break;
 
-			case F_CLOSE_EJECUTADO:
+			case F_CLOSE:
 				parametros = recibir_parametros_de_instruccion();
 				pcb_recibido = recibir_pcb(socket_cpu);
 
@@ -104,7 +104,7 @@ void planificar_corto() {
 				string_array_destroy(parametros);
 				break;
 
-			case F_SEEK_EJECUTADO:
+			case F_SEEK:
 				parametros = recibir_parametros_de_instruccion();
 				pcb_recibido = recibir_pcb(socket_cpu);
 				t_archivo_abierto* archivo_a_modificar = buscar_archivo_en_pcb(pcb_recibido, parametros[0]);
@@ -117,7 +117,7 @@ void planificar_corto() {
 				mantener_pcb_en_exec(pcb_recibido);
 				break;
 
-			case F_READ_EJECUTADO: case F_WRITE_EJECUTADO:
+			case F_READ: case F_WRITE:
 				/*
 				F_READ lee del archivo y escribe en memoria
 				F_WRITE lee de memoria y escribe en archivo
@@ -125,11 +125,11 @@ void planificar_corto() {
 				//Me fijo si es F_READ o F_WRITE (hice esto para evitar mucha repetición de lógica)
 				char* accion;
 				t_msj_kernel_fileSystem mensaje_a_mandar;
-				if(respuesta == F_READ_EJECUTADO) {
+				if(respuesta == F_READ) {
 					mensaje_a_mandar = LEER_ARCHIVO;
 					accion = strdup("Leer");
 				}
-				else { //F_WRITE
+				if(respuesta == F_WRITE) {
 					mensaje_a_mandar = ESCRIBIR_ARCHIVO;
 					accion = strdup("Escribir");
 				}
@@ -162,7 +162,7 @@ void planificar_corto() {
 				string_array_destroy(parametros);
 				break;
 
-			case F_TRUNCATE_EJECUTADO:
+			case F_TRUNCATE:
 				parametros = recibir_parametros_de_instruccion();
 				pcb_recibido = recibir_pcb(socket_cpu);
 				char* pid_a_enviar = string_itoa(pcb_recibido->pid);
@@ -176,7 +176,7 @@ void planificar_corto() {
 				string_array_destroy(parametros);
 				break;
 
-			case WAIT_EJECUTADO:
+			case WAIT:
 				parametros = recibir_parametros_de_instruccion();
 				//char* nombre_recurso_wait = string_array_pop(parametros); //TODO: fijarse si anda
 				char* nombre_recurso_wait = strdup(parametros[0]);
@@ -188,7 +188,7 @@ void planificar_corto() {
 				free(nombre_recurso_wait);
 				break;
 
-			case SIGNAL_EJECUTADO:
+			case SIGNAL:
 				parametros = recibir_parametros_de_instruccion();
 				//char* nombre_recurso_signal = string_array_pop(parametros); //TODO: fijarse si anda
 				char* nombre_recurso_signal = strdup(parametros[0]);
@@ -199,7 +199,7 @@ void planificar_corto() {
 				free(nombre_recurso_signal);
 				break;
 
-			case CREATE_SEGMENT_EJECUTADO:
+			case CREATE_SEGMENT:
 				parametros = recibir_parametros_de_instruccion();
 				pcb_recibido = recibir_pcb(socket_cpu);
 				string_array_push(&parametros,string_itoa(pcb_recibido->pid));
@@ -211,7 +211,7 @@ void planificar_corto() {
 
 				break;
 
-			case DELETE_SEGMENT_EJECUTADO:
+			case DELETE_SEGMENT:
 				parametros = recibir_parametros_de_instruccion();
 				pcb_recibido = recibir_pcb(socket_cpu);
 				string_array_push(&parametros,string_itoa(pcb_recibido->pid));
@@ -239,7 +239,7 @@ void planificar_corto() {
 
 				break;
 
-			case YIELD_EJECUTADO: //vuelve a ready
+			case YIELD: //vuelve a ready
 				pcb_recibido = recibir_pcb(socket_cpu);
 				pcb_recibido->tiempo_real_ejecucion = time(NULL) - pcb_recibido->tiempo_inicial_ejecucion;
 				//Finaliza ejecucion
@@ -247,12 +247,12 @@ void planificar_corto() {
 				ready_list_push(pcb_recibido); //Aca calcula el S (proxima rafaga), actualizo el tiempo_llegada_ready y hago sem_post(&sem_cant_ready) (solo necesito pasarle el pcb, porque ya sé que es en Ready)
 				break;
 
-			case EXIT_EJECUTADO:
+			case EXIT:
 				pcb_recibido = recibir_pcb(socket_cpu);
 				exit_proceso(pcb_recibido, SUCCESS); //Aca hace el sem_post(&sem_multiprogramacion)
 				break;
 
-			case EXIT_CON_SEG_FAULT_EJECUTADO:
+			case EXIT_CON_SEG_FAULT:
 				parametros = recibir_parametros_de_instruccion();
 				pcb_recibido = recibir_pcb(socket_cpu);
 
@@ -309,19 +309,19 @@ t_pcb* obtener_proximo_a_ejecutar() {
 	exit(EXIT_FAILURE);
 }
 
-void manejar_io(t_args_io* args_io) {
+void manejar_io(t_args_io* args) {
 	pthread_mutex_lock(&mutex_pcbs_en_io);
-	list_add(list_pcbs_en_io, args_io->pcb); //para actualizar los segmentos en la compactacion
+	list_add(list_pcbs_en_io, args->pcb); //para actualizar los segmentos en la compactacion
 	pthread_mutex_unlock(&mutex_pcbs_en_io);
 
-	sleep(args_io->tiempo);
-	ready_list_push(args_io->pcb); //Aca calcula el S (proxima rafaga), actualizo el tiempo_llegada_ready y hago sem_post(&sem_cant_ready)
+	sleep(args->tiempo);
+	ready_list_push(args->pcb); //Aca calcula el S (proxima rafaga), actualizo el tiempo_llegada_ready y hago sem_post(&sem_cant_ready)
 
 	pthread_mutex_lock(&mutex_pcbs_en_io);
-	list_remove_pcb(list_pcbs_en_io, args_io->pcb);
+	list_remove_pcb(list_pcbs_en_io, args->pcb);
 	pthread_mutex_unlock(&mutex_pcbs_en_io);
 
-	free(args_io);
+	free(args);
 }
 
 void wait_recurso(t_pcb* pcb, char* nombre_recurso) {

@@ -1,7 +1,5 @@
 #include "../include/ejecucion_instrucciones.h"
 
-t_log* logger;
-
 void ejecutar_instrucciones(t_pcb* pcb) {
 	int cantidad_instrucciones = list_size(pcb->instrucciones);
 	t_instruccion* instruccion_actual;
@@ -83,22 +81,6 @@ void ejecutar_instrucciones(t_pcb* pcb) {
 
 				break;
 
-			case IO:
-				enviar_pcb_a_kernel(pcb, IO_EJECUTADO, instruccion_actual->parametros);
-				return;
-
-			case F_OPEN:
-				enviar_pcb_a_kernel(pcb, F_OPEN_EJECUTADO, instruccion_actual->parametros);
-				return;
-
-			case F_CLOSE:
-				enviar_pcb_a_kernel(pcb, F_CLOSE_EJECUTADO, instruccion_actual->parametros);
-				return;
-
-			case F_SEEK:
-				enviar_pcb_a_kernel(pcb, F_SEEK_EJECUTADO, instruccion_actual->parametros);
-				return;
-
 			case F_READ: case F_WRITE:
 				int direccion_logica = atoi(list_get(instruccion_actual->parametros, 1));
 
@@ -109,12 +91,17 @@ void ejecutar_instrucciones(t_pcb* pcb) {
 				if(0) {
 					log_info(logger, "PID: %d - Error SEG_FAULT - Segmento: %d - Offset: %d - Tamaño: %d", pcb->pid, datos_mmu.numero_segmento, datos_mmu.desplazamiento_segmento, datos_mmu.tamanio_segmento); //log obligatorio
 
-					enviar_pcb_a_kernel(pcb, EXIT_CON_SEG_FAULT_EJECUTADO, instruccion_actual->parametros);
+					enviar_pcb_a_kernel(pcb, EXIT_CON_SEG_FAULT, instruccion_actual->parametros);
 				}
 				else {
-					//Me fijo si es F_READ o F_WRITE (hice esto para evitar mucha repetición de lógica)
-					t_msj_kernel_cpu mensaje_a_mandar;
-					log_acceso_memoria(&mensaje_a_mandar, instruccion_actual->nombre, pcb->pid, datos_mmu.numero_segmento, datos_mmu.direccion_fisica); //log obligatorio
+					//Todo lo de acceso_memoria solo sirve para el log obligatorio (te das cuenta?)
+
+					t_args_log_acceso_memoria* args = malloc(sizeof(t_args_log_acceso_memoria));
+					args->pid = pcb->pid;
+				    args->numero_segmento = datos_mmu.numero_segmento;
+				    args->direccion_fisica = datos_mmu.direccion_fisica;
+
+				    queue_push_con_mutex(queue_solicitudes_acceso_memoria, args, mutex_queue_solicitudes_acceso_memoria);
 
 					t_list* parametros_a_enviar = list_create();
 
@@ -124,7 +111,7 @@ void ejecutar_instrucciones(t_pcb* pcb) {
 					list_add(parametros_a_enviar, str_direccion_fisica);
 					list_add(parametros_a_enviar, cantidad_de_bytes); //Es un char*
 
-					enviar_pcb_a_kernel(pcb, mensaje_a_mandar, parametros_a_enviar);
+					enviar_pcb_a_kernel(pcb, instruccion_a_enum(instruccion_actual), parametros_a_enviar);
 
 					list_destroy(parametros_a_enviar);
 					free(str_direccion_fisica);
@@ -132,33 +119,9 @@ void ejecutar_instrucciones(t_pcb* pcb) {
 
 				return;
 
-			case F_TRUNCATE:
-				enviar_pcb_a_kernel(pcb, F_TRUNCATE_EJECUTADO, instruccion_actual->parametros);
-				return;
-
-			case WAIT:
-				enviar_pcb_a_kernel(pcb, WAIT_EJECUTADO, instruccion_actual->parametros);
-				return;
-
-			case SIGNAL:
-				enviar_pcb_a_kernel(pcb, SIGNAL_EJECUTADO, instruccion_actual->parametros);
-				return;
-				break;
-
-			case CREATE_SEGMENT:
-				enviar_pcb_a_kernel(pcb, CREATE_SEGMENT_EJECUTADO, instruccion_actual->parametros);
-				return;
-
-			case DELETE_SEGMENT:
-				enviar_pcb_a_kernel(pcb, DELETE_SEGMENT_EJECUTADO, instruccion_actual->parametros);
-				return;
-
-			case YIELD:
-				enviar_pcb_a_kernel(pcb, YIELD_EJECUTADO, instruccion_actual->parametros);
-				return;
-
-			case EXIT:
-				enviar_pcb_a_kernel(pcb, EXIT_EJECUTADO, instruccion_actual->parametros);
+			case IO: case F_OPEN: case F_CLOSE: case F_SEEK: case F_TRUNCATE: case WAIT:
+			case SIGNAL: case CREATE_SEGMENT: case DELETE_SEGMENT: case YIELD: case EXIT:
+				enviar_pcb_a_kernel(pcb, instruccion_a_enum(instruccion_actual), instruccion_actual->parametros);
 				return;
 
 			default:
@@ -169,11 +132,10 @@ void ejecutar_instrucciones(t_pcb* pcb) {
 	}
 }
 
-t_enum_instruccion instruccion_a_enum(t_instruccion* instruccion) {
+t_msj_kernel_cpu instruccion_a_enum(t_instruccion* instruccion) {
 	char* nombre = instruccion->nombre;
-	if(!strcmp(nombre, "SET")) 			  return SET;
-	if(!strcmp(nombre, "MOV_IN")) 	      return MOV_IN;
-	if(!strcmp(nombre, "MOV_OUT")) 		  return MOV_OUT;
+
+	//Las que usan Memoria y CPU
 	if(!strcmp(nombre, "I/O")) 		  	  return IO;
 	if(!strcmp(nombre, "F_OPEN"))		  return F_OPEN;
 	if(!strcmp(nombre, "F_CLOSE")) 		  return F_CLOSE;
@@ -187,6 +149,12 @@ t_enum_instruccion instruccion_a_enum(t_instruccion* instruccion) {
 	if(!strcmp(nombre, "DELETE_SEGMENT")) return DELETE_SEGMENT;
 	if(!strcmp(nombre, "YIELD")) 		  return YIELD;
 	if(!strcmp(nombre, "EXIT")) 		  return EXIT;
+
+	//Las que solo usa CPU:
+	if(!strcmp(nombre, "SET")) 			  return SET;
+	if(!strcmp(nombre, "MOV_IN")) 	      return MOV_IN;
+	if(!strcmp(nombre, "MOV_OUT")) 		  return MOV_OUT;
+
 	return INSTRUCCION_ERRONEA;
 }
 
@@ -333,22 +301,6 @@ int buscar_campo_de_segmento(t_list* segmentos, char* campo, int id) {
 	return -1;
 }
 
-void log_acceso_memoria(t_msj_kernel_cpu* mensaje_a_mandar, char* nombre_instruccion, int pid, int numero_segmento, int direccion_fisica) {
-	char* accion;
-	if(!strcmp(nombre_instruccion, "F_READ")) {
-		*mensaje_a_mandar = F_READ_EJECUTADO;
-		accion = strdup("LEER");
-	}
-	else { //F_WRITE
-		*mensaje_a_mandar = F_WRITE_EJECUTADO;
-		accion = strdup("ESCRIBIR");
-	}
-
-	log_info(logger, "PID: %d - Acción: %s - Segmento: %d - Dirección Física: %d - Valor: <VALOR LEIDO / ESCRITO>", pid, accion, numero_segmento, direccion_fisica); //log obligatorio
-	//TODO: falta <VALOR LEIDO / ESCRITO>
-	free(accion);
-}
-
 t_datos_mmu mmu(t_pcb* pcb, int direccion_logica) {
 	t_datos_mmu datos;
 
@@ -361,3 +313,4 @@ t_datos_mmu mmu(t_pcb* pcb, int direccion_logica) {
 
 	return datos;
 }
+

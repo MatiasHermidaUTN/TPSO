@@ -1,10 +1,10 @@
 #ifndef ESCUHADOR_DE_FILESYSTEM_H
 #define ESCUHADOR_DE_FILESYSTEM_H
 
-#include "configuracion_kernel.h"
-#include "planificacion_corto.h"
 #include <utils.h>
 #include <pthread.h>
+#include "configuracion_kernel.h"
+#include "planificacion_corto.h"
 
 void escuchar_de_filesystem();
 void desbloquear_pcb_por_archivo(char* nombre_archivo,int pid);

@@ -38,38 +38,16 @@ typedef enum {
 } t_handshake;
 
 typedef enum {
+	//Las que usa solo CPU:
 	PCB_A_EJECUTAR,
 
-	IO_EJECUTADO,
-	MOV_IN_EJECUTADO,
-	MOV_OUT_EJECUTADO,
-	F_OPEN_EJECUTADO,
-	F_CLOSE_EJECUTADO,
-	F_SEEK_EJECUTADO,
-	F_READ_EJECUTADO,
-	F_WRITE_EJECUTADO,
-	F_TRUNCATE_EJECUTADO,
-	WAIT_EJECUTADO,
-	SIGNAL_EJECUTADO,
-	CREATE_SEGMENT_EJECUTADO,
-	DELETE_SEGMENT_EJECUTADO,
-	YIELD_EJECUTADO,
-	EXIT_EJECUTADO,
+	INSTRUCCION_ERRONEA,
 
-	EXIT_CON_SEG_FAULT_EJECUTADO,
-} t_msj_kernel_cpu;
-
-typedef enum {
-	LIST_INSTRUCCIONES,
-	SUCCESS,
-	OUT_OF_MEMORY,
-	SEG_FAULT,
-} t_msj_kernel_consola;
-
-typedef enum {
 	SET,
 	MOV_IN,
 	MOV_OUT,
+
+	//Las que usan CPU y Memoria:
 	IO,
 	F_OPEN,
 	F_CLOSE,
@@ -84,16 +62,29 @@ typedef enum {
 	YIELD,
 	EXIT,
 
-	INSTRUCCION_ERRONEA,
-} t_enum_instruccion;
+	//Las que usa solo Memoria
+	EXIT_CON_SEG_FAULT,
+} t_msj_kernel_cpu;
 
 typedef enum {
+	//La que manda Consola:
+	LIST_INSTRUCCIONES,
+
+	//Las que manda Kernel:
+	SUCCESS,
+	OUT_OF_MEMORY,
+	SEG_FAULT,
+} t_msj_kernel_consola;
+
+typedef enum {
+	//Las que manda Kernel:
 	EXISTE_ARCHIVO,
 	CREAR_ARCHIVO,
 	TRUNCAR_ARCHIVO,
 	LEER_ARCHIVO,
 	ESCRIBIR_ARCHIVO,
 
+	//Las que manda FS:
 	EL_ARCHIVO_YA_EXISTE,
 	EL_ARCHIVO_NO_EXISTE,
 	EL_ARCHIVO_FUE_CREADO,
@@ -103,14 +94,22 @@ typedef enum {
 } t_msj_kernel_fileSystem;
 
 typedef enum {
+	//Las que manda Kernel:
 	CREAR_SEGMENTO,
 	ELIMINAR_SEGMENTO,
 	INICIALIZAR_PROCESO,
 	ELIMINAR_PROCESO,
 	COMPACTAR,
+
+	//Las que manda CPU:
 	LEER_VALOR,
 	ESCRIBIR_VALOR,
+//TODO: fijarse si las 2 de arriba son necesarias o CPU y FS las pueden usar por igual
+	//Las que manda FS
+	LEER,
+	ESCRIBIR,
 
+	//Las que manda Memoria
 	SEGMENTO_CREADO,
 	NO_HAY_ESPACIO_DISPONIBLE,
 	HAY_QUE_COMPACTAR,
@@ -118,9 +117,6 @@ typedef enum {
 	PROCESO_INICIALIZADO,
 	PROCESO_ELIMINADO,	
 	MEMORIA_COMPACTADA,
-
-	LEER,
-	ESCRIBIR,
 
 	ESCRITO_OK,
 	LEIDO_OK,
@@ -219,10 +215,10 @@ void enviar_fin_proceso(int socket, t_msj_kernel_consola msj);
 // Listas de estado //
 //////////////////////
 
-void *queue_pop_con_mutex(t_queue* queue, pthread_mutex_t* mutex);
 void queue_push_con_mutex(t_queue* queue, void* elemento, pthread_mutex_t* mutex);
-void *list_pop_con_mutex(t_list* lista, pthread_mutex_t* mutex);
+void* queue_pop_con_mutex(t_queue* queue, pthread_mutex_t* mutex);
 void list_push_con_mutex(t_list* lista, void* elemento, pthread_mutex_t* mutex);
+void* list_pop_con_mutex(t_list* lista, pthread_mutex_t* mutex);
 
 ///////////////////
 // Liberar datos //

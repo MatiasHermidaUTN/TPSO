@@ -2,6 +2,9 @@
 #define CONFIGURACION_CPU_H_
 
 #include <commons/config.h>
+#include <commons/collections/queue.h>
+#include <commons/log.h>
+#include <pthread.h>
 
 typedef struct cpu_config {
     char* IP_MEMORIA;
@@ -14,6 +17,12 @@ typedef struct cpu_config {
 extern int socket_kernel;
 extern int socket_memoria;
 extern t_cpu_config lectura_de_config;
+
+extern t_log* logger;
+
+extern t_queue* queue_solicitudes_acceso_memoria;
+
+extern pthread_mutex_t* mutex_queue_solicitudes_acceso_memoria;
 
 t_cpu_config leer_cpu_config(t_config* config);
 

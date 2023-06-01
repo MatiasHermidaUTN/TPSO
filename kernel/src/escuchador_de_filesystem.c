@@ -1,7 +1,7 @@
 #include "../include/escuchador_de_filesystem.h"
 
 void escuchar_de_filesystem() {
-	// TODO: DESCOMENTAR!!!!!! (cuando funcione File System)
+	/* TODO: DESCOMENTAR!!!!!! (cuando funcione File System)
 	while(1) {
 		int op_code_recibido = recibir_msj(socket_fileSystem);
 		switch(op_code_recibido) {

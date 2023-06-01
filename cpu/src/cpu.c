@@ -3,6 +3,7 @@
 #include <utils.h>
 #include "../include/configuracion_cpu.h"
 #include "../include/ejecucion_instrucciones.h"
+#include "../include/escuchador_de_memoria.h"
 
 int main(int argc, char** argv) {
     t_config* config = iniciar_config(argv[1]);
@@ -20,6 +21,14 @@ int main(int argc, char** argv) {
         exit(EXIT_FAILURE);
     }
 	*/
+
+    queue_solicitudes_acceso_memoria = queue_create();
+
+    pthread_mutex_init(&mutex_queue_solicitudes_acceso_memoria, NULL);
+
+	pthread_t escuchador_de_memoria;
+    pthread_create(&escuchador_de_memoria, NULL, (void*)log_acceso_memoria, NULL);
+    pthread_detach(escuchador_de_memoria);
 
     int socket_cpu = iniciar_servidor("127.0.0.1", lectura_de_config.PUERTO_ESCUCHA); //TODO: hardcodeado
     log_warning(logger, "CPU lista para recibir al Kernel");
