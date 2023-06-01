@@ -33,4 +33,27 @@ int buscar_campo_de_segmento(t_list* segmentos, char* campo, int id);
 
 t_datos_mmu mmu(t_pcb* pcb, int direccion_logica);
 
+
+// Funciones de abstracción de lógica
+
+int numero_de_parametro_de_direccion_logica(t_msj_kernel_cpu instruccion_actual);
+
+int obtener_cantidad_de_bytes(t_msj_kernel_cpu instruccion_actual, t_list* parametros);
+
+char* obtener_registro(t_msj_kernel_cpu instruccion_actual, t_list* parametros);
+
+int numero_de_parametro_de_registro(t_msj_kernel_cpu instruccion_actual);
+
+
+//Funciones de ejecución posta
+
+void ejecutar_mov_in(t_pcb* pcb, int direccion_fisica, char* nombre_registro);
+
+void ejecutar_mov_out(t_pcb* pcb, int direccion_fisica, char* nombre_registro);
+
+void ejecutar_fread_o_fwrite(t_pcb* pcb, int direccion_fisica, t_msj_kernel_cpu instruccion_actual, t_list* parametros);
+
 #endif /* EJECUCION_INSTRUCCIONES_H_ */
+
+
+

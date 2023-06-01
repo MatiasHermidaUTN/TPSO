@@ -2,126 +2,93 @@
 
 void ejecutar_instrucciones(t_pcb* pcb) {
 	int cantidad_instrucciones = list_size(pcb->instrucciones);
-	t_instruccion* instruccion_actual;
+	t_instruccion* instruccion_actual_t;
 
 	while(pcb->pc < cantidad_instrucciones) {
 		//Fetch
-		instruccion_actual = list_get(pcb->instrucciones, pcb->pc);
+		instruccion_actual_t = list_get(pcb->instrucciones, pcb->pc);
 		pcb->pc++;
 
-		char* parametros_a_emitir = obtener_parametros_a_emitir(instruccion_actual->parametros);
-		log_info(logger, "PID: %d - Ejecutando: %s - %s", pcb->pid, instruccion_actual->nombre, parametros_a_emitir); //log obligatorio
+		t_list* parametros_actuales = instruccion_actual_t->parametros;
+
+		char* parametros_a_emitir = obtener_parametros_a_emitir(parametros_actuales);
+		log_info(logger, "PID: %d - Ejecutando: %s - %s", pcb->pid, instruccion_actual_t->nombre, parametros_a_emitir); //log obligatorio
 		free(parametros_a_emitir);
 
 		//Decode y Execute
-		switch(instruccion_a_enum(instruccion_actual)) {
+		t_msj_kernel_cpu instruccion_actual = instruccion_a_enum(instruccion_actual_t);
+		switch(instruccion_actual) {
 			case SET:
 				//log_warning(logger, "AX: %c%c%c%c", pcb->registros_cpu.AX[0], pcb->registros_cpu.AX[1], pcb->registros_cpu.AX[2], pcb->registros_cpu.AX[3]);
-				set_registro(pcb, list_get(instruccion_actual->parametros, 0), list_get(instruccion_actual->parametros, 1));
+				set_registro(pcb, list_get(parametros_actuales, 0), list_get(parametros_actuales, 1));
 				//log_warning(logger, "AX: %c%c%c%c", pcb->registros_cpu.AX[0], pcb->registros_cpu.AX[1], pcb->registros_cpu.AX[2], pcb->registros_cpu.AX[3]);
 
 				break;
 
-			case MOV_IN:
-				//Lee de Memoria y escribe en el registro
+			case MOV_IN: case MOV_OUT: case F_READ: case F_WRITE:
+				/*
+				MOV_IN lee de Memoria y escribe en registro
+				MOV_OUT lee el registro y escribe en Memoria
 
-				char* registro_mov_in = list_get(instruccion_actual->parametros, 0);
-				char* direccion_logica_mov_in = list_get(instruccion_actual->parametros, 1);
+				F_READ lee del archivo y escribe en Memoria
+				F_WRITE lee de Memoria y escribe en archivo
+				*/
 
-				t_datos_mmu datos_mmu_mov_in = mmu(pcb, atoi(direccion_logica_mov_in));
-
-				char** parametros_mov_in = string_array_new();
-				string_array_push(&parametros_mov_in, string_itoa(datos_mmu_mov_in.direccion_fisica));
-				string_array_push(&parametros_mov_in, string_itoa(tamanio_registro(registro_mov_in)));
-
-				//TODO:
-				//-agregar log_acceso_memoria y log(SEG_FAULT)
-				//recibir VALOR LEIDO
-
-				enviar_msj_con_parametros(socket_memoria, LEER_VALOR, parametros_mov_in);
-
-				string_array_destroy(parametros_mov_in);
-
-				if(recibir_msj(socket_memoria) == LEIDO_OK) { //No hace falta pero bueno, recibe un mensaje sí o sí
-					parametros_mov_in = recibir_parametros_de_mensaje(socket_memoria);
-				}
-
-				char* valor_mov_in = parametros_mov_in[0];
-				set_registro(pcb, registro_mov_in, valor_mov_in);
-
-				break;
-
-			case MOV_OUT:
-				//Lee del registro y escribe en Memoria
-
-				char* direccion_logica_mov_out = list_get(instruccion_actual->parametros, 0);
-				char* registro_mov_out = list_get(instruccion_actual->parametros, 1);
-
-				t_datos_mmu datos_mmu_mov_out = mmu(pcb, atoi(direccion_logica_mov_out));
-
-				char** parametros_mov_out = string_array_new();
-				string_array_push(&parametros_mov_out, string_itoa(datos_mmu_mov_out.direccion_fisica));
-				string_array_push(&parametros_mov_out, string_itoa(tamanio_registro(registro_mov_out))); //No hace falta igual, lo puede calcular memoria con strlen
-
-				char* valor_mov_out = leer_registro(pcb, registro_mov_out);
-				string_array_push(&parametros_mov_out, valor_mov_out);
-				free(valor_mov_out);
-
-				//TODO:
-				//-agregar log_acceso_memoria y log(SEG_FAULT)
-				//recibir VALOR ESCRITO
-
-				enviar_msj_con_parametros(socket_memoria, ESCRIBIR_VALOR, parametros_mov_out);
-
-				string_array_destroy(parametros_mov_out);
-
-				if(recibir_msj(socket_memoria) != ESCRITO_OK) { //No hace falta pero bueno, recibe un mensaje sí o sí
-					log_error(logger, "Error en el uso de segmentos");
-				}
-
-				break;
-
-			case F_READ: case F_WRITE:
-				int direccion_logica = atoi(list_get(instruccion_actual->parametros, 1));
+				// OBTENCION DE DATOS
+				int indice = numero_de_parametro_de_direccion_logica(instruccion_actual);
+				int direccion_logica = atoi(list_get(parametros_actuales, indice));
 
 				t_datos_mmu datos_mmu = mmu(pcb, direccion_logica);
 
-				char* cantidad_de_bytes = list_get(instruccion_actual->parametros, 2);
-				//if(datos_mmu.desplazamiento_segmento + atoi(cantidad_de_bytes) > tamanio_segmento) { //TODO: calcula mal el tamanio_segmento porque no encuentra el id del segmento pq no se crearon. Ya debería funcionar bien igual.
-				if(0) {
+				int cantidad_de_bytes = obtener_cantidad_de_bytes(instruccion_actual, parametros_actuales);
+
+				// EVALUACION SEG_FAULT
+				if(datos_mmu.desplazamiento_segmento + cantidad_de_bytes > datos_mmu.tamanio_segmento) { //TODO: calcula mal el tamanio_segmento porque no encuentra el id del segmento pq no se crearon. Ya debería funcionar bien igual.
+				//if(0) {
 					log_info(logger, "PID: %d - Error SEG_FAULT - Segmento: %d - Offset: %d - Tamaño: %d", pcb->pid, datos_mmu.numero_segmento, datos_mmu.desplazamiento_segmento, datos_mmu.tamanio_segmento); //log obligatorio
 
-					enviar_pcb_a_kernel(pcb, EXIT_CON_SEG_FAULT, instruccion_actual->parametros);
+					enviar_pcb_a_kernel(pcb, EXIT_CON_SEG_FAULT, parametros_actuales);
 				}
 				else {
-					//Todo lo de acceso_memoria solo sirve para el log obligatorio (te das cuenta?)
+					//Todovich lo de acceso_memoria solo sirve para el log obligatorio (te das cuenta?)
 
+					//TODO: no es necesario usar el hilo para MOV_IN y MOV_OUT, pero ya tengo toda la lógica hecha, así q aprovecho y la uso
+					// log_acceso_memoria
 					t_args_log_acceso_memoria* args = malloc(sizeof(t_args_log_acceso_memoria));
-					args->pid = pcb->pid;
+					args->pcb = pcb;
 				    args->numero_segmento = datos_mmu.numero_segmento;
 				    args->direccion_fisica = datos_mmu.direccion_fisica;
 
-				    queue_push_con_mutex(queue_solicitudes_acceso_memoria, args, mutex_queue_solicitudes_acceso_memoria);
+				    if(instruccion_actual == MOV_IN) {
+				    	args->nombre_registro = obtener_registro(instruccion_actual, parametros_actuales); //solo me sirve para saber si tengo que escribir en archivo con el valor que reciba de memoria (en el escuchador de memoria). Hardcodeado nashe
+				    }
+				    else {
+				    	args->nombre_registro = NULL;
+				    }
 
-					t_list* parametros_a_enviar = list_create();
+				    //Pusheo antes de ejecutar para asegurarme que Memoria no me responda antes de haber ingresado la solicitud a la lista
+				    list_push_con_mutex(list_solicitudes_acceso_memoria, args, mutex_list_solicitudes_acceso_memoria);
 
-					char* str_direccion_fisica = string_itoa(datos_mmu.direccion_fisica);
 
-					list_add(parametros_a_enviar, list_get(instruccion_actual->parametros, 0)); //Nombre del archivo
-					list_add(parametros_a_enviar, str_direccion_fisica);
-					list_add(parametros_a_enviar, cantidad_de_bytes); //Es un char*
+					//Atentos a la mayor villereada de todos los tiempos!!
 
-					enviar_pcb_a_kernel(pcb, instruccion_a_enum(instruccion_actual), parametros_a_enviar);
-
-					list_destroy(parametros_a_enviar);
-					free(str_direccion_fisica);
+				    // EJECUCION INSTRUCCION
+					if(instruccion_actual == MOV_IN) {
+						ejecutar_mov_in(pcb, datos_mmu.direccion_fisica, obtener_registro(instruccion_actual, parametros_actuales));
+					}
+					else if(instruccion_actual == MOV_OUT) {
+						ejecutar_mov_out(pcb, datos_mmu.direccion_fisica, obtener_registro(instruccion_actual, parametros_actuales));
+					}
+					else {
+						ejecutar_fread_o_fwrite(pcb, datos_mmu.direccion_fisica, instruccion_actual, parametros_actuales);
+					}
 				}
 
-				return;
+				break;
 
 			case IO: case F_OPEN: case F_CLOSE: case F_SEEK: case F_TRUNCATE: case WAIT:
 			case SIGNAL: case CREATE_SEGMENT: case DELETE_SEGMENT: case YIELD: case EXIT:
-				enviar_pcb_a_kernel(pcb, instruccion_a_enum(instruccion_actual), instruccion_actual->parametros);
+				enviar_pcb_a_kernel(pcb, instruccion_actual, parametros_actuales);
 				return;
 
 			default:
@@ -313,4 +280,78 @@ t_datos_mmu mmu(t_pcb* pcb, int direccion_logica) {
 
 	return datos;
 }
+
+
+// Funciones de abstracción de lógica
+
+int numero_de_parametro_de_direccion_logica(t_msj_kernel_cpu instruccion_actual) {
+	return instruccion_actual != MOV_OUT;
+	/* anda porque sí agus basta
+	solamente lo hice en una función aparte para que se entienda más
+	y por si (nunca va a pasar) en algún futuro se agregan más instrucciones y etc
+	Pero imaginate, podría haber hecho directamente:
+	int direccion_logica = list_get(instruccion_actual->parametros, instruccion_actual != MOV_OUT);
+	*/
+}
+
+int obtener_cantidad_de_bytes(t_msj_kernel_cpu instruccion_actual, t_list* parametros) {
+	if(instruccion_actual == F_READ || instruccion_actual == F_WRITE) {
+		return atoi(list_get(parametros, 2));
+	}
+	else {
+		return tamanio_registro(obtener_registro(instruccion_actual, parametros));
+	}
+}
+
+char* obtener_registro(t_msj_kernel_cpu instruccion_actual, t_list* parametros) {
+	return list_get(parametros, numero_de_parametro_de_registro(instruccion_actual));
+}
+
+int numero_de_parametro_de_registro(t_msj_kernel_cpu instruccion_actual) {
+	return instruccion_actual == MOV_IN; //De vuelta, anda pq sí pero basta, es sexo
+}
+
+
+//Funciones de ejecución posta
+
+void ejecutar_mov_in(t_pcb* pcb, int direccion_fisica, char* nombre_registro) {
+	char** parametros = string_array_new();
+	string_array_push(&parametros, string_itoa(direccion_fisica));
+	string_array_push(&parametros, string_itoa(tamanio_registro(nombre_registro)));
+
+	enviar_msj_con_parametros(socket_memoria, LEER_VALOR, parametros);
+
+	string_array_destroy(parametros);
+}
+
+void ejecutar_mov_out(t_pcb* pcb, int direccion_fisica, char* nombre_registro) {
+	char** parametros= string_array_new();
+	string_array_push(&parametros, string_itoa(direccion_fisica));
+	string_array_push(&parametros, string_itoa(tamanio_registro(nombre_registro))); //No hace falta igual, lo puede calcular memoria con strlen
+
+	char* valor = leer_registro(pcb, nombre_registro);
+	string_array_push(&parametros, valor);
+	free(valor);
+
+	enviar_msj_con_parametros(socket_memoria, ESCRIBIR_VALOR, parametros);
+
+	string_array_destroy(parametros);
+}
+
+void ejecutar_fread_o_fwrite(t_pcb* pcb, int direccion_fisica, t_msj_kernel_cpu instruccion_actual, t_list* parametros) {
+	t_list* parametros_a_enviar = list_create();
+
+	char* str_direccion_fisica = string_itoa(direccion_fisica);
+
+	list_add(parametros_a_enviar, list_get(parametros, 0)); //Nombre del archivo
+	list_add(parametros_a_enviar, str_direccion_fisica);
+	list_add(parametros_a_enviar, list_get(parametros, 2)); //Cantidad de bytes
+
+	enviar_pcb_a_kernel(pcb, instruccion_actual, parametros_a_enviar);
+
+	list_destroy(parametros_a_enviar);
+	free(str_direccion_fisica);
+}
+
+
 

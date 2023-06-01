@@ -22,9 +22,9 @@ int main(int argc, char** argv) {
     }
 	*/
 
-    queue_solicitudes_acceso_memoria = queue_create();
+    list_solicitudes_acceso_memoria = list_create();
 
-    pthread_mutex_init(&mutex_queue_solicitudes_acceso_memoria, NULL);
+    pthread_mutex_init(mutex_list_solicitudes_acceso_memoria, NULL);
 
 	pthread_t escuchador_de_memoria;
     pthread_create(&escuchador_de_memoria, NULL, (void*)log_acceso_memoria, NULL);
