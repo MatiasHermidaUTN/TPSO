@@ -29,28 +29,9 @@ int crear_conexion(char *ip, char* puerto) {
 	return socket_cliente;
 }
 
-void enviar_mensaje(char* mensaje, int socket_cliente) {
-	t_paquete* paquete = malloc(sizeof(t_paquete));
-
-	paquete->codigo_operacion = MENSAJE;
-	paquete->buffer = malloc(sizeof(t_buffer));
-	paquete->buffer->size = strlen(mensaje) + 1;
-	paquete->buffer->stream = malloc(paquete->buffer->size);
-	memcpy(paquete->buffer->stream, mensaje, paquete->buffer->size);
-
-	int bytes = paquete->buffer->size + 2*sizeof(int);
-
-	void* a_enviar = serializar_paquete(paquete, bytes);
-
-	send(socket_cliente, a_enviar, bytes, 0);
-
-	free(a_enviar);
-	eliminar_paquete(paquete);
-}
-
-///////////////////////////
+//////////////
 // Servidor //
-///////////////////////////
+//////////////
 
 int iniciar_servidor(char* IP, char* PUERTO) {
 	int socket_servidor;
@@ -93,56 +74,6 @@ int esperar_cliente(int socket_servidor) {
 	return socket_cliente;
 }
 
-int recibir_operacion(int socket_cliente) {
-	int cod_op;
-	if(recv(socket_cliente, &cod_op, sizeof(op_code), MSG_WAITALL) > 0)
-		return cod_op;
-	else {
-		close(socket_cliente);
-		return -1;
-	}
-}
-
-
-void* serializar_paquete(t_paquete* paquete, int bytes) {
-    void * magic = malloc(bytes);
-    int desplazamiento = 0;
-
-    memcpy(magic + desplazamiento, &(paquete->codigo_operacion), sizeof(int));
-    desplazamiento+= sizeof(int);
-    memcpy(magic + desplazamiento, &(paquete->buffer->size), sizeof(int));
-    desplazamiento+= sizeof(int);
-    memcpy(magic + desplazamiento, paquete->buffer->stream, paquete->buffer->size);
-    desplazamiento+= paquete->buffer->size;
-
-    return magic;
-}
-
-void recibir_mensaje(int socket_cliente) {
-	int size;
-	char* buffer = recibir_buffer(&size, socket_cliente);
-	//log_info(logger, "Me llego el mensaje %s", buffer);
-	puts(buffer);
-
-	free(buffer);
-}
-
-void* recibir_buffer(int* size, int socket_cliente) {
-    void * buffer;
-
-    recv(socket_cliente, size, sizeof(int), MSG_WAITALL);
-    buffer = malloc(*size);
-    recv(socket_cliente, buffer, *size, MSG_WAITALL);
-
-    return buffer;
-}
-
-void eliminar_paquete(t_paquete* paquete) {
-    free(paquete->buffer->stream);
-    free(paquete->buffer);
-    free(paquete);
-}
-
 t_config* iniciar_config(char* path) {
 	t_config* nuevo_config;
 
@@ -167,26 +98,17 @@ t_log* iniciar_logger(char* path, char* nombre) {
 	return nuevo_logger;
 }
 
+//TODO: eliminar, ya está recibir_msj()
 t_handshake recibir_handshake(int socket_cliente) {
 	t_handshake respuesta_handshake;
 	recv(socket_cliente, &respuesta_handshake, sizeof(respuesta_handshake), MSG_WAITALL);
 	return respuesta_handshake;
 }
 
+//TODO: eliminar, ya está enviar_msj()
 void enviar_handshake(int socket, t_handshake mensaje_handshake) {
 	//TODO: Falta fijarse si da error
 	send(socket, &mensaje_handshake, sizeof(mensaje_handshake), 0);
-}
-
-t_msj_kernel_consola recibir_fin_proceso(int socket_cliente) {
-	t_msj_kernel_consola mensaje;
-	recv(socket_cliente, &mensaje, sizeof(t_msj_kernel_consola), MSG_WAITALL);
-	return mensaje;
-}
-
-void enviar_fin_proceso(int socket, t_msj_kernel_consola mensaje) {
-	//TODO: Falta fijarse si da error
-	send(socket, &mensaje, sizeof(mensaje), 0);
 }
 
 //////////////////////
@@ -307,17 +229,17 @@ void* serializar_pcb(t_pcb* pcb, size_t* size_total, t_msj_kernel_cpu op_code, c
     	//string_array_destroy(parametros_de_instruccion);
     } //Para esto no hace falta deserializar en recibir_pcb, ya que esto lo hace la funcion recibir_parametro_de_instruccion
 
-    memcpy(stream_pcb + desplazamiento, &(size_payload), sizeof(size_t));
-    desplazamiento += sizeof(size_t);
+    memcpy(stream_pcb + desplazamiento, &(size_payload), sizeof(size_payload));
+    desplazamiento += sizeof(size_payload);
 
 	//* memcpy Payload *//
 
-	memcpy(stream_pcb + desplazamiento, &(pcb->pid), sizeof(int));
-	desplazamiento += sizeof(int);
+	memcpy(stream_pcb + desplazamiento, &(pcb->pid), sizeof(pcb->pid));
+	desplazamiento += sizeof(pcb->pid);
 
 	int tamanio_instrucciones_en_bytes = tamanio_instrucciones(pcb->instrucciones);
-	memcpy(stream_pcb + desplazamiento, &(tamanio_instrucciones_en_bytes), sizeof(int));
-	desplazamiento += sizeof(int);
+	memcpy(stream_pcb + desplazamiento, &(tamanio_instrucciones_en_bytes), sizeof(tamanio_instrucciones_en_bytes));
+	desplazamiento += sizeof(tamanio_instrucciones_en_bytes);
 
 	memcpy_instrucciones_serializar(stream_pcb, pcb->instrucciones, &desplazamiento);
 
@@ -328,11 +250,11 @@ void* serializar_pcb(t_pcb* pcb, size_t* size_total, t_msj_kernel_cpu op_code, c
 
 	memcpy_tabla_segmentos_serializar(stream_pcb, pcb->tabla_segmentos, &desplazamiento);
 
-	memcpy(stream_pcb + desplazamiento, &(pcb->estimado_prox_rafaga), sizeof(int));
-	desplazamiento += sizeof(int);
+	memcpy(stream_pcb + desplazamiento, &(pcb->estimado_prox_rafaga), sizeof(pcb->estimado_prox_rafaga));
+	desplazamiento += sizeof(pcb->estimado_prox_rafaga);
 
-	memcpy(stream_pcb + desplazamiento, &(pcb->tiempo_llegada_ready), sizeof(int));
-	desplazamiento += sizeof(int);
+	memcpy(stream_pcb + desplazamiento, &(pcb->tiempo_llegada_ready), sizeof(pcb->tiempo_llegada_ready));
+	desplazamiento += sizeof(pcb->tiempo_llegada_ready);
 
 	memcpy_archivos_abiertos_serializar(stream_pcb, pcb->archivos_abiertos, &desplazamiento);
 
@@ -476,6 +398,7 @@ void memcpy_archivos_abiertos_serializar(void* stream, t_list* archivos_abiertos
 
 	for(int i = 0; i < tamanio_lista; i++) {
 		t_archivo_abierto* archivo_abierto = list_get(archivos_abiertos, i);
+
 		memcpy(stream + *desplazamiento, &(archivo_abierto->posicion_actual), sizeof(int));
 		*desplazamiento += sizeof(int);
 
@@ -702,13 +625,18 @@ void print_l_instrucciones(t_list* instrucciones) {
 //////////////
 
 void enviar_msj(int socket, int msj) {
-	send(socket, &msj, sizeof(int), 0);
+	send(socket, &msj, sizeof(msj), 0);
 }
 
-int recibir_msj(int socket) {
+int recibir_msj(int socket_cliente) {
 	int msj;
-	recv(socket, &msj, sizeof(int), MSG_WAITALL);
-	return msj;
+	if(recv(socket_cliente, &msj, sizeof(msj), MSG_WAITALL) > 0) {
+		return msj;
+	}
+	else {
+		close(socket_cliente);
+		return -1;
+	}
 }
 
 void enviar_msj_con_parametros(int socket, int op_code, char** parametros) {
@@ -879,7 +807,7 @@ void enviar_procesos_con_segmentos(int socket, t_list* procesos_actualizados) {
 
 void* serializar_procesos_con_segmentos(t_list* procesos_actualizados, size_t* size_total) {
 	size_t size_payload = 0;
-	*size_total = sizeof(op_code) + sizeof(size_payload);
+	*size_total = sizeof(t_msj_memoria) + sizeof(size_payload);
 
 	t_proceso_actualizado* proceso;
 	for(int i = 0; i < list_size(procesos_actualizados); i++) {

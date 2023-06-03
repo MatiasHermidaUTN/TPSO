@@ -8,7 +8,6 @@
 #include <commons/string.h>
 #include <pthread.h>
 #include "configuracion_cpu.h"
-#include "escuchador_de_memoria.h"
 
 typedef struct {
 	int numero_segmento;
@@ -47,9 +46,9 @@ int numero_de_parametro_de_registro(t_msj_kernel_cpu instruccion_actual);
 
 //Funciones de ejecución posta
 
-void ejecutar_mov_in(t_pcb* pcb, int direccion_fisica, char* nombre_registro);
+void ejecutar_mov_in(t_pcb* pcb, t_datos_mmu datos_mmu, char* nombre_registro);
 
-void ejecutar_mov_out(t_pcb* pcb, int direccion_fisica, char* nombre_registro);
+void ejecutar_mov_out(t_pcb* pcb, t_datos_mmu datos_mmu, char* nombre_registro);
 
 void ejecutar_fread_o_fwrite(t_pcb* pcb, int direccion_fisica, t_msj_kernel_cpu instruccion_actual, t_list* parametros);
 

@@ -10,6 +10,7 @@ int main (int argc, char** argv) {
     lectura_de_config = leer_kernel_config(config);
 
     logger = iniciar_logger("kernel.log", "Kernel");
+    my_logger = iniciar_logger("my_kernel.log", "Kernel");
 
     init_estados();
     init_semaforos();
@@ -28,7 +29,7 @@ int main (int argc, char** argv) {
 	pthread_detach(escuchador_de_filesystem);
 
     int socket_kernel = iniciar_servidor("127.0.0.1", lectura_de_config.PUERTO_ESCUCHA); //TODO: Hardcodeado
-    log_warning(logger, "Kernel listo para recibir a Consolas");
+    log_warning(my_logger, "Kernel listo para recibir a Consolas");
     while(recibir_conexiones(socket_kernel)); //Recibe conexiones de consolas y crea hilos para manejarlas
 
     liberar_estructura_config(lectura_de_config);

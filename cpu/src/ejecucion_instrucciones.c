@@ -19,9 +19,9 @@ void ejecutar_instrucciones(t_pcb* pcb) {
 		t_msj_kernel_cpu instruccion_actual = instruccion_a_enum(instruccion_actual_t);
 		switch(instruccion_actual) {
 			case SET:
-				//log_warning(logger, "AX: %c%c%c%c", pcb->registros_cpu.AX[0], pcb->registros_cpu.AX[1], pcb->registros_cpu.AX[2], pcb->registros_cpu.AX[3]);
+				//log_warning(my_logger, "AX: %c%c%c%c", pcb->registros_cpu.AX[0], pcb->registros_cpu.AX[1], pcb->registros_cpu.AX[2], pcb->registros_cpu.AX[3]);
 				set_registro(pcb, list_get(parametros_actuales, 0), list_get(parametros_actuales, 1));
-				//log_warning(logger, "AX: %c%c%c%c", pcb->registros_cpu.AX[0], pcb->registros_cpu.AX[1], pcb->registros_cpu.AX[2], pcb->registros_cpu.AX[3]);
+				//log_warning(my_logger, "AX: %c%c%c%c", pcb->registros_cpu.AX[0], pcb->registros_cpu.AX[1], pcb->registros_cpu.AX[2], pcb->registros_cpu.AX[3]);
 
 				break;
 
@@ -50,37 +50,15 @@ void ejecutar_instrucciones(t_pcb* pcb) {
 					enviar_pcb_a_kernel(pcb, EXIT_CON_SEG_FAULT, parametros_actuales);
 				}
 				else {
-					//Todovich lo de acceso_memoria solo sirve para el log obligatorio (te das cuenta?)
-
-					//No es necesario usar el hilo para MOV_IN y MOV_OUT, pero ya tengo toda la lógica hecha, así que aprovecho y la uso
-					// log_acceso_memoria
-					t_args_log_acceso_memoria* args = malloc(sizeof(t_args_log_acceso_memoria));
-					args->pcb = pcb;
-				    args->numero_segmento = datos_mmu.numero_segmento;
-				    args->direccion_fisica = datos_mmu.direccion_fisica;
-
-				    if(instruccion_actual == MOV_IN) {
-				    	args->nombre_registro = obtener_registro(instruccion_actual, parametros_actuales); //solo me sirve para saber si tengo que escribir en archivo con el valor que reciba de memoria (en el escuchador de memoria). Hardcodeado nashe
-				    }
-				    else {
-				    	args->nombre_registro = NULL;
-				    }
-
-				    //Pusheo antes de ejecutar para asegurarme que Memoria no me responda antes de haber ingresado la solicitud a la lista
-				    list_push_con_mutex(list_solicitudes_acceso_memoria, args, &mutex_list_solicitudes_acceso_memoria);
-
-
 					//Atentos a la mayor villereada de todos los tiempos!!
 
 				    // EJECUCION INSTRUCCION
 					if(instruccion_actual == MOV_IN) {
-						ejecutar_mov_in(pcb, datos_mmu.direccion_fisica, obtener_registro(instruccion_actual, parametros_actuales));
-
+						ejecutar_mov_in(pcb, datos_mmu, obtener_registro(instruccion_actual, parametros_actuales));
 						break;
 					}
 					else if(instruccion_actual == MOV_OUT) {
-						ejecutar_mov_out(pcb, datos_mmu.direccion_fisica, obtener_registro(instruccion_actual, parametros_actuales));
-
+						ejecutar_mov_out(pcb, datos_mmu, obtener_registro(instruccion_actual, parametros_actuales));
 						break;
 					}
 					else {
@@ -168,7 +146,7 @@ void set_registro(t_pcb* pcb, char* registro, char* valor) {
 		memcpy(pcb->registros_cpu.RDX, valor, 16 * sizeof(char));
 	}
 
-	usleep(lectura_de_config.RETARDO_INSTRUCCION * 1000);
+	sleep(lectura_de_config.RETARDO_INSTRUCCION);
 	return;
 }
 
@@ -319,19 +297,30 @@ int numero_de_parametro_de_registro(t_msj_kernel_cpu instruccion_actual) {
 
 //Funciones de ejecución posta
 
-void ejecutar_mov_in(t_pcb* pcb, int direccion_fisica, char* nombre_registro) {
+void ejecutar_mov_in(t_pcb* pcb, t_datos_mmu datos_mmu, char* nombre_registro) {
 	char** parametros = string_array_new();
-	string_array_push(&parametros, string_itoa(direccion_fisica));
+	string_array_push(&parametros, string_itoa(datos_mmu.direccion_fisica));
 	string_array_push(&parametros, string_itoa(tamanio_registro(nombre_registro)));
 
 	enviar_msj_con_parametros(socket_memoria, LEER_VALOR, parametros);
 
 	string_array_destroy(parametros);
+
+	if(recibir_msj(socket_memoria) == LEIDO_OK) { //No hace falta pero bueno, recibe un mensaje sí o sí
+		parametros = recibir_parametros_de_mensaje(socket_memoria);
+	}
+
+	char* valor = parametros[0];
+	set_registro(pcb, nombre_registro, valor);
+
+	log_info(logger, "PID: %d - Acción: %s - Segmento: %d - Dirección Física: %d - Valor: %s", pcb->pid, "LEER", datos_mmu.numero_segmento, datos_mmu.direccion_fisica, valor); //log obligatorio
+
+	string_array_destroy(parametros);
 }
 
-void ejecutar_mov_out(t_pcb* pcb, int direccion_fisica, char* nombre_registro) {
+void ejecutar_mov_out(t_pcb* pcb, t_datos_mmu datos_mmu, char* nombre_registro) {
 	char** parametros= string_array_new();
-	string_array_push(&parametros, string_itoa(direccion_fisica));
+	string_array_push(&parametros, string_itoa(datos_mmu.direccion_fisica));
 	string_array_push(&parametros, string_itoa(tamanio_registro(nombre_registro))); //No hace falta igual, lo puede calcular memoria con strlen
 
 	char* valor = leer_registro(pcb, nombre_registro);
@@ -339,6 +328,8 @@ void ejecutar_mov_out(t_pcb* pcb, int direccion_fisica, char* nombre_registro) {
 	free(valor);
 
 	enviar_msj_con_parametros(socket_memoria, ESCRIBIR_VALOR, parametros);
+
+	log_info(logger, "PID: %d - Acción: %s - Segmento: %d - Dirección Física: %d - Valor: %s", pcb->pid, "LEER", datos_mmu.numero_segmento, datos_mmu.direccion_fisica, valor); //log obligatorio
 
 	string_array_destroy(parametros);
 }
@@ -357,6 +348,3 @@ void ejecutar_fread_o_fwrite(t_pcb* pcb, int direccion_fisica, t_msj_kernel_cpu 
 	list_destroy(parametros_a_enviar);
 	free(str_direccion_fisica);
 }
-
-
-

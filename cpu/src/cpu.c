@@ -3,13 +3,13 @@
 #include <utils.h>
 #include "../include/configuracion_cpu.h"
 #include "../include/ejecucion_instrucciones.h"
-#include "../include/escuchador_de_memoria.h"
 
 int main(int argc, char** argv) {
     t_config* config = iniciar_config(argv[1]);
     lectura_de_config = leer_cpu_config(config);
 
     logger = iniciar_logger("cpu.config", "CPU");
+    my_logger = iniciar_logger("my_cpu.log", "CPU");
 
     //TODO: DESCOMENTAR
     /*
@@ -22,28 +22,24 @@ int main(int argc, char** argv) {
     }
 	*/
 
-    list_solicitudes_acceso_memoria = list_create();
-
-    pthread_mutex_init(&mutex_list_solicitudes_acceso_memoria, NULL);
-
-	pthread_t escuchador_de_memoria;
-    pthread_create(&escuchador_de_memoria, NULL, (void*)log_acceso_memoria, NULL);
-    pthread_detach(escuchador_de_memoria);
-
     int socket_cpu = iniciar_servidor("127.0.0.1", lectura_de_config.PUERTO_ESCUCHA); //TODO: hardcodeado
-    log_warning(logger, "CPU lista para recibir al Kernel");
+    log_warning(my_logger, "CPU lista para recibir al Kernel");
     socket_kernel = esperar_cliente(socket_cpu);
 
-    log_warning(logger, "Kernel se conecto a CPU");
+    log_warning(my_logger, "Kernel se conecto a CPU");
 
     while (1) {
-    	int cod_op = recibir_operacion(socket_kernel);
-    	switch (cod_op) {
+    	switch (recibir_msj(socket_kernel)) {
     		case PCB_A_EJECUTAR:
     			t_pcb* pcb = recibir_pcb(socket_kernel); //deserializar hace el malloc
+
     			ejecutar_instrucciones(pcb);
-    			liberar_pcb(pcb); //TODO: valgrind dice que se está haciendo algún free dos veces
+
+    			liberar_pcb(pcb);
     			break;
+
+        	default:
+        		break;
         }
     }
 

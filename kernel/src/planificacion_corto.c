@@ -77,7 +77,7 @@ void planificar_corto() {
 						sem_wait(&sem_respuesta_fs);
 
 						if(respuesta_fs_global == EL_ARCHIVO_FUE_CREADO) {
-							log_warning(logger, "Se abrio el archivo"); //en realidad nunca va a fallar. Esto tendria que haberse hecho con un solo mensaje pero lo separaron en abrir y crear.
+							log_warning(my_logger, "Se abrio el archivo"); //en realidad nunca va a fallar. Esto tendria que haberse hecho con un solo mensaje pero lo separaron en abrir y crear.
 						}
 						else {
 							log_error(logger, "El File System no pudo crear el archivo");
@@ -86,7 +86,7 @@ void planificar_corto() {
 
 					}
 					else { // EL_ARCHIVO_YA_EXISTE
-						log_warning(logger, "Se abrio un archivo que ya existia en el File System");
+						log_warning(my_logger, "Se abrio un archivo que ya existia en el File System");
 					}
 
 					mantener_pcb_en_exec(pcb_recibido);
@@ -276,7 +276,7 @@ void planificar_corto() {
 }
 
 int calcular_R(t_pcb* pcb) {
-	return (calcular_tiempo_en_ready(pcb->tiempo_llegada_ready) + pcb->estimado_prox_rafaga) / pcb->estimado_prox_rafaga;
+	return calcular_tiempo_en_ready(pcb->tiempo_llegada_ready) / pcb->estimado_prox_rafaga + 1;
 }
 
 int calcular_tiempo_en_ready(int segundos) {
@@ -349,6 +349,7 @@ void wait_recurso(t_pcb* pcb, char* nombre_recurso) {
 	else {
 		log_error(logger, "El recurso %s no existe", nombre_recurso);
 		exit_proceso(pcb, SUCCESS); //no existe el recurso
+		//TODO: No hace SIGNAL de los recursos que había hecho WAIT, por lo que si otro proceso hace WAIT de alguno de ellos se queda en deadlock
 	}
 }
 
@@ -384,7 +385,7 @@ void signal_recurso(t_pcb* pcb, char* nombre_recurso) {
 }
 
 void exit_proceso(t_pcb* pcb, t_msj_kernel_consola mensaje) {
-	enviar_fin_proceso(pcb->socket_consola, mensaje);
+	enviar_msj(pcb->socket_consola, mensaje);
 
 	log_info(logger, "PID: %d - Estado Anterior: EXEC - Estado Actual: EXIT", pcb->pid); //log obligatorio
 	log_info(logger, "Finaliza el proceso %d - Motivo: %s", pcb->pid, mensaje_de_finalizacion_a_string(mensaje)); //log obligatorio

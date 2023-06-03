@@ -13,6 +13,7 @@ t_kernel_config lectura_de_config;
 ////////////
 
 t_log* logger;
+t_log* my_logger;
 
 /////////////
 // SOCKETS //
@@ -75,8 +76,8 @@ t_kernel_config leer_kernel_config(t_config* config) {
 
     lectura_de_config.PUERTO_ESCUCHA              = strdup(config_get_string_value(config, "PUERTO_ESCUCHA"));
     lectura_de_config.ALGORITMO_PLANIFICACION     = strdup(config_get_string_value(config, "ALGORITMO_PLANIFICACION"));
-    lectura_de_config.ESTIMACION_INICIAL          = config_get_int_value(config, "ESTIMACION_INICIAL");
-    lectura_de_config.HRRN_ALFA                   = config_get_int_value(config, "HRRN_ALFA");
+    lectura_de_config.ESTIMACION_INICIAL          = config_get_double_value(config, "ESTIMACION_INICIAL") / 1000; //Porque me lo dan en milisegundos
+    lectura_de_config.HRRN_ALFA                   = config_get_double_value(config, "HRRN_ALFA");
     lectura_de_config.GRADO_MAX_MULTIPROGRAMACION = config_get_int_value(config, "GRADO_MAX_MULTIPROGRAMACION");
 
     char* recursos             = strdup(config_get_string_value(config, "RECURSOS")); //"[elem1, elem2, ...]"
@@ -195,7 +196,7 @@ void ready_list_push(t_pcb* pcb_recibido) {
 }
 
 void calcular_prox_rafaga(t_pcb* pcb) {
-	int alpha = lectura_de_config.HRRN_ALFA;
+	double alpha = lectura_de_config.HRRN_ALFA;
 	pcb->estimado_prox_rafaga = alpha * pcb->tiempo_real_ejecucion + (1-alpha) * pcb->estimado_prox_rafaga; //pcb->estimado_prox_rafaga aca es como el estimado anterior
 }
 

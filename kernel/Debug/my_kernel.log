@@ -1,0 +1,311 @@
+[WARNING] 00:14:35:548 Kernel/(10917:10917): Kernel listo para recibir a Consolas
+[WARNING] 00:14:36:665 Kernel/(10917:10923): Se conecto una consola
+[WARNING] 00:20:03:184 Kernel/(11103:11103): Kernel listo para recibir a Consolas
+[WARNING] 00:20:05:214 Kernel/(11103:11109): Se conecto una consola
+[WARNING] 00:21:46:590 Kernel/(11208:11208): Kernel listo para recibir a Consolas
+[WARNING] 00:21:47:707 Kernel/(11208:11214): Se conecto una consola
+[WARNING] 00:21:47:731 Kernel/(11208:11210): estimado_prox_rafaga (cuenta): 0.000000
+[WARNING] 00:21:47:732 Kernel/(11208:11210): estimado_prox_rafaga: 0
+[WARNING] 00:23:05:655 Kernel/(11275:11275): Kernel listo para recibir a Consolas
+[WARNING] 00:23:07:856 Kernel/(11275:11281): Se conecto una consola
+[WARNING] 00:23:07:882 Kernel/(11275:11277): alpha: 0.000000
+[WARNING] 00:23:07:883 Kernel/(11275:11277): tiempo_real_ejecucion: 0
+[WARNING] 00:23:07:883 Kernel/(11275:11277): estimado_prox_rafaga (cuenta): 0.000000
+[WARNING] 00:23:07:884 Kernel/(11275:11277): estimado_prox_rafaga: 0
+[WARNING] 00:23:44:812 Kernel/(11365:11365): Kernel listo para recibir a Consolas
+[WARNING] 00:23:46:601 Kernel/(11365:11371): Se conecto una consola
+[WARNING] 00:23:46:627 Kernel/(11365:11367): alpha: 0.000000
+[WARNING] 00:23:46:627 Kernel/(11365:11367): tiempo_real_ejecucion: 0
+[WARNING] 00:23:46:628 Kernel/(11365:11367): estimado_prox_rafaga (cuenta): 0.000000
+[WARNING] 00:23:46:628 Kernel/(11365:11367): estimado_prox_rafaga: 0
+[WARNING] 00:24:29:194 Kernel/(11492:11492): Kernel listo para recibir a Consolas
+[WARNING] 00:24:30:107 Kernel/(11492:11498): Se conecto una consola
+[WARNING] 00:24:30:140 Kernel/(11492:11494): alpha: 0.500000
+[WARNING] 00:24:30:141 Kernel/(11492:11494): tiempo_real_ejecucion: 0
+[WARNING] 00:24:30:142 Kernel/(11492:11494): estimado_prox_rafaga (cuenta): 0.000000
+[WARNING] 00:24:30:143 Kernel/(11492:11494): estimado_prox_rafaga: 0
+[WARNING] 00:30:16:334 Kernel/(11590:11590): Kernel listo para recibir a Consolas
+[WARNING] 00:30:18:120 Kernel/(11590:11596): Se conecto una consola
+[WARNING] 00:30:18:147 Kernel/(11590:11592): alpha: 0.500000
+[WARNING] 00:30:18:148 Kernel/(11590:11592): tiempo_real_ejecucion: 0
+[WARNING] 00:30:18:149 Kernel/(11590:11592): estimado_prox_rafaga (cuenta): 0.000000
+[WARNING] 00:30:18:150 Kernel/(11590:11592): estimado_prox_rafaga: 0
+[WARNING] 00:31:11:985 Kernel/(11677:11677): Kernel listo para recibir a Consolas
+[WARNING] 00:31:13:848 Kernel/(11677:11683): Se conecto una consola
+[WARNING] 00:31:13:874 Kernel/(11677:11679): alpha: 0.500000
+[WARNING] 00:31:13:875 Kernel/(11677:11679): tiempo_real_ejecucion: 0
+[WARNING] 00:31:13:877 Kernel/(11677:11679): estimado_prox_rafaga (cuenta): 0.000000
+[WARNING] 00:31:13:877 Kernel/(11677:11679): estimado_prox_rafaga: 0
+[WARNING] 00:33:12:626 Kernel/(11720:11720): Kernel listo para recibir a Consolas
+[WARNING] 00:33:14:154 Kernel/(11720:11726): Se conecto una consola
+[WARNING] 00:33:14:175 Kernel/(11720:11722): alpha: 0.500000
+[WARNING] 00:33:14:179 Kernel/(11720:11722): tiempo_real_ejecucion: 0
+[WARNING] 00:33:14:182 Kernel/(11720:11722): estimado_prox_rafaga (cuenta): 0.000000
+[WARNING] 00:33:14:182 Kernel/(11720:11722): estimado_prox_rafaga: 0
+[WARNING] 00:34:41:216 Kernel/(11858:11858): Kernel listo para recibir a Consolas
+[WARNING] 00:34:42:364 Kernel/(11858:11864): Se conecto una consola
+[WARNING] 00:34:42:385 Kernel/(11858:11864): tiempo_real_ejecucion (conexiones): 0
+[WARNING] 00:34:42:397 Kernel/(11858:11860): alpha: 0.500000
+[WARNING] 00:34:42:404 Kernel/(11858:11860): tiempo_real_ejecucion: 0.002000
+[WARNING] 00:34:42:405 Kernel/(11858:11860): estimado_prox_rafaga (cuenta): 0.001000
+[WARNING] 00:34:42:405 Kernel/(11858:11860): estimado_prox_rafaga: 0
+[WARNING] 00:37:38:943 Kernel/(12028:12028): Kernel listo para recibir a Consolas
+[WARNING] 00:37:40:399 Kernel/(12028:12034): Se conecto una consola
+[WARNING] 00:37:40:424 Kernel/(12028:12030): alpha: 0.500000
+[WARNING] 00:37:40:427 Kernel/(12028:12030): tiempo_real_ejecucion: 0.002000
+[WARNING] 00:37:40:427 Kernel/(12028:12030): estimado_prox_rafaga (cuenta): 0.002000
+[WARNING] 00:37:40:427 Kernel/(12028:12030): estimado_prox_rafaga: 0.002000
+[WARNING] 00:37:46:670 Kernel/(12028:12037): Se conecto una consola
+[WARNING] 00:37:46:671 Kernel/(12028:12030): alpha: 0.500000
+[WARNING] 00:37:46:671 Kernel/(12028:12030): tiempo_real_ejecucion: 0.002000
+[WARNING] 00:37:46:672 Kernel/(12028:12030): estimado_prox_rafaga (cuenta): 0.002000
+[WARNING] 00:37:46:672 Kernel/(12028:12030): estimado_prox_rafaga: 0.002000
+[WARNING] 00:37:47:923 Kernel/(12028:12040): Se conecto una consola
+[WARNING] 00:37:47:924 Kernel/(12028:12030): alpha: 0.500000
+[WARNING] 00:37:47:924 Kernel/(12028:12030): tiempo_real_ejecucion: 0.002000
+[WARNING] 00:37:47:924 Kernel/(12028:12030): estimado_prox_rafaga (cuenta): 0.002000
+[WARNING] 00:37:47:924 Kernel/(12028:12030): estimado_prox_rafaga: 0.002000
+[WARNING] 00:37:52:512 Kernel/(12028:12029): alpha: 0.500000
+[WARNING] 00:37:52:516 Kernel/(12028:12029): tiempo_real_ejecucion: 1685752672.000000
+[WARNING] 00:37:52:516 Kernel/(12028:12029): estimado_prox_rafaga (cuenta): 1264314504.000000
+[WARNING] 00:37:52:517 Kernel/(12028:12029): estimado_prox_rafaga: 842876336.000000
+[WARNING] 00:37:54:526 Kernel/(12028:12029): alpha: 0.500000
+[WARNING] 00:37:54:528 Kernel/(12028:12029): tiempo_real_ejecucion: 1685752674.000000
+[WARNING] 00:37:54:535 Kernel/(12028:12029): estimado_prox_rafaga (cuenta): 1264314505.500000
+[WARNING] 00:37:54:536 Kernel/(12028:12029): estimado_prox_rafaga: 842876337.000000
+[WARNING] 00:37:56:550 Kernel/(12028:12029): alpha: 0.500000
+[WARNING] 00:37:56:550 Kernel/(12028:12029): tiempo_real_ejecucion: 1685752676.000000
+[WARNING] 00:37:56:550 Kernel/(12028:12029): estimado_prox_rafaga (cuenta): 1264314507.000000
+[WARNING] 00:37:56:551 Kernel/(12028:12029): estimado_prox_rafaga: 842876338.000000
+[WARNING] 00:38:00:571 Kernel/(12028:12029): alpha: 0.500000
+[WARNING] 00:38:00:572 Kernel/(12028:12029): tiempo_real_ejecucion: 1685752680.000000
+[WARNING] 00:38:00:572 Kernel/(12028:12029): estimado_prox_rafaga (cuenta): 1264314510.000000
+[WARNING] 00:38:00:573 Kernel/(12028:12029): estimado_prox_rafaga: 842876340.000000
+[WARNING] 00:38:02:587 Kernel/(12028:12029): alpha: 0.500000
+[WARNING] 00:38:02:587 Kernel/(12028:12029): tiempo_real_ejecucion: 1685752682.000000
+[WARNING] 00:38:02:587 Kernel/(12028:12029): estimado_prox_rafaga (cuenta): 1264314511.500000
+[WARNING] 00:38:02:588 Kernel/(12028:12029): estimado_prox_rafaga: 842876341.000000
+[WARNING] 00:38:04:592 Kernel/(12028:12029): alpha: 0.500000
+[WARNING] 00:38:04:593 Kernel/(12028:12029): tiempo_real_ejecucion: 1685752684.000000
+[WARNING] 00:38:04:593 Kernel/(12028:12029): estimado_prox_rafaga (cuenta): 1264314513.000000
+[WARNING] 00:38:04:593 Kernel/(12028:12029): estimado_prox_rafaga: 842876342.000000
+[WARNING] 00:38:06:604 Kernel/(12028:12029): alpha: 0.500000
+[WARNING] 00:38:06:604 Kernel/(12028:12029): tiempo_real_ejecucion: 1685752686.000000
+[WARNING] 00:38:06:604 Kernel/(12028:12029): estimado_prox_rafaga (cuenta): 1264314514.500000
+[WARNING] 00:38:06:604 Kernel/(12028:12029): estimado_prox_rafaga: 842876343.000000
+[WARNING] 00:38:08:611 Kernel/(12028:12029): alpha: 0.500000
+[WARNING] 00:38:08:611 Kernel/(12028:12029): tiempo_real_ejecucion: 1685752688.000000
+[WARNING] 00:38:08:612 Kernel/(12028:12029): estimado_prox_rafaga (cuenta): 1264314516.000000
+[WARNING] 00:38:08:612 Kernel/(12028:12029): estimado_prox_rafaga: 842876344.000000
+[WARNING] 00:38:10:622 Kernel/(12028:12029): alpha: 0.500000
+[WARNING] 00:38:10:624 Kernel/(12028:12029): tiempo_real_ejecucion: 1685752690.000000
+[WARNING] 00:38:10:625 Kernel/(12028:12029): estimado_prox_rafaga (cuenta): 1264314517.500000
+[WARNING] 00:38:10:631 Kernel/(12028:12029): estimado_prox_rafaga: 842876345.000000
+[WARNING] 00:38:12:641 Kernel/(12028:12029): alpha: 0.500000
+[WARNING] 00:38:12:641 Kernel/(12028:12029): tiempo_real_ejecucion: 1685752692.000000
+[WARNING] 00:38:12:642 Kernel/(12028:12029): estimado_prox_rafaga (cuenta): 1264314519.000000
+[WARNING] 00:38:12:642 Kernel/(12028:12029): estimado_prox_rafaga: 842876346.000000
+[WARNING] 00:38:14:647 Kernel/(12028:12029): alpha: 0.500000
+[WARNING] 00:38:14:647 Kernel/(12028:12029): tiempo_real_ejecucion: 1685752694.000000
+[WARNING] 00:38:14:648 Kernel/(12028:12029): estimado_prox_rafaga (cuenta): 1264314520.500000
+[WARNING] 00:38:14:648 Kernel/(12028:12029): estimado_prox_rafaga: 842876347.000000
+[WARNING] 00:38:16:657 Kernel/(12028:12029): alpha: 0.500000
+[WARNING] 00:38:16:657 Kernel/(12028:12029): tiempo_real_ejecucion: 1685752696.000000
+[WARNING] 00:38:16:657 Kernel/(12028:12029): estimado_prox_rafaga (cuenta): 1264314522.000000
+[WARNING] 00:38:16:658 Kernel/(12028:12029): estimado_prox_rafaga: 842876348.000000
+[WARNING] 00:38:18:666 Kernel/(12028:12029): alpha: 0.500000
+[WARNING] 00:38:18:667 Kernel/(12028:12029): tiempo_real_ejecucion: 1685752698.000000
+[WARNING] 00:38:18:667 Kernel/(12028:12029): estimado_prox_rafaga (cuenta): 1264314523.500000
+[WARNING] 00:38:18:667 Kernel/(12028:12029): estimado_prox_rafaga: 842876349.000000
+[WARNING] 00:38:20:672 Kernel/(12028:12029): alpha: 0.500000
+[WARNING] 00:38:20:673 Kernel/(12028:12029): tiempo_real_ejecucion: 1685752700.000000
+[WARNING] 00:38:20:673 Kernel/(12028:12029): estimado_prox_rafaga (cuenta): 1264314525.000000
+[WARNING] 00:38:20:673 Kernel/(12028:12029): estimado_prox_rafaga: 842876350.000000
+[WARNING] 00:38:22:677 Kernel/(12028:12029): alpha: 0.500000
+[WARNING] 00:38:22:677 Kernel/(12028:12029): tiempo_real_ejecucion: 1685752702.000000
+[WARNING] 00:38:22:677 Kernel/(12028:12029): estimado_prox_rafaga (cuenta): 1264314526.500000
+[WARNING] 00:38:22:678 Kernel/(12028:12029): estimado_prox_rafaga: 842876351.000000
+[WARNING] 00:38:23:682 Kernel/(12028:12029): alpha: 0.500000
+[WARNING] 00:38:23:682 Kernel/(12028:12029): tiempo_real_ejecucion: 1685752703.000000
+[WARNING] 00:38:23:682 Kernel/(12028:12029): estimado_prox_rafaga (cuenta): 1264314527.250000
+[WARNING] 00:38:23:682 Kernel/(12028:12029): estimado_prox_rafaga: 842876351.500000
+[WARNING] 00:38:24:685 Kernel/(12028:12029): alpha: 0.500000
+[WARNING] 00:38:24:685 Kernel/(12028:12029): tiempo_real_ejecucion: 1685752704.000000
+[WARNING] 00:38:24:686 Kernel/(12028:12029): estimado_prox_rafaga (cuenta): 1264314528.000000
+[WARNING] 00:38:24:686 Kernel/(12028:12029): estimado_prox_rafaga: 842876352.000000
+[WARNING] 00:42:46:209 Kernel/(12124:12124): Kernel listo para recibir a Consolas
+[WARNING] 00:42:47:704 Kernel/(12124:12131): Se conecto una consola
+[WARNING] 00:42:47:725 Kernel/(12124:12127): alpha: 0.500000
+[WARNING] 00:42:47:727 Kernel/(12124:12127): tiempo_real_ejecucion: 0.002000
+[WARNING] 00:42:47:727 Kernel/(12124:12127): estimado_prox_rafaga (cuenta): 0.002000
+[WARNING] 00:42:47:727 Kernel/(12124:12127): estimado_prox_rafaga: 0.002000
+[WARNING] 00:42:48:491 Kernel/(12124:12134): Se conecto una consola
+[WARNING] 00:42:48:493 Kernel/(12124:12127): alpha: 0.500000
+[WARNING] 00:42:48:493 Kernel/(12124:12127): tiempo_real_ejecucion: 0.002000
+[WARNING] 00:42:48:493 Kernel/(12124:12127): estimado_prox_rafaga (cuenta): 0.002000
+[WARNING] 00:42:48:494 Kernel/(12124:12127): estimado_prox_rafaga: 0.002000
+[WARNING] 00:42:50:811 Kernel/(12124:12137): Se conecto una consola
+[WARNING] 00:42:50:816 Kernel/(12124:12127): alpha: 0.500000
+[WARNING] 00:42:50:819 Kernel/(12124:12127): tiempo_real_ejecucion: 0.002000
+[WARNING] 00:42:50:819 Kernel/(12124:12127): estimado_prox_rafaga (cuenta): 0.002000
+[WARNING] 00:42:50:819 Kernel/(12124:12127): estimado_prox_rafaga: 0.002000
+[WARNING] 00:43:12:164 Kernel/(12124:12126): alpha: 0.500000
+[WARNING] 00:43:12:177 Kernel/(12124:12126): tiempo_real_ejecucion: 1685752992.000000
+[WARNING] 00:43:12:178 Kernel/(12124:12126): estimado_prox_rafaga (cuenta): 1264314744.000000
+[WARNING] 00:43:12:178 Kernel/(12124:12126): estimado_prox_rafaga: 842876496.000000
+[WARNING] 00:43:29:321 Kernel/(12124:12126): alpha: 0.500000
+[WARNING] 00:43:29:346 Kernel/(12124:12126): tiempo_real_ejecucion: 1685753009.000000
+[WARNING] 00:43:29:351 Kernel/(12124:12126): estimado_prox_rafaga (cuenta): 1264314756.750000
+[WARNING] 00:43:29:352 Kernel/(12124:12126): estimado_prox_rafaga: 842876504.500000
+[WARNING] 00:43:45:142 Kernel/(12124:12126): alpha: 0.500000
+[WARNING] 00:43:45:145 Kernel/(12124:12126): tiempo_real_ejecucion: 1685753025.000000
+[WARNING] 00:43:45:145 Kernel/(12124:12126): estimado_prox_rafaga (cuenta): 1264314768.750000
+[WARNING] 00:43:45:158 Kernel/(12124:12126): estimado_prox_rafaga: 842876512.500000
+[WARNING] 00:49:19:859 Kernel/(12258:12258): Kernel listo para recibir a Consolas
+[WARNING] 00:49:23:357 Kernel/(12258:12265): Se conecto una consola
+[WARNING] 00:49:23:379 Kernel/(12258:12261): alpha: 0.500000
+[WARNING] 00:49:23:381 Kernel/(12258:12261): tiempo_real_ejecucion: 0.002000
+[WARNING] 00:49:23:382 Kernel/(12258:12261): estimado_prox_rafaga (cuenta): 0.002000
+[WARNING] 00:49:23:382 Kernel/(12258:12261): estimado_prox_rafaga: 0.002000
+[WARNING] 00:49:24:638 Kernel/(12258:12268): Se conecto una consola
+[WARNING] 00:49:24:639 Kernel/(12258:12261): alpha: 0.500000
+[WARNING] 00:49:24:639 Kernel/(12258:12261): tiempo_real_ejecucion: 0.002000
+[WARNING] 00:49:24:639 Kernel/(12258:12261): estimado_prox_rafaga (cuenta): 0.002000
+[WARNING] 00:49:24:639 Kernel/(12258:12261): estimado_prox_rafaga: 0.002000
+[WARNING] 00:49:25:730 Kernel/(12258:12271): Se conecto una consola
+[WARNING] 00:49:25:731 Kernel/(12258:12261): alpha: 0.500000
+[WARNING] 00:49:25:732 Kernel/(12258:12261): tiempo_real_ejecucion: 0.002000
+[WARNING] 00:49:25:732 Kernel/(12258:12261): estimado_prox_rafaga (cuenta): 0.002000
+[WARNING] 00:49:25:732 Kernel/(12258:12261): estimado_prox_rafaga: 0.002000
+[WARNING] 00:49:35:446 Kernel/(12258:12260): alpha: 0.500000
+[WARNING] 00:49:35:450 Kernel/(12258:12260): tiempo_real_ejecucion: 12.000000
+[WARNING] 00:49:35:450 Kernel/(12258:12260): estimado_prox_rafaga (cuenta): 9.000500
+[WARNING] 00:49:35:451 Kernel/(12258:12260): estimado_prox_rafaga: 6.001000
+[WARNING] 00:49:37:455 Kernel/(12258:12260): alpha: 0.500000
+[WARNING] 00:49:37:455 Kernel/(12258:12260): tiempo_real_ejecucion: 2.000000
+[WARNING] 00:49:37:456 Kernel/(12258:12260): estimado_prox_rafaga (cuenta): 1.500500
+[WARNING] 00:49:37:457 Kernel/(12258:12260): estimado_prox_rafaga: 1.001000
+[WARNING] 00:49:39:462 Kernel/(12258:12260): alpha: 0.500000
+[WARNING] 00:49:39:463 Kernel/(12258:12260): tiempo_real_ejecucion: 2.000000
+[WARNING] 00:49:39:463 Kernel/(12258:12260): estimado_prox_rafaga (cuenta): 1.500500
+[WARNING] 00:49:39:463 Kernel/(12258:12260): estimado_prox_rafaga: 1.001000
+[WARNING] 00:49:41:467 Kernel/(12258:12260): alpha: 0.500000
+[WARNING] 00:49:41:468 Kernel/(12258:12260): tiempo_real_ejecucion: 2.000000
+[WARNING] 00:49:41:468 Kernel/(12258:12260): estimado_prox_rafaga (cuenta): 1.750250
+[WARNING] 00:49:41:468 Kernel/(12258:12260): estimado_prox_rafaga: 1.500500
+[WARNING] 00:49:43:483 Kernel/(12258:12260): alpha: 0.500000
+[WARNING] 00:49:43:484 Kernel/(12258:12260): tiempo_real_ejecucion: 2.000000
+[WARNING] 00:49:43:484 Kernel/(12258:12260): estimado_prox_rafaga (cuenta): 1.750250
+[WARNING] 00:49:43:484 Kernel/(12258:12260): estimado_prox_rafaga: 1.500500
+[WARNING] 00:49:47:496 Kernel/(12258:12260): alpha: 0.500000
+[WARNING] 00:49:47:496 Kernel/(12258:12260): tiempo_real_ejecucion: 2.000000
+[WARNING] 00:49:47:497 Kernel/(12258:12260): estimado_prox_rafaga (cuenta): 1.875125
+[WARNING] 00:49:47:497 Kernel/(12258:12260): estimado_prox_rafaga: 1.750250
+[WARNING] 00:49:49:501 Kernel/(12258:12260): alpha: 0.500000
+[WARNING] 00:49:49:501 Kernel/(12258:12260): tiempo_real_ejecucion: 2.000000
+[WARNING] 00:49:49:501 Kernel/(12258:12260): estimado_prox_rafaga (cuenta): 1.875125
+[WARNING] 00:49:49:501 Kernel/(12258:12260): estimado_prox_rafaga: 1.750250
+[WARNING] 00:49:51:505 Kernel/(12258:12260): alpha: 0.500000
+[WARNING] 00:49:51:506 Kernel/(12258:12260): tiempo_real_ejecucion: 2.000000
+[WARNING] 00:49:51:506 Kernel/(12258:12260): estimado_prox_rafaga (cuenta): 1.937562
+[WARNING] 00:49:51:506 Kernel/(12258:12260): estimado_prox_rafaga: 1.875125
+[WARNING] 00:49:53:512 Kernel/(12258:12260): alpha: 0.500000
+[WARNING] 00:49:53:512 Kernel/(12258:12260): tiempo_real_ejecucion: 2.000000
+[WARNING] 00:49:53:513 Kernel/(12258:12260): estimado_prox_rafaga (cuenta): 1.937562
+[WARNING] 00:49:53:513 Kernel/(12258:12260): estimado_prox_rafaga: 1.875125
+[WARNING] 00:49:55:517 Kernel/(12258:12260): alpha: 0.500000
+[WARNING] 00:49:55:517 Kernel/(12258:12260): tiempo_real_ejecucion: 2.000000
+[WARNING] 00:49:55:518 Kernel/(12258:12260): estimado_prox_rafaga (cuenta): 1.968781
+[WARNING] 00:49:55:518 Kernel/(12258:12260): estimado_prox_rafaga: 1.937562
+[WARNING] 00:49:57:521 Kernel/(12258:12260): alpha: 0.500000
+[WARNING] 00:49:57:521 Kernel/(12258:12260): tiempo_real_ejecucion: 2.000000
+[WARNING] 00:49:57:522 Kernel/(12258:12260): estimado_prox_rafaga (cuenta): 1.968781
+[WARNING] 00:49:57:522 Kernel/(12258:12260): estimado_prox_rafaga: 1.937562
+[WARNING] 00:49:59:526 Kernel/(12258:12260): alpha: 0.500000
+[WARNING] 00:49:59:526 Kernel/(12258:12260): tiempo_real_ejecucion: 2.000000
+[WARNING] 00:49:59:527 Kernel/(12258:12260): estimado_prox_rafaga (cuenta): 1.984391
+[WARNING] 00:49:59:527 Kernel/(12258:12260): estimado_prox_rafaga: 1.968781
+[WARNING] 00:50:01:531 Kernel/(12258:12260): alpha: 0.500000
+[WARNING] 00:50:01:531 Kernel/(12258:12260): tiempo_real_ejecucion: 2.000000
+[WARNING] 00:50:01:531 Kernel/(12258:12260): estimado_prox_rafaga (cuenta): 1.984391
+[WARNING] 00:50:01:532 Kernel/(12258:12260): estimado_prox_rafaga: 1.968781
+[WARNING] 00:50:03:538 Kernel/(12258:12260): alpha: 0.500000
+[WARNING] 00:50:03:538 Kernel/(12258:12260): tiempo_real_ejecucion: 2.000000
+[WARNING] 00:50:03:538 Kernel/(12258:12260): estimado_prox_rafaga (cuenta): 1.992195
+[WARNING] 00:50:03:539 Kernel/(12258:12260): estimado_prox_rafaga: 1.984391
+[WARNING] 00:50:05:544 Kernel/(12258:12260): alpha: 0.500000
+[WARNING] 00:50:05:545 Kernel/(12258:12260): tiempo_real_ejecucion: 2.000000
+[WARNING] 00:50:05:545 Kernel/(12258:12260): estimado_prox_rafaga (cuenta): 1.992195
+[WARNING] 00:50:05:545 Kernel/(12258:12260): estimado_prox_rafaga: 1.984391
+[WARNING] 00:50:06:549 Kernel/(12258:12260): alpha: 0.500000
+[WARNING] 00:50:06:550 Kernel/(12258:12260): tiempo_real_ejecucion: 1.000000
+[WARNING] 00:50:06:550 Kernel/(12258:12260): estimado_prox_rafaga (cuenta): 1.246098
+[WARNING] 00:50:06:550 Kernel/(12258:12260): estimado_prox_rafaga: 1.492195
+[WARNING] 00:50:07:554 Kernel/(12258:12260): alpha: 0.500000
+[WARNING] 00:50:07:555 Kernel/(12258:12260): tiempo_real_ejecucion: 1.000000
+[WARNING] 00:50:07:555 Kernel/(12258:12260): estimado_prox_rafaga (cuenta): 1.246098
+[WARNING] 00:50:07:555 Kernel/(12258:12260): estimado_prox_rafaga: 1.492195
+[WARNING] 00:51:24:853 Kernel/(12394:12394): Kernel listo para recibir a Consolas
+[WARNING] 00:51:25:489 Kernel/(12394:12400): Se conecto una consola
+[WARNING] 00:51:25:513 Kernel/(12394:12396): tiempo_real_ejecucion: 0.002000
+[WARNING] 00:51:25:513 Kernel/(12394:12396): estimado_prox_rafaga (cuenta): 0.002000
+[WARNING] 00:51:25:514 Kernel/(12394:12396): estimado_prox_rafaga: 0.002000
+[WARNING] 00:51:26:232 Kernel/(12394:12403): Se conecto una consola
+[WARNING] 00:51:26:233 Kernel/(12394:12396): tiempo_real_ejecucion: 0.002000
+[WARNING] 00:51:26:233 Kernel/(12394:12396): estimado_prox_rafaga (cuenta): 0.002000
+[WARNING] 00:51:26:234 Kernel/(12394:12396): estimado_prox_rafaga: 0.002000
+[WARNING] 00:51:26:952 Kernel/(12394:12406): Se conecto una consola
+[WARNING] 00:51:26:953 Kernel/(12394:12396): tiempo_real_ejecucion: 0.002000
+[WARNING] 00:51:26:953 Kernel/(12394:12396): estimado_prox_rafaga (cuenta): 0.002000
+[WARNING] 00:51:26:953 Kernel/(12394:12396): estimado_prox_rafaga: 0.002000
+[WARNING] 00:51:37:585 Kernel/(12394:12395): tiempo_real_ejecucion: 12.000000
+[WARNING] 00:51:37:585 Kernel/(12394:12395): estimado_prox_rafaga (cuenta): 6.001000
+[WARNING] 00:51:37:585 Kernel/(12394:12395): estimado_prox_rafaga: 6.001000
+[WARNING] 00:51:39:589 Kernel/(12394:12395): tiempo_real_ejecucion: 2.000000
+[WARNING] 00:51:39:590 Kernel/(12394:12395): estimado_prox_rafaga (cuenta): 1.001000
+[WARNING] 00:51:39:590 Kernel/(12394:12395): estimado_prox_rafaga: 1.001000
+[WARNING] 00:51:41:596 Kernel/(12394:12395): tiempo_real_ejecucion: 2.000000
+[WARNING] 00:51:41:596 Kernel/(12394:12395): estimado_prox_rafaga (cuenta): 1.001000
+[WARNING] 00:51:41:596 Kernel/(12394:12395): estimado_prox_rafaga: 1.001000
+[WARNING] 00:51:43:602 Kernel/(12394:12395): tiempo_real_ejecucion: 2.000000
+[WARNING] 00:51:43:603 Kernel/(12394:12395): estimado_prox_rafaga (cuenta): 1.500500
+[WARNING] 00:51:43:603 Kernel/(12394:12395): estimado_prox_rafaga: 1.500500
+[WARNING] 00:51:45:609 Kernel/(12394:12395): tiempo_real_ejecucion: 2.000000
+[WARNING] 00:51:45:609 Kernel/(12394:12395): estimado_prox_rafaga (cuenta): 1.500500
+[WARNING] 00:51:45:610 Kernel/(12394:12395): estimado_prox_rafaga: 1.500500
+[WARNING] 00:51:49:625 Kernel/(12394:12395): tiempo_real_ejecucion: 2.000000
+[WARNING] 00:51:49:625 Kernel/(12394:12395): estimado_prox_rafaga (cuenta): 1.750250
+[WARNING] 00:51:49:625 Kernel/(12394:12395): estimado_prox_rafaga: 1.750250
+[WARNING] 00:51:51:629 Kernel/(12394:12395): tiempo_real_ejecucion: 2.000000
+[WARNING] 00:51:51:630 Kernel/(12394:12395): estimado_prox_rafaga (cuenta): 1.750250
+[WARNING] 00:51:51:630 Kernel/(12394:12395): estimado_prox_rafaga: 1.750250
+[WARNING] 00:51:53:635 Kernel/(12394:12395): tiempo_real_ejecucion: 2.000000
+[WARNING] 00:51:53:635 Kernel/(12394:12395): estimado_prox_rafaga (cuenta): 1.875125
+[WARNING] 00:51:53:636 Kernel/(12394:12395): estimado_prox_rafaga: 1.875125
+[WARNING] 00:51:55:640 Kernel/(12394:12395): tiempo_real_ejecucion: 2.000000
+[WARNING] 00:51:55:640 Kernel/(12394:12395): estimado_prox_rafaga (cuenta): 1.875125
+[WARNING] 00:51:55:640 Kernel/(12394:12395): estimado_prox_rafaga: 1.875125
+[WARNING] 00:51:57:643 Kernel/(12394:12395): tiempo_real_ejecucion: 2.000000
+[WARNING] 00:51:57:644 Kernel/(12394:12395): estimado_prox_rafaga (cuenta): 1.937562
+[WARNING] 00:51:57:644 Kernel/(12394:12395): estimado_prox_rafaga: 1.937562
+[WARNING] 00:51:59:647 Kernel/(12394:12395): tiempo_real_ejecucion: 2.000000
+[WARNING] 00:51:59:648 Kernel/(12394:12395): estimado_prox_rafaga (cuenta): 1.937562
+[WARNING] 00:51:59:648 Kernel/(12394:12395): estimado_prox_rafaga: 1.937562
+[WARNING] 00:52:01:653 Kernel/(12394:12395): tiempo_real_ejecucion: 2.000000
+[WARNING] 00:52:01:653 Kernel/(12394:12395): estimado_prox_rafaga (cuenta): 1.968781
+[WARNING] 00:52:01:654 Kernel/(12394:12395): estimado_prox_rafaga: 1.968781
+[WARNING] 00:52:03:658 Kernel/(12394:12395): tiempo_real_ejecucion: 2.000000
+[WARNING] 00:52:03:659 Kernel/(12394:12395): estimado_prox_rafaga (cuenta): 1.968781
+[WARNING] 00:52:03:659 Kernel/(12394:12395): estimado_prox_rafaga: 1.968781
+[WARNING] 00:52:05:664 Kernel/(12394:12395): tiempo_real_ejecucion: 2.000000
+[WARNING] 00:52:05:664 Kernel/(12394:12395): estimado_prox_rafaga (cuenta): 1.984391
+[WARNING] 00:52:05:664 Kernel/(12394:12395): estimado_prox_rafaga: 1.984391
+[WARNING] 00:52:07:671 Kernel/(12394:12395): tiempo_real_ejecucion: 2.000000
+[WARNING] 00:52:07:671 Kernel/(12394:12395): estimado_prox_rafaga (cuenta): 1.984391
+[WARNING] 00:52:07:671 Kernel/(12394:12395): estimado_prox_rafaga: 1.984391
+[WARNING] 00:52:08:674 Kernel/(12394:12395): tiempo_real_ejecucion: 1.000000
+[WARNING] 00:52:08:675 Kernel/(12394:12395): estimado_prox_rafaga (cuenta): 1.492195
+[WARNING] 00:52:08:675 Kernel/(12394:12395): estimado_prox_rafaga: 1.492195
+[WARNING] 00:52:09:678 Kernel/(12394:12395): tiempo_real_ejecucion: 1.000000
+[WARNING] 00:52:09:678 Kernel/(12394:12395): estimado_prox_rafaga (cuenta): 1.492195
+[WARNING] 00:52:09:678 Kernel/(12394:12395): estimado_prox_rafaga: 1.492195

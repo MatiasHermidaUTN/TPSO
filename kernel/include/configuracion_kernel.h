@@ -13,17 +13,17 @@
 /////////////
 
 typedef struct kernel_config {
-    char* IP_MEMORIA;
-    char* PUERTO_MEMORIA;
-    char* IP_CPU;
-    char* PUERTO_CPU;
-    char* IP_FILESYSTEM;
-    char* PUERTO_FILESYSTEM;
-    char* PUERTO_ESCUCHA;
-    char* ALGORITMO_PLANIFICACION;
-    int   ESTIMACION_INICIAL;
-    int   HRRN_ALFA;
-    int   GRADO_MAX_MULTIPROGRAMACION;
+    char*  IP_MEMORIA;
+    char*  PUERTO_MEMORIA;
+    char*  IP_CPU;
+    char*  PUERTO_CPU;
+    char*  IP_FILESYSTEM;
+    char*  PUERTO_FILESYSTEM;
+    char*  PUERTO_ESCUCHA;
+    char*  ALGORITMO_PLANIFICACION;
+    double ESTIMACION_INICIAL;
+    double HRRN_ALFA;
+    int    GRADO_MAX_MULTIPROGRAMACION;
     char** RECURSOS;
     char** INSTANCIAS_RECURSOS;
 } t_kernel_config;
@@ -46,6 +46,7 @@ extern t_kernel_config lectura_de_config;
 ////////////
 
 extern t_log* logger;
+extern t_log* my_logger;
 
 /////////////
 // SOCKETS //

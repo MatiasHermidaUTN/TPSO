@@ -25,10 +25,6 @@
 ///////////
 
 typedef enum {
-	MENSAJE,
-} op_code;
-
-typedef enum {
 	KERNEL,
 	CPU,
 	FILESYSTEM,
@@ -126,16 +122,6 @@ typedef enum {
 // STRUCTS //
 //////////////
 
-typedef struct {
-	int size;
-	void* stream;
-} t_buffer;
-
-typedef struct {
-	op_code codigo_operacion;
-	t_buffer* buffer;
-} t_paquete;
-
 typedef struct registros_cpu {
 	char  AX[ 4],  BX[ 4],  CX[ 4],  DX[ 4];
 	char EAX[ 8], EBX[ 8], ECX[ 8], EDX[ 8];
@@ -148,14 +134,14 @@ typedef struct pcb {
 	int pc;
 	t_registros_cpu registros_cpu;
 	t_list* tabla_segmentos;
-	int estimado_prox_rafaga;
+	double estimado_prox_rafaga;
 	int tiempo_llegada_ready;
 	t_list* archivos_abiertos;
 
 	int socket_consola; //para mandarle mensaje que cuando termina
 
-	int tiempo_real_ejecucion;
-	int tiempo_inicial_ejecucion;
+	double tiempo_real_ejecucion;
+	double tiempo_inicial_ejecucion;
 } t_pcb;
 
 typedef struct {
@@ -185,8 +171,6 @@ typedef struct {
 
 int crear_conexion(char *ip, char* puerto);
 
-void enviar_mensaje(char* mensaje, int socket_cliente);
-
 //////////////
 // Servidor //
 //////////////
@@ -195,21 +179,11 @@ int iniciar_servidor(char* IP, char* PUERTO);
 
 int esperar_cliente(int socket_servidor);
 
-int recibir_operacion(int socket_cliente);
-void recibir_mensaje(int socket_cliente);
-
-void* serializar_paquete(t_paquete* paquete, int bytes);
-void* recibir_buffer(int* size, int socket_cliente);
-void eliminar_paquete(t_paquete* paquete);
-
 t_config* iniciar_config(char* path);
 t_log* iniciar_logger(char* path, char* nombre);
 
 t_handshake recibir_handshake(int socket_cliente);
 void enviar_handshake(int socket, t_handshake t_handshake);
-
-t_msj_kernel_consola recibir_fin_proceso(int socket_cliente);
-void enviar_fin_proceso(int socket, t_msj_kernel_consola msj);
 
 //////////////////////
 // Listas de estado //

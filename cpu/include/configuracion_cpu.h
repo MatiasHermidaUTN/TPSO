@@ -20,9 +20,7 @@ extern int socket_memoria;
 extern t_cpu_config lectura_de_config;
 
 extern t_log* logger;
-
-extern t_list* list_solicitudes_acceso_memoria;
-extern pthread_mutex_t mutex_list_solicitudes_acceso_memoria;
+extern t_log* my_logger;
 
 t_cpu_config leer_cpu_config(t_config* config);
 

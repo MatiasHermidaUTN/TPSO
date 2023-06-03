@@ -19,9 +19,9 @@ void manejar_conexion(void* args) {
 	int socket_consola = ((t_args_recibir_conexiones*)args)->socket_cliente;
 	free(args);
 
-	log_warning(logger, "Se conecto una consola");
+	log_warning(my_logger, "Se conecto una consola");
 
-	t_msj_kernel_consola cod_op = recibir_operacion(socket_consola);
+	t_msj_kernel_consola cod_op = recibir_msj(socket_consola);
 	switch(cod_op) {
 		case LIST_INSTRUCCIONES:
 			t_list* instrucciones = recibir_instrucciones(socket_consola);
@@ -79,6 +79,7 @@ t_pcb* crear_pcb(t_list* instrucciones, int socket_consola) {
 	pcb->socket_consola = socket_consola;
 
 	pcb->tiempo_real_ejecucion = lectura_de_config.ESTIMACION_INICIAL; //Por si es la primera vez que entra en READY, para no afectar al calculo de la próxima ráfaga
+
 	pcb->tiempo_inicial_ejecucion = 0;
 
 	return pcb;
