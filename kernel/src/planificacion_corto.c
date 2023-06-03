@@ -592,13 +592,13 @@ void actualizar_segmentos(t_pcb* pcb_en_exec, t_list* procesos) {
 
 	free(proceso_en_exec);
 
-	pthread_mutex_lock(&mutex_ready_list); //Se hace el mutex acá afuera para que ningún pcb entre de NEW mientras se está actualizando la lista de READY
-	actualizar_segmentos_de_lista(ready_list, procesos);
-	pthread_mutex_unlock(&mutex_ready_list);
-
 	pthread_mutex_lock(&mutex_pcbs_en_io);
 	actualizar_segmentos_de_lista(list_pcbs_en_io, procesos);
 	pthread_mutex_unlock(&mutex_pcbs_en_io);
+
+	pthread_mutex_lock(&mutex_ready_list); //Se hace el mutex acá afuera para que ningún pcb entre de NEW mientras se está actualizando la lista de READY
+	actualizar_segmentos_de_lista(ready_list, procesos);
+	pthread_mutex_unlock(&mutex_ready_list);
 
 	t_recurso* recurso;
 	for(int i = 0; i < list_size(list_recursos); i++) {
