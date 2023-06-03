@@ -317,11 +317,12 @@ t_pcb* obtener_proximo_a_ejecutar() {
 void manejar_io(t_args_io* args) {
 
 	sleep(args->tiempo);
-	ready_list_push(args->pcb); //Aca calcula el S (proxima rafaga), actualizo el tiempo_llegada_ready y hago sem_post(&sem_cant_ready)
 
 	pthread_mutex_lock(&mutex_pcbs_en_io);
 	list_remove_pcb(list_pcbs_en_io, args->pcb);
 	pthread_mutex_unlock(&mutex_pcbs_en_io);
+
+	ready_list_push(args->pcb); //Aca calcula el S (proxima rafaga), actualizo el tiempo_llegada_ready y hago sem_post(&sem_cant_ready)
 
 	//TODO: puede que nunca se actualice al pcb que está saliend de IO para READY en compactación.
 	//Hay que agregar mutex para compactación

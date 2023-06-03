@@ -23232,3 +23232,159 @@
 [INFO] 00:52:10:682 Kernel/(12394:12395): PID: 3 - Estado Anterior: READY - Estado Actual: EXEC
 [INFO] 00:52:11:689 Kernel/(12394:12395): PID: 3 - Estado Anterior: EXEC - Estado Actual: EXIT
 [INFO] 00:52:11:689 Kernel/(12394:12395): Finaliza el proceso 3 - Motivo: SUCCESS
+[ERROR] 12:18:15:144 Kernel/(3114:3119): Error en el envio de instrucciones
+[ERROR] 12:19:05:099 Kernel/(3126:3131): Error en el envio de instrucciones
+[ERROR] 12:19:31:932 Kernel/(3135:3141): Error en el envio de instrucciones
+[ERROR] 12:19:43:035 Kernel/(3146:3151): Error en el envio de instrucciones
+[ERROR] 12:20:46:099 Kernel/(3156:3164): Error en el envio de instrucciones
+[INFO] 12:21:49:676 Kernel/(3168:3173): Se crea el proceso 1 en NEW
+[INFO] 12:21:49:676 Kernel/(3168:3170): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 12:21:49:676 Kernel/(3168:3170): Cola Ready FIFO: [1]
+[INFO] 12:21:49:676 Kernel/(3168:3169): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[ERROR] 12:22:07:330 Kernel/(3177:3182): Error en el envio de instrucciones
+[ERROR] 12:22:10:146 Kernel/(3177:3184): Error en el envio de instrucciones
+[INFO] 12:23:05:941 Kernel/(3177:3186): Se crea el proceso 1 en NEW
+[INFO] 12:23:05:941 Kernel/(3177:3179): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 12:23:05:941 Kernel/(3177:3179): Cola Ready FIFO: [1]
+[INFO] 12:23:05:941 Kernel/(3177:3178): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 12:23:42:744 Kernel/(3190:3195): Se crea el proceso 1 en NEW
+[INFO] 12:23:42:744 Kernel/(3190:3192): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 12:23:42:744 Kernel/(3190:3192): Cola Ready FIFO: [1]
+[INFO] 12:23:42:744 Kernel/(3190:3191): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 12:23:42:744 Kernel/(3190:3191): PID: 1 - Wait: DISCO - Instancias: 0
+[INFO] 12:23:42:744 Kernel/(3190:3191): PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 12:23:42:745 Kernel/(3190:3191): PID: 1 - Bloqueado por: IO
+[INFO] 12:23:42:745 Kernel/(3190:3191): PID: 1 - Ejecuta IO: 10
+[INFO] 12:23:43:470 Kernel/(3190:3198): Se crea el proceso 2 en NEW
+[INFO] 12:23:43:470 Kernel/(3190:3192): PID: 2 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 12:23:43:470 Kernel/(3190:3192): Cola Ready FIFO: [2]
+[INFO] 12:23:43:470 Kernel/(3190:3191): PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 12:23:43:470 Kernel/(3190:3191): PID: 2 - Wait: IMPRESORA - Instancias: 0
+[INFO] 12:23:43:470 Kernel/(3190:3191): PID: 2 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 12:23:43:471 Kernel/(3190:3191): PID: 2 - Bloqueado por: IO
+[INFO] 12:23:43:471 Kernel/(3190:3191): PID: 2 - Ejecuta IO: 10
+[INFO] 12:23:44:215 Kernel/(3190:3201): Se crea el proceso 3 en NEW
+[INFO] 12:23:44:215 Kernel/(3190:3192): PID: 3 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 12:23:44:215 Kernel/(3190:3192): Cola Ready FIFO: [3]
+[INFO] 12:23:44:215 Kernel/(3190:3191): PID: 3 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 12:23:44:215 Kernel/(3190:3191): PID: 3 - Wait: SCANNER - Instancias: 0
+[INFO] 12:23:44:215 Kernel/(3190:3191): PID: 3 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 12:23:44:215 Kernel/(3190:3191): PID: 3 - Bloqueado por: IO
+[INFO] 12:23:44:215 Kernel/(3190:3191): PID: 3 - Ejecuta IO: 10
+[INFO] 12:23:52:745 Kernel/(3190:3196): PID: 1 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 12:23:52:745 Kernel/(3190:3196): Cola Ready FIFO: [1]
+[INFO] 12:23:52:745 Kernel/(3190:3191): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 12:23:52:746 Kernel/(3190:3191): PID: 1 - Wait: IMPRESORA - Instancias: -1
+[INFO] 12:23:52:746 Kernel/(3190:3191): PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 12:23:52:746 Kernel/(3190:3191): PID: 1 - Bloqueado por: IMPRESORA
+[INFO] 12:23:53:472 Kernel/(3190:3199): PID: 2 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 12:23:53:472 Kernel/(3190:3199): Cola Ready FIFO: [2]
+[INFO] 12:23:53:472 Kernel/(3190:3191): PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 12:23:53:474 Kernel/(3190:3191): PID: 2 - Wait: SCANNER - Instancias: -1
+[INFO] 12:23:53:474 Kernel/(3190:3191): PID: 2 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 12:23:53:474 Kernel/(3190:3191): PID: 2 - Bloqueado por: SCANNER
+[INFO] 12:23:54:216 Kernel/(3190:3202): PID: 3 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 12:23:54:216 Kernel/(3190:3202): Cola Ready FIFO: [3]
+[INFO] 12:23:54:216 Kernel/(3190:3191): PID: 3 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 12:23:54:216 Kernel/(3190:3191): PID: 3 - Wait: DISCO - Instancias: -1
+[INFO] 12:23:54:216 Kernel/(3190:3191): PID: 3 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 12:23:54:216 Kernel/(3190:3191): PID: 3 - Bloqueado por: DISCO
+[INFO] 12:24:32:452 Kernel/(3190:3205): Se crea el proceso 4 en NEW
+[INFO] 12:25:20:310 Kernel/(3209:3214): Se crea el proceso 1 en NEW
+[INFO] 12:25:20:311 Kernel/(3209:3211): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 12:25:20:311 Kernel/(3209:3211): Cola Ready FIFO: [1]
+[INFO] 12:25:20:311 Kernel/(3209:3210): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 12:25:20:980 Kernel/(3209:3216): Se crea el proceso 2 en NEW
+[INFO] 12:25:20:980 Kernel/(3209:3211): PID: 2 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 12:25:20:980 Kernel/(3209:3211): Cola Ready FIFO: [2]
+[ERROR] 12:25:21:312 Kernel/(3209:3210): El recurso LA_TERCERA_DE_FRANCIA no existe
+[INFO] 12:25:21:312 Kernel/(3209:3210): PID: 1 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 12:25:21:313 Kernel/(3209:3210): Finaliza el proceso 1 - Motivo: SUCCESS
+[INFO] 12:25:21:313 Kernel/(3209:3210): PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[ERROR] 12:25:22:313 Kernel/(3209:3210): El recurso EL_CUARTO_DE_FRANCIA no existe
+[INFO] 12:25:22:313 Kernel/(3209:3210): PID: 2 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 12:25:22:314 Kernel/(3209:3210): Finaliza el proceso 2 - Motivo: SUCCESS
+[INFO] 12:26:08:185 Kernel/(3227:3232): Se crea el proceso 1 en NEW
+[INFO] 12:26:08:191 Kernel/(3227:3229): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 12:26:08:198 Kernel/(3227:3229): Cola Ready FIFO: [1]
+[INFO] 12:26:08:200 Kernel/(3227:3228): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 12:26:08:243 Kernel/(3227:3228): PID: 1 - Wait: DISCO - Instancias: 0
+[INFO] 12:26:08:246 Kernel/(3227:3228): PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 12:26:08:246 Kernel/(3227:3228): PID: 1 - Bloqueado por: IO
+[INFO] 12:26:08:247 Kernel/(3227:3228): PID: 1 - Ejecuta IO: 10
+[INFO] 12:26:12:920 Kernel/(3227:3235): Se crea el proceso 2 en NEW
+[INFO] 12:26:12:921 Kernel/(3227:3229): PID: 2 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 12:26:12:921 Kernel/(3227:3229): Cola Ready FIFO: [2]
+[INFO] 12:26:12:922 Kernel/(3227:3228): PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 12:26:12:923 Kernel/(3227:3228): PID: 2 - Wait: IMPRESORA - Instancias: 0
+[INFO] 12:26:12:924 Kernel/(3227:3228): PID: 2 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 12:26:12:924 Kernel/(3227:3228): PID: 2 - Bloqueado por: IO
+[INFO] 12:26:12:924 Kernel/(3227:3228): PID: 2 - Ejecuta IO: 10
+[INFO] 12:26:15:925 Kernel/(3227:3238): Se crea el proceso 3 en NEW
+[INFO] 12:26:15:926 Kernel/(3227:3229): PID: 3 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 12:26:15:926 Kernel/(3227:3229): Cola Ready FIFO: [3]
+[INFO] 12:26:15:927 Kernel/(3227:3228): PID: 3 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 12:26:15:927 Kernel/(3227:3228): PID: 3 - Wait: SCANNER - Instancias: 0
+[INFO] 12:26:15:928 Kernel/(3227:3228): PID: 3 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 12:26:15:929 Kernel/(3227:3228): PID: 3 - Bloqueado por: IO
+[INFO] 12:26:15:929 Kernel/(3227:3228): PID: 3 - Ejecuta IO: 10
+[INFO] 12:26:18:251 Kernel/(3227:3233): PID: 1 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 12:26:18:252 Kernel/(3227:3233): Cola Ready FIFO: [1]
+[INFO] 12:26:18:252 Kernel/(3227:3228): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 12:26:18:254 Kernel/(3227:3228): PID: 1 - Wait: IMPRESORA - Instancias: -1
+[INFO] 12:26:18:255 Kernel/(3227:3228): PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 12:26:18:255 Kernel/(3227:3228): PID: 1 - Bloqueado por: IMPRESORA
+[INFO] 12:26:22:958 Kernel/(3227:3236): PID: 2 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 12:26:22:958 Kernel/(3227:3236): Cola Ready FIFO: [2]
+[INFO] 12:26:22:958 Kernel/(3227:3228): PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 12:26:22:959 Kernel/(3227:3228): PID: 2 - Wait: SCANNER - Instancias: -1
+[INFO] 12:26:22:959 Kernel/(3227:3228): PID: 2 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 12:26:22:960 Kernel/(3227:3228): PID: 2 - Bloqueado por: SCANNER
+[INFO] 12:26:25:957 Kernel/(3227:3239): PID: 3 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 12:26:25:957 Kernel/(3227:3239): Cola Ready FIFO: [3]
+[INFO] 12:26:25:958 Kernel/(3227:3228): PID: 3 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 12:26:25:959 Kernel/(3227:3228): PID: 3 - Wait: DISCO - Instancias: -1
+[INFO] 12:26:25:959 Kernel/(3227:3228): PID: 3 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 12:26:25:959 Kernel/(3227:3228): PID: 3 - Bloqueado por: DISCO
+[INFO] 12:30:04:873 Kernel/(3320:3325): Se crea el proceso 1 en NEW
+[INFO] 12:30:04:883 Kernel/(3320:3322): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 12:30:04:886 Kernel/(3320:3322): Cola Ready FIFO: [1]
+[INFO] 12:30:04:887 Kernel/(3320:3321): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 12:30:04:918 Kernel/(3320:3321): PID: 1 - Wait: DISCO - Instancias: 0
+[INFO] 12:30:04:920 Kernel/(3320:3321): PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 12:30:04:920 Kernel/(3320:3321): PID: 1 - Bloqueado por: IO
+[INFO] 12:30:04:921 Kernel/(3320:3321): PID: 1 - Ejecuta IO: 10
+[INFO] 12:30:05:522 Kernel/(3320:3328): Se crea el proceso 2 en NEW
+[INFO] 12:30:05:522 Kernel/(3320:3322): PID: 2 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 12:30:05:523 Kernel/(3320:3322): Cola Ready FIFO: [2]
+[INFO] 12:30:05:523 Kernel/(3320:3321): PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 12:30:05:524 Kernel/(3320:3321): PID: 2 - Wait: IMPRESORA - Instancias: 0
+[INFO] 12:30:05:525 Kernel/(3320:3321): PID: 2 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 12:30:05:526 Kernel/(3320:3321): PID: 2 - Bloqueado por: IO
+[INFO] 12:30:05:526 Kernel/(3320:3321): PID: 2 - Ejecuta IO: 10
+[INFO] 12:30:06:238 Kernel/(3320:3331): Se crea el proceso 3 en NEW
+[INFO] 12:30:06:240 Kernel/(3320:3322): PID: 3 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 12:30:06:241 Kernel/(3320:3322): Cola Ready FIFO: [3]
+[INFO] 12:30:06:242 Kernel/(3320:3321): PID: 3 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 12:30:06:245 Kernel/(3320:3321): PID: 3 - Wait: SCANNER - Instancias: 0
+[INFO] 12:30:06:254 Kernel/(3320:3321): PID: 3 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 12:30:06:254 Kernel/(3320:3321): PID: 3 - Bloqueado por: IO
+[INFO] 12:30:06:258 Kernel/(3320:3321): PID: 3 - Ejecuta IO: 10
+[INFO] 12:30:14:925 Kernel/(3320:3326): PID: 1 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 12:30:14:926 Kernel/(3320:3326): Cola Ready FIFO: [1]
+[INFO] 12:30:14:927 Kernel/(3320:3321): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 12:30:14:929 Kernel/(3320:3321): PID: 1 - Wait: IMPRESORA - Instancias: -1
+[INFO] 12:30:14:930 Kernel/(3320:3321): PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 12:30:14:931 Kernel/(3320:3321): PID: 1 - Bloqueado por: IMPRESORA
+[INFO] 12:30:15:563 Kernel/(3320:3329): PID: 2 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 12:30:15:563 Kernel/(3320:3329): Cola Ready FIFO: [2]
+[INFO] 12:30:15:563 Kernel/(3320:3321): PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 12:30:15:564 Kernel/(3320:3321): PID: 2 - Wait: SCANNER - Instancias: -1
+[INFO] 12:30:15:565 Kernel/(3320:3321): PID: 2 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 12:30:15:565 Kernel/(3320:3321): PID: 2 - Bloqueado por: SCANNER
+[INFO] 12:30:16:335 Kernel/(3320:3332): PID: 3 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 12:30:16:335 Kernel/(3320:3332): Cola Ready FIFO: [3]
+[INFO] 12:30:16:335 Kernel/(3320:3321): PID: 3 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 12:30:16:336 Kernel/(3320:3321): PID: 3 - Wait: DISCO - Instancias: -1
+[INFO] 12:30:16:337 Kernel/(3320:3321): PID: 3 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 12:30:16:337 Kernel/(3320:3321): PID: 3 - Bloqueado por: DISCO
