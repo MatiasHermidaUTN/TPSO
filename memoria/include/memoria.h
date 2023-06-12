@@ -39,5 +39,10 @@ void eliminar_lista_procesos();
 void eliminar_lista_mensajes();
 void log_compactacion();
 
-#endif /* MEMORIA_H_ */
+void enviar_tabla_segmentos_memoria(int socket, t_list* tabla_segmentos, t_msj_memoria mensaje);
+void* serializar_tabla_segmentos_memoria(t_list* tabla_segmentos, t_msj_memoria mensaje, size_t* size_total);
+void enviar_procesos_con_segmentos_memoria(int socket, t_list* procesos_actualizados);
+void* serializar_procesos_con_segmentos_memoria(t_list* procesos_actualizados, size_t* size_total);
 
+
+#endif /* MEMORIA_H_ */

@@ -55,7 +55,7 @@ int main(int argc, char** argv) {
 	pthread_mutex_destroy(&mutex_cola_msj);
 	sem_destroy(&sem_cant_msj);
 	close(socket_memoria);
-	//TODO eliminar los hilos escuchadores
+	//TODO eliminar los hilos escuchadores, por ahi no hace falta
 
 	return EXIT_SUCCESS;
 }
@@ -85,12 +85,12 @@ int manejar_mensaje() { //pinta bien
 			nodoProceso* nodoP = crear_proceso(pid);
 
 			//-----SALIDA-----//			
-			enviar_tabla_segmentos(socket_kernel, nodoP->lista_segmentos, PROCESO_INICIALIZADO);
+			enviar_tabla_segmentos_memoria(socket_kernel, nodoP->lista_segmentos, PROCESO_INICIALIZADO);
 			//----------------//
 
 			break;
 		}
-		case CREAR_SEGMENTO:
+		case CREAR_SEGMENTO:{
 			//-----ENTRADA-----//
 			id_segmento = atoi(mensaje->parametros[0]);
 			tamanio_segmento = atoi(mensaje->parametros[1]);
@@ -116,12 +116,12 @@ int manejar_mensaje() { //pinta bien
 			nodoProceso* nodoP = buscar_por_pid(pid);
 
 			//-----SALIDA-----//	
-			enviar_tabla_segmentos(socket_kernel, nodoP->lista_segmentos, SEGMENTO_CREADO);
+			enviar_tabla_segmentos_memoria(socket_kernel, nodoP->lista_segmentos, SEGMENTO_CREADO);
 			//----------------//
 
 			break;
-		
-		case ELIMINAR_SEGMENTO:
+		}
+		case ELIMINAR_SEGMENTO:{
 			//-----ENTRADA-----//
 			id_segmento = atoi(mensaje->parametros[0]);
 			pid = atoi(mensaje->parametros[1]);			
@@ -138,12 +138,12 @@ int manejar_mensaje() { //pinta bien
 			log_info(logger, "PID: %d - Eliminar Segmento: %d - Base: %d - TAMAÑO: %d", pid, id_segmento, base, tamanio_segmento); //log obligatorio
 
 			//-----SALIDA-----//	
-			enviar_tabla_segmentos(socket_kernel, nodoP->lista_segmentos, SEGMENTO_ELIMINADO);
+			enviar_tabla_segmentos_memoria(socket_kernel, nodoP->lista_segmentos, SEGMENTO_ELIMINADO);
 			//----------------//			
 
 			break;
-		
-		case ELIMINAR_PROCESO:
+		}
+		case ELIMINAR_PROCESO:{
 			//-----ENTRADA-----//
 			pid = atoi(mensaje->parametros[0]);
 			//-----------------//
@@ -157,8 +157,8 @@ int manejar_mensaje() { //pinta bien
 			//----------------//
 
 			break;
-		
-		case ESCRIBIR_VALOR:
+		}
+		case ESCRIBIR_VALOR:{
 			//-----ENTRADA-----//
 			dir_fisica = atoi(mensaje->parametros[0]);
 			buffer = mensaje->parametros[1];
@@ -190,8 +190,8 @@ int manejar_mensaje() { //pinta bien
 			
 			free(buffer);
 			break;
-		
-		case LEER_VALOR:
+		}
+		case LEER_VALOR:{
 			//-----ENTRADA-----//
 			dir_fisica = atoi(mensaje->parametros[0]);
 			tamanio_buffer = atoi(mensaje->parametros[1]); //tamanio del buffer a leer sin /0
@@ -228,8 +228,8 @@ int manejar_mensaje() { //pinta bien
 
 			free(buffer);
 			break;
-		
-		case COMPACTAR:
+		}
+		case COMPACTAR:{
 			log_info(logger, "Solicitud de Compactación"); //log obligatorio
 
 			compactar();
@@ -237,19 +237,11 @@ int manejar_mensaje() { //pinta bien
 			log_compactacion(); //log obligatorio			
 			
 			//-----SALIDA-----//
-			char ** parametros_a_enviar = string_array_new();
-
-			for(int i = 0; i < list_size(lista_procesos); i++) {
-				nodoProceso* nodoP = list_get(lista_procesos, i);
-				string_array_push(&parametros_a_enviar, string_itoa(nodoP->pid));
-				string_array_push_para_lista_segmentos(&parametros_a_enviar, nodoP->lista_segmentos);
-			}
-			enviar_msj_con_parametros(socket_kernel, MEMORIA_COMPACTADA, parametros_a_enviar);
-			string_array_destroy(parametros_a_enviar);
+			enviar_procesos_con_segmentos_memoria(socket_kernel, lista_procesos);
 			//----------------//
 
 			break;
-		
+		}
 		default:
 			return 0;
 		
@@ -602,3 +594,4 @@ void log_compactacion() { //CHEQUEADA 2.0
 		}
 	}
 }
+
