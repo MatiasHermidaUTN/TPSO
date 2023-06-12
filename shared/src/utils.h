@@ -248,7 +248,7 @@ char** recibir_parametros_de_mensaje(int socket);
 void enviar_tabla_segmentos(int socket, t_list* tabla_segmentos, t_msj_memoria mensaje);
 void* serializar_tabla_segmentos(t_list* tabla_segmentos, t_msj_memoria mensaje, size_t* size_total);
 t_list* recibir_tabla_segmentos(int socket);
-t_list* deserializar_tabla_segmentos(void* stream);
+t_list* deserializar_tabla_segmentos(void* stream, int size_payload);
 
 void enviar_procesos_con_segmentos(int socket, t_list* procesos_actualizados);
 void* serializar_procesos_con_segmentos(t_list* procesos_actualizados, size_t* size_total);

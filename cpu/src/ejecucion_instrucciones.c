@@ -239,7 +239,7 @@ int buscar_campo_de_segmento(t_list* segmentos, char* campo, int id) {
 		segmento = list_get(segmentos, i);
 		if(segmento->id == id) {
 			if(!strcmp(campo, "base")) {
-				return segmento->tamanio;
+				return segmento->direccion_base;
 			}
 			if(!strcmp(campo, "tamanio")) {
 				return segmento->tamanio;
@@ -291,7 +291,7 @@ char* obtener_registro(t_msj_kernel_cpu instruccion_actual, t_list* parametros) 
 }
 
 int numero_de_parametro_de_registro(t_msj_kernel_cpu instruccion_actual) {
-	return instruccion_actual == MOV_IN; //De vuelta, anda pq sí pero basta, es sexo
+	return instruccion_actual == MOV_OUT; //De vuelta, anda pq sí pero basta, es sexo
 }
 
 
@@ -306,30 +306,36 @@ void ejecutar_mov_in(t_pcb* pcb, t_datos_mmu datos_mmu, char* nombre_registro) {
 
 	string_array_destroy(parametros);
 
+	char ** parametros_lectura;
+
 	if(recibir_msj(socket_memoria) == LEIDO_OK) { //No hace falta pero bueno, recibe un mensaje sí o sí
-		parametros = recibir_parametros_de_mensaje(socket_memoria);
+
+		parametros_lectura = recibir_parametros_de_mensaje(socket_memoria);
 	}
 
-	char* valor = parametros[0];
+	char* valor = parametros_lectura[0];
+
 	set_registro(pcb, nombre_registro, valor);
 
-	log_info(logger, "PID: %d - Acción: %s - Segmento: %d - Dirección Física: %d - Valor: %s", pcb->pid, "LEER", datos_mmu.numero_segmento, datos_mmu.direccion_fisica, valor); //log obligatorio
+	log_info(logger, "PID: %d - Accion: %s - Segmento: %d - Dirección Física: %d - Valor: %s", pcb->pid, "LEER", datos_mmu.numero_segmento, datos_mmu.direccion_fisica, valor); //log obligatorio
 
-	string_array_destroy(parametros);
+	string_array_destroy(parametros_lectura);
 }
 
 void ejecutar_mov_out(t_pcb* pcb, t_datos_mmu datos_mmu, char* nombre_registro) {
 	char** parametros= string_array_new();
 	string_array_push(&parametros, string_itoa(datos_mmu.direccion_fisica));
-	string_array_push(&parametros, string_itoa(tamanio_registro(nombre_registro))); //No hace falta igual, lo puede calcular memoria con strlen
-
 	char* valor = leer_registro(pcb, nombre_registro);
 	string_array_push(&parametros, valor);
-	free(valor);
 
 	enviar_msj_con_parametros(socket_memoria, ESCRIBIR_VALOR, parametros);
 
-	log_info(logger, "PID: %d - Acción: %s - Segmento: %d - Dirección Física: %d - Valor: %s", pcb->pid, "LEER", datos_mmu.numero_segmento, datos_mmu.direccion_fisica, valor); //log obligatorio
+	if(recibir_msj(socket_memoria) == ESCRITO_OK){
+		log_info(logger, "PID: %d - Acción: %s - Segmento: %d - Dirección Física: %d - Valor: %s", pcb->pid, "LEER", datos_mmu.numero_segmento, datos_mmu.direccion_fisica, valor); //log obligatorio
+	}else{
+		log_error(logger, "No se pudo escribir en memoria");
+		exit(EXIT_FAILURE);
+	}
 
 	string_array_destroy(parametros);
 }

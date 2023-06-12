@@ -62,7 +62,6 @@ t_pcb* crear_pcb(t_list* instrucciones, int socket_consola) {
 
 	if(recibir_msj(socket_memoria) == PROCESO_INICIALIZADO) { //No hace falta pero bueno, recibe un mensaje sí o sí
 		pcb->tabla_segmentos = recibir_tabla_segmentos(socket_memoria);
-		log_warning(logger, "PROCESO INICIALIZADO");
 	}
 	else {
 		log_error(logger, "Error en el uso de segmentos");
@@ -70,8 +69,6 @@ t_pcb* crear_pcb(t_list* instrucciones, int socket_consola) {
 	}
 
 	pthread_mutex_unlock(&mutex_msj_memoria);
-
-	pcb->tabla_segmentos = list_create(); //TODO: SACAR!!
 
 	pcb->estimado_prox_rafaga = lectura_de_config.ESTIMACION_INICIAL;
 	pcb->tiempo_llegada_ready = 0;

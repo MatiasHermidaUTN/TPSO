@@ -19,7 +19,7 @@ void escuchar_de_filesystem() {
 				pthread_mutex_unlock(&mutex_cantidad_de_reads_writes);
 
 				//No debe haber break, porque de igual forma tiene que hacer exactamente lo mismo que el proximo case
-
+			//no break
 			case EL_ARCHIVO_FUE_TRUNCADO:
 				char** parametros = recibir_parametros_de_mensaje(socket_fileSystem);
 

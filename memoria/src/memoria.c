@@ -225,8 +225,6 @@ int manejar_mensaje() { //pinta bien
 			}
 			string_array_destroy(parametros_a_enviar);
 			//----------------//
-
-			free(buffer);
 			break;
 		}
 		case COMPACTAR:{

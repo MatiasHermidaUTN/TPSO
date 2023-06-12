@@ -183,6 +183,7 @@ void liberar_parametros(char** parametros) {
 
 void enviar_pcb(int socket, t_pcb* pcb, t_msj_kernel_cpu op_code, char** parametros_de_instruccion) {
 	size_t size_total;
+
 	void* stream_pcb_a_enviar = serializar_pcb(pcb, &size_total, op_code, parametros_de_instruccion);
 
 	send(socket, stream_pcb_a_enviar, size_total, 0);
@@ -375,6 +376,9 @@ void memcpy_registros_serializar(void* stream_pcb, t_registros_cpu registros_cpu
 
 void memcpy_tabla_segmentos_serializar(void* stream, t_list* tabla_segmentos, int* desplazamiento) {
 	int cantidad_segmentos = list_size(tabla_segmentos);
+
+	printf("CANTIDAD_SEGMENTOS: %d \n", cantidad_segmentos);
+
 	memcpy(stream + *desplazamiento, &cantidad_segmentos, sizeof(int));
 	*desplazamiento += sizeof(int);
 
@@ -760,18 +764,14 @@ t_list* recibir_tabla_segmentos(int socket) {
         exit(EXIT_FAILURE);
     }
 
-    t_list* tabla_segmentos = deserializar_tabla_segmentos(stream_a_recibir);
+    t_list* tabla_segmentos = deserializar_tabla_segmentos(stream_a_recibir, size_payload);
 
 	free(stream_a_recibir);
 	return tabla_segmentos;
 }
 
-t_list* deserializar_tabla_segmentos(void* stream) {
+t_list* deserializar_tabla_segmentos(void* stream, int size_payload) {
 	size_t desplazamiento = 0;
-
-	size_t size_payload;
-	memcpy(&size_payload, stream + desplazamiento, sizeof(size_payload));
-	desplazamiento += sizeof(size_payload);
 
 	t_list* tabla_segmentos = list_create();
 

@@ -4422,3 +4422,188 @@
 [INFO] 19:14:35:759 Consola/(6640:6640): IP KERNEL: 127.0.0.1
 [INFO] 19:14:35:760 Consola/(6640:6640): Puerto KERNEL: 8000
 [INFO] 19:14:40:769 Consola/(6640:6640): Proceso terminado exitosamente
+[INFO] 19:22:47:860 Consola/(6754:6754): IP KERNEL: 127.0.0.1
+[INFO] 19:22:47:862 Consola/(6754:6754): Puerto KERNEL: 8000
+[INFO] 19:22:52:870 Consola/(6754:6754): Proceso terminado exitosamente
+[INFO] 19:26:29:301 Consola/(6879:6879): IP KERNEL: 127.0.0.1
+[INFO] 19:26:29:302 Consola/(6879:6879): Puerto KERNEL: 8000
+[INFO] 19:26:34:310 Consola/(6879:6879): Proceso terminado exitosamente
+[INFO] 19:27:56:114 Consola/(6922:6922): IP KERNEL: 127.0.0.1
+[INFO] 19:27:56:114 Consola/(6922:6922): Puerto KERNEL: 8000
+[INFO] 19:28:01:120 Consola/(6922:6922): Proceso terminado exitosamente
+[INFO] 19:29:16:473 Consola/(6944:6944): IP KERNEL: 127.0.0.1
+[INFO] 19:29:16:474 Consola/(6944:6944): Puerto KERNEL: 8000
+[INFO] 19:29:21:488 Consola/(6944:6944): Proceso terminado exitosamente
+[INFO] 19:42:05:875 Consola/(7124:7124): IP KERNEL: 127.0.0.1
+[INFO] 19:42:05:876 Consola/(7124:7124): Puerto KERNEL: 8000
+[ERROR] 19:42:07:369 Consola/(7124:7124): Hubo un error en el proceso
+[INFO] 19:42:36:796 Consola/(7140:7140): IP KERNEL: 127.0.0.1
+[INFO] 19:42:36:797 Consola/(7140:7140): Puerto KERNEL: 8000
+[INFO] 19:42:37:959 Consola/(7140:7140): Proceso terminado por Segmentation Fault
+[INFO] 19:51:09:649 Consola/(7316:7316): IP KERNEL: 127.0.0.1
+[INFO] 19:51:09:650 Consola/(7316:7316): Puerto KERNEL: 8000
+[ERROR] 19:51:10:118 Consola/(7316:7316): Hubo un error en el proceso
+[INFO] 19:54:19:800 Consola/(7419:7419): IP KERNEL: 127.0.0.1
+[INFO] 19:54:19:801 Consola/(7419:7419): Puerto KERNEL: 8000
+[ERROR] 19:54:20:469 Consola/(7419:7419): Hubo un error en el proceso
+[INFO] 19:55:21:661 Consola/(7498:7498): IP KERNEL: 127.0.0.1
+[INFO] 19:55:21:663 Consola/(7498:7498): Puerto KERNEL: 8000
+[ERROR] 19:55:22:043 Consola/(7498:7498): Hubo un error en el proceso
+[INFO] 19:59:19:559 Consola/(7526:7526): IP KERNEL: 127.0.0.1
+[INFO] 19:59:19:564 Consola/(7526:7526): Puerto KERNEL: 8000
+[ERROR] 19:59:20:436 Consola/(7526:7526): Hubo un error en el proceso
+[INFO] 20:06:30:383 Consola/(8060:8060): IP KERNEL: 127.0.0.1
+[INFO] 20:06:30:383 Consola/(8060:8060): Puerto KERNEL: 8000
+[ERROR] 20:06:32:030 Consola/(8060:8060): Hubo un error en el proceso
+[INFO] 20:07:22:213 Consola/(8083:8083): IP KERNEL: 127.0.0.1
+[INFO] 20:07:22:214 Consola/(8083:8083): Puerto KERNEL: 8000
+[INFO] 20:07:23:499 Consola/(8083:8083): Proceso terminado por Segmentation Fault
+[INFO] 20:15:31:409 Consola/(8371:8371): IP KERNEL: 127.0.0.1
+[INFO] 20:15:31:410 Consola/(8371:8371): Puerto KERNEL: 8000
+[ERROR] 20:15:32:828 Consola/(8371:8371): Hubo un error en el proceso
+[INFO] 20:19:27:418 Consola/(8478:8478): IP KERNEL: 127.0.0.1
+[INFO] 20:19:27:419 Consola/(8478:8478): Puerto KERNEL: 8000
+[ERROR] 20:19:28:754 Consola/(8478:8478): Hubo un error en el proceso
+[INFO] 20:20:43:573 Consola/(8531:8531): IP KERNEL: 127.0.0.1
+[INFO] 20:20:43:574 Consola/(8531:8531): Puerto KERNEL: 8000
+[ERROR] 20:20:44:962 Consola/(8531:8531): Hubo un error en el proceso
+[INFO] 20:23:24:832 Consola/(8647:8647): IP KERNEL: 127.0.0.1
+[INFO] 20:23:24:833 Consola/(8647:8647): Puerto KERNEL: 8000
+[ERROR] 20:23:26:223 Consola/(8647:8647): Hubo un error en el proceso
+[INFO] 20:30:27:149 Consola/(8917:8917): IP KERNEL: 127.0.0.1
+[INFO] 20:30:27:151 Consola/(8917:8917): Puerto KERNEL: 8000
+[ERROR] 20:30:28:641 Consola/(8917:8917): Hubo un error en el proceso
+[INFO] 20:32:23:616 Consola/(8970:8970): IP KERNEL: 127.0.0.1
+[INFO] 20:32:23:617 Consola/(8970:8970): Puerto KERNEL: 8000
+[ERROR] 20:32:25:031 Consola/(8970:8970): Hubo un error en el proceso
+[INFO] 20:34:03:077 Consola/(9094:9094): IP KERNEL: 127.0.0.1
+[INFO] 20:34:03:079 Consola/(9094:9094): Puerto KERNEL: 8000
+[ERROR] 20:34:04:490 Consola/(9094:9094): Hubo un error en el proceso
+[INFO] 20:35:25:544 Consola/(9187:9187): IP KERNEL: 127.0.0.1
+[INFO] 20:35:25:545 Consola/(9187:9187): Puerto KERNEL: 8000
+[ERROR] 20:35:27:091 Consola/(9187:9187): Hubo un error en el proceso
+[INFO] 20:36:59:063 Consola/(9296:9296): IP KERNEL: 127.0.0.1
+[INFO] 20:36:59:063 Consola/(9296:9296): Puerto KERNEL: 8000
+[ERROR] 20:37:00:357 Consola/(9296:9296): Hubo un error en el proceso
+[INFO] 20:37:51:271 Consola/(9333:9333): IP KERNEL: 127.0.0.1
+[INFO] 20:37:51:272 Consola/(9333:9333): Puerto KERNEL: 8000
+[ERROR] 20:37:52:462 Consola/(9333:9333): Hubo un error en el proceso
+[INFO] 20:38:14:128 Consola/(9376:9376): IP KERNEL: 127.0.0.1
+[INFO] 20:38:14:128 Consola/(9376:9376): Puerto KERNEL: 8000
+[ERROR] 20:38:15:340 Consola/(9376:9376): Hubo un error en el proceso
+[INFO] 20:39:37:446 Consola/(9393:9393): IP KERNEL: 127.0.0.1
+[INFO] 20:39:37:447 Consola/(9393:9393): Puerto KERNEL: 8000
+[INFO] 20:39:38:722 Consola/(9393:9393): Proceso terminado por Segmentation Fault
+[INFO] 20:42:01:720 Consola/(9508:9508): IP KERNEL: 127.0.0.1
+[INFO] 20:42:01:721 Consola/(9508:9508): Puerto KERNEL: 8000
+[ERROR] 20:42:03:208 Consola/(9508:9508): Hubo un error en el proceso
+[INFO] 20:42:37:316 Consola/(9533:9533): IP KERNEL: 127.0.0.1
+[INFO] 20:42:37:317 Consola/(9533:9533): Puerto KERNEL: 8000
+[ERROR] 20:42:38:533 Consola/(9533:9533): Hubo un error en el proceso
+[INFO] 20:44:06:728 Consola/(9679:9679): IP KERNEL: 127.0.0.1
+[INFO] 20:44:06:728 Consola/(9679:9679): Puerto KERNEL: 8000
+[ERROR] 20:44:07:929 Consola/(9679:9679): Hubo un error en el proceso
+[INFO] 20:47:21:984 Consola/(9829:9829): IP KERNEL: 127.0.0.1
+[INFO] 20:47:21:986 Consola/(9829:9829): Puerto KERNEL: 8000
+[ERROR] 20:47:23:439 Consola/(9829:9829): Hubo un error en el proceso
+[INFO] 20:48:23:984 Consola/(9851:9851): IP KERNEL: 127.0.0.1
+[INFO] 20:48:23:984 Consola/(9851:9851): Puerto KERNEL: 8000
+[INFO] 20:48:30:121 Consola/(9851:9851): Proceso terminado exitosamente
+[INFO] 20:49:44:813 Consola/(9906:9906): IP KERNEL: 127.0.0.1
+[INFO] 20:49:44:814 Consola/(9906:9906): Puerto KERNEL: 8000
+[INFO] 20:49:50:822 Consola/(9906:9906): Proceso terminado exitosamente
+[INFO] 20:52:51:189 Consola/(9982:9982): IP KERNEL: 127.0.0.1
+[INFO] 20:52:51:189 Consola/(9982:9982): Puerto KERNEL: 8000
+[INFO] 20:52:57:196 Consola/(9982:9982): Proceso terminado exitosamente
+[INFO] 20:56:04:161 Consola/(10041:10041): IP KERNEL: 127.0.0.1
+[INFO] 20:56:04:164 Consola/(10041:10041): Puerto KERNEL: 8000
+[INFO] 20:56:10:179 Consola/(10041:10041): Proceso terminado exitosamente
+[INFO] 21:00:07:277 Consola/(10241:10241): IP KERNEL: 127.0.0.1
+[INFO] 21:00:07:279 Consola/(10241:10241): Puerto KERNEL: 8000
+[ERROR] 21:00:09:008 Consola/(10241:10241): Hubo un error en el proceso
+[INFO] 21:01:00:519 Consola/(10264:10264): IP KERNEL: 127.0.0.1
+[INFO] 21:01:00:522 Consola/(10264:10264): Puerto KERNEL: 8000
+[ERROR] 21:01:01:955 Consola/(10264:10264): Hubo un error en el proceso
+[INFO] 21:03:30:587 Consola/(10339:10339): IP KERNEL: 127.0.0.1
+[INFO] 21:03:30:588 Consola/(10339:10339): Puerto KERNEL: 8000
+[ERROR] 21:03:32:047 Consola/(10339:10339): Hubo un error en el proceso
+[INFO] 21:04:03:213 Consola/(10355:10355): IP KERNEL: 127.0.0.1
+[INFO] 21:04:03:214 Consola/(10355:10355): Puerto KERNEL: 8000
+[ERROR] 21:04:04:439 Consola/(10355:10355): Hubo un error en el proceso
+[INFO] 21:04:19:366 Consola/(10373:10373): IP KERNEL: 127.0.0.1
+[INFO] 21:04:19:366 Consola/(10373:10373): Puerto KERNEL: 8000
+[ERROR] 21:04:20:627 Consola/(10373:10373): Hubo un error en el proceso
+[INFO] 21:04:59:465 Consola/(10397:10397): IP KERNEL: 127.0.0.1
+[INFO] 21:04:59:466 Consola/(10397:10397): Puerto KERNEL: 8000
+[INFO] 21:05:06:577 Consola/(10397:10397): Proceso terminado exitosamente
+[INFO] 21:06:34:609 Consola/(10470:10470): IP KERNEL: 127.0.0.1
+[INFO] 21:06:34:610 Consola/(10470:10470): Puerto KERNEL: 8000
+[INFO] 21:06:41:620 Consola/(10470:10470): Proceso terminado exitosamente
+[INFO] 21:10:58:008 Consola/(10660:10660): IP KERNEL: 127.0.0.1
+[INFO] 21:10:58:009 Consola/(10660:10660): Puerto KERNEL: 8000
+[ERROR] 21:10:59:223 Consola/(10660:10660): Hubo un error en el proceso
+[INFO] 21:11:43:608 Consola/(10682:10682): IP KERNEL: 127.0.0.1
+[INFO] 21:11:43:610 Consola/(10682:10682): Puerto KERNEL: 8000
+[ERROR] 21:11:46:054 Consola/(10682:10682): Hubo un error en el proceso
+[INFO] 21:15:09:003 Consola/(10794:10794): IP KERNEL: 127.0.0.1
+[INFO] 21:15:09:004 Consola/(10794:10794): Puerto KERNEL: 8000
+[ERROR] 21:15:10:730 Consola/(10794:10794): Hubo un error en el proceso
+[INFO] 21:19:59:287 Consola/(10922:10922): IP KERNEL: 127.0.0.1
+[INFO] 21:19:59:288 Consola/(10922:10922): Puerto KERNEL: 8000
+[ERROR] 21:20:00:753 Consola/(10922:10922): Hubo un error en el proceso
+[INFO] 21:22:04:994 Consola/(11102:11102): IP KERNEL: 127.0.0.1
+[INFO] 21:22:04:997 Consola/(11102:11102): Puerto KERNEL: 8000
+[ERROR] 21:22:06:351 Consola/(11102:11102): Hubo un error en el proceso
+[INFO] 21:22:40:853 Consola/(11123:11123): IP KERNEL: 127.0.0.1
+[INFO] 21:22:40:853 Consola/(11123:11123): Puerto KERNEL: 8000
+[ERROR] 21:22:43:272 Consola/(11123:11123): Hubo un error en el proceso
+[INFO] 21:24:07:504 Consola/(11190:11190): IP KERNEL: 127.0.0.1
+[INFO] 21:24:07:504 Consola/(11190:11190): Puerto KERNEL: 8000
+[ERROR] 21:24:08:739 Consola/(11190:11190): Hubo un error en el proceso
+[INFO] 21:27:28:033 Consola/(11283:11283): IP KERNEL: 127.0.0.1
+[INFO] 21:27:28:036 Consola/(11283:11283): Puerto KERNEL: 8000
+[ERROR] 21:27:29:307 Consola/(11283:11283): Hubo un error en el proceso
+[INFO] 21:31:38:111 Consola/(11437:11437): IP KERNEL: 127.0.0.1
+[INFO] 21:31:38:112 Consola/(11437:11437): Puerto KERNEL: 8000
+[ERROR] 21:31:39:465 Consola/(11437:11437): Hubo un error en el proceso
+[INFO] 21:34:36:025 Consola/(11524:11524): IP KERNEL: 127.0.0.1
+[INFO] 21:34:36:026 Consola/(11524:11524): Puerto KERNEL: 8000
+[INFO] 21:34:43:036 Consola/(11524:11524): Proceso terminado exitosamente
+[INFO] 21:39:39:567 Consola/(11632:11632): IP KERNEL: 127.0.0.1
+[INFO] 21:39:39:568 Consola/(11632:11632): Puerto KERNEL: 8000
+[INFO] 21:41:55:277 Consola/(11695:11695): IP KERNEL: 127.0.0.1
+[INFO] 21:41:55:277 Consola/(11695:11695): Puerto KERNEL: 8000
+[INFO] 21:41:55:290 Consola/(11695:11695): Proceso terminado exitosamente
+[INFO] 21:42:58:224 Consola/(11763:11763): IP KERNEL: 127.0.0.1
+[INFO] 21:42:58:225 Consola/(11763:11763): Puerto KERNEL: 8000
+[INFO] 21:42:58:229 Consola/(11763:11763): Proceso terminado exitosamente
+[INFO] 21:43:04:016 Consola/(11765:11765): IP KERNEL: 127.0.0.1
+[INFO] 21:43:04:017 Consola/(11765:11765): Puerto KERNEL: 8000
+[INFO] 21:43:04:022 Consola/(11765:11765): Proceso terminado exitosamente
+[INFO] 21:43:05:265 Consola/(11767:11767): IP KERNEL: 127.0.0.1
+[INFO] 21:43:05:265 Consola/(11767:11767): Puerto KERNEL: 8000
+[INFO] 21:43:05:269 Consola/(11767:11767): Proceso terminado exitosamente
+[INFO] 21:43:06:018 Consola/(11769:11769): IP KERNEL: 127.0.0.1
+[INFO] 21:43:06:018 Consola/(11769:11769): Puerto KERNEL: 8000
+[INFO] 21:43:06:022 Consola/(11769:11769): Proceso terminado exitosamente
+[INFO] 21:44:14:042 Consola/(11941:11941): IP KERNEL: 127.0.0.1
+[INFO] 21:44:14:043 Consola/(11941:11941): Puerto KERNEL: 8000
+[INFO] 21:44:15:048 Consola/(11941:11941): Proceso terminado exitosamente
+[INFO] 21:44:25:156 Consola/(11943:11943): IP KERNEL: 127.0.0.1
+[INFO] 21:44:25:156 Consola/(11943:11943): Puerto KERNEL: 8000
+[INFO] 21:44:26:159 Consola/(11943:11943): Proceso terminado exitosamente
+[INFO] 21:44:28:465 Consola/(11945:11945): IP KERNEL: 127.0.0.1
+[INFO] 21:44:28:465 Consola/(11945:11945): Puerto KERNEL: 8000
+[INFO] 21:44:29:468 Consola/(11945:11945): Proceso terminado exitosamente
+[INFO] 21:45:40:038 Consola/(12011:12011): IP KERNEL: 127.0.0.1
+[INFO] 21:45:40:039 Consola/(12011:12011): Puerto KERNEL: 8000
+[ERROR] 21:45:41:523 Consola/(12011:12011): Hubo un error en el proceso
+[INFO] 21:46:04:058 Consola/(12031:12031): IP KERNEL: 127.0.0.1
+[INFO] 21:46:04:059 Consola/(12031:12031): Puerto KERNEL: 8000
+[ERROR] 21:46:04:331 Consola/(12031:12031): Hubo un error en el proceso
+[INFO] 21:46:21:078 Consola/(12053:12053): IP KERNEL: 127.0.0.1
+[INFO] 21:46:21:079 Consola/(12053:12053): Puerto KERNEL: 8000
+[INFO] 21:46:23:083 Consola/(12053:12053): Proceso terminado exitosamente
+[INFO] 21:49:24:695 Consola/(12225:12225): IP KERNEL: 127.0.0.1
+[INFO] 21:49:24:696 Consola/(12225:12225): Puerto KERNEL: 8000
+[INFO] 21:49:31:714 Consola/(12225:12225): Proceso terminado exitosamente

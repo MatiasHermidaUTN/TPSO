@@ -724,3 +724,160 @@
 [INFO] 19:14:35:761 Memoria/(6627:6627): Creación de Proceso PID: 1
 [WARNING] 19:14:35:763 Memoria/(6627:6627): BASE: 0
 [INFO] 19:14:40:770 Memoria/(6627:6627): Eliminación de Proceso PID: 1
+[INFO] 19:22:47:863 Memoria/(6741:6741): Creación de Proceso PID: 1
+[WARNING] 19:22:47:864 Memoria/(6741:6741): BASE: 0
+[INFO] 19:22:52:869 Memoria/(6741:6741): PID: 1 - Crear Segmento: 1 - Base: 128 - TAMAÑO: 128
+[WARNING] 19:22:52:869 Memoria/(6741:6741): BASE: 0
+[INFO] 19:22:52:872 Memoria/(6741:6741): Eliminación de Proceso PID: 1
+[INFO] 19:26:29:303 Memoria/(6866:6866): Creación de Proceso PID: 1
+[INFO] 19:26:34:308 Memoria/(6866:6866): PID: 1 - Crear Segmento: 5 - Base: 128 - TAMAÑO: 50
+[INFO] 19:26:34:309 Memoria/(6866:6866): PID: 1 - Crear Segmento: 6 - Base: 178 - TAMAÑO: 200
+[INFO] 19:26:34:309 Memoria/(6866:6866): PID: 1 - Crear Segmento: 7 - Base: 378 - TAMAÑO: 100
+[INFO] 19:26:34:310 Memoria/(6866:6866): PID: 1 - Eliminar Segmento: 6 - Base: 178 - TAMAÑO: 200
+[INFO] 19:26:34:312 Memoria/(6866:6866): Eliminación de Proceso PID: 1
+[INFO] 19:27:56:115 Memoria/(6909:6909): Creación de Proceso PID: 1
+[INFO] 19:28:01:118 Memoria/(6909:6909): PID: 1 - Crear Segmento: 5 - Base: 128 - TAMAÑO: 50
+[INFO] 19:28:01:118 Memoria/(6909:6909): PID: 1 - Crear Segmento: 6 - Base: 178 - TAMAÑO: 200
+[INFO] 19:28:01:119 Memoria/(6909:6909): PID: 1 - Crear Segmento: 7 - Base: 378 - TAMAÑO: 100
+[INFO] 19:28:01:119 Memoria/(6909:6909): PID: 1 - Eliminar Segmento: 6 - Base: 178 - TAMAÑO: 200
+[INFO] 19:28:01:119 Memoria/(6909:6909): PID: 1 - Crear Segmento: 8 - Base: 178 - TAMAÑO: 100
+[INFO] 19:28:01:121 Memoria/(6909:6909): Eliminación de Proceso PID: 1
+[INFO] 19:29:16:475 Memoria/(6931:6931): Creación de Proceso PID: 1
+[INFO] 19:29:21:482 Memoria/(6931:6931): PID: 1 - Crear Segmento: 5 - Base: 128 - TAMAÑO: 50
+[INFO] 19:29:21:485 Memoria/(6931:6931): PID: 1 - Crear Segmento: 6 - Base: 178 - TAMAÑO: 200
+[INFO] 19:29:21:486 Memoria/(6931:6931): PID: 1 - Crear Segmento: 7 - Base: 378 - TAMAÑO: 100
+[INFO] 19:29:21:486 Memoria/(6931:6931): PID: 1 - Eliminar Segmento: 6 - Base: 178 - TAMAÑO: 200
+[INFO] 19:29:21:487 Memoria/(6931:6931): PID: 1 - Crear Segmento: 8 - Base: 478 - TAMAÑO: 100
+[INFO] 19:29:21:489 Memoria/(6931:6931): Eliminación de Proceso PID: 1
+[INFO] 19:42:05:878 Memoria/(7111:7111): Creación de Proceso PID: 1
+[INFO] 19:42:36:861 Memoria/(7127:7127): Creación de Proceso PID: 1
+[INFO] 19:42:37:962 Memoria/(7127:7127): Eliminación de Proceso PID: 1
+[INFO] 19:51:09:652 Memoria/(7303:7303): Creación de Proceso PID: 1
+[INFO] 19:54:19:802 Memoria/(7406:7406): Creación de Proceso PID: 1
+[INFO] 19:55:21:667 Memoria/(7485:7485): Creación de Proceso PID: 1
+[INFO] 19:59:19:642 Memoria/(7513:7513): Creación de Proceso PID: 1
+[INFO] 20:06:30:385 Memoria/(8047:8047): Creación de Proceso PID: 1
+[INFO] 20:07:22:345 Memoria/(8070:8070): Creación de Proceso PID: 1
+[INFO] 20:07:23:505 Memoria/(8070:8070): Eliminación de Proceso PID: 1
+[INFO] 20:15:31:412 Memoria/(8358:8358): Creación de Proceso PID: 1
+[INFO] 20:19:27:420 Memoria/(8465:8465): Creación de Proceso PID: 1
+[INFO] 20:20:43:577 Memoria/(8517:8517): Creación de Proceso PID: 1
+[INFO] 20:23:24:834 Memoria/(8634:8634): Creación de Proceso PID: 1
+[INFO] 20:30:27:152 Memoria/(8904:8904): Creación de Proceso PID: 1
+[INFO] 20:32:23:618 Memoria/(8957:8957): Creación de Proceso PID: 1
+[INFO] 20:34:03:080 Memoria/(9081:9081): Creación de Proceso PID: 1
+[INFO] 20:35:25:547 Memoria/(9174:9174): Creación de Proceso PID: 1
+[INFO] 20:36:59:064 Memoria/(9282:9282): Creación de Proceso PID: 1
+[INFO] 20:37:51:274 Memoria/(9320:9320): Creación de Proceso PID: 1
+[INFO] 20:38:14:129 Memoria/(9363:9363): Creación de Proceso PID: 1
+[INFO] 20:39:37:552 Memoria/(9380:9380): Creación de Proceso PID: 1
+[INFO] 20:39:38:728 Memoria/(9380:9380): Eliminación de Proceso PID: 1
+[INFO] 20:42:01:724 Memoria/(9494:9494): Creación de Proceso PID: 1
+[INFO] 20:42:37:318 Memoria/(9520:9520): Creación de Proceso PID: 1
+[INFO] 20:44:06:729 Memoria/(9666:9666): Creación de Proceso PID: 1
+[INFO] 20:47:21:990 Memoria/(9816:9816): Creación de Proceso PID: 1
+[INFO] 20:48:23:985 Memoria/(9838:9838): Creación de Proceso PID: 1
+[INFO] 20:49:44:815 Memoria/(9892:9892): Creación de Proceso PID: 1
+[INFO] 20:52:51:191 Memoria/(9969:9969): Creación de Proceso PID: 1
+[INFO] 20:52:52:193 Memoria/(9969:9969): PID: 1 - Acción: ESCRIBIR - Dirección física: 120 - Tamaño: 1 - Origen: 1
+[INFO] 20:52:57:197 Memoria/(9969:9969): Eliminación de Proceso PID: 1
+[INFO] 20:56:04:165 Memoria/(10028:10028): Creación de Proceso PID: 1
+[INFO] 20:56:05:177 Memoria/(10028:10028): PID: 1 - Acción: ESCRIBIR - Dirección física: 120 - Tamaño: 4 - Origen: 1
+[INFO] 20:56:10:180 Memoria/(10028:10028): Eliminación de Proceso PID: 1
+[INFO] 21:00:07:279 Memoria/(10228:10228): Creación de Proceso PID: 1
+[INFO] 21:00:08:286 Memoria/(10228:10228): PID: 1 - Acción: ESCRIBIR - Dirección física: 120 - Tamaño: 4 - Origen: 1
+[INFO] 21:00:08:286 Memoria/(10228:10228): PID: 1 - Acción: LEER - Dirección física: 120 - Tamaño: 4 - Origen: 1
+[INFO] 21:01:00:535 Memoria/(10251:10251): Creación de Proceso PID: 1
+[INFO] 21:01:01:557 Memoria/(10251:10251): PID: 1 - Acción: ESCRIBIR - Dirección física: 120 - Tamaño: 4 - Origen: 1
+[INFO] 21:01:01:561 Memoria/(10251:10251): PID: 1 - Acción: LEER - Dirección física: 120 - Tamaño: 4 - Origen: 1
+[INFO] 21:03:30:597 Memoria/(10326:10326): Creación de Proceso PID: 1
+[INFO] 21:03:31:615 Memoria/(10326:10326): PID: 1 - Acción: ESCRIBIR - Dirección física: 120 - Tamaño: 4 - Origen: 1
+[INFO] 21:03:31:618 Memoria/(10326:10326): PID: 1 - Acción: LEER - Dirección física: 120 - Tamaño: 4 - Origen: 1
+[INFO] 21:04:03:217 Memoria/(10342:10342): Creación de Proceso PID: 1
+[INFO] 21:04:04:220 Memoria/(10342:10342): PID: 1 - Acción: ESCRIBIR - Dirección física: 120 - Tamaño: 4 - Origen: 1
+[INFO] 21:04:04:221 Memoria/(10342:10342): PID: 1 - Acción: LEER - Dirección física: 120 - Tamaño: 4 - Origen: 1
+[INFO] 21:04:19:380 Memoria/(10360:10360): Creación de Proceso PID: 1
+[INFO] 21:04:20:397 Memoria/(10360:10360): PID: 1 - Acción: ESCRIBIR - Dirección física: 120 - Tamaño: 4 - Origen: 1
+[INFO] 21:04:20:401 Memoria/(10360:10360): PID: 1 - Acción: LEER - Dirección física: 120 - Tamaño: 4 - Origen: 1
+[INFO] 21:04:59:467 Memoria/(10384:10384): Creación de Proceso PID: 1
+[INFO] 21:05:00:543 Memoria/(10384:10384): PID: 1 - Acción: ESCRIBIR - Dirección física: 120 - Tamaño: 4 - Origen: 1
+[INFO] 21:05:00:551 Memoria/(10384:10384): PID: 1 - Acción: LEER - Dirección física: 120 - Tamaño: 4 - Origen: 1
+[INFO] 21:05:06:577 Memoria/(10384:10384): Eliminación de Proceso PID: 1
+[INFO] 21:06:34:612 Memoria/(10457:10457): Creación de Proceso PID: 1
+[INFO] 21:06:35:616 Memoria/(10457:10457): PID: 1 - Acción: ESCRIBIR - Dirección física: 120 - Tamaño: 4 - Origen: 1
+[INFO] 21:06:35:616 Memoria/(10457:10457): PID: 1 - Acción: LEER - Dirección física: 120 - Tamaño: 4 - Origen: 1
+[INFO] 21:06:41:621 Memoria/(10457:10457): Eliminación de Proceso PID: 1
+[INFO] 21:10:58:009 Memoria/(10647:10647): Creación de Proceso PID: 1
+[INFO] 21:10:59:012 Memoria/(10647:10647): PID: 1 - Acción: ESCRIBIR - Dirección física: 120 - Tamaño: 4 - Origen: 1
+[INFO] 21:10:59:012 Memoria/(10647:10647): PID: 1 - Acción: LEER - Dirección física: 120 - Tamaño: 4 - Origen: 1
+[INFO] 21:11:43:613 Memoria/(10669:10669): Creación de Proceso PID: 1
+[INFO] 21:11:44:702 Memoria/(10669:10669): PID: 1 - Acción: ESCRIBIR - Dirección física: 120 - Tamaño: 4 - Origen: 1
+[INFO] 21:11:44:709 Memoria/(10669:10669): PID: 1 - Acción: LEER - Dirección física: 120 - Tamaño: 4 - Origen: 1
+[INFO] 21:15:09:005 Memoria/(10781:10781): Creación de Proceso PID: 1
+[INFO] 21:15:10:013 Memoria/(10781:10781): PID: 1 - Acción: ESCRIBIR - Dirección física: 120 - Tamaño: 4 - Origen: 1
+[INFO] 21:15:10:014 Memoria/(10781:10781): PID: 1 - Acción: LEER - Dirección física: 120 - Tamaño: 4 - Origen: 1
+[INFO] 21:19:59:290 Memoria/(10909:10909): Creación de Proceso PID: 1
+[INFO] 21:20:00:295 Memoria/(10909:10909): PID: 1 - Acción: ESCRIBIR - Dirección física: 120 - Tamaño: 4 - Origen: 1
+[WARNING] 21:20:00:296 Memoria/(10909:10909): BUFFER: HOLA
+[INFO] 21:20:00:296 Memoria/(10909:10909): PID: 1 - Acción: LEER - Dirección física: 120 - Tamaño: 4 - Origen: 1
+[INFO] 21:22:04:998 Memoria/(11088:11088): Creación de Proceso PID: 1
+[INFO] 21:22:06:012 Memoria/(11088:11088): PID: 1 - Acción: ESCRIBIR - Dirección física: 120 - Tamaño: 4 - Origen: 1
+[INFO] 21:22:06:012 Memoria/(11088:11088): PID: 1 - Acción: LEER - Dirección física: 120 - Tamaño: 4 - Origen: 1
+[INFO] 21:22:40:854 Memoria/(11110:11110): Creación de Proceso PID: 1
+[INFO] 21:22:41:945 Memoria/(11110:11110): PID: 1 - Acción: ESCRIBIR - Dirección física: 120 - Tamaño: 4 - Origen: 1
+[INFO] 21:22:41:952 Memoria/(11110:11110): PID: 1 - Acción: LEER - Dirección física: 120 - Tamaño: 4 - Origen: 1
+[INFO] 21:24:07:505 Memoria/(11177:11177): Creación de Proceso PID: 1
+[INFO] 21:24:08:509 Memoria/(11177:11177): PID: 1 - Acción: ESCRIBIR - Dirección física: 120 - Tamaño: 4 - Origen: 1
+[INFO] 21:24:08:509 Memoria/(11177:11177): PID: 1 - Acción: LEER - Dirección física: 120 - Tamaño: 4 - Origen: 1
+[INFO] 21:27:28:038 Memoria/(11270:11270): Creación de Proceso PID: 1
+[INFO] 21:27:29:045 Memoria/(11270:11270): PID: 1 - Acción: ESCRIBIR - Dirección física: 120 - Tamaño: 4 - Origen: 1
+[INFO] 21:27:29:045 Memoria/(11270:11270): PID: 1 - Acción: LEER - Dirección física: 120 - Tamaño: 4 - Origen: 1
+[WARNING] 21:27:29:046 Memoria/(11270:11270): ENTRO A CPU
+[INFO] 21:31:38:113 Memoria/(11424:11424): Creación de Proceso PID: 1
+[INFO] 21:31:39:118 Memoria/(11424:11424): PID: 1 - Acción: ESCRIBIR - Dirección física: 120 - Tamaño: 4 - Origen: 1
+[INFO] 21:31:39:119 Memoria/(11424:11424): PID: 1 - Acción: LEER - Dirección física: 120 - Tamaño: 4 - Origen: 1
+[WARNING] 21:31:39:119 Memoria/(11424:11424): ENTRO A CPU
+[INFO] 21:34:36:028 Memoria/(11511:11511): Creación de Proceso PID: 1
+[INFO] 21:34:37:033 Memoria/(11511:11511): PID: 1 - Acción: ESCRIBIR - Dirección física: 120 - Tamaño: 4 - Origen: 1
+[INFO] 21:34:37:034 Memoria/(11511:11511): PID: 1 - Acción: LEER - Dirección física: 120 - Tamaño: 4 - Origen: 1
+[WARNING] 21:34:37:034 Memoria/(11511:11511): ENTRO A CPU
+[INFO] 21:34:43:037 Memoria/(11511:11511): Eliminación de Proceso PID: 1
+[INFO] 21:39:39:569 Memoria/(11619:11619): Creación de Proceso PID: 1
+[INFO] 21:39:39:573 Memoria/(11619:11619): PID: 1 - Acción: ESCRIBIR - Dirección física: 120 - Tamaño: 4 - Origen: 1
+[INFO] 21:41:55:279 Memoria/(11682:11682): Creación de Proceso PID: 1
+[INFO] 21:41:55:282 Memoria/(11682:11682): PID: 1 - Acción: ESCRIBIR - Dirección física: 120 - Tamaño: 4 - Origen: 1
+[INFO] 21:41:55:290 Memoria/(11682:11682): Eliminación de Proceso PID: 1
+[INFO] 21:42:58:226 Memoria/(11750:11750): Creación de Proceso PID: 1
+[INFO] 21:42:58:228 Memoria/(11750:11750): PID: 1 - Acción: ESCRIBIR - Dirección física: 120 - Tamaño: 4 - Origen: 1
+[INFO] 21:42:58:229 Memoria/(11750:11750): Eliminación de Proceso PID: 1
+[INFO] 21:43:04:018 Memoria/(11750:11750): Creación de Proceso PID: 2
+[INFO] 21:43:04:021 Memoria/(11750:11750): PID: 2 - Acción: ESCRIBIR - Dirección física: 120 - Tamaño: 4 - Origen: 1
+[INFO] 21:43:04:021 Memoria/(11750:11750): Eliminación de Proceso PID: 2
+[INFO] 21:43:05:266 Memoria/(11750:11750): Creación de Proceso PID: 3
+[INFO] 21:43:05:268 Memoria/(11750:11750): PID: 3 - Acción: ESCRIBIR - Dirección física: 120 - Tamaño: 4 - Origen: 1
+[INFO] 21:43:05:269 Memoria/(11750:11750): Eliminación de Proceso PID: 3
+[INFO] 21:43:06:019 Memoria/(11750:11750): Creación de Proceso PID: 4
+[INFO] 21:43:06:021 Memoria/(11750:11750): PID: 4 - Acción: ESCRIBIR - Dirección física: 120 - Tamaño: 4 - Origen: 1
+[INFO] 21:43:06:022 Memoria/(11750:11750): Eliminación de Proceso PID: 4
+[INFO] 21:44:14:044 Memoria/(11928:11928): Creación de Proceso PID: 1
+[INFO] 21:44:14:047 Memoria/(11928:11928): PID: 1 - Acción: LEER - Dirección física: 120 - Tamaño: 4 - Origen: 1
+[INFO] 21:44:15:049 Memoria/(11928:11928): Eliminación de Proceso PID: 1
+[INFO] 21:44:25:157 Memoria/(11928:11928): Creación de Proceso PID: 2
+[INFO] 21:44:25:158 Memoria/(11928:11928): PID: 2 - Acción: LEER - Dirección física: 120 - Tamaño: 4 - Origen: 1
+[INFO] 21:44:26:160 Memoria/(11928:11928): Eliminación de Proceso PID: 2
+[INFO] 21:44:28:466 Memoria/(11928:11928): Creación de Proceso PID: 3
+[INFO] 21:44:28:467 Memoria/(11928:11928): PID: 3 - Acción: LEER - Dirección física: 120 - Tamaño: 4 - Origen: 1
+[INFO] 21:44:29:468 Memoria/(11928:11928): Eliminación de Proceso PID: 3
+[INFO] 21:45:40:040 Memoria/(11998:11998): Creación de Proceso PID: 1
+[INFO] 21:45:41:045 Memoria/(11998:11998): PID: 1 - Acción: ESCRIBIR - Dirección física: 120 - Tamaño: 4 - Origen: 1
+[INFO] 21:45:41:045 Memoria/(11998:11998): PID: 1 - Acción: LEER - Dirección física: 120 - Tamaño: 4 - Origen: 1
+[INFO] 21:46:04:060 Memoria/(12018:12018): Creación de Proceso PID: 1
+[INFO] 21:46:04:063 Memoria/(12018:12018): PID: 1 - Acción: ESCRIBIR - Dirección física: 120 - Tamaño: 4 - Origen: 1
+[INFO] 21:46:04:064 Memoria/(12018:12018): PID: 1 - Acción: LEER - Dirección física: 120 - Tamaño: 4 - Origen: 1
+[INFO] 21:46:21:080 Memoria/(12040:12040): Creación de Proceso PID: 1
+[INFO] 21:46:22:082 Memoria/(12040:12040): PID: 1 - Acción: LEER - Dirección física: 120 - Tamaño: 4 - Origen: 1
+[INFO] 21:46:23:084 Memoria/(12040:12040): Eliminación de Proceso PID: 1
+[INFO] 21:49:24:697 Memoria/(12212:12212): Creación de Proceso PID: 1
+[INFO] 21:49:25:711 Memoria/(12212:12212): PID: 1 - Acción: ESCRIBIR - Dirección física: 120 - Tamaño: 4 - Origen: 1
+[INFO] 21:49:25:711 Memoria/(12212:12212): PID: 1 - Acción: LEER - Dirección física: 120 - Tamaño: 4 - Origen: 1
+[INFO] 21:49:31:715 Memoria/(12212:12212): Eliminación de Proceso PID: 1

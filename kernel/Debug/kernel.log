@@ -23788,3 +23788,465 @@
 [INFO] 19:14:40:768 Kernel/(6634:6636): PID: 1 - Cerrar Archivo: PEPITO
 [INFO] 19:14:40:769 Kernel/(6634:6636): PID: 1 - Estado Anterior: EXEC - Estado Actual: EXIT
 [INFO] 19:14:40:770 Kernel/(6634:6636): Finaliza el proceso 1 - Motivo: SUCCESS
+[WARNING] 19:22:47:864 Kernel/(6748:6755): PROCESO INICIALIZADO
+[INFO] 19:22:47:865 Kernel/(6748:6755): Se crea el proceso 1 en NEW
+[INFO] 19:22:47:866 Kernel/(6748:6752): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 19:22:47:866 Kernel/(6748:6752): Cola Ready HRRN: [1]
+[INFO] 19:22:47:866 Kernel/(6748:6751): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 19:22:47:867 Kernel/(6748:6751): PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 19:22:47:867 Kernel/(6748:6751): PID: 1 - Bloqueado por: IO
+[INFO] 19:22:47:867 Kernel/(6748:6751): PID: 1 - Ejecuta IO: 5
+[INFO] 19:22:52:867 Kernel/(6748:6756): PID: 1 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 19:22:52:868 Kernel/(6748:6756): Cola Ready HRRN: [1]
+[INFO] 19:22:52:868 Kernel/(6748:6751): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 19:22:52:869 Kernel/(6748:6751): PID: 1 - Crear Segmento - Id: 1 - Tamaño: 128
+[INFO] 19:22:52:872 Kernel/(6748:6751): PID: 1 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 19:22:52:872 Kernel/(6748:6751): Finaliza el proceso 1 - Motivo: SUCCESS
+[WARNING] 19:26:29:304 Kernel/(6873:6880): PROCESO INICIALIZADO
+[INFO] 19:26:29:305 Kernel/(6873:6880): Se crea el proceso 1 en NEW
+[INFO] 19:26:29:305 Kernel/(6873:6876): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 19:26:29:305 Kernel/(6873:6876): Cola Ready HRRN: [1]
+[INFO] 19:26:29:305 Kernel/(6873:6875): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 19:26:29:306 Kernel/(6873:6875): PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 19:26:29:306 Kernel/(6873:6875): PID: 1 - Bloqueado por: IO
+[INFO] 19:26:29:306 Kernel/(6873:6875): PID: 1 - Ejecuta IO: 5
+[INFO] 19:26:34:306 Kernel/(6873:6881): PID: 1 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 19:26:34:307 Kernel/(6873:6881): Cola Ready HRRN: [1]
+[INFO] 19:26:34:307 Kernel/(6873:6875): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 19:26:34:308 Kernel/(6873:6875): PID: 1 - Crear Segmento - Id: 5 - Tamaño: 50
+[INFO] 19:26:34:309 Kernel/(6873:6875): PID: 1 - Crear Segmento - Id: 6 - Tamaño: 200
+[INFO] 19:26:34:310 Kernel/(6873:6875): PID: 1 - Crear Segmento - Id: 7 - Tamaño: 100
+[INFO] 19:26:34:310 Kernel/(6873:6875): PID: 1 - Eliminar Segmento - Id Segmento: 6
+[INFO] 19:26:34:310 Kernel/(6873:6875): PID: 1 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 19:26:34:311 Kernel/(6873:6875): Finaliza el proceso 1 - Motivo: SUCCESS
+[WARNING] 19:27:56:115 Kernel/(6916:6923): PROCESO INICIALIZADO
+[INFO] 19:27:56:116 Kernel/(6916:6923): Se crea el proceso 1 en NEW
+[INFO] 19:27:56:116 Kernel/(6916:6920): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 19:27:56:116 Kernel/(6916:6920): Cola Ready HRRN: [1]
+[INFO] 19:27:56:116 Kernel/(6916:6919): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 19:27:56:116 Kernel/(6916:6919): PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 19:27:56:116 Kernel/(6916:6919): PID: 1 - Bloqueado por: IO
+[INFO] 19:27:56:116 Kernel/(6916:6919): PID: 1 - Ejecuta IO: 5
+[INFO] 19:28:01:117 Kernel/(6916:6924): PID: 1 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 19:28:01:117 Kernel/(6916:6924): Cola Ready HRRN: [1]
+[INFO] 19:28:01:117 Kernel/(6916:6919): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 19:28:01:118 Kernel/(6916:6919): PID: 1 - Crear Segmento - Id: 5 - Tamaño: 50
+[INFO] 19:28:01:118 Kernel/(6916:6919): PID: 1 - Crear Segmento - Id: 6 - Tamaño: 200
+[INFO] 19:28:01:119 Kernel/(6916:6919): PID: 1 - Crear Segmento - Id: 7 - Tamaño: 100
+[INFO] 19:28:01:119 Kernel/(6916:6919): PID: 1 - Eliminar Segmento - Id Segmento: 6
+[INFO] 19:28:01:120 Kernel/(6916:6919): PID: 1 - Crear Segmento - Id: 8 - Tamaño: 100
+[INFO] 19:28:01:120 Kernel/(6916:6919): PID: 1 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 19:28:01:121 Kernel/(6916:6919): Finaliza el proceso 1 - Motivo: SUCCESS
+[WARNING] 19:29:16:478 Kernel/(6938:6945): PROCESO INICIALIZADO
+[INFO] 19:29:16:478 Kernel/(6938:6945): Se crea el proceso 1 en NEW
+[INFO] 19:29:16:479 Kernel/(6938:6942): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 19:29:16:479 Kernel/(6938:6942): Cola Ready HRRN: [1]
+[INFO] 19:29:16:479 Kernel/(6938:6941): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 19:29:16:479 Kernel/(6938:6941): PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 19:29:16:479 Kernel/(6938:6941): PID: 1 - Bloqueado por: IO
+[INFO] 19:29:16:479 Kernel/(6938:6941): PID: 1 - Ejecuta IO: 5
+[INFO] 19:29:21:480 Kernel/(6938:6946): PID: 1 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 19:29:21:481 Kernel/(6938:6946): Cola Ready HRRN: [1]
+[INFO] 19:29:21:482 Kernel/(6938:6941): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 19:29:21:483 Kernel/(6938:6941): PID: 1 - Crear Segmento - Id: 5 - Tamaño: 50
+[INFO] 19:29:21:485 Kernel/(6938:6941): PID: 1 - Crear Segmento - Id: 6 - Tamaño: 200
+[INFO] 19:29:21:486 Kernel/(6938:6941): PID: 1 - Crear Segmento - Id: 7 - Tamaño: 100
+[INFO] 19:29:21:487 Kernel/(6938:6941): PID: 1 - Eliminar Segmento - Id Segmento: 6
+[INFO] 19:29:21:487 Kernel/(6938:6941): PID: 1 - Crear Segmento - Id: 8 - Tamaño: 100
+[INFO] 19:29:21:488 Kernel/(6938:6941): PID: 1 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 19:29:21:488 Kernel/(6938:6941): Finaliza el proceso 1 - Motivo: SUCCESS
+[WARNING] 19:42:05:879 Kernel/(7118:7125): PROCESO INICIALIZADO
+[INFO] 19:42:05:885 Kernel/(7118:7125): Se crea el proceso 1 en NEW
+[INFO] 19:42:05:885 Kernel/(7118:7121): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 19:42:05:885 Kernel/(7118:7121): Cola Ready HRRN: [1]
+[INFO] 19:42:05:885 Kernel/(7118:7120): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 19:42:05:889 Kernel/(7118:7120): PID: 1 - Abrir Archivo: PEPITO
+[WARNING] 19:42:36:865 Kernel/(7134:7141): PROCESO INICIALIZADO
+[INFO] 19:42:36:868 Kernel/(7134:7141): Se crea el proceso 1 en NEW
+[INFO] 19:42:36:874 Kernel/(7134:7138): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 19:42:36:889 Kernel/(7134:7138): Cola Ready HRRN: [1]
+[INFO] 19:42:36:895 Kernel/(7134:7137): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 19:42:36:929 Kernel/(7134:7137): PID: 1 - Abrir Archivo: PEPITO
+[INFO] 19:42:37:946 Kernel/(7134:7137): PID: 1 - Cerrar Archivo: PEPITO
+[INFO] 19:42:37:960 Kernel/(7134:7137): PID: 1 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 19:42:37:961 Kernel/(7134:7137): Finaliza el proceso 1 - Motivo: SEG_FAULT
+[ERROR] 19:50:58:883 Kernel/(7301:7301): Kernel no pudo conectarse a Memoria
+[ERROR] 20:06:10:178 Kernel/(8045:8045): Kernel no pudo conectarse a Memoria
+[WARNING] 20:06:30:386 Kernel/(8054:8061): TAMANIO SEGMENTO 0 = 128
+[INFO] 20:06:30:386 Kernel/(8054:8061): Se crea el proceso 1 en NEW
+[INFO] 20:06:30:386 Kernel/(8054:8057): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 20:06:30:387 Kernel/(8054:8057): Cola Ready HRRN: [1]
+[INFO] 20:06:30:387 Kernel/(8054:8056): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 20:06:30:390 Kernel/(8054:8056): PID: 1 - Abrir Archivo: PEPITO
+[WARNING] 20:07:22:351 Kernel/(8077:8084): TAMANIO SEGMENTO 0 = 128
+[INFO] 20:07:22:354 Kernel/(8077:8084): Se crea el proceso 1 en NEW
+[INFO] 20:07:22:376 Kernel/(8077:8081): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 20:07:22:391 Kernel/(8077:8081): Cola Ready HRRN: [1]
+[INFO] 20:07:22:397 Kernel/(8077:8080): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 20:07:22:464 Kernel/(8077:8080): PID: 1 - Abrir Archivo: PEPITO
+[INFO] 20:07:23:492 Kernel/(8077:8080): PID: 1 - Cerrar Archivo: PEPITO
+[INFO] 20:07:23:499 Kernel/(8077:8080): PID: 1 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 20:07:23:504 Kernel/(8077:8080): Finaliza el proceso 1 - Motivo: SEG_FAULT
+[ERROR] 20:15:14:407 Kernel/(8355:8355): Kernel no pudo conectarse a Memoria
+[WARNING] 20:15:31:418 Kernel/(8365:8372): TAMANIO SEGMENTO 0 = 128
+[INFO] 20:15:31:418 Kernel/(8365:8372): Se crea el proceso 1 en NEW
+[INFO] 20:15:31:418 Kernel/(8365:8368): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 20:15:31:418 Kernel/(8365:8368): Cola Ready HRRN: [1]
+[INFO] 20:15:31:418 Kernel/(8365:8367): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 20:15:31:420 Kernel/(8365:8367): PID: 1 - Abrir Archivo: PEPITO
+[WARNING] 20:19:27:420 Kernel/(8472:8479): TAMANIO SEGMENTO 0 = 128
+[INFO] 20:19:27:421 Kernel/(8472:8479): Se crea el proceso 1 en NEW
+[INFO] 20:19:27:421 Kernel/(8472:8476): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 20:19:27:421 Kernel/(8472:8476): Cola Ready HRRN: [1]
+[INFO] 20:19:27:421 Kernel/(8472:8475): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 20:19:27:422 Kernel/(8472:8475): PID: 1 - Abrir Archivo: PEPITO
+[WARNING] 20:20:43:578 Kernel/(8525:8532): TAMANIO SEGMENTO 0 = 128
+[INFO] 20:20:43:582 Kernel/(8525:8532): Se crea el proceso 1 en NEW
+[INFO] 20:20:43:582 Kernel/(8525:8528): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 20:20:43:582 Kernel/(8525:8528): Cola Ready HRRN: [1]
+[INFO] 20:20:43:583 Kernel/(8525:8527): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 20:20:43:584 Kernel/(8525:8527): PID: 1 - Abrir Archivo: PEPITO
+[WARNING] 20:23:24:836 Kernel/(8641:8648): CANTIDAD SEGMENTOS: 1
+[INFO] 20:23:24:837 Kernel/(8641:8648): Se crea el proceso 1 en NEW
+[INFO] 20:23:24:837 Kernel/(8641:8644): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 20:23:24:838 Kernel/(8641:8644): Cola Ready HRRN: [1]
+[INFO] 20:23:24:838 Kernel/(8641:8643): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 20:23:24:840 Kernel/(8641:8643): PID: 1 - Abrir Archivo: PEPITO
+[WARNING] 20:30:27:153 Kernel/(8911:8918): Proceso Inicializado
+[INFO] 20:30:27:153 Kernel/(8911:8918): Se crea el proceso 1 en NEW
+[INFO] 20:30:27:153 Kernel/(8911:8915): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 20:30:27:153 Kernel/(8911:8915): Cola Ready HRRN: [1]
+[INFO] 20:30:27:153 Kernel/(8911:8914): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 20:30:27:156 Kernel/(8911:8914): PID: 1 - Abrir Archivo: PEPITO
+[WARNING] 20:32:23:621 Kernel/(8964:8971): Proceso Inicializado
+[INFO] 20:32:23:622 Kernel/(8964:8971): Se crea el proceso 1 en NEW
+[INFO] 20:32:23:622 Kernel/(8964:8968): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 20:32:23:622 Kernel/(8964:8968): Cola Ready HRRN: [1]
+[INFO] 20:32:23:622 Kernel/(8964:8967): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 20:32:23:623 Kernel/(8964:8967): PID: 1 - Abrir Archivo: PEPITO
+[WARNING] 20:34:03:080 Kernel/(9088:9095): Proceso Inicializado
+[INFO] 20:34:03:081 Kernel/(9088:9095): Se crea el proceso 1 en NEW
+[INFO] 20:34:03:081 Kernel/(9088:9092): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 20:34:03:081 Kernel/(9088:9092): Cola Ready HRRN: [1]
+[INFO] 20:34:03:081 Kernel/(9088:9091): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 20:34:03:082 Kernel/(9088:9091): PID: 1 - Abrir Archivo: PEPITO
+[WARNING] 20:35:25:547 Kernel/(9181:9188): Proceso Inicializado
+[INFO] 20:35:25:548 Kernel/(9181:9188): Se crea el proceso 1 en NEW
+[INFO] 20:35:25:549 Kernel/(9181:9184): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 20:35:25:549 Kernel/(9181:9184): Cola Ready HRRN: [1]
+[INFO] 20:35:25:549 Kernel/(9181:9183): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[WARNING] 20:35:25:549 Kernel/(9181:9183): TAMANIO DE LA LISTA DE SEGMENTOS 0
+[INFO] 20:35:25:552 Kernel/(9181:9183): PID: 1 - Abrir Archivo: PEPITO
+[WARNING] 20:35:25:552 Kernel/(9181:9183): TAMANIO DE LA LISTA DE SEGMENTOS 0
+[WARNING] 20:36:59:064 Kernel/(9290:9297): TAMANIO DE LA TABLA DE SEGMENTOS = 1
+[INFO] 20:36:59:064 Kernel/(9290:9297): Se crea el proceso 1 en NEW
+[INFO] 20:36:59:064 Kernel/(9290:9293): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 20:36:59:064 Kernel/(9290:9293): Cola Ready HRRN: [1]
+[INFO] 20:36:59:064 Kernel/(9290:9292): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 20:36:59:065 Kernel/(9290:9292): PID: 1 - Abrir Archivo: PEPITO
+[WARNING] 20:37:51:274 Kernel/(9327:9334): TAMANIO DE LA TABLA DE SEGMENTOS = 1
+[INFO] 20:37:51:274 Kernel/(9327:9334): Se crea el proceso 1 en NEW
+[INFO] 20:37:51:274 Kernel/(9327:9330): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 20:37:51:275 Kernel/(9327:9330): Cola Ready HRRN: [1]
+[INFO] 20:37:51:275 Kernel/(9327:9329): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 20:37:51:276 Kernel/(9327:9329): PID: 1 - Abrir Archivo: PEPITO
+[INFO] 20:38:14:130 Kernel/(9370:9377): Se crea el proceso 1 en NEW
+[INFO] 20:38:14:130 Kernel/(9370:9374): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 20:38:14:130 Kernel/(9370:9374): Cola Ready HRRN: [1]
+[INFO] 20:38:14:130 Kernel/(9370:9373): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 20:38:14:131 Kernel/(9370:9373): PID: 1 - Abrir Archivo: PEPITO
+[INFO] 20:39:37:566 Kernel/(9387:9394): Se crea el proceso 1 en NEW
+[INFO] 20:39:37:584 Kernel/(9387:9391): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 20:39:37:601 Kernel/(9387:9391): Cola Ready HRRN: [1]
+[INFO] 20:39:37:608 Kernel/(9387:9390): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 20:39:37:690 Kernel/(9387:9390): PID: 1 - Abrir Archivo: PEPITO
+[INFO] 20:39:38:713 Kernel/(9387:9390): PID: 1 - Cerrar Archivo: PEPITO
+[INFO] 20:39:38:725 Kernel/(9387:9390): PID: 1 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 20:39:38:726 Kernel/(9387:9390): Finaliza el proceso 1 - Motivo: SEG_FAULT
+[INFO] 20:42:01:725 Kernel/(9501:9509): Se crea el proceso 1 en NEW
+[INFO] 20:42:01:726 Kernel/(9501:9505): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 20:42:01:726 Kernel/(9501:9505): Cola Ready HRRN: [1]
+[INFO] 20:42:01:726 Kernel/(9501:9504): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 20:42:01:728 Kernel/(9501:9504): PID: 1 - Abrir Archivo: PEPITO
+[INFO] 20:42:37:318 Kernel/(9527:9534): Se crea el proceso 1 en NEW
+[INFO] 20:42:37:318 Kernel/(9527:9531): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 20:42:37:318 Kernel/(9527:9531): Cola Ready HRRN: [1]
+[INFO] 20:42:37:318 Kernel/(9527:9530): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 20:42:37:319 Kernel/(9527:9530): PID: 1 - Abrir Archivo: PEPITO
+[INFO] 20:44:06:729 Kernel/(9673:9680): Se crea el proceso 1 en NEW
+[INFO] 20:44:06:730 Kernel/(9673:9676): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 20:44:06:730 Kernel/(9673:9676): Cola Ready HRRN: [1]
+[INFO] 20:44:06:730 Kernel/(9673:9675): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 20:44:06:732 Kernel/(9673:9675): PID: 1 - Abrir Archivo: PEPITO
+[INFO] 20:47:21:993 Kernel/(9823:9830): Se crea el proceso 1 en NEW
+[INFO] 20:47:21:996 Kernel/(9823:9826): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 20:47:21:996 Kernel/(9823:9826): Cola Ready HRRN: [1]
+[INFO] 20:47:21:996 Kernel/(9823:9825): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 20:47:21:998 Kernel/(9823:9825): PID: 1 - Abrir Archivo: PEPITO
+[ERROR] 20:47:23:439 Kernel/(9823:9825): Error en la comunicacion entre el Kernel y la CPU
+[INFO] 20:48:23:985 Kernel/(9845:9852): Se crea el proceso 1 en NEW
+[INFO] 20:48:23:986 Kernel/(9845:9849): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 20:48:23:986 Kernel/(9845:9849): Cola Ready HRRN: [1]
+[INFO] 20:48:23:986 Kernel/(9845:9848): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 20:48:24:034 Kernel/(9845:9848): PID: 1 - Abrir Archivo: PEPITO
+[INFO] 20:48:25:109 Kernel/(9845:9848): PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 20:48:25:113 Kernel/(9845:9848): PID: 1 - Bloqueado por: IO
+[INFO] 20:48:25:113 Kernel/(9845:9848): PID: 1 - Ejecuta IO: 5
+[INFO] 20:48:30:115 Kernel/(9845:9854): PID: 1 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 20:48:30:116 Kernel/(9845:9854): Cola Ready HRRN: [1]
+[INFO] 20:48:30:116 Kernel/(9845:9848): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 20:48:30:119 Kernel/(9845:9848): PID: 1 - Cerrar Archivo: PEPITO
+[INFO] 20:48:30:121 Kernel/(9845:9848): PID: 1 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 20:48:30:121 Kernel/(9845:9848): Finaliza el proceso 1 - Motivo: SUCCESS
+[INFO] 20:49:44:815 Kernel/(9900:9907): Se crea el proceso 1 en NEW
+[INFO] 20:49:44:815 Kernel/(9900:9904): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 20:49:44:815 Kernel/(9900:9904): Cola Ready HRRN: [1]
+[INFO] 20:49:44:815 Kernel/(9900:9903): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 20:49:44:816 Kernel/(9900:9903): PID: 1 - Abrir Archivo: PEPITO
+[INFO] 20:49:45:818 Kernel/(9900:9903): PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 20:49:45:818 Kernel/(9900:9903): PID: 1 - Bloqueado por: IO
+[INFO] 20:49:45:819 Kernel/(9900:9903): PID: 1 - Ejecuta IO: 5
+[INFO] 20:49:50:819 Kernel/(9900:9909): PID: 1 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 20:49:50:820 Kernel/(9900:9909): Cola Ready HRRN: [1]
+[INFO] 20:49:50:821 Kernel/(9900:9903): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 20:49:50:821 Kernel/(9900:9903): PID: 1 - Cerrar Archivo: PEPITO
+[INFO] 20:49:50:823 Kernel/(9900:9903): PID: 1 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 20:49:50:824 Kernel/(9900:9903): Finaliza el proceso 1 - Motivo: SUCCESS
+[INFO] 20:52:51:191 Kernel/(9976:9983): Se crea el proceso 1 en NEW
+[INFO] 20:52:51:191 Kernel/(9976:9980): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 20:52:51:191 Kernel/(9976:9980): Cola Ready HRRN: [1]
+[INFO] 20:52:51:191 Kernel/(9976:9979): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 20:52:51:192 Kernel/(9976:9979): PID: 1 - Abrir Archivo: PEPITO
+[INFO] 20:52:52:194 Kernel/(9976:9979): PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 20:52:52:194 Kernel/(9976:9979): PID: 1 - Bloqueado por: IO
+[INFO] 20:52:52:194 Kernel/(9976:9979): PID: 1 - Ejecuta IO: 5
+[INFO] 20:52:57:194 Kernel/(9976:9984): PID: 1 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 20:52:57:195 Kernel/(9976:9984): Cola Ready HRRN: [1]
+[INFO] 20:52:57:195 Kernel/(9976:9979): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 20:52:57:196 Kernel/(9976:9979): PID: 1 - Cerrar Archivo: PEPITO
+[INFO] 20:52:57:196 Kernel/(9976:9979): PID: 1 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 20:52:57:197 Kernel/(9976:9979): Finaliza el proceso 1 - Motivo: SUCCESS
+[INFO] 20:56:04:168 Kernel/(10035:10042): Se crea el proceso 1 en NEW
+[INFO] 20:56:04:174 Kernel/(10035:10039): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 20:56:04:174 Kernel/(10035:10039): Cola Ready HRRN: [1]
+[INFO] 20:56:04:174 Kernel/(10035:10038): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 20:56:04:174 Kernel/(10035:10038): PID: 1 - Abrir Archivo: PEPITO
+[INFO] 20:56:05:178 Kernel/(10035:10038): PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 20:56:05:178 Kernel/(10035:10038): PID: 1 - Bloqueado por: IO
+[INFO] 20:56:05:178 Kernel/(10035:10038): PID: 1 - Ejecuta IO: 5
+[INFO] 20:56:10:178 Kernel/(10035:10043): PID: 1 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 20:56:10:178 Kernel/(10035:10043): Cola Ready HRRN: [1]
+[INFO] 20:56:10:179 Kernel/(10035:10038): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 20:56:10:179 Kernel/(10035:10038): PID: 1 - Cerrar Archivo: PEPITO
+[INFO] 20:56:10:179 Kernel/(10035:10038): PID: 1 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 20:56:10:180 Kernel/(10035:10038): Finaliza el proceso 1 - Motivo: SUCCESS
+[INFO] 21:00:07:281 Kernel/(10235:10242): Se crea el proceso 1 en NEW
+[INFO] 21:00:07:282 Kernel/(10235:10239): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 21:00:07:282 Kernel/(10235:10239): Cola Ready HRRN: [1]
+[INFO] 21:00:07:282 Kernel/(10235:10238): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 21:00:07:284 Kernel/(10235:10238): PID: 1 - Abrir Archivo: PEPITO
+[ERROR] 21:00:09:007 Kernel/(10235:10238): Error en la comunicacion entre el Kernel y la CPU
+[INFO] 21:01:00:542 Kernel/(10258:10265): Se crea el proceso 1 en NEW
+[INFO] 21:01:00:543 Kernel/(10258:10261): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 21:01:00:543 Kernel/(10258:10261): Cola Ready HRRN: [1]
+[INFO] 21:01:00:543 Kernel/(10258:10260): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 21:01:00:547 Kernel/(10258:10260): PID: 1 - Abrir Archivo: PEPITO
+[ERROR] 21:01:01:923 Kernel/(10258:10260): Error en la comunicacion entre el Kernel y la CPU
+[INFO] 21:03:30:604 Kernel/(10333:10340): Se crea el proceso 1 en NEW
+[INFO] 21:03:30:605 Kernel/(10333:10336): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 21:03:30:605 Kernel/(10333:10336): Cola Ready HRRN: [1]
+[INFO] 21:03:30:606 Kernel/(10333:10335): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 21:03:30:607 Kernel/(10333:10335): PID: 1 - Abrir Archivo: PEPITO
+[ERROR] 21:03:32:036 Kernel/(10333:10335): Error en la comunicacion entre el Kernel y la CPU
+[INFO] 21:04:03:218 Kernel/(10349:10356): Se crea el proceso 1 en NEW
+[INFO] 21:04:03:218 Kernel/(10349:10352): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 21:04:03:218 Kernel/(10349:10352): Cola Ready HRRN: [1]
+[INFO] 21:04:03:218 Kernel/(10349:10351): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 21:04:03:219 Kernel/(10349:10351): PID: 1 - Abrir Archivo: PEPITO
+[ERROR] 21:04:04:422 Kernel/(10349:10351): Error en la comunicacion entre el Kernel y la CPU
+[INFO] 21:04:19:384 Kernel/(10367:10374): Se crea el proceso 1 en NEW
+[INFO] 21:04:19:387 Kernel/(10367:10370): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 21:04:19:387 Kernel/(10367:10370): Cola Ready HRRN: [1]
+[INFO] 21:04:19:387 Kernel/(10367:10369): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 21:04:19:388 Kernel/(10367:10369): PID: 1 - Abrir Archivo: PEPITO
+[ERROR] 21:04:20:611 Kernel/(10367:10369): Error en la comunicacion entre el Kernel y la CPU
+[INFO] 21:04:59:467 Kernel/(10391:10398): Se crea el proceso 1 en NEW
+[INFO] 21:04:59:467 Kernel/(10391:10394): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 21:04:59:467 Kernel/(10391:10394): Cola Ready HRRN: [1]
+[INFO] 21:04:59:467 Kernel/(10391:10393): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 21:04:59:511 Kernel/(10391:10393): PID: 1 - Abrir Archivo: PEPITO
+[INFO] 21:05:01:570 Kernel/(10391:10393): PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 21:05:01:570 Kernel/(10391:10393): PID: 1 - Bloqueado por: IO
+[INFO] 21:05:01:571 Kernel/(10391:10393): PID: 1 - Ejecuta IO: 5
+[INFO] 21:05:06:571 Kernel/(10391:10399): PID: 1 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 21:05:06:572 Kernel/(10391:10399): Cola Ready HRRN: [1]
+[INFO] 21:05:06:572 Kernel/(10391:10393): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 21:05:06:575 Kernel/(10391:10393): PID: 1 - Cerrar Archivo: PEPITO
+[INFO] 21:05:06:576 Kernel/(10391:10393): PID: 1 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 21:05:06:577 Kernel/(10391:10393): Finaliza el proceso 1 - Motivo: SUCCESS
+[INFO] 21:06:34:613 Kernel/(10464:10471): Se crea el proceso 1 en NEW
+[INFO] 21:06:34:613 Kernel/(10464:10468): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 21:06:34:613 Kernel/(10464:10468): Cola Ready HRRN: [1]
+[INFO] 21:06:34:613 Kernel/(10464:10467): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 21:06:34:614 Kernel/(10464:10467): PID: 1 - Abrir Archivo: PEPITO
+[INFO] 21:06:36:617 Kernel/(10464:10467): PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 21:06:36:618 Kernel/(10464:10467): PID: 1 - Bloqueado por: IO
+[INFO] 21:06:36:618 Kernel/(10464:10467): PID: 1 - Ejecuta IO: 5
+[INFO] 21:06:41:618 Kernel/(10464:10472): PID: 1 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 21:06:41:619 Kernel/(10464:10472): Cola Ready HRRN: [1]
+[INFO] 21:06:41:619 Kernel/(10464:10467): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 21:06:41:619 Kernel/(10464:10467): PID: 1 - Cerrar Archivo: PEPITO
+[INFO] 21:06:41:620 Kernel/(10464:10467): PID: 1 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 21:06:41:621 Kernel/(10464:10467): Finaliza el proceso 1 - Motivo: SUCCESS
+[ERROR] 21:10:38:943 Kernel/(10642:10642): Kernel no pudo conectarse a CPU
+[INFO] 21:10:58:009 Kernel/(10654:10661): Se crea el proceso 1 en NEW
+[INFO] 21:10:58:009 Kernel/(10654:10657): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 21:10:58:010 Kernel/(10654:10657): Cola Ready HRRN: [1]
+[INFO] 21:10:58:010 Kernel/(10654:10656): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 21:10:58:010 Kernel/(10654:10656): PID: 1 - Abrir Archivo: PEPITO
+[ERROR] 21:10:59:201 Kernel/(10654:10656): Error en la comunicacion entre el Kernel y la CPU
+[INFO] 21:11:43:617 Kernel/(10676:10683): Se crea el proceso 1 en NEW
+[INFO] 21:11:43:619 Kernel/(10676:10680): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 21:11:43:619 Kernel/(10676:10680): Cola Ready HRRN: [1]
+[INFO] 21:11:43:619 Kernel/(10676:10679): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 21:11:43:660 Kernel/(10676:10679): PID: 1 - Abrir Archivo: PEPITO
+[ERROR] 21:11:46:031 Kernel/(10676:10679): Error en la comunicacion entre el Kernel y la CPU
+[INFO] 21:15:09:006 Kernel/(10788:10795): Se crea el proceso 1 en NEW
+[INFO] 21:15:09:009 Kernel/(10788:10791): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 21:15:09:009 Kernel/(10788:10791): Cola Ready HRRN: [1]
+[INFO] 21:15:09:009 Kernel/(10788:10790): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 21:15:09:011 Kernel/(10788:10790): PID: 1 - Abrir Archivo: PEPITO
+[ERROR] 21:15:10:711 Kernel/(10788:10790): Error en la comunicacion entre el Kernel y la CPU
+[INFO] 21:19:59:291 Kernel/(10916:10923): Se crea el proceso 1 en NEW
+[INFO] 21:19:59:292 Kernel/(10916:10920): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 21:19:59:292 Kernel/(10916:10920): Cola Ready HRRN: [1]
+[INFO] 21:19:59:292 Kernel/(10916:10919): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 21:19:59:293 Kernel/(10916:10919): PID: 1 - Abrir Archivo: PEPITO
+[ERROR] 21:20:00:732 Kernel/(10916:10919): Error en la comunicacion entre el Kernel y la CPU
+[INFO] 21:22:04:999 Kernel/(11096:11103): Se crea el proceso 1 en NEW
+[INFO] 21:22:05:001 Kernel/(11096:11099): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 21:22:05:001 Kernel/(11096:11099): Cola Ready HRRN: [1]
+[INFO] 21:22:05:001 Kernel/(11096:11098): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 21:22:05:002 Kernel/(11096:11098): PID: 1 - Abrir Archivo: PEPITO
+[ERROR] 21:22:06:335 Kernel/(11096:11098): Error en la comunicacion entre el Kernel y la CPU
+[INFO] 21:22:40:854 Kernel/(11117:11124): Se crea el proceso 1 en NEW
+[INFO] 21:22:40:855 Kernel/(11117:11120): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 21:22:40:855 Kernel/(11117:11120): Cola Ready HRRN: [1]
+[INFO] 21:22:40:855 Kernel/(11117:11119): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 21:22:40:912 Kernel/(11117:11119): PID: 1 - Abrir Archivo: PEPITO
+[ERROR] 21:22:43:247 Kernel/(11117:11119): Error en la comunicacion entre el Kernel y la CPU
+[INFO] 21:24:07:506 Kernel/(11184:11191): Se crea el proceso 1 en NEW
+[INFO] 21:24:07:506 Kernel/(11184:11188): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 21:24:07:506 Kernel/(11184:11188): Cola Ready HRRN: [1]
+[INFO] 21:24:07:506 Kernel/(11184:11187): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 21:24:07:507 Kernel/(11184:11187): PID: 1 - Abrir Archivo: PEPITO
+[ERROR] 21:24:08:714 Kernel/(11184:11187): Error en la comunicacion entre el Kernel y la CPU
+[INFO] 21:27:28:038 Kernel/(11277:11284): Se crea el proceso 1 en NEW
+[INFO] 21:27:28:040 Kernel/(11277:11281): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 21:27:28:040 Kernel/(11277:11281): Cola Ready HRRN: [1]
+[INFO] 21:27:28:040 Kernel/(11277:11280): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 21:27:28:043 Kernel/(11277:11280): PID: 1 - Abrir Archivo: PEPITO
+[ERROR] 21:27:29:296 Kernel/(11277:11280): Error en la comunicacion entre el Kernel y la CPU
+[INFO] 21:31:38:114 Kernel/(11431:11438): Se crea el proceso 1 en NEW
+[INFO] 21:31:38:115 Kernel/(11431:11434): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 21:31:38:115 Kernel/(11431:11434): Cola Ready HRRN: [1]
+[INFO] 21:31:38:115 Kernel/(11431:11433): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 21:31:38:116 Kernel/(11431:11433): PID: 1 - Abrir Archivo: PEPITO
+[ERROR] 21:31:39:462 Kernel/(11431:11433): Error en la comunicacion entre el Kernel y la CPU
+[INFO] 21:34:36:029 Kernel/(11518:11525): Se crea el proceso 1 en NEW
+[INFO] 21:34:36:029 Kernel/(11518:11521): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 21:34:36:029 Kernel/(11518:11521): Cola Ready HRRN: [1]
+[INFO] 21:34:36:029 Kernel/(11518:11520): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 21:34:36:031 Kernel/(11518:11520): PID: 1 - Abrir Archivo: PEPITO
+[INFO] 21:34:38:034 Kernel/(11518:11520): PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 21:34:38:034 Kernel/(11518:11520): PID: 1 - Bloqueado por: IO
+[INFO] 21:34:38:035 Kernel/(11518:11520): PID: 1 - Ejecuta IO: 5
+[INFO] 21:34:43:035 Kernel/(11518:11526): PID: 1 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 21:34:43:036 Kernel/(11518:11526): Cola Ready HRRN: [1]
+[INFO] 21:34:43:036 Kernel/(11518:11520): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 21:34:43:036 Kernel/(11518:11520): PID: 1 - Cerrar Archivo: PEPITO
+[INFO] 21:34:43:036 Kernel/(11518:11520): PID: 1 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 21:34:43:037 Kernel/(11518:11520): Finaliza el proceso 1 - Motivo: SUCCESS
+[INFO] 21:39:39:570 Kernel/(11626:11633): Se crea el proceso 1 en NEW
+[INFO] 21:39:39:571 Kernel/(11626:11629): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 21:39:39:571 Kernel/(11626:11629): Cola Ready HRRN: [1]
+[INFO] 21:39:39:571 Kernel/(11626:11628): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[ERROR] 21:41:11:250 Kernel/(11626:11628): Error en la comunicacion entre el Kernel y la CPU
+[INFO] 21:41:55:280 Kernel/(11689:11696): Se crea el proceso 1 en NEW
+[INFO] 21:41:55:280 Kernel/(11689:11692): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 21:41:55:280 Kernel/(11689:11692): Cola Ready HRRN: [1]
+[INFO] 21:41:55:280 Kernel/(11689:11691): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 21:41:55:290 Kernel/(11689:11691): PID: 1 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 21:41:55:290 Kernel/(11689:11691): Finaliza el proceso 1 - Motivo: SUCCESS
+[INFO] 21:42:58:226 Kernel/(11757:11764): Se crea el proceso 1 en NEW
+[INFO] 21:42:58:226 Kernel/(11757:11760): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 21:42:58:226 Kernel/(11757:11760): Cola Ready HRRN: [1]
+[INFO] 21:42:58:227 Kernel/(11757:11759): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 21:42:58:229 Kernel/(11757:11759): PID: 1 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 21:42:58:229 Kernel/(11757:11759): Finaliza el proceso 1 - Motivo: SUCCESS
+[INFO] 21:43:04:018 Kernel/(11757:11766): Se crea el proceso 2 en NEW
+[INFO] 21:43:04:018 Kernel/(11757:11760): PID: 2 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 21:43:04:018 Kernel/(11757:11760): Cola Ready HRRN: [2]
+[INFO] 21:43:04:019 Kernel/(11757:11759): PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 21:43:04:021 Kernel/(11757:11759): PID: 2 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 21:43:04:021 Kernel/(11757:11759): Finaliza el proceso 2 - Motivo: SUCCESS
+[INFO] 21:43:05:266 Kernel/(11757:11768): Se crea el proceso 3 en NEW
+[INFO] 21:43:05:267 Kernel/(11757:11760): PID: 3 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 21:43:05:267 Kernel/(11757:11760): Cola Ready HRRN: [3]
+[INFO] 21:43:05:267 Kernel/(11757:11759): PID: 3 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 21:43:05:268 Kernel/(11757:11759): PID: 3 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 21:43:05:268 Kernel/(11757:11759): Finaliza el proceso 3 - Motivo: SUCCESS
+[INFO] 21:43:06:019 Kernel/(11757:11770): Se crea el proceso 4 en NEW
+[INFO] 21:43:06:020 Kernel/(11757:11760): PID: 4 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 21:43:06:020 Kernel/(11757:11760): Cola Ready HRRN: [4]
+[INFO] 21:43:06:020 Kernel/(11757:11759): PID: 4 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 21:43:06:022 Kernel/(11757:11759): PID: 4 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 21:43:06:022 Kernel/(11757:11759): Finaliza el proceso 4 - Motivo: SUCCESS
+[INFO] 21:44:14:045 Kernel/(11935:11942): Se crea el proceso 1 en NEW
+[INFO] 21:44:14:046 Kernel/(11935:11938): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 21:44:14:046 Kernel/(11935:11938): Cola Ready HRRN: [1]
+[INFO] 21:44:14:046 Kernel/(11935:11937): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 21:44:15:048 Kernel/(11935:11937): PID: 1 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 21:44:15:049 Kernel/(11935:11937): Finaliza el proceso 1 - Motivo: SUCCESS
+[INFO] 21:44:25:157 Kernel/(11935:11944): Se crea el proceso 2 en NEW
+[INFO] 21:44:25:158 Kernel/(11935:11938): PID: 2 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 21:44:25:158 Kernel/(11935:11938): Cola Ready HRRN: [2]
+[INFO] 21:44:25:158 Kernel/(11935:11937): PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 21:44:26:159 Kernel/(11935:11937): PID: 2 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 21:44:26:160 Kernel/(11935:11937): Finaliza el proceso 2 - Motivo: SUCCESS
+[INFO] 21:44:28:466 Kernel/(11935:11946): Se crea el proceso 3 en NEW
+[INFO] 21:44:28:467 Kernel/(11935:11938): PID: 3 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 21:44:28:467 Kernel/(11935:11938): Cola Ready HRRN: [3]
+[INFO] 21:44:28:467 Kernel/(11935:11937): PID: 3 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 21:44:29:468 Kernel/(11935:11937): PID: 3 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 21:44:29:468 Kernel/(11935:11937): Finaliza el proceso 3 - Motivo: SUCCESS
+[INFO] 21:45:40:041 Kernel/(12005:12012): Se crea el proceso 1 en NEW
+[INFO] 21:45:40:042 Kernel/(12005:12008): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 21:45:40:042 Kernel/(12005:12008): Cola Ready HRRN: [1]
+[INFO] 21:45:40:042 Kernel/(12005:12007): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[ERROR] 21:45:41:514 Kernel/(12005:12007): Error en la comunicacion entre el Kernel y la CPU
+[INFO] 21:46:04:061 Kernel/(12025:12032): Se crea el proceso 1 en NEW
+[INFO] 21:46:04:062 Kernel/(12025:12029): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 21:46:04:062 Kernel/(12025:12029): Cola Ready HRRN: [1]
+[INFO] 21:46:04:062 Kernel/(12025:12028): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[ERROR] 21:46:04:325 Kernel/(12025:12028): Error en la comunicacion entre el Kernel y la CPU
+[INFO] 21:46:21:081 Kernel/(12047:12054): Se crea el proceso 1 en NEW
+[INFO] 21:46:21:081 Kernel/(12047:12051): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 21:46:21:081 Kernel/(12047:12051): Cola Ready HRRN: [1]
+[INFO] 21:46:21:081 Kernel/(12047:12050): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 21:46:23:083 Kernel/(12047:12050): PID: 1 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 21:46:23:084 Kernel/(12047:12050): Finaliza el proceso 1 - Motivo: SUCCESS
+[INFO] 21:49:24:699 Kernel/(12219:12226): Se crea el proceso 1 en NEW
+[INFO] 21:49:24:700 Kernel/(12219:12222): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 21:49:24:700 Kernel/(12219:12222): Cola Ready HRRN: [1]
+[INFO] 21:49:24:700 Kernel/(12219:12221): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 21:49:24:706 Kernel/(12219:12221): PID: 1 - Abrir Archivo: PEPITO
+[INFO] 21:49:26:712 Kernel/(12219:12221): PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 21:49:26:712 Kernel/(12219:12221): PID: 1 - Bloqueado por: IO
+[INFO] 21:49:26:712 Kernel/(12219:12221): PID: 1 - Ejecuta IO: 5
+[INFO] 21:49:31:713 Kernel/(12219:12227): PID: 1 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 21:49:31:713 Kernel/(12219:12227): Cola Ready HRRN: [1]
+[INFO] 21:49:31:713 Kernel/(12219:12221): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 21:49:31:713 Kernel/(12219:12221): PID: 1 - Cerrar Archivo: PEPITO
+[INFO] 21:49:31:714 Kernel/(12219:12221): PID: 1 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 21:49:31:715 Kernel/(12219:12221): Finaliza el proceso 1 - Motivo: SUCCESS
