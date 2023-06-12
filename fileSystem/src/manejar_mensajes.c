@@ -26,23 +26,19 @@ int manejar_mensaje(){
 	switch (args->cod_op) {
 		case EXISTE_ARCHIVO:
 			nombre_archivo = args->parametros[0];
-			printf("abrir nombre_archivo: %s\n",nombre_archivo);
 			if (existe_archivo(nombre_archivo)) {	//existe FCB?
 				enviar_msj(kernel, EL_ARCHIVO_YA_EXISTE);
 			} else {
 				enviar_msj(kernel, EL_ARCHIVO_NO_EXISTE);
 			}
-			printf("\n");
+			log_info(logger, "Abrir Archivo: %s", nombre_archivo);
 			break;
 
 		case CREAR_ARCHIVO:
 			nombre_archivo = args->parametros[0];
-			printf("crear nombre_archivo: %s \n", nombre_archivo);
 			crear_archivo(nombre_archivo);	//crear FCB y poner tamaño 0 y sin bloques asociados.
 			enviar_msj(kernel, EL_ARCHIVO_FUE_CREADO);
-			printf("archivo creado: %s\n",nombre_archivo);
-			printf("unos dsp crear: %d\n", cant_unos_en_bitmap());
-			printf("\n");
+			log_info(logger, "Crear Archivo: %s", nombre_archivo);
 			break;
 
 		case TRUNCAR_ARCHIVO:
@@ -50,9 +46,6 @@ int manejar_mensaje(){
 			nuevo_tamanio_archivo = atoi(args->parametros[1]);
 			char* pid_truncar = args->parametros[2];
 
-			printf("truncar nombre_archivo: %s\n", nombre_archivo);
-			printf("nuevo_tamanio_archivo: %d\n", nuevo_tamanio_archivo);
-			printf("unos antes truncar: %d\n", cant_unos_en_bitmap());
 			truncar(nombre_archivo, nuevo_tamanio_archivo);
 
 			char ** parametros_a_enviar = string_array_new();
@@ -60,7 +53,7 @@ int manejar_mensaje(){
 			string_array_push(&parametros_a_enviar, pid_truncar);
 			enviar_msj_con_parametros(kernel, EL_ARCHIVO_FUE_TRUNCADO, parametros_a_enviar);
 			free(parametros_a_enviar);
-			printf("\n");
+			log_info(logger, "Truncar Archivo: %s - Tamanio: %d", nombre_archivo, nuevo_tamanio_archivo);
 			break;
 
 		case LEER_ARCHIVO:
@@ -70,10 +63,6 @@ int manejar_mensaje(){
 			apartir_de_donde_X = atoi(args->parametros[3]);
 			char* pid_leer = args->parametros[4];
 
-			printf("leer nombre_archivo: %s\n", nombre_archivo);
-			printf("apartir_de_donde_leer: %d\n", apartir_de_donde_X);
-			printf("cuanto_leer: %d\n", cuanto_X);
-			printf("dir_fisica_memoria: %d\n", dir_fisica_memoria);
 			buffer = leer_archivo(nombre_archivo, apartir_de_donde_X, cuanto_X);	//malloc se hace en leer_archivo
 			escribir_en_memoria(dir_fisica_memoria, cuanto_X, buffer);
 
@@ -83,13 +72,7 @@ int manejar_mensaje(){
 			enviar_msj_con_parametros(kernel, EL_ARCHIVO_FUE_LEIDO, parametros_a_enviar_leer);
 			free(parametros_a_enviar_leer);
 
-			printf("\n");
-			printf("leido: ");
-			for(int i = 0 ; i < cuanto_X ; i++){
-				printf("%c", buffer[i]);
-			}
-			printf("\n");
-			printf("\n");
+			log_info(logger, "Leer Archivo: %s - Puntero: %d - Memoria: %d - Tamanio: %d", nombre_archivo, apartir_de_donde_X, dir_fisica_memoria, cuanto_X);
 			free(buffer);
 			break;
 
@@ -100,10 +83,6 @@ int manejar_mensaje(){
 			apartir_de_donde_X = atoi(args->parametros[3]);
 			char* pid_escribir = args->parametros[4];
 
-			printf("escribir nombre_archivo: %s\n", nombre_archivo);
-			printf("apartir_de_donde_escribir: %d\n", apartir_de_donde_X);
-			printf("cuanto_escribir: %d\n", cuanto_X);
-			printf("dir_fisica_memoria: %d\n", dir_fisica_memoria);
 			buffer = leer_de_memoria(dir_fisica_memoria, cuanto_X);	//malloc se hace en leer_de_memoria
 			escribir_archivo(buffer, nombre_archivo, apartir_de_donde_X, cuanto_X);
 
@@ -113,9 +92,7 @@ int manejar_mensaje(){
 			enviar_msj_con_parametros(kernel, EL_ARCHIVO_FUE_ESCRITO, parametros_a_enviar_escribir);
 			free(parametros_a_enviar_escribir);
 
-			printf("\n");
-			printf("escrito: %s\n", buffer);
-			printf("\n");
+			log_info(logger, "Escribir Archivo: %s - Puntero: %d - Memoria: %d - Tamanio: %d", nombre_archivo, apartir_de_donde_X, dir_fisica_memoria, cuanto_X);
 			free(buffer);
 			break;
 		default:

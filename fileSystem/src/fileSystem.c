@@ -55,12 +55,15 @@ int main(int argc, char** argv) {
 //comunicaciones
 char* leer_de_memoria(int dir_fisica_memoria, int cuanto_X){
 	char ** parametros_a_enviar = string_array_new();
+
 	char* s_aux = string_itoa(dir_fisica_memoria);
 	string_array_push(&parametros_a_enviar, s_aux);
 	free(s_aux);
+
 	s_aux = string_itoa(cuanto_X);
 	string_array_push(&parametros_a_enviar, s_aux);
 	free(s_aux);
+
 	enviar_msj_con_parametros(kernel, LEER_VALOR, parametros_a_enviar);
 	free(parametros_a_enviar);
 
@@ -81,13 +84,12 @@ char* leer_de_memoria(int dir_fisica_memoria, int cuanto_X){
 }
 
 void escribir_en_memoria(int dir_fisica_memoria, int cuanto_X, char* buffer){
-	char ** parametros_a_enviar = string_array_new();
+	char** parametros_a_enviar = string_array_new();
+	
 	char* s_aux = string_itoa(dir_fisica_memoria);
 	string_array_push(&parametros_a_enviar, s_aux);
 	free(s_aux);
-	s_aux = string_itoa(cuanto_X);
-	string_array_push(&parametros_a_enviar, s_aux);
-	free(s_aux);
+
 	string_array_push(&parametros_a_enviar, buffer);
 	enviar_msj_con_parametros(kernel, ESCRIBIR_VALOR, parametros_a_enviar);
 	free(parametros_a_enviar);

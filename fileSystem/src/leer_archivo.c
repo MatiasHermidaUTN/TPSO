@@ -31,6 +31,8 @@ char* leer_archivo(char* nombre_archivo, int apartir_de_donde_leer, int cuanto_l
 		fseek(bloques, puntero_directo * super_bloque_info.block_size + apartir_de_donde_leer, SEEK_SET);
 
 		leer_bloque(buffer, puntero_directo, apartir_de_donde_leer, &cuanto_leer, &cantidad_leida);
+		log_info(logger, "Acceso Bloque - Archivo: %s - Bloque Archivo: 0 - Bloque File System: %lu", nombre_archivo, puntero_directo);
+
 		leer_indirecto(buffer, archivo_FCB, PRIMER_BLOQUE_SECUNDARIO, &cuanto_leer, &cantidad_leida);
 	}
 	//entro si leo de puntero indirecto y cualquier puntero secundario
@@ -43,6 +45,8 @@ char* leer_archivo(char* nombre_archivo, int apartir_de_donde_leer, int cuanto_l
 		uint32_t puntero_secundario = conseguir_ptr_secundario_para_indirecto(puntero_indirecto, bloque_secundario_inicial);
 
 		leer_bloque(buffer, puntero_secundario, apartir_de_donde_leer_bloque_inicial, &cuanto_leer, &cantidad_leida);
+		log_info(logger, "Acceso Bloque - Archivo: %s - Bloque Archivo: %lu - Bloque File System: %lu", nombre_archivo, bloque_secundario_inicial, puntero_secundario);
+
 		leer_indirecto(buffer, archivo_FCB, bloque_secundario_inicial+1, &cuanto_leer, &cantidad_leida);
 	}
 	config_destroy(archivo_FCB);
@@ -80,10 +84,13 @@ void leer_bloque(char* buffer, uint32_t puntero, int apartir_de_donde_leer_relat
 void leer_indirecto(char* buffer, t_config* archivo_FCB, int bloque_secundario_donde_leer, int* cuanto_leer, int* cantidad_leida) {
 	uint32_t puntero_indirecto = config_get_uint_value(archivo_FCB, "PUNTERO_INDIRECTO");
 	uint32_t puntero_secundario;
+	char* nombre_archivo = config_get_string_value(archivo_FCB, "NOMBRE_ARCHIVO");
 
 	while(*cuanto_leer > 0) {
 		puntero_secundario = conseguir_ptr_secundario_para_indirecto(puntero_indirecto, bloque_secundario_donde_leer);
 		leer_bloque(buffer, puntero_secundario, DESDE_EL_INICIO, cuanto_leer, cantidad_leida);
+		log_info(logger, "Acceso Bloque - Archivo: %s - Bloque Archivo: %lu - Bloque File System: %lu", nombre_archivo, bloque_secundario_donde_leer, puntero_secundario);
+
 		bloque_secundario_donde_leer++;
 	}
 

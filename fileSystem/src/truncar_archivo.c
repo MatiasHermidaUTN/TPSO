@@ -88,11 +88,12 @@ void agrandas_archivo(t_config* archivo_FCB, char* nombre_archivo, int nuevo_tam
 }
 
 uint32_t dame_un_bloque_libre() {
-	for (int i = 0; i < bitarray_get_max_bit(bitarray_de_bitmap); i++) {
-		if (bitarray_test_bit(bitarray_de_bitmap, i) == 0) {
-			bitarray_set_bit(bitarray_de_bitmap, i);
+	for (int puntero = 0;puntero < bitarray_get_max_bit(bitarray_de_bitmap); puntero++) {
+		if (bitarray_test_bit(bitarray_de_bitmap, puntero) == 0) {
+			bitarray_set_bit(bitarray_de_bitmap, puntero);
 			msync(bitmap_pointer, tamanioBitmap, MS_SYNC);
-			return i;
+			log_info(logger, "Acceso a Bitmap - Bloque: %d - Estado: 1", puntero);
+			return puntero;
 		}
 	}
 	log_error(logger, "No existe mas espacio en el disco");
@@ -102,4 +103,5 @@ uint32_t dame_un_bloque_libre() {
 void liberar_bloque(uint32_t puntero){
 	bitarray_clean_bit(bitarray_de_bitmap, puntero);
 	msync(bitmap_pointer, tamanioBitmap, MS_SYNC);
+	log_info(logger, "Acceso a Bitmap - Bloque: %d - Estado: 0", puntero);
 }
