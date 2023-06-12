@@ -595,3 +595,111 @@ void log_compactacion() { //CHEQUEADA 2.0
 	}
 }
 
+void enviar_tabla_segmentos_memoria(int socket, t_list* tabla_segmentos, t_msj_memoria mensaje) {
+	size_t size_total;
+	void* stream = serializar_tabla_segmentos_memoria(tabla_segmentos, mensaje, &size_total);
+
+	send(socket, stream, size_total, 0);
+
+	free(stream);
+	list_destroy_and_destroy_elements(tabla_segmentos, (void*)free);
+}
+
+void* serializar_tabla_segmentos_memoria(t_list* tabla_segmentos, t_msj_memoria mensaje, size_t* size_total) {
+	size_t size_payload = 0;
+	*size_total = sizeof(mensaje) + sizeof(size_payload);
+
+	size_payload += list_size(tabla_segmentos) * sizeof(int) * 3; //id + direccion_base + tamanio
+
+	*size_total += size_payload;
+
+	void* stream = malloc(*size_total);
+	int desplazamiento = 0;
+
+	memcpy(stream + desplazamiento, &(mensaje), sizeof(mensaje));
+	desplazamiento += sizeof(mensaje);
+
+	memcpy(stream + desplazamiento, &size_payload, sizeof(size_payload));
+	desplazamiento += sizeof(size_payload);
+
+	nodoSegmento* segmento;
+
+	for(int i = 0; i < list_size(tabla_segmentos); i++) {
+		segmento = list_get(tabla_segmentos, i);
+
+		memcpy(stream + desplazamiento, &(segmento->id), sizeof(segmento->id));
+		desplazamiento += sizeof(segmento->id);
+
+		memcpy(stream + desplazamiento, &(segmento->base), sizeof(segmento->base));
+		desplazamiento += sizeof(segmento->base);
+
+		memcpy(stream + desplazamiento, &(segmento->tamanio), sizeof(segmento->tamanio));
+		desplazamiento += sizeof(segmento->tamanio);
+	}
+
+	return stream;
+}
+
+void enviar_procesos_con_segmentos_memoria(int socket, t_list* procesos_actualizados) {
+	size_t size_total;
+	void* stream = serializar_procesos_con_segmentos_memoria(procesos_actualizados, &size_total);
+
+	send(socket, stream, size_total, 0);
+
+	free(stream);
+	//list_destroy_and_destroy_elements(procesos_actualizados, (void*)liberar_tabla_segmentos);
+	//Entiendo q esto ultimo no deberia ir
+}
+
+void* serializar_procesos_con_segmentos_memoria(t_list* procesos_actualizados, size_t* size_total) {
+	size_t size_payload = 0;
+	*size_total = sizeof(int) + sizeof(size_payload);
+
+	nodoProceso* proceso;
+	for(int i = 0; i < list_size(procesos_actualizados); i++) {
+		size_payload += sizeof(int) * 2; //pid + cantidad_segmentos
+
+		proceso = list_get(procesos_actualizados, i);
+		size_payload += list_size(proceso->lista_segmentos) * sizeof(int) * 3; //id + direccion_base + tamanio //mati: tabla_segmentos
+	}
+
+	*size_total += size_payload;
+
+	void* stream = malloc(*size_total);
+	int desplazamiento = 0;
+
+	t_msj_memoria op_code = MEMORIA_COMPACTADA;
+	memcpy(stream + desplazamiento, &(op_code), sizeof(op_code));
+	desplazamiento += sizeof(op_code);
+
+	memcpy(stream + desplazamiento, &size_payload, sizeof(size_payload));
+	desplazamiento += sizeof(size_payload);
+
+	nodoSegmento* segmento;
+	int cantidad_segmentos;
+	for(int i = 0; i < list_size(procesos_actualizados); i++) {
+		proceso = list_get(procesos_actualizados, i);
+		memcpy(stream + desplazamiento, &(proceso->pid), sizeof(proceso->pid));
+		desplazamiento += sizeof(proceso->pid);
+
+		cantidad_segmentos = list_size(proceso->lista_segmentos); //mati: tabla_segmentos
+		memcpy(stream + desplazamiento, &cantidad_segmentos, sizeof(cantidad_segmentos));
+		desplazamiento += sizeof(cantidad_segmentos);
+
+		for(int j = 0; j < cantidad_segmentos; j++) {
+			segmento = list_get(proceso->lista_segmentos, i); //mati: tabla_segmentos
+
+			memcpy(stream + desplazamiento, &(segmento->id), sizeof(segmento->id));
+			desplazamiento += sizeof(segmento->id);
+
+			memcpy(stream + desplazamiento, &(segmento->base), sizeof(segmento->base)); //mati: direccion_base
+			desplazamiento += sizeof(segmento->base); //mati: direccion_base
+
+			memcpy(stream + desplazamiento, &(segmento->tamanio), sizeof(segmento->tamanio));
+			desplazamiento += sizeof(segmento->tamanio);
+		}
+	}
+
+	return stream;
+}
+
