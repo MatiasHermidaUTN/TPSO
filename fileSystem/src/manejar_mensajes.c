@@ -1,4 +1,4 @@
-#include "manejar_mensajes.h"
+#include "../include/manejar_mensajes.h"
 
 void escuchar_kernel() {
 	while(1){
@@ -75,7 +75,7 @@ int manejar_mensaje(){
 			printf("cuanto_leer: %d\n", cuanto_X);
 			printf("dir_fisica_memoria: %d\n", dir_fisica_memoria);
 			buffer = leer_archivo(nombre_archivo, apartir_de_donde_X, cuanto_X);	//malloc se hace en leer_archivo
-			mandar_a_memoria(dir_fisica_memoria, cuanto_X, buffer);
+			escribir_en_memoria(dir_fisica_memoria, cuanto_X, buffer);
 
 			char** parametros_a_enviar_leer = string_array_new();
 			string_array_push(&parametros_a_enviar_leer, nombre_archivo); //nombre del archivo
@@ -104,7 +104,7 @@ int manejar_mensaje(){
 			printf("apartir_de_donde_escribir: %d\n", apartir_de_donde_X);
 			printf("cuanto_escribir: %d\n", cuanto_X);
 			printf("dir_fisica_memoria: %d\n", dir_fisica_memoria);
-			buffer = escribir_en_memoria(dir_fisica_memoria, cuanto_X);	//malloc se hace en leer_de_memoria
+			buffer = leer_de_memoria(dir_fisica_memoria, cuanto_X);	//malloc se hace en leer_de_memoria
 			escribir_archivo(buffer, nombre_archivo, apartir_de_donde_X, cuanto_X);
 
 			char** parametros_a_enviar_escribir = string_array_new();

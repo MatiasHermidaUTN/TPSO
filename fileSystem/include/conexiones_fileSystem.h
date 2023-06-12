@@ -1,7 +1,7 @@
 #ifndef CONEXIONES_FILESYSTEM_H_
 #define CONEXIONES_FILESYSTEM_H_
 
-#include "memoria.h"
+#include "fileSystem.h"
 
 void init_conexiones();
 

@@ -34,7 +34,9 @@ typedef struct {
 struct super_bloque_info {
 	int block_size;
 	int block_count;
-} super_bloque_info;
+};
+
+extern struct super_bloque_info super_bloque_info;
 
 extern pthread_mutex_t mutex_new_queue;
 extern pthread_mutex_t mutex_ready_list;
@@ -48,7 +50,6 @@ extern int tamanioBitmap;
 
 extern t_log* logger;
 extern t_config* config;
-extern t_fileSystem_config lectura_de_config;
 
 extern int kernel;
 extern int socket_memoria;

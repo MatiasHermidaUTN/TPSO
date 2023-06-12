@@ -8,15 +8,6 @@
 #include "escribir_archivo.h"
 #include "manejo_punteros.h"
 
-typedef enum
-{
-	ABRIR,
-	CREAR,
-	TRUNCAR,
-	LEER,
-	ESCRIBIR,
-} t_instrucciones;
-
 typedef struct args_recibir_mensajes {
 	int cod_op;
 	char** parametros;

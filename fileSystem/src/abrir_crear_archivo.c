@@ -1,4 +1,4 @@
-#include "arbir_crear_archivo.h"
+#include "../include/arbir_crear_archivo.h"
 
 bool existe_archivo(char* nombre_archivo) {
 	char* path = obtener_path_FCB_sin_free(nombre_archivo);

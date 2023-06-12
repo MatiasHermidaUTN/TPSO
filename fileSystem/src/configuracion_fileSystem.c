@@ -26,7 +26,6 @@ void init_superbloque() {
 	} else {
 		log_error(logger, "SuperBloque no existe");
 		//destroy everything in reality
-		return EXIT_FAILURE;
 	}
 }
 
@@ -41,7 +40,6 @@ void init_bitmap() {
 		if (fd_bitmap == -1){
 			log_error(logger, "No se pudo ni CREAR el bitmap");
 			//destroy everything in reality
-			return EXIT_FAILURE;
 		}
 		ftruncate(fd_bitmap, tamanioBitmap+10);
 	}
@@ -60,7 +58,6 @@ void init_bloques() {
 		if (fd_bloques == -1){
 			log_error(logger, "No se pudo ni CREAR el bloques");
 			//destroy everything in reality
-			return EXIT_FAILURE;
 		}
 		int tamanioBloques = super_bloque_info.block_size * super_bloque_info.block_count;
 		ftruncate(fd_bloques, tamanioBloques+10);

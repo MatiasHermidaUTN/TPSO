@@ -15,6 +15,8 @@ typedef struct fileSystem_config {
 	char* RETARDO_ACCESO_BLOQUE;
 } t_fileSystem_config;
 
+extern t_fileSystem_config lectura_de_config;
+
 t_fileSystem_config leer_fileSystem_config(t_config* config);
 
 void init_superbloque();

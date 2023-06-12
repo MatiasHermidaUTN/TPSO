@@ -1,4 +1,4 @@
-#include "conexiones_fileSystem.h"
+#include "../include/conexiones_fileSystem.h"
 
 void init_conexiones() {
 	//SE CONECTA AL SERIVDOR MEMORIA
@@ -12,9 +12,6 @@ void init_conexiones() {
 	int server = iniciar_servidor("127.0.0.1", lectura_de_config.PUERTO_ESCUCHA);
 	printf("Servidor listo para recibir al cliente, puerto: %s\n", lectura_de_config.PUERTO_ESCUCHA);
 	kernel = esperar_cliente(server);
-	if(kernel == -1){
-		return -1;
-	}
 	puts("Se conecto el Kernel a FileSystem\n");
 
 	pthread_t hilo_escuchar_kernel;
