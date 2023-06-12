@@ -11,8 +11,6 @@ int main(int argc, char** argv) {
     logger = iniciar_logger("cpu.config", "CPU");
     my_logger = iniciar_logger("my_cpu.log", "CPU");
 
-    //TODO: DESCOMENTAR
-    /*
     socket_memoria = crear_conexion(lectura_de_config.IP_MEMORIA, lectura_de_config.PUERTO_MEMORIA);
     enviar_handshake(socket_memoria, CPU);
     t_handshake respuesta = recibir_handshake(socket_memoria);
@@ -20,7 +18,6 @@ int main(int argc, char** argv) {
         log_error(logger, "CPU no se pudo conectar a Memoria");
         exit(EXIT_FAILURE);
     }
-	*/
 
     int socket_cpu = iniciar_servidor("127.0.0.1", lectura_de_config.PUERTO_ESCUCHA); //TODO: hardcodeado
     log_warning(my_logger, "CPU lista para recibir al Kernel");

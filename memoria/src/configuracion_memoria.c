@@ -17,13 +17,13 @@ t_log* logger_no_obligatorio;
 //-------------------------------
 
 void leer_memoria_config(t_config* config) {
-    lectura_de_config.PUERTO_ESCUCHA       = config_get_string_value(config, "PUERTO_ESCUCHA");
-	lectura_de_config.TAM_MEMORIA	       = config_get_string_value(config, "TAM_MEMORIA");
-	lectura_de_config.TAM_SEGMENTO_0	   = config_get_string_value(config, "TAM_SEGMENTO_0");
-	lectura_de_config.CANT_SEGMENTOS	   = config_get_string_value(config, "CANT_SEGMENTOS");
-	lectura_de_config.RETARDO_MEMORIA	   = config_get_string_value(config, "RETARDO_MEMORIA");
-	lectura_de_config.RETARDO_COMPACTACION = config_get_string_value(config, "RETARDO_COMPACTACION");
-	lectura_de_config.ALGORITMO_ASIGNACION = config_get_string_value(config, "ALGORITMO_ASIGNACION");
+    lectura_de_config.PUERTO_ESCUCHA       = strdup(config_get_string_value(config, "PUERTO_ESCUCHA"));
+	lectura_de_config.TAM_MEMORIA	       = strdup(config_get_string_value(config, "TAM_MEMORIA"));
+	lectura_de_config.TAM_SEGMENTO_0	   = strdup(config_get_string_value(config, "TAM_SEGMENTO_0"));
+	lectura_de_config.CANT_SEGMENTOS	   = strdup(config_get_string_value(config, "CANT_SEGMENTOS"));
+	lectura_de_config.RETARDO_MEMORIA	   = strdup(config_get_string_value(config, "RETARDO_MEMORIA"));
+	lectura_de_config.RETARDO_COMPACTACION = strdup(config_get_string_value(config, "RETARDO_COMPACTACION"));
+	lectura_de_config.ALGORITMO_ASIGNACION = strdup(config_get_string_value(config, "ALGORITMO_ASIGNACION"));
 
     return;
 }

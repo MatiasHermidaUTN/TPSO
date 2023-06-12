@@ -667,3 +667,60 @@
 [WARNING] 22:11:32:799 Memoria/(217383:217383): Memoria lista para recibir al cliente
 [INFO] 22:11:34:402 Memoria/(217383:217386): La CPU se conecto a memoria
 [INFO] 22:11:35:194 Memoria/(217383:217389): El Kernel se conecto a memoria
+[WARNING] 18:00:06:047 Memoria/(3293:3293): tam_memoria = 4096
+[INFO] 18:31:09:677 Memoria/(4079:4079): Creación de Proceso PID: 1
+[INFO] 18:34:05:652 Memoria/(4981:4981): Creación de Proceso PID: 1
+[INFO] 18:34:10:668 Memoria/(4981:4981): Eliminación de Proceso PID: 1
+[INFO] 18:34:20:825 Memoria/(4981:4981): Creación de Proceso PID: 2
+[INFO] 18:36:53:605 Memoria/(5027:5027): Creación de Proceso PID: 1
+[INFO] 18:36:58:615 Memoria/(5027:5027): Eliminación de Proceso PID: 1
+[INFO] 18:37:07:798 Memoria/(5027:5027): Creación de Proceso PID: 2
+[INFO] 18:38:27:174 Memoria/(5095:5095): Creación de Proceso PID: 1
+[INFO] 18:38:37:095 Memoria/(5095:5095): Creación de Proceso PID: 2
+[INFO] 18:40:24:599 Memoria/(5140:5140): Creación de Proceso PID: 1
+[INFO] 18:40:45:010 Memoria/(5140:5140): Creación de Proceso PID: 2
+[INFO] 18:45:13:078 Memoria/(5362:5362): Creación de Proceso PID: 1
+[INFO] 18:45:18:089 Memoria/(5362:5362): Eliminación de Proceso PID: 1
+[INFO] 18:45:22:629 Memoria/(5362:5362): Creación de Proceso PID: 2
+[INFO] 18:46:22:363 Memoria/(5422:5422): Creación de Proceso PID: 1
+[INFO] 18:46:27:385 Memoria/(5422:5422): Eliminación de Proceso PID: 1
+[INFO] 18:46:31:428 Memoria/(5422:5422): Creación de Proceso PID: 2
+[INFO] 18:57:06:893 Memoria/(5880:5880): Creación de Proceso PID: 1
+[WARNING] 18:57:06:894 Memoria/(5880:5880): ID: 0
+[INFO] 18:57:11:918 Memoria/(5880:5880): Eliminación de Proceso PID: 1
+[INFO] 18:57:16:185 Memoria/(5880:5880): Creación de Proceso PID: 2
+[WARNING] 18:57:16:185 Memoria/(5880:5880): ID: 0
+[INFO] 18:59:42:806 Memoria/(5935:5935): Creación de Proceso PID: 1
+[WARNING] 18:59:42:807 Memoria/(5935:5935): ID: 0
+[INFO] 18:59:47:950 Memoria/(5935:5935): Eliminación de Proceso PID: 1
+[INFO] 18:59:51:444 Memoria/(5935:5935): Creación de Proceso PID: 2
+[WARNING] 18:59:51:444 Memoria/(5935:5935): ID: 0
+[INFO] 19:04:01:080 Memoria/(6043:6043): Creación de Proceso PID: 1
+[WARNING] 19:04:01:081 Memoria/(6043:6043): BASE: 0
+[INFO] 19:04:06:306 Memoria/(6043:6043): Eliminación de Proceso PID: 1
+[INFO] 19:04:09:163 Memoria/(6043:6043): Creación de Proceso PID: 2
+[WARNING] 19:04:09:163 Memoria/(6043:6043): BASE: 0
+[INFO] 19:06:13:443 Memoria/(6114:6114): Creación de Proceso PID: 1
+[WARNING] 19:06:13:443 Memoria/(6114:6114): BASE: 0
+[INFO] 19:06:18:599 Memoria/(6114:6114): Eliminación de Proceso PID: 1
+[INFO] 19:06:23:100 Memoria/(6114:6114): Creación de Proceso PID: 2
+[WARNING] 19:06:23:100 Memoria/(6114:6114): BASE: 0
+[INFO] 19:06:28:142 Memoria/(6114:6114): Eliminación de Proceso PID: 2
+[INFO] 19:06:41:737 Memoria/(6114:6114): Creación de Proceso PID: 3
+[WARNING] 19:06:41:737 Memoria/(6114:6114): BASE: 0
+[INFO] 19:06:42:316 Memoria/(6114:6114): Creación de Proceso PID: 4
+[WARNING] 19:06:42:316 Memoria/(6114:6114): BASE: 0
+[INFO] 19:06:46:820 Memoria/(6114:6114): Eliminación de Proceso PID: 3
+[INFO] 19:06:51:864 Memoria/(6114:6114): Eliminación de Proceso PID: 4
+[INFO] 19:09:43:304 Memoria/(6364:6364): Creación de Proceso PID: 1
+[WARNING] 19:09:43:305 Memoria/(6364:6364): BASE: 0
+[INFO] 19:09:51:331 Memoria/(6364:6364): Eliminación de Proceso PID: 1
+[INFO] 19:12:07:045 Memoria/(6589:6589): Creación de Proceso PID: 1
+[WARNING] 19:12:07:045 Memoria/(6589:6589): BASE: 0
+[INFO] 19:12:07:673 Memoria/(6589:6589): Creación de Proceso PID: 2
+[WARNING] 19:12:07:673 Memoria/(6589:6589): BASE: 0
+[INFO] 19:12:27:052 Memoria/(6589:6589): Eliminación de Proceso PID: 1
+[INFO] 19:12:47:056 Memoria/(6589:6589): Eliminación de Proceso PID: 2
+[INFO] 19:14:35:761 Memoria/(6627:6627): Creación de Proceso PID: 1
+[WARNING] 19:14:35:763 Memoria/(6627:6627): BASE: 0
+[INFO] 19:14:40:770 Memoria/(6627:6627): Eliminación de Proceso PID: 1

@@ -47,7 +47,10 @@ int recibir_conexiones() {
 	if(socket_cliente != -1){ 
 		pthread_t hilo;
 
-		pthread_create(&hilo, NULL, (void*)manejar_conexion, &socket_cliente);
+		int* a = malloc(sizeof(int));
+		*a = socket_cliente;
+
+		pthread_create(&hilo, NULL, (void*)manejar_conexion, a);
 		pthread_detach(hilo);
 
 		return 1;
@@ -56,6 +59,8 @@ int recibir_conexiones() {
 }
 
 void manejar_conexion(int* socket_cliente) {
+
+	printf("socket_cliente: %d \n",*socket_cliente);
 
 	t_handshake rta_handshake = recibir_handshake(*socket_cliente);
 	switch(rta_handshake){

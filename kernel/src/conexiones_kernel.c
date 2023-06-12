@@ -52,8 +52,8 @@ t_pcb* crear_pcb(t_list* instrucciones, int socket_consola) {
 	pcb->pc = 0;
 	pcb->registros_cpu = init_registros_cpu();
 
-	/*
-	pthread_mutex_lock(&mutex_msj_memoria); TODO: DESCOMENTAR
+
+	pthread_mutex_lock(&mutex_msj_memoria);
 
 	char** parametros_crear_pcb = string_array_new();
 	string_array_push(&parametros_crear_pcb, string_itoa(pcb->pid));
@@ -62,6 +62,7 @@ t_pcb* crear_pcb(t_list* instrucciones, int socket_consola) {
 
 	if(recibir_msj(socket_memoria) == PROCESO_INICIALIZADO) { //No hace falta pero bueno, recibe un mensaje sí o sí
 		pcb->tabla_segmentos = recibir_tabla_segmentos(socket_memoria);
+		log_warning(logger, "PROCESO INICIALIZADO");
 	}
 	else {
 		log_error(logger, "Error en el uso de segmentos");
@@ -69,7 +70,7 @@ t_pcb* crear_pcb(t_list* instrucciones, int socket_consola) {
 	}
 
 	pthread_mutex_unlock(&mutex_msj_memoria);
-	*/
+
 	pcb->tabla_segmentos = list_create(); //TODO: SACAR!!
 
 	pcb->estimado_prox_rafaga = lectura_de_config.ESTIMACION_INICIAL;
@@ -133,8 +134,6 @@ t_registros_cpu init_registros_cpu() {
 }
 
 void init_conexiones() {
-	//TODO: DESCOMENTAR
-/*
 	socket_memoria = crear_conexion(lectura_de_config.IP_MEMORIA, lectura_de_config.PUERTO_MEMORIA);
 	if(socket_memoria == -1) {
 		log_error(logger, "Kernel no pudo conectarse a Memoria");
@@ -147,7 +146,6 @@ void init_conexiones() {
 		log_error(logger,"Kernel no pudo conectarse a Memoria");
 		exit(EXIT_FAILURE);
 	}
-*/
 
 	//Para estos no hace falta handshake porque solo reciben al Kernel
 	socket_cpu = crear_conexion(lectura_de_config.IP_CPU, lectura_de_config.PUERTO_CPU);
@@ -156,9 +154,9 @@ void init_conexiones() {
 		exit(EXIT_FAILURE);
 	}
 
-	//socket_fileSystem = crear_conexion(lectura_de_config.IP_FILESYSTEM, lectura_de_config.PUERTO_FILESYSTEM);
-	//if(socket_fileSystem == -1) {
-	//	log_error(logger, "Kernel no pudo conectarse a File System");
-	//	exit(EXIT_FAILURE);
-	//}
+	socket_fileSystem = crear_conexion(lectura_de_config.IP_FILESYSTEM, lectura_de_config.PUERTO_FILESYSTEM);
+	if(socket_fileSystem == -1) {
+		log_error(logger, "Kernel no pudo conectarse a File System");
+		exit(EXIT_FAILURE);
+	}
 }

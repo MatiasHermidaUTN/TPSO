@@ -1,7 +1,6 @@
 #include "../include/escuchador_de_filesystem.h"
 
 void escuchar_de_filesystem() {
-	/* TODO: DESCOMENTAR!!!!!! (cuando funcione File System)
 	while(1) {
 		int op_code_recibido = recibir_msj(socket_fileSystem);
 		switch(op_code_recibido) {
@@ -37,7 +36,6 @@ void escuchar_de_filesystem() {
 				exit(EXIT_FAILURE);
 		}
 	}
-	*/
 }
 
 void desbloquear_pcb_por_archivo(char* nombre_archivo, int pid) {

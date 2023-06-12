@@ -770,7 +770,7 @@ t_list* deserializar_tabla_segmentos(void* stream) {
 	size_t desplazamiento = 0;
 
 	size_t size_payload;
-	memcpy(stream + desplazamiento, &size_payload, sizeof(size_payload));
+	memcpy(&size_payload, stream + desplazamiento, sizeof(size_payload));
 	desplazamiento += sizeof(size_payload);
 
 	t_list* tabla_segmentos = list_create();

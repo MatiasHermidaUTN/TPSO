@@ -31,7 +31,7 @@ int main(int argc, char** argv) {
 	//BITMAP
 	int tamanio_bitmap = (int)(atoi(lectura_de_config.TAM_MEMORIA) / 8);
 	bitmap_pointer = malloc(tamanio_bitmap); 
-	if(!(atoi(lectura_de_config.TAM_MEMORIA) % 8)){ //error por si el bitmap no tiene el tamaño correcto
+	if((atoi(lectura_de_config.TAM_MEMORIA) % 8)){ //error por si el bitmap no tiene el tamaño correcto
 		log_error(logger_no_obligatorio, "El tamaño de la memoria no es multiplo de 8");
 	}
 	bitarray_de_bitmap = bitarray_create_with_mode(bitmap_pointer, tamanio_bitmap, MSB_FIRST);
@@ -597,12 +597,13 @@ void log_compactacion() { //CHEQUEADA 2.0
 
 void enviar_tabla_segmentos_memoria(int socket, t_list* tabla_segmentos, t_msj_memoria mensaje) {
 	size_t size_total;
+
 	void* stream = serializar_tabla_segmentos_memoria(tabla_segmentos, mensaje, &size_total);
 
 	send(socket, stream, size_total, 0);
 
 	free(stream);
-	list_destroy_and_destroy_elements(tabla_segmentos, (void*)free);
+	//list_destroy_and_destroy_elements(tabla_segmentos, (void*)free);
 }
 
 void* serializar_tabla_segmentos_memoria(t_list* tabla_segmentos, t_msj_memoria mensaje, size_t* size_total) {
@@ -703,3 +704,9 @@ void* serializar_procesos_con_segmentos_memoria(t_list* procesos_actualizados, s
 	return stream;
 }
 
+int list_remove_element(t_list *self, void *element) {
+	int _is_the_element(void *data) {
+		return element == data;
+	}
+	return list_remove_by_condition(self, (void* )_is_the_element) != NULL;
+}
