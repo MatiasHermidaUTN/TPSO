@@ -47,7 +47,7 @@ void enviar_procesos_con_segmentos_memoria(int socket, t_list* procesos_actualiz
 void* serializar_procesos_con_segmentos_memoria(t_list* procesos_actualizados, size_t* size_total);
 
 //COSITAS DE COMMONS QUE NO DEBERIAN ESTAR (UPS)
-int list_remove_element(t_list *self, void *element);
+int list_remove_element_memoria(t_list *self, void *element);
 
 
 #endif /* MEMORIA_H_ */

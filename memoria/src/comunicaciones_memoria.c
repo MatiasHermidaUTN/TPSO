@@ -4,7 +4,7 @@ int recibir_conexiones() {
 	int* socket_cliente = malloc(sizeof(int));
 	*socket_cliente = esperar_cliente(socket_memoria);
 
-	if(socket_cliente != -1){ 
+	if(*socket_cliente != -1){
 		pthread_t hilo;
 
 		pthread_create(&hilo, NULL, (void*)manejar_conexion, socket_cliente);
