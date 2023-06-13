@@ -6,6 +6,7 @@
 
 #include "configuracion_memoria.h"
 #include "comunicaciones_memoria.h"
+#include <unistd.h> //usleep()
 
 typedef struct nodoSegmento {
 	int id;
@@ -19,6 +20,7 @@ typedef struct nodoProceso {
 } nodoProceso;
 
 //MEMORIA
+char* detectar_origen_mensaje(int origen_mensaje);
 int manejar_mensaje();
 void compactar();
 void eliminar_segmento(int pid, int id_segmento);
@@ -44,7 +46,7 @@ void* serializar_tabla_segmentos_memoria(t_list* tabla_segmentos, t_msj_memoria 
 void enviar_procesos_con_segmentos_memoria(int socket, t_list* procesos_actualizados);
 void* serializar_procesos_con_segmentos_memoria(t_list* procesos_actualizados, size_t* size_total);
 
-
+//COSITAS DE COMMONS QUE NO DEBERIAN ESTAR (UPS)
 int list_remove_element(t_list *self, void *element);
 
 

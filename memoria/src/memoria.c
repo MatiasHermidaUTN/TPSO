@@ -80,9 +80,9 @@ int manejar_mensaje() { //pinta bien
 			pid = atoi(mensaje->parametros[0]);
 			//-----------------//
 
-			log_info(logger, "Creación de Proceso PID: %d", pid); //log obligatorio
-
 			nodoProceso* nodoP = crear_proceso(pid);
+
+			log_info(logger, "Creación de Proceso PID: %d", pid); //log obligatorio
 
 			//-----SALIDA-----//			
 			enviar_tabla_segmentos_memoria(socket_kernel, nodoP->lista_segmentos, PROCESO_INICIALIZADO);
@@ -109,13 +109,13 @@ int manejar_mensaje() { //pinta bien
 				enviar_msj(socket_kernel, HAY_QUE_COMPACTAR); 
 				break;
 			}
-			base = crear_segmento(pid, id_segmento, tamanio_segmento); //TODO definir id_segmento yo
+			base = crear_segmento(pid, id_segmento, tamanio_segmento); 
 
-			log_info(logger, "PID: %d - Crear Segmento: %d - Base: %d - TAMAÑO: %d", pid, id_segmento, base, tamanio_segmento); //log obligatorio
-			
-			nodoProceso* nodoP = buscar_por_pid(pid);
+			log_info(logger, "PID: %d - Crear Segmento: %d - Base: %d - TAMAÑO: %d", pid, id_segmento, base, tamanio_segmento); //log obligatorio			
 
 			//-----SALIDA-----//	
+			nodoProceso* nodoP = buscar_por_pid(pid);
+
 			enviar_tabla_segmentos_memoria(socket_kernel, nodoP->lista_segmentos, SEGMENTO_CREADO);
 			//----------------//
 
@@ -153,7 +153,7 @@ int manejar_mensaje() { //pinta bien
 			log_info(logger, "Eliminación de Proceso PID: %d", pid); //log obligatorio
 			
 			//-----SALIDA-----//	
-			//enviar_msj(socket_kernel, PROCESO_ELIMINADO); Parece q no se necesita
+			//enviar_msj(socket_kernel, PROCESO_ELIMINADO); Parece q no se necesita (decision de kernel)
 			//----------------//
 
 			break;
@@ -172,9 +172,13 @@ int manejar_mensaje() { //pinta bien
 
 			memcpy(memoria_principal + dir_fisica, buffer, tamanio_buffer);
 
-			log_info(logger, "PID: %d - Acción: ESCRIBIR - Dirección física: %d - Tamaño: %d - Origen: %d", pid, dir_fisica, tamanio_buffer, mensaje->origen_mensaje); //log obligatorio
+			char* origen_mensaje_string = detectar_origen_mensaje(mensaje->origen_mensaje);	//log obligatorio
+			log_info(logger, "PID: %d - Acción: ESCRIBIR - Dirección física: %d - Tamaño: %d - Origen: %s", pid, dir_fisica, tamanio_buffer, origen_mensaje_string); //log obligatorio
+			free(origen_mensaje_string); //log obligatorio
 			
 			//-----SALIDA-----//
+			usleep(atoi(lectura_de_config.RETARDO_MEMORIA) * 1000); //RETARDO
+
 			switch (mensaje->origen_mensaje){
 				case CPU:
 					enviar_msj(socket_cpu, ESCRITO_OK);
@@ -207,9 +211,13 @@ int manejar_mensaje() { //pinta bien
 
 			memcpy(buffer + tamanio_buffer, "\0", 1); //agrega el /0 al final del buffer
 
-			log_info(logger, "PID: %d - Acción: LEER - Dirección física: %d - Tamaño: %d - Origen: %d", pid, dir_fisica, tamanio_buffer, mensaje->origen_mensaje); //log obligatorio
+			char* origen_mensaje_string = detectar_origen_mensaje(mensaje->origen_mensaje);	//log obligatorio
+			log_info(logger, "PID: %d - Acción: LEER - Dirección física: %d - Tamaño: %d - Origen: %s", pid, dir_fisica, tamanio_buffer, origen_mensaje_string); //log obligatorio
+			free(origen_mensaje_string); //log obligatorio
 
 			//-----SALIDA-----//
+			usleep(atoi(lectura_de_config.RETARDO_MEMORIA) * 1000); //RETARDO
+
 			char ** parametros_a_enviar = string_array_new();
 			string_array_push(&parametros_a_enviar, buffer);		
 			switch (mensaje->origen_mensaje){
@@ -225,7 +233,8 @@ int manejar_mensaje() { //pinta bien
 			}
 			string_array_destroy(parametros_a_enviar);
 			//----------------//
-			break;
+
+			break;	//No es necesario el free(buffer) porque se lo libera en el string_array_destroy
 		}
 		case COMPACTAR:{
 			log_info(logger, "Solicitud de Compactación"); //log obligatorio
@@ -235,12 +244,15 @@ int manejar_mensaje() { //pinta bien
 			log_compactacion(); //log obligatorio			
 			
 			//-----SALIDA-----//
+			usleep(atoi(lectura_de_config.RETARDO_COMPACTACION) * 1000); //RETARDO
+
 			enviar_procesos_con_segmentos_memoria(socket_kernel, lista_procesos);
 			//----------------//
 
 			break;
 		}
 		default:
+			free(mensaje);
 			return 0;
 		
 	}
@@ -284,6 +296,35 @@ void compactar() { //CHEQUEADA 2.0
 	}
 }
 
+char* detectar_origen_mensaje(int origen_mensaje) {
+	char* origen_mensaje_string;
+	
+	switch (origen_mensaje)	{
+		case KERNEL:
+			origen_mensaje_string = strdup("KERNEL");
+			return origen_mensaje_string;
+
+			break;
+		case CPU:
+			origen_mensaje_string = strdup("CPU");
+			return origen_mensaje_string;
+
+			break;		
+		case FILESYSTEM:
+			origen_mensaje_string = strdup("FILESYSTEM");
+			return origen_mensaje_string;
+
+			break;
+		default:
+			origen_mensaje_string = strdup("ORIGEN INVALIDO");
+			log_error(logger_no_obligatorio, "Origen de mensaje no valido");
+			return origen_mensaje_string;
+
+			break;
+	}
+}
+
+
 void eliminar_segmento(int pid, int id_segmento) { 
 	nodoProceso* nodoP = buscar_por_pid(pid);
 	nodoSegmento* nodoS = buscar_por_id(nodoP->lista_segmentos, id_segmento);
@@ -296,7 +337,7 @@ void eliminar_segmento(int pid, int id_segmento) {
 		memset(memoria_principal + nodoS->base, 0, nodoS->tamanio);
 	}
 
-	list_remove_element(nodoP->lista_segmentos, nodoS); 
+	list_remove_element_memoria(nodoP->lista_segmentos, nodoS); 
 	free(nodoS);
 }
 
@@ -311,7 +352,7 @@ void eliminar_proceso(int pid) {
 
 	list_destroy(nodoP->lista_segmentos);
 
-	list_remove_element(lista_procesos, nodoP); 
+	list_remove_element_memoria(lista_procesos, nodoP); 
 	free(nodoP);
 }
 
@@ -572,7 +613,7 @@ void eliminar_lista_mensajes() {
 
 		string_array_destroy(nodoM->parametros);
 
-		list_remove_element(lista_fifo_msj, nodoM); 
+		list_remove_element_memoria(lista_fifo_msj, nodoM); 
 		free(nodoM);
 	}
 
@@ -593,6 +634,8 @@ void log_compactacion() { //CHEQUEADA 2.0
 	}
 }
 
+//SERIALIZACION (JOACO)
+
 void enviar_tabla_segmentos_memoria(int socket, t_list* tabla_segmentos, t_msj_memoria mensaje) {
 	size_t size_total;
 
@@ -601,7 +644,6 @@ void enviar_tabla_segmentos_memoria(int socket, t_list* tabla_segmentos, t_msj_m
 	send(socket, stream, size_total, 0);
 
 	free(stream);
-	//list_destroy_and_destroy_elements(tabla_segmentos, (void*)free);
 }
 
 void* serializar_tabla_segmentos_memoria(t_list* tabla_segmentos, t_msj_memoria mensaje, size_t* size_total) {
@@ -646,8 +688,6 @@ void enviar_procesos_con_segmentos_memoria(int socket, t_list* procesos_actualiz
 	send(socket, stream, size_total, 0);
 
 	free(stream);
-	//list_destroy_and_destroy_elements(procesos_actualizados, (void*)liberar_tabla_segmentos);
-	//Entiendo q esto ultimo no deberia ir
 }
 
 void* serializar_procesos_con_segmentos_memoria(t_list* procesos_actualizados, size_t* size_total) {
@@ -702,7 +742,9 @@ void* serializar_procesos_con_segmentos_memoria(t_list* procesos_actualizados, s
 	return stream;
 }
 
-int list_remove_element(t_list *self, void *element) {
+//COSITAS DE COMMONS QUE NO DEBERIAN ESTAR (UPS)
+
+int list_remove_element_memoria(t_list *self, void *element) {
 	int _is_the_element(void *data) {
 		return element == data;
 	}
