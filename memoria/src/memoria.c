@@ -252,10 +252,12 @@ int manejar_mensaje() { //pinta bien
 			break;
 		}
 		default:
+			string_array_destroy(mensaje->parametros);
 			free(mensaje);
 			return 0;
 		
 	}
+	string_array_destroy(mensaje->parametros);
 	free(mensaje);
 	return 1;
 }
