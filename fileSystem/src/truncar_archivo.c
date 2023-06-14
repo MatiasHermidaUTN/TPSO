@@ -19,8 +19,6 @@ void truncar(char* nombre_archivo, int nuevo_tamanio_archivo){
 	config_save_in_file(archivo_FCB, path);
 	config_destroy(archivo_FCB);
 	free(path);
-	printf("\n");
-	printf("unos dsp truncar: %d\n", cant_unos_en_bitmap());
 	return;
 }
 

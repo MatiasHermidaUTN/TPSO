@@ -881,3 +881,1860 @@
 [INFO] 21:49:25:711 Memoria/(12212:12212): PID: 1 - Acción: ESCRIBIR - Dirección física: 120 - Tamaño: 4 - Origen: 1
 [INFO] 21:49:25:711 Memoria/(12212:12212): PID: 1 - Acción: LEER - Dirección física: 120 - Tamaño: 4 - Origen: 1
 [INFO] 21:49:31:715 Memoria/(12212:12212): Eliminación de Proceso PID: 1
+[INFO] 17:52:57:607 Memoria/(3364:3364): Creación de Proceso PID: 1
+[INFO] 17:52:58:617 Memoria/(3364:3364): PID: 1 - Acción: ESCRIBIR - Dirección física: 4 - Tamaño: 4 - Origen: CPU
+[INFO] 17:54:16:095 Memoria/(3392:3392): Creación de Proceso PID: 1
+[INFO] 17:54:16:100 Memoria/(3392:3392): Eliminación de Proceso PID: 1
+[INFO] 17:55:36:334 Memoria/(3589:3589): Creación de Proceso PID: 1
+[INFO] 17:55:37:351 Memoria/(3589:3589): PID: 1 - Acción: ESCRIBIR - Dirección física: 4 - Tamaño: 4 - Origen: CPU
+[INFO] 17:59:26:430 Memoria/(3776:3776): Creación de Proceso PID: 1
+[INFO] 17:59:27:449 Memoria/(3776:3776): PID: 1 - Acción: ESCRIBIR - Dirección física: 4 - Tamaño: 4 - Origen: CPU
+[INFO] 18:00:40:943 Memoria/(3832:3832): Creación de Proceso PID: 1
+[INFO] 18:00:41:958 Memoria/(3832:3832): PID: 1 - Acción: ESCRIBIR - Dirección física: 4 - Tamaño: 4 - Origen: CPU
+[INFO] 18:03:56:523 Memoria/(3936:3936): Creación de Proceso PID: 1
+[INFO] 18:03:57:542 Memoria/(3936:3936): PID: 1 - Acción: ESCRIBIR - Dirección física: 4 - Tamaño: 4 - Origen: CPU
+[INFO] 18:06:12:206 Memoria/(4026:4026): Creación de Proceso PID: 1
+[INFO] 18:06:13:222 Memoria/(4026:4026): PID: 1 - Acción: ESCRIBIR - Dirección física: 4 - Tamaño: 4 - Origen: CPU
+[INFO] 18:15:33:404 Memoria/(4147:4147): Creación de Proceso PID: 1
+[INFO] 18:15:34:420 Memoria/(4147:4147): PID: 1 - Acción: ESCRIBIR - Dirección física: 4 - Tamaño: 4 - Origen: CPU
+[INFO] 18:17:25:245 Memoria/(4189:4189): Creación de Proceso PID: 1
+[INFO] 18:17:26:288 Memoria/(4189:4189): PID: 1 - Acción: ESCRIBIR - Dirección física: 4 - Tamaño: 4 - Origen: CPU
+[INFO] 18:23:08:123 Memoria/(4334:4334): Creación de Proceso PID: 1
+[INFO] 18:23:09:164 Memoria/(4334:4334): PID: 1 - Acción: ESCRIBIR - Dirección física: 4 - Tamaño: 4 - Origen: CPU
+[WARNING] 18:23:10:283 Memoria/(4334:4334): DEFAULT
+[WARNING] 18:26:19:460 Memoria/(4410:4410): COD OP: 2
+[INFO] 18:26:19:464 Memoria/(4410:4410): Creación de Proceso PID: 1
+[WARNING] 18:26:20:498 Memoria/(4410:4410): COD OP: 6
+[INFO] 18:26:20:504 Memoria/(4410:4410): PID: 1 - Acción: ESCRIBIR - Dirección física: 4 - Tamaño: 4 - Origen: CPU
+[WARNING] 18:26:21:651 Memoria/(4410:4410): COD OP: -1
+[WARNING] 18:26:21:678 Memoria/(4410:4410): DEFAULT
+[WARNING] 18:31:10:415 Memoria/(4522:4522): COD OP: 2
+[INFO] 18:31:10:422 Memoria/(4522:4522): Creación de Proceso PID: 1
+[WARNING] 18:31:11:477 Memoria/(4522:4522): COD OP: 6
+[INFO] 18:31:11:480 Memoria/(4522:4522): PID: 1 - Acción: ESCRIBIR - Dirección física: 4 - Tamaño: 4 - Origen: CPU
+[WARNING] 18:31:12:650 Memoria/(4522:4522): COD OP: 5
+[INFO] 18:31:12:657 Memoria/(4522:4522): PID: 1 - Acción: LEER - Dirección física: 4 - Tamaño: 4 - Origen: FILESYSTEM
+[WARNING] 18:36:52:516 Memoria/(4628:4628): COD OP: 2
+[INFO] 18:36:52:527 Memoria/(4628:4628): Creación de Proceso PID: 1
+[WARNING] 18:36:53:594 Memoria/(4628:4628): COD OP: 6
+[INFO] 18:36:53:597 Memoria/(4628:4628): PID: 1 - Acción: ESCRIBIR - Dirección física: 4 - Tamaño: 4 - Origen: CPU
+[WARNING] 18:36:54:697 Memoria/(4628:4628): COD OP: 5
+[WARNING] 18:36:54:698 Memoria/(4628:4628): BUFFER: HOLA
+[INFO] 18:36:54:699 Memoria/(4628:4628): PID: 1 - Acción: LEER - Dirección física: 4 - Tamaño: 4 - Origen: FILESYSTEM
+[WARNING] 18:38:41:822 Memoria/(4727:4727): COD OP: 2
+[INFO] 18:38:41:829 Memoria/(4727:4727): Creación de Proceso PID: 1
+[WARNING] 18:38:42:936 Memoria/(4727:4727): COD OP: 6
+[INFO] 18:38:42:939 Memoria/(4727:4727): PID: 1 - Acción: ESCRIBIR - Dirección física: 4 - Tamaño: 4 - Origen: CPU
+[WARNING] 18:38:44:034 Memoria/(4727:4727): COD OP: 5
+[INFO] 18:38:44:036 Memoria/(4727:4727): PID: 1 - Acción: LEER - Dirección física: 4 - Tamaño: 4 - Origen: FILESYSTEM
+[WARNING] 18:38:45:042 Memoria/(4727:4727): buffer: HOLA
+[WARNING] 18:40:35:377 Memoria/(4818:4818): COD OP: 2
+[INFO] 18:40:35:380 Memoria/(4818:4818): Creación de Proceso PID: 1
+[WARNING] 18:40:36:419 Memoria/(4818:4818): COD OP: 6
+[INFO] 18:40:36:423 Memoria/(4818:4818): PID: 1 - Acción: ESCRIBIR - Dirección física: 4 - Tamaño: 4 - Origen: CPU
+[WARNING] 18:40:37:608 Memoria/(4818:4818): COD OP: 5
+[INFO] 18:40:37:611 Memoria/(4818:4818): PID: 1 - Acción: LEER - Dirección física: 4 - Tamaño: 4 - Origen: FILESYSTEM
+[WARNING] 18:40:38:618 Memoria/(4818:4818): buffer: HOLA
+[WARNING] 18:42:23:941 Memoria/(4818:4818): COD OP: -1
+[WARNING] 18:42:23:943 Memoria/(4818:4818): DEFAULT
+[WARNING] 18:42:39:151 Memoria/(4910:4910): COD OP: 2
+[INFO] 18:42:39:154 Memoria/(4910:4910): Creación de Proceso PID: 1
+[WARNING] 18:42:40:185 Memoria/(4910:4910): COD OP: 6
+[INFO] 18:42:40:191 Memoria/(4910:4910): PID: 1 - Acción: ESCRIBIR - Dirección física: 4 - Tamaño: 4 - Origen: CPU
+[WARNING] 18:42:41:352 Memoria/(4910:4910): COD OP: 5
+[INFO] 18:42:41:354 Memoria/(4910:4910): PID: 1 - Acción: LEER - Dirección física: 4 - Tamaño: 4 - Origen: FILESYSTEM
+[WARNING] 18:42:42:359 Memoria/(4910:4910): buffer: HOLA
+[WARNING] 18:46:02:014 Memoria/(4987:4987): COD OP: 2
+[INFO] 18:46:02:020 Memoria/(4987:4987): Creación de Proceso PID: 1
+[WARNING] 18:46:03:048 Memoria/(4987:4987): COD OP: 6
+[INFO] 18:46:03:052 Memoria/(4987:4987): PID: 1 - Acción: ESCRIBIR - Dirección física: 4 - Tamaño: 4 - Origen: CPU
+[WARNING] 18:46:04:155 Memoria/(4987:4987): COD OP: 5
+[INFO] 18:46:04:160 Memoria/(4987:4987): PID: 1 - Acción: LEER - Dirección física: 4 - Tamaño: 4 - Origen: FILESYSTEM
+[WARNING] 18:52:09:057 Memoria/(5138:5138): COD OP: 2
+[INFO] 18:52:09:062 Memoria/(5138:5138): Creación de Proceso PID: 1
+[WARNING] 18:52:10:128 Memoria/(5138:5138): COD OP: 6
+[INFO] 18:52:10:132 Memoria/(5138:5138): PID: 1 - Acción: ESCRIBIR - Dirección física: 4 - Tamaño: 4 - Origen: CPU
+[WARNING] 18:52:11:268 Memoria/(5138:5138): COD OP: 5
+[INFO] 18:52:11:277 Memoria/(5138:5138): PID: 1 - Acción: LEER - Dirección física: 4 - Tamaño: 4 - Origen: FILESYSTEM
+[WARNING] 18:52:14:344 Memoria/(5138:5138): COD OP: 6
+[INFO] 18:52:14:345 Memoria/(5138:5138): PID: 1 - Acción: ESCRIBIR - Dirección física: 10 - Tamaño: 4 - Origen: FILESYSTEM
+[WARNING] 18:52:15:349 Memoria/(5138:5138): COD OP: 5
+[INFO] 18:52:15:349 Memoria/(5138:5138): PID: 1 - Acción: LEER - Dirección física: 10 - Tamaño: 4 - Origen: CPU
+[WARNING] 18:52:17:389 Memoria/(5138:5138): COD OP: 3
+[INFO] 18:52:17:728 Memoria/(5138:5138): Eliminación de Proceso PID: 1
+[WARNING] 18:55:00:578 Memoria/(5138:5138): COD OP: -1
+[WARNING] 18:55:00:602 Memoria/(5138:5138): DEFAULT
+[WARNING] 18:55:19:658 Memoria/(5306:5306): COD OP: 2
+[INFO] 18:55:19:660 Memoria/(5306:5306): Creación de Proceso PID: 1
+[WARNING] 18:55:20:693 Memoria/(5306:5306): COD OP: 6
+[INFO] 18:55:20:698 Memoria/(5306:5306): PID: 1 - Acción: ESCRIBIR - Dirección física: 4 - Tamaño: 4 - Origen: CPU
+[WARNING] 18:55:21:792 Memoria/(5306:5306): COD OP: 5
+[INFO] 18:55:21:794 Memoria/(5306:5306): PID: 1 - Acción: LEER - Dirección física: 4 - Tamaño: 4 - Origen: FILESYSTEM
+[WARNING] 18:55:24:833 Memoria/(5306:5306): COD OP: 6
+[INFO] 18:55:24:834 Memoria/(5306:5306): PID: 1 - Acción: ESCRIBIR - Dirección física: 10 - Tamaño: 4 - Origen: FILESYSTEM
+[WARNING] 18:55:25:840 Memoria/(5306:5306): COD OP: 5
+[INFO] 18:55:25:840 Memoria/(5306:5306): PID: 1 - Acción: LEER - Dirección física: 10 - Tamaño: 4 - Origen: CPU
+[WARNING] 18:55:27:843 Memoria/(5306:5306): COD OP: 3
+[INFO] 18:55:27:848 Memoria/(5306:5306): Eliminación de Proceso PID: 1
+[WARNING] 18:59:34:818 Memoria/(5306:5306): COD OP: -1
+[WARNING] 18:59:34:837 Memoria/(5306:5306): DEFAULT
+[WARNING] 19:00:02:695 Memoria/(5514:5514): COD OP: 2
+[INFO] 19:00:02:698 Memoria/(5514:5514): Creación de Proceso PID: 1
+[WARNING] 19:00:03:733 Memoria/(5514:5514): COD OP: 6
+[INFO] 19:00:03:736 Memoria/(5514:5514): PID: 1 - Acción: ESCRIBIR - Dirección física: 4 - Tamaño: 4 - Origen: CPU
+[WARNING] 19:00:04:847 Memoria/(5514:5514): COD OP: 5
+[INFO] 19:00:04:860 Memoria/(5514:5514): PID: 1 - Acción: LEER - Dirección física: 4 - Tamaño: 4 - Origen: FILESYSTEM
+[WARNING] 19:00:07:911 Memoria/(5514:5514): COD OP: 6
+[INFO] 19:00:07:912 Memoria/(5514:5514): PID: 1 - Acción: ESCRIBIR - Dirección física: 10 - Tamaño: 4 - Origen: FILESYSTEM
+[WARNING] 19:00:08:975 Memoria/(5514:5514): COD OP: 5
+[INFO] 19:00:09:002 Memoria/(5514:5514): PID: 1 - Acción: LEER - Dirección física: 10 - Tamaño: 4 - Origen: CPU
+[WARNING] 19:00:11:131 Memoria/(5514:5514): COD OP: 3
+[INFO] 19:00:11:136 Memoria/(5514:5514): Eliminación de Proceso PID: 1
+[WARNING] 19:03:30:382 Memoria/(5514:5514): COD OP: -1
+[WARNING] 19:03:30:387 Memoria/(5514:5514): DEFAULT
+[WARNING] 19:03:50:086 Memoria/(5692:5692): COD OP: 2
+[INFO] 19:03:50:090 Memoria/(5692:5692): Creación de Proceso PID: 1
+[WARNING] 19:03:51:138 Memoria/(5692:5692): COD OP: 6
+[INFO] 19:03:51:143 Memoria/(5692:5692): PID: 1 - Acción: ESCRIBIR - Dirección física: 4 - Tamaño: 4 - Origen: CPU
+[WARNING] 19:03:52:296 Memoria/(5692:5692): COD OP: 5
+[INFO] 19:03:52:298 Memoria/(5692:5692): PID: 1 - Acción: LEER - Dirección física: 4 - Tamaño: 4 - Origen: FILESYSTEM
+[WARNING] 19:03:55:336 Memoria/(5692:5692): COD OP: 6
+[INFO] 19:03:55:336 Memoria/(5692:5692): PID: 1 - Acción: ESCRIBIR - Dirección física: 10 - Tamaño: 4 - Origen: FILESYSTEM
+[WARNING] 19:03:56:342 Memoria/(5692:5692): COD OP: 5
+[INFO] 19:03:56:342 Memoria/(5692:5692): PID: 1 - Acción: LEER - Dirección física: 10 - Tamaño: 4 - Origen: CPU
+[WARNING] 19:03:58:345 Memoria/(5692:5692): COD OP: 3
+[INFO] 19:03:58:351 Memoria/(5692:5692): Eliminación de Proceso PID: 1
+[WARNING] 19:06:12:787 Memoria/(5692:5692): COD OP: -1
+[WARNING] 19:06:12:790 Memoria/(5692:5692): DEFAULT
+[WARNING] 19:06:29:764 Memoria/(5805:5805): COD OP: 2
+[INFO] 19:06:29:765 Memoria/(5805:5805): Creación de Proceso PID: 1
+[WARNING] 19:06:30:798 Memoria/(5805:5805): COD OP: 6
+[INFO] 19:06:30:802 Memoria/(5805:5805): PID: 1 - Acción: ESCRIBIR - Dirección física: 4 - Tamaño: 4 - Origen: CPU
+[WARNING] 19:06:31:904 Memoria/(5805:5805): COD OP: 5
+[INFO] 19:06:31:906 Memoria/(5805:5805): PID: 1 - Acción: LEER - Dirección física: 4 - Tamaño: 4 - Origen: FILESYSTEM
+[WARNING] 19:06:34:943 Memoria/(5805:5805): COD OP: 6
+[INFO] 19:06:34:943 Memoria/(5805:5805): PID: 1 - Acción: ESCRIBIR - Dirección física: 10 - Tamaño: 4 - Origen: FILESYSTEM
+[WARNING] 19:06:35:947 Memoria/(5805:5805): COD OP: 5
+[INFO] 19:06:35:948 Memoria/(5805:5805): PID: 1 - Acción: LEER - Dirección física: 10 - Tamaño: 4 - Origen: CPU
+[WARNING] 19:06:37:950 Memoria/(5805:5805): COD OP: 3
+[INFO] 19:06:37:955 Memoria/(5805:5805): Eliminación de Proceso PID: 1
+[WARNING] 19:14:41:384 Memoria/(5805:5805): COD OP: -1
+[WARNING] 19:14:41:391 Memoria/(5805:5805): DEFAULT
+[WARNING] 19:15:32:146 Memoria/(6086:6086): COD OP: 2
+[INFO] 19:15:32:147 Memoria/(6086:6086): Creación de Proceso PID: 1
+[WARNING] 19:15:33:192 Memoria/(6086:6086): COD OP: 6
+[INFO] 19:15:33:197 Memoria/(6086:6086): PID: 1 - Acción: ESCRIBIR - Dirección física: 4 - Tamaño: 4 - Origen: CPU
+[WARNING] 19:15:34:326 Memoria/(6086:6086): COD OP: 5
+[INFO] 19:15:34:328 Memoria/(6086:6086): PID: 1 - Acción: LEER - Dirección física: 4 - Tamaño: 4 - Origen: FILESYSTEM
+[WARNING] 19:15:37:370 Memoria/(6086:6086): COD OP: 6
+[INFO] 19:15:37:370 Memoria/(6086:6086): PID: 1 - Acción: ESCRIBIR - Dirección física: 10 - Tamaño: 4 - Origen: FILESYSTEM
+[WARNING] 19:15:38:374 Memoria/(6086:6086): COD OP: 5
+[INFO] 19:15:38:374 Memoria/(6086:6086): PID: 1 - Acción: LEER - Dirección física: 10 - Tamaño: 4 - Origen: CPU
+[WARNING] 19:15:40:377 Memoria/(6086:6086): COD OP: 3
+[INFO] 19:15:40:382 Memoria/(6086:6086): Eliminación de Proceso PID: 1
+[WARNING] 19:17:05:557 Memoria/(6086:6086): COD OP: -1
+[WARNING] 19:17:05:563 Memoria/(6086:6086): DEFAULT
+[WARNING] 19:17:26:392 Memoria/(6202:6202): COD OP: 2
+[INFO] 19:17:26:393 Memoria/(6202:6202): Creación de Proceso PID: 1
+[WARNING] 19:17:27:433 Memoria/(6202:6202): COD OP: 6
+[INFO] 19:17:27:437 Memoria/(6202:6202): PID: 1 - Acción: ESCRIBIR - Dirección física: 4 - Tamaño: 4 - Origen: CPU
+[WARNING] 19:17:28:535 Memoria/(6202:6202): COD OP: 5
+[INFO] 19:17:28:537 Memoria/(6202:6202): PID: 1 - Acción: LEER - Dirección física: 4 - Tamaño: 4 - Origen: FILESYSTEM
+[WARNING] 19:17:31:576 Memoria/(6202:6202): COD OP: 6
+[INFO] 19:17:31:576 Memoria/(6202:6202): PID: 1 - Acción: ESCRIBIR - Dirección física: 10 - Tamaño: 4 - Origen: FILESYSTEM
+[WARNING] 19:17:32:581 Memoria/(6202:6202): COD OP: 5
+[INFO] 19:17:32:581 Memoria/(6202:6202): PID: 1 - Acción: LEER - Dirección física: 10 - Tamaño: 4 - Origen: CPU
+[WARNING] 19:17:34:584 Memoria/(6202:6202): COD OP: 3
+[INFO] 19:17:34:589 Memoria/(6202:6202): Eliminación de Proceso PID: 1
+[WARNING] 19:18:05:346 Memoria/(6202:6202): COD OP: -1
+[WARNING] 19:18:05:358 Memoria/(6202:6202): DEFAULT
+[WARNING] 19:19:00:143 Memoria/(6224:6224): COD OP: 2
+[INFO] 19:19:00:148 Memoria/(6224:6224): Creación de Proceso PID: 1
+[WARNING] 19:19:01:178 Memoria/(6224:6224): COD OP: 6
+[INFO] 19:19:01:183 Memoria/(6224:6224): PID: 1 - Acción: ESCRIBIR - Dirección física: 4 - Tamaño: 4 - Origen: CPU
+[WARNING] 19:19:02:283 Memoria/(6224:6224): COD OP: 5
+[INFO] 19:19:02:285 Memoria/(6224:6224): PID: 1 - Acción: LEER - Dirección física: 4 - Tamaño: 4 - Origen: FILESYSTEM
+[WARNING] 19:19:05:327 Memoria/(6224:6224): COD OP: 6
+[INFO] 19:19:05:328 Memoria/(6224:6224): PID: 1 - Acción: ESCRIBIR - Dirección física: 10 - Tamaño: 4 - Origen: FILESYSTEM
+[WARNING] 19:19:06:333 Memoria/(6224:6224): COD OP: 5
+[INFO] 19:19:06:333 Memoria/(6224:6224): PID: 1 - Acción: LEER - Dirección física: 10 - Tamaño: 4 - Origen: CPU
+[WARNING] 19:19:08:336 Memoria/(6224:6224): COD OP: 3
+[INFO] 19:19:08:342 Memoria/(6224:6224): Eliminación de Proceso PID: 1
+[WARNING] 19:19:16:351 Memoria/(6224:6224): COD OP: -1
+[WARNING] 19:19:16:355 Memoria/(6224:6224): DEFAULT
+[WARNING] 19:20:25:946 Memoria/(6281:6281): COD OP: 2
+[INFO] 19:20:25:949 Memoria/(6281:6281): Creación de Proceso PID: 1
+[WARNING] 19:20:26:979 Memoria/(6281:6281): COD OP: 6
+[INFO] 19:20:26:985 Memoria/(6281:6281): PID: 1 - Acción: ESCRIBIR - Dirección física: 4 - Tamaño: 4 - Origen: CPU
+[WARNING] 19:20:28:103 Memoria/(6281:6281): COD OP: 5
+[INFO] 19:20:28:106 Memoria/(6281:6281): PID: 1 - Acción: LEER - Dirección física: 4 - Tamaño: 4 - Origen: FILESYSTEM
+[WARNING] 19:20:31:163 Memoria/(6281:6281): COD OP: 6
+[INFO] 19:20:31:163 Memoria/(6281:6281): PID: 1 - Acción: ESCRIBIR - Dirección física: 10 - Tamaño: 4 - Origen: FILESYSTEM
+[WARNING] 19:20:32:169 Memoria/(6281:6281): COD OP: 5
+[INFO] 19:20:32:170 Memoria/(6281:6281): PID: 1 - Acción: LEER - Dirección física: 10 - Tamaño: 4 - Origen: CPU
+[WARNING] 19:20:34:172 Memoria/(6281:6281): COD OP: 3
+[INFO] 19:20:34:177 Memoria/(6281:6281): Eliminación de Proceso PID: 1
+[WARNING] 19:20:37:079 Memoria/(6281:6281): COD OP: -1
+[WARNING] 19:20:37:102 Memoria/(6281:6281): DEFAULT
+[WARNING] 19:21:29:370 Memoria/(6302:6302): COD OP: 2
+[INFO] 19:21:29:371 Memoria/(6302:6302): Creación de Proceso PID: 1
+[WARNING] 19:21:30:401 Memoria/(6302:6302): COD OP: 6
+[INFO] 19:21:30:406 Memoria/(6302:6302): PID: 1 - Acción: ESCRIBIR - Dirección física: 4 - Tamaño: 4 - Origen: CPU
+[WARNING] 19:21:31:514 Memoria/(6302:6302): COD OP: 5
+[INFO] 19:21:31:523 Memoria/(6302:6302): PID: 1 - Acción: LEER - Dirección física: 4 - Tamaño: 4 - Origen: FILESYSTEM
+[WARNING] 19:21:34:576 Memoria/(6302:6302): COD OP: 6
+[INFO] 19:21:34:577 Memoria/(6302:6302): PID: 1 - Acción: ESCRIBIR - Dirección física: 10 - Tamaño: 4 - Origen: FILESYSTEM
+[WARNING] 19:21:35:582 Memoria/(6302:6302): COD OP: 5
+[INFO] 19:21:35:582 Memoria/(6302:6302): PID: 1 - Acción: LEER - Dirección física: 10 - Tamaño: 4 - Origen: CPU
+[WARNING] 19:21:37:584 Memoria/(6302:6302): COD OP: 3
+[INFO] 19:21:37:590 Memoria/(6302:6302): Eliminación de Proceso PID: 1
+[WARNING] 19:22:59:892 Memoria/(6323:6323): COD OP: 2
+[INFO] 19:22:59:892 Memoria/(6323:6323): Creación de Proceso PID: 1
+[WARNING] 19:23:00:897 Memoria/(6323:6323): COD OP: 6
+[INFO] 19:23:00:897 Memoria/(6323:6323): PID: 1 - Acción: ESCRIBIR - Dirección física: 4 - Tamaño: 4 - Origen: CPU
+[WARNING] 19:23:01:905 Memoria/(6323:6323): COD OP: 5
+[INFO] 19:23:01:905 Memoria/(6323:6323): PID: 1 - Acción: LEER - Dirección física: 4 - Tamaño: 4 - Origen: FILESYSTEM
+[WARNING] 19:23:04:909 Memoria/(6323:6323): COD OP: 6
+[INFO] 19:23:04:909 Memoria/(6323:6323): PID: 1 - Acción: ESCRIBIR - Dirección física: 10 - Tamaño: 4 - Origen: FILESYSTEM
+[WARNING] 19:23:05:910 Memoria/(6323:6323): COD OP: 5
+[INFO] 19:23:05:910 Memoria/(6323:6323): PID: 1 - Acción: LEER - Dirección física: 10 - Tamaño: 4 - Origen: CPU
+[WARNING] 19:23:07:913 Memoria/(6323:6323): COD OP: 3
+[INFO] 19:23:07:913 Memoria/(6323:6323): Eliminación de Proceso PID: 1
+[WARNING] 19:23:40:313 Memoria/(6323:6323): COD OP: 2
+[INFO] 19:23:40:313 Memoria/(6323:6323): Creación de Proceso PID: 2
+[WARNING] 19:23:41:325 Memoria/(6323:6323): COD OP: 6
+[INFO] 19:23:41:325 Memoria/(6323:6323): PID: 2 - Acción: ESCRIBIR - Dirección física: 4 - Tamaño: 4 - Origen: CPU
+[WARNING] 19:23:42:329 Memoria/(6323:6323): COD OP: 5
+[INFO] 19:23:42:329 Memoria/(6323:6323): PID: 2 - Acción: LEER - Dirección física: 4 - Tamaño: 4 - Origen: FILESYSTEM
+[WARNING] 19:23:45:334 Memoria/(6323:6323): COD OP: 6
+[INFO] 19:23:45:334 Memoria/(6323:6323): PID: 2 - Acción: ESCRIBIR - Dirección física: 10 - Tamaño: 4 - Origen: FILESYSTEM
+[WARNING] 19:23:46:335 Memoria/(6323:6323): COD OP: 5
+[INFO] 19:23:46:335 Memoria/(6323:6323): PID: 2 - Acción: LEER - Dirección física: 10 - Tamaño: 4 - Origen: CPU
+[WARNING] 19:23:48:337 Memoria/(6323:6323): COD OP: 3
+[INFO] 19:23:48:337 Memoria/(6323:6323): Eliminación de Proceso PID: 2
+[WARNING] 19:24:23:005 Memoria/(6323:6323): COD OP: 2
+[INFO] 19:24:23:005 Memoria/(6323:6323): Creación de Proceso PID: 3
+[WARNING] 19:24:24:008 Memoria/(6323:6323): COD OP: 6
+[INFO] 19:24:24:008 Memoria/(6323:6323): PID: 3 - Acción: ESCRIBIR - Dirección física: 4 - Tamaño: 4 - Origen: CPU
+[WARNING] 19:24:25:014 Memoria/(6323:6323): COD OP: 5
+[INFO] 19:24:25:014 Memoria/(6323:6323): PID: 3 - Acción: LEER - Dirección física: 4 - Tamaño: 4 - Origen: FILESYSTEM
+[WARNING] 19:24:28:018 Memoria/(6323:6323): COD OP: 6
+[INFO] 19:24:28:018 Memoria/(6323:6323): PID: 3 - Acción: ESCRIBIR - Dirección física: 10 - Tamaño: 4 - Origen: FILESYSTEM
+[WARNING] 19:24:29:019 Memoria/(6323:6323): COD OP: 5
+[INFO] 19:24:29:019 Memoria/(6323:6323): PID: 3 - Acción: LEER - Dirección física: 10 - Tamaño: 4 - Origen: CPU
+[WARNING] 19:24:31:021 Memoria/(6323:6323): COD OP: 3
+[INFO] 19:24:31:021 Memoria/(6323:6323): Eliminación de Proceso PID: 3
+[WARNING] 19:26:10:757 Memoria/(6323:6323): COD OP: 2
+[INFO] 19:26:10:757 Memoria/(6323:6323): Creación de Proceso PID: 4
+[WARNING] 19:26:11:164 Memoria/(6323:6323): COD OP: 2
+[INFO] 19:26:11:164 Memoria/(6323:6323): Creación de Proceso PID: 5
+[WARNING] 19:26:11:605 Memoria/(6323:6323): COD OP: 2
+[INFO] 19:26:11:605 Memoria/(6323:6323): Creación de Proceso PID: 6
+[WARNING] 19:26:11:760 Memoria/(6323:6323): COD OP: 6
+[INFO] 19:26:11:760 Memoria/(6323:6323): PID: 4 - Acción: ESCRIBIR - Dirección física: 4 - Tamaño: 4 - Origen: CPU
+[WARNING] 19:26:12:760 Memoria/(6323:6323): COD OP: 2
+[INFO] 19:26:12:761 Memoria/(6323:6323): Creación de Proceso PID: 7
+[WARNING] 19:26:12:762 Memoria/(6323:6323): COD OP: 2
+[INFO] 19:26:12:763 Memoria/(6323:6323): Creación de Proceso PID: 8
+[WARNING] 19:26:12:764 Memoria/(6323:6323): COD OP: 5
+[INFO] 19:26:12:764 Memoria/(6323:6323): PID: 4 - Acción: LEER - Dirección física: 4 - Tamaño: 4 - Origen: FILESYSTEM
+[WARNING] 19:26:13:764 Memoria/(6323:6323): COD OP: 2
+[INFO] 19:26:13:764 Memoria/(6323:6323): Creación de Proceso PID: 9
+[WARNING] 19:26:15:766 Memoria/(6323:6323): COD OP: 6
+[INFO] 19:26:15:766 Memoria/(6323:6323): PID: 4 - Acción: ESCRIBIR - Dirección física: 10 - Tamaño: 4 - Origen: FILESYSTEM
+[WARNING] 19:26:16:768 Memoria/(6323:6323): COD OP: 5
+[INFO] 19:26:16:768 Memoria/(6323:6323): PID: 4 - Acción: LEER - Dirección física: 10 - Tamaño: 4 - Origen: CPU
+[WARNING] 19:26:18:770 Memoria/(6323:6323): COD OP: 3
+[INFO] 19:26:18:770 Memoria/(6323:6323): Eliminación de Proceso PID: 4
+[WARNING] 19:26:19:772 Memoria/(6323:6323): COD OP: 6
+[INFO] 19:26:19:772 Memoria/(6323:6323): PID: 5 - Acción: ESCRIBIR - Dirección física: 4 - Tamaño: 4 - Origen: CPU
+[WARNING] 19:26:20:775 Memoria/(6323:6323): COD OP: 5
+[INFO] 19:26:20:775 Memoria/(6323:6323): PID: 5 - Acción: LEER - Dirección física: 4 - Tamaño: 4 - Origen: FILESYSTEM
+[WARNING] 19:26:23:777 Memoria/(6323:6323): COD OP: 6
+[INFO] 19:26:23:777 Memoria/(6323:6323): PID: 5 - Acción: ESCRIBIR - Dirección física: 10 - Tamaño: 4 - Origen: FILESYSTEM
+[WARNING] 19:26:24:778 Memoria/(6323:6323): COD OP: 5
+[INFO] 19:26:24:779 Memoria/(6323:6323): PID: 5 - Acción: LEER - Dirección física: 10 - Tamaño: 4 - Origen: CPU
+[WARNING] 19:26:26:782 Memoria/(6323:6323): COD OP: 3
+[INFO] 19:26:26:782 Memoria/(6323:6323): Eliminación de Proceso PID: 6
+[WARNING] 19:26:27:785 Memoria/(6323:6323): COD OP: 6
+[INFO] 19:26:27:785 Memoria/(6323:6323): PID: 5 - Acción: ESCRIBIR - Dirección física: 4 - Tamaño: 4 - Origen: CPU
+[WARNING] 19:26:28:787 Memoria/(6323:6323): COD OP: 5
+[INFO] 19:26:28:787 Memoria/(6323:6323): PID: 5 - Acción: LEER - Dirección física: 4 - Tamaño: 4 - Origen: FILESYSTEM
+[WARNING] 19:26:31:790 Memoria/(6323:6323): COD OP: 6
+[INFO] 19:26:31:790 Memoria/(6323:6323): PID: 5 - Acción: ESCRIBIR - Dirección física: 10 - Tamaño: 4 - Origen: FILESYSTEM
+[WARNING] 19:26:32:791 Memoria/(6323:6323): COD OP: 5
+[INFO] 19:26:32:791 Memoria/(6323:6323): PID: 5 - Acción: LEER - Dirección física: 10 - Tamaño: 4 - Origen: CPU
+[WARNING] 19:26:34:793 Memoria/(6323:6323): COD OP: 3
+[INFO] 19:26:34:793 Memoria/(6323:6323): Eliminación de Proceso PID: 7
+[WARNING] 19:26:35:795 Memoria/(6323:6323): COD OP: 6
+[INFO] 19:26:35:795 Memoria/(6323:6323): PID: 5 - Acción: ESCRIBIR - Dirección física: 4 - Tamaño: 4 - Origen: CPU
+[WARNING] 19:26:36:798 Memoria/(6323:6323): COD OP: 5
+[INFO] 19:26:36:798 Memoria/(6323:6323): PID: 5 - Acción: LEER - Dirección física: 4 - Tamaño: 4 - Origen: FILESYSTEM
+[WARNING] 19:26:39:801 Memoria/(6323:6323): COD OP: 6
+[INFO] 19:26:39:801 Memoria/(6323:6323): PID: 5 - Acción: ESCRIBIR - Dirección física: 10 - Tamaño: 4 - Origen: FILESYSTEM
+[WARNING] 19:26:40:802 Memoria/(6323:6323): COD OP: 5
+[INFO] 19:26:40:802 Memoria/(6323:6323): PID: 5 - Acción: LEER - Dirección física: 10 - Tamaño: 4 - Origen: CPU
+[WARNING] 19:26:42:805 Memoria/(6323:6323): COD OP: 3
+[INFO] 19:26:42:806 Memoria/(6323:6323): Eliminación de Proceso PID: 8
+[WARNING] 19:26:43:808 Memoria/(6323:6323): COD OP: 6
+[INFO] 19:26:43:808 Memoria/(6323:6323): PID: 5 - Acción: ESCRIBIR - Dirección física: 4 - Tamaño: 4 - Origen: CPU
+[WARNING] 19:26:44:811 Memoria/(6323:6323): COD OP: 5
+[INFO] 19:26:44:811 Memoria/(6323:6323): PID: 5 - Acción: LEER - Dirección física: 4 - Tamaño: 4 - Origen: FILESYSTEM
+[WARNING] 19:26:47:814 Memoria/(6323:6323): COD OP: 6
+[INFO] 19:26:47:815 Memoria/(6323:6323): PID: 5 - Acción: ESCRIBIR - Dirección física: 10 - Tamaño: 4 - Origen: FILESYSTEM
+[WARNING] 19:26:48:816 Memoria/(6323:6323): COD OP: 5
+[INFO] 19:26:48:816 Memoria/(6323:6323): PID: 5 - Acción: LEER - Dirección física: 10 - Tamaño: 4 - Origen: CPU
+[WARNING] 19:26:50:818 Memoria/(6323:6323): COD OP: 3
+[INFO] 19:26:50:818 Memoria/(6323:6323): Eliminación de Proceso PID: 9
+[WARNING] 19:26:51:819 Memoria/(6323:6323): COD OP: 6
+[INFO] 19:26:51:819 Memoria/(6323:6323): PID: 5 - Acción: ESCRIBIR - Dirección física: 4 - Tamaño: 4 - Origen: CPU
+[WARNING] 19:26:52:824 Memoria/(6323:6323): COD OP: 5
+[INFO] 19:26:52:824 Memoria/(6323:6323): PID: 5 - Acción: LEER - Dirección física: 4 - Tamaño: 4 - Origen: FILESYSTEM
+[WARNING] 19:26:55:828 Memoria/(6323:6323): COD OP: 6
+[INFO] 19:26:55:828 Memoria/(6323:6323): PID: 5 - Acción: ESCRIBIR - Dirección física: 10 - Tamaño: 4 - Origen: FILESYSTEM
+[WARNING] 19:26:56:829 Memoria/(6323:6323): COD OP: 5
+[INFO] 19:26:56:829 Memoria/(6323:6323): PID: 5 - Acción: LEER - Dirección física: 10 - Tamaño: 4 - Origen: CPU
+[WARNING] 19:26:58:832 Memoria/(6323:6323): COD OP: 3
+[INFO] 19:26:58:832 Memoria/(6323:6323): Eliminación de Proceso PID: 5
+[WARNING] 19:28:22:717 Memoria/(6323:6323): COD OP: -1
+[WARNING] 19:28:22:718 Memoria/(6323:6323): DEFAULT
+[WARNING] 19:28:43:832 Memoria/(6564:6564): COD OP: 2
+[INFO] 19:28:43:832 Memoria/(6564:6564): Creación de Proceso PID: 1
+[WARNING] 19:28:44:324 Memoria/(6564:6564): COD OP: 2
+[INFO] 19:28:44:325 Memoria/(6564:6564): Creación de Proceso PID: 2
+[WARNING] 19:28:44:826 Memoria/(6564:6564): COD OP: 2
+[INFO] 19:28:44:826 Memoria/(6564:6564): Creación de Proceso PID: 3
+[WARNING] 19:28:44:835 Memoria/(6564:6564): COD OP: 6
+[INFO] 19:28:44:835 Memoria/(6564:6564): PID: 1 - Acción: ESCRIBIR - Dirección física: 4 - Tamaño: 4 - Origen: CPU
+[WARNING] 19:28:45:836 Memoria/(6564:6564): COD OP: 2
+[INFO] 19:28:45:836 Memoria/(6564:6564): Creación de Proceso PID: 4
+[WARNING] 19:28:45:838 Memoria/(6564:6564): COD OP: 5
+[INFO] 19:28:45:838 Memoria/(6564:6564): PID: 1 - Acción: LEER - Dirección física: 4 - Tamaño: 4 - Origen: FILESYSTEM
+[WARNING] 19:28:46:839 Memoria/(6564:6564): COD OP: 2
+[INFO] 19:28:46:839 Memoria/(6564:6564): Creación de Proceso PID: 5
+[WARNING] 19:28:46:839 Memoria/(6564:6564): COD OP: 2
+[INFO] 19:28:46:840 Memoria/(6564:6564): Creación de Proceso PID: 6
+[WARNING] 19:28:48:841 Memoria/(6564:6564): COD OP: 6
+[INFO] 19:28:48:842 Memoria/(6564:6564): PID: 1 - Acción: ESCRIBIR - Dirección física: 10 - Tamaño: 4 - Origen: FILESYSTEM
+[WARNING] 19:28:49:842 Memoria/(6564:6564): COD OP: 5
+[INFO] 19:28:49:842 Memoria/(6564:6564): PID: 1 - Acción: LEER - Dirección física: 10 - Tamaño: 4 - Origen: CPU
+[WARNING] 19:28:51:844 Memoria/(6564:6564): COD OP: 3
+[INFO] 19:28:51:844 Memoria/(6564:6564): Eliminación de Proceso PID: 1
+[WARNING] 19:28:52:865 Memoria/(6564:6564): COD OP: 6
+[INFO] 19:28:52:865 Memoria/(6564:6564): PID: 2 - Acción: ESCRIBIR - Dirección física: 4 - Tamaño: 4 - Origen: CPU
+[WARNING] 19:28:53:871 Memoria/(6564:6564): COD OP: 5
+[INFO] 19:28:53:871 Memoria/(6564:6564): PID: 2 - Acción: LEER - Dirección física: 4 - Tamaño: 4 - Origen: FILESYSTEM
+[WARNING] 19:28:56:873 Memoria/(6564:6564): COD OP: 6
+[INFO] 19:28:56:873 Memoria/(6564:6564): PID: 2 - Acción: ESCRIBIR - Dirección física: 10 - Tamaño: 4 - Origen: FILESYSTEM
+[WARNING] 19:28:57:874 Memoria/(6564:6564): COD OP: 5
+[INFO] 19:28:57:874 Memoria/(6564:6564): PID: 2 - Acción: LEER - Dirección física: 10 - Tamaño: 4 - Origen: CPU
+[WARNING] 19:28:59:879 Memoria/(6564:6564): COD OP: 3
+[INFO] 19:28:59:879 Memoria/(6564:6564): Eliminación de Proceso PID: 3
+[WARNING] 19:29:00:881 Memoria/(6564:6564): COD OP: 6
+[INFO] 19:29:00:881 Memoria/(6564:6564): PID: 2 - Acción: ESCRIBIR - Dirección física: 4 - Tamaño: 4 - Origen: CPU
+[WARNING] 19:29:01:884 Memoria/(6564:6564): COD OP: 5
+[INFO] 19:29:01:884 Memoria/(6564:6564): PID: 2 - Acción: LEER - Dirección física: 4 - Tamaño: 4 - Origen: FILESYSTEM
+[WARNING] 19:29:04:887 Memoria/(6564:6564): COD OP: 6
+[INFO] 19:29:04:887 Memoria/(6564:6564): PID: 2 - Acción: ESCRIBIR - Dirección física: 10 - Tamaño: 4 - Origen: FILESYSTEM
+[WARNING] 19:29:05:888 Memoria/(6564:6564): COD OP: 5
+[INFO] 19:29:05:888 Memoria/(6564:6564): PID: 2 - Acción: LEER - Dirección física: 10 - Tamaño: 4 - Origen: CPU
+[WARNING] 19:29:07:890 Memoria/(6564:6564): COD OP: 3
+[INFO] 19:29:07:890 Memoria/(6564:6564): Eliminación de Proceso PID: 4
+[WARNING] 19:29:08:893 Memoria/(6564:6564): COD OP: 6
+[INFO] 19:29:08:893 Memoria/(6564:6564): PID: 2 - Acción: ESCRIBIR - Dirección física: 4 - Tamaño: 4 - Origen: CPU
+[WARNING] 19:29:09:897 Memoria/(6564:6564): COD OP: 5
+[INFO] 19:29:09:897 Memoria/(6564:6564): PID: 2 - Acción: LEER - Dirección física: 4 - Tamaño: 4 - Origen: FILESYSTEM
+[WARNING] 19:29:12:901 Memoria/(6564:6564): COD OP: 6
+[INFO] 19:29:12:901 Memoria/(6564:6564): PID: 2 - Acción: ESCRIBIR - Dirección física: 10 - Tamaño: 4 - Origen: FILESYSTEM
+[WARNING] 19:29:13:902 Memoria/(6564:6564): COD OP: 5
+[INFO] 19:29:13:902 Memoria/(6564:6564): PID: 2 - Acción: LEER - Dirección física: 10 - Tamaño: 4 - Origen: CPU
+[WARNING] 19:29:15:908 Memoria/(6564:6564): COD OP: 3
+[INFO] 19:29:15:908 Memoria/(6564:6564): Eliminación de Proceso PID: 5
+[WARNING] 19:29:16:911 Memoria/(6564:6564): COD OP: 6
+[INFO] 19:29:16:911 Memoria/(6564:6564): PID: 2 - Acción: ESCRIBIR - Dirección física: 4 - Tamaño: 4 - Origen: CPU
+[WARNING] 19:29:17:914 Memoria/(6564:6564): COD OP: 5
+[INFO] 19:29:17:914 Memoria/(6564:6564): PID: 2 - Acción: LEER - Dirección física: 4 - Tamaño: 4 - Origen: FILESYSTEM
+[WARNING] 19:29:20:918 Memoria/(6564:6564): COD OP: 6
+[INFO] 19:29:20:918 Memoria/(6564:6564): PID: 2 - Acción: ESCRIBIR - Dirección física: 10 - Tamaño: 4 - Origen: FILESYSTEM
+[WARNING] 19:29:21:920 Memoria/(6564:6564): COD OP: 5
+[INFO] 19:29:21:920 Memoria/(6564:6564): PID: 2 - Acción: LEER - Dirección física: 10 - Tamaño: 4 - Origen: CPU
+[WARNING] 19:29:23:925 Memoria/(6564:6564): COD OP: 3
+[INFO] 19:29:23:925 Memoria/(6564:6564): Eliminación de Proceso PID: 6
+[WARNING] 19:29:24:927 Memoria/(6564:6564): COD OP: 6
+[INFO] 19:29:24:927 Memoria/(6564:6564): PID: 2 - Acción: ESCRIBIR - Dirección física: 4 - Tamaño: 4 - Origen: CPU
+[WARNING] 19:29:25:936 Memoria/(6564:6564): COD OP: 5
+[INFO] 19:29:25:936 Memoria/(6564:6564): PID: 2 - Acción: LEER - Dirección física: 4 - Tamaño: 4 - Origen: FILESYSTEM
+[WARNING] 19:29:28:939 Memoria/(6564:6564): COD OP: 6
+[INFO] 19:29:28:939 Memoria/(6564:6564): PID: 2 - Acción: ESCRIBIR - Dirección física: 10 - Tamaño: 4 - Origen: FILESYSTEM
+[WARNING] 19:29:29:940 Memoria/(6564:6564): COD OP: 5
+[INFO] 19:29:29:941 Memoria/(6564:6564): PID: 2 - Acción: LEER - Dirección física: 10 - Tamaño: 4 - Origen: CPU
+[WARNING] 19:29:31:944 Memoria/(6564:6564): COD OP: 3
+[INFO] 19:29:31:944 Memoria/(6564:6564): Eliminación de Proceso PID: 2
+[WARNING] 19:48:44:139 Memoria/(6722:6722): COD OP: 2
+[INFO] 19:48:44:140 Memoria/(6722:6722): Creación de Proceso PID: 1
+[WARNING] 19:48:44:581 Memoria/(6722:6722): COD OP: 2
+[INFO] 19:48:44:581 Memoria/(6722:6722): Creación de Proceso PID: 2
+[WARNING] 19:48:45:033 Memoria/(6722:6722): COD OP: 2
+[INFO] 19:48:45:033 Memoria/(6722:6722): Creación de Proceso PID: 3
+[WARNING] 19:48:45:151 Memoria/(6722:6722): COD OP: 6
+[INFO] 19:48:45:151 Memoria/(6722:6722): PID: 1 - Acción: ESCRIBIR - Dirección física: 4 - Tamaño: 4 - Origen: CPU
+[WARNING] 19:48:46:412 Memoria/(6722:6722): COD OP: 5
+[INFO] 19:48:46:412 Memoria/(6722:6722): PID: 1 - Acción: LEER - Dirección física: 4 - Tamaño: 4 - Origen: FILESYSTEM
+[WARNING] 19:48:47:416 Memoria/(6722:6722): COD OP: 2
+[INFO] 19:48:47:416 Memoria/(6722:6722): Creación de Proceso PID: 4
+[WARNING] 19:48:47:417 Memoria/(6722:6722): COD OP: 2
+[INFO] 19:48:47:417 Memoria/(6722:6722): Creación de Proceso PID: 5
+[WARNING] 19:48:47:418 Memoria/(6722:6722): COD OP: 2
+[INFO] 19:48:47:418 Memoria/(6722:6722): Creación de Proceso PID: 6
+[WARNING] 19:48:49:420 Memoria/(6722:6722): COD OP: 6
+[INFO] 19:48:49:420 Memoria/(6722:6722): PID: 1 - Acción: ESCRIBIR - Dirección física: 10 - Tamaño: 4 - Origen: FILESYSTEM
+[WARNING] 19:48:50:421 Memoria/(6722:6722): COD OP: 5
+[INFO] 19:48:50:421 Memoria/(6722:6722): PID: 1 - Acción: LEER - Dirección física: 10 - Tamaño: 4 - Origen: CPU
+[WARNING] 19:48:52:424 Memoria/(6722:6722): COD OP: 3
+[INFO] 19:48:52:424 Memoria/(6722:6722): Eliminación de Proceso PID: 1
+[WARNING] 19:48:53:425 Memoria/(6722:6722): COD OP: 6
+[INFO] 19:48:53:425 Memoria/(6722:6722): PID: 2 - Acción: ESCRIBIR - Dirección física: 4 - Tamaño: 4 - Origen: CPU
+[WARNING] 19:48:54:429 Memoria/(6722:6722): COD OP: 5
+[INFO] 19:48:54:429 Memoria/(6722:6722): PID: 2 - Acción: LEER - Dirección física: 4 - Tamaño: 4 - Origen: FILESYSTEM
+[WARNING] 19:48:57:434 Memoria/(6722:6722): COD OP: 6
+[INFO] 19:48:57:434 Memoria/(6722:6722): PID: 2 - Acción: ESCRIBIR - Dirección física: 10 - Tamaño: 4 - Origen: FILESYSTEM
+[WARNING] 19:48:58:436 Memoria/(6722:6722): COD OP: 5
+[INFO] 19:48:58:436 Memoria/(6722:6722): PID: 2 - Acción: LEER - Dirección física: 10 - Tamaño: 4 - Origen: CPU
+[WARNING] 19:49:00:438 Memoria/(6722:6722): COD OP: 3
+[INFO] 19:49:00:438 Memoria/(6722:6722): Eliminación de Proceso PID: 3
+[WARNING] 19:49:01:440 Memoria/(6722:6722): COD OP: 6
+[INFO] 19:49:01:440 Memoria/(6722:6722): PID: 2 - Acción: ESCRIBIR - Dirección física: 4 - Tamaño: 4 - Origen: CPU
+[WARNING] 19:49:02:443 Memoria/(6722:6722): COD OP: 5
+[INFO] 19:49:02:443 Memoria/(6722:6722): PID: 2 - Acción: LEER - Dirección física: 4 - Tamaño: 4 - Origen: FILESYSTEM
+[WARNING] 19:49:05:446 Memoria/(6722:6722): COD OP: 6
+[INFO] 19:49:05:446 Memoria/(6722:6722): PID: 2 - Acción: ESCRIBIR - Dirección física: 10 - Tamaño: 4 - Origen: FILESYSTEM
+[WARNING] 19:49:06:447 Memoria/(6722:6722): COD OP: 5
+[INFO] 19:49:06:447 Memoria/(6722:6722): PID: 2 - Acción: LEER - Dirección física: 10 - Tamaño: 4 - Origen: CPU
+[WARNING] 19:49:08:450 Memoria/(6722:6722): COD OP: 3
+[INFO] 19:49:08:450 Memoria/(6722:6722): Eliminación de Proceso PID: 4
+[WARNING] 19:49:09:452 Memoria/(6722:6722): COD OP: 6
+[INFO] 19:49:09:453 Memoria/(6722:6722): PID: 2 - Acción: ESCRIBIR - Dirección física: 4 - Tamaño: 4 - Origen: CPU
+[WARNING] 19:49:10:455 Memoria/(6722:6722): COD OP: 5
+[INFO] 19:49:10:455 Memoria/(6722:6722): PID: 2 - Acción: LEER - Dirección física: 4 - Tamaño: 4 - Origen: FILESYSTEM
+[WARNING] 19:49:13:457 Memoria/(6722:6722): COD OP: 6
+[INFO] 19:49:13:457 Memoria/(6722:6722): PID: 2 - Acción: ESCRIBIR - Dirección física: 10 - Tamaño: 4 - Origen: FILESYSTEM
+[WARNING] 19:50:03:748 Memoria/(6753:6753): COD OP: 2
+[INFO] 19:50:03:749 Memoria/(6753:6753): Creación de Proceso PID: 1
+[WARNING] 19:50:04:222 Memoria/(6753:6753): COD OP: 2
+[INFO] 19:50:04:222 Memoria/(6753:6753): Creación de Proceso PID: 2
+[WARNING] 19:50:04:815 Memoria/(6753:6753): COD OP: 2
+[INFO] 19:50:04:815 Memoria/(6753:6753): Creación de Proceso PID: 3
+[WARNING] 19:50:05:401 Memoria/(6753:6753): COD OP: 2
+[INFO] 19:50:05:402 Memoria/(6753:6753): Creación de Proceso PID: 4
+[WARNING] 19:50:05:961 Memoria/(6753:6753): COD OP: 2
+[INFO] 19:50:05:961 Memoria/(6753:6753): Creación de Proceso PID: 5
+[WARNING] 19:50:06:602 Memoria/(6753:6753): COD OP: 2
+[INFO] 19:50:06:602 Memoria/(6753:6753): Creación de Proceso PID: 6
+[WARNING] 19:50:13:754 Memoria/(6753:6753): COD OP: 3
+[INFO] 19:50:13:754 Memoria/(6753:6753): Eliminación de Proceso PID: 1
+[WARNING] 19:50:23:757 Memoria/(6753:6753): COD OP: 3
+[INFO] 19:50:23:757 Memoria/(6753:6753): Eliminación de Proceso PID: 2
+[WARNING] 19:50:33:760 Memoria/(6753:6753): COD OP: 3
+[INFO] 19:50:33:760 Memoria/(6753:6753): Eliminación de Proceso PID: 3
+[WARNING] 19:50:43:762 Memoria/(6753:6753): COD OP: 3
+[INFO] 19:50:43:762 Memoria/(6753:6753): Eliminación de Proceso PID: 4
+[WARNING] 19:50:53:766 Memoria/(6753:6753): COD OP: 3
+[INFO] 19:50:53:766 Memoria/(6753:6753): Eliminación de Proceso PID: 5
+[WARNING] 19:51:03:770 Memoria/(6753:6753): COD OP: 3
+[INFO] 19:51:03:770 Memoria/(6753:6753): Eliminación de Proceso PID: 6
+[WARNING] 19:53:53:457 Memoria/(6984:6984): COD OP: 2
+[INFO] 19:53:53:458 Memoria/(6984:6984): Creación de Proceso PID: 1
+[WARNING] 19:53:53:924 Memoria/(6984:6984): COD OP: 2
+[INFO] 19:53:53:924 Memoria/(6984:6984): Creación de Proceso PID: 2
+[WARNING] 19:53:54:462 Memoria/(6984:6984): COD OP: 6
+[INFO] 19:53:54:462 Memoria/(6984:6984): PID: 1 - Acción: ESCRIBIR - Dirección física: 4 - Tamaño: 4 - Origen: CPU
+[WARNING] 19:53:55:463 Memoria/(6984:6984): COD OP: 2
+[INFO] 19:53:55:466 Memoria/(6984:6984): Creación de Proceso PID: 3
+[WARNING] 19:53:55:467 Memoria/(6984:6984): COD OP: 2
+[INFO] 19:53:55:467 Memoria/(6984:6984): Creación de Proceso PID: 4
+[WARNING] 19:53:55:467 Memoria/(6984:6984): COD OP: 2
+[INFO] 19:53:55:467 Memoria/(6984:6984): Creación de Proceso PID: 5
+[WARNING] 19:53:55:468 Memoria/(6984:6984): COD OP: 5
+[INFO] 19:53:55:468 Memoria/(6984:6984): PID: 1 - Acción: LEER - Dirección física: 4 - Tamaño: 4 - Origen: FILESYSTEM
+[WARNING] 19:53:56:469 Memoria/(6984:6984): COD OP: 2
+[INFO] 19:53:56:470 Memoria/(6984:6984): Creación de Proceso PID: 6
+[WARNING] 19:53:58:476 Memoria/(6984:6984): COD OP: 6
+[INFO] 19:53:58:476 Memoria/(6984:6984): PID: 1 - Acción: ESCRIBIR - Dirección física: 10 - Tamaño: 4 - Origen: FILESYSTEM
+[WARNING] 19:53:59:477 Memoria/(6984:6984): COD OP: 5
+[INFO] 19:53:59:477 Memoria/(6984:6984): PID: 1 - Acción: LEER - Dirección física: 10 - Tamaño: 4 - Origen: CPU
+[WARNING] 19:54:01:479 Memoria/(6984:6984): COD OP: 3
+[INFO] 19:54:01:479 Memoria/(6984:6984): Eliminación de Proceso PID: 1
+[WARNING] 19:54:02:481 Memoria/(6984:6984): COD OP: 6
+[INFO] 19:54:02:481 Memoria/(6984:6984): PID: 2 - Acción: ESCRIBIR - Dirección física: 4 - Tamaño: 4 - Origen: CPU
+[WARNING] 19:54:03:485 Memoria/(6984:6984): COD OP: 5
+[INFO] 19:54:03:485 Memoria/(6984:6984): PID: 2 - Acción: LEER - Dirección física: 4 - Tamaño: 4 - Origen: FILESYSTEM
+[WARNING] 19:54:06:489 Memoria/(6984:6984): COD OP: 6
+[INFO] 19:54:06:489 Memoria/(6984:6984): PID: 2 - Acción: ESCRIBIR - Dirección física: 10 - Tamaño: 4 - Origen: FILESYSTEM
+[WARNING] 19:54:07:490 Memoria/(6984:6984): COD OP: 5
+[INFO] 19:54:07:490 Memoria/(6984:6984): PID: 2 - Acción: LEER - Dirección física: 10 - Tamaño: 4 - Origen: CPU
+[WARNING] 19:54:09:492 Memoria/(6984:6984): COD OP: 3
+[INFO] 19:54:09:492 Memoria/(6984:6984): Eliminación de Proceso PID: 3
+[WARNING] 19:54:10:494 Memoria/(6984:6984): COD OP: 6
+[INFO] 19:54:10:494 Memoria/(6984:6984): PID: 2 - Acción: ESCRIBIR - Dirección física: 4 - Tamaño: 4 - Origen: CPU
+[WARNING] 19:54:11:497 Memoria/(6984:6984): COD OP: 5
+[INFO] 19:54:11:497 Memoria/(6984:6984): PID: 2 - Acción: LEER - Dirección física: 4 - Tamaño: 4 - Origen: FILESYSTEM
+[WARNING] 19:54:14:502 Memoria/(6984:6984): COD OP: 6
+[INFO] 19:54:14:502 Memoria/(6984:6984): PID: 2 - Acción: ESCRIBIR - Dirección física: 10 - Tamaño: 4 - Origen: FILESYSTEM
+[WARNING] 19:54:15:503 Memoria/(6984:6984): COD OP: 5
+[INFO] 19:54:15:503 Memoria/(6984:6984): PID: 2 - Acción: LEER - Dirección física: 10 - Tamaño: 4 - Origen: CPU
+[WARNING] 19:54:17:504 Memoria/(6984:6984): COD OP: 3
+[INFO] 19:54:17:504 Memoria/(6984:6984): Eliminación de Proceso PID: 4
+[WARNING] 19:54:18:506 Memoria/(6984:6984): COD OP: 6
+[INFO] 19:54:18:506 Memoria/(6984:6984): PID: 2 - Acción: ESCRIBIR - Dirección física: 4 - Tamaño: 4 - Origen: CPU
+[WARNING] 19:54:19:509 Memoria/(6984:6984): COD OP: 5
+[INFO] 19:54:19:509 Memoria/(6984:6984): PID: 2 - Acción: LEER - Dirección física: 4 - Tamaño: 4 - Origen: FILESYSTEM
+[WARNING] 19:54:22:514 Memoria/(6984:6984): COD OP: 6
+[INFO] 19:54:22:514 Memoria/(6984:6984): PID: 2 - Acción: ESCRIBIR - Dirección física: 10 - Tamaño: 4 - Origen: FILESYSTEM
+[WARNING] 19:54:23:515 Memoria/(6984:6984): COD OP: 5
+[INFO] 19:54:23:515 Memoria/(6984:6984): PID: 2 - Acción: LEER - Dirección física: 10 - Tamaño: 4 - Origen: CPU
+[WARNING] 19:54:25:520 Memoria/(6984:6984): COD OP: 3
+[INFO] 19:54:25:520 Memoria/(6984:6984): Eliminación de Proceso PID: 5
+[WARNING] 19:54:26:522 Memoria/(6984:6984): COD OP: 6
+[INFO] 19:54:26:522 Memoria/(6984:6984): PID: 2 - Acción: ESCRIBIR - Dirección física: 4 - Tamaño: 4 - Origen: CPU
+[WARNING] 19:54:27:525 Memoria/(6984:6984): COD OP: 5
+[INFO] 19:54:27:525 Memoria/(6984:6984): PID: 2 - Acción: LEER - Dirección física: 4 - Tamaño: 4 - Origen: FILESYSTEM
+[WARNING] 19:54:30:529 Memoria/(6984:6984): COD OP: 6
+[INFO] 19:54:30:529 Memoria/(6984:6984): PID: 2 - Acción: ESCRIBIR - Dirección física: 10 - Tamaño: 4 - Origen: FILESYSTEM
+[WARNING] 19:54:31:530 Memoria/(6984:6984): COD OP: 5
+[INFO] 19:54:31:530 Memoria/(6984:6984): PID: 2 - Acción: LEER - Dirección física: 10 - Tamaño: 4 - Origen: CPU
+[WARNING] 19:54:33:532 Memoria/(6984:6984): COD OP: 3
+[INFO] 19:54:33:532 Memoria/(6984:6984): Eliminación de Proceso PID: 6
+[WARNING] 19:54:34:535 Memoria/(6984:6984): COD OP: 6
+[INFO] 19:54:34:535 Memoria/(6984:6984): PID: 2 - Acción: ESCRIBIR - Dirección física: 4 - Tamaño: 4 - Origen: CPU
+[WARNING] 19:54:35:540 Memoria/(6984:6984): COD OP: 5
+[INFO] 19:54:35:540 Memoria/(6984:6984): PID: 2 - Acción: LEER - Dirección física: 4 - Tamaño: 4 - Origen: FILESYSTEM
+[WARNING] 19:54:38:542 Memoria/(6984:6984): COD OP: 6
+[INFO] 19:54:38:542 Memoria/(6984:6984): PID: 2 - Acción: ESCRIBIR - Dirección física: 10 - Tamaño: 4 - Origen: FILESYSTEM
+[WARNING] 19:54:39:543 Memoria/(6984:6984): COD OP: 5
+[INFO] 19:54:39:543 Memoria/(6984:6984): PID: 2 - Acción: LEER - Dirección física: 10 - Tamaño: 4 - Origen: CPU
+[WARNING] 19:54:41:545 Memoria/(6984:6984): COD OP: 3
+[INFO] 19:54:41:545 Memoria/(6984:6984): Eliminación de Proceso PID: 2
+[WARNING] 19:56:49:364 Memoria/(7019:7019): COD OP: 2
+[INFO] 19:56:49:364 Memoria/(7019:7019): Creación de Proceso PID: 1
+[WARNING] 19:56:49:762 Memoria/(7019:7019): COD OP: 2
+[INFO] 19:56:49:762 Memoria/(7019:7019): Creación de Proceso PID: 2
+[WARNING] 19:56:50:262 Memoria/(7019:7019): COD OP: 2
+[INFO] 19:56:50:262 Memoria/(7019:7019): Creación de Proceso PID: 3
+[WARNING] 19:56:50:752 Memoria/(7019:7019): COD OP: 2
+[INFO] 19:56:50:752 Memoria/(7019:7019): Creación de Proceso PID: 4
+[WARNING] 19:56:51:234 Memoria/(7019:7019): COD OP: 2
+[INFO] 19:56:51:234 Memoria/(7019:7019): Creación de Proceso PID: 5
+[WARNING] 19:56:51:783 Memoria/(7019:7019): COD OP: 2
+[INFO] 19:56:51:783 Memoria/(7019:7019): Creación de Proceso PID: 6
+[WARNING] 19:56:59:370 Memoria/(7019:7019): COD OP: 3
+[INFO] 19:56:59:370 Memoria/(7019:7019): Eliminación de Proceso PID: 1
+[WARNING] 19:57:09:376 Memoria/(7019:7019): COD OP: 3
+[INFO] 19:57:09:376 Memoria/(7019:7019): Eliminación de Proceso PID: 2
+[WARNING] 19:57:19:384 Memoria/(7019:7019): COD OP: 3
+[INFO] 19:57:19:384 Memoria/(7019:7019): Eliminación de Proceso PID: 3
+[WARNING] 19:57:29:392 Memoria/(7019:7019): COD OP: 3
+[INFO] 19:57:29:392 Memoria/(7019:7019): Eliminación de Proceso PID: 4
+[WARNING] 19:57:39:400 Memoria/(7019:7019): COD OP: 3
+[INFO] 19:57:39:400 Memoria/(7019:7019): Eliminación de Proceso PID: 5
+[WARNING] 19:57:49:408 Memoria/(7019:7019): COD OP: 3
+[INFO] 19:57:49:408 Memoria/(7019:7019): Eliminación de Proceso PID: 6
+[WARNING] 19:58:58:626 Memoria/(7019:7019): COD OP: -1
+[WARNING] 19:58:58:626 Memoria/(7019:7019): DEFAULT
+[WARNING] 19:59:30:605 Memoria/(7093:7093): COD OP: 2
+[INFO] 19:59:30:605 Memoria/(7093:7093): Creación de Proceso PID: 1
+[WARNING] 19:59:31:210 Memoria/(7093:7093): COD OP: 2
+[INFO] 19:59:31:210 Memoria/(7093:7093): Creación de Proceso PID: 2
+[WARNING] 19:59:31:763 Memoria/(7093:7093): COD OP: 2
+[INFO] 19:59:31:763 Memoria/(7093:7093): Creación de Proceso PID: 3
+[WARNING] 19:59:32:222 Memoria/(7093:7093): COD OP: 2
+[INFO] 19:59:32:222 Memoria/(7093:7093): Creación de Proceso PID: 4
+[WARNING] 19:59:32:734 Memoria/(7093:7093): COD OP: 2
+[INFO] 19:59:32:734 Memoria/(7093:7093): Creación de Proceso PID: 5
+[WARNING] 19:59:33:208 Memoria/(7093:7093): COD OP: 2
+[INFO] 19:59:33:208 Memoria/(7093:7093): Creación de Proceso PID: 6
+[WARNING] 19:59:40:615 Memoria/(7093:7093): COD OP: 3
+[INFO] 19:59:40:615 Memoria/(7093:7093): Eliminación de Proceso PID: 1
+[WARNING] 19:59:50:674 Memoria/(7093:7093): COD OP: 3
+[INFO] 19:59:50:675 Memoria/(7093:7093): Eliminación de Proceso PID: 2
+[WARNING] 20:00:00:696 Memoria/(7093:7093): COD OP: 3
+[INFO] 20:00:00:696 Memoria/(7093:7093): Eliminación de Proceso PID: 3
+[WARNING] 20:00:10:717 Memoria/(7093:7093): COD OP: 3
+[INFO] 20:00:10:717 Memoria/(7093:7093): Eliminación de Proceso PID: 4
+[WARNING] 20:00:20:729 Memoria/(7093:7093): COD OP: 3
+[INFO] 20:00:20:729 Memoria/(7093:7093): Eliminación de Proceso PID: 5
+[WARNING] 20:00:30:738 Memoria/(7093:7093): COD OP: 3
+[INFO] 20:00:30:738 Memoria/(7093:7093): Eliminación de Proceso PID: 6
+[WARNING] 20:00:49:949 Memoria/(7139:7139): COD OP: 2
+[INFO] 20:00:49:949 Memoria/(7139:7139): Creación de Proceso PID: 1
+[WARNING] 20:00:50:381 Memoria/(7139:7139): COD OP: 2
+[INFO] 20:00:50:381 Memoria/(7139:7139): Creación de Proceso PID: 2
+[WARNING] 20:00:50:812 Memoria/(7139:7139): COD OP: 2
+[INFO] 20:00:50:812 Memoria/(7139:7139): Creación de Proceso PID: 3
+[WARNING] 20:00:51:278 Memoria/(7139:7139): COD OP: 2
+[INFO] 20:00:51:278 Memoria/(7139:7139): Creación de Proceso PID: 4
+[WARNING] 20:00:51:720 Memoria/(7139:7139): COD OP: 2
+[INFO] 20:00:51:720 Memoria/(7139:7139): Creación de Proceso PID: 5
+[WARNING] 20:00:52:215 Memoria/(7139:7139): COD OP: 2
+[INFO] 20:00:52:216 Memoria/(7139:7139): Creación de Proceso PID: 6
+[WARNING] 20:00:54:955 Memoria/(7139:7139): COD OP: 5
+[INFO] 20:00:54:955 Memoria/(7139:7139): PID: 1 - Acción: LEER - Dirección física: 4 - Tamaño: 4 - Origen: FILESYSTEM
+[WARNING] 20:00:56:958 Memoria/(7139:7139): COD OP: 3
+[INFO] 20:00:56:959 Memoria/(7139:7139): Eliminación de Proceso PID: 1
+[WARNING] 20:01:01:963 Memoria/(7139:7139): COD OP: 5
+[INFO] 20:01:01:963 Memoria/(7139:7139): PID: 2 - Acción: LEER - Dirección física: 4 - Tamaño: 4 - Origen: FILESYSTEM
+[WARNING] 20:01:03:966 Memoria/(7139:7139): COD OP: 3
+[INFO] 20:01:03:966 Memoria/(7139:7139): Eliminación de Proceso PID: 2
+[WARNING] 20:01:08:970 Memoria/(7139:7139): COD OP: 5
+[INFO] 20:01:08:970 Memoria/(7139:7139): PID: 3 - Acción: LEER - Dirección física: 4 - Tamaño: 4 - Origen: FILESYSTEM
+[WARNING] 20:01:10:973 Memoria/(7139:7139): COD OP: 3
+[INFO] 20:01:10:973 Memoria/(7139:7139): Eliminación de Proceso PID: 3
+[WARNING] 20:01:15:977 Memoria/(7139:7139): COD OP: 5
+[INFO] 20:01:15:977 Memoria/(7139:7139): PID: 4 - Acción: LEER - Dirección física: 4 - Tamaño: 4 - Origen: FILESYSTEM
+[WARNING] 20:01:17:979 Memoria/(7139:7139): COD OP: 3
+[INFO] 20:01:17:979 Memoria/(7139:7139): Eliminación de Proceso PID: 4
+[WARNING] 20:01:22:984 Memoria/(7139:7139): COD OP: 5
+[INFO] 20:01:22:984 Memoria/(7139:7139): PID: 5 - Acción: LEER - Dirección física: 4 - Tamaño: 4 - Origen: FILESYSTEM
+[WARNING] 20:01:24:987 Memoria/(7139:7139): COD OP: 3
+[INFO] 20:01:24:987 Memoria/(7139:7139): Eliminación de Proceso PID: 5
+[WARNING] 20:01:29:991 Memoria/(7139:7139): COD OP: 5
+[INFO] 20:01:29:991 Memoria/(7139:7139): PID: 6 - Acción: LEER - Dirección física: 4 - Tamaño: 4 - Origen: FILESYSTEM
+[WARNING] 20:01:31:994 Memoria/(7139:7139): COD OP: 3
+[INFO] 20:01:31:994 Memoria/(7139:7139): Eliminación de Proceso PID: 6
+[WARNING] 20:02:13:834 Memoria/(7181:7181): COD OP: 2
+[INFO] 20:02:13:834 Memoria/(7181:7181): Creación de Proceso PID: 1
+[WARNING] 20:02:14:183 Memoria/(7181:7181): COD OP: 2
+[INFO] 20:02:14:183 Memoria/(7181:7181): Creación de Proceso PID: 2
+[WARNING] 20:02:14:603 Memoria/(7181:7181): COD OP: 2
+[INFO] 20:02:14:603 Memoria/(7181:7181): Creación de Proceso PID: 3
+[WARNING] 20:02:15:053 Memoria/(7181:7181): COD OP: 2
+[INFO] 20:02:15:053 Memoria/(7181:7181): Creación de Proceso PID: 4
+[WARNING] 20:02:15:472 Memoria/(7181:7181): COD OP: 2
+[INFO] 20:02:15:472 Memoria/(7181:7181): Creación de Proceso PID: 5
+[WARNING] 20:02:15:893 Memoria/(7181:7181): COD OP: 2
+[INFO] 20:02:15:893 Memoria/(7181:7181): Creación de Proceso PID: 6
+[WARNING] 20:02:18:839 Memoria/(7181:7181): COD OP: 5
+[INFO] 20:02:18:839 Memoria/(7181:7181): PID: 1 - Acción: LEER - Dirección física: 4 - Tamaño: 4 - Origen: FILESYSTEM
+[WARNING] 20:02:20:841 Memoria/(7181:7181): COD OP: 3
+[INFO] 20:02:20:841 Memoria/(7181:7181): Eliminación de Proceso PID: 1
+[WARNING] 20:02:25:844 Memoria/(7181:7181): COD OP: 5
+[INFO] 20:02:25:844 Memoria/(7181:7181): PID: 2 - Acción: LEER - Dirección física: 4 - Tamaño: 4 - Origen: FILESYSTEM
+[WARNING] 20:02:27:847 Memoria/(7181:7181): COD OP: 3
+[INFO] 20:02:27:847 Memoria/(7181:7181): Eliminación de Proceso PID: 2
+[WARNING] 20:02:32:851 Memoria/(7181:7181): COD OP: 5
+[INFO] 20:02:32:851 Memoria/(7181:7181): PID: 3 - Acción: LEER - Dirección física: 4 - Tamaño: 4 - Origen: FILESYSTEM
+[WARNING] 20:02:34:853 Memoria/(7181:7181): COD OP: 3
+[INFO] 20:02:34:853 Memoria/(7181:7181): Eliminación de Proceso PID: 3
+[WARNING] 20:02:39:857 Memoria/(7181:7181): COD OP: 5
+[INFO] 20:02:39:858 Memoria/(7181:7181): PID: 4 - Acción: LEER - Dirección física: 4 - Tamaño: 4 - Origen: FILESYSTEM
+[WARNING] 20:02:41:860 Memoria/(7181:7181): COD OP: 3
+[INFO] 20:02:41:860 Memoria/(7181:7181): Eliminación de Proceso PID: 4
+[WARNING] 20:02:46:865 Memoria/(7181:7181): COD OP: 5
+[INFO] 20:02:46:865 Memoria/(7181:7181): PID: 5 - Acción: LEER - Dirección física: 4 - Tamaño: 4 - Origen: FILESYSTEM
+[WARNING] 20:02:48:867 Memoria/(7181:7181): COD OP: 3
+[INFO] 20:02:48:867 Memoria/(7181:7181): Eliminación de Proceso PID: 5
+[WARNING] 20:02:53:872 Memoria/(7181:7181): COD OP: 5
+[INFO] 20:02:53:872 Memoria/(7181:7181): PID: 6 - Acción: LEER - Dirección física: 4 - Tamaño: 4 - Origen: FILESYSTEM
+[WARNING] 20:02:55:875 Memoria/(7181:7181): COD OP: 3
+[INFO] 20:02:55:875 Memoria/(7181:7181): Eliminación de Proceso PID: 6
+[WARNING] 20:03:45:619 Memoria/(7222:7222): COD OP: 2
+[INFO] 20:03:45:619 Memoria/(7222:7222): Creación de Proceso PID: 1
+[WARNING] 20:03:46:040 Memoria/(7222:7222): COD OP: 2
+[INFO] 20:03:46:041 Memoria/(7222:7222): Creación de Proceso PID: 2
+[WARNING] 20:03:46:549 Memoria/(7222:7222): COD OP: 2
+[INFO] 20:03:46:549 Memoria/(7222:7222): Creación de Proceso PID: 3
+[WARNING] 20:03:47:051 Memoria/(7222:7222): COD OP: 2
+[INFO] 20:03:47:051 Memoria/(7222:7222): Creación de Proceso PID: 4
+[WARNING] 20:03:47:518 Memoria/(7222:7222): COD OP: 2
+[INFO] 20:03:47:518 Memoria/(7222:7222): Creación de Proceso PID: 5
+[WARNING] 20:03:48:020 Memoria/(7222:7222): COD OP: 2
+[INFO] 20:03:48:020 Memoria/(7222:7222): Creación de Proceso PID: 6
+[WARNING] 20:03:50:623 Memoria/(7222:7222): COD OP: 5
+[INFO] 20:03:50:623 Memoria/(7222:7222): PID: 1 - Acción: LEER - Dirección física: 4 - Tamaño: 4 - Origen: FILESYSTEM
+[WARNING] 20:03:53:626 Memoria/(7222:7222): COD OP: 6
+[INFO] 20:03:53:626 Memoria/(7222:7222): PID: 1 - Acción: ESCRIBIR - Dirección física: 10 - Tamaño: 0 - Origen: FILESYSTEM
+[WARNING] 20:03:54:627 Memoria/(7222:7222): COD OP: 3
+[INFO] 20:03:54:627 Memoria/(7222:7222): Eliminación de Proceso PID: 1
+[WARNING] 20:03:59:633 Memoria/(7222:7222): COD OP: 5
+[INFO] 20:03:59:633 Memoria/(7222:7222): PID: 2 - Acción: LEER - Dirección física: 4 - Tamaño: 4 - Origen: FILESYSTEM
+[WARNING] 20:04:02:636 Memoria/(7222:7222): COD OP: 6
+[INFO] 20:04:02:636 Memoria/(7222:7222): PID: 2 - Acción: ESCRIBIR - Dirección física: 10 - Tamaño: 0 - Origen: FILESYSTEM
+[WARNING] 20:04:03:637 Memoria/(7222:7222): COD OP: 3
+[INFO] 20:04:03:637 Memoria/(7222:7222): Eliminación de Proceso PID: 2
+[WARNING] 20:04:08:642 Memoria/(7222:7222): COD OP: 5
+[INFO] 20:04:08:642 Memoria/(7222:7222): PID: 3 - Acción: LEER - Dirección física: 4 - Tamaño: 4 - Origen: FILESYSTEM
+[WARNING] 20:04:11:644 Memoria/(7222:7222): COD OP: 6
+[INFO] 20:04:11:644 Memoria/(7222:7222): PID: 3 - Acción: ESCRIBIR - Dirección física: 10 - Tamaño: 0 - Origen: FILESYSTEM
+[WARNING] 20:04:12:646 Memoria/(7222:7222): COD OP: 3
+[INFO] 20:04:12:646 Memoria/(7222:7222): Eliminación de Proceso PID: 3
+[WARNING] 20:04:17:650 Memoria/(7222:7222): COD OP: 5
+[INFO] 20:04:17:650 Memoria/(7222:7222): PID: 4 - Acción: LEER - Dirección física: 4 - Tamaño: 4 - Origen: FILESYSTEM
+[WARNING] 20:04:20:653 Memoria/(7222:7222): COD OP: 6
+[INFO] 20:04:20:653 Memoria/(7222:7222): PID: 4 - Acción: ESCRIBIR - Dirección física: 10 - Tamaño: 0 - Origen: FILESYSTEM
+[WARNING] 20:04:21:659 Memoria/(7222:7222): COD OP: 3
+[INFO] 20:04:21:659 Memoria/(7222:7222): Eliminación de Proceso PID: 4
+[WARNING] 20:04:26:664 Memoria/(7222:7222): COD OP: 5
+[INFO] 20:04:26:664 Memoria/(7222:7222): PID: 5 - Acción: LEER - Dirección física: 4 - Tamaño: 4 - Origen: FILESYSTEM
+[WARNING] 20:04:29:667 Memoria/(7222:7222): COD OP: 6
+[INFO] 20:04:29:667 Memoria/(7222:7222): PID: 5 - Acción: ESCRIBIR - Dirección física: 10 - Tamaño: 0 - Origen: FILESYSTEM
+[WARNING] 20:04:30:670 Memoria/(7222:7222): COD OP: 3
+[INFO] 20:04:30:670 Memoria/(7222:7222): Eliminación de Proceso PID: 5
+[WARNING] 20:04:35:675 Memoria/(7222:7222): COD OP: 5
+[INFO] 20:04:35:675 Memoria/(7222:7222): PID: 6 - Acción: LEER - Dirección física: 4 - Tamaño: 4 - Origen: FILESYSTEM
+[WARNING] 20:04:38:677 Memoria/(7222:7222): COD OP: 6
+[INFO] 20:04:38:677 Memoria/(7222:7222): PID: 6 - Acción: ESCRIBIR - Dirección física: 10 - Tamaño: 0 - Origen: FILESYSTEM
+[WARNING] 20:04:39:680 Memoria/(7222:7222): COD OP: 3
+[INFO] 20:04:39:680 Memoria/(7222:7222): Eliminación de Proceso PID: 6
+[WARNING] 20:05:22:940 Memoria/(7262:7262): COD OP: 2
+[INFO] 20:05:22:940 Memoria/(7262:7262): Creación de Proceso PID: 1
+[WARNING] 20:05:23:428 Memoria/(7262:7262): COD OP: 2
+[INFO] 20:05:23:428 Memoria/(7262:7262): Creación de Proceso PID: 2
+[WARNING] 20:05:23:944 Memoria/(7262:7262): COD OP: 2
+[INFO] 20:05:23:945 Memoria/(7262:7262): Creación de Proceso PID: 3
+[WARNING] 20:05:24:440 Memoria/(7262:7262): COD OP: 2
+[INFO] 20:05:24:440 Memoria/(7262:7262): Creación de Proceso PID: 4
+[WARNING] 20:05:24:979 Memoria/(7262:7262): COD OP: 2
+[INFO] 20:05:24:979 Memoria/(7262:7262): Creación de Proceso PID: 5
+[WARNING] 20:05:25:473 Memoria/(7262:7262): COD OP: 2
+[INFO] 20:05:25:474 Memoria/(7262:7262): Creación de Proceso PID: 6
+[WARNING] 20:05:28:950 Memoria/(7262:7262): COD OP: 5
+[INFO] 20:05:28:950 Memoria/(7262:7262): PID: 1 - Acción: LEER - Dirección física: 4 - Tamaño: 4 - Origen: FILESYSTEM
+[WARNING] 20:05:31:953 Memoria/(7262:7262): COD OP: 6
+[INFO] 20:05:31:953 Memoria/(7262:7262): PID: 1 - Acción: ESCRIBIR - Dirección física: 10 - Tamaño: 0 - Origen: FILESYSTEM
+[WARNING] 20:05:32:955 Memoria/(7262:7262): COD OP: 3
+[INFO] 20:05:32:955 Memoria/(7262:7262): Eliminación de Proceso PID: 1
+[WARNING] 20:05:38:965 Memoria/(7262:7262): COD OP: 5
+[INFO] 20:05:38:965 Memoria/(7262:7262): PID: 2 - Acción: LEER - Dirección física: 4 - Tamaño: 4 - Origen: FILESYSTEM
+[WARNING] 20:05:41:967 Memoria/(7262:7262): COD OP: 6
+[INFO] 20:05:41:967 Memoria/(7262:7262): PID: 2 - Acción: ESCRIBIR - Dirección física: 10 - Tamaño: 0 - Origen: FILESYSTEM
+[WARNING] 20:05:42:970 Memoria/(7262:7262): COD OP: 3
+[INFO] 20:05:42:970 Memoria/(7262:7262): Eliminación de Proceso PID: 2
+[WARNING] 20:05:48:978 Memoria/(7262:7262): COD OP: 5
+[INFO] 20:05:48:978 Memoria/(7262:7262): PID: 3 - Acción: LEER - Dirección física: 4 - Tamaño: 4 - Origen: FILESYSTEM
+[WARNING] 20:05:51:980 Memoria/(7262:7262): COD OP: 6
+[INFO] 20:05:51:980 Memoria/(7262:7262): PID: 3 - Acción: ESCRIBIR - Dirección física: 10 - Tamaño: 0 - Origen: FILESYSTEM
+[WARNING] 20:05:52:983 Memoria/(7262:7262): COD OP: 3
+[INFO] 20:05:52:983 Memoria/(7262:7262): Eliminación de Proceso PID: 3
+[WARNING] 20:05:58:990 Memoria/(7262:7262): COD OP: 5
+[INFO] 20:05:58:990 Memoria/(7262:7262): PID: 4 - Acción: LEER - Dirección física: 4 - Tamaño: 4 - Origen: FILESYSTEM
+[WARNING] 20:06:01:993 Memoria/(7262:7262): COD OP: 6
+[INFO] 20:06:01:993 Memoria/(7262:7262): PID: 4 - Acción: ESCRIBIR - Dirección física: 10 - Tamaño: 0 - Origen: FILESYSTEM
+[WARNING] 20:06:02:999 Memoria/(7262:7262): COD OP: 3
+[INFO] 20:06:03:000 Memoria/(7262:7262): Eliminación de Proceso PID: 4
+[WARNING] 20:06:09:004 Memoria/(7262:7262): COD OP: 5
+[INFO] 20:06:09:004 Memoria/(7262:7262): PID: 5 - Acción: LEER - Dirección física: 4 - Tamaño: 4 - Origen: FILESYSTEM
+[WARNING] 20:06:12:009 Memoria/(7262:7262): COD OP: 6
+[INFO] 20:06:12:009 Memoria/(7262:7262): PID: 5 - Acción: ESCRIBIR - Dirección física: 10 - Tamaño: 0 - Origen: FILESYSTEM
+[WARNING] 20:06:13:021 Memoria/(7262:7262): COD OP: 3
+[INFO] 20:06:13:021 Memoria/(7262:7262): Eliminación de Proceso PID: 5
+[WARNING] 20:06:19:083 Memoria/(7262:7262): COD OP: 5
+[INFO] 20:06:19:083 Memoria/(7262:7262): PID: 6 - Acción: LEER - Dirección física: 4 - Tamaño: 4 - Origen: FILESYSTEM
+[WARNING] 20:06:22:086 Memoria/(7262:7262): COD OP: 6
+[INFO] 20:06:22:086 Memoria/(7262:7262): PID: 6 - Acción: ESCRIBIR - Dirección física: 10 - Tamaño: 0 - Origen: FILESYSTEM
+[WARNING] 20:06:23:091 Memoria/(7262:7262): COD OP: 3
+[INFO] 20:06:23:091 Memoria/(7262:7262): Eliminación de Proceso PID: 6
+[WARNING] 20:06:39:364 Memoria/(7307:7307): COD OP: 2
+[INFO] 20:06:39:364 Memoria/(7307:7307): Creación de Proceso PID: 1
+[WARNING] 20:06:39:837 Memoria/(7307:7307): COD OP: 2
+[INFO] 20:06:39:837 Memoria/(7307:7307): Creación de Proceso PID: 2
+[WARNING] 20:06:40:347 Memoria/(7307:7307): COD OP: 2
+[INFO] 20:06:40:347 Memoria/(7307:7307): Creación de Proceso PID: 3
+[WARNING] 20:06:40:367 Memoria/(7307:7307): COD OP: 6
+[INFO] 20:06:40:367 Memoria/(7307:7307): PID: 1 - Acción: ESCRIBIR - Dirección física: 4 - Tamaño: 4 - Origen: CPU
+[WARNING] 20:06:41:368 Memoria/(7307:7307): COD OP: 2
+[INFO] 20:06:41:368 Memoria/(7307:7307): Creación de Proceso PID: 4
+[WARNING] 20:06:41:369 Memoria/(7307:7307): COD OP: 2
+[INFO] 20:06:41:369 Memoria/(7307:7307): Creación de Proceso PID: 5
+[WARNING] 20:06:41:666 Memoria/(7307:7307): COD OP: 2
+[INFO] 20:06:41:666 Memoria/(7307:7307): Creación de Proceso PID: 6
+[WARNING] 20:06:46:374 Memoria/(7307:7307): COD OP: 5
+[INFO] 20:06:46:374 Memoria/(7307:7307): PID: 1 - Acción: LEER - Dirección física: 4 - Tamaño: 4 - Origen: FILESYSTEM
+[WARNING] 20:06:49:376 Memoria/(7307:7307): COD OP: 6
+[INFO] 20:06:49:376 Memoria/(7307:7307): PID: 1 - Acción: ESCRIBIR - Dirección física: 10 - Tamaño: 4 - Origen: FILESYSTEM
+[WARNING] 20:06:50:377 Memoria/(7307:7307): COD OP: 3
+[INFO] 20:06:50:377 Memoria/(7307:7307): Eliminación de Proceso PID: 1
+[WARNING] 20:06:51:379 Memoria/(7307:7307): COD OP: 6
+[INFO] 20:06:51:380 Memoria/(7307:7307): PID: 2 - Acción: ESCRIBIR - Dirección física: 4 - Tamaño: 4 - Origen: CPU
+[WARNING] 20:06:57:384 Memoria/(7307:7307): COD OP: 5
+[INFO] 20:06:57:384 Memoria/(7307:7307): PID: 2 - Acción: LEER - Dirección física: 4 - Tamaño: 4 - Origen: FILESYSTEM
+[WARNING] 20:07:00:386 Memoria/(7307:7307): COD OP: 6
+[INFO] 20:07:00:386 Memoria/(7307:7307): PID: 2 - Acción: ESCRIBIR - Dirección física: 10 - Tamaño: 4 - Origen: FILESYSTEM
+[WARNING] 20:07:01:390 Memoria/(7307:7307): COD OP: 3
+[INFO] 20:07:01:390 Memoria/(7307:7307): Eliminación de Proceso PID: 2
+[WARNING] 20:07:02:392 Memoria/(7307:7307): COD OP: 6
+[INFO] 20:07:02:392 Memoria/(7307:7307): PID: 3 - Acción: ESCRIBIR - Dirección física: 4 - Tamaño: 4 - Origen: CPU
+[WARNING] 20:07:08:398 Memoria/(7307:7307): COD OP: 5
+[INFO] 20:07:08:398 Memoria/(7307:7307): PID: 3 - Acción: LEER - Dirección física: 4 - Tamaño: 4 - Origen: FILESYSTEM
+[WARNING] 20:07:11:401 Memoria/(7307:7307): COD OP: 6
+[INFO] 20:07:11:401 Memoria/(7307:7307): PID: 3 - Acción: ESCRIBIR - Dirección física: 10 - Tamaño: 4 - Origen: FILESYSTEM
+[WARNING] 20:07:12:404 Memoria/(7307:7307): COD OP: 3
+[INFO] 20:07:12:404 Memoria/(7307:7307): Eliminación de Proceso PID: 3
+[WARNING] 20:07:13:407 Memoria/(7307:7307): COD OP: 6
+[INFO] 20:07:13:407 Memoria/(7307:7307): PID: 4 - Acción: ESCRIBIR - Dirección física: 4 - Tamaño: 4 - Origen: CPU
+[WARNING] 20:07:19:410 Memoria/(7307:7307): COD OP: 5
+[INFO] 20:07:19:410 Memoria/(7307:7307): PID: 4 - Acción: LEER - Dirección física: 4 - Tamaño: 4 - Origen: FILESYSTEM
+[WARNING] 20:07:22:412 Memoria/(7307:7307): COD OP: 6
+[INFO] 20:07:22:412 Memoria/(7307:7307): PID: 4 - Acción: ESCRIBIR - Dirección física: 10 - Tamaño: 4 - Origen: FILESYSTEM
+[WARNING] 20:07:23:415 Memoria/(7307:7307): COD OP: 3
+[INFO] 20:07:23:415 Memoria/(7307:7307): Eliminación de Proceso PID: 4
+[WARNING] 20:07:24:417 Memoria/(7307:7307): COD OP: 6
+[INFO] 20:07:24:417 Memoria/(7307:7307): PID: 5 - Acción: ESCRIBIR - Dirección física: 4 - Tamaño: 4 - Origen: CPU
+[WARNING] 20:07:30:421 Memoria/(7307:7307): COD OP: 5
+[INFO] 20:07:30:421 Memoria/(7307:7307): PID: 5 - Acción: LEER - Dirección física: 4 - Tamaño: 4 - Origen: FILESYSTEM
+[WARNING] 20:07:33:423 Memoria/(7307:7307): COD OP: 6
+[INFO] 20:07:33:423 Memoria/(7307:7307): PID: 5 - Acción: ESCRIBIR - Dirección física: 10 - Tamaño: 4 - Origen: FILESYSTEM
+[WARNING] 20:07:34:425 Memoria/(7307:7307): COD OP: 3
+[INFO] 20:07:34:425 Memoria/(7307:7307): Eliminación de Proceso PID: 5
+[WARNING] 20:07:35:427 Memoria/(7307:7307): COD OP: 6
+[INFO] 20:07:35:427 Memoria/(7307:7307): PID: 6 - Acción: ESCRIBIR - Dirección física: 4 - Tamaño: 4 - Origen: CPU
+[WARNING] 20:07:41:432 Memoria/(7307:7307): COD OP: 5
+[INFO] 20:07:41:432 Memoria/(7307:7307): PID: 6 - Acción: LEER - Dirección física: 4 - Tamaño: 4 - Origen: FILESYSTEM
+[WARNING] 20:07:44:434 Memoria/(7307:7307): COD OP: 6
+[INFO] 20:07:44:434 Memoria/(7307:7307): PID: 6 - Acción: ESCRIBIR - Dirección física: 10 - Tamaño: 4 - Origen: FILESYSTEM
+[WARNING] 20:07:45:436 Memoria/(7307:7307): COD OP: 3
+[INFO] 20:07:45:436 Memoria/(7307:7307): Eliminación de Proceso PID: 6
+[WARNING] 20:08:22:934 Memoria/(7356:7356): COD OP: 2
+[INFO] 20:08:22:934 Memoria/(7356:7356): Creación de Proceso PID: 1
+[WARNING] 20:08:23:449 Memoria/(7356:7356): COD OP: 2
+[INFO] 20:08:23:449 Memoria/(7356:7356): Creación de Proceso PID: 2
+[WARNING] 20:08:23:937 Memoria/(7356:7356): COD OP: 6
+[INFO] 20:08:23:938 Memoria/(7356:7356): PID: 1 - Acción: ESCRIBIR - Dirección física: 4 - Tamaño: 4 - Origen: CPU
+[WARNING] 20:08:24:938 Memoria/(7356:7356): COD OP: 2
+[INFO] 20:08:24:938 Memoria/(7356:7356): Creación de Proceso PID: 3
+[WARNING] 20:08:24:939 Memoria/(7356:7356): COD OP: 2
+[INFO] 20:08:24:939 Memoria/(7356:7356): Creación de Proceso PID: 4
+[WARNING] 20:08:24:939 Memoria/(7356:7356): COD OP: 2
+[INFO] 20:08:24:939 Memoria/(7356:7356): Creación de Proceso PID: 5
+[WARNING] 20:08:25:377 Memoria/(7356:7356): COD OP: 2
+[INFO] 20:08:25:378 Memoria/(7356:7356): Creación de Proceso PID: 6
+[WARNING] 20:08:29:942 Memoria/(7356:7356): COD OP: 5
+[INFO] 20:08:29:942 Memoria/(7356:7356): PID: 1 - Acción: LEER - Dirección física: 4 - Tamaño: 4 - Origen: FILESYSTEM
+[WARNING] 20:08:32:944 Memoria/(7356:7356): COD OP: 6
+[INFO] 20:08:32:944 Memoria/(7356:7356): PID: 1 - Acción: ESCRIBIR - Dirección física: 10 - Tamaño: 4 - Origen: FILESYSTEM
+[WARNING] 20:08:33:945 Memoria/(7356:7356): COD OP: 5
+[INFO] 20:08:33:945 Memoria/(7356:7356): PID: 1 - Acción: LEER - Dirección física: 10 - Tamaño: 4 - Origen: CPU
+[WARNING] 20:08:35:947 Memoria/(7356:7356): COD OP: 3
+[INFO] 20:08:35:947 Memoria/(7356:7356): Eliminación de Proceso PID: 1
+[WARNING] 20:08:36:949 Memoria/(7356:7356): COD OP: 6
+[INFO] 20:08:36:949 Memoria/(7356:7356): PID: 2 - Acción: ESCRIBIR - Dirección física: 4 - Tamaño: 4 - Origen: CPU
+[WARNING] 20:08:42:954 Memoria/(7356:7356): COD OP: 5
+[INFO] 20:08:42:954 Memoria/(7356:7356): PID: 2 - Acción: LEER - Dirección física: 4 - Tamaño: 4 - Origen: FILESYSTEM
+[WARNING] 20:08:45:958 Memoria/(7356:7356): COD OP: 6
+[INFO] 20:08:45:958 Memoria/(7356:7356): PID: 2 - Acción: ESCRIBIR - Dirección física: 10 - Tamaño: 4 - Origen: FILESYSTEM
+[WARNING] 20:08:46:962 Memoria/(7356:7356): COD OP: 5
+[INFO] 20:08:46:963 Memoria/(7356:7356): PID: 2 - Acción: LEER - Dirección física: 10 - Tamaño: 4 - Origen: CPU
+[WARNING] 20:08:48:967 Memoria/(7356:7356): COD OP: 3
+[INFO] 20:08:48:967 Memoria/(7356:7356): Eliminación de Proceso PID: 2
+[WARNING] 20:08:49:972 Memoria/(7356:7356): COD OP: 6
+[INFO] 20:08:49:973 Memoria/(7356:7356): PID: 3 - Acción: ESCRIBIR - Dirección física: 4 - Tamaño: 4 - Origen: CPU
+[WARNING] 20:08:55:986 Memoria/(7356:7356): COD OP: 5
+[INFO] 20:08:55:986 Memoria/(7356:7356): PID: 3 - Acción: LEER - Dirección física: 4 - Tamaño: 4 - Origen: FILESYSTEM
+[WARNING] 20:08:58:989 Memoria/(7356:7356): COD OP: 6
+[INFO] 20:08:58:989 Memoria/(7356:7356): PID: 3 - Acción: ESCRIBIR - Dirección física: 10 - Tamaño: 4 - Origen: FILESYSTEM
+[WARNING] 20:08:59:989 Memoria/(7356:7356): COD OP: 5
+[INFO] 20:08:59:989 Memoria/(7356:7356): PID: 3 - Acción: LEER - Dirección física: 10 - Tamaño: 4 - Origen: CPU
+[WARNING] 20:09:01:993 Memoria/(7356:7356): COD OP: 3
+[INFO] 20:09:01:993 Memoria/(7356:7356): Eliminación de Proceso PID: 4
+[WARNING] 20:09:02:996 Memoria/(7356:7356): COD OP: 6
+[INFO] 20:09:02:996 Memoria/(7356:7356): PID: 3 - Acción: ESCRIBIR - Dirección física: 4 - Tamaño: 4 - Origen: CPU
+[WARNING] 20:09:09:002 Memoria/(7356:7356): COD OP: 5
+[INFO] 20:09:09:002 Memoria/(7356:7356): PID: 3 - Acción: LEER - Dirección física: 4 - Tamaño: 4 - Origen: FILESYSTEM
+[WARNING] 20:09:12:006 Memoria/(7356:7356): COD OP: 6
+[INFO] 20:09:12:006 Memoria/(7356:7356): PID: 3 - Acción: ESCRIBIR - Dirección física: 10 - Tamaño: 4 - Origen: FILESYSTEM
+[WARNING] 20:09:13:007 Memoria/(7356:7356): COD OP: 5
+[INFO] 20:09:13:007 Memoria/(7356:7356): PID: 3 - Acción: LEER - Dirección física: 10 - Tamaño: 4 - Origen: CPU
+[WARNING] 20:09:15:009 Memoria/(7356:7356): COD OP: 3
+[INFO] 20:09:15:009 Memoria/(7356:7356): Eliminación de Proceso PID: 3
+[WARNING] 20:09:16:012 Memoria/(7356:7356): COD OP: 6
+[INFO] 20:09:16:012 Memoria/(7356:7356): PID: 5 - Acción: ESCRIBIR - Dirección física: 4 - Tamaño: 4 - Origen: CPU
+[WARNING] 20:09:22:016 Memoria/(7356:7356): COD OP: 5
+[INFO] 20:09:22:016 Memoria/(7356:7356): PID: 5 - Acción: LEER - Dirección física: 4 - Tamaño: 4 - Origen: FILESYSTEM
+[WARNING] 20:09:25:018 Memoria/(7356:7356): COD OP: 6
+[INFO] 20:09:25:018 Memoria/(7356:7356): PID: 5 - Acción: ESCRIBIR - Dirección física: 10 - Tamaño: 4 - Origen: FILESYSTEM
+[WARNING] 20:09:26:019 Memoria/(7356:7356): COD OP: 5
+[INFO] 20:09:26:019 Memoria/(7356:7356): PID: 5 - Acción: LEER - Dirección física: 10 - Tamaño: 4 - Origen: CPU
+[WARNING] 20:09:28:023 Memoria/(7356:7356): COD OP: 3
+[INFO] 20:09:28:023 Memoria/(7356:7356): Eliminación de Proceso PID: 5
+[WARNING] 20:09:29:025 Memoria/(7356:7356): COD OP: 6
+[INFO] 20:09:29:025 Memoria/(7356:7356): PID: 6 - Acción: ESCRIBIR - Dirección física: 4 - Tamaño: 4 - Origen: CPU
+[WARNING] 20:09:35:031 Memoria/(7356:7356): COD OP: 5
+[INFO] 20:09:35:031 Memoria/(7356:7356): PID: 6 - Acción: LEER - Dirección física: 4 - Tamaño: 4 - Origen: FILESYSTEM
+[WARNING] 20:09:38:033 Memoria/(7356:7356): COD OP: 6
+[INFO] 20:09:38:033 Memoria/(7356:7356): PID: 6 - Acción: ESCRIBIR - Dirección física: 10 - Tamaño: 4 - Origen: FILESYSTEM
+[WARNING] 20:09:39:034 Memoria/(7356:7356): COD OP: 5
+[INFO] 20:09:39:034 Memoria/(7356:7356): PID: 6 - Acción: LEER - Dirección física: 10 - Tamaño: 4 - Origen: CPU
+[WARNING] 20:09:41:035 Memoria/(7356:7356): COD OP: 3
+[INFO] 20:09:41:035 Memoria/(7356:7356): Eliminación de Proceso PID: 6
+[WARNING] 20:11:03:155 Memoria/(7397:7397): COD OP: 2
+[INFO] 20:11:03:155 Memoria/(7397:7397): Creación de Proceso PID: 1
+[WARNING] 20:11:03:545 Memoria/(7397:7397): COD OP: 2
+[INFO] 20:11:03:545 Memoria/(7397:7397): Creación de Proceso PID: 2
+[WARNING] 20:11:03:963 Memoria/(7397:7397): COD OP: 2
+[INFO] 20:11:03:963 Memoria/(7397:7397): Creación de Proceso PID: 3
+[WARNING] 20:11:04:157 Memoria/(7397:7397): COD OP: 6
+[INFO] 20:11:04:158 Memoria/(7397:7397): PID: 1 - Acción: ESCRIBIR - Dirección física: 4 - Tamaño: 4 - Origen: CPU
+[WARNING] 20:11:05:158 Memoria/(7397:7397): COD OP: 2
+[INFO] 20:11:05:158 Memoria/(7397:7397): Creación de Proceso PID: 4
+[WARNING] 20:11:05:159 Memoria/(7397:7397): COD OP: 2
+[INFO] 20:11:05:159 Memoria/(7397:7397): Creación de Proceso PID: 5
+[WARNING] 20:11:05:381 Memoria/(7397:7397): COD OP: 2
+[INFO] 20:11:05:382 Memoria/(7397:7397): Creación de Proceso PID: 6
+[WARNING] 20:11:10:163 Memoria/(7397:7397): COD OP: 5
+[INFO] 20:11:10:163 Memoria/(7397:7397): PID: 1 - Acción: LEER - Dirección física: 4 - Tamaño: 4 - Origen: FILESYSTEM
+[WARNING] 20:11:13:165 Memoria/(7397:7397): COD OP: 6
+[INFO] 20:11:13:165 Memoria/(7397:7397): PID: 1 - Acción: ESCRIBIR - Dirección física: 10 - Tamaño: 4 - Origen: FILESYSTEM
+[WARNING] 20:11:14:166 Memoria/(7397:7397): COD OP: 5
+[INFO] 20:11:14:166 Memoria/(7397:7397): PID: 1 - Acción: LEER - Dirección física: 10 - Tamaño: 4 - Origen: CPU
+[WARNING] 20:11:16:169 Memoria/(7397:7397): COD OP: 3
+[INFO] 20:11:16:169 Memoria/(7397:7397): Eliminación de Proceso PID: 1
+[WARNING] 20:11:17:171 Memoria/(7397:7397): COD OP: 6
+[INFO] 20:11:17:171 Memoria/(7397:7397): PID: 2 - Acción: ESCRIBIR - Dirección física: 4 - Tamaño: 4 - Origen: CPU
+[WARNING] 20:11:23:178 Memoria/(7397:7397): COD OP: 5
+[INFO] 20:11:23:178 Memoria/(7397:7397): PID: 2 - Acción: LEER - Dirección física: 4 - Tamaño: 4 - Origen: FILESYSTEM
+[WARNING] 20:11:26:180 Memoria/(7397:7397): COD OP: 6
+[INFO] 20:11:26:180 Memoria/(7397:7397): PID: 2 - Acción: ESCRIBIR - Dirección física: 10 - Tamaño: 4 - Origen: FILESYSTEM
+[WARNING] 20:11:27:181 Memoria/(7397:7397): COD OP: 5
+[INFO] 20:11:27:181 Memoria/(7397:7397): PID: 2 - Acción: LEER - Dirección física: 10 - Tamaño: 4 - Origen: CPU
+[WARNING] 20:11:29:183 Memoria/(7397:7397): COD OP: 3
+[INFO] 20:11:29:183 Memoria/(7397:7397): Eliminación de Proceso PID: 2
+[WARNING] 20:11:30:185 Memoria/(7397:7397): COD OP: 6
+[INFO] 20:11:30:185 Memoria/(7397:7397): PID: 3 - Acción: ESCRIBIR - Dirección física: 4 - Tamaño: 4 - Origen: CPU
+[WARNING] 20:11:36:190 Memoria/(7397:7397): COD OP: 5
+[INFO] 20:11:36:190 Memoria/(7397:7397): PID: 3 - Acción: LEER - Dirección física: 4 - Tamaño: 4 - Origen: FILESYSTEM
+[WARNING] 20:11:39:194 Memoria/(7397:7397): COD OP: 6
+[INFO] 20:11:39:194 Memoria/(7397:7397): PID: 3 - Acción: ESCRIBIR - Dirección física: 10 - Tamaño: 4 - Origen: FILESYSTEM
+[WARNING] 20:11:40:195 Memoria/(7397:7397): COD OP: 5
+[INFO] 20:11:40:195 Memoria/(7397:7397): PID: 3 - Acción: LEER - Dirección física: 10 - Tamaño: 4 - Origen: CPU
+[WARNING] 20:11:42:198 Memoria/(7397:7397): COD OP: 3
+[INFO] 20:11:42:198 Memoria/(7397:7397): Eliminación de Proceso PID: 3
+[WARNING] 20:11:43:199 Memoria/(7397:7397): COD OP: 6
+[INFO] 20:11:43:199 Memoria/(7397:7397): PID: 4 - Acción: ESCRIBIR - Dirección física: 4 - Tamaño: 4 - Origen: CPU
+[WARNING] 20:11:49:204 Memoria/(7397:7397): COD OP: 5
+[INFO] 20:11:49:205 Memoria/(7397:7397): PID: 4 - Acción: LEER - Dirección física: 4 - Tamaño: 4 - Origen: FILESYSTEM
+[WARNING] 20:11:52:208 Memoria/(7397:7397): COD OP: 6
+[INFO] 20:11:52:208 Memoria/(7397:7397): PID: 4 - Acción: ESCRIBIR - Dirección física: 10 - Tamaño: 4 - Origen: FILESYSTEM
+[WARNING] 20:11:53:209 Memoria/(7397:7397): COD OP: 5
+[INFO] 20:11:53:209 Memoria/(7397:7397): PID: 4 - Acción: LEER - Dirección física: 10 - Tamaño: 4 - Origen: CPU
+[WARNING] 20:11:55:212 Memoria/(7397:7397): COD OP: 3
+[INFO] 20:11:55:212 Memoria/(7397:7397): Eliminación de Proceso PID: 4
+[WARNING] 20:11:56:214 Memoria/(7397:7397): COD OP: 6
+[INFO] 20:11:56:214 Memoria/(7397:7397): PID: 5 - Acción: ESCRIBIR - Dirección física: 4 - Tamaño: 4 - Origen: CPU
+[WARNING] 20:12:02:219 Memoria/(7397:7397): COD OP: 5
+[INFO] 20:12:02:219 Memoria/(7397:7397): PID: 5 - Acción: LEER - Dirección física: 4 - Tamaño: 4 - Origen: FILESYSTEM
+[WARNING] 20:12:05:222 Memoria/(7397:7397): COD OP: 6
+[INFO] 20:12:05:222 Memoria/(7397:7397): PID: 5 - Acción: ESCRIBIR - Dirección física: 10 - Tamaño: 4 - Origen: FILESYSTEM
+[WARNING] 20:12:06:223 Memoria/(7397:7397): COD OP: 5
+[INFO] 20:12:06:223 Memoria/(7397:7397): PID: 5 - Acción: LEER - Dirección física: 10 - Tamaño: 4 - Origen: CPU
+[WARNING] 20:12:08:225 Memoria/(7397:7397): COD OP: 3
+[INFO] 20:12:08:225 Memoria/(7397:7397): Eliminación de Proceso PID: 5
+[WARNING] 20:12:09:227 Memoria/(7397:7397): COD OP: 6
+[INFO] 20:12:09:227 Memoria/(7397:7397): PID: 6 - Acción: ESCRIBIR - Dirección física: 4 - Tamaño: 4 - Origen: CPU
+[WARNING] 20:12:15:231 Memoria/(7397:7397): COD OP: 5
+[INFO] 20:12:15:231 Memoria/(7397:7397): PID: 6 - Acción: LEER - Dirección física: 4 - Tamaño: 4 - Origen: FILESYSTEM
+[WARNING] 20:12:18:234 Memoria/(7397:7397): COD OP: 6
+[INFO] 20:12:18:234 Memoria/(7397:7397): PID: 6 - Acción: ESCRIBIR - Dirección física: 10 - Tamaño: 4 - Origen: FILESYSTEM
+[WARNING] 20:12:19:237 Memoria/(7397:7397): COD OP: 5
+[INFO] 20:12:19:237 Memoria/(7397:7397): PID: 6 - Acción: LEER - Dirección física: 10 - Tamaño: 4 - Origen: CPU
+[WARNING] 20:12:21:239 Memoria/(7397:7397): COD OP: 3
+[INFO] 20:12:21:239 Memoria/(7397:7397): Eliminación de Proceso PID: 6
+[WARNING] 20:13:06:336 Memoria/(7432:7432): COD OP: 2
+[INFO] 20:13:06:336 Memoria/(7432:7432): Creación de Proceso PID: 1
+[WARNING] 20:13:06:836 Memoria/(7432:7432): COD OP: 2
+[INFO] 20:13:06:836 Memoria/(7432:7432): Creación de Proceso PID: 2
+[WARNING] 20:13:07:339 Memoria/(7432:7432): COD OP: 6
+[INFO] 20:13:07:339 Memoria/(7432:7432): PID: 1 - Acción: ESCRIBIR - Dirección física: 4 - Tamaño: 4 - Origen: CPU
+[WARNING] 20:13:08:339 Memoria/(7432:7432): COD OP: 2
+[INFO] 20:13:08:344 Memoria/(7432:7432): Creación de Proceso PID: 3
+[WARNING] 20:13:08:347 Memoria/(7432:7432): COD OP: 2
+[INFO] 20:13:08:347 Memoria/(7432:7432): Creación de Proceso PID: 4
+[WARNING] 20:13:08:348 Memoria/(7432:7432): COD OP: 5
+[INFO] 20:13:08:348 Memoria/(7432:7432): PID: 1 - Acción: LEER - Dirección física: 4 - Tamaño: 4 - Origen: FILESYSTEM
+[WARNING] 20:13:09:349 Memoria/(7432:7432): COD OP: 2
+[INFO] 20:13:09:350 Memoria/(7432:7432): Creación de Proceso PID: 5
+[WARNING] 20:13:09:351 Memoria/(7432:7432): COD OP: 2
+[INFO] 20:13:09:351 Memoria/(7432:7432): Creación de Proceso PID: 6
+[WARNING] 20:13:11:353 Memoria/(7432:7432): COD OP: 6
+[INFO] 20:13:11:353 Memoria/(7432:7432): PID: 1 - Acción: ESCRIBIR - Dirección física: 10 - Tamaño: 4 - Origen: FILESYSTEM
+[WARNING] 20:13:12:354 Memoria/(7432:7432): COD OP: 5
+[INFO] 20:13:12:354 Memoria/(7432:7432): PID: 1 - Acción: LEER - Dirección física: 10 - Tamaño: 4 - Origen: CPU
+[WARNING] 20:13:14:355 Memoria/(7432:7432): COD OP: 3
+[INFO] 20:13:14:355 Memoria/(7432:7432): Eliminación de Proceso PID: 1
+[WARNING] 20:13:15:357 Memoria/(7432:7432): COD OP: 6
+[INFO] 20:13:15:357 Memoria/(7432:7432): PID: 2 - Acción: ESCRIBIR - Dirección física: 4 - Tamaño: 4 - Origen: CPU
+[WARNING] 20:13:16:360 Memoria/(7432:7432): COD OP: 5
+[INFO] 20:13:16:360 Memoria/(7432:7432): PID: 2 - Acción: LEER - Dirección física: 4 - Tamaño: 4 - Origen: FILESYSTEM
+[WARNING] 20:13:19:363 Memoria/(7432:7432): COD OP: 6
+[INFO] 20:13:19:363 Memoria/(7432:7432): PID: 2 - Acción: ESCRIBIR - Dirección física: 10 - Tamaño: 4 - Origen: FILESYSTEM
+[WARNING] 20:13:20:363 Memoria/(7432:7432): COD OP: 5
+[INFO] 20:13:20:363 Memoria/(7432:7432): PID: 2 - Acción: LEER - Dirección física: 10 - Tamaño: 4 - Origen: CPU
+[WARNING] 20:13:22:366 Memoria/(7432:7432): COD OP: 3
+[INFO] 20:13:22:366 Memoria/(7432:7432): Eliminación de Proceso PID: 3
+[WARNING] 20:13:23:368 Memoria/(7432:7432): COD OP: 6
+[INFO] 20:13:23:368 Memoria/(7432:7432): PID: 2 - Acción: ESCRIBIR - Dirección física: 4 - Tamaño: 4 - Origen: CPU
+[WARNING] 20:13:24:372 Memoria/(7432:7432): COD OP: 5
+[INFO] 20:13:24:372 Memoria/(7432:7432): PID: 2 - Acción: LEER - Dirección física: 4 - Tamaño: 4 - Origen: FILESYSTEM
+[WARNING] 20:13:27:375 Memoria/(7432:7432): COD OP: 6
+[INFO] 20:13:27:375 Memoria/(7432:7432): PID: 2 - Acción: ESCRIBIR - Dirección física: 10 - Tamaño: 4 - Origen: FILESYSTEM
+[WARNING] 20:13:28:375 Memoria/(7432:7432): COD OP: 5
+[INFO] 20:13:28:375 Memoria/(7432:7432): PID: 2 - Acción: LEER - Dirección física: 10 - Tamaño: 4 - Origen: CPU
+[WARNING] 20:13:30:377 Memoria/(7432:7432): COD OP: 3
+[INFO] 20:13:30:377 Memoria/(7432:7432): Eliminación de Proceso PID: 4
+[WARNING] 20:13:31:379 Memoria/(7432:7432): COD OP: 6
+[INFO] 20:13:31:379 Memoria/(7432:7432): PID: 2 - Acción: ESCRIBIR - Dirección física: 4 - Tamaño: 4 - Origen: CPU
+[WARNING] 20:13:32:382 Memoria/(7432:7432): COD OP: 5
+[INFO] 20:13:32:382 Memoria/(7432:7432): PID: 2 - Acción: LEER - Dirección física: 4 - Tamaño: 4 - Origen: FILESYSTEM
+[WARNING] 20:13:35:385 Memoria/(7432:7432): COD OP: 6
+[INFO] 20:13:35:385 Memoria/(7432:7432): PID: 2 - Acción: ESCRIBIR - Dirección física: 10 - Tamaño: 4 - Origen: FILESYSTEM
+[WARNING] 20:13:36:386 Memoria/(7432:7432): COD OP: 5
+[INFO] 20:13:36:387 Memoria/(7432:7432): PID: 2 - Acción: LEER - Dirección física: 10 - Tamaño: 4 - Origen: CPU
+[WARNING] 20:13:38:389 Memoria/(7432:7432): COD OP: 3
+[INFO] 20:13:38:389 Memoria/(7432:7432): Eliminación de Proceso PID: 5
+[WARNING] 20:13:39:391 Memoria/(7432:7432): COD OP: 6
+[INFO] 20:13:39:391 Memoria/(7432:7432): PID: 2 - Acción: ESCRIBIR - Dirección física: 4 - Tamaño: 4 - Origen: CPU
+[WARNING] 20:13:40:393 Memoria/(7432:7432): COD OP: 5
+[INFO] 20:13:40:394 Memoria/(7432:7432): PID: 2 - Acción: LEER - Dirección física: 4 - Tamaño: 4 - Origen: FILESYSTEM
+[WARNING] 20:13:43:396 Memoria/(7432:7432): COD OP: 6
+[INFO] 20:13:43:396 Memoria/(7432:7432): PID: 2 - Acción: ESCRIBIR - Dirección física: 10 - Tamaño: 4 - Origen: FILESYSTEM
+[WARNING] 20:13:44:397 Memoria/(7432:7432): COD OP: 5
+[INFO] 20:13:44:397 Memoria/(7432:7432): PID: 2 - Acción: LEER - Dirección física: 10 - Tamaño: 4 - Origen: CPU
+[WARNING] 20:13:46:400 Memoria/(7432:7432): COD OP: 3
+[INFO] 20:13:46:400 Memoria/(7432:7432): Eliminación de Proceso PID: 6
+[WARNING] 20:13:47:402 Memoria/(7432:7432): COD OP: 6
+[INFO] 20:13:47:402 Memoria/(7432:7432): PID: 2 - Acción: ESCRIBIR - Dirección física: 4 - Tamaño: 4 - Origen: CPU
+[WARNING] 20:13:48:406 Memoria/(7432:7432): COD OP: 5
+[INFO] 20:13:48:406 Memoria/(7432:7432): PID: 2 - Acción: LEER - Dirección física: 4 - Tamaño: 4 - Origen: FILESYSTEM
+[WARNING] 20:13:51:408 Memoria/(7432:7432): COD OP: 6
+[INFO] 20:13:51:408 Memoria/(7432:7432): PID: 2 - Acción: ESCRIBIR - Dirección física: 10 - Tamaño: 4 - Origen: FILESYSTEM
+[WARNING] 20:13:52:410 Memoria/(7432:7432): COD OP: 5
+[INFO] 20:13:52:410 Memoria/(7432:7432): PID: 2 - Acción: LEER - Dirección física: 10 - Tamaño: 4 - Origen: CPU
+[WARNING] 20:13:54:414 Memoria/(7432:7432): COD OP: 3
+[INFO] 20:13:54:414 Memoria/(7432:7432): Eliminación de Proceso PID: 2
+[WARNING] 20:18:24:780 Memoria/(7480:7480): COD OP: 2
+[INFO] 20:18:24:780 Memoria/(7480:7480): Creación de Proceso PID: 1
+[WARNING] 20:18:25:147 Memoria/(7480:7480): COD OP: 2
+[INFO] 20:18:25:148 Memoria/(7480:7480): Creación de Proceso PID: 2
+[WARNING] 20:18:25:541 Memoria/(7480:7480): COD OP: 2
+[INFO] 20:18:25:541 Memoria/(7480:7480): Creación de Proceso PID: 3
+[WARNING] 20:18:25:784 Memoria/(7480:7480): COD OP: 6
+[INFO] 20:18:25:784 Memoria/(7480:7480): PID: 1 - Acción: ESCRIBIR - Dirección física: 4 - Tamaño: 4 - Origen: CPU
+[WARNING] 20:18:26:784 Memoria/(7480:7480): COD OP: 2
+[INFO] 20:18:26:784 Memoria/(7480:7480): Creación de Proceso PID: 4
+[WARNING] 20:18:26:785 Memoria/(7480:7480): COD OP: 2
+[INFO] 20:18:26:785 Memoria/(7480:7480): Creación de Proceso PID: 5
+[WARNING] 20:18:26:787 Memoria/(7480:7480): COD OP: 5
+[INFO] 20:18:26:787 Memoria/(7480:7480): PID: 1 - Acción: LEER - Dirección física: 4 - Tamaño: 4 - Origen: FILESYSTEM
+[WARNING] 20:18:27:787 Memoria/(7480:7480): COD OP: 2
+[INFO] 20:18:27:788 Memoria/(7480:7480): Creación de Proceso PID: 6
+[WARNING] 20:18:29:790 Memoria/(7480:7480): COD OP: 6
+[INFO] 20:18:29:790 Memoria/(7480:7480): PID: 1 - Acción: ESCRIBIR - Dirección física: 10 - Tamaño: 4 - Origen: FILESYSTEM
+[WARNING] 20:18:30:792 Memoria/(7480:7480): COD OP: 3
+[INFO] 20:18:30:792 Memoria/(7480:7480): Eliminación de Proceso PID: 1
+[WARNING] 20:18:31:794 Memoria/(7480:7480): COD OP: 6
+[INFO] 20:18:31:794 Memoria/(7480:7480): PID: 2 - Acción: ESCRIBIR - Dirección física: 4 - Tamaño: 4 - Origen: CPU
+[WARNING] 20:18:32:797 Memoria/(7480:7480): COD OP: 5
+[INFO] 20:18:32:797 Memoria/(7480:7480): PID: 2 - Acción: LEER - Dirección física: 4 - Tamaño: 4 - Origen: FILESYSTEM
+[WARNING] 20:18:35:800 Memoria/(7480:7480): COD OP: 6
+[INFO] 20:18:35:800 Memoria/(7480:7480): PID: 2 - Acción: ESCRIBIR - Dirección física: 10 - Tamaño: 4 - Origen: FILESYSTEM
+[WARNING] 20:18:36:802 Memoria/(7480:7480): COD OP: 3
+[INFO] 20:18:36:802 Memoria/(7480:7480): Eliminación de Proceso PID: 3
+[WARNING] 20:18:37:804 Memoria/(7480:7480): COD OP: 6
+[INFO] 20:18:37:804 Memoria/(7480:7480): PID: 2 - Acción: ESCRIBIR - Dirección física: 4 - Tamaño: 4 - Origen: CPU
+[WARNING] 20:18:38:810 Memoria/(7480:7480): COD OP: 5
+[INFO] 20:18:38:810 Memoria/(7480:7480): PID: 2 - Acción: LEER - Dirección física: 4 - Tamaño: 4 - Origen: FILESYSTEM
+[WARNING] 20:18:41:813 Memoria/(7480:7480): COD OP: 6
+[INFO] 20:18:41:813 Memoria/(7480:7480): PID: 2 - Acción: ESCRIBIR - Dirección física: 10 - Tamaño: 4 - Origen: FILESYSTEM
+[WARNING] 20:18:42:817 Memoria/(7480:7480): COD OP: 3
+[INFO] 20:18:42:817 Memoria/(7480:7480): Eliminación de Proceso PID: 4
+[WARNING] 20:18:43:821 Memoria/(7480:7480): COD OP: 6
+[INFO] 20:18:43:821 Memoria/(7480:7480): PID: 2 - Acción: ESCRIBIR - Dirección física: 4 - Tamaño: 4 - Origen: CPU
+[WARNING] 20:18:44:829 Memoria/(7480:7480): COD OP: 5
+[INFO] 20:18:44:829 Memoria/(7480:7480): PID: 2 - Acción: LEER - Dirección física: 4 - Tamaño: 4 - Origen: FILESYSTEM
+[WARNING] 20:18:47:832 Memoria/(7480:7480): COD OP: 6
+[INFO] 20:18:47:832 Memoria/(7480:7480): PID: 2 - Acción: ESCRIBIR - Dirección física: 10 - Tamaño: 4 - Origen: FILESYSTEM
+[WARNING] 20:18:48:834 Memoria/(7480:7480): COD OP: 3
+[INFO] 20:18:48:834 Memoria/(7480:7480): Eliminación de Proceso PID: 5
+[WARNING] 20:18:49:836 Memoria/(7480:7480): COD OP: 6
+[INFO] 20:18:49:837 Memoria/(7480:7480): PID: 2 - Acción: ESCRIBIR - Dirección física: 4 - Tamaño: 4 - Origen: CPU
+[WARNING] 20:18:50:839 Memoria/(7480:7480): COD OP: 5
+[INFO] 20:18:50:839 Memoria/(7480:7480): PID: 2 - Acción: LEER - Dirección física: 4 - Tamaño: 4 - Origen: FILESYSTEM
+[WARNING] 20:18:53:841 Memoria/(7480:7480): COD OP: 6
+[INFO] 20:18:53:841 Memoria/(7480:7480): PID: 2 - Acción: ESCRIBIR - Dirección física: 10 - Tamaño: 4 - Origen: FILESYSTEM
+[WARNING] 20:18:54:845 Memoria/(7480:7480): COD OP: 3
+[INFO] 20:18:54:845 Memoria/(7480:7480): Eliminación de Proceso PID: 6
+[WARNING] 20:18:55:848 Memoria/(7480:7480): COD OP: 6
+[INFO] 20:18:55:848 Memoria/(7480:7480): PID: 2 - Acción: ESCRIBIR - Dirección física: 4 - Tamaño: 4 - Origen: CPU
+[WARNING] 20:18:56:852 Memoria/(7480:7480): COD OP: 5
+[INFO] 20:18:56:852 Memoria/(7480:7480): PID: 2 - Acción: LEER - Dirección física: 4 - Tamaño: 4 - Origen: FILESYSTEM
+[WARNING] 20:18:59:856 Memoria/(7480:7480): COD OP: 6
+[INFO] 20:18:59:856 Memoria/(7480:7480): PID: 2 - Acción: ESCRIBIR - Dirección física: 10 - Tamaño: 4 - Origen: FILESYSTEM
+[WARNING] 20:19:00:859 Memoria/(7480:7480): COD OP: 3
+[INFO] 20:19:00:859 Memoria/(7480:7480): Eliminación de Proceso PID: 2
+[WARNING] 20:20:32:538 Memoria/(7515:7515): COD OP: 2
+[INFO] 20:20:32:538 Memoria/(7515:7515): Creación de Proceso PID: 1
+[WARNING] 20:20:32:880 Memoria/(7515:7515): COD OP: 2
+[INFO] 20:20:32:881 Memoria/(7515:7515): Creación de Proceso PID: 2
+[WARNING] 20:20:33:240 Memoria/(7515:7515): COD OP: 2
+[INFO] 20:20:33:240 Memoria/(7515:7515): Creación de Proceso PID: 3
+[WARNING] 20:20:33:543 Memoria/(7515:7515): COD OP: 5
+[INFO] 20:20:33:543 Memoria/(7515:7515): PID: 1 - Acción: LEER - Dirección física: 4 - Tamaño: 4 - Origen: FILESYSTEM
+[WARNING] 20:20:34:543 Memoria/(7515:7515): COD OP: 2
+[INFO] 20:20:34:543 Memoria/(7515:7515): Creación de Proceso PID: 4
+[WARNING] 20:20:34:544 Memoria/(7515:7515): COD OP: 2
+[INFO] 20:20:34:544 Memoria/(7515:7515): Creación de Proceso PID: 5
+[WARNING] 20:20:34:544 Memoria/(7515:7515): COD OP: 2
+[INFO] 20:20:34:544 Memoria/(7515:7515): Creación de Proceso PID: 6
+[WARNING] 20:20:36:545 Memoria/(7515:7515): COD OP: 6
+[INFO] 20:20:36:545 Memoria/(7515:7515): PID: 1 - Acción: ESCRIBIR - Dirección física: 10 - Tamaño: 0 - Origen: FILESYSTEM
+[WARNING] 20:20:37:548 Memoria/(7515:7515): COD OP: 3
+[INFO] 20:20:37:548 Memoria/(7515:7515): Eliminación de Proceso PID: 1
+[WARNING] 20:20:38:551 Memoria/(7515:7515): COD OP: 5
+[INFO] 20:20:38:551 Memoria/(7515:7515): PID: 2 - Acción: LEER - Dirección física: 4 - Tamaño: 4 - Origen: FILESYSTEM
+[WARNING] 20:20:41:555 Memoria/(7515:7515): COD OP: 6
+[INFO] 20:20:41:555 Memoria/(7515:7515): PID: 2 - Acción: ESCRIBIR - Dirección física: 10 - Tamaño: 0 - Origen: FILESYSTEM
+[WARNING] 20:20:42:557 Memoria/(7515:7515): COD OP: 3
+[INFO] 20:20:42:557 Memoria/(7515:7515): Eliminación de Proceso PID: 3
+[WARNING] 20:20:43:561 Memoria/(7515:7515): COD OP: 5
+[INFO] 20:20:43:561 Memoria/(7515:7515): PID: 2 - Acción: LEER - Dirección física: 4 - Tamaño: 4 - Origen: FILESYSTEM
+[WARNING] 20:20:46:563 Memoria/(7515:7515): COD OP: 6
+[INFO] 20:20:46:563 Memoria/(7515:7515): PID: 2 - Acción: ESCRIBIR - Dirección física: 10 - Tamaño: 0 - Origen: FILESYSTEM
+[WARNING] 20:20:47:566 Memoria/(7515:7515): COD OP: 3
+[INFO] 20:20:47:566 Memoria/(7515:7515): Eliminación de Proceso PID: 4
+[WARNING] 20:20:48:569 Memoria/(7515:7515): COD OP: 5
+[INFO] 20:20:48:569 Memoria/(7515:7515): PID: 2 - Acción: LEER - Dirección física: 4 - Tamaño: 4 - Origen: FILESYSTEM
+[WARNING] 20:20:51:572 Memoria/(7515:7515): COD OP: 6
+[INFO] 20:20:51:572 Memoria/(7515:7515): PID: 2 - Acción: ESCRIBIR - Dirección física: 10 - Tamaño: 0 - Origen: FILESYSTEM
+[WARNING] 20:20:52:574 Memoria/(7515:7515): COD OP: 3
+[INFO] 20:20:52:575 Memoria/(7515:7515): Eliminación de Proceso PID: 5
+[WARNING] 20:20:53:577 Memoria/(7515:7515): COD OP: 5
+[INFO] 20:20:53:577 Memoria/(7515:7515): PID: 2 - Acción: LEER - Dirección física: 4 - Tamaño: 4 - Origen: FILESYSTEM
+[WARNING] 20:20:56:579 Memoria/(7515:7515): COD OP: 6
+[INFO] 20:20:56:579 Memoria/(7515:7515): PID: 2 - Acción: ESCRIBIR - Dirección física: 10 - Tamaño: 0 - Origen: FILESYSTEM
+[WARNING] 20:20:57:583 Memoria/(7515:7515): COD OP: 3
+[INFO] 20:20:57:583 Memoria/(7515:7515): Eliminación de Proceso PID: 6
+[WARNING] 20:20:58:585 Memoria/(7515:7515): COD OP: 5
+[INFO] 20:20:58:585 Memoria/(7515:7515): PID: 2 - Acción: LEER - Dirección física: 4 - Tamaño: 4 - Origen: FILESYSTEM
+[WARNING] 20:21:01:588 Memoria/(7515:7515): COD OP: 6
+[INFO] 20:21:01:588 Memoria/(7515:7515): PID: 2 - Acción: ESCRIBIR - Dirección física: 10 - Tamaño: 0 - Origen: FILESYSTEM
+[WARNING] 20:21:02:592 Memoria/(7515:7515): COD OP: 3
+[INFO] 20:21:02:592 Memoria/(7515:7515): Eliminación de Proceso PID: 2
+[WARNING] 20:21:25:369 Memoria/(7515:7515): COD OP: 2
+[INFO] 20:21:25:369 Memoria/(7515:7515): Creación de Proceso PID: 7
+[WARNING] 20:21:25:753 Memoria/(7515:7515): COD OP: 2
+[INFO] 20:21:25:753 Memoria/(7515:7515): Creación de Proceso PID: 8
+[WARNING] 20:21:26:135 Memoria/(7515:7515): COD OP: 2
+[INFO] 20:21:26:135 Memoria/(7515:7515): Creación de Proceso PID: 9
+[WARNING] 20:21:26:374 Memoria/(7515:7515): COD OP: 5
+[INFO] 20:21:26:374 Memoria/(7515:7515): PID: 7 - Acción: LEER - Dirección física: 4 - Tamaño: 4 - Origen: FILESYSTEM
+[WARNING] 20:21:27:374 Memoria/(7515:7515): COD OP: 2
+[INFO] 20:21:27:375 Memoria/(7515:7515): Creación de Proceso PID: 10
+[WARNING] 20:21:27:375 Memoria/(7515:7515): COD OP: 2
+[INFO] 20:21:27:375 Memoria/(7515:7515): Creación de Proceso PID: 11
+[WARNING] 20:21:27:522 Memoria/(7515:7515): COD OP: 2
+[INFO] 20:21:27:522 Memoria/(7515:7515): Creación de Proceso PID: 12
+[WARNING] 20:21:29:378 Memoria/(7515:7515): COD OP: 6
+[INFO] 20:21:29:378 Memoria/(7515:7515): PID: 7 - Acción: ESCRIBIR - Dirección física: 10 - Tamaño: 0 - Origen: FILESYSTEM
+[WARNING] 20:21:30:380 Memoria/(7515:7515): COD OP: 3
+[INFO] 20:21:30:380 Memoria/(7515:7515): Eliminación de Proceso PID: 7
+[WARNING] 20:21:31:383 Memoria/(7515:7515): COD OP: 5
+[INFO] 20:21:31:383 Memoria/(7515:7515): PID: 8 - Acción: LEER - Dirección física: 4 - Tamaño: 4 - Origen: FILESYSTEM
+[WARNING] 20:21:34:385 Memoria/(7515:7515): COD OP: 6
+[INFO] 20:21:34:385 Memoria/(7515:7515): PID: 8 - Acción: ESCRIBIR - Dirección física: 10 - Tamaño: 0 - Origen: FILESYSTEM
+[WARNING] 20:21:35:390 Memoria/(7515:7515): COD OP: 3
+[INFO] 20:21:35:390 Memoria/(7515:7515): Eliminación de Proceso PID: 9
+[WARNING] 20:21:36:393 Memoria/(7515:7515): COD OP: 5
+[INFO] 20:21:36:393 Memoria/(7515:7515): PID: 8 - Acción: LEER - Dirección física: 4 - Tamaño: 4 - Origen: FILESYSTEM
+[WARNING] 20:21:39:395 Memoria/(7515:7515): COD OP: 6
+[INFO] 20:21:39:395 Memoria/(7515:7515): PID: 8 - Acción: ESCRIBIR - Dirección física: 10 - Tamaño: 0 - Origen: FILESYSTEM
+[WARNING] 20:21:40:397 Memoria/(7515:7515): COD OP: 3
+[INFO] 20:21:40:397 Memoria/(7515:7515): Eliminación de Proceso PID: 10
+[WARNING] 20:21:41:400 Memoria/(7515:7515): COD OP: 5
+[INFO] 20:21:41:400 Memoria/(7515:7515): PID: 8 - Acción: LEER - Dirección física: 4 - Tamaño: 4 - Origen: FILESYSTEM
+[WARNING] 20:21:44:402 Memoria/(7515:7515): COD OP: 6
+[INFO] 20:21:44:402 Memoria/(7515:7515): PID: 8 - Acción: ESCRIBIR - Dirección física: 10 - Tamaño: 0 - Origen: FILESYSTEM
+[WARNING] 20:21:45:405 Memoria/(7515:7515): COD OP: 3
+[INFO] 20:21:45:405 Memoria/(7515:7515): Eliminación de Proceso PID: 11
+[WARNING] 20:21:46:408 Memoria/(7515:7515): COD OP: 5
+[INFO] 20:21:46:408 Memoria/(7515:7515): PID: 8 - Acción: LEER - Dirección física: 4 - Tamaño: 4 - Origen: FILESYSTEM
+[WARNING] 20:21:49:411 Memoria/(7515:7515): COD OP: 6
+[INFO] 20:21:49:412 Memoria/(7515:7515): PID: 8 - Acción: ESCRIBIR - Dirección física: 10 - Tamaño: 0 - Origen: FILESYSTEM
+[WARNING] 20:21:50:414 Memoria/(7515:7515): COD OP: 3
+[INFO] 20:21:50:414 Memoria/(7515:7515): Eliminación de Proceso PID: 12
+[WARNING] 20:21:51:416 Memoria/(7515:7515): COD OP: 5
+[INFO] 20:21:51:416 Memoria/(7515:7515): PID: 8 - Acción: LEER - Dirección física: 4 - Tamaño: 4 - Origen: FILESYSTEM
+[WARNING] 20:21:54:418 Memoria/(7515:7515): COD OP: 6
+[INFO] 20:21:54:418 Memoria/(7515:7515): PID: 8 - Acción: ESCRIBIR - Dirección física: 10 - Tamaño: 0 - Origen: FILESYSTEM
+[WARNING] 20:21:55:422 Memoria/(7515:7515): COD OP: 3
+[INFO] 20:21:55:422 Memoria/(7515:7515): Eliminación de Proceso PID: 8
+[WARNING] 20:23:26:858 Memoria/(7559:7559): COD OP: 2
+[INFO] 20:23:26:859 Memoria/(7559:7559): Creación de Proceso PID: 1
+[WARNING] 20:23:27:387 Memoria/(7559:7559): COD OP: 2
+[INFO] 20:23:27:387 Memoria/(7559:7559): Creación de Proceso PID: 2
+[WARNING] 20:23:27:819 Memoria/(7559:7559): COD OP: 2
+[INFO] 20:23:27:819 Memoria/(7559:7559): Creación de Proceso PID: 3
+[WARNING] 20:23:27:864 Memoria/(7559:7559): COD OP: 5
+[INFO] 20:23:27:864 Memoria/(7559:7559): PID: 1 - Acción: LEER - Dirección física: 4 - Tamaño: 4 - Origen: FILESYSTEM
+[WARNING] 20:23:28:864 Memoria/(7559:7559): COD OP: 2
+[INFO] 20:23:28:864 Memoria/(7559:7559): Creación de Proceso PID: 4
+[WARNING] 20:23:28:865 Memoria/(7559:7559): COD OP: 2
+[INFO] 20:23:28:865 Memoria/(7559:7559): Creación de Proceso PID: 5
+[WARNING] 20:23:29:211 Memoria/(7559:7559): COD OP: 2
+[INFO] 20:23:29:211 Memoria/(7559:7559): Creación de Proceso PID: 6
+[WARNING] 20:23:30:866 Memoria/(7559:7559): COD OP: 6
+[INFO] 20:23:30:866 Memoria/(7559:7559): PID: 1 - Acción: ESCRIBIR - Dirección física: 10 - Tamaño: 0 - Origen: FILESYSTEM
+[WARNING] 20:23:31:868 Memoria/(7559:7559): COD OP: 3
+[INFO] 20:23:31:868 Memoria/(7559:7559): Eliminación de Proceso PID: 1
+[WARNING] 20:23:32:874 Memoria/(7559:7559): COD OP: 5
+[INFO] 20:23:32:874 Memoria/(7559:7559): PID: 2 - Acción: LEER - Dirección física: 4 - Tamaño: 4 - Origen: FILESYSTEM
+[WARNING] 20:23:35:878 Memoria/(7559:7559): COD OP: 6
+[INFO] 20:23:35:878 Memoria/(7559:7559): PID: 2 - Acción: ESCRIBIR - Dirección física: 10 - Tamaño: 0 - Origen: FILESYSTEM
+[WARNING] 20:23:36:884 Memoria/(7559:7559): COD OP: 3
+[INFO] 20:23:36:884 Memoria/(7559:7559): Eliminación de Proceso PID: 3
+[WARNING] 20:23:37:886 Memoria/(7559:7559): COD OP: 5
+[INFO] 20:23:37:886 Memoria/(7559:7559): PID: 2 - Acción: LEER - Dirección física: 4 - Tamaño: 4 - Origen: FILESYSTEM
+[WARNING] 20:23:40:889 Memoria/(7559:7559): COD OP: 6
+[INFO] 20:23:40:889 Memoria/(7559:7559): PID: 2 - Acción: ESCRIBIR - Dirección física: 10 - Tamaño: 0 - Origen: FILESYSTEM
+[WARNING] 20:23:41:902 Memoria/(7559:7559): COD OP: 3
+[INFO] 20:23:41:902 Memoria/(7559:7559): Eliminación de Proceso PID: 4
+[WARNING] 20:23:42:907 Memoria/(7559:7559): COD OP: 5
+[INFO] 20:23:42:907 Memoria/(7559:7559): PID: 2 - Acción: LEER - Dirección física: 4 - Tamaño: 4 - Origen: FILESYSTEM
+[WARNING] 20:23:45:913 Memoria/(7559:7559): COD OP: 6
+[INFO] 20:23:45:913 Memoria/(7559:7559): PID: 2 - Acción: ESCRIBIR - Dirección física: 10 - Tamaño: 0 - Origen: FILESYSTEM
+[WARNING] 20:23:46:918 Memoria/(7559:7559): COD OP: 3
+[INFO] 20:23:46:918 Memoria/(7559:7559): Eliminación de Proceso PID: 5
+[WARNING] 20:23:47:920 Memoria/(7559:7559): COD OP: 5
+[INFO] 20:23:47:920 Memoria/(7559:7559): PID: 2 - Acción: LEER - Dirección física: 4 - Tamaño: 4 - Origen: FILESYSTEM
+[WARNING] 20:23:50:923 Memoria/(7559:7559): COD OP: 6
+[INFO] 20:23:50:923 Memoria/(7559:7559): PID: 2 - Acción: ESCRIBIR - Dirección física: 10 - Tamaño: 0 - Origen: FILESYSTEM
+[WARNING] 20:23:51:927 Memoria/(7559:7559): COD OP: 3
+[INFO] 20:23:51:927 Memoria/(7559:7559): Eliminación de Proceso PID: 6
+[WARNING] 20:23:52:931 Memoria/(7559:7559): COD OP: 5
+[INFO] 20:23:52:931 Memoria/(7559:7559): PID: 2 - Acción: LEER - Dirección física: 4 - Tamaño: 4 - Origen: FILESYSTEM
+[WARNING] 20:23:55:934 Memoria/(7559:7559): COD OP: 6
+[INFO] 20:23:55:934 Memoria/(7559:7559): PID: 2 - Acción: ESCRIBIR - Dirección física: 10 - Tamaño: 0 - Origen: FILESYSTEM
+[WARNING] 20:23:56:937 Memoria/(7559:7559): COD OP: 3
+[INFO] 20:23:56:937 Memoria/(7559:7559): Eliminación de Proceso PID: 2
+[WARNING] 20:25:05:072 Memoria/(7604:7604): COD OP: 2
+[INFO] 20:25:05:072 Memoria/(7604:7604): Creación de Proceso PID: 1
+[WARNING] 20:25:05:445 Memoria/(7604:7604): COD OP: 2
+[INFO] 20:25:05:445 Memoria/(7604:7604): Creación de Proceso PID: 2
+[WARNING] 20:25:05:777 Memoria/(7604:7604): COD OP: 2
+[INFO] 20:25:05:777 Memoria/(7604:7604): Creación de Proceso PID: 3
+[WARNING] 20:25:06:075 Memoria/(7604:7604): COD OP: 6
+[INFO] 20:25:06:075 Memoria/(7604:7604): PID: 1 - Acción: ESCRIBIR - Dirección física: 4 - Tamaño: 4 - Origen: CPU
+[WARNING] 20:25:07:075 Memoria/(7604:7604): COD OP: 2
+[INFO] 20:25:07:075 Memoria/(7604:7604): Creación de Proceso PID: 4
+[WARNING] 20:25:07:076 Memoria/(7604:7604): COD OP: 2
+[INFO] 20:25:07:076 Memoria/(7604:7604): Creación de Proceso PID: 5
+[WARNING] 20:25:07:076 Memoria/(7604:7604): COD OP: 5
+[INFO] 20:25:07:076 Memoria/(7604:7604): PID: 1 - Acción: LEER - Dirección física: 10 - Tamaño: 4 - Origen: CPU
+[WARNING] 20:25:08:077 Memoria/(7604:7604): COD OP: 2
+[INFO] 20:25:08:077 Memoria/(7604:7604): Creación de Proceso PID: 6
+[WARNING] 20:25:09:078 Memoria/(7604:7604): COD OP: 3
+[INFO] 20:25:09:079 Memoria/(7604:7604): Eliminación de Proceso PID: 1
+[WARNING] 20:25:10:081 Memoria/(7604:7604): COD OP: 6
+[INFO] 20:25:10:081 Memoria/(7604:7604): PID: 2 - Acción: ESCRIBIR - Dirección física: 4 - Tamaño: 4 - Origen: CPU
+[WARNING] 20:25:11:082 Memoria/(7604:7604): COD OP: 5
+[INFO] 20:25:11:082 Memoria/(7604:7604): PID: 2 - Acción: LEER - Dirección física: 10 - Tamaño: 4 - Origen: CPU
+[WARNING] 20:25:13:085 Memoria/(7604:7604): COD OP: 3
+[INFO] 20:25:13:086 Memoria/(7604:7604): Eliminación de Proceso PID: 2
+[WARNING] 20:25:14:091 Memoria/(7604:7604): COD OP: 6
+[INFO] 20:25:14:091 Memoria/(7604:7604): PID: 3 - Acción: ESCRIBIR - Dirección física: 4 - Tamaño: 4 - Origen: CPU
+[WARNING] 20:25:15:092 Memoria/(7604:7604): COD OP: 5
+[INFO] 20:25:15:092 Memoria/(7604:7604): PID: 3 - Acción: LEER - Dirección física: 10 - Tamaño: 4 - Origen: CPU
+[WARNING] 20:25:17:094 Memoria/(7604:7604): COD OP: 3
+[INFO] 20:25:17:094 Memoria/(7604:7604): Eliminación de Proceso PID: 3
+[WARNING] 20:25:18:096 Memoria/(7604:7604): COD OP: 6
+[INFO] 20:25:18:096 Memoria/(7604:7604): PID: 4 - Acción: ESCRIBIR - Dirección física: 4 - Tamaño: 4 - Origen: CPU
+[WARNING] 20:25:19:097 Memoria/(7604:7604): COD OP: 5
+[INFO] 20:25:19:097 Memoria/(7604:7604): PID: 4 - Acción: LEER - Dirección física: 10 - Tamaño: 4 - Origen: CPU
+[WARNING] 20:25:21:098 Memoria/(7604:7604): COD OP: 3
+[INFO] 20:25:21:098 Memoria/(7604:7604): Eliminación de Proceso PID: 4
+[WARNING] 20:25:22:100 Memoria/(7604:7604): COD OP: 6
+[INFO] 20:25:22:101 Memoria/(7604:7604): PID: 5 - Acción: ESCRIBIR - Dirección física: 4 - Tamaño: 4 - Origen: CPU
+[WARNING] 20:25:23:101 Memoria/(7604:7604): COD OP: 5
+[INFO] 20:25:23:101 Memoria/(7604:7604): PID: 5 - Acción: LEER - Dirección física: 10 - Tamaño: 4 - Origen: CPU
+[WARNING] 20:25:25:103 Memoria/(7604:7604): COD OP: 3
+[INFO] 20:25:25:103 Memoria/(7604:7604): Eliminación de Proceso PID: 5
+[WARNING] 20:25:26:106 Memoria/(7604:7604): COD OP: 6
+[INFO] 20:25:26:106 Memoria/(7604:7604): PID: 6 - Acción: ESCRIBIR - Dirección física: 4 - Tamaño: 4 - Origen: CPU
+[WARNING] 20:25:27:107 Memoria/(7604:7604): COD OP: 5
+[INFO] 20:25:27:107 Memoria/(7604:7604): PID: 6 - Acción: LEER - Dirección física: 10 - Tamaño: 4 - Origen: CPU
+[WARNING] 20:25:29:109 Memoria/(7604:7604): COD OP: 3
+[INFO] 20:25:29:109 Memoria/(7604:7604): Eliminación de Proceso PID: 6
+[WARNING] 20:26:40:717 Memoria/(7637:7637): COD OP: 2
+[INFO] 20:26:40:717 Memoria/(7637:7637): Creación de Proceso PID: 1
+[WARNING] 20:26:41:114 Memoria/(7637:7637): COD OP: 2
+[INFO] 20:26:41:115 Memoria/(7637:7637): Creación de Proceso PID: 2
+[WARNING] 20:26:41:720 Memoria/(7637:7637): COD OP: 6
+[INFO] 20:26:41:720 Memoria/(7637:7637): PID: 1 - Acción: ESCRIBIR - Dirección física: 4 - Tamaño: 4 - Origen: CPU
+[WARNING] 20:26:42:721 Memoria/(7637:7637): COD OP: 2
+[INFO] 20:26:42:722 Memoria/(7637:7637): Creación de Proceso PID: 3
+[WARNING] 20:26:42:724 Memoria/(7637:7637): COD OP: 5
+[INFO] 20:26:42:724 Memoria/(7637:7637): PID: 1 - Acción: LEER - Dirección física: 10 - Tamaño: 4 - Origen: CPU
+[WARNING] 20:26:43:724 Memoria/(7637:7637): COD OP: 2
+[INFO] 20:26:43:724 Memoria/(7637:7637): Creación de Proceso PID: 4
+[WARNING] 20:26:43:725 Memoria/(7637:7637): COD OP: 2
+[INFO] 20:26:43:725 Memoria/(7637:7637): Creación de Proceso PID: 5
+[WARNING] 20:26:43:725 Memoria/(7637:7637): COD OP: 2
+[INFO] 20:26:43:725 Memoria/(7637:7637): Creación de Proceso PID: 6
+[WARNING] 20:26:44:727 Memoria/(7637:7637): COD OP: 3
+[INFO] 20:26:44:728 Memoria/(7637:7637): Eliminación de Proceso PID: 1
+[WARNING] 20:26:45:731 Memoria/(7637:7637): COD OP: 6
+[INFO] 20:26:45:731 Memoria/(7637:7637): PID: 2 - Acción: ESCRIBIR - Dirección física: 4 - Tamaño: 4 - Origen: CPU
+[WARNING] 20:26:46:734 Memoria/(7637:7637): COD OP: 5
+[INFO] 20:26:46:734 Memoria/(7637:7637): PID: 2 - Acción: LEER - Dirección física: 10 - Tamaño: 4 - Origen: CPU
+[WARNING] 20:26:48:736 Memoria/(7637:7637): COD OP: 3
+[INFO] 20:26:48:736 Memoria/(7637:7637): Eliminación de Proceso PID: 3
+[WARNING] 20:26:49:738 Memoria/(7637:7637): COD OP: 6
+[INFO] 20:26:49:738 Memoria/(7637:7637): PID: 2 - Acción: ESCRIBIR - Dirección física: 4 - Tamaño: 4 - Origen: CPU
+[WARNING] 20:26:50:742 Memoria/(7637:7637): COD OP: 5
+[INFO] 20:26:50:742 Memoria/(7637:7637): PID: 2 - Acción: LEER - Dirección física: 10 - Tamaño: 4 - Origen: CPU
+[WARNING] 20:26:52:744 Memoria/(7637:7637): COD OP: 3
+[INFO] 20:26:52:744 Memoria/(7637:7637): Eliminación de Proceso PID: 4
+[WARNING] 20:26:53:746 Memoria/(7637:7637): COD OP: 6
+[INFO] 20:26:53:746 Memoria/(7637:7637): PID: 2 - Acción: ESCRIBIR - Dirección física: 4 - Tamaño: 4 - Origen: CPU
+[WARNING] 20:26:54:750 Memoria/(7637:7637): COD OP: 5
+[INFO] 20:26:54:750 Memoria/(7637:7637): PID: 2 - Acción: LEER - Dirección física: 10 - Tamaño: 4 - Origen: CPU
+[WARNING] 20:26:56:753 Memoria/(7637:7637): COD OP: 3
+[INFO] 20:26:56:753 Memoria/(7637:7637): Eliminación de Proceso PID: 5
+[WARNING] 20:26:57:756 Memoria/(7637:7637): COD OP: 6
+[INFO] 20:26:57:756 Memoria/(7637:7637): PID: 2 - Acción: ESCRIBIR - Dirección física: 4 - Tamaño: 4 - Origen: CPU
+[WARNING] 20:26:58:758 Memoria/(7637:7637): COD OP: 5
+[INFO] 20:26:58:758 Memoria/(7637:7637): PID: 2 - Acción: LEER - Dirección física: 10 - Tamaño: 4 - Origen: CPU
+[WARNING] 20:27:00:760 Memoria/(7637:7637): COD OP: 3
+[INFO] 20:27:00:760 Memoria/(7637:7637): Eliminación de Proceso PID: 6
+[WARNING] 20:27:01:762 Memoria/(7637:7637): COD OP: 6
+[INFO] 20:27:01:763 Memoria/(7637:7637): PID: 2 - Acción: ESCRIBIR - Dirección física: 4 - Tamaño: 4 - Origen: CPU
+[WARNING] 20:27:02:765 Memoria/(7637:7637): COD OP: 5
+[INFO] 20:27:02:765 Memoria/(7637:7637): PID: 2 - Acción: LEER - Dirección física: 10 - Tamaño: 4 - Origen: CPU
+[WARNING] 20:27:04:767 Memoria/(7637:7637): COD OP: 3
+[INFO] 20:27:04:767 Memoria/(7637:7637): Eliminación de Proceso PID: 2
+[WARNING] 20:30:31:412 Memoria/(7806:7806): COD OP: 2
+[INFO] 20:30:31:421 Memoria/(7806:7806): Creación de Proceso PID: 1
+[WARNING] 20:30:31:846 Memoria/(7806:7806): COD OP: 2
+[INFO] 20:30:31:846 Memoria/(7806:7806): Creación de Proceso PID: 2
+[WARNING] 20:30:32:313 Memoria/(7806:7806): COD OP: 2
+[INFO] 20:30:32:313 Memoria/(7806:7806): Creación de Proceso PID: 3
+[WARNING] 20:30:32:435 Memoria/(7806:7806): COD OP: 6
+[INFO] 20:30:32:435 Memoria/(7806:7806): PID: 1 - Acción: ESCRIBIR - Dirección física: 4 - Tamaño: 4 - Origen: CPU
+[WARNING] 20:30:33:436 Memoria/(7806:7806): COD OP: 2
+[INFO] 20:30:33:436 Memoria/(7806:7806): Creación de Proceso PID: 4
+[WARNING] 20:30:33:437 Memoria/(7806:7806): COD OP: 2
+[INFO] 20:30:33:437 Memoria/(7806:7806): Creación de Proceso PID: 5
+[WARNING] 20:30:33:440 Memoria/(7806:7806): COD OP: 5
+[INFO] 20:30:33:440 Memoria/(7806:7806): PID: 1 - Acción: LEER - Dirección física: 10 - Tamaño: 4 - Origen: CPU
+[WARNING] 20:30:34:440 Memoria/(7806:7806): COD OP: 2
+[INFO] 20:30:34:440 Memoria/(7806:7806): Creación de Proceso PID: 6
+[WARNING] 20:30:35:442 Memoria/(7806:7806): COD OP: 3
+[INFO] 20:30:35:443 Memoria/(7806:7806): Eliminación de Proceso PID: 1
+[WARNING] 20:30:36:447 Memoria/(7806:7806): COD OP: 6
+[INFO] 20:30:36:447 Memoria/(7806:7806): PID: 2 - Acción: ESCRIBIR - Dirección física: 4 - Tamaño: 4 - Origen: CPU
+[WARNING] 20:30:38:213 Memoria/(7806:7806): COD OP: -1
+[WARNING] 20:30:38:218 Memoria/(7806:7806): DEFAULT
+[WARNING] 20:31:23:302 Memoria/(7864:7864): COD OP: 2
+[INFO] 20:31:23:303 Memoria/(7864:7864): Creación de Proceso PID: 1
+[WARNING] 20:31:23:706 Memoria/(7864:7864): COD OP: 2
+[INFO] 20:31:23:706 Memoria/(7864:7864): Creación de Proceso PID: 2
+[WARNING] 20:31:24:142 Memoria/(7864:7864): COD OP: 2
+[INFO] 20:31:24:142 Memoria/(7864:7864): Creación de Proceso PID: 3
+[WARNING] 20:31:24:309 Memoria/(7864:7864): COD OP: 6
+[INFO] 20:31:24:310 Memoria/(7864:7864): PID: 1 - Acción: ESCRIBIR - Dirección física: 4 - Tamaño: 4 - Origen: CPU
+[WARNING] 20:31:25:311 Memoria/(7864:7864): COD OP: 2
+[INFO] 20:31:25:312 Memoria/(7864:7864): Creación de Proceso PID: 4
+[WARNING] 20:31:25:314 Memoria/(7864:7864): COD OP: 2
+[INFO] 20:31:25:314 Memoria/(7864:7864): Creación de Proceso PID: 5
+[WARNING] 20:31:25:321 Memoria/(7864:7864): COD OP: 5
+[INFO] 20:31:25:321 Memoria/(7864:7864): PID: 1 - Acción: LEER - Dirección física: 10 - Tamaño: 4 - Origen: CPU
+[WARNING] 20:31:26:322 Memoria/(7864:7864): COD OP: 2
+[INFO] 20:31:26:322 Memoria/(7864:7864): Creación de Proceso PID: 6
+[WARNING] 20:31:27:325 Memoria/(7864:7864): COD OP: 3
+[INFO] 20:31:27:325 Memoria/(7864:7864): Eliminación de Proceso PID: 1
+[WARNING] 20:31:28:329 Memoria/(7864:7864): COD OP: 6
+[INFO] 20:31:28:331 Memoria/(7864:7864): PID: 2 - Acción: ESCRIBIR - Dirección física: 4 - Tamaño: 4 - Origen: CPU
+[WARNING] 20:31:29:334 Memoria/(7864:7864): COD OP: 5
+[INFO] 20:31:29:334 Memoria/(7864:7864): PID: 2 - Acción: LEER - Dirección física: 10 - Tamaño: 4 - Origen: CPU
+[WARNING] 20:31:31:338 Memoria/(7864:7864): COD OP: 3
+[INFO] 20:31:31:338 Memoria/(7864:7864): Eliminación de Proceso PID: 2
+[WARNING] 20:31:32:340 Memoria/(7864:7864): COD OP: 6
+[INFO] 20:31:32:340 Memoria/(7864:7864): PID: 3 - Acción: ESCRIBIR - Dirección física: 4 - Tamaño: 4 - Origen: CPU
+[WARNING] 20:31:33:347 Memoria/(7864:7864): COD OP: 5
+[INFO] 20:31:33:347 Memoria/(7864:7864): PID: 3 - Acción: LEER - Dirección física: 10 - Tamaño: 4 - Origen: CPU
+[WARNING] 20:31:35:351 Memoria/(7864:7864): COD OP: 3
+[INFO] 20:31:35:351 Memoria/(7864:7864): Eliminación de Proceso PID: 3
+[WARNING] 20:31:36:354 Memoria/(7864:7864): COD OP: 6
+[INFO] 20:31:36:354 Memoria/(7864:7864): PID: 4 - Acción: ESCRIBIR - Dirección física: 4 - Tamaño: 4 - Origen: CPU
+[WARNING] 20:31:37:358 Memoria/(7864:7864): COD OP: 5
+[INFO] 20:31:37:358 Memoria/(7864:7864): PID: 4 - Acción: LEER - Dirección física: 10 - Tamaño: 4 - Origen: CPU
+[WARNING] 20:31:39:360 Memoria/(7864:7864): COD OP: 3
+[INFO] 20:31:39:360 Memoria/(7864:7864): Eliminación de Proceso PID: 4
+[WARNING] 20:31:40:362 Memoria/(7864:7864): COD OP: 6
+[INFO] 20:31:40:362 Memoria/(7864:7864): PID: 5 - Acción: ESCRIBIR - Dirección física: 4 - Tamaño: 4 - Origen: CPU
+[WARNING] 20:31:41:366 Memoria/(7864:7864): COD OP: 5
+[INFO] 20:31:41:366 Memoria/(7864:7864): PID: 5 - Acción: LEER - Dirección física: 10 - Tamaño: 4 - Origen: CPU
+[WARNING] 20:31:43:369 Memoria/(7864:7864): COD OP: 3
+[INFO] 20:31:43:369 Memoria/(7864:7864): Eliminación de Proceso PID: 5
+[WARNING] 20:31:44:373 Memoria/(7864:7864): COD OP: 6
+[INFO] 20:31:44:373 Memoria/(7864:7864): PID: 6 - Acción: ESCRIBIR - Dirección física: 4 - Tamaño: 4 - Origen: CPU
+[WARNING] 20:31:45:376 Memoria/(7864:7864): COD OP: 5
+[INFO] 20:31:45:376 Memoria/(7864:7864): PID: 6 - Acción: LEER - Dirección física: 10 - Tamaño: 4 - Origen: CPU
+[WARNING] 20:31:47:379 Memoria/(7864:7864): COD OP: 3
+[INFO] 20:31:47:379 Memoria/(7864:7864): Eliminación de Proceso PID: 6
+[WARNING] 20:33:06:014 Memoria/(7895:7895): COD OP: 2
+[INFO] 20:33:06:014 Memoria/(7895:7895): Creación de Proceso PID: 1
+[WARNING] 20:33:06:391 Memoria/(7895:7895): COD OP: 2
+[INFO] 20:33:06:391 Memoria/(7895:7895): Creación de Proceso PID: 2
+[WARNING] 20:33:06:824 Memoria/(7895:7895): COD OP: 2
+[INFO] 20:33:06:825 Memoria/(7895:7895): Creación de Proceso PID: 3
+[WARNING] 20:33:07:016 Memoria/(7895:7895): COD OP: 6
+[INFO] 20:33:07:017 Memoria/(7895:7895): PID: 1 - Acción: ESCRIBIR - Dirección física: 4 - Tamaño: 4 - Origen: CPU
+[WARNING] 20:33:08:017 Memoria/(7895:7895): COD OP: 2
+[INFO] 20:33:08:017 Memoria/(7895:7895): Creación de Proceso PID: 4
+[WARNING] 20:33:08:020 Memoria/(7895:7895): COD OP: 2
+[INFO] 20:33:08:020 Memoria/(7895:7895): Creación de Proceso PID: 5
+[WARNING] 20:33:08:034 Memoria/(7895:7895): COD OP: 5
+[INFO] 20:33:08:034 Memoria/(7895:7895): PID: 1 - Acción: LEER - Dirección física: 4 - Tamaño: 4 - Origen: FILESYSTEM
+[WARNING] 20:33:09:034 Memoria/(7895:7895): COD OP: 2
+[INFO] 20:33:09:035 Memoria/(7895:7895): Creación de Proceso PID: 6
+[WARNING] 20:33:11:041 Memoria/(7895:7895): COD OP: 6
+[INFO] 20:33:11:041 Memoria/(7895:7895): PID: 1 - Acción: ESCRIBIR - Dirección física: 10 - Tamaño: 4 - Origen: FILESYSTEM
+[WARNING] 20:33:12:042 Memoria/(7895:7895): COD OP: 5
+[INFO] 20:33:12:042 Memoria/(7895:7895): PID: 1 - Acción: LEER - Dirección física: 10 - Tamaño: 4 - Origen: CPU
+[WARNING] 20:33:14:044 Memoria/(7895:7895): COD OP: 3
+[INFO] 20:33:14:044 Memoria/(7895:7895): Eliminación de Proceso PID: 1
+[WARNING] 20:33:15:046 Memoria/(7895:7895): COD OP: 6
+[INFO] 20:33:15:046 Memoria/(7895:7895): PID: 2 - Acción: ESCRIBIR - Dirección física: 4 - Tamaño: 4 - Origen: CPU
+[WARNING] 20:33:16:049 Memoria/(7895:7895): COD OP: 5
+[INFO] 20:33:16:049 Memoria/(7895:7895): PID: 2 - Acción: LEER - Dirección física: 4 - Tamaño: 4 - Origen: FILESYSTEM
+[WARNING] 20:33:19:053 Memoria/(7895:7895): COD OP: 6
+[INFO] 20:33:19:053 Memoria/(7895:7895): PID: 2 - Acción: ESCRIBIR - Dirección física: 10 - Tamaño: 4 - Origen: FILESYSTEM
+[WARNING] 20:33:20:054 Memoria/(7895:7895): COD OP: 5
+[INFO] 20:33:20:054 Memoria/(7895:7895): PID: 2 - Acción: LEER - Dirección física: 10 - Tamaño: 4 - Origen: CPU
+[WARNING] 20:33:22:056 Memoria/(7895:7895): COD OP: 3
+[INFO] 20:33:22:056 Memoria/(7895:7895): Eliminación de Proceso PID: 2
+[WARNING] 20:33:23:059 Memoria/(7895:7895): COD OP: 6
+[INFO] 20:33:23:059 Memoria/(7895:7895): PID: 3 - Acción: ESCRIBIR - Dirección física: 4 - Tamaño: 4 - Origen: CPU
+[WARNING] 20:33:24:065 Memoria/(7895:7895): COD OP: 5
+[INFO] 20:33:24:065 Memoria/(7895:7895): PID: 3 - Acción: LEER - Dirección física: 4 - Tamaño: 4 - Origen: FILESYSTEM
+[WARNING] 20:33:27:069 Memoria/(7895:7895): COD OP: 6
+[INFO] 20:33:27:069 Memoria/(7895:7895): PID: 3 - Acción: ESCRIBIR - Dirección física: 10 - Tamaño: 4 - Origen: FILESYSTEM
+[WARNING] 20:33:28:071 Memoria/(7895:7895): COD OP: 5
+[INFO] 20:33:28:071 Memoria/(7895:7895): PID: 3 - Acción: LEER - Dirección física: 10 - Tamaño: 4 - Origen: CPU
+[WARNING] 20:33:30:073 Memoria/(7895:7895): COD OP: 3
+[INFO] 20:33:30:073 Memoria/(7895:7895): Eliminación de Proceso PID: 3
+[WARNING] 20:33:31:075 Memoria/(7895:7895): COD OP: 6
+[INFO] 20:33:31:075 Memoria/(7895:7895): PID: 4 - Acción: ESCRIBIR - Dirección física: 4 - Tamaño: 4 - Origen: CPU
+[WARNING] 20:33:32:078 Memoria/(7895:7895): COD OP: 5
+[INFO] 20:33:32:078 Memoria/(7895:7895): PID: 4 - Acción: LEER - Dirección física: 4 - Tamaño: 4 - Origen: FILESYSTEM
+[WARNING] 20:33:35:080 Memoria/(7895:7895): COD OP: 6
+[INFO] 20:33:35:080 Memoria/(7895:7895): PID: 4 - Acción: ESCRIBIR - Dirección física: 10 - Tamaño: 4 - Origen: FILESYSTEM
+[WARNING] 20:33:36:082 Memoria/(7895:7895): COD OP: 5
+[INFO] 20:33:36:082 Memoria/(7895:7895): PID: 4 - Acción: LEER - Dirección física: 10 - Tamaño: 4 - Origen: CPU
+[WARNING] 20:33:38:085 Memoria/(7895:7895): COD OP: 3
+[INFO] 20:33:38:085 Memoria/(7895:7895): Eliminación de Proceso PID: 4
+[WARNING] 20:33:39:087 Memoria/(7895:7895): COD OP: 6
+[INFO] 20:33:39:087 Memoria/(7895:7895): PID: 5 - Acción: ESCRIBIR - Dirección física: 4 - Tamaño: 4 - Origen: CPU
+[WARNING] 20:33:40:090 Memoria/(7895:7895): COD OP: 5
+[INFO] 20:33:40:091 Memoria/(7895:7895): PID: 5 - Acción: LEER - Dirección física: 4 - Tamaño: 4 - Origen: FILESYSTEM
+[WARNING] 20:33:43:094 Memoria/(7895:7895): COD OP: 6
+[INFO] 20:33:43:094 Memoria/(7895:7895): PID: 5 - Acción: ESCRIBIR - Dirección física: 10 - Tamaño: 4 - Origen: FILESYSTEM
+[WARNING] 20:33:44:095 Memoria/(7895:7895): COD OP: 5
+[INFO] 20:33:44:095 Memoria/(7895:7895): PID: 5 - Acción: LEER - Dirección física: 10 - Tamaño: 4 - Origen: CPU
+[WARNING] 20:33:46:098 Memoria/(7895:7895): COD OP: 3
+[INFO] 20:33:46:098 Memoria/(7895:7895): Eliminación de Proceso PID: 5
+[WARNING] 20:33:47:100 Memoria/(7895:7895): COD OP: 6
+[INFO] 20:33:47:100 Memoria/(7895:7895): PID: 6 - Acción: ESCRIBIR - Dirección física: 4 - Tamaño: 4 - Origen: CPU
+[WARNING] 20:33:48:105 Memoria/(7895:7895): COD OP: 5
+[INFO] 20:33:48:105 Memoria/(7895:7895): PID: 6 - Acción: LEER - Dirección física: 4 - Tamaño: 4 - Origen: FILESYSTEM
+[WARNING] 20:33:51:109 Memoria/(7895:7895): COD OP: 6
+[INFO] 20:33:51:109 Memoria/(7895:7895): PID: 6 - Acción: ESCRIBIR - Dirección física: 10 - Tamaño: 4 - Origen: FILESYSTEM
+[WARNING] 20:33:52:110 Memoria/(7895:7895): COD OP: 5
+[INFO] 20:33:52:110 Memoria/(7895:7895): PID: 6 - Acción: LEER - Dirección física: 10 - Tamaño: 4 - Origen: CPU
+[WARNING] 20:33:54:112 Memoria/(7895:7895): COD OP: 3
+[INFO] 20:33:54:112 Memoria/(7895:7895): Eliminación de Proceso PID: 6
+[WARNING] 20:34:50:071 Memoria/(7928:7928): COD OP: 2
+[INFO] 20:34:50:072 Memoria/(7928:7928): Creación de Proceso PID: 1
+[WARNING] 20:34:50:544 Memoria/(7928:7928): COD OP: 2
+[INFO] 20:34:50:544 Memoria/(7928:7928): Creación de Proceso PID: 2
+[WARNING] 20:34:51:076 Memoria/(7928:7928): COD OP: 6
+[INFO] 20:34:51:076 Memoria/(7928:7928): PID: 1 - Acción: ESCRIBIR - Dirección física: 4 - Tamaño: 4 - Origen: CPU
+[WARNING] 20:34:52:076 Memoria/(7928:7928): COD OP: 2
+[INFO] 20:34:52:077 Memoria/(7928:7928): Creación de Proceso PID: 3
+[WARNING] 20:34:52:077 Memoria/(7928:7928): COD OP: 2
+[INFO] 20:34:52:077 Memoria/(7928:7928): Creación de Proceso PID: 4
+[WARNING] 20:34:52:078 Memoria/(7928:7928): COD OP: 2
+[INFO] 20:34:52:078 Memoria/(7928:7928): Creación de Proceso PID: 5
+[WARNING] 20:34:52:082 Memoria/(7928:7928): COD OP: 5
+[INFO] 20:34:52:082 Memoria/(7928:7928): PID: 1 - Acción: LEER - Dirección física: 4 - Tamaño: 4 - Origen: FILESYSTEM
+[WARNING] 20:34:53:082 Memoria/(7928:7928): COD OP: 2
+[INFO] 20:34:53:083 Memoria/(7928:7928): Creación de Proceso PID: 6
+[WARNING] 20:34:55:087 Memoria/(7928:7928): COD OP: 6
+[INFO] 20:34:55:087 Memoria/(7928:7928): PID: 1 - Acción: ESCRIBIR - Dirección física: 10 - Tamaño: 4 - Origen: FILESYSTEM
+[WARNING] 20:34:56:088 Memoria/(7928:7928): COD OP: 5
+[INFO] 20:34:56:088 Memoria/(7928:7928): PID: 1 - Acción: LEER - Dirección física: 10 - Tamaño: 4 - Origen: CPU
+[WARNING] 20:34:58:090 Memoria/(7928:7928): COD OP: 3
+[INFO] 20:34:58:090 Memoria/(7928:7928): Eliminación de Proceso PID: 1
+[WARNING] 20:34:59:091 Memoria/(7928:7928): COD OP: 6
+[INFO] 20:34:59:092 Memoria/(7928:7928): PID: 2 - Acción: ESCRIBIR - Dirección física: 4 - Tamaño: 4 - Origen: CPU
+[WARNING] 20:35:00:096 Memoria/(7928:7928): COD OP: 5
+[INFO] 20:35:00:096 Memoria/(7928:7928): PID: 2 - Acción: LEER - Dirección física: 4 - Tamaño: 4 - Origen: FILESYSTEM
+[WARNING] 20:35:03:099 Memoria/(7928:7928): COD OP: 6
+[INFO] 20:35:03:099 Memoria/(7928:7928): PID: 2 - Acción: ESCRIBIR - Dirección física: 10 - Tamaño: 4 - Origen: FILESYSTEM
+[WARNING] 20:35:04:100 Memoria/(7928:7928): COD OP: 5
+[INFO] 20:35:04:100 Memoria/(7928:7928): PID: 2 - Acción: LEER - Dirección física: 10 - Tamaño: 4 - Origen: CPU
+[WARNING] 20:35:06:103 Memoria/(7928:7928): COD OP: 3
+[INFO] 20:35:06:103 Memoria/(7928:7928): Eliminación de Proceso PID: 2
+[WARNING] 20:35:07:105 Memoria/(7928:7928): COD OP: 6
+[INFO] 20:35:07:105 Memoria/(7928:7928): PID: 3 - Acción: ESCRIBIR - Dirección física: 4 - Tamaño: 4 - Origen: CPU
+[WARNING] 20:35:08:108 Memoria/(7928:7928): COD OP: 5
+[INFO] 20:35:08:108 Memoria/(7928:7928): PID: 3 - Acción: LEER - Dirección física: 4 - Tamaño: 4 - Origen: FILESYSTEM
+[WARNING] 20:35:11:110 Memoria/(7928:7928): COD OP: 6
+[INFO] 20:35:11:110 Memoria/(7928:7928): PID: 3 - Acción: ESCRIBIR - Dirección física: 10 - Tamaño: 4 - Origen: FILESYSTEM
+[WARNING] 20:35:12:111 Memoria/(7928:7928): COD OP: 5
+[INFO] 20:35:12:111 Memoria/(7928:7928): PID: 3 - Acción: LEER - Dirección física: 10 - Tamaño: 4 - Origen: CPU
+[WARNING] 20:35:14:114 Memoria/(7928:7928): COD OP: 3
+[INFO] 20:35:14:114 Memoria/(7928:7928): Eliminación de Proceso PID: 3
+[WARNING] 20:35:15:116 Memoria/(7928:7928): COD OP: 6
+[INFO] 20:35:15:116 Memoria/(7928:7928): PID: 4 - Acción: ESCRIBIR - Dirección física: 4 - Tamaño: 4 - Origen: CPU
+[WARNING] 20:35:16:120 Memoria/(7928:7928): COD OP: 5
+[INFO] 20:35:16:120 Memoria/(7928:7928): PID: 4 - Acción: LEER - Dirección física: 4 - Tamaño: 4 - Origen: FILESYSTEM
+[WARNING] 20:35:19:122 Memoria/(7928:7928): COD OP: 6
+[INFO] 20:35:19:122 Memoria/(7928:7928): PID: 4 - Acción: ESCRIBIR - Dirección física: 10 - Tamaño: 4 - Origen: FILESYSTEM
+[WARNING] 20:35:20:123 Memoria/(7928:7928): COD OP: 5
+[INFO] 20:35:20:124 Memoria/(7928:7928): PID: 4 - Acción: LEER - Dirección física: 10 - Tamaño: 4 - Origen: CPU
+[WARNING] 20:35:22:126 Memoria/(7928:7928): COD OP: 3
+[INFO] 20:35:22:126 Memoria/(7928:7928): Eliminación de Proceso PID: 4
+[WARNING] 20:35:23:128 Memoria/(7928:7928): COD OP: 6
+[INFO] 20:35:23:128 Memoria/(7928:7928): PID: 5 - Acción: ESCRIBIR - Dirección física: 4 - Tamaño: 4 - Origen: CPU
+[WARNING] 20:35:24:130 Memoria/(7928:7928): COD OP: 5
+[INFO] 20:35:24:130 Memoria/(7928:7928): PID: 5 - Acción: LEER - Dirección física: 4 - Tamaño: 4 - Origen: FILESYSTEM
+[WARNING] 20:35:27:134 Memoria/(7928:7928): COD OP: 6
+[INFO] 20:35:27:134 Memoria/(7928:7928): PID: 5 - Acción: ESCRIBIR - Dirección física: 10 - Tamaño: 4 - Origen: FILESYSTEM
+[WARNING] 20:35:28:135 Memoria/(7928:7928): COD OP: 5
+[INFO] 20:35:28:135 Memoria/(7928:7928): PID: 5 - Acción: LEER - Dirección física: 10 - Tamaño: 4 - Origen: CPU
+[WARNING] 20:35:30:138 Memoria/(7928:7928): COD OP: 3
+[INFO] 20:35:30:138 Memoria/(7928:7928): Eliminación de Proceso PID: 5
+[WARNING] 20:35:31:140 Memoria/(7928:7928): COD OP: 6
+[INFO] 20:35:31:140 Memoria/(7928:7928): PID: 6 - Acción: ESCRIBIR - Dirección física: 4 - Tamaño: 4 - Origen: CPU
+[WARNING] 20:35:32:144 Memoria/(7928:7928): COD OP: 5
+[INFO] 20:35:32:144 Memoria/(7928:7928): PID: 6 - Acción: LEER - Dirección física: 4 - Tamaño: 4 - Origen: FILESYSTEM
+[WARNING] 20:35:35:146 Memoria/(7928:7928): COD OP: 6
+[INFO] 20:35:35:146 Memoria/(7928:7928): PID: 6 - Acción: ESCRIBIR - Dirección física: 10 - Tamaño: 4 - Origen: FILESYSTEM
+[WARNING] 20:35:36:147 Memoria/(7928:7928): COD OP: 5
+[INFO] 20:35:36:147 Memoria/(7928:7928): PID: 6 - Acción: LEER - Dirección física: 10 - Tamaño: 4 - Origen: CPU
+[WARNING] 20:35:38:149 Memoria/(7928:7928): COD OP: 3
+[INFO] 20:35:38:149 Memoria/(7928:7928): Eliminación de Proceso PID: 6
+[WARNING] 20:41:36:429 Memoria/(8396:8396): COD OP: 2
+[INFO] 20:41:36:432 Memoria/(8396:8396): Creación de Proceso PID: 1
+[WARNING] 20:41:36:461 Memoria/(8396:8396): COD OP: 0
+[WARNING] 20:47:37:813 Memoria/(8482:8482): COD OP: 2
+[INFO] 20:47:37:814 Memoria/(8482:8482): Creación de Proceso PID: 1
+[WARNING] 20:47:37:817 Memoria/(8482:8482): COD OP: 0
+[WARNING] 20:47:58:851 Memoria/(8530:8530): COD OP: 2
+[INFO] 20:47:58:851 Memoria/(8530:8530): Creación de Proceso PID: 1
+[WARNING] 20:47:58:852 Memoria/(8530:8530): COD OP: 0
+[WARNING] 20:51:36:282 Memoria/(8671:8671): COD OP: 2
+[INFO] 20:51:36:283 Memoria/(8671:8671): Creación de Proceso PID: 1
+[WARNING] 20:51:36:286 Memoria/(8671:8671): COD OP: 0
+[WARNING] 20:53:31:295 Memoria/(8735:8735): COD OP: 2
+[INFO] 20:53:31:295 Memoria/(8735:8735): Creación de Proceso PID: 1
+[WARNING] 20:53:31:297 Memoria/(8735:8735): COD OP: 0
+[INFO] 20:53:31:297 Memoria/(8735:8735): PID: 1 - Crear Segmento: 1 - Base: 128 - TAMAÑO: 40
+[WARNING] 20:53:31:297 Memoria/(8735:8735): COD OP: 0
+[INFO] 20:53:31:297 Memoria/(8735:8735): PID: 1 - Crear Segmento: 2 - Base: 168 - TAMAÑO: 20
+[WARNING] 20:53:31:297 Memoria/(8735:8735): COD OP: 0
+[INFO] 20:53:31:297 Memoria/(8735:8735): PID: 1 - Crear Segmento: 3 - Base: 188 - TAMAÑO: 40
+[WARNING] 20:53:31:298 Memoria/(8735:8735): COD OP: 1
+[INFO] 20:53:31:298 Memoria/(8735:8735): PID: 1 - Eliminar Segmento: 2 - Base: 168 - TAMAÑO: 20
+[WARNING] 20:53:31:298 Memoria/(8735:8735): COD OP: 0
+[INFO] 20:53:31:299 Memoria/(8735:8735): PID: 1 - Crear Segmento: 4 - Base: 228 - TAMAÑO: 40
+[WARNING] 20:53:31:300 Memoria/(8735:8735): COD OP: 3
+[INFO] 20:53:31:300 Memoria/(8735:8735): Eliminación de Proceso PID: 1
+[WARNING] 20:54:27:279 Memoria/(8789:8789): COD OP: 2
+[INFO] 20:54:27:279 Memoria/(8789:8789): Creación de Proceso PID: 1
+[WARNING] 20:54:27:280 Memoria/(8789:8789): COD OP: 0
+[INFO] 20:54:27:280 Memoria/(8789:8789): PID: 1 - Crear Segmento: 1 - Base: 128 - TAMAÑO: 40
+[WARNING] 20:54:27:281 Memoria/(8789:8789): COD OP: 0
+[INFO] 20:54:27:281 Memoria/(8789:8789): PID: 1 - Crear Segmento: 2 - Base: 168 - TAMAÑO: 20
+[WARNING] 20:54:27:281 Memoria/(8789:8789): COD OP: 0
+[INFO] 20:54:27:281 Memoria/(8789:8789): PID: 1 - Crear Segmento: 3 - Base: 188 - TAMAÑO: 40
+[WARNING] 20:54:27:281 Memoria/(8789:8789): COD OP: 1
+[INFO] 20:54:27:281 Memoria/(8789:8789): PID: 1 - Eliminar Segmento: 2 - Base: 168 - TAMAÑO: 20
+[WARNING] 20:54:27:282 Memoria/(8789:8789): COD OP: 0
+[INFO] 20:54:27:282 Memoria/(8789:8789): PID: 1 - Crear Segmento: 4 - Base: 228 - TAMAÑO: 40
+[WARNING] 20:54:27:283 Memoria/(8789:8789): COD OP: 3
+[INFO] 20:54:27:283 Memoria/(8789:8789): Eliminación de Proceso PID: 1
+[WARNING] 20:57:00:286 Memoria/(8830:8830): COD OP: 2
+[INFO] 20:57:00:286 Memoria/(8830:8830): Creación de Proceso PID: 1
+[WARNING] 20:57:00:288 Memoria/(8830:8830): COD OP: 0
+[INFO] 20:57:00:288 Memoria/(8830:8830): PID: 1 - Crear Segmento: 1 - Base: 128 - TAMAÑO: 40
+[WARNING] 20:57:00:290 Memoria/(8830:8830): COD OP: 0
+[INFO] 20:57:00:290 Memoria/(8830:8830): PID: 1 - Crear Segmento: 2 - Base: 168 - TAMAÑO: 20
+[WARNING] 20:57:00:291 Memoria/(8830:8830): COD OP: 0
+[INFO] 20:57:00:291 Memoria/(8830:8830): PID: 1 - Crear Segmento: 3 - Base: 188 - TAMAÑO: 40
+[WARNING] 20:57:00:292 Memoria/(8830:8830): COD OP: 1
+[INFO] 20:57:00:292 Memoria/(8830:8830): PID: 1 - Eliminar Segmento: 2 - Base: 168 - TAMAÑO: 20
+[WARNING] 20:57:00:297 Memoria/(8830:8830): COD OP: 0
+[INFO] 20:57:00:297 Memoria/(8830:8830): PID: 1 - Crear Segmento: 4 - Base: 228 - TAMAÑO: 40
+[WARNING] 20:57:00:298 Memoria/(8830:8830): COD OP: 3
+[INFO] 20:57:00:298 Memoria/(8830:8830): Eliminación de Proceso PID: 1
+[WARNING] 20:57:41:938 Memoria/(8880:8880): COD OP: 2
+[INFO] 20:57:41:938 Memoria/(8880:8880): Creación de Proceso PID: 1
+[WARNING] 20:57:41:940 Memoria/(8880:8880): COD OP: 0
+[INFO] 20:57:41:940 Memoria/(8880:8880): PID: 1 - Crear Segmento: 1 - Base: 128 - TAMAÑO: 40
+[WARNING] 20:57:41:940 Memoria/(8880:8880): COD OP: 0
+[INFO] 20:57:41:940 Memoria/(8880:8880): PID: 1 - Crear Segmento: 2 - Base: 168 - TAMAÑO: 20
+[WARNING] 20:57:41:940 Memoria/(8880:8880): COD OP: 0
+[INFO] 20:57:41:940 Memoria/(8880:8880): PID: 1 - Crear Segmento: 3 - Base: 188 - TAMAÑO: 40
+[WARNING] 20:57:41:941 Memoria/(8880:8880): COD OP: 1
+[INFO] 20:57:41:941 Memoria/(8880:8880): PID: 1 - Eliminar Segmento: 2 - Base: 168 - TAMAÑO: 20
+[WARNING] 20:57:41:941 Memoria/(8880:8880): COD OP: 0
+[INFO] 20:57:41:941 Memoria/(8880:8880): PID: 1 - Crear Segmento: 4 - Base: 228 - TAMAÑO: 40
+[WARNING] 20:57:41:943 Memoria/(8880:8880): COD OP: 3
+[INFO] 20:57:41:943 Memoria/(8880:8880): Eliminación de Proceso PID: 1
+[WARNING] 20:58:27:997 Memoria/(8900:8900): COD OP: 2
+[INFO] 20:58:27:997 Memoria/(8900:8900): Creación de Proceso PID: 1
+[WARNING] 20:58:27:998 Memoria/(8900:8900): COD OP: 0
+[INFO] 20:58:27:998 Memoria/(8900:8900): PID: 1 - Crear Segmento: 1 - Base: 448 - TAMAÑO: 40
+[WARNING] 20:58:27:998 Memoria/(8900:8900): COD OP: 0
+[INFO] 20:58:27:999 Memoria/(8900:8900): PID: 1 - Crear Segmento: 2 - Base: 424 - TAMAÑO: 20
+[WARNING] 20:58:27:999 Memoria/(8900:8900): COD OP: 0
+[INFO] 20:58:27:999 Memoria/(8900:8900): PID: 1 - Crear Segmento: 3 - Base: 240 - TAMAÑO: 40
+[WARNING] 20:58:27:999 Memoria/(8900:8900): COD OP: 1
+[INFO] 20:58:28:000 Memoria/(8900:8900): PID: 1 - Eliminar Segmento: 2 - Base: 424 - TAMAÑO: 20
+[WARNING] 20:58:28:000 Memoria/(8900:8900): COD OP: 0
+[INFO] 20:58:28:000 Memoria/(8900:8900): PID: 1 - Crear Segmento: 4 - Base: 280 - TAMAÑO: 40
+[WARNING] 20:58:28:000 Memoria/(8900:8900): COD OP: 3
+[INFO] 20:58:28:000 Memoria/(8900:8900): Eliminación de Proceso PID: 1
+[WARNING] 21:04:51:988 Memoria/(9159:9159): COD OP: 2
+[INFO] 21:04:51:989 Memoria/(9159:9159): Creación de Proceso PID: 1
+[WARNING] 21:04:51:993 Memoria/(9159:9159): COD OP: 0
+[INFO] 21:04:51:993 Memoria/(9159:9159): PID: 1 - Crear Segmento: 1 - Base: 128 - TAMAÑO: 40
+[WARNING] 21:04:51:994 Memoria/(9159:9159): COD OP: 0
+[INFO] 21:04:51:995 Memoria/(9159:9159): PID: 1 - Crear Segmento: 2 - Base: 168 - TAMAÑO: 20
+[WARNING] 21:04:51:995 Memoria/(9159:9159): COD OP: 0
+[INFO] 21:04:51:995 Memoria/(9159:9159): PID: 1 - Crear Segmento: 3 - Base: 188 - TAMAÑO: 40
+[WARNING] 21:04:51:995 Memoria/(9159:9159): COD OP: 1
+[INFO] 21:04:51:995 Memoria/(9159:9159): PID: 1 - Eliminar Segmento: 2 - Base: 168 - TAMAÑO: 20
+[WARNING] 21:04:51:995 Memoria/(9159:9159): COD OP: 0
+[INFO] 21:04:51:995 Memoria/(9159:9159): PID: 1 - Crear Segmento: 4 - Base: 228 - TAMAÑO: 40
+[WARNING] 21:04:51:996 Memoria/(9159:9159): COD OP: 3
+[INFO] 21:04:51:996 Memoria/(9159:9159): Eliminación de Proceso PID: 1
+[WARNING] 21:06:38:183 Memoria/(9225:9225): COD OP: 2
+[INFO] 21:06:38:184 Memoria/(9225:9225): Creación de Proceso PID: 1
+[WARNING] 21:06:39:196 Memoria/(9225:9225): COD OP: 6
+[INFO] 21:06:39:196 Memoria/(9225:9225): PID: 1 - Acción: ESCRIBIR - Dirección física: 4 - Tamaño: 4 - Origen: CPU
+[WARNING] 21:06:40:203 Memoria/(9225:9225): COD OP: 5
+[INFO] 21:06:40:203 Memoria/(9225:9225): PID: 1 - Acción: LEER - Dirección física: 4 - Tamaño: 4 - Origen: FILESYSTEM
+[WARNING] 21:06:43:209 Memoria/(9225:9225): COD OP: 6
+[INFO] 21:06:43:209 Memoria/(9225:9225): PID: 1 - Acción: ESCRIBIR - Dirección física: 10 - Tamaño: 4 - Origen: FILESYSTEM
+[WARNING] 21:06:44:210 Memoria/(9225:9225): COD OP: 5
+[INFO] 21:06:44:210 Memoria/(9225:9225): PID: 1 - Acción: LEER - Dirección física: 10 - Tamaño: 4 - Origen: CPU
+[WARNING] 21:06:46:212 Memoria/(9225:9225): COD OP: 3
+[INFO] 21:06:46:212 Memoria/(9225:9225): Eliminación de Proceso PID: 1
+[WARNING] 21:07:06:422 Memoria/(9244:9244): COD OP: 2
+[INFO] 21:07:06:422 Memoria/(9244:9244): Creación de Proceso PID: 1
+[WARNING] 21:07:06:423 Memoria/(9244:9244): COD OP: 0
+[INFO] 21:07:06:423 Memoria/(9244:9244): PID: 1 - Crear Segmento: 1 - Base: 128 - TAMAÑO: 40
+[WARNING] 21:07:06:424 Memoria/(9244:9244): COD OP: 0
+[INFO] 21:07:06:424 Memoria/(9244:9244): PID: 1 - Crear Segmento: 2 - Base: 168 - TAMAÑO: 20
+[WARNING] 21:07:06:424 Memoria/(9244:9244): COD OP: 0
+[INFO] 21:07:06:424 Memoria/(9244:9244): PID: 1 - Crear Segmento: 3 - Base: 188 - TAMAÑO: 40
+[WARNING] 21:07:06:424 Memoria/(9244:9244): COD OP: 1
+[INFO] 21:07:06:424 Memoria/(9244:9244): PID: 1 - Eliminar Segmento: 2 - Base: 168 - TAMAÑO: 20
+[WARNING] 21:07:06:424 Memoria/(9244:9244): COD OP: 0
+[WARNING] 21:12:00:637 Memoria/(9373:9373): COD OP: 2
+[INFO] 21:12:00:638 Memoria/(9373:9373): Creación de Proceso PID: 1
+[WARNING] 21:12:00:642 Memoria/(9373:9373): COD OP: 0
+[INFO] 21:12:00:642 Memoria/(9373:9373): PID: 1 - Crear Segmento: 1 - Base: 128 - TAMAÑO: 40
+[WARNING] 21:12:00:644 Memoria/(9373:9373): COD OP: 0
+[INFO] 21:12:00:644 Memoria/(9373:9373): PID: 1 - Crear Segmento: 2 - Base: 168 - TAMAÑO: 20
+[WARNING] 21:12:00:644 Memoria/(9373:9373): COD OP: 0
+[INFO] 21:12:00:644 Memoria/(9373:9373): PID: 1 - Crear Segmento: 3 - Base: 188 - TAMAÑO: 40
+[WARNING] 21:12:00:645 Memoria/(9373:9373): COD OP: 1
+[INFO] 21:12:00:645 Memoria/(9373:9373): PID: 1 - Eliminar Segmento: 2 - Base: 168 - TAMAÑO: 20
+[WARNING] 21:12:00:646 Memoria/(9373:9373): COD OP: 0
+[WARNING] 21:15:44:698 Memoria/(9554:9554): COD OP: 2
+[INFO] 21:15:44:699 Memoria/(9554:9554): Creación de Proceso PID: 1
+[WARNING] 21:15:44:703 Memoria/(9554:9554): COD OP: 0
+[INFO] 21:15:44:703 Memoria/(9554:9554): PID: 1 - Crear Segmento: 1 - Base: 128 - TAMAÑO: 40
+[WARNING] 21:15:44:704 Memoria/(9554:9554): COD OP: 0
+[INFO] 21:15:44:704 Memoria/(9554:9554): PID: 1 - Crear Segmento: 2 - Base: 168 - TAMAÑO: 20
+[WARNING] 21:15:44:704 Memoria/(9554:9554): COD OP: 0
+[INFO] 21:15:44:704 Memoria/(9554:9554): PID: 1 - Crear Segmento: 3 - Base: 188 - TAMAÑO: 40
+[WARNING] 21:15:44:704 Memoria/(9554:9554): COD OP: 1
+[INFO] 21:15:44:704 Memoria/(9554:9554): PID: 1 - Eliminar Segmento: 2 - Base: 168 - TAMAÑO: 20
+[WARNING] 21:15:44:704 Memoria/(9554:9554): COD OP: 0
+[WARNING] 21:15:44:704 Memoria/(9554:9554): COD OP: 4
+[INFO] 21:15:44:704 Memoria/(9554:9554): Solicitud de Compactación
+[INFO] 21:15:44:705 Memoria/(9554:9554): PID: 1 - Segmento: 0 - Base: 0 - Tamaño 128
+[INFO] 21:15:44:705 Memoria/(9554:9554): PID: 1 - Segmento: 1 - Base: 128 - Tamaño 40
+[INFO] 21:15:44:705 Memoria/(9554:9554): PID: 1 - Segmento: 3 - Base: 168 - Tamaño 40
+[WARNING] 21:15:46:719 Memoria/(9554:9554): COD OP: -1
+[WARNING] 21:15:46:719 Memoria/(9554:9554): DEFAULT
+[WARNING] 21:21:02:335 Memoria/(9615:9615): COD OP: 2
+[INFO] 21:21:02:336 Memoria/(9615:9615): Creación de Proceso PID: 1
+[WARNING] 21:21:02:340 Memoria/(9615:9615): COD OP: 0
+[INFO] 21:21:02:340 Memoria/(9615:9615): PID: 1 - Crear Segmento: 1 - Base: 128 - TAMAÑO: 40
+[WARNING] 21:21:02:340 Memoria/(9615:9615): COD OP: 0
+[INFO] 21:21:02:340 Memoria/(9615:9615): PID: 1 - Crear Segmento: 2 - Base: 168 - TAMAÑO: 20
+[WARNING] 21:21:02:340 Memoria/(9615:9615): COD OP: 0
+[INFO] 21:21:02:340 Memoria/(9615:9615): PID: 1 - Crear Segmento: 3 - Base: 188 - TAMAÑO: 40
+[WARNING] 21:21:02:340 Memoria/(9615:9615): COD OP: 1
+[INFO] 21:21:02:340 Memoria/(9615:9615): PID: 1 - Eliminar Segmento: 2 - Base: 168 - TAMAÑO: 20
+[WARNING] 21:21:02:341 Memoria/(9615:9615): COD OP: 0
+[WARNING] 21:21:02:342 Memoria/(9615:9615): COD OP: 4
+[INFO] 21:21:02:342 Memoria/(9615:9615): Solicitud de Compactación
+[INFO] 21:21:02:342 Memoria/(9615:9615): PID: 1 - Segmento: 0 - Base: 0 - Tamaño 128
+[INFO] 21:21:02:342 Memoria/(9615:9615): PID: 1 - Segmento: 1 - Base: 128 - Tamaño 40
+[INFO] 21:21:02:342 Memoria/(9615:9615): PID: 1 - Segmento: 3 - Base: 168 - Tamaño 40
+[WARNING] 21:23:56:622 Memoria/(9764:9764): COD OP: 2
+[INFO] 21:23:56:623 Memoria/(9764:9764): Creación de Proceso PID: 1
+[WARNING] 21:23:56:625 Memoria/(9764:9764): COD OP: 0
+[INFO] 21:23:56:625 Memoria/(9764:9764): PID: 1 - Crear Segmento: 1 - Base: 128 - TAMAÑO: 40
+[WARNING] 21:23:56:626 Memoria/(9764:9764): COD OP: 0
+[INFO] 21:23:56:626 Memoria/(9764:9764): PID: 1 - Crear Segmento: 2 - Base: 168 - TAMAÑO: 20
+[WARNING] 21:23:56:627 Memoria/(9764:9764): COD OP: 0
+[INFO] 21:23:56:627 Memoria/(9764:9764): PID: 1 - Crear Segmento: 3 - Base: 188 - TAMAÑO: 40
+[WARNING] 21:23:56:627 Memoria/(9764:9764): COD OP: 1
+[INFO] 21:23:56:627 Memoria/(9764:9764): PID: 1 - Eliminar Segmento: 2 - Base: 168 - TAMAÑO: 20
+[WARNING] 21:23:56:628 Memoria/(9764:9764): COD OP: 0
+[WARNING] 21:23:56:628 Memoria/(9764:9764): COD OP: 4
+[INFO] 21:23:56:628 Memoria/(9764:9764): Solicitud de Compactación
+[INFO] 21:23:56:628 Memoria/(9764:9764): PID: 1 - Segmento: 0 - Base: 0 - Tamaño 128
+[INFO] 21:23:56:628 Memoria/(9764:9764): PID: 1 - Segmento: 1 - Base: 128 - Tamaño 40
+[INFO] 21:23:56:628 Memoria/(9764:9764): PID: 1 - Segmento: 3 - Base: 168 - Tamaño 40
+[WARNING] 21:26:33:195 Memoria/(9848:9848): COD OP: 2
+[INFO] 21:26:33:196 Memoria/(9848:9848): Creación de Proceso PID: 1
+[WARNING] 21:26:33:198 Memoria/(9848:9848): COD OP: 0
+[INFO] 21:26:33:198 Memoria/(9848:9848): PID: 1 - Crear Segmento: 1 - Base: 128 - TAMAÑO: 40
+[WARNING] 21:26:33:198 Memoria/(9848:9848): COD OP: 0
+[INFO] 21:26:33:198 Memoria/(9848:9848): PID: 1 - Crear Segmento: 2 - Base: 168 - TAMAÑO: 20
+[WARNING] 21:26:33:199 Memoria/(9848:9848): COD OP: 0
+[INFO] 21:26:33:199 Memoria/(9848:9848): PID: 1 - Crear Segmento: 3 - Base: 188 - TAMAÑO: 40
+[WARNING] 21:26:33:199 Memoria/(9848:9848): COD OP: 1
+[INFO] 21:26:33:199 Memoria/(9848:9848): PID: 1 - Eliminar Segmento: 2 - Base: 168 - TAMAÑO: 20
+[WARNING] 21:26:33:199 Memoria/(9848:9848): COD OP: 0
+[WARNING] 21:26:33:200 Memoria/(9848:9848): COD OP: 4
+[INFO] 21:26:33:200 Memoria/(9848:9848): Solicitud de Compactación
+[INFO] 21:26:33:200 Memoria/(9848:9848): PID: 1 - Segmento: 0 - Base: 0 - Tamaño 128
+[INFO] 21:26:33:200 Memoria/(9848:9848): PID: 1 - Segmento: 1 - Base: 128 - Tamaño 40
+[INFO] 21:26:33:200 Memoria/(9848:9848): PID: 1 - Segmento: 3 - Base: 168 - Tamaño 40
+[WARNING] 21:28:08:677 Memoria/(10004:10004): COD OP: 2
+[INFO] 21:28:08:679 Memoria/(10004:10004): Creación de Proceso PID: 1
+[WARNING] 21:28:08:686 Memoria/(10004:10004): COD OP: 0
+[INFO] 21:28:08:686 Memoria/(10004:10004): PID: 1 - Crear Segmento: 1 - Base: 128 - TAMAÑO: 40
+[WARNING] 21:28:08:686 Memoria/(10004:10004): COD OP: 0
+[INFO] 21:28:08:686 Memoria/(10004:10004): PID: 1 - Crear Segmento: 2 - Base: 168 - TAMAÑO: 20
+[WARNING] 21:28:08:686 Memoria/(10004:10004): COD OP: 0
+[INFO] 21:28:08:686 Memoria/(10004:10004): PID: 1 - Crear Segmento: 3 - Base: 188 - TAMAÑO: 40
+[WARNING] 21:28:08:686 Memoria/(10004:10004): COD OP: 1
+[INFO] 21:28:08:686 Memoria/(10004:10004): PID: 1 - Eliminar Segmento: 2 - Base: 168 - TAMAÑO: 20
+[WARNING] 21:28:08:687 Memoria/(10004:10004): COD OP: 0
+[WARNING] 21:28:08:687 Memoria/(10004:10004): COD OP: 4
+[INFO] 21:28:08:687 Memoria/(10004:10004): Solicitud de Compactación
+[INFO] 21:28:08:687 Memoria/(10004:10004): PID: 1 - Segmento: 0 - Base: 0 - Tamaño 128
+[INFO] 21:28:08:687 Memoria/(10004:10004): PID: 1 - Segmento: 1 - Base: 128 - Tamaño 40
+[INFO] 21:28:08:687 Memoria/(10004:10004): PID: 1 - Segmento: 3 - Base: 168 - Tamaño 40
+[WARNING] 21:29:04:341 Memoria/(10072:10072): COD OP: 2
+[INFO] 21:29:04:341 Memoria/(10072:10072): Creación de Proceso PID: 1
+[WARNING] 21:29:04:341 Memoria/(10072:10072): COD OP: 0
+[INFO] 21:29:04:341 Memoria/(10072:10072): PID: 1 - Crear Segmento: 1 - Base: 128 - TAMAÑO: 40
+[WARNING] 21:29:04:342 Memoria/(10072:10072): COD OP: 0
+[INFO] 21:29:04:342 Memoria/(10072:10072): PID: 1 - Crear Segmento: 2 - Base: 168 - TAMAÑO: 20
+[WARNING] 21:29:04:343 Memoria/(10072:10072): COD OP: 0
+[INFO] 21:29:04:343 Memoria/(10072:10072): PID: 1 - Crear Segmento: 3 - Base: 188 - TAMAÑO: 40
+[WARNING] 21:29:04:344 Memoria/(10072:10072): COD OP: 1
+[INFO] 21:29:04:344 Memoria/(10072:10072): PID: 1 - Eliminar Segmento: 2 - Base: 168 - TAMAÑO: 20
+[WARNING] 21:29:04:344 Memoria/(10072:10072): COD OP: 0
+[WARNING] 21:29:04:344 Memoria/(10072:10072): COD OP: 4
+[INFO] 21:29:04:344 Memoria/(10072:10072): Solicitud de Compactación
+[INFO] 21:29:04:345 Memoria/(10072:10072): PID: 1 - Segmento: 0 - Base: 0 - Tamaño 128
+[INFO] 21:29:04:345 Memoria/(10072:10072): PID: 1 - Segmento: 1 - Base: 128 - Tamaño 40
+[INFO] 21:29:04:345 Memoria/(10072:10072): PID: 1 - Segmento: 3 - Base: 168 - Tamaño 40
+[WARNING] 21:30:02:180 Memoria/(10134:10134): COD OP: 2
+[INFO] 21:30:02:181 Memoria/(10134:10134): Creación de Proceso PID: 1
+[WARNING] 21:30:02:190 Memoria/(10134:10134): COD OP: 0
+[INFO] 21:30:02:190 Memoria/(10134:10134): PID: 1 - Crear Segmento: 1 - Base: 128 - TAMAÑO: 40
+[WARNING] 21:30:02:190 Memoria/(10134:10134): COD OP: 0
+[INFO] 21:30:02:191 Memoria/(10134:10134): PID: 1 - Crear Segmento: 2 - Base: 168 - TAMAÑO: 20
+[WARNING] 21:30:02:191 Memoria/(10134:10134): COD OP: 0
+[INFO] 21:30:02:191 Memoria/(10134:10134): PID: 1 - Crear Segmento: 3 - Base: 188 - TAMAÑO: 40
+[WARNING] 21:30:02:192 Memoria/(10134:10134): COD OP: 1
+[INFO] 21:30:02:192 Memoria/(10134:10134): PID: 1 - Eliminar Segmento: 2 - Base: 168 - TAMAÑO: 20
+[WARNING] 21:30:02:192 Memoria/(10134:10134): COD OP: 0
+[WARNING] 21:30:02:193 Memoria/(10134:10134): COD OP: 4
+[INFO] 21:30:02:193 Memoria/(10134:10134): Solicitud de Compactación
+[INFO] 21:30:02:193 Memoria/(10134:10134): PID: 1 - Segmento: 0 - Base: 0 - Tamaño 128
+[INFO] 21:30:02:193 Memoria/(10134:10134): PID: 1 - Segmento: 1 - Base: 128 - Tamaño 40
+[INFO] 21:30:02:193 Memoria/(10134:10134): PID: 1 - Segmento: 3 - Base: 168 - Tamaño 40
+[WARNING] 21:33:04:260 Memoria/(10225:10225): COD OP: 2
+[INFO] 21:33:04:261 Memoria/(10225:10225): Creación de Proceso PID: 1
+[WARNING] 21:33:04:266 Memoria/(10225:10225): COD OP: 0
+[INFO] 21:33:04:266 Memoria/(10225:10225): PID: 1 - Crear Segmento: 1 - Base: 128 - TAMAÑO: 40
+[WARNING] 21:33:04:267 Memoria/(10225:10225): COD OP: 0
+[INFO] 21:33:04:267 Memoria/(10225:10225): PID: 1 - Crear Segmento: 2 - Base: 168 - TAMAÑO: 20
+[WARNING] 21:33:04:270 Memoria/(10225:10225): COD OP: 0
+[INFO] 21:33:04:270 Memoria/(10225:10225): PID: 1 - Crear Segmento: 3 - Base: 188 - TAMAÑO: 40
+[WARNING] 21:33:04:270 Memoria/(10225:10225): COD OP: 1
+[INFO] 21:33:04:270 Memoria/(10225:10225): PID: 1 - Eliminar Segmento: 2 - Base: 168 - TAMAÑO: 20
+[WARNING] 21:33:04:270 Memoria/(10225:10225): COD OP: 0
+[WARNING] 21:33:04:270 Memoria/(10225:10225): COD OP: 4
+[INFO] 21:33:04:270 Memoria/(10225:10225): Solicitud de Compactación
+[INFO] 21:33:04:271 Memoria/(10225:10225): PID: 1 - Segmento: 0 - Base: 0 - Tamaño 128
+[INFO] 21:33:04:271 Memoria/(10225:10225): PID: 1 - Segmento: 1 - Base: 128 - Tamaño 40
+[INFO] 21:33:04:271 Memoria/(10225:10225): PID: 1 - Segmento: 3 - Base: 168 - Tamaño 40
+[WARNING] 21:33:06:271 Memoria/(10225:10225): antes
+[WARNING] 21:33:06:271 Memoria/(10225:10225): despues
+[WARNING] 21:36:30:304 Memoria/(10468:10468): COD OP: 2
+[INFO] 21:36:30:306 Memoria/(10468:10468): Creación de Proceso PID: 1
+[WARNING] 21:36:30:311 Memoria/(10468:10468): COD OP: 0
+[INFO] 21:36:30:311 Memoria/(10468:10468): PID: 1 - Crear Segmento: 1 - Base: 128 - TAMAÑO: 40
+[WARNING] 21:36:30:312 Memoria/(10468:10468): COD OP: 0
+[INFO] 21:36:30:312 Memoria/(10468:10468): PID: 1 - Crear Segmento: 2 - Base: 168 - TAMAÑO: 20
+[WARNING] 21:36:30:312 Memoria/(10468:10468): COD OP: 0
+[INFO] 21:36:30:312 Memoria/(10468:10468): PID: 1 - Crear Segmento: 3 - Base: 188 - TAMAÑO: 40
+[WARNING] 21:36:30:312 Memoria/(10468:10468): COD OP: 1
+[INFO] 21:36:30:313 Memoria/(10468:10468): PID: 1 - Eliminar Segmento: 2 - Base: 168 - TAMAÑO: 20
+[WARNING] 21:36:30:313 Memoria/(10468:10468): COD OP: 0
+[WARNING] 21:36:30:313 Memoria/(10468:10468): COD OP: 4
+[INFO] 21:36:30:313 Memoria/(10468:10468): Solicitud de Compactación
+[INFO] 21:36:30:313 Memoria/(10468:10468): PID: 1 - Segmento: 0 - Base: 0 - Tamaño 128
+[INFO] 21:36:30:313 Memoria/(10468:10468): PID: 1 - Segmento: 1 - Base: 128 - Tamaño 40
+[INFO] 21:36:30:313 Memoria/(10468:10468): PID: 1 - Segmento: 3 - Base: 168 - Tamaño 40
+[WARNING] 21:36:32:314 Memoria/(10468:10468): COD OP: 0
+[INFO] 21:36:32:314 Memoria/(10468:10468): PID: 1 - Crear Segmento: 4 - Base: 208 - TAMAÑO: 40
+[WARNING] 21:36:32:316 Memoria/(10468:10468): COD OP: 3
+[INFO] 21:36:32:316 Memoria/(10468:10468): Eliminación de Proceso PID: 1
+[INFO] 21:39:20:761 Memoria/(10760:10760): Creación de Proceso PID: 1
+[INFO] 21:39:20:767 Memoria/(10760:10760): PID: 1 - Crear Segmento: 1 - Base: 128 - TAMAÑO: 40
+[INFO] 21:39:20:768 Memoria/(10760:10760): PID: 1 - Crear Segmento: 2 - Base: 168 - TAMAÑO: 20
+[INFO] 21:39:20:769 Memoria/(10760:10760): PID: 1 - Crear Segmento: 3 - Base: 188 - TAMAÑO: 40
+[INFO] 21:39:20:769 Memoria/(10760:10760): PID: 1 - Eliminar Segmento: 2 - Base: 168 - TAMAÑO: 20
+[INFO] 21:39:20:770 Memoria/(10760:10760): Solicitud de Compactación
+[INFO] 21:39:20:770 Memoria/(10760:10760): PID: 1 - Segmento: 0 - Base: 0 - Tamaño 128
+[INFO] 21:39:20:770 Memoria/(10760:10760): PID: 1 - Segmento: 1 - Base: 128 - Tamaño 40
+[INFO] 21:39:20:770 Memoria/(10760:10760): PID: 1 - Segmento: 3 - Base: 168 - Tamaño 40
+[INFO] 21:39:22:771 Memoria/(10760:10760): PID: 1 - Crear Segmento: 4 - Base: 208 - TAMAÑO: 40
+[INFO] 21:39:22:772 Memoria/(10760:10760): Eliminación de Proceso PID: 1
+[INFO] 21:40:14:417 Memoria/(10822:10822): Creación de Proceso PID: 1
+[INFO] 21:40:14:420 Memoria/(10822:10822): PID: 1 - Crear Segmento: 1 - Base: 128 - TAMAÑO: 40
+[INFO] 21:40:14:420 Memoria/(10822:10822): PID: 1 - Crear Segmento: 2 - Base: 168 - TAMAÑO: 20
+[INFO] 21:40:14:420 Memoria/(10822:10822): PID: 1 - Crear Segmento: 3 - Base: 188 - TAMAÑO: 40
+[INFO] 21:40:14:420 Memoria/(10822:10822): PID: 1 - Eliminar Segmento: 2 - Base: 168 - TAMAÑO: 20
+[INFO] 21:40:14:421 Memoria/(10822:10822): Solicitud de Compactación
+[INFO] 21:40:14:421 Memoria/(10822:10822): PID: 1 - Segmento: 0 - Base: 0 - Tamaño 128
+[INFO] 21:40:14:421 Memoria/(10822:10822): PID: 1 - Segmento: 1 - Base: 128 - Tamaño 40
+[INFO] 21:40:14:421 Memoria/(10822:10822): PID: 1 - Segmento: 3 - Base: 168 - Tamaño 40
+[INFO] 21:40:16:421 Memoria/(10822:10822): PID: 1 - Crear Segmento: 4 - Base: 208 - TAMAÑO: 40
+[INFO] 21:40:16:422 Memoria/(10822:10822): Eliminación de Proceso PID: 1
+[INFO] 21:42:41:870 Memoria/(11049:11049): Creación de Proceso PID: 1
+[INFO] 21:42:41:872 Memoria/(11049:11049): PID: 1 - Crear Segmento: 1 - Base: 128 - TAMAÑO: 40
+[INFO] 21:42:41:872 Memoria/(11049:11049): PID: 1 - Crear Segmento: 2 - Base: 168 - TAMAÑO: 20
+[INFO] 21:42:41:873 Memoria/(11049:11049): PID: 1 - Crear Segmento: 3 - Base: 188 - TAMAÑO: 40
+[INFO] 21:42:41:873 Memoria/(11049:11049): PID: 1 - Eliminar Segmento: 2 - Base: 168 - TAMAÑO: 20
+[INFO] 21:42:41:873 Memoria/(11049:11049): Solicitud de Compactación
+[INFO] 21:42:41:874 Memoria/(11049:11049): PID: 1 - Segmento: 0 - Base: 0 - Tamaño 128
+[INFO] 21:42:41:874 Memoria/(11049:11049): PID: 1 - Segmento: 1 - Base: 128 - Tamaño 40
+[INFO] 21:42:41:874 Memoria/(11049:11049): PID: 1 - Segmento: 3 - Base: 168 - Tamaño 40
+[INFO] 21:42:43:875 Memoria/(11049:11049): PID: 1 - Crear Segmento: 4 - Base: 208 - TAMAÑO: 40
+[INFO] 21:42:43:876 Memoria/(11049:11049): Eliminación de Proceso PID: 1
+[WARNING] 21:43:09:742 Memoria/(11049:11049): DEFAULT

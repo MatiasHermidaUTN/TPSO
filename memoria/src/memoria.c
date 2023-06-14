@@ -30,7 +30,8 @@ int main(int argc, char** argv) {
 
 	//BITMAP
 	int tamanio_bitmap = (int)(atoi(lectura_de_config.TAM_MEMORIA) / 8);
-	bitmap_pointer = malloc(tamanio_bitmap); 
+	bitmap_pointer = malloc(tamanio_bitmap);
+	memset(bitmap_pointer,0,tamanio_bitmap);
 	if((atoi(lectura_de_config.TAM_MEMORIA) % 8)){ //error por si el bitmap no tiene el tamaño correcto
 		log_error(logger_no_obligatorio, "El tamaño de la memoria no es multiplo de 8");
 	}
@@ -118,7 +119,6 @@ int manejar_mensaje() { //pinta bien
 
 			enviar_tabla_segmentos_memoria(socket_kernel, nodoP->lista_segmentos, SEGMENTO_CREADO);
 			//----------------//
-
 			break;
 		}
 		case ELIMINAR_SEGMENTO:{
@@ -192,7 +192,6 @@ int manejar_mensaje() { //pinta bien
 			}
 			//----------------//
 			
-			free(buffer);
 			break;
 		}
 		case LEER_VALOR:{
@@ -251,11 +250,14 @@ int manejar_mensaje() { //pinta bien
 
 			break;
 		}
-		default:
+		default:{
+			log_warning(logger,"DEFAULT");
 			string_array_destroy(mensaje->parametros);
 			free(mensaje);
 			return 0;
-		
+
+		}
+
 	}
 	string_array_destroy(mensaje->parametros);
 	free(mensaje);
@@ -751,4 +753,14 @@ int list_remove_element_memoria(t_list *self, void *element) {
 		return element == data;
 	}
 	return list_remove_by_condition(self, (void* )_is_the_element) != NULL;
+}
+
+void imprimir_bitmap() {
+    printf("bitmap:\n");
+    for(int i = 0; i < 256; i++) {
+        printf("%d ", bitarray_test_bit(bitarray_de_bitmap, i));
+        if(i+1 % 100 == 0) {
+            printf("\n");
+        }
+    }
 }

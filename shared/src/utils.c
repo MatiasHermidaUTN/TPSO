@@ -869,18 +869,15 @@ t_list* recibir_procesos_con_segmentos(int socket) {
         exit(EXIT_FAILURE);
     }
 
-    t_list* procesos = deserializar_procesos_con_segmentos(stream_a_recibir);
+    t_list* procesos = deserializar_procesos_con_segmentos(stream_a_recibir,  size_payload);
 
 	free(stream_a_recibir);
 	return procesos;
 }
 
-t_list* deserializar_procesos_con_segmentos(void* stream) {
+t_list* deserializar_procesos_con_segmentos(void* stream, size_t size_payload) {
 	size_t desplazamiento = 0;
 
-	size_t size_payload;
-	memcpy(stream + desplazamiento, &size_payload, sizeof(size_payload));
-	desplazamiento += sizeof(size_payload);
 
 	t_list* procesos_actualizados = list_create();
 

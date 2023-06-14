@@ -317,6 +317,12 @@ void ejecutar_mov_in(t_pcb* pcb, t_datos_mmu datos_mmu, char* nombre_registro) {
 
 	set_registro(pcb, nombre_registro, valor);
 
+	log_warning(logger, "%c",pcb->registros_cpu.BX[0] );
+	log_warning(logger,"%c" ,     pcb->registros_cpu.BX[1]);
+	log_warning(logger,"%c",pcb->registros_cpu.BX[2]);
+	log_warning(logger, "%c",pcb->registros_cpu.BX[3]);
+
+
 	log_info(logger, "PID: %d - Accion: %s - Segmento: %d - Dirección Física: %d - Valor: %s", pcb->pid, "LEER", datos_mmu.numero_segmento, datos_mmu.direccion_fisica, valor); //log obligatorio
 
 	string_array_destroy(parametros_lectura);

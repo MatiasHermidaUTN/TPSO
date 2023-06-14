@@ -50,4 +50,6 @@ void* serializar_procesos_con_segmentos_memoria(t_list* procesos_actualizados, s
 int list_remove_element_memoria(t_list *self, void *element);
 
 
+void imprimir_bitmap();
+
 #endif /* MEMORIA_H_ */

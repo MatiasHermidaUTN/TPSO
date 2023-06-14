@@ -57,7 +57,13 @@ void manejar_conexion_kernel(){
 
 		mensaje->cod_op = recibir_msj(socket_kernel);
 		mensaje->origen_mensaje = KERNEL;
-		mensaje->parametros = recibir_parametros_de_mensaje(socket_kernel);
+		if(mensaje->cod_op != COMPACTAR){
+			mensaje->parametros = recibir_parametros_de_mensaje(socket_kernel);
+		}
+		else{
+			mensaje->parametros = string_array_new();
+		}
+
 		list_push_con_mutex(lista_fifo_msj, mensaje, &mutex_cola_msj);
 		sem_post(&sem_cant_msj);
 	}

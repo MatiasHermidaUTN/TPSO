@@ -7,12 +7,17 @@ void init_conexiones() {
 		printf("No conectado a memoria\n");
 	}
     enviar_handshake(socket_memoria, FILESYSTEM);
+    int rta = recibir_handshake(socket_memoria);
+    if(rta != OK_HANDSHAKE){
+    	log_error(logger,"error en el handshake");
+    	exit(EXIT_FAILURE);
+    }
 
 	//SE HACE SERVIDOR Y ESPERA LA CONEXION DEL KERNEL
 	int server = iniciar_servidor("127.0.0.1", lectura_de_config.PUERTO_ESCUCHA);
-	printf("Servidor listo para recibir al cliente, puerto: %s\n", lectura_de_config.PUERTO_ESCUCHA);
+	log_warning(logger,"Servidor listo para recibir al cliente, puerto: %s", lectura_de_config.PUERTO_ESCUCHA);
 	kernel = esperar_cliente(server);
-	puts("Se conecto el Kernel a FileSystem\n");
+	log_warning(logger,"Se conecto el Kernel a FileSystem");
 
 	pthread_t hilo_escuchar_kernel;
     pthread_create(&hilo_escuchar_kernel, NULL, (void*)escuchar_kernel, NULL);

@@ -451,7 +451,6 @@ void cerrar_archivo(t_pcb* pcb_recibido, char* nombre_archivo) {
 		ready_list_push(pcb_a_desbloquear);
 
 		log_info(logger, "PID: %d - Abrir Archivo: %s", pcb_a_desbloquear->pid, archivo_a_cerrar->nombre); //log obligatorio
-		//TODO: me suena raro que tenga que poner que abrio el archivo estando en Ready
 	}
 }
 
@@ -524,14 +523,12 @@ void crear_segmento(t_pcb* pcb_recibido, char** parametros) {
 	pthread_mutex_lock(&mutex_msj_memoria);
 
 	enviar_msj_con_parametros(socket_memoria, CREAR_SEGMENTO, parametros); // id, tamanio, pid
+
 	t_msj_memoria mensaje_recibido = recibir_msj(socket_memoria);
 
 	t_list* tabla_segmentos;
 	if(mensaje_recibido == SEGMENTO_CREADO){
 		tabla_segmentos = recibir_tabla_segmentos(socket_memoria);
-	}
-	else {
-		log_error(logger, "Error en el uso de segmentos");
 	}
 
 	pthread_mutex_unlock(&mutex_msj_memoria);
@@ -605,6 +602,7 @@ void actualizar_segmentos(t_pcb* pcb_en_exec, t_list* procesos) {
 		recurso = list_get(list_recursos, i);
 		actualizar_segmentos_de_cola(recurso->cola_bloqueados, procesos);
 	}
+
 	for(int i = 0; i < list_size(list_archivos); i++) {
 		recurso = list_get(list_archivos, i);
 		actualizar_segmentos_de_cola(recurso->cola_bloqueados, procesos);

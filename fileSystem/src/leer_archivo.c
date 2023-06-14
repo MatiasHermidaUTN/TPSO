@@ -23,7 +23,7 @@ char* leer_archivo(char* nombre_archivo, int apartir_de_donde_leer, int cuanto_l
 	}
 
 	//LECTURA
-	const int cuanto_leer_cte = cuanto_leer;
+	const int cuanto_leer_cte = cuanto_leer + 1; //para el \0
 	char* buffer = calloc(1, cuanto_leer_cte);
 	//entro si leo de puntero_directo
 	if (apartir_de_donde_leer < super_bloque_info.block_size){
@@ -31,7 +31,7 @@ char* leer_archivo(char* nombre_archivo, int apartir_de_donde_leer, int cuanto_l
 		fseek(bloques, puntero_directo * super_bloque_info.block_size + apartir_de_donde_leer, SEEK_SET);
 
 		leer_bloque(buffer, puntero_directo, apartir_de_donde_leer, &cuanto_leer, &cantidad_leida);
-		log_info(logger, "Acceso Bloque - Archivo: %s - Bloque Archivo: 0 - Bloque File System: %lu", nombre_archivo, puntero_directo);
+		log_info(logger, "Acceso Bloque - Archivo: %s - Bloque Archivo: 0 - Bloque File System: %d", nombre_archivo, puntero_directo);
 
 		leer_indirecto(buffer, archivo_FCB, PRIMER_BLOQUE_SECUNDARIO, &cuanto_leer, &cantidad_leida);
 	}
@@ -45,13 +45,14 @@ char* leer_archivo(char* nombre_archivo, int apartir_de_donde_leer, int cuanto_l
 		uint32_t puntero_secundario = conseguir_ptr_secundario_para_indirecto(puntero_indirecto, bloque_secundario_inicial);
 
 		leer_bloque(buffer, puntero_secundario, apartir_de_donde_leer_bloque_inicial, &cuanto_leer, &cantidad_leida);
-		log_info(logger, "Acceso Bloque - Archivo: %s - Bloque Archivo: %lu - Bloque File System: %lu", nombre_archivo, bloque_secundario_inicial, puntero_secundario);
+		log_info(logger, "Acceso Bloque - Archivo: %s - Bloque Archivo: %d - Bloque File System: %d", nombre_archivo, bloque_secundario_inicial, puntero_secundario);
 
 		leer_indirecto(buffer, archivo_FCB, bloque_secundario_inicial+1, &cuanto_leer, &cantidad_leida);
 	}
 	config_destroy(archivo_FCB);
 	return buffer;	//el free se hace en el switch, despues de pasarle el contenido a memoria
 }
+
 
 void leer_bloque(char* buffer, uint32_t puntero, int apartir_de_donde_leer_relativo_a_bloque, int* cuanto_leer, int* cantidad_leida){
 	usleep(atoi(lectura_de_config.RETARDO_ACCESO_BLOQUE) * 1000);
@@ -89,7 +90,7 @@ void leer_indirecto(char* buffer, t_config* archivo_FCB, int bloque_secundario_d
 	while(*cuanto_leer > 0) {
 		puntero_secundario = conseguir_ptr_secundario_para_indirecto(puntero_indirecto, bloque_secundario_donde_leer);
 		leer_bloque(buffer, puntero_secundario, DESDE_EL_INICIO, cuanto_leer, cantidad_leida);
-		log_info(logger, "Acceso Bloque - Archivo: %s - Bloque Archivo: %lu - Bloque File System: %lu", nombre_archivo, bloque_secundario_donde_leer, puntero_secundario);
+		log_info(logger, "Acceso Bloque - Archivo: %s - Bloque Archivo: %d - Bloque File System: %d", nombre_archivo, bloque_secundario_donde_leer, puntero_secundario);
 
 		bloque_secundario_donde_leer++;
 	}

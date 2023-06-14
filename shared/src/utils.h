@@ -253,6 +253,5 @@ t_list* deserializar_tabla_segmentos(void* stream, int size_payload);
 void enviar_procesos_con_segmentos(int socket, t_list* procesos_actualizados);
 void* serializar_procesos_con_segmentos(t_list* procesos_actualizados, size_t* size_total);
 t_list* recibir_procesos_con_segmentos(int socket);
-t_list* deserializar_procesos_con_segmentos(void* stream);
-
+t_list* deserializar_procesos_con_segmentos(void* stream, size_t size_payload);
 #endif /* UTILS_H_ */
