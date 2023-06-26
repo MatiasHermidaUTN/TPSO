@@ -10,6 +10,7 @@ FILE* bloques;
 int tamanioBitmap;
 
 t_log* logger;
+t_log* my_logger;
 t_config* config;
 t_fileSystem_config lectura_de_config;
 
@@ -25,6 +26,7 @@ int main(int argc, char** argv) {
 
 	//LECTURA DE CONFIG DEL FILESYSTEM
 	logger = iniciar_logger("FileSystem.log", "FS");
+	my_logger = iniciar_logger("my_fileSystem.log", "FS");
 	config = iniciar_config("../fileSystem.config");
     lectura_de_config = leer_fileSystem_config(config);
 
@@ -44,6 +46,7 @@ int main(int argc, char** argv) {
 	while(manejar_mensaje());
 
 	log_destroy(logger);
+	log_destroy(my_logger);
     config_destroy(config);
 	config_destroy(superbloque);
 	msync(bitmap_pointer, tamanioBitmap, MS_SYNC);

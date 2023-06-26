@@ -83,14 +83,14 @@ t_kernel_config leer_kernel_config(t_config* config) {
     char* recursos             = strdup(config_get_string_value(config, "RECURSOS")); //"[elem1, elem2, ...]"
     char* recursos_sin_espacio = string_replace(recursos, " " , ""); //"[elem1,elem2,...]"
     free(recursos);
-    lectura_de_config.RECURSOS = string_get_string_as_array(recursos_sin_espacio); //["elem1", "elem", ...]
-    free(recursos_sin_espacio); //TODO: REVISAR ESTE FREE (valgrind no se queja)
+    lectura_de_config.RECURSOS = string_get_string_as_array(recursos_sin_espacio); //["elem1", "elem2", ...]
+    free(recursos_sin_espacio);
 
     char* instancias_recursos             = strdup(config_get_string_value(config, "INSTANCIAS_RECURSOS"));
 	char* instancias_recursos_sin_espacio = string_replace(instancias_recursos, " " , "");
 	free(instancias_recursos);
 	lectura_de_config.INSTANCIAS_RECURSOS = string_get_string_as_array(instancias_recursos_sin_espacio);
-	free(instancias_recursos_sin_espacio); //TODO: REVISAR ESTE FREE (valgrind no se queja)
+	free(instancias_recursos_sin_espacio);
 
     return lectura_de_config;
 }
@@ -123,7 +123,7 @@ void init_estados() {
 	for(int i = 0; i < string_array_size(lectura_de_config.RECURSOS); i++) {
 		recurso = malloc(sizeof(t_recurso));
 
-		recurso->nombre = lectura_de_config.RECURSOS[i]; //Hay que hacer strdup?
+		recurso->nombre = lectura_de_config.RECURSOS[i]; //TODO: Hay que hacer strdup?
 		recurso->cantidad_disponibles = atoi(lectura_de_config.INSTANCIAS_RECURSOS[i]);
 		recurso->cola_bloqueados = queue_create();
 
@@ -140,9 +140,7 @@ void liberar_estructura_config(t_kernel_config config){
 	free(config.PUERTO_FILESYSTEM);
 	free(config.PUERTO_ESCUCHA);
 	free(config.ALGORITMO_PLANIFICACION);
-	//free(config.RECURSOS);
-	string_array_destroy(config.RECURSOS); //TODO
-	//free(config.INSTANCIAS_RECURSOS); //hay que liberar todos
+	string_array_destroy(config.RECURSOS);
 	string_array_destroy(config.INSTANCIAS_RECURSOS);
 }
 

@@ -919,3 +919,190 @@
 [WARNING] 21:40:14:416 Kernel/(10829:10836): Se conecto una consola
 [WARNING] 21:42:37:440 Kernel/(11056:11056): Kernel listo para recibir a Consolas
 [WARNING] 21:42:41:869 Kernel/(11056:11063): Se conecto una consola
+[WARNING] 20:41:23:826 Kernel/(48701:48701): Kernel listo para recibir a Consolas
+[WARNING] 20:43:30:425 Kernel/(48701:48833): Se conecto una consola
+[WARNING] 20:43:30:429 Kernel/(48701:48703): Se abrio el archivo
+[WARNING] 20:50:53:670 Kernel/(48701:48838): Se conecto una consola
+[WARNING] 20:50:53:671 Kernel/(48701:48703): Se abrio un archivo que ya existia en el File System
+[WARNING] 22:08:17:045 Kernel/(50034:50034): Kernel listo para recibir a Consolas
+[WARNING] 22:08:20:352 Kernel/(50034:50042): Se conecto una consola
+[WARNING] 22:08:20:355 Kernel/(50034:50037): Se abrio un archivo que ya existia en el File System
+[WARNING] 22:08:48:893 Kernel/(50034:50045): Se conecto una consola
+[WARNING] 22:08:48:894 Kernel/(50034:50037): Se abrio un archivo que ya existia en el File System
+[WARNING] 23:15:48:181 Kernel/(51933:51933): Kernel listo para recibir a Consolas
+[WARNING] 23:15:51:405 Kernel/(51933:51941): Se conecto una consola
+[WARNING] 23:15:51:415 Kernel/(51933:51936): Se abrio un archivo que ya existia en el File System
+[WARNING] 23:16:03:656 Kernel/(51933:51944): Se conecto una consola
+[WARNING] 23:16:03:657 Kernel/(51933:51936): Se abrio un archivo que ya existia en el File System
+[WARNING] 23:16:38:811 Kernel/(51959:51959): Kernel listo para recibir a Consolas
+[WARNING] 23:16:40:481 Kernel/(51959:51967): Se conecto una consola
+[WARNING] 23:16:40:552 Kernel/(51959:51962): Se abrio un archivo que ya existia en el File System
+[WARNING] 23:20:06:243 Kernel/(52110:52110): Kernel listo para recibir a Consolas
+[WARNING] 23:20:08:182 Kernel/(52110:52118): Se conecto una consola
+[WARNING] 23:20:08:250 Kernel/(52110:52113): Se abrio un archivo que ya existia en el File System
+[WARNING] 23:20:20:121 Kernel/(52110:52121): Se conecto una consola
+[WARNING] 23:20:20:124 Kernel/(52110:52113): Se abrio un archivo que ya existia en el File System
+[WARNING] 23:26:05:994 Kernel/(52170:52170): Kernel listo para recibir a Consolas
+[WARNING] 23:26:21:084 Kernel/(52170:52178): Se conecto una consola
+[WARNING] 23:45:38:659 Kernel/(52493:52493): Kernel listo para recibir a Consolas
+[WARNING] 23:45:40:430 Kernel/(52493:52501): Se conecto una consola
+[WARNING] 23:45:49:703 Kernel/(52493:52504): Se conecto una consola
+[WARNING] 23:47:17:152 Kernel/(52516:52516): Kernel listo para recibir a Consolas
+[WARNING] 23:47:27:108 Kernel/(52516:52524): Se conecto una consola
+[WARNING] 23:48:36:219 Kernel/(52567:52567): Kernel listo para recibir a Consolas
+[WARNING] 23:48:37:296 Kernel/(52567:52575): Se conecto una consola
+[WARNING] 23:52:50:595 Kernel/(52624:52624): Kernel listo para recibir a Consolas
+[WARNING] 23:52:52:693 Kernel/(52624:52632): Se conecto una consola
+[WARNING] 00:02:03:050 Kernel/(52912:52912): Kernel listo para recibir a Consolas
+[WARNING] 00:02:04:472 Kernel/(52912:52920): Se conecto una consola
+[WARNING] 00:04:35:147 Kernel/(52978:52978): Kernel listo para recibir a Consolas
+[WARNING] 00:04:35:836 Kernel/(52978:52986): Se conecto una consola
+[WARNING] 00:06:01:637 Kernel/(53043:53043): Kernel listo para recibir a Consolas
+[WARNING] 00:06:02:434 Kernel/(53043:53051): Se conecto una consola
+[WARNING] 00:06:28:684 Kernel/(53090:53090): Kernel listo para recibir a Consolas
+[WARNING] 00:06:29:186 Kernel/(53090:53098): Se conecto una consola
+[WARNING] 00:23:04:911 Kernel/(53406:53406): Kernel listo para recibir a Consolas
+[WARNING] 00:23:07:113 Kernel/(53406:53414): Se conecto una consola
+[WARNING] 00:23:59:939 Kernel/(53406:53419): Se conecto una consola
+[WARNING] 00:24:03:065 Kernel/(53406:53422): Se conecto una consola
+[WARNING] 00:24:04:121 Kernel/(53406:53425): Se conecto una consola
+[WARNING] 00:24:04:762 Kernel/(53406:53428): Se conecto una consola
+[WARNING] 00:24:05:193 Kernel/(53406:53431): Se conecto una consola
+[WARNING] 00:24:05:593 Kernel/(53406:53434): Se conecto una consola
+[WARNING] 00:24:05:977 Kernel/(53406:53437): Se conecto una consola
+[WARNING] 00:24:25:090 Kernel/(53449:53449): Kernel listo para recibir a Consolas
+[WARNING] 00:24:25:726 Kernel/(53449:53457): Se conecto una consola
+[WARNING] 00:25:36:794 Kernel/(53505:53505): Kernel listo para recibir a Consolas
+[WARNING] 00:25:37:338 Kernel/(53505:53513): Se conecto una consola
+[WARNING] 00:26:18:643 Kernel/(53505:53520): Se conecto una consola
+[WARNING] 00:33:28:461 Kernel/(53719:53719): Kernel listo para recibir a Consolas
+[WARNING] 00:33:28:898 Kernel/(53719:53727): Se conecto una consola
+[WARNING] 00:36:15:842 Kernel/(53771:53771): Kernel listo para recibir a Consolas
+[WARNING] 00:36:16:545 Kernel/(53771:53779): Se conecto una consola
+[WARNING] 00:36:20:409 Kernel/(53771:53782): Se conecto una consola
+[WARNING] 00:36:21:304 Kernel/(53771:53785): Se conecto una consola
+[WARNING] 00:36:21:792 Kernel/(53771:53788): Se conecto una consola
+[WARNING] 00:36:22:224 Kernel/(53771:53791): Se conecto una consola
+[WARNING] 00:36:22:624 Kernel/(53771:53794): Se conecto una consola
+[WARNING] 00:36:23:016 Kernel/(53771:53797): Se conecto una consola
+[WARNING] 00:36:23:376 Kernel/(53771:53800): Se conecto una consola
+[WARNING] 00:37:05:625 Kernel/(53847:53847): Kernel listo para recibir a Consolas
+[WARNING] 00:37:06:214 Kernel/(53847:53855): Se conecto una consola
+[WARNING] 00:40:36:395 Kernel/(53947:53947): Kernel listo para recibir a Consolas
+[WARNING] 00:40:38:232 Kernel/(53947:53955): Se conecto una consola
+[WARNING] 00:40:40:514 Kernel/(53947:53958): Se conecto una consola
+[WARNING] 00:40:41:024 Kernel/(53947:53961): Se conecto una consola
+[WARNING] 00:40:41:479 Kernel/(53947:53964): Se conecto una consola
+[WARNING] 00:40:41:895 Kernel/(53947:53967): Se conecto una consola
+[WARNING] 00:40:42:311 Kernel/(53947:53970): Se conecto una consola
+[WARNING] 04:31:19:461 Kernel/(54255:54255): Kernel listo para recibir a Consolas
+[WARNING] 04:31:21:284 Kernel/(54255:54263): Se conecto una consola
+[WARNING] 04:31:24:392 Kernel/(54255:54266): Se conecto una consola
+[WARNING] 04:31:27:330 Kernel/(54255:54269): Se conecto una consola
+[WARNING] 04:33:56:244 Kernel/(54312:54312): Kernel listo para recibir a Consolas
+[WARNING] 04:33:57:471 Kernel/(54312:54320): Se conecto una consola
+[WARNING] 04:34:02:778 Kernel/(54312:54323): Se conecto una consola
+[WARNING] 04:34:03:193 Kernel/(54312:54326): Se conecto una consola
+[WARNING] 04:34:03:464 Kernel/(54312:54329): Se conecto una consola
+[WARNING] 04:34:03:704 Kernel/(54312:54332): Se conecto una consola
+[WARNING] 04:34:03:939 Kernel/(54312:54335): Se conecto una consola
+[WARNING] 04:34:04:169 Kernel/(54312:54338): Se conecto una consola
+[WARNING] 04:34:04:393 Kernel/(54312:54341): Se conecto una consola
+[WARNING] 04:34:04:594 Kernel/(54312:54344): Se conecto una consola
+[WARNING] 04:34:04:785 Kernel/(54312:54347): Se conecto una consola
+[WARNING] 04:34:04:986 Kernel/(54312:54350): Se conecto una consola
+[WARNING] 04:34:05:185 Kernel/(54312:54353): Se conecto una consola
+[WARNING] 04:34:05:397 Kernel/(54312:54356): Se conecto una consola
+[WARNING] 04:34:05:598 Kernel/(54312:54359): Se conecto una consola
+[WARNING] 04:34:05:804 Kernel/(54312:54362): Se conecto una consola
+[WARNING] 04:34:05:955 Kernel/(54312:54365): Se conecto una consola
+[WARNING] 04:40:25:246 Kernel/(54664:54664): Kernel listo para recibir a Consolas
+[WARNING] 04:40:26:749 Kernel/(54664:54672): Se conecto una consola
+[WARNING] 04:40:28:282 Kernel/(54664:54675): Se conecto una consola
+[WARNING] 04:40:28:553 Kernel/(54664:54678): Se conecto una consola
+[WARNING] 04:40:28:829 Kernel/(54664:54681): Se conecto una consola
+[WARNING] 04:40:29:033 Kernel/(54664:54684): Se conecto una consola
+[WARNING] 04:40:29:224 Kernel/(54664:54687): Se conecto una consola
+[WARNING] 04:40:29:392 Kernel/(54664:54690): Se conecto una consola
+[WARNING] 04:40:29:611 Kernel/(54664:54693): Se conecto una consola
+[WARNING] 04:40:29:800 Kernel/(54664:54696): Se conecto una consola
+[WARNING] 04:40:29:987 Kernel/(54664:54699): Se conecto una consola
+[WARNING] 04:40:51:192 Kernel/(54664:54703): Se conecto una consola
+[WARNING] 04:41:19:368 Kernel/(54664:54708): Se conecto una consola
+[WARNING] 04:41:30:858 Kernel/(54664:54712): Se conecto una consola
+[WARNING] 04:42:30:822 Kernel/(54725:54725): Kernel listo para recibir a Consolas
+[WARNING] 04:42:32:582 Kernel/(54725:54733): Se conecto una consola
+[WARNING] 04:42:42:409 Kernel/(54745:54745): Kernel listo para recibir a Consolas
+[WARNING] 04:42:43:717 Kernel/(54745:54753): Se conecto una consola
+[WARNING] 04:42:44:386 Kernel/(54745:54756): Se conecto una consola
+[WARNING] 04:42:44:664 Kernel/(54745:54759): Se conecto una consola
+[WARNING] 04:42:44:897 Kernel/(54745:54762): Se conecto una consola
+[WARNING] 04:42:45:128 Kernel/(54745:54765): Se conecto una consola
+[WARNING] 04:42:45:336 Kernel/(54745:54768): Se conecto una consola
+[WARNING] 04:42:45:536 Kernel/(54745:54771): Se conecto una consola
+[WARNING] 04:42:45:744 Kernel/(54745:54774): Se conecto una consola
+[WARNING] 04:42:45:954 Kernel/(54745:54777): Se conecto una consola
+[WARNING] 04:42:46:149 Kernel/(54745:54780): Se conecto una consola
+[WARNING] 04:42:46:328 Kernel/(54745:54783): Se conecto una consola
+[WARNING] 04:42:55:497 Kernel/(54795:54795): Kernel listo para recibir a Consolas
+[WARNING] 04:42:58:596 Kernel/(54795:54803): Se conecto una consola
+[WARNING] 04:53:05:595 Kernel/(55026:55026): Kernel listo para recibir a Consolas
+[WARNING] 04:53:23:626 Kernel/(55043:55043): Kernel listo para recibir a Consolas
+[WARNING] 04:53:25:603 Kernel/(55043:55051): Se conecto una consola
+[WARNING] 05:20:17:322 Kernel/(55342:55342): Kernel listo para recibir a Consolas
+[WARNING] 05:20:21:104 Kernel/(55342:55350): Se conecto una consola
+[WARNING] 05:21:37:085 Kernel/(55364:55364): Kernel listo para recibir a Consolas
+[WARNING] 05:21:38:541 Kernel/(55364:55372): Se conecto una consola
+[WARNING] 05:22:14:397 Kernel/(55390:55390): Kernel listo para recibir a Consolas
+[WARNING] 05:22:17:852 Kernel/(55390:55398): Se conecto una consola
+[WARNING] 05:24:34:332 Kernel/(55421:55421): Kernel listo para recibir a Consolas
+[WARNING] 05:24:38:497 Kernel/(55421:55429): Se conecto una consola
+[WARNING] 05:25:08:009 Kernel/(55442:55442): Kernel listo para recibir a Consolas
+[WARNING] 05:25:09:959 Kernel/(55442:55450): Se conecto una consola
+[WARNING] 05:25:32:206 Kernel/(55442:55453): Se conecto una consola
+[WARNING] 05:26:06:827 Kernel/(55465:55465): Kernel listo para recibir a Consolas
+[WARNING] 05:26:09:135 Kernel/(55465:55473): Se conecto una consola
+[WARNING] 05:26:27:862 Kernel/(55485:55485): Kernel listo para recibir a Consolas
+[WARNING] 05:26:29:038 Kernel/(55485:55493): Se conecto una consola
+[WARNING] 05:26:45:367 Kernel/(55505:55505): Kernel listo para recibir a Consolas
+[WARNING] 05:26:47:200 Kernel/(55505:55513): Se conecto una consola
+[WARNING] 05:27:14:207 Kernel/(55525:55525): Kernel listo para recibir a Consolas
+[WARNING] 05:27:15:433 Kernel/(55525:55533): Se conecto una consola
+[WARNING] 05:27:19:812 Kernel/(55525:55536): Se conecto una consola
+[WARNING] 05:27:21:548 Kernel/(55525:55539): Se conecto una consola
+[WARNING] 05:27:21:868 Kernel/(55525:55542): Se conecto una consola
+[WARNING] 05:27:22:116 Kernel/(55525:55545): Se conecto una consola
+[WARNING] 05:27:22:348 Kernel/(55525:55548): Se conecto una consola
+[WARNING] 05:27:22:596 Kernel/(55525:55551): Se conecto una consola
+[WARNING] 05:27:22:811 Kernel/(55525:55554): Se conecto una consola
+[WARNING] 05:27:23:060 Kernel/(55525:55557): Se conecto una consola
+[WARNING] 05:27:23:284 Kernel/(55525:55560): Se conecto una consola
+[WARNING] 05:27:23:515 Kernel/(55525:55563): Se conecto una consola
+[WARNING] 05:27:23:736 Kernel/(55525:55566): Se conecto una consola
+[WARNING] 05:27:33:252 Kernel/(55578:55578): Kernel listo para recibir a Consolas
+[WARNING] 05:27:42:592 Kernel/(55578:55586): Se conecto una consola
+[WARNING] 05:27:52:375 Kernel/(55598:55598): Kernel listo para recibir a Consolas
+[WARNING] 05:28:00:898 Kernel/(55598:55606): Se conecto una consola
+[WARNING] 05:28:58:371 Kernel/(55624:55624): Kernel listo para recibir a Consolas
+[WARNING] 05:28:59:367 Kernel/(55624:55632): Se conecto una consola
+[WARNING] 05:29:21:744 Kernel/(55644:55644): Kernel listo para recibir a Consolas
+[WARNING] 05:29:22:544 Kernel/(55644:55652): Se conecto una consola
+[WARNING] 05:29:31:413 Kernel/(55664:55664): Kernel listo para recibir a Consolas
+[WARNING] 05:29:41:751 Kernel/(55664:55672): Se conecto una consola
+[WARNING] 05:30:19:472 Kernel/(55685:55685): Kernel listo para recibir a Consolas
+[WARNING] 05:30:20:848 Kernel/(55685:55693): Se conecto una consola
+[WARNING] 05:47:46:843 Kernel/(1988:1988): Kernel listo para recibir a Consolas
+[WARNING] 05:49:01:808 Kernel/(1988:2097): Se conecto una consola
+[WARNING] 05:51:52:373 Kernel/(2165:2165): Kernel listo para recibir a Consolas
+[WARNING] 05:52:04:053 Kernel/(2165:2173): Se conecto una consola
+[WARNING] 05:58:07:882 Kernel/(2427:2427): Kernel listo para recibir a Consolas
+[WARNING] 05:58:09:780 Kernel/(2427:2435): Se conecto una consola
+[WARNING] 05:59:14:063 Kernel/(2451:2451): Kernel listo para recibir a Consolas
+[WARNING] 05:59:15:862 Kernel/(2451:2459): Se conecto una consola
+[WARNING] 05:59:27:084 Kernel/(2451:2462): Se conecto una consola
+[WARNING] 05:59:36:545 Kernel/(2451:2466): Se conecto una consola
+[WARNING] 05:59:37:233 Kernel/(2451:2470): Se conecto una consola
+[WARNING] 05:59:58:321 Kernel/(2451:2473): Se conecto una consola
+[WARNING] 05:59:59:073 Kernel/(2451:2476): Se conecto una consola
+[WARNING] 06:00:07:105 Kernel/(2451:2480): Se conecto una consola
+[WARNING] 06:00:07:759 Kernel/(2451:2484): Se conecto una consola

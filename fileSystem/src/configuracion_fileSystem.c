@@ -22,8 +22,9 @@ void init_superbloque() {
 		superbloque = iniciar_config(lectura_de_config.PATH_SUPERBLOQUE);
 		super_bloque_info.block_size = config_get_int_value(superbloque, "BLOCK_SIZE");
 		super_bloque_info.block_count = config_get_int_value(superbloque, "BLOCK_COUNT");
-		log_info(logger, "SuperBloque leido");
-	} else {
+		log_warning(my_logger, "SuperBloque leido");
+	}
+	else {
 		log_error(logger, "SuperBloque no existe");
 		//destroy everything in reality
 	}
@@ -35,7 +36,7 @@ void init_bitmap() {
 	int fd_bitmap = open(lectura_de_config.PATH_BITMAP, O_RDWR, 0664);	//abre o crea el archivo en un file descriptor
 	if (fd_bitmap == -1) {
 		close(fd_bitmap);
-		log_warning(logger, "Creando bitmap");
+		log_warning(my_logger, "Creando bitmap");
 		fd_bitmap = open(lectura_de_config.PATH_BITMAP, O_CREAT | O_RDWR, 0664); //abre o crea el archivo en un file descriptor
 		if (fd_bitmap == -1){
 			log_error(logger, "No se pudo ni CREAR el bitmap");
@@ -46,14 +47,14 @@ void init_bitmap() {
 	bitmap_pointer = mmap(NULL, tamanioBitmap, PROT_READ | PROT_WRITE, MAP_SHARED, fd_bitmap, 0);
 	bitarray_de_bitmap = bitarray_create_with_mode((char*) bitmap_pointer, tamanioBitmap, MSB_FIRST);
 	close(fd_bitmap);
-	log_info(logger, "Bitmap abierto");
+	log_warning(logger, "Bitmap abierto");
 }
 
 void init_bloques() {
 	//BLOQUES
 	bloques = fopen(lectura_de_config.PATH_BLOQUES, "r+");
 	if (bloques == NULL) {
-		log_warning(logger, "CREANDO BLOQUES");
+		log_warning(my_logger, "CREANDO BLOQUES");
 		int fd_bloques = open(lectura_de_config.PATH_BLOQUES, O_CREAT | O_RDWR, 0664);	//abre o crea el archivo en un file descriptor
 		if (fd_bloques == -1){
 			log_error(logger, "No se pudo ni CREAR el bloques");
@@ -64,7 +65,7 @@ void init_bloques() {
 		close(fd_bloques);
 		bloques = fopen(lectura_de_config.PATH_BLOQUES, "r+");
 	}
-	log_info(logger, "Bloques abierto");
+	log_warning(my_logger, "Bloques abierto");
 }
 
 void init_carpeta_fcbs() {

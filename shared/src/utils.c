@@ -4,9 +4,9 @@
 // Cliente //
 /////////////
 
-int crear_conexion(char *ip, char* puerto) {
+int crear_conexion(char* ip, char* puerto) {
 	struct addrinfo hints;
-	struct addrinfo *server_info;
+	struct addrinfo* server_info;
 
 	memset(&hints, 0, sizeof(hints));
 	hints.ai_family = AF_UNSPEC;
@@ -115,28 +115,28 @@ void enviar_handshake(int socket, t_handshake mensaje_handshake) {
 // Listas de estado //
 //////////////////////
 
-void *queue_pop_con_mutex(t_queue* queue, pthread_mutex_t* mutex) {
+void* queue_pop_con_mutex(t_queue* queue, pthread_mutex_t* mutex) {
     pthread_mutex_lock(mutex);
-    void *elemento = queue_pop(queue);
+    void* elemento = queue_pop(queue);
     pthread_mutex_unlock(mutex);
     return elemento;
 }
 
-void queue_push_con_mutex(t_queue* queue,void* elemento , pthread_mutex_t* mutex) {
+void queue_push_con_mutex(t_queue* queue, void* elemento, pthread_mutex_t* mutex) {
     pthread_mutex_lock(mutex);
     queue_push(queue, elemento);
     pthread_mutex_unlock(mutex);
     return;
 }
 
-void *list_pop_con_mutex(t_list* lista, pthread_mutex_t* mutex) {
+void* list_pop_con_mutex(t_list* lista, pthread_mutex_t* mutex) {
     pthread_mutex_lock(mutex);
     void* elemento = list_remove(lista, 0);
     pthread_mutex_unlock(mutex);
     return elemento;
 }
 
-void list_push_con_mutex(t_list* lista,void* elemento , pthread_mutex_t* mutex) {
+void list_push_con_mutex(t_list* lista, void* elemento, pthread_mutex_t* mutex) {
     pthread_mutex_lock(mutex);
     list_add(lista, elemento);
     pthread_mutex_unlock(mutex);
@@ -149,8 +149,9 @@ void list_push_con_mutex(t_list* lista,void* elemento , pthread_mutex_t* mutex) 
 
 void liberar_pcb(t_pcb* pcb) {
 	list_destroy_and_destroy_elements(pcb->instrucciones, (void*)destruir_instruccion);
-	list_destroy_and_destroy_elements(pcb->archivos_abiertos, (void*)destruir_archivo_abierto);
 	liberar_tabla_segmentos(pcb->tabla_segmentos);
+	list_destroy_and_destroy_elements(pcb->archivos_abiertos, (void*)destruir_archivo_abierto);
+	list_destroy_and_destroy_elements(pcb->recursos, (void*)free);
 	free(pcb);
 }
 
@@ -259,6 +260,8 @@ void* serializar_pcb(t_pcb* pcb, size_t* size_total, t_msj_kernel_cpu op_code, c
 
 	memcpy_archivos_abiertos_serializar(stream_pcb, pcb->archivos_abiertos, &desplazamiento);
 
+	memcpy_recursos_serializar(stream_pcb, pcb->recursos, &desplazamiento);
+
 	memcpy(stream_pcb + desplazamiento, &(pcb->socket_consola), sizeof(pcb->socket_consola));
 	desplazamiento += sizeof(pcb->socket_consola);
 
@@ -275,18 +278,25 @@ size_t tamanio_payload_pcb(t_pcb* pcb) {
 	size_t size = sizeof(pcb->pid) + tamanio_instrucciones(pcb->instrucciones);
 	size += sizeof(int); //para el tamanio_instrucciones_en_bytes
 	size += sizeof(pcb->pc);
-	size += sizeof(char)*16*7; // Por todos los char[] de los registros (?
+	size += sizeof(char) * 16 * 7; // Por todos los char[] de los registros (?
+
+	size += sizeof(int); //cantidad de segmentos
+	size += list_size(pcb->tabla_segmentos) * sizeof(int) * 3; //*3 por id + dir_base + tamanio
+
 	size += sizeof(pcb->estimado_prox_rafaga) + sizeof(pcb->tiempo_llegada_ready) + sizeof(pcb->socket_consola);
 	size += sizeof(pcb->tiempo_real_ejecucion) + sizeof(pcb->tiempo_inicial_ejecucion);
 
 	size += sizeof(int); // cantidad de archivos abiertos
 	for(int i = 0; i < list_size(pcb->archivos_abiertos); i++) {
-		t_archivo_abierto* archivo_abierto =  list_get(pcb->archivos_abiertos,i);
+		t_archivo_abierto* archivo_abierto =  list_get(pcb->archivos_abiertos, i);
 		size += sizeof(int) + sizeof(int) + strlen(archivo_abierto->nombre_archivo) + 1; //posicion actual + tamanio nombre + nombre del archivo
 	}
 
-	size += sizeof(int); //cantidad de segmentos
-	size += list_size(pcb->tabla_segmentos) * sizeof(int) * 3; //*3 por id + dir_base + tamanio
+	size += sizeof(int); // cantidad de recursos
+	for(int i = 0; i < list_size(pcb->recursos); i++) {
+		char* nombre_recurso =  list_get(pcb->recursos, i);
+		size += sizeof(int) + strlen(nombre_recurso) + 1; //tamanio nombre + nombre del archivo
+	}
 
 	return size;
 }
@@ -376,9 +386,7 @@ void memcpy_registros_serializar(void* stream_pcb, t_registros_cpu registros_cpu
 
 void memcpy_tabla_segmentos_serializar(void* stream, t_list* tabla_segmentos, int* desplazamiento) {
 	int cantidad_segmentos = list_size(tabla_segmentos);
-
-	printf("CANTIDAD_SEGMENTOS: %d \n", cantidad_segmentos);
-
+	//printf("CANTIDAD_SEGMENTOS: %d\n", cantidad_segmentos);
 	memcpy(stream + *desplazamiento, &cantidad_segmentos, sizeof(int));
 	*desplazamiento += sizeof(int);
 
@@ -411,6 +419,23 @@ void memcpy_archivos_abiertos_serializar(void* stream, t_list* archivos_abiertos
 		*desplazamiento += sizeof(int);
 
 		memcpy(stream + *desplazamiento, archivo_abierto->nombre_archivo, tamanio_nombre);
+		*desplazamiento += tamanio_nombre;
+	}
+}
+
+void memcpy_recursos_serializar(void* stream, t_list* recursos, int* desplazamiento) {
+	int tamanio_lista = list_size(recursos);
+	memcpy(stream + *desplazamiento, &tamanio_lista, sizeof(int));
+	*desplazamiento += sizeof(int);
+
+	for(int i = 0; i < tamanio_lista; i++) {
+		char* nombre_recurso = list_get(recursos, i);
+
+		int tamanio_nombre = strlen(nombre_recurso) + 1;
+		memcpy(stream + *desplazamiento, &tamanio_nombre, sizeof(int));
+		*desplazamiento += sizeof(int);
+
+		memcpy(stream + *desplazamiento, nombre_recurso, tamanio_nombre);
 		*desplazamiento += tamanio_nombre;
 	}
 }
@@ -460,6 +485,8 @@ t_pcb* deserializar_pcb(void* stream) {
 	desplazamiento += sizeof(pcb->tiempo_llegada_ready);
 
 	memcpy_archivos_abiertos_deserializar(pcb, stream, &desplazamiento);
+
+	memcpy_recursos_deserializar(pcb, stream, &desplazamiento);
 
 	memcpy(&(pcb->socket_consola), stream + desplazamiento, sizeof(pcb->socket_consola));
 	desplazamiento += sizeof(pcb->socket_consola);
@@ -609,6 +636,26 @@ void memcpy_archivos_abiertos_deserializar(t_pcb* pcb, void* stream, int* despla
 		*desplazamiento += tamanio_nombre;
 
 		list_add(pcb->archivos_abiertos, archivo_abierto);
+	}
+}
+
+void memcpy_recursos_deserializar(t_pcb* pcb, void* stream, int* desplazamiento) {
+	int cantidad_recursos;
+	pcb->recursos = list_create();
+
+	memcpy(&cantidad_recursos, stream + *desplazamiento, sizeof(int));
+	*desplazamiento += sizeof(int);
+
+	for(int i = 0; i < cantidad_recursos; i++) {
+		int tamanio_nombre;
+		memcpy(&tamanio_nombre, stream + *desplazamiento, sizeof(int));
+		*desplazamiento += sizeof(int);
+
+		char* nombre_recurso = malloc(tamanio_nombre);
+		memcpy(nombre_recurso, stream + *desplazamiento, tamanio_nombre);
+		*desplazamiento += tamanio_nombre;
+
+		list_add(pcb->recursos, nombre_recurso);
 	}
 }
 

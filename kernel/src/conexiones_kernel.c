@@ -74,6 +74,8 @@ t_pcb* crear_pcb(t_list* instrucciones, int socket_consola) {
 	pcb->tiempo_llegada_ready = 0;
 	pcb->archivos_abiertos = list_create();
 
+	pcb->recursos = list_create();
+
 	pcb->socket_consola = socket_consola;
 
 	pcb->tiempo_real_ejecucion = lectura_de_config.ESTIMACION_INICIAL; //Por si es la primera vez que entra en READY, para no afectar al calculo de la próxima ráfaga
@@ -87,7 +89,7 @@ t_registros_cpu init_registros_cpu() {
 	t_registros_cpu registros;
 
 	/*
-	for(int i = 0; i < 4; i++) {//TODO: usar memcpy
+	for(int i = 0; i < 4; i++) {
 		registros.AX[i] = '0';
 		registros.BX[i] = '0';
 		registros.CX[i] = '0';

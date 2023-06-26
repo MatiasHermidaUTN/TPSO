@@ -251,7 +251,7 @@ int manejar_mensaje() { //pinta bien
 			break;
 		}
 		default:{
-			log_warning(logger,"DEFAULT");
+			//log_warning(logger_no_obligatorio, "DEFAULT"); //Se emite cuando hacemos ^C
 			string_array_destroy(mensaje->parametros);
 			free(mensaje);
 			return 0;

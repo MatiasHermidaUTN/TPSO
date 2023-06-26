@@ -1,7 +1,7 @@
 #include "../include/parser.h"
 
 t_list* parsearPseudocodigo(t_log* logger, char* direccionPseudocodigo) {
-    FILE * archivoPseudocodigo;
+    FILE * archivoPseudocodigo; // @suppress("Type cannot be resolved")
     char * lineaLeida = NULL;
     size_t length = 0;
     int read;

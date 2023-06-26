@@ -30051,3 +30051,1367 @@
 [INFO] 21:42:43:875 Kernel/(11056:11058): PID: 1 - Crear Segmento - Id: 4 - Tamaño: 40
 [INFO] 21:42:43:875 Kernel/(11056:11058): PID: 1 - Estado Anterior: EXEC - Estado Actual: EXIT
 [INFO] 21:42:43:876 Kernel/(11056:11058): Finaliza el proceso 1 - Motivo: SUCCESS
+[INFO] 20:43:30:426 Kernel/(48701:48833): Se crea el proceso 1 en NEW
+[INFO] 20:43:30:426 Kernel/(48701:48704): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 20:43:30:426 Kernel/(48701:48704): Cola Ready FIFO: [1]
+[INFO] 20:43:30:427 Kernel/(48701:48703): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 20:43:30:428 Kernel/(48701:48703): PID: 1 - Abrir Archivo: PEPITO
+[INFO] 20:43:32:432 Kernel/(48701:48703): PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 20:43:32:432 Kernel/(48701:48703): PID: 1 - Bloqueado por: PEPITO
+[INFO] 20:43:32:432 Kernel/(48701:48703): PID: 1 - Archivo: PEPITO - Tamaño: 64
+[INFO] 20:43:32:434 Kernel/(48701:48705): PID: 1 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 20:43:32:434 Kernel/(48701:48705): Cola Ready FIFO: [1]
+[INFO] 20:43:32:434 Kernel/(48701:48703): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 20:43:32:434 Kernel/(48701:48703): PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 20:43:32:434 Kernel/(48701:48703): PID: 1 - Bloqueado por: PEPITO
+[INFO] 20:43:32:434 Kernel/(48701:48703): PID: 1 - Escribir Archivo: PEPITO - Puntero 4 - Dirección Memoria 4 - Tamaño 4
+[INFO] 20:43:34:437 Kernel/(48701:48705): PID: 1 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 20:43:34:437 Kernel/(48701:48705): Cola Ready FIFO: [1]
+[INFO] 20:43:34:437 Kernel/(48701:48703): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 20:43:34:438 Kernel/(48701:48703): PID: 1 - Actualizar puntero Archivo: PEPITO - Puntero 0
+[INFO] 20:43:34:438 Kernel/(48701:48703): PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 20:43:34:438 Kernel/(48701:48703): PID: 1 - Bloqueado por: PEPITO
+[INFO] 20:43:34:439 Kernel/(48701:48703): PID: 1 - Leer Archivo: PEPITO - Puntero 4 - Dirección Memoria 10 - Tamaño 4
+[INFO] 20:43:36:442 Kernel/(48701:48705): PID: 1 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 20:43:36:442 Kernel/(48701:48705): Cola Ready FIFO: [1]
+[INFO] 20:43:36:442 Kernel/(48701:48703): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 20:43:38:445 Kernel/(48701:48703): PID: 1 - Cerrar Archivo: PEPITO
+[INFO] 20:43:38:446 Kernel/(48701:48703): PID: 1 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 20:43:38:447 Kernel/(48701:48703): Finaliza el proceso 1 - Motivo: SUCCESS
+[INFO] 20:50:53:670 Kernel/(48701:48838): Se crea el proceso 2 en NEW
+[INFO] 20:50:53:671 Kernel/(48701:48704): PID: 2 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 20:50:53:671 Kernel/(48701:48704): Cola Ready FIFO: [2]
+[INFO] 20:50:53:671 Kernel/(48701:48703): PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 20:50:53:671 Kernel/(48701:48703): PID: 2 - Abrir Archivo: PEPITO
+[INFO] 20:50:55:675 Kernel/(48701:48703): PID: 2 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 20:50:55:675 Kernel/(48701:48703): PID: 2 - Bloqueado por: PEPITO
+[INFO] 20:50:55:675 Kernel/(48701:48703): PID: 2 - Archivo: PEPITO - Tamaño: 64
+[INFO] 20:50:55:678 Kernel/(48701:48705): PID: 2 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 20:50:55:678 Kernel/(48701:48705): Cola Ready FIFO: [2]
+[INFO] 20:50:55:678 Kernel/(48701:48703): PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 20:50:55:679 Kernel/(48701:48703): PID: 2 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 20:50:55:679 Kernel/(48701:48703): PID: 2 - Bloqueado por: PEPITO
+[INFO] 20:50:55:679 Kernel/(48701:48703): PID: 2 - Escribir Archivo: PEPITO - Puntero 4 - Dirección Memoria 4 - Tamaño 4
+[INFO] 20:50:57:681 Kernel/(48701:48705): PID: 2 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 20:50:57:681 Kernel/(48701:48705): Cola Ready FIFO: [2]
+[INFO] 20:50:57:681 Kernel/(48701:48703): PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 20:50:57:682 Kernel/(48701:48703): PID: 2 - Actualizar puntero Archivo: PEPITO - Puntero 0
+[INFO] 20:50:57:682 Kernel/(48701:48703): PID: 2 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 20:50:57:682 Kernel/(48701:48703): PID: 2 - Bloqueado por: PEPITO
+[INFO] 20:50:57:682 Kernel/(48701:48703): PID: 2 - Leer Archivo: PEPITO - Puntero 4 - Dirección Memoria 10 - Tamaño 4
+[INFO] 20:50:59:685 Kernel/(48701:48705): PID: 2 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 20:50:59:685 Kernel/(48701:48705): Cola Ready FIFO: [2]
+[INFO] 20:50:59:685 Kernel/(48701:48703): PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 20:51:01:688 Kernel/(48701:48703): PID: 2 - Cerrar Archivo: PEPITO
+[INFO] 20:51:01:689 Kernel/(48701:48703): PID: 2 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 20:51:01:691 Kernel/(48701:48703): Finaliza el proceso 2 - Motivo: SUCCESS
+[INFO] 22:08:20:353 Kernel/(50034:50042): Se crea el proceso 1 en NEW
+[INFO] 22:08:20:353 Kernel/(50034:50038): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 22:08:20:353 Kernel/(50034:50038): Cola Ready FIFO: [1]
+[INFO] 22:08:20:353 Kernel/(50034:50037): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 22:08:20:355 Kernel/(50034:50037): PID: 1 - Abrir Archivo: PEPITO
+[INFO] 22:08:23:358 Kernel/(50034:50037): PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 22:08:23:358 Kernel/(50034:50037): PID: 1 - Bloqueado por: PEPITO
+[INFO] 22:08:23:358 Kernel/(50034:50037): PID: 1 - Archivo: PEPITO - Tamaño: 64
+[INFO] 22:08:23:359 Kernel/(50034:50039): PID: 1 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 22:08:23:359 Kernel/(50034:50039): Cola Ready FIFO: [1]
+[INFO] 22:08:23:359 Kernel/(50034:50037): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 22:08:23:359 Kernel/(50034:50037): PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 22:08:23:359 Kernel/(50034:50037): PID: 1 - Bloqueado por: PEPITO
+[INFO] 22:08:23:359 Kernel/(50034:50037): PID: 1 - Escribir Archivo: PEPITO - Puntero 4 - Dirección Memoria 4 - Tamaño 4
+[INFO] 22:08:25:363 Kernel/(50034:50039): PID: 1 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 22:08:25:363 Kernel/(50034:50039): Cola Ready FIFO: [1]
+[INFO] 22:08:25:363 Kernel/(50034:50037): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 22:08:25:364 Kernel/(50034:50037): PID: 1 - Actualizar puntero Archivo: PEPITO - Puntero 0
+[INFO] 22:08:25:365 Kernel/(50034:50037): PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 22:08:25:365 Kernel/(50034:50037): PID: 1 - Bloqueado por: PEPITO
+[INFO] 22:08:25:365 Kernel/(50034:50037): PID: 1 - Leer Archivo: PEPITO - Puntero 4 - Dirección Memoria 10 - Tamaño 4
+[INFO] 22:08:27:367 Kernel/(50034:50039): PID: 1 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 22:08:27:368 Kernel/(50034:50039): Cola Ready FIFO: [1]
+[INFO] 22:08:27:368 Kernel/(50034:50037): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 22:08:29:370 Kernel/(50034:50037): PID: 1 - Cerrar Archivo: PEPITO
+[INFO] 22:08:29:370 Kernel/(50034:50037): PID: 1 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 22:08:29:371 Kernel/(50034:50037): Finaliza el proceso 1 - Motivo: SUCCESS
+[INFO] 22:08:48:893 Kernel/(50034:50045): Se crea el proceso 2 en NEW
+[INFO] 22:08:48:894 Kernel/(50034:50038): PID: 2 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 22:08:48:894 Kernel/(50034:50038): Cola Ready FIFO: [2]
+[INFO] 22:08:48:894 Kernel/(50034:50037): PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 22:08:48:894 Kernel/(50034:50037): PID: 2 - Abrir Archivo: PEPITO
+[INFO] 22:08:51:896 Kernel/(50034:50037): PID: 2 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 22:08:51:896 Kernel/(50034:50037): PID: 2 - Bloqueado por: PEPITO
+[INFO] 22:08:51:896 Kernel/(50034:50037): PID: 2 - Archivo: PEPITO - Tamaño: 64
+[INFO] 22:08:51:897 Kernel/(50034:50039): PID: 2 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 22:08:51:897 Kernel/(50034:50039): Cola Ready FIFO: [2]
+[INFO] 22:08:51:897 Kernel/(50034:50037): PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 22:08:51:898 Kernel/(50034:50037): PID: 2 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 22:08:51:898 Kernel/(50034:50037): PID: 2 - Bloqueado por: PEPITO
+[INFO] 22:08:51:899 Kernel/(50034:50037): PID: 2 - Escribir Archivo: PEPITO - Puntero 4 - Dirección Memoria 4 - Tamaño 4
+[INFO] 22:08:53:900 Kernel/(50034:50039): PID: 2 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 22:08:53:900 Kernel/(50034:50039): Cola Ready FIFO: [2]
+[INFO] 22:08:53:900 Kernel/(50034:50037): PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 22:08:53:901 Kernel/(50034:50037): PID: 2 - Actualizar puntero Archivo: PEPITO - Puntero 0
+[INFO] 22:08:53:902 Kernel/(50034:50037): PID: 2 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 22:08:53:902 Kernel/(50034:50037): PID: 2 - Bloqueado por: PEPITO
+[INFO] 22:08:53:902 Kernel/(50034:50037): PID: 2 - Leer Archivo: PEPITO - Puntero 4 - Dirección Memoria 10 - Tamaño 4
+[INFO] 22:08:55:904 Kernel/(50034:50039): PID: 2 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 22:08:55:905 Kernel/(50034:50039): Cola Ready FIFO: [2]
+[INFO] 22:08:55:905 Kernel/(50034:50037): PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 22:08:57:906 Kernel/(50034:50037): PID: 2 - Cerrar Archivo: PEPITO
+[INFO] 22:08:57:906 Kernel/(50034:50037): PID: 2 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 22:08:57:907 Kernel/(50034:50037): Finaliza el proceso 2 - Motivo: SUCCESS
+[INFO] 23:15:51:406 Kernel/(51933:51941): Se crea el proceso 1 en NEW
+[INFO] 23:15:51:410 Kernel/(51933:51937): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 23:15:51:410 Kernel/(51933:51937): Cola Ready FIFO: [1]
+[INFO] 23:15:51:410 Kernel/(51933:51936): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 23:15:51:415 Kernel/(51933:51936): PID: 1 - Abrir Archivo: PEPITO
+[INFO] 23:15:54:417 Kernel/(51933:51936): PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 23:15:54:417 Kernel/(51933:51936): PID: 1 - Bloqueado por: PEPITO
+[INFO] 23:15:54:417 Kernel/(51933:51936): PID: 1 - Archivo: PEPITO - Tamaño: 64
+[INFO] 23:15:54:418 Kernel/(51933:51938): PID: 1 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 23:15:54:418 Kernel/(51933:51938): Cola Ready FIFO: [1]
+[INFO] 23:15:54:419 Kernel/(51933:51936): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 23:15:54:419 Kernel/(51933:51936): PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 23:15:54:419 Kernel/(51933:51936): PID: 1 - Bloqueado por: PEPITO
+[INFO] 23:15:54:419 Kernel/(51933:51936): PID: 1 - Escribir Archivo: PEPITO - Puntero 4 - Dirección Memoria 4 - Tamaño 4
+[INFO] 23:15:56:421 Kernel/(51933:51938): PID: 1 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 23:15:56:421 Kernel/(51933:51938): Cola Ready FIFO: [1]
+[INFO] 23:15:56:421 Kernel/(51933:51936): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 23:15:56:421 Kernel/(51933:51936): PID: 1 - Actualizar puntero Archivo: PEPITO - Puntero 0
+[INFO] 23:15:56:421 Kernel/(51933:51936): PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 23:15:56:421 Kernel/(51933:51936): PID: 1 - Bloqueado por: PEPITO
+[INFO] 23:15:56:421 Kernel/(51933:51936): PID: 1 - Leer Archivo: PEPITO - Puntero 4 - Dirección Memoria 10 - Tamaño 4
+[INFO] 23:15:58:422 Kernel/(51933:51938): PID: 1 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 23:15:58:422 Kernel/(51933:51938): Cola Ready FIFO: [1]
+[INFO] 23:15:58:422 Kernel/(51933:51936): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 23:16:00:424 Kernel/(51933:51936): PID: 1 - Cerrar Archivo: PEPITO
+[INFO] 23:16:00:424 Kernel/(51933:51936): PID: 1 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 23:16:00:424 Kernel/(51933:51936): Finaliza el proceso 1 - Motivo: SUCCESS
+[INFO] 23:16:03:656 Kernel/(51933:51944): Se crea el proceso 2 en NEW
+[INFO] 23:16:03:656 Kernel/(51933:51937): PID: 2 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 23:16:03:656 Kernel/(51933:51937): Cola Ready FIFO: [2]
+[INFO] 23:16:03:656 Kernel/(51933:51936): PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 23:16:03:657 Kernel/(51933:51936): PID: 2 - Abrir Archivo: PEPITO
+[ERROR] 23:16:03:994 Kernel/(51933:51936): Error en la comunicacion entre el Kernel y la CPU
+[INFO] 23:16:40:492 Kernel/(51959:51967): Se crea el proceso 1 en NEW
+[INFO] 23:16:40:496 Kernel/(51959:51963): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 23:16:40:497 Kernel/(51959:51963): Cola Ready FIFO: [1]
+[INFO] 23:16:40:500 Kernel/(51959:51962): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 23:16:40:551 Kernel/(51959:51962): PID: 1 - Abrir Archivo: PEPITO
+[INFO] 23:16:43:586 Kernel/(51959:51962): PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 23:16:43:586 Kernel/(51959:51962): PID: 1 - Bloqueado por: PEPITO
+[INFO] 23:16:43:589 Kernel/(51959:51962): PID: 1 - Archivo: PEPITO - Tamaño: 64
+[INFO] 23:16:43:591 Kernel/(51959:51964): PID: 1 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 23:16:43:592 Kernel/(51959:51964): Cola Ready FIFO: [1]
+[INFO] 23:16:43:595 Kernel/(51959:51962): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 23:16:43:605 Kernel/(51959:51962): PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 23:16:43:605 Kernel/(51959:51962): PID: 1 - Bloqueado por: PEPITO
+[INFO] 23:16:43:612 Kernel/(51959:51962): PID: 1 - Escribir Archivo: PEPITO - Puntero 4 - Dirección Memoria 4 - Tamaño 4
+[INFO] 23:16:45:614 Kernel/(51959:51964): PID: 1 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 23:16:45:615 Kernel/(51959:51964): Cola Ready FIFO: [1]
+[INFO] 23:16:45:615 Kernel/(51959:51962): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 23:16:45:620 Kernel/(51959:51962): PID: 1 - Actualizar puntero Archivo: PEPITO - Puntero 0
+[INFO] 23:16:45:627 Kernel/(51959:51962): PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 23:16:45:627 Kernel/(51959:51962): PID: 1 - Bloqueado por: PEPITO
+[INFO] 23:16:45:643 Kernel/(51959:51962): PID: 1 - Leer Archivo: PEPITO - Puntero 4 - Dirección Memoria 10 - Tamaño 4
+[INFO] 23:16:47:645 Kernel/(51959:51964): PID: 1 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 23:16:47:646 Kernel/(51959:51964): Cola Ready FIFO: [1]
+[INFO] 23:16:47:647 Kernel/(51959:51962): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 23:16:49:664 Kernel/(51959:51962): PID: 1 - Cerrar Archivo: PEPITO
+[INFO] 23:16:49:677 Kernel/(51959:51962): PID: 1 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 23:16:49:677 Kernel/(51959:51962): Finaliza el proceso 1 - Motivo: SUCCESS
+[INFO] 23:20:08:193 Kernel/(52110:52118): Se crea el proceso 1 en NEW
+[INFO] 23:20:08:201 Kernel/(52110:52114): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 23:20:08:204 Kernel/(52110:52114): Cola Ready FIFO: [1]
+[INFO] 23:20:08:205 Kernel/(52110:52113): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 23:20:08:249 Kernel/(52110:52113): PID: 1 - Abrir Archivo: PEPITO
+[INFO] 23:20:11:301 Kernel/(52110:52113): PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 23:20:11:302 Kernel/(52110:52113): PID: 1 - Bloqueado por: PEPITO
+[INFO] 23:20:11:304 Kernel/(52110:52113): PID: 1 - Archivo: PEPITO - Tamaño: 64
+[INFO] 23:20:11:307 Kernel/(52110:52115): PID: 1 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 23:20:11:309 Kernel/(52110:52115): Cola Ready FIFO: [1]
+[INFO] 23:20:11:309 Kernel/(52110:52113): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 23:20:11:317 Kernel/(52110:52113): PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 23:20:11:317 Kernel/(52110:52113): PID: 1 - Bloqueado por: PEPITO
+[INFO] 23:20:11:323 Kernel/(52110:52113): PID: 1 - Escribir Archivo: PEPITO - Puntero 4 - Dirección Memoria 4 - Tamaño 4
+[INFO] 23:20:13:328 Kernel/(52110:52115): PID: 1 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 23:20:13:330 Kernel/(52110:52115): Cola Ready FIFO: [1]
+[INFO] 23:20:13:330 Kernel/(52110:52113): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 23:20:13:333 Kernel/(52110:52113): PID: 1 - Actualizar puntero Archivo: PEPITO - Puntero 0
+[INFO] 23:20:13:337 Kernel/(52110:52113): PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 23:20:13:337 Kernel/(52110:52113): PID: 1 - Bloqueado por: PEPITO
+[INFO] 23:20:13:345 Kernel/(52110:52113): PID: 1 - Leer Archivo: PEPITO - Puntero 4 - Dirección Memoria 10 - Tamaño 4
+[INFO] 23:20:15:346 Kernel/(52110:52115): PID: 1 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 23:20:15:346 Kernel/(52110:52115): Cola Ready FIFO: [1]
+[INFO] 23:20:15:347 Kernel/(52110:52113): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 23:20:17:371 Kernel/(52110:52113): PID: 1 - Cerrar Archivo: PEPITO
+[INFO] 23:20:17:374 Kernel/(52110:52113): PID: 1 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 23:20:17:375 Kernel/(52110:52113): Finaliza el proceso 1 - Motivo: SUCCESS
+[INFO] 23:20:20:122 Kernel/(52110:52121): Se crea el proceso 2 en NEW
+[INFO] 23:20:20:122 Kernel/(52110:52114): PID: 2 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 23:20:20:122 Kernel/(52110:52114): Cola Ready FIFO: [2]
+[INFO] 23:20:20:122 Kernel/(52110:52113): PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 23:20:20:124 Kernel/(52110:52113): PID: 2 - Abrir Archivo: PEPITO
+[INFO] 23:20:23:134 Kernel/(52110:52113): PID: 2 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 23:20:23:134 Kernel/(52110:52113): PID: 2 - Bloqueado por: PEPITO
+[INFO] 23:20:23:137 Kernel/(52110:52115): PID: 2 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 23:20:23:137 Kernel/(52110:52115): Cola Ready FIFO: [2]
+[INFO] 23:20:23:137 Kernel/(52110:52113): PID: 2 - Archivo: PEPITO - Tamaño: 64
+[INFO] 23:20:23:137 Kernel/(52110:52113): PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 23:20:23:143 Kernel/(52110:52113): PID: 2 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 23:20:23:143 Kernel/(52110:52113): PID: 2 - Bloqueado por: PEPITO
+[INFO] 23:20:23:151 Kernel/(52110:52113): PID: 2 - Escribir Archivo: PEPITO - Puntero 4 - Dirección Memoria 4 - Tamaño 4
+[INFO] 23:20:25:152 Kernel/(52110:52115): PID: 2 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 23:20:25:152 Kernel/(52110:52115): Cola Ready FIFO: [2]
+[INFO] 23:20:25:152 Kernel/(52110:52113): PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 23:20:25:156 Kernel/(52110:52113): PID: 2 - Actualizar puntero Archivo: PEPITO - Puntero 0
+[INFO] 23:20:25:160 Kernel/(52110:52113): PID: 2 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 23:20:25:160 Kernel/(52110:52113): PID: 2 - Bloqueado por: PEPITO
+[INFO] 23:20:25:165 Kernel/(52110:52113): PID: 2 - Leer Archivo: PEPITO - Puntero 4 - Dirección Memoria 10 - Tamaño 4
+[INFO] 23:20:27:167 Kernel/(52110:52115): PID: 2 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 23:20:27:167 Kernel/(52110:52115): Cola Ready FIFO: [2]
+[INFO] 23:20:27:167 Kernel/(52110:52113): PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 23:20:29:172 Kernel/(52110:52113): PID: 2 - Cerrar Archivo: PEPITO
+[INFO] 23:20:29:173 Kernel/(52110:52113): PID: 2 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 23:20:29:173 Kernel/(52110:52113): Finaliza el proceso 2 - Motivo: SUCCESS
+[INFO] 23:26:21:100 Kernel/(52170:52178): Se crea el proceso 1 en NEW
+[INFO] 23:26:21:103 Kernel/(52170:52174): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 23:26:21:105 Kernel/(52170:52174): Cola Ready FIFO: [1]
+[INFO] 23:26:21:108 Kernel/(52170:52173): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 23:26:21:152 Kernel/(52170:52173): PID: 1 - Wait: DISCO - Instancias: 0
+[ERROR] 23:26:21:160 Kernel/(52170:52173): El recurso RECURSO_INEXISTENTE no existe
+[INFO] 23:26:21:166 Kernel/(52170:52173): PID: 1 - Signal: DISCO - Instancias: 1
+[INFO] 23:26:21:167 Kernel/(52170:52173): PID: 1 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 23:26:21:168 Kernel/(52170:52173): Finaliza el proceso 1 - Motivo: SUCCESS
+[INFO] 23:45:40:440 Kernel/(52493:52501): Se crea el proceso 1 en NEW
+[INFO] 23:45:40:444 Kernel/(52493:52497): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 23:45:40:449 Kernel/(52493:52497): Cola Ready FIFO: [1]
+[INFO] 23:45:40:453 Kernel/(52493:52496): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 23:45:40:494 Kernel/(52493:52496): PID: 1 - Wait: DISCO - Instancias: 0
+[ERROR] 23:45:40:498 Kernel/(52493:52496): El recurso RECURSO_INEXISTENTE no existe
+[INFO] 23:45:40:501 Kernel/(52493:52496): PID: 1 - Signal: DISCO - Instancias: 1
+[INFO] 23:45:40:507 Kernel/(52493:52496): PID: 1 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 23:45:40:508 Kernel/(52493:52496): Finaliza el proceso 1 - Motivo: SUCCESS
+[INFO] 23:45:49:704 Kernel/(52493:52504): Se crea el proceso 2 en NEW
+[INFO] 23:45:49:704 Kernel/(52493:52497): PID: 2 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 23:45:49:704 Kernel/(52493:52497): Cola Ready FIFO: [2]
+[INFO] 23:47:27:122 Kernel/(52516:52524): Se crea el proceso 1 en NEW
+[INFO] 23:47:27:126 Kernel/(52516:52520): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 23:47:27:129 Kernel/(52516:52520): Cola Ready FIFO: [1]
+[INFO] 23:47:27:132 Kernel/(52516:52519): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 23:47:27:180 Kernel/(52516:52519): PID: 1 - Wait: DISCO - Instancias: 0
+[ERROR] 23:47:27:184 Kernel/(52516:52519): El recurso RECURSO_INEXISTENTE no existe
+[INFO] 23:47:27:192 Kernel/(52516:52519): PID: 1 - Signal: DISCO - Instancias: 1
+[INFO] 23:47:27:197 Kernel/(52516:52519): PID: 1 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 23:47:27:197 Kernel/(52516:52519): Finaliza el proceso 1 - Motivo: SUCCESS
+[INFO] 23:48:37:314 Kernel/(52567:52575): Se crea el proceso 1 en NEW
+[INFO] 23:48:37:325 Kernel/(52567:52571): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 23:48:37:331 Kernel/(52567:52571): Cola Ready FIFO: [1]
+[INFO] 23:48:37:331 Kernel/(52567:52570): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 23:48:37:372 Kernel/(52567:52570): PID: 1 - Wait: DISCO - Instancias: 0
+[ERROR] 23:48:37:377 Kernel/(52567:52570): El recurso RECURSO_INEXISTENTE no existe
+[INFO] 23:48:37:388 Kernel/(52567:52570): PID: 1 - Signal: DISCO - Instancias: 1
+[INFO] 23:48:37:389 Kernel/(52567:52570): PID: 1 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 23:48:37:389 Kernel/(52567:52570): Finaliza el proceso 1 - Motivo: SUCCESS
+[INFO] 23:52:52:704 Kernel/(52624:52632): Se crea el proceso 1 en NEW
+[INFO] 23:52:52:708 Kernel/(52624:52628): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 23:52:52:710 Kernel/(52624:52628): Cola Ready FIFO: [1]
+[INFO] 23:52:52:713 Kernel/(52624:52627): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 23:52:52:759 Kernel/(52624:52627): PID: 1 - Wait: DISCO - Instancias: 0
+[ERROR] 23:52:52:762 Kernel/(52624:52627): El recurso RECURSO_INEXISTENTE no existe
+[INFO] 23:52:52:770 Kernel/(52624:52627): PID: 1 - Signal: DISCO - Instancias: 1
+[INFO] 23:52:52:771 Kernel/(52624:52627): PID: 1 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 23:52:52:771 Kernel/(52624:52627): Finaliza el proceso 1 - Motivo: SUCCESS
+[INFO] 00:02:04:487 Kernel/(52912:52920): Se crea el proceso 1 en NEW
+[INFO] 00:02:04:491 Kernel/(52912:52916): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 00:02:04:492 Kernel/(52912:52916): Cola Ready FIFO: [1]
+[INFO] 00:02:04:496 Kernel/(52912:52915): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 00:02:04:536 Kernel/(52912:52915): PID: 1 - Wait: DISCO - Instancias: 0
+[ERROR] 00:02:04:543 Kernel/(52912:52915): El recurso RECURSO_INEXISTENTE no existe
+[INFO] 00:02:04:553 Kernel/(52912:52915): PID: 1 - Signal: DISCO - Instancias: 1
+[INFO] 00:02:04:554 Kernel/(52912:52915): PID: 1 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 00:02:04:554 Kernel/(52912:52915): Finaliza el proceso 1 - Motivo: SUCCESS
+[INFO] 00:02:04:557 Kernel/(52912:52915): PID: 1 - Signal: DISCO - Instancias: 2
+[INFO] 00:02:04:558 Kernel/(52912:52915): PID: 1 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 00:02:04:559 Kernel/(52912:52915): Finaliza el proceso 1 - Motivo: SUCCESS
+[INFO] 00:04:35:848 Kernel/(52978:52986): Se crea el proceso 1 en NEW
+[INFO] 00:04:35:851 Kernel/(52978:52982): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 00:04:35:853 Kernel/(52978:52982): Cola Ready FIFO: [1]
+[INFO] 00:04:35:856 Kernel/(52978:52981): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 00:04:35:894 Kernel/(52978:52981): PID: 1 - Wait: DISCO - Instancias: 0
+[ERROR] 00:04:35:903 Kernel/(52978:52981): El recurso RECURSO_INEXISTENTE no existe
+[INFO] 00:04:35:904 Kernel/(52978:52981): PID: 1 - Signal: DISCO - Instancias: 1
+[INFO] 00:04:35:905 Kernel/(52978:52981): PID: 1 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 00:04:35:906 Kernel/(52978:52981): Finaliza el proceso 1 - Motivo: SUCCESS
+[INFO] 00:04:35:908 Kernel/(52978:52981): PID: 1 - Signal: DISCO - Instancias: 2
+[INFO] 00:04:35:909 Kernel/(52978:52981): PID: 1 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 00:04:35:910 Kernel/(52978:52981): Finaliza el proceso 1 - Motivo: SUCCESS
+[INFO] 00:06:02:445 Kernel/(53043:53051): Se crea el proceso 1 en NEW
+[INFO] 00:06:02:448 Kernel/(53043:53047): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 00:06:02:450 Kernel/(53043:53047): Cola Ready FIFO: [1]
+[INFO] 00:06:02:453 Kernel/(53043:53046): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 00:06:02:498 Kernel/(53043:53046): PID: 1 - Wait: DISCO - Instancias: 0
+[ERROR] 00:06:02:502 Kernel/(53043:53046): El recurso RECURSO_INEXISTENTE no existe
+[INFO] 00:06:02:503 Kernel/(53043:53046): PID: 1 - Signal: DISCO - Instancias: 1
+[INFO] 00:06:02:504 Kernel/(53043:53046): PID: 1 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 00:06:02:505 Kernel/(53043:53046): Finaliza el proceso 1 - Motivo: SUCCESS
+[INFO] 00:06:29:198 Kernel/(53090:53098): Se crea el proceso 1 en NEW
+[INFO] 00:06:29:202 Kernel/(53090:53094): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 00:06:29:203 Kernel/(53090:53094): Cola Ready FIFO: [1]
+[INFO] 00:06:29:206 Kernel/(53090:53093): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 00:06:29:243 Kernel/(53090:53093): PID: 1 - Wait: DISCO - Instancias: 0
+[ERROR] 00:06:29:247 Kernel/(53090:53093): El recurso RECURSO_INEXISTENTE no existe
+[INFO] 00:06:29:248 Kernel/(53090:53093): PID: 1 - Signal: DISCO - Instancias: 1
+[INFO] 00:06:29:252 Kernel/(53090:53093): PID: 1 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 00:06:29:253 Kernel/(53090:53093): Finaliza el proceso 1 - Motivo: SUCCESS
+[INFO] 00:06:29:257 Kernel/(53090:53093): PID: 1 - Signal: DISCO - Instancias: 2
+[INFO] 00:06:29:258 Kernel/(53090:53093): PID: 1 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 00:06:29:258 Kernel/(53090:53093): Finaliza el proceso 1 - Motivo: SUCCESS
+[ERROR] 00:22:38:839 Kernel/(53385:53385): Kernel no pudo conectarse a File System
+[ERROR] 00:22:53:215 Kernel/(53394:53394): Kernel no pudo conectarse a Memoria
+[INFO] 00:23:07:123 Kernel/(53406:53414): Se crea el proceso 1 en NEW
+[INFO] 00:23:07:127 Kernel/(53406:53410): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 00:23:07:133 Kernel/(53406:53410): Cola Ready FIFO: [1]
+[INFO] 00:23:07:136 Kernel/(53406:53409): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 00:23:07:178 Kernel/(53406:53409): PID: 1 - Wait: DISCO - Instancias: 0
+[ERROR] 00:23:07:181 Kernel/(53406:53409): El recurso RECURSO_INEXISTENTE no existe
+[INFO] 00:23:07:183 Kernel/(53406:53409): PID: 1 - Signal: DISCO - Instancias: 1
+[INFO] 00:23:07:184 Kernel/(53406:53409): PID: 1 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 00:23:07:184 Kernel/(53406:53409): Finaliza el proceso 1 - Motivo: SUCCESS
+[INFO] 00:23:59:941 Kernel/(53406:53419): Se crea el proceso 2 en NEW
+[INFO] 00:23:59:942 Kernel/(53406:53410): PID: 2 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 00:23:59:942 Kernel/(53406:53410): Cola Ready FIFO: [2]
+[INFO] 00:23:59:943 Kernel/(53406:53409): PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 00:23:59:944 Kernel/(53406:53409): PID: 2 - Wait: DISCO - Instancias: 0
+[ERROR] 00:23:59:945 Kernel/(53406:53409): El recurso RECURSO_INEXISTENTE no existe
+[INFO] 00:23:59:945 Kernel/(53406:53409): PID: 2 - Signal: DISCO - Instancias: 1
+[INFO] 00:23:59:945 Kernel/(53406:53409): PID: 2 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 00:23:59:946 Kernel/(53406:53409): Finaliza el proceso 2 - Motivo: SUCCESS
+[INFO] 00:24:03:067 Kernel/(53406:53422): Se crea el proceso 3 en NEW
+[INFO] 00:24:03:067 Kernel/(53406:53410): PID: 3 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 00:24:03:068 Kernel/(53406:53410): Cola Ready FIFO: [3]
+[INFO] 00:24:03:068 Kernel/(53406:53409): PID: 3 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 00:24:03:070 Kernel/(53406:53409): PID: 3 - Wait: DISCO - Instancias: 0
+[ERROR] 00:24:03:071 Kernel/(53406:53409): El recurso RECURSO_INEXISTENTE no existe
+[INFO] 00:24:03:071 Kernel/(53406:53409): PID: 3 - Signal: DISCO - Instancias: 1
+[INFO] 00:24:03:071 Kernel/(53406:53409): PID: 3 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 00:24:03:072 Kernel/(53406:53409): Finaliza el proceso 3 - Motivo: SUCCESS
+[INFO] 00:24:04:122 Kernel/(53406:53425): Se crea el proceso 4 en NEW
+[INFO] 00:24:04:122 Kernel/(53406:53410): PID: 4 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 00:24:04:122 Kernel/(53406:53410): Cola Ready FIFO: [4]
+[INFO] 00:24:04:123 Kernel/(53406:53409): PID: 4 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 00:24:04:124 Kernel/(53406:53409): PID: 4 - Wait: DISCO - Instancias: 0
+[ERROR] 00:24:04:125 Kernel/(53406:53409): El recurso RECURSO_INEXISTENTE no existe
+[INFO] 00:24:04:125 Kernel/(53406:53409): PID: 4 - Signal: DISCO - Instancias: 1
+[INFO] 00:24:04:125 Kernel/(53406:53409): PID: 4 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 00:24:04:126 Kernel/(53406:53409): Finaliza el proceso 4 - Motivo: SUCCESS
+[INFO] 00:24:04:762 Kernel/(53406:53428): Se crea el proceso 5 en NEW
+[INFO] 00:24:04:763 Kernel/(53406:53410): PID: 5 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 00:24:04:763 Kernel/(53406:53410): Cola Ready FIFO: [5]
+[INFO] 00:24:04:763 Kernel/(53406:53409): PID: 5 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 00:24:04:764 Kernel/(53406:53409): PID: 5 - Wait: DISCO - Instancias: 0
+[ERROR] 00:24:04:765 Kernel/(53406:53409): El recurso RECURSO_INEXISTENTE no existe
+[INFO] 00:24:04:765 Kernel/(53406:53409): PID: 5 - Signal: DISCO - Instancias: 1
+[INFO] 00:24:04:766 Kernel/(53406:53409): PID: 5 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 00:24:04:766 Kernel/(53406:53409): Finaliza el proceso 5 - Motivo: SUCCESS
+[INFO] 00:24:05:194 Kernel/(53406:53431): Se crea el proceso 6 en NEW
+[INFO] 00:24:05:194 Kernel/(53406:53410): PID: 6 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 00:24:05:194 Kernel/(53406:53410): Cola Ready FIFO: [6]
+[INFO] 00:24:05:195 Kernel/(53406:53409): PID: 6 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 00:24:05:196 Kernel/(53406:53409): PID: 6 - Wait: DISCO - Instancias: 0
+[ERROR] 00:24:05:197 Kernel/(53406:53409): El recurso RECURSO_INEXISTENTE no existe
+[INFO] 00:24:05:197 Kernel/(53406:53409): PID: 6 - Signal: DISCO - Instancias: 1
+[INFO] 00:24:05:197 Kernel/(53406:53409): PID: 6 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 00:24:05:197 Kernel/(53406:53409): Finaliza el proceso 6 - Motivo: SUCCESS
+[INFO] 00:24:05:594 Kernel/(53406:53434): Se crea el proceso 7 en NEW
+[INFO] 00:24:05:594 Kernel/(53406:53410): PID: 7 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 00:24:05:595 Kernel/(53406:53410): Cola Ready FIFO: [7]
+[INFO] 00:24:05:595 Kernel/(53406:53409): PID: 7 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 00:24:05:596 Kernel/(53406:53409): PID: 7 - Wait: DISCO - Instancias: 0
+[ERROR] 00:24:05:599 Kernel/(53406:53409): El recurso RECURSO_INEXISTENTE no existe
+[INFO] 00:24:05:599 Kernel/(53406:53409): PID: 7 - Signal: DISCO - Instancias: 1
+[INFO] 00:24:05:599 Kernel/(53406:53409): PID: 7 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 00:24:05:600 Kernel/(53406:53409): Finaliza el proceso 7 - Motivo: SUCCESS
+[INFO] 00:24:05:978 Kernel/(53406:53437): Se crea el proceso 8 en NEW
+[INFO] 00:24:05:978 Kernel/(53406:53410): PID: 8 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 00:24:05:979 Kernel/(53406:53410): Cola Ready FIFO: [8]
+[INFO] 00:24:05:979 Kernel/(53406:53409): PID: 8 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 00:24:05:980 Kernel/(53406:53409): PID: 8 - Wait: DISCO - Instancias: 0
+[ERROR] 00:24:05:981 Kernel/(53406:53409): El recurso RECURSO_INEXISTENTE no existe
+[INFO] 00:24:05:982 Kernel/(53406:53409): PID: 8 - Signal: DISCO - Instancias: 1
+[INFO] 00:24:05:982 Kernel/(53406:53409): PID: 8 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 00:24:05:983 Kernel/(53406:53409): Finaliza el proceso 8 - Motivo: SUCCESS
+[INFO] 00:24:25:740 Kernel/(53449:53457): Se crea el proceso 1 en NEW
+[INFO] 00:24:25:743 Kernel/(53449:53453): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 00:24:25:744 Kernel/(53449:53453): Cola Ready FIFO: [1]
+[INFO] 00:24:25:748 Kernel/(53449:53452): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 00:24:25:789 Kernel/(53449:53452): PID: 1 - Wait: DISCO - Instancias: 0
+[ERROR] 00:24:25:797 Kernel/(53449:53452): El recurso RECURSO_INEXISTENTE no existe
+[INFO] 00:24:25:798 Kernel/(53449:53452): PID: 1 - Signal: DISCO - Instancias: 1
+[INFO] 00:24:25:799 Kernel/(53449:53452): PID: 1 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 00:24:25:800 Kernel/(53449:53452): Finaliza el proceso 1 - Motivo: SUCCESS
+[INFO] 00:25:37:357 Kernel/(53505:53513): Se crea el proceso 1 en NEW
+[INFO] 00:25:37:360 Kernel/(53505:53509): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 00:25:37:362 Kernel/(53505:53509): Cola Ready FIFO: [1]
+[INFO] 00:25:37:364 Kernel/(53505:53508): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 00:25:37:407 Kernel/(53505:53508): PID: 1 - Wait: DISCO - Instancias: 0
+[ERROR] 00:25:37:412 Kernel/(53505:53508): El recurso RECURSO_INEXISTENTE no existe
+[INFO] 00:25:37:423 Kernel/(53505:53508): PID: 1 - Signal: DISCO - Instancias: 1
+[INFO] 00:25:37:424 Kernel/(53505:53508): PID: 1 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 00:25:37:425 Kernel/(53505:53508): Finaliza el proceso 1 - Motivo: SUCCESS
+[INFO] 00:26:18:643 Kernel/(53505:53520): Se crea el proceso 2 en NEW
+[INFO] 00:26:18:644 Kernel/(53505:53509): PID: 2 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 00:26:18:644 Kernel/(53505:53509): Cola Ready FIFO: [2]
+[INFO] 00:26:18:644 Kernel/(53505:53508): PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 00:26:18:645 Kernel/(53505:53508): PID: 2 - Wait: DISCO - Instancias: 0
+[ERROR] 00:26:18:647 Kernel/(53505:53508): El recurso RECURSO_INEXISTENTE no existe
+[INFO] 00:26:18:647 Kernel/(53505:53508): PID: 2 - Signal: DISCO - Instancias: 1
+[INFO] 00:26:18:647 Kernel/(53505:53508): PID: 2 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 00:26:18:648 Kernel/(53505:53508): Finaliza el proceso 2 - Motivo: SUCCESS
+[INFO] 00:33:29:053 Kernel/(53719:53727): Se crea el proceso 1 en NEW
+[INFO] 00:33:29:130 Kernel/(53719:53723): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 00:33:29:141 Kernel/(53719:53723): Cola Ready FIFO: [1]
+[INFO] 00:33:29:143 Kernel/(53719:53722): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 00:33:29:191 Kernel/(53719:53722): PID: 1 - Wait: DISCO - Instancias: 0
+[ERROR] 00:33:29:195 Kernel/(53719:53722): El recurso RECURSO_INEXISTENTE no existe
+[INFO] 00:33:29:201 Kernel/(53719:53722): PID: 1 - Signal: DISCO - Instancias: 1
+[INFO] 00:33:29:202 Kernel/(53719:53722): PID: 1 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 00:33:29:203 Kernel/(53719:53722): Finaliza el proceso 1 - Motivo: SUCCESS
+[INFO] 00:36:16:568 Kernel/(53771:53779): Se crea el proceso 1 en NEW
+[INFO] 00:36:16:577 Kernel/(53771:53775): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 00:36:16:581 Kernel/(53771:53775): Cola Ready FIFO: [1]
+[INFO] 00:36:16:585 Kernel/(53771:53774): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 00:36:16:629 Kernel/(53771:53774): PID: 1 - Wait: DISCO - Instancias: 0
+[ERROR] 00:36:16:632 Kernel/(53771:53774): El recurso RECURSO_INEXISTENTE no existe
+[INFO] 00:36:16:634 Kernel/(53771:53774): PID: 1 - Signal: DISCO - Instancias: 1
+[INFO] 00:36:16:635 Kernel/(53771:53774): PID: 1 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 00:36:16:635 Kernel/(53771:53774): Finaliza el proceso 1 - Motivo: SUCCESS
+[INFO] 00:36:20:410 Kernel/(53771:53782): Se crea el proceso 2 en NEW
+[INFO] 00:36:20:410 Kernel/(53771:53775): PID: 2 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 00:36:20:410 Kernel/(53771:53775): Cola Ready FIFO: [2]
+[INFO] 00:36:20:411 Kernel/(53771:53774): PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 00:36:20:412 Kernel/(53771:53774): PID: 2 - Wait: DISCO - Instancias: 0
+[ERROR] 00:36:20:413 Kernel/(53771:53774): El recurso RECURSO_INEXISTENTE no existe
+[INFO] 00:36:20:413 Kernel/(53771:53774): PID: 2 - Signal: DISCO - Instancias: 1
+[INFO] 00:36:20:413 Kernel/(53771:53774): PID: 2 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 00:36:20:414 Kernel/(53771:53774): Finaliza el proceso 2 - Motivo: SUCCESS
+[INFO] 00:36:21:305 Kernel/(53771:53785): Se crea el proceso 3 en NEW
+[INFO] 00:36:21:305 Kernel/(53771:53775): PID: 3 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 00:36:21:305 Kernel/(53771:53775): Cola Ready FIFO: [3]
+[INFO] 00:36:21:306 Kernel/(53771:53774): PID: 3 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 00:36:21:307 Kernel/(53771:53774): PID: 3 - Wait: DISCO - Instancias: 0
+[ERROR] 00:36:21:308 Kernel/(53771:53774): El recurso RECURSO_INEXISTENTE no existe
+[INFO] 00:36:21:308 Kernel/(53771:53774): PID: 3 - Signal: DISCO - Instancias: 1
+[INFO] 00:36:21:308 Kernel/(53771:53774): PID: 3 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 00:36:21:309 Kernel/(53771:53774): Finaliza el proceso 3 - Motivo: SUCCESS
+[INFO] 00:36:21:793 Kernel/(53771:53788): Se crea el proceso 4 en NEW
+[INFO] 00:36:21:793 Kernel/(53771:53775): PID: 4 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 00:36:21:793 Kernel/(53771:53775): Cola Ready FIFO: [4]
+[INFO] 00:36:21:794 Kernel/(53771:53774): PID: 4 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 00:36:21:794 Kernel/(53771:53774): PID: 4 - Wait: DISCO - Instancias: 0
+[ERROR] 00:36:21:795 Kernel/(53771:53774): El recurso RECURSO_INEXISTENTE no existe
+[INFO] 00:36:21:796 Kernel/(53771:53774): PID: 4 - Signal: DISCO - Instancias: 1
+[INFO] 00:36:21:796 Kernel/(53771:53774): PID: 4 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 00:36:21:796 Kernel/(53771:53774): Finaliza el proceso 4 - Motivo: SUCCESS
+[INFO] 00:36:22:225 Kernel/(53771:53791): Se crea el proceso 5 en NEW
+[INFO] 00:36:22:225 Kernel/(53771:53775): PID: 5 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 00:36:22:226 Kernel/(53771:53775): Cola Ready FIFO: [5]
+[INFO] 00:36:22:226 Kernel/(53771:53774): PID: 5 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 00:36:22:227 Kernel/(53771:53774): PID: 5 - Wait: DISCO - Instancias: 0
+[ERROR] 00:36:22:228 Kernel/(53771:53774): El recurso RECURSO_INEXISTENTE no existe
+[INFO] 00:36:22:228 Kernel/(53771:53774): PID: 5 - Signal: DISCO - Instancias: 1
+[INFO] 00:36:22:228 Kernel/(53771:53774): PID: 5 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 00:36:22:229 Kernel/(53771:53774): Finaliza el proceso 5 - Motivo: SUCCESS
+[INFO] 00:36:22:625 Kernel/(53771:53794): Se crea el proceso 6 en NEW
+[INFO] 00:36:22:625 Kernel/(53771:53775): PID: 6 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 00:36:22:626 Kernel/(53771:53775): Cola Ready FIFO: [6]
+[INFO] 00:36:22:626 Kernel/(53771:53774): PID: 6 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 00:36:22:627 Kernel/(53771:53774): PID: 6 - Wait: DISCO - Instancias: 0
+[ERROR] 00:36:22:628 Kernel/(53771:53774): El recurso RECURSO_INEXISTENTE no existe
+[INFO] 00:36:22:628 Kernel/(53771:53774): PID: 6 - Signal: DISCO - Instancias: 1
+[INFO] 00:36:22:628 Kernel/(53771:53774): PID: 6 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 00:36:22:629 Kernel/(53771:53774): Finaliza el proceso 6 - Motivo: SUCCESS
+[INFO] 00:36:23:018 Kernel/(53771:53797): Se crea el proceso 7 en NEW
+[INFO] 00:36:23:018 Kernel/(53771:53775): PID: 7 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 00:36:23:019 Kernel/(53771:53775): Cola Ready FIFO: [7]
+[INFO] 00:36:23:019 Kernel/(53771:53774): PID: 7 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 00:36:23:021 Kernel/(53771:53774): PID: 7 - Wait: DISCO - Instancias: 0
+[ERROR] 00:36:23:024 Kernel/(53771:53774): El recurso RECURSO_INEXISTENTE no existe
+[INFO] 00:36:23:026 Kernel/(53771:53774): PID: 7 - Signal: DISCO - Instancias: 1
+[INFO] 00:36:23:027 Kernel/(53771:53774): PID: 7 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 00:36:23:028 Kernel/(53771:53774): Finaliza el proceso 7 - Motivo: SUCCESS
+[INFO] 00:36:23:377 Kernel/(53771:53800): Se crea el proceso 8 en NEW
+[INFO] 00:36:23:377 Kernel/(53771:53775): PID: 8 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 00:36:23:378 Kernel/(53771:53775): Cola Ready FIFO: [8]
+[INFO] 00:36:23:378 Kernel/(53771:53774): PID: 8 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 00:36:23:379 Kernel/(53771:53774): PID: 8 - Wait: DISCO - Instancias: 0
+[ERROR] 00:36:23:380 Kernel/(53771:53774): El recurso RECURSO_INEXISTENTE no existe
+[INFO] 00:36:23:381 Kernel/(53771:53774): PID: 8 - Signal: DISCO - Instancias: 1
+[INFO] 00:36:23:381 Kernel/(53771:53774): PID: 8 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 00:36:23:382 Kernel/(53771:53774): Finaliza el proceso 8 - Motivo: SUCCESS
+[INFO] 00:37:06:229 Kernel/(53847:53855): Se crea el proceso 1 en NEW
+[INFO] 00:37:06:232 Kernel/(53847:53851): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 00:37:06:234 Kernel/(53847:53851): Cola Ready FIFO: [1]
+[INFO] 00:37:06:237 Kernel/(53847:53850): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 00:37:06:280 Kernel/(53847:53850): PID: 1 - Wait: DISCO - Instancias: 0
+[ERROR] 00:37:06:283 Kernel/(53847:53850): El recurso RECURSO_INEXISTENTE no existe
+[INFO] 00:37:06:286 Kernel/(53847:53850): PID: 1 - Signal: DISCO - Instancias: 1
+[INFO] 00:37:06:291 Kernel/(53847:53850): PID: 1 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 00:37:06:293 Kernel/(53847:53850): Finaliza el proceso 1 - Motivo: SUCCESS
+[INFO] 00:40:38:244 Kernel/(53947:53955): Se crea el proceso 1 en NEW
+[INFO] 00:40:38:248 Kernel/(53947:53951): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 00:40:38:249 Kernel/(53947:53951): Cola Ready FIFO: [1]
+[INFO] 00:40:38:252 Kernel/(53947:53950): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 00:40:38:296 Kernel/(53947:53950): PID: 1 - Wait: DISCO - Instancias: 0
+[ERROR] 00:40:38:302 Kernel/(53947:53950): El recurso RECURSO_INEXISTENTE no existe
+[INFO] 00:40:38:303 Kernel/(53947:53950): PID: 1 - Signal: DISCO - Instancias: 1
+[INFO] 00:40:38:305 Kernel/(53947:53950): PID: 1 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 00:40:38:305 Kernel/(53947:53950): Finaliza el proceso 1 - Motivo: SUCCESS
+[INFO] 00:40:40:515 Kernel/(53947:53958): Se crea el proceso 2 en NEW
+[INFO] 00:40:40:515 Kernel/(53947:53951): PID: 2 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 00:40:40:515 Kernel/(53947:53951): Cola Ready FIFO: [2]
+[INFO] 00:40:40:516 Kernel/(53947:53950): PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 00:40:40:517 Kernel/(53947:53950): PID: 2 - Wait: DISCO - Instancias: 0
+[ERROR] 00:40:40:518 Kernel/(53947:53950): El recurso RECURSO_INEXISTENTE no existe
+[INFO] 00:40:40:518 Kernel/(53947:53950): PID: 2 - Signal: DISCO - Instancias: 1
+[INFO] 00:40:40:519 Kernel/(53947:53950): PID: 2 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 00:40:40:519 Kernel/(53947:53950): Finaliza el proceso 2 - Motivo: SUCCESS
+[INFO] 00:40:41:025 Kernel/(53947:53961): Se crea el proceso 3 en NEW
+[INFO] 00:40:41:026 Kernel/(53947:53951): PID: 3 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 00:40:41:026 Kernel/(53947:53951): Cola Ready FIFO: [3]
+[INFO] 00:40:41:026 Kernel/(53947:53950): PID: 3 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 00:40:41:028 Kernel/(53947:53950): PID: 3 - Wait: DISCO - Instancias: 0
+[ERROR] 00:40:41:029 Kernel/(53947:53950): El recurso RECURSO_INEXISTENTE no existe
+[INFO] 00:40:41:029 Kernel/(53947:53950): PID: 3 - Signal: DISCO - Instancias: 1
+[INFO] 00:40:41:030 Kernel/(53947:53950): PID: 3 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 00:40:41:030 Kernel/(53947:53950): Finaliza el proceso 3 - Motivo: SUCCESS
+[INFO] 00:40:41:480 Kernel/(53947:53964): Se crea el proceso 4 en NEW
+[INFO] 00:40:41:480 Kernel/(53947:53951): PID: 4 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 00:40:41:480 Kernel/(53947:53951): Cola Ready FIFO: [4]
+[INFO] 00:40:41:481 Kernel/(53947:53950): PID: 4 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 00:40:41:482 Kernel/(53947:53950): PID: 4 - Wait: DISCO - Instancias: 0
+[ERROR] 00:40:41:483 Kernel/(53947:53950): El recurso RECURSO_INEXISTENTE no existe
+[INFO] 00:40:41:483 Kernel/(53947:53950): PID: 4 - Signal: DISCO - Instancias: 1
+[INFO] 00:40:41:483 Kernel/(53947:53950): PID: 4 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 00:40:41:484 Kernel/(53947:53950): Finaliza el proceso 4 - Motivo: SUCCESS
+[INFO] 00:40:41:896 Kernel/(53947:53967): Se crea el proceso 5 en NEW
+[INFO] 00:40:41:896 Kernel/(53947:53951): PID: 5 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 00:40:41:897 Kernel/(53947:53951): Cola Ready FIFO: [5]
+[INFO] 00:40:41:897 Kernel/(53947:53950): PID: 5 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 00:40:41:898 Kernel/(53947:53950): PID: 5 - Wait: DISCO - Instancias: 0
+[ERROR] 00:40:41:899 Kernel/(53947:53950): El recurso RECURSO_INEXISTENTE no existe
+[INFO] 00:40:41:899 Kernel/(53947:53950): PID: 5 - Signal: DISCO - Instancias: 1
+[INFO] 00:40:41:899 Kernel/(53947:53950): PID: 5 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 00:40:41:900 Kernel/(53947:53950): Finaliza el proceso 5 - Motivo: SUCCESS
+[INFO] 00:40:42:312 Kernel/(53947:53970): Se crea el proceso 6 en NEW
+[INFO] 00:40:42:312 Kernel/(53947:53951): PID: 6 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 00:40:42:313 Kernel/(53947:53951): Cola Ready FIFO: [6]
+[INFO] 00:40:42:313 Kernel/(53947:53950): PID: 6 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 00:40:42:314 Kernel/(53947:53950): PID: 6 - Wait: DISCO - Instancias: 0
+[ERROR] 00:40:42:315 Kernel/(53947:53950): El recurso RECURSO_INEXISTENTE no existe
+[INFO] 00:40:42:315 Kernel/(53947:53950): PID: 6 - Signal: DISCO - Instancias: 1
+[INFO] 00:40:42:316 Kernel/(53947:53950): PID: 6 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 00:40:42:316 Kernel/(53947:53950): Finaliza el proceso 6 - Motivo: SUCCESS
+[INFO] 04:31:21:295 Kernel/(54255:54263): Se crea el proceso 1 en NEW
+[INFO] 04:31:21:304 Kernel/(54255:54259): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 04:31:21:306 Kernel/(54255:54259): Cola Ready FIFO: [1]
+[INFO] 04:31:21:309 Kernel/(54255:54258): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 04:31:21:350 Kernel/(54255:54258): PID: 1 - Wait: DISCO - Instancias: 0
+[ERROR] 04:31:21:353 Kernel/(54255:54258): El recurso RECURSO_INEXISTENTE no existe
+[INFO] 04:31:21:359 Kernel/(54255:54258): PID: 1 - Signal: DISCO - Instancias: 1
+[INFO] 04:31:21:363 Kernel/(54255:54258): PID: 1 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 04:31:21:365 Kernel/(54255:54258): Finaliza el proceso 1 - Motivo: SUCCESS
+[INFO] 04:31:24:393 Kernel/(54255:54266): Se crea el proceso 2 en NEW
+[INFO] 04:31:24:393 Kernel/(54255:54259): PID: 2 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 04:31:24:393 Kernel/(54255:54259): Cola Ready FIFO: [2]
+[INFO] 04:31:24:393 Kernel/(54255:54258): PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 04:31:24:394 Kernel/(54255:54258): PID: 2 - Wait: DISCO - Instancias: 0
+[ERROR] 04:31:24:395 Kernel/(54255:54258): El recurso RECURSO_INEXISTENTE no existe
+[INFO] 04:31:24:395 Kernel/(54255:54258): PID: 2 - Signal: DISCO - Instancias: 1
+[INFO] 04:31:24:395 Kernel/(54255:54258): PID: 2 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 04:31:24:395 Kernel/(54255:54258): Finaliza el proceso 2 - Motivo: SUCCESS
+[INFO] 04:31:27:331 Kernel/(54255:54269): Se crea el proceso 3 en NEW
+[INFO] 04:31:27:331 Kernel/(54255:54259): PID: 3 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 04:31:27:331 Kernel/(54255:54259): Cola Ready FIFO: [3]
+[INFO] 04:31:27:332 Kernel/(54255:54258): PID: 3 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 04:31:27:333 Kernel/(54255:54258): PID: 3 - Wait: DISCO - Instancias: 0
+[ERROR] 04:31:27:334 Kernel/(54255:54258): El recurso RECURSO_INEXISTENTE no existe
+[INFO] 04:31:27:334 Kernel/(54255:54258): PID: 3 - Signal: DISCO - Instancias: 1
+[INFO] 04:31:27:335 Kernel/(54255:54258): PID: 3 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 04:31:27:336 Kernel/(54255:54258): Finaliza el proceso 3 - Motivo: SUCCESS
+[INFO] 04:33:57:482 Kernel/(54312:54320): Se crea el proceso 1 en NEW
+[INFO] 04:33:57:486 Kernel/(54312:54316): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 04:33:57:488 Kernel/(54312:54316): Cola Ready FIFO: [1]
+[INFO] 04:33:57:491 Kernel/(54312:54315): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 04:33:57:537 Kernel/(54312:54315): PID: 1 - Wait: DISCO - Instancias: 0
+[ERROR] 04:33:57:541 Kernel/(54312:54315): El recurso RECURSO_INEXISTENTE no existe
+[INFO] 04:33:57:543 Kernel/(54312:54315): PID: 1 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 04:33:57:544 Kernel/(54312:54315): Finaliza el proceso 1 - Motivo: SUCCESS
+[INFO] 04:34:02:779 Kernel/(54312:54323): Se crea el proceso 2 en NEW
+[INFO] 04:34:02:779 Kernel/(54312:54316): PID: 2 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 04:34:02:780 Kernel/(54312:54316): Cola Ready FIFO: [2]
+[INFO] 04:34:02:780 Kernel/(54312:54315): PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 04:34:02:781 Kernel/(54312:54315): PID: 2 - Wait: DISCO - Instancias: 0
+[ERROR] 04:34:02:783 Kernel/(54312:54315): El recurso RECURSO_INEXISTENTE no existe
+[INFO] 04:34:02:783 Kernel/(54312:54315): PID: 2 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 04:34:02:784 Kernel/(54312:54315): Finaliza el proceso 2 - Motivo: SUCCESS
+[INFO] 04:34:03:194 Kernel/(54312:54326): Se crea el proceso 3 en NEW
+[INFO] 04:34:03:194 Kernel/(54312:54316): PID: 3 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 04:34:03:195 Kernel/(54312:54316): Cola Ready FIFO: [3]
+[INFO] 04:34:03:195 Kernel/(54312:54315): PID: 3 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 04:34:03:196 Kernel/(54312:54315): PID: 3 - Wait: DISCO - Instancias: 0
+[ERROR] 04:34:03:197 Kernel/(54312:54315): El recurso RECURSO_INEXISTENTE no existe
+[INFO] 04:34:03:198 Kernel/(54312:54315): PID: 3 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 04:34:03:198 Kernel/(54312:54315): Finaliza el proceso 3 - Motivo: SUCCESS
+[INFO] 04:34:03:465 Kernel/(54312:54329): Se crea el proceso 4 en NEW
+[INFO] 04:34:03:466 Kernel/(54312:54316): PID: 4 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 04:34:03:466 Kernel/(54312:54316): Cola Ready FIFO: [4]
+[INFO] 04:34:03:466 Kernel/(54312:54315): PID: 4 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 04:34:03:467 Kernel/(54312:54315): PID: 4 - Wait: DISCO - Instancias: 0
+[ERROR] 04:34:03:468 Kernel/(54312:54315): El recurso RECURSO_INEXISTENTE no existe
+[INFO] 04:34:03:469 Kernel/(54312:54315): PID: 4 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 04:34:03:470 Kernel/(54312:54315): Finaliza el proceso 4 - Motivo: SUCCESS
+[INFO] 04:34:03:705 Kernel/(54312:54332): Se crea el proceso 5 en NEW
+[INFO] 04:34:03:706 Kernel/(54312:54316): PID: 5 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 04:34:03:706 Kernel/(54312:54316): Cola Ready FIFO: [5]
+[INFO] 04:34:03:706 Kernel/(54312:54315): PID: 5 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 04:34:03:707 Kernel/(54312:54315): PID: 5 - Wait: DISCO - Instancias: 0
+[ERROR] 04:34:03:709 Kernel/(54312:54315): El recurso RECURSO_INEXISTENTE no existe
+[INFO] 04:34:03:710 Kernel/(54312:54315): PID: 5 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 04:34:03:710 Kernel/(54312:54315): Finaliza el proceso 5 - Motivo: SUCCESS
+[INFO] 04:34:03:939 Kernel/(54312:54335): Se crea el proceso 6 en NEW
+[INFO] 04:34:03:940 Kernel/(54312:54316): PID: 6 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 04:34:03:940 Kernel/(54312:54316): Cola Ready FIFO: [6]
+[INFO] 04:34:03:940 Kernel/(54312:54315): PID: 6 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 04:34:03:942 Kernel/(54312:54315): PID: 6 - Wait: DISCO - Instancias: 0
+[ERROR] 04:34:03:943 Kernel/(54312:54315): El recurso RECURSO_INEXISTENTE no existe
+[INFO] 04:34:03:943 Kernel/(54312:54315): PID: 6 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 04:34:03:944 Kernel/(54312:54315): Finaliza el proceso 6 - Motivo: SUCCESS
+[INFO] 04:34:04:169 Kernel/(54312:54338): Se crea el proceso 7 en NEW
+[INFO] 04:34:04:170 Kernel/(54312:54316): PID: 7 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 04:34:04:170 Kernel/(54312:54316): Cola Ready FIFO: [7]
+[INFO] 04:34:04:170 Kernel/(54312:54315): PID: 7 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 04:34:04:171 Kernel/(54312:54315): PID: 7 - Wait: DISCO - Instancias: 0
+[ERROR] 04:34:04:172 Kernel/(54312:54315): El recurso RECURSO_INEXISTENTE no existe
+[INFO] 04:34:04:173 Kernel/(54312:54315): PID: 7 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 04:34:04:173 Kernel/(54312:54315): Finaliza el proceso 7 - Motivo: SUCCESS
+[INFO] 04:34:04:394 Kernel/(54312:54341): Se crea el proceso 8 en NEW
+[INFO] 04:34:04:394 Kernel/(54312:54316): PID: 8 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 04:34:04:394 Kernel/(54312:54316): Cola Ready FIFO: [8]
+[INFO] 04:34:04:395 Kernel/(54312:54315): PID: 8 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 04:34:04:398 Kernel/(54312:54315): PID: 8 - Wait: DISCO - Instancias: 0
+[ERROR] 04:34:04:399 Kernel/(54312:54315): El recurso RECURSO_INEXISTENTE no existe
+[INFO] 04:34:04:400 Kernel/(54312:54315): PID: 8 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 04:34:04:401 Kernel/(54312:54315): Finaliza el proceso 8 - Motivo: SUCCESS
+[INFO] 04:34:04:595 Kernel/(54312:54344): Se crea el proceso 9 en NEW
+[INFO] 04:34:04:595 Kernel/(54312:54316): PID: 9 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 04:34:04:596 Kernel/(54312:54316): Cola Ready FIFO: [9]
+[INFO] 04:34:04:596 Kernel/(54312:54315): PID: 9 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 04:34:04:597 Kernel/(54312:54315): PID: 9 - Wait: DISCO - Instancias: 0
+[ERROR] 04:34:04:598 Kernel/(54312:54315): El recurso RECURSO_INEXISTENTE no existe
+[INFO] 04:34:04:598 Kernel/(54312:54315): PID: 9 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 04:34:04:599 Kernel/(54312:54315): Finaliza el proceso 9 - Motivo: SUCCESS
+[INFO] 04:34:04:786 Kernel/(54312:54347): Se crea el proceso 10 en NEW
+[INFO] 04:34:04:786 Kernel/(54312:54316): PID: 10 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 04:34:04:786 Kernel/(54312:54316): Cola Ready FIFO: [10]
+[INFO] 04:34:04:786 Kernel/(54312:54315): PID: 10 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 04:34:04:789 Kernel/(54312:54315): PID: 10 - Wait: DISCO - Instancias: 0
+[ERROR] 04:34:04:791 Kernel/(54312:54315): El recurso RECURSO_INEXISTENTE no existe
+[INFO] 04:34:04:791 Kernel/(54312:54315): PID: 10 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 04:34:04:792 Kernel/(54312:54315): Finaliza el proceso 10 - Motivo: SUCCESS
+[INFO] 04:34:04:987 Kernel/(54312:54350): Se crea el proceso 11 en NEW
+[INFO] 04:34:04:987 Kernel/(54312:54316): PID: 11 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 04:34:04:988 Kernel/(54312:54316): Cola Ready FIFO: [11]
+[INFO] 04:34:04:988 Kernel/(54312:54315): PID: 11 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 04:34:04:989 Kernel/(54312:54315): PID: 11 - Wait: DISCO - Instancias: 0
+[ERROR] 04:34:04:990 Kernel/(54312:54315): El recurso RECURSO_INEXISTENTE no existe
+[INFO] 04:34:04:991 Kernel/(54312:54315): PID: 11 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 04:34:04:991 Kernel/(54312:54315): Finaliza el proceso 11 - Motivo: SUCCESS
+[INFO] 04:34:05:186 Kernel/(54312:54353): Se crea el proceso 12 en NEW
+[INFO] 04:34:05:186 Kernel/(54312:54316): PID: 12 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 04:34:05:186 Kernel/(54312:54316): Cola Ready FIFO: [12]
+[INFO] 04:34:05:187 Kernel/(54312:54315): PID: 12 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 04:34:05:188 Kernel/(54312:54315): PID: 12 - Wait: DISCO - Instancias: 0
+[ERROR] 04:34:05:189 Kernel/(54312:54315): El recurso RECURSO_INEXISTENTE no existe
+[INFO] 04:34:05:189 Kernel/(54312:54315): PID: 12 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 04:34:05:189 Kernel/(54312:54315): Finaliza el proceso 12 - Motivo: SUCCESS
+[INFO] 04:34:05:398 Kernel/(54312:54356): Se crea el proceso 13 en NEW
+[INFO] 04:34:05:398 Kernel/(54312:54316): PID: 13 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 04:34:05:398 Kernel/(54312:54316): Cola Ready FIFO: [13]
+[INFO] 04:34:05:399 Kernel/(54312:54315): PID: 13 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 04:34:05:400 Kernel/(54312:54315): PID: 13 - Wait: DISCO - Instancias: 0
+[ERROR] 04:34:05:401 Kernel/(54312:54315): El recurso RECURSO_INEXISTENTE no existe
+[INFO] 04:34:05:401 Kernel/(54312:54315): PID: 13 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 04:34:05:402 Kernel/(54312:54315): Finaliza el proceso 13 - Motivo: SUCCESS
+[INFO] 04:34:05:598 Kernel/(54312:54359): Se crea el proceso 14 en NEW
+[INFO] 04:34:05:599 Kernel/(54312:54316): PID: 14 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 04:34:05:599 Kernel/(54312:54316): Cola Ready FIFO: [14]
+[INFO] 04:34:05:599 Kernel/(54312:54315): PID: 14 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 04:34:05:600 Kernel/(54312:54315): PID: 14 - Wait: DISCO - Instancias: 0
+[ERROR] 04:34:05:602 Kernel/(54312:54315): El recurso RECURSO_INEXISTENTE no existe
+[INFO] 04:34:05:602 Kernel/(54312:54315): PID: 14 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 04:34:05:603 Kernel/(54312:54315): Finaliza el proceso 14 - Motivo: SUCCESS
+[INFO] 04:34:05:805 Kernel/(54312:54362): Se crea el proceso 15 en NEW
+[INFO] 04:34:05:806 Kernel/(54312:54316): PID: 15 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 04:34:05:806 Kernel/(54312:54316): Cola Ready FIFO: [15]
+[INFO] 04:34:05:806 Kernel/(54312:54315): PID: 15 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 04:34:05:809 Kernel/(54312:54315): PID: 15 - Wait: DISCO - Instancias: 0
+[ERROR] 04:34:05:810 Kernel/(54312:54315): El recurso RECURSO_INEXISTENTE no existe
+[INFO] 04:34:05:810 Kernel/(54312:54315): PID: 15 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 04:34:05:811 Kernel/(54312:54315): Finaliza el proceso 15 - Motivo: SUCCESS
+[INFO] 04:34:05:956 Kernel/(54312:54365): Se crea el proceso 16 en NEW
+[INFO] 04:34:05:956 Kernel/(54312:54316): PID: 16 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 04:34:05:956 Kernel/(54312:54316): Cola Ready FIFO: [16]
+[INFO] 04:34:05:957 Kernel/(54312:54315): PID: 16 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 04:34:05:958 Kernel/(54312:54315): PID: 16 - Wait: DISCO - Instancias: 0
+[ERROR] 04:34:05:959 Kernel/(54312:54315): El recurso RECURSO_INEXISTENTE no existe
+[INFO] 04:34:05:959 Kernel/(54312:54315): PID: 16 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 04:34:05:960 Kernel/(54312:54315): Finaliza el proceso 16 - Motivo: SUCCESS
+[INFO] 04:40:26:761 Kernel/(54664:54672): Se crea el proceso 1 en NEW
+[INFO] 04:40:26:765 Kernel/(54664:54668): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 04:40:26:766 Kernel/(54664:54668): Cola Ready FIFO: [1]
+[INFO] 04:40:26:771 Kernel/(54664:54667): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 04:40:26:816 Kernel/(54664:54667): PID: 1 - Wait: DISCO - Instancias: 0
+[ERROR] 04:40:26:820 Kernel/(54664:54667): El recurso RECURSO_INEXISTENTE no existe
+[INFO] 04:40:26:822 Kernel/(54664:54667): PID: 1 - Signal: DISCO - Instancias: 1
+[INFO] 04:40:26:823 Kernel/(54664:54667): PID: 1 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 04:40:26:824 Kernel/(54664:54667): Finaliza el proceso 1 - Motivo: SUCCESS
+[INFO] 04:40:28:283 Kernel/(54664:54675): Se crea el proceso 2 en NEW
+[INFO] 04:40:28:283 Kernel/(54664:54668): PID: 2 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 04:40:28:283 Kernel/(54664:54668): Cola Ready FIFO: [2]
+[INFO] 04:40:28:283 Kernel/(54664:54667): PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 04:40:28:284 Kernel/(54664:54667): PID: 2 - Wait: DISCO - Instancias: 0
+[ERROR] 04:40:28:285 Kernel/(54664:54667): El recurso RECURSO_INEXISTENTE no existe
+[INFO] 04:40:28:285 Kernel/(54664:54667): PID: 2 - Signal: DISCO - Instancias: 1
+[INFO] 04:40:28:286 Kernel/(54664:54667): PID: 2 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 04:40:28:286 Kernel/(54664:54667): Finaliza el proceso 2 - Motivo: SUCCESS
+[INFO] 04:40:28:553 Kernel/(54664:54678): Se crea el proceso 3 en NEW
+[INFO] 04:40:28:554 Kernel/(54664:54668): PID: 3 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 04:40:28:554 Kernel/(54664:54668): Cola Ready FIFO: [3]
+[INFO] 04:40:28:554 Kernel/(54664:54667): PID: 3 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 04:40:28:555 Kernel/(54664:54667): PID: 3 - Wait: DISCO - Instancias: 0
+[ERROR] 04:40:28:556 Kernel/(54664:54667): El recurso RECURSO_INEXISTENTE no existe
+[INFO] 04:40:28:556 Kernel/(54664:54667): PID: 3 - Signal: DISCO - Instancias: 1
+[INFO] 04:40:28:557 Kernel/(54664:54667): PID: 3 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 04:40:28:557 Kernel/(54664:54667): Finaliza el proceso 3 - Motivo: SUCCESS
+[INFO] 04:40:28:830 Kernel/(54664:54681): Se crea el proceso 4 en NEW
+[INFO] 04:40:28:830 Kernel/(54664:54668): PID: 4 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 04:40:28:831 Kernel/(54664:54668): Cola Ready FIFO: [4]
+[INFO] 04:40:28:831 Kernel/(54664:54667): PID: 4 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 04:40:28:832 Kernel/(54664:54667): PID: 4 - Wait: DISCO - Instancias: 0
+[ERROR] 04:40:28:832 Kernel/(54664:54667): El recurso RECURSO_INEXISTENTE no existe
+[INFO] 04:40:28:833 Kernel/(54664:54667): PID: 4 - Signal: DISCO - Instancias: 1
+[INFO] 04:40:28:833 Kernel/(54664:54667): PID: 4 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 04:40:28:833 Kernel/(54664:54667): Finaliza el proceso 4 - Motivo: SUCCESS
+[INFO] 04:40:29:034 Kernel/(54664:54684): Se crea el proceso 5 en NEW
+[INFO] 04:40:29:035 Kernel/(54664:54668): PID: 5 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 04:40:29:035 Kernel/(54664:54668): Cola Ready FIFO: [5]
+[INFO] 04:40:29:035 Kernel/(54664:54667): PID: 5 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 04:40:29:037 Kernel/(54664:54667): PID: 5 - Wait: DISCO - Instancias: 0
+[ERROR] 04:40:29:038 Kernel/(54664:54667): El recurso RECURSO_INEXISTENTE no existe
+[INFO] 04:40:29:039 Kernel/(54664:54667): PID: 5 - Signal: DISCO - Instancias: 1
+[INFO] 04:40:29:040 Kernel/(54664:54667): PID: 5 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 04:40:29:040 Kernel/(54664:54667): Finaliza el proceso 5 - Motivo: SUCCESS
+[INFO] 04:40:29:224 Kernel/(54664:54687): Se crea el proceso 6 en NEW
+[INFO] 04:40:29:225 Kernel/(54664:54668): PID: 6 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 04:40:29:225 Kernel/(54664:54668): Cola Ready FIFO: [6]
+[INFO] 04:40:29:225 Kernel/(54664:54667): PID: 6 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 04:40:29:226 Kernel/(54664:54667): PID: 6 - Wait: DISCO - Instancias: 0
+[ERROR] 04:40:29:227 Kernel/(54664:54667): El recurso RECURSO_INEXISTENTE no existe
+[INFO] 04:40:29:227 Kernel/(54664:54667): PID: 6 - Signal: DISCO - Instancias: 1
+[INFO] 04:40:29:228 Kernel/(54664:54667): PID: 6 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 04:40:29:228 Kernel/(54664:54667): Finaliza el proceso 6 - Motivo: SUCCESS
+[INFO] 04:40:29:393 Kernel/(54664:54690): Se crea el proceso 7 en NEW
+[INFO] 04:40:29:393 Kernel/(54664:54668): PID: 7 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 04:40:29:394 Kernel/(54664:54668): Cola Ready FIFO: [7]
+[INFO] 04:40:29:394 Kernel/(54664:54667): PID: 7 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 04:40:29:395 Kernel/(54664:54667): PID: 7 - Wait: DISCO - Instancias: 0
+[ERROR] 04:40:29:398 Kernel/(54664:54667): El recurso RECURSO_INEXISTENTE no existe
+[INFO] 04:40:29:398 Kernel/(54664:54667): PID: 7 - Signal: DISCO - Instancias: 1
+[INFO] 04:40:29:399 Kernel/(54664:54667): PID: 7 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 04:40:29:399 Kernel/(54664:54667): Finaliza el proceso 7 - Motivo: SUCCESS
+[INFO] 04:40:29:611 Kernel/(54664:54693): Se crea el proceso 8 en NEW
+[INFO] 04:40:29:612 Kernel/(54664:54668): PID: 8 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 04:40:29:612 Kernel/(54664:54668): Cola Ready FIFO: [8]
+[INFO] 04:40:29:612 Kernel/(54664:54667): PID: 8 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 04:40:29:613 Kernel/(54664:54667): PID: 8 - Wait: DISCO - Instancias: 0
+[ERROR] 04:40:29:614 Kernel/(54664:54667): El recurso RECURSO_INEXISTENTE no existe
+[INFO] 04:40:29:614 Kernel/(54664:54667): PID: 8 - Signal: DISCO - Instancias: 1
+[INFO] 04:40:29:614 Kernel/(54664:54667): PID: 8 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 04:40:29:615 Kernel/(54664:54667): Finaliza el proceso 8 - Motivo: SUCCESS
+[INFO] 04:40:29:801 Kernel/(54664:54696): Se crea el proceso 9 en NEW
+[INFO] 04:40:29:801 Kernel/(54664:54668): PID: 9 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 04:40:29:801 Kernel/(54664:54668): Cola Ready FIFO: [9]
+[INFO] 04:40:29:802 Kernel/(54664:54667): PID: 9 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 04:40:29:803 Kernel/(54664:54667): PID: 9 - Wait: DISCO - Instancias: 0
+[ERROR] 04:40:29:804 Kernel/(54664:54667): El recurso RECURSO_INEXISTENTE no existe
+[INFO] 04:40:29:804 Kernel/(54664:54667): PID: 9 - Signal: DISCO - Instancias: 1
+[INFO] 04:40:29:804 Kernel/(54664:54667): PID: 9 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 04:40:29:805 Kernel/(54664:54667): Finaliza el proceso 9 - Motivo: SUCCESS
+[INFO] 04:40:29:987 Kernel/(54664:54699): Se crea el proceso 10 en NEW
+[INFO] 04:40:29:987 Kernel/(54664:54668): PID: 10 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 04:40:29:988 Kernel/(54664:54668): Cola Ready FIFO: [10]
+[INFO] 04:40:29:988 Kernel/(54664:54667): PID: 10 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 04:40:29:989 Kernel/(54664:54667): PID: 10 - Wait: DISCO - Instancias: 0
+[ERROR] 04:40:29:992 Kernel/(54664:54667): El recurso RECURSO_INEXISTENTE no existe
+[INFO] 04:40:29:992 Kernel/(54664:54667): PID: 10 - Signal: DISCO - Instancias: 1
+[INFO] 04:40:29:992 Kernel/(54664:54667): PID: 10 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 04:40:29:993 Kernel/(54664:54667): Finaliza el proceso 10 - Motivo: SUCCESS
+[INFO] 04:40:51:192 Kernel/(54664:54703): Se crea el proceso 11 en NEW
+[INFO] 04:40:51:193 Kernel/(54664:54668): PID: 11 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 04:40:51:193 Kernel/(54664:54668): Cola Ready FIFO: [11]
+[INFO] 04:40:51:193 Kernel/(54664:54667): PID: 11 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 04:40:51:194 Kernel/(54664:54667): PID: 11 - Wait: DISCO - Instancias: 0
+[INFO] 04:40:51:195 Kernel/(54664:54667): PID: 11 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 04:40:51:196 Kernel/(54664:54667): PID: 11 - Bloqueado por: IO
+[INFO] 04:40:51:196 Kernel/(54664:54667): PID: 11 - Ejecuta IO: 5
+[INFO] 04:40:56:219 Kernel/(54664:54704): PID: 11 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 04:40:56:219 Kernel/(54664:54704): Cola Ready FIFO: [11]
+[INFO] 04:40:56:220 Kernel/(54664:54667): PID: 11 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 04:40:56:221 Kernel/(54664:54667): PID: 11 - Wait: IMPRESORA - Instancias: 0
+[INFO] 04:40:56:222 Kernel/(54664:54667): PID: 11 - Signal: DISCO - Instancias: 1
+[INFO] 04:40:56:224 Kernel/(54664:54667): PID: 11 - Signal: IMPRESORA - Instancias: 1
+[INFO] 04:40:56:226 Kernel/(54664:54667): PID: 11 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 04:40:56:226 Kernel/(54664:54667): Finaliza el proceso 11 - Motivo: SUCCESS
+[INFO] 04:41:19:369 Kernel/(54664:54708): Se crea el proceso 12 en NEW
+[INFO] 04:41:19:369 Kernel/(54664:54668): PID: 12 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 04:41:19:370 Kernel/(54664:54668): Cola Ready FIFO: [12]
+[INFO] 04:41:19:370 Kernel/(54664:54667): PID: 12 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 04:41:19:371 Kernel/(54664:54667): PID: 12 - Wait: DISCO - Instancias: 0
+[INFO] 04:41:19:372 Kernel/(54664:54667): PID: 12 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 04:41:19:372 Kernel/(54664:54667): PID: 12 - Bloqueado por: IO
+[INFO] 04:41:19:373 Kernel/(54664:54667): PID: 12 - Ejecuta IO: 5
+[INFO] 04:41:24:373 Kernel/(54664:54709): PID: 12 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 04:41:24:377 Kernel/(54664:54709): Cola Ready FIFO: [12]
+[INFO] 04:41:24:378 Kernel/(54664:54667): PID: 12 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 04:41:24:381 Kernel/(54664:54667): PID: 12 - Wait: IMPRESORA - Instancias: 0
+[INFO] 04:41:24:382 Kernel/(54664:54667): PID: 12 - Signal: DISCO - Instancias: 1
+[INFO] 04:41:24:383 Kernel/(54664:54667): PID: 12 - Signal: IMPRESORA - Instancias: 1
+[INFO] 04:41:24:384 Kernel/(54664:54667): PID: 12 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 04:41:24:384 Kernel/(54664:54667): Finaliza el proceso 12 - Motivo: SUCCESS
+[INFO] 04:41:30:858 Kernel/(54664:54712): Se crea el proceso 13 en NEW
+[INFO] 04:41:30:859 Kernel/(54664:54668): PID: 13 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 04:41:30:859 Kernel/(54664:54668): Cola Ready FIFO: [13]
+[INFO] 04:41:30:859 Kernel/(54664:54667): PID: 13 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 04:41:30:860 Kernel/(54664:54667): PID: 13 - Wait: DISCO - Instancias: 0
+[ERROR] 04:41:30:861 Kernel/(54664:54667): El recurso RECURSO_INEXISTENTE no existe
+[INFO] 04:41:30:861 Kernel/(54664:54667): PID: 13 - Signal: DISCO - Instancias: 1
+[INFO] 04:41:30:862 Kernel/(54664:54667): PID: 13 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 04:41:30:862 Kernel/(54664:54667): Finaliza el proceso 13 - Motivo: SUCCESS
+[INFO] 04:42:32:594 Kernel/(54725:54733): Se crea el proceso 1 en NEW
+[INFO] 04:42:32:598 Kernel/(54725:54729): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 04:42:32:599 Kernel/(54725:54729): Cola Ready FIFO: [1]
+[INFO] 04:42:32:603 Kernel/(54725:54728): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 04:42:32:643 Kernel/(54725:54728): PID: 1 - Wait: DISCO - Instancias: 0
+[ERROR] 04:42:32:652 Kernel/(54725:54728): El recurso RECURSO_INEXISTENTE no existe
+[INFO] 04:42:32:653 Kernel/(54725:54728): PID: 1 - Signal: DISCO - Instancias: 1
+[INFO] 04:42:32:655 Kernel/(54725:54728): PID: 1 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 04:42:32:655 Kernel/(54725:54728): Finaliza el proceso 1 - Motivo: SUCCESS
+[INFO] 04:42:43:727 Kernel/(54745:54753): Se crea el proceso 1 en NEW
+[INFO] 04:42:43:731 Kernel/(54745:54749): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 04:42:43:732 Kernel/(54745:54749): Cola Ready FIFO: [1]
+[INFO] 04:42:43:739 Kernel/(54745:54748): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 04:42:43:781 Kernel/(54745:54748): PID: 1 - Wait: DISCO - Instancias: 0
+[ERROR] 04:42:43:789 Kernel/(54745:54748): El recurso RECURSO_INEXISTENTE no existe
+[INFO] 04:42:43:790 Kernel/(54745:54748): PID: 1 - Signal: DISCO - Instancias: 1
+[INFO] 04:42:43:792 Kernel/(54745:54748): PID: 1 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 04:42:43:792 Kernel/(54745:54748): Finaliza el proceso 1 - Motivo: SUCCESS
+[INFO] 04:42:44:387 Kernel/(54745:54756): Se crea el proceso 2 en NEW
+[INFO] 04:42:44:387 Kernel/(54745:54749): PID: 2 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 04:42:44:387 Kernel/(54745:54749): Cola Ready FIFO: [2]
+[INFO] 04:42:44:388 Kernel/(54745:54748): PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 04:42:44:389 Kernel/(54745:54748): PID: 2 - Wait: DISCO - Instancias: 0
+[ERROR] 04:42:44:390 Kernel/(54745:54748): El recurso RECURSO_INEXISTENTE no existe
+[INFO] 04:42:44:391 Kernel/(54745:54748): PID: 2 - Signal: DISCO - Instancias: 1
+[INFO] 04:42:44:391 Kernel/(54745:54748): PID: 2 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 04:42:44:393 Kernel/(54745:54748): Finaliza el proceso 2 - Motivo: SUCCESS
+[INFO] 04:42:44:664 Kernel/(54745:54759): Se crea el proceso 3 en NEW
+[INFO] 04:42:44:665 Kernel/(54745:54749): PID: 3 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 04:42:44:665 Kernel/(54745:54749): Cola Ready FIFO: [3]
+[INFO] 04:42:44:665 Kernel/(54745:54748): PID: 3 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 04:42:44:666 Kernel/(54745:54748): PID: 3 - Wait: DISCO - Instancias: 0
+[ERROR] 04:42:44:667 Kernel/(54745:54748): El recurso RECURSO_INEXISTENTE no existe
+[INFO] 04:42:44:667 Kernel/(54745:54748): PID: 3 - Signal: DISCO - Instancias: 1
+[INFO] 04:42:44:667 Kernel/(54745:54748): PID: 3 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 04:42:44:668 Kernel/(54745:54748): Finaliza el proceso 3 - Motivo: SUCCESS
+[INFO] 04:42:44:897 Kernel/(54745:54762): Se crea el proceso 4 en NEW
+[INFO] 04:42:44:898 Kernel/(54745:54749): PID: 4 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 04:42:44:898 Kernel/(54745:54749): Cola Ready FIFO: [4]
+[INFO] 04:42:44:898 Kernel/(54745:54748): PID: 4 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 04:42:44:899 Kernel/(54745:54748): PID: 4 - Wait: DISCO - Instancias: 0
+[ERROR] 04:42:44:900 Kernel/(54745:54748): El recurso RECURSO_INEXISTENTE no existe
+[INFO] 04:42:44:900 Kernel/(54745:54748): PID: 4 - Signal: DISCO - Instancias: 1
+[INFO] 04:42:44:900 Kernel/(54745:54748): PID: 4 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 04:42:44:901 Kernel/(54745:54748): Finaliza el proceso 4 - Motivo: SUCCESS
+[INFO] 04:42:45:129 Kernel/(54745:54765): Se crea el proceso 5 en NEW
+[INFO] 04:42:45:129 Kernel/(54745:54749): PID: 5 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 04:42:45:129 Kernel/(54745:54749): Cola Ready FIFO: [5]
+[INFO] 04:42:45:129 Kernel/(54745:54748): PID: 5 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 04:42:45:130 Kernel/(54745:54748): PID: 5 - Wait: DISCO - Instancias: 0
+[ERROR] 04:42:45:131 Kernel/(54745:54748): El recurso RECURSO_INEXISTENTE no existe
+[INFO] 04:42:45:132 Kernel/(54745:54748): PID: 5 - Signal: DISCO - Instancias: 1
+[INFO] 04:42:45:132 Kernel/(54745:54748): PID: 5 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 04:42:45:132 Kernel/(54745:54748): Finaliza el proceso 5 - Motivo: SUCCESS
+[INFO] 04:42:45:336 Kernel/(54745:54768): Se crea el proceso 6 en NEW
+[INFO] 04:42:45:337 Kernel/(54745:54749): PID: 6 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 04:42:45:337 Kernel/(54745:54749): Cola Ready FIFO: [6]
+[INFO] 04:42:45:337 Kernel/(54745:54748): PID: 6 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 04:42:45:339 Kernel/(54745:54748): PID: 6 - Wait: DISCO - Instancias: 0
+[ERROR] 04:42:45:340 Kernel/(54745:54748): El recurso RECURSO_INEXISTENTE no existe
+[INFO] 04:42:45:340 Kernel/(54745:54748): PID: 6 - Signal: DISCO - Instancias: 1
+[INFO] 04:42:45:340 Kernel/(54745:54748): PID: 6 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 04:42:45:341 Kernel/(54745:54748): Finaliza el proceso 6 - Motivo: SUCCESS
+[INFO] 04:42:45:536 Kernel/(54745:54771): Se crea el proceso 7 en NEW
+[INFO] 04:42:45:537 Kernel/(54745:54749): PID: 7 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 04:42:45:537 Kernel/(54745:54749): Cola Ready FIFO: [7]
+[INFO] 04:42:45:537 Kernel/(54745:54748): PID: 7 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 04:42:45:539 Kernel/(54745:54748): PID: 7 - Wait: DISCO - Instancias: 0
+[ERROR] 04:42:45:542 Kernel/(54745:54748): El recurso RECURSO_INEXISTENTE no existe
+[INFO] 04:42:45:543 Kernel/(54745:54748): PID: 7 - Signal: DISCO - Instancias: 1
+[INFO] 04:42:45:545 Kernel/(54745:54748): PID: 7 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 04:42:45:546 Kernel/(54745:54748): Finaliza el proceso 7 - Motivo: SUCCESS
+[INFO] 04:42:45:745 Kernel/(54745:54774): Se crea el proceso 8 en NEW
+[INFO] 04:42:45:745 Kernel/(54745:54749): PID: 8 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 04:42:45:746 Kernel/(54745:54749): Cola Ready FIFO: [8]
+[INFO] 04:42:45:746 Kernel/(54745:54748): PID: 8 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 04:42:45:747 Kernel/(54745:54748): PID: 8 - Wait: DISCO - Instancias: 0
+[ERROR] 04:42:45:748 Kernel/(54745:54748): El recurso RECURSO_INEXISTENTE no existe
+[INFO] 04:42:45:748 Kernel/(54745:54748): PID: 8 - Signal: DISCO - Instancias: 1
+[INFO] 04:42:45:748 Kernel/(54745:54748): PID: 8 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 04:42:45:749 Kernel/(54745:54748): Finaliza el proceso 8 - Motivo: SUCCESS
+[INFO] 04:42:45:954 Kernel/(54745:54777): Se crea el proceso 9 en NEW
+[INFO] 04:42:45:955 Kernel/(54745:54749): PID: 9 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 04:42:45:955 Kernel/(54745:54749): Cola Ready FIFO: [9]
+[INFO] 04:42:45:955 Kernel/(54745:54748): PID: 9 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 04:42:45:956 Kernel/(54745:54748): PID: 9 - Wait: DISCO - Instancias: 0
+[ERROR] 04:42:45:958 Kernel/(54745:54748): El recurso RECURSO_INEXISTENTE no existe
+[INFO] 04:42:45:958 Kernel/(54745:54748): PID: 9 - Signal: DISCO - Instancias: 1
+[INFO] 04:42:45:958 Kernel/(54745:54748): PID: 9 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 04:42:45:959 Kernel/(54745:54748): Finaliza el proceso 9 - Motivo: SUCCESS
+[INFO] 04:42:46:150 Kernel/(54745:54780): Se crea el proceso 10 en NEW
+[INFO] 04:42:46:150 Kernel/(54745:54749): PID: 10 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 04:42:46:150 Kernel/(54745:54749): Cola Ready FIFO: [10]
+[INFO] 04:42:46:151 Kernel/(54745:54748): PID: 10 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 04:42:46:152 Kernel/(54745:54748): PID: 10 - Wait: DISCO - Instancias: 0
+[ERROR] 04:42:46:163 Kernel/(54745:54748): El recurso RECURSO_INEXISTENTE no existe
+[INFO] 04:42:46:163 Kernel/(54745:54748): PID: 10 - Signal: DISCO - Instancias: 1
+[INFO] 04:42:46:163 Kernel/(54745:54748): PID: 10 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 04:42:46:163 Kernel/(54745:54748): Finaliza el proceso 10 - Motivo: SUCCESS
+[INFO] 04:42:46:329 Kernel/(54745:54783): Se crea el proceso 11 en NEW
+[INFO] 04:42:46:329 Kernel/(54745:54749): PID: 11 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 04:42:46:329 Kernel/(54745:54749): Cola Ready FIFO: [11]
+[INFO] 04:42:46:334 Kernel/(54745:54748): PID: 11 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 04:42:46:335 Kernel/(54745:54748): PID: 11 - Wait: DISCO - Instancias: 0
+[ERROR] 04:42:46:338 Kernel/(54745:54748): El recurso RECURSO_INEXISTENTE no existe
+[INFO] 04:42:46:339 Kernel/(54745:54748): PID: 11 - Signal: DISCO - Instancias: 1
+[INFO] 04:42:46:339 Kernel/(54745:54748): PID: 11 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 04:42:46:339 Kernel/(54745:54748): Finaliza el proceso 11 - Motivo: SUCCESS
+[INFO] 04:42:58:608 Kernel/(54795:54803): Se crea el proceso 1 en NEW
+[INFO] 04:42:58:611 Kernel/(54795:54799): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 04:42:58:613 Kernel/(54795:54799): Cola Ready FIFO: [1]
+[INFO] 04:42:58:615 Kernel/(54795:54798): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 04:42:58:660 Kernel/(54795:54798): PID: 1 - Wait: DISCO - Instancias: 0
+[INFO] 04:42:58:670 Kernel/(54795:54798): PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 04:42:58:671 Kernel/(54795:54798): PID: 1 - Bloqueado por: IO
+[INFO] 04:42:58:671 Kernel/(54795:54798): PID: 1 - Ejecuta IO: 5
+[INFO] 04:43:03:678 Kernel/(54795:54804): PID: 1 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 04:43:03:678 Kernel/(54795:54804): Cola Ready FIFO: [1]
+[INFO] 04:43:03:679 Kernel/(54795:54798): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 04:43:03:680 Kernel/(54795:54798): PID: 1 - Wait: IMPRESORA - Instancias: 0
+[INFO] 04:43:03:682 Kernel/(54795:54798): PID: 1 - Signal: DISCO - Instancias: 1
+[INFO] 04:43:03:683 Kernel/(54795:54798): PID: 1 - Signal: IMPRESORA - Instancias: 1
+[INFO] 04:43:03:686 Kernel/(54795:54798): PID: 1 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 04:43:03:687 Kernel/(54795:54798): Finaliza el proceso 1 - Motivo: SUCCESS
+[INFO] 04:53:25:614 Kernel/(55043:55051): Se crea el proceso 1 en NEW
+[INFO] 04:53:25:618 Kernel/(55043:55047): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 04:53:25:619 Kernel/(55043:55047): Cola Ready FIFO: [1]
+[INFO] 04:53:25:625 Kernel/(55043:55046): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 04:53:25:669 Kernel/(55043:55046): PID: 1 - Wait: DISCO - Instancias: 0
+[INFO] 04:53:25:672 Kernel/(55043:55046): PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 04:53:25:673 Kernel/(55043:55046): PID: 1 - Bloqueado por: IO
+[INFO] 04:53:25:673 Kernel/(55043:55046): PID: 1 - Ejecuta IO: 5
+[INFO] 04:53:30:680 Kernel/(55043:55052): PID: 1 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 04:53:30:681 Kernel/(55043:55052): Cola Ready FIFO: [1]
+[INFO] 04:53:30:681 Kernel/(55043:55046): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 04:53:30:682 Kernel/(55043:55046): PID: 1 - Wait: SCANNER - Instancias: 0
+[INFO] 04:53:30:684 Kernel/(55043:55046): PID: 1 - Signal: DISCO - Instancias: 1
+[INFO] 04:53:30:686 Kernel/(55043:55046): PID: 1 - Signal: SCANNER - Instancias: 1
+[INFO] 04:53:30:688 Kernel/(55043:55046): PID: 1 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 04:53:30:688 Kernel/(55043:55046): Finaliza el proceso 1 - Motivo: SUCCESS
+[INFO] 05:20:21:116 Kernel/(55342:55350): Se crea el proceso 1 en NEW
+[INFO] 05:20:21:120 Kernel/(55342:55346): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 05:20:21:122 Kernel/(55342:55346): Cola Ready FIFO: [1]
+[INFO] 05:20:21:125 Kernel/(55342:55345): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 05:20:21:172 Kernel/(55342:55345): PID: 1 - Wait: DISCO - Instancias: 0
+[INFO] 05:20:21:178 Kernel/(55342:55345): PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 05:20:21:178 Kernel/(55342:55345): PID: 1 - Bloqueado por: IO
+[INFO] 05:20:21:178 Kernel/(55342:55345): PID: 1 - Ejecuta IO: 5
+[INFO] 05:20:26:186 Kernel/(55342:55351): PID: 1 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 05:20:26:186 Kernel/(55342:55351): Cola Ready FIFO: [1]
+[INFO] 05:20:26:186 Kernel/(55342:55345): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 05:20:26:187 Kernel/(55342:55345): PID: 1 - Wait: SCANNER - Instancias: 0
+[INFO] 05:20:26:189 Kernel/(55342:55345): PID: 1 - Signal: DISCO - Instancias: 1
+[INFO] 05:20:26:191 Kernel/(55342:55345): PID: 1 - Signal: SCANNER - Instancias: 1
+[INFO] 05:20:26:193 Kernel/(55342:55345): PID: 1 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 05:20:26:194 Kernel/(55342:55345): Finaliza el proceso 1 - Motivo: SUCCESS
+[INFO] 05:21:38:551 Kernel/(55364:55372): Se crea el proceso 1 en NEW
+[INFO] 05:21:38:554 Kernel/(55364:55368): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 05:21:38:556 Kernel/(55364:55368): Cola Ready FIFO: [1]
+[INFO] 05:21:38:559 Kernel/(55364:55367): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 05:21:38:603 Kernel/(55364:55367): PID: 1 - Wait: DISCO - Instancias: 0
+[INFO] 05:21:38:607 Kernel/(55364:55367): PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 05:21:38:607 Kernel/(55364:55367): PID: 1 - Bloqueado por: IO
+[INFO] 05:21:38:607 Kernel/(55364:55367): PID: 1 - Ejecuta IO: 5
+[INFO] 05:21:43:615 Kernel/(55364:55373): PID: 1 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 05:21:43:615 Kernel/(55364:55373): Cola Ready FIFO: [1]
+[INFO] 05:21:43:615 Kernel/(55364:55367): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 05:21:43:616 Kernel/(55364:55367): PID: 1 - Wait: SCANNER - Instancias: 0
+[INFO] 05:21:43:618 Kernel/(55364:55367): PID: 1 - Signal: DISCO - Instancias: 1
+[INFO] 05:21:43:620 Kernel/(55364:55367): PID: 1 - Signal: SCANNER - Instancias: 1
+[INFO] 05:21:43:622 Kernel/(55364:55367): PID: 1 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 05:21:43:622 Kernel/(55364:55367): Finaliza el proceso 1 - Motivo: SUCCESS
+[INFO] 05:22:17:863 Kernel/(55390:55398): Se crea el proceso 1 en NEW
+[INFO] 05:22:17:866 Kernel/(55390:55394): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 05:22:17:869 Kernel/(55390:55394): Cola Ready FIFO: [1]
+[INFO] 05:22:17:876 Kernel/(55390:55393): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 05:22:17:920 Kernel/(55390:55393): PID: 1 - Wait: DISCO - Instancias: 0
+[INFO] 05:22:17:928 Kernel/(55390:55393): PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 05:22:17:929 Kernel/(55390:55393): PID: 1 - Bloqueado por: IO
+[INFO] 05:22:17:929 Kernel/(55390:55393): PID: 1 - Ejecuta IO: 5
+[INFO] 05:22:22:937 Kernel/(55390:55399): PID: 1 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 05:22:22:938 Kernel/(55390:55399): Cola Ready FIFO: [1]
+[INFO] 05:22:22:938 Kernel/(55390:55393): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 05:22:22:939 Kernel/(55390:55393): PID: 1 - Wait: SCANNER - Instancias: 0
+[INFO] 05:22:22:941 Kernel/(55390:55393): PID: 1 - Signal: DISCO - Instancias: 1
+[INFO] 05:22:22:943 Kernel/(55390:55393): PID: 1 - Signal: SCANNER - Instancias: 1
+[INFO] 05:22:22:944 Kernel/(55390:55393): PID: 1 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 05:22:22:945 Kernel/(55390:55393): Finaliza el proceso 1 - Motivo: SUCCESS
+[INFO] 05:24:38:508 Kernel/(55421:55429): Se crea el proceso 1 en NEW
+[INFO] 05:24:38:512 Kernel/(55421:55425): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 05:24:38:514 Kernel/(55421:55425): Cola Ready FIFO: [1]
+[INFO] 05:24:38:516 Kernel/(55421:55424): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 05:24:38:562 Kernel/(55421:55424): PID: 1 - Wait: DISCO - Instancias: 0
+[ERROR] 05:24:38:566 Kernel/(55421:55424): El recurso RECURSO_INEXISTENTE no existe
+[INFO] 05:24:38:567 Kernel/(55421:55424): PID: 1 - Signal: DISCO - Instancias: 1
+[INFO] 05:24:38:568 Kernel/(55421:55424): PID: 1 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 05:24:38:569 Kernel/(55421:55424): Finaliza el proceso 1 - Motivo: SUCCESS
+[INFO] 05:25:09:974 Kernel/(55442:55450): Se crea el proceso 1 en NEW
+[INFO] 05:25:09:977 Kernel/(55442:55446): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 05:25:09:979 Kernel/(55442:55446): Cola Ready FIFO: [1]
+[INFO] 05:25:09:982 Kernel/(55442:55445): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 05:25:10:024 Kernel/(55442:55445): PID: 1 - Wait: DISCO - Instancias: 0
+[ERROR] 05:25:10:031 Kernel/(55442:55445): El recurso RECURSO_INEXISTENTE no existe
+[INFO] 05:25:10:034 Kernel/(55442:55445): PID: 1 - Signal: DISCO - Instancias: 1
+[INFO] 05:25:10:035 Kernel/(55442:55445): PID: 1 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 05:25:10:035 Kernel/(55442:55445): Finaliza el proceso 1 - Motivo: SUCCESS
+[INFO] 05:25:32:207 Kernel/(55442:55453): Se crea el proceso 2 en NEW
+[INFO] 05:25:32:207 Kernel/(55442:55446): PID: 2 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 05:25:32:207 Kernel/(55442:55446): Cola Ready FIFO: [2]
+[INFO] 05:25:32:207 Kernel/(55442:55445): PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 05:25:32:208 Kernel/(55442:55445): PID: 2 - Wait: DISCO - Instancias: 0
+[INFO] 05:25:32:210 Kernel/(55442:55445): PID: 2 - Signal: DISCO - Instancias: 1
+[INFO] 05:25:32:211 Kernel/(55442:55445): PID: 2 - Wait: SCANNER - Instancias: 0
+[ERROR] 05:25:32:212 Kernel/(55442:55445): El recurso RECURSO_INEXISTENTE no existe
+[INFO] 05:25:32:213 Kernel/(55442:55445): PID: 2 - Signal: SCANNER - Instancias: 1
+[INFO] 05:25:32:214 Kernel/(55442:55445): PID: 2 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 05:25:32:214 Kernel/(55442:55445): Finaliza el proceso 2 - Motivo: SUCCESS
+[INFO] 05:26:09:148 Kernel/(55465:55473): Se crea el proceso 1 en NEW
+[INFO] 05:26:09:159 Kernel/(55465:55469): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 05:26:09:160 Kernel/(55465:55469): Cola Ready FIFO: [1]
+[INFO] 05:26:09:173 Kernel/(55465:55468): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 05:26:09:218 Kernel/(55465:55468): PID: 1 - Wait: DISCO - Instancias: 0
+[INFO] 05:26:09:222 Kernel/(55465:55468): PID: 1 - Signal: DISCO - Instancias: 1
+[INFO] 05:26:09:223 Kernel/(55465:55468): PID: 1 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 05:26:09:224 Kernel/(55465:55468): Finaliza el proceso 1 - Motivo: SUCCESS
+[INFO] 05:26:29:052 Kernel/(55485:55493): Se crea el proceso 1 en NEW
+[INFO] 05:26:29:059 Kernel/(55485:55489): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 05:26:29:063 Kernel/(55485:55489): Cola Ready FIFO: [1]
+[INFO] 05:26:29:064 Kernel/(55485:55488): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 05:26:29:101 Kernel/(55485:55488): PID: 1 - Wait: DISCO - Instancias: 0
+[INFO] 05:26:29:107 Kernel/(55485:55488): PID: 1 - Signal: DISCO - Instancias: 1
+[INFO] 05:26:29:110 Kernel/(55485:55488): PID: 1 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 05:26:29:110 Kernel/(55485:55488): Finaliza el proceso 1 - Motivo: SUCCESS
+[INFO] 05:26:47:212 Kernel/(55505:55513): Se crea el proceso 1 en NEW
+[INFO] 05:26:47:215 Kernel/(55505:55509): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 05:26:47:217 Kernel/(55505:55509): Cola Ready FIFO: [1]
+[INFO] 05:26:47:222 Kernel/(55505:55508): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 05:26:47:265 Kernel/(55505:55508): PID: 1 - Signal: DISCO - Instancias: 2
+[INFO] 05:26:47:271 Kernel/(55505:55508): PID: 1 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 05:26:47:271 Kernel/(55505:55508): Finaliza el proceso 1 - Motivo: SUCCESS
+[INFO] 05:27:15:448 Kernel/(55525:55533): Se crea el proceso 1 en NEW
+[INFO] 05:27:15:451 Kernel/(55525:55529): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 05:27:15:452 Kernel/(55525:55529): Cola Ready FIFO: [1]
+[INFO] 05:27:15:455 Kernel/(55525:55528): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 05:27:15:495 Kernel/(55525:55528): PID: 1 - Signal: DISCO - Instancias: 2
+[INFO] 05:27:15:503 Kernel/(55525:55528): PID: 1 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 05:27:15:504 Kernel/(55525:55528): Finaliza el proceso 1 - Motivo: SUCCESS
+[INFO] 05:27:19:812 Kernel/(55525:55536): Se crea el proceso 2 en NEW
+[INFO] 05:27:19:813 Kernel/(55525:55529): PID: 2 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 05:27:19:813 Kernel/(55525:55529): Cola Ready FIFO: [2]
+[INFO] 05:27:19:813 Kernel/(55525:55528): PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 05:27:19:814 Kernel/(55525:55528): PID: 2 - Signal: DISCO - Instancias: 3
+[INFO] 05:27:19:815 Kernel/(55525:55528): PID: 2 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 05:27:19:815 Kernel/(55525:55528): Finaliza el proceso 2 - Motivo: SUCCESS
+[INFO] 05:27:21:549 Kernel/(55525:55539): Se crea el proceso 3 en NEW
+[INFO] 05:27:21:549 Kernel/(55525:55529): PID: 3 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 05:27:21:549 Kernel/(55525:55529): Cola Ready FIFO: [3]
+[INFO] 05:27:21:550 Kernel/(55525:55528): PID: 3 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 05:27:21:551 Kernel/(55525:55528): PID: 3 - Signal: DISCO - Instancias: 4
+[INFO] 05:27:21:551 Kernel/(55525:55528): PID: 3 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 05:27:21:552 Kernel/(55525:55528): Finaliza el proceso 3 - Motivo: SUCCESS
+[INFO] 05:27:21:869 Kernel/(55525:55542): Se crea el proceso 4 en NEW
+[INFO] 05:27:21:869 Kernel/(55525:55529): PID: 4 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 05:27:21:869 Kernel/(55525:55529): Cola Ready FIFO: [4]
+[INFO] 05:27:21:870 Kernel/(55525:55528): PID: 4 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 05:27:21:871 Kernel/(55525:55528): PID: 4 - Signal: DISCO - Instancias: 5
+[INFO] 05:27:21:872 Kernel/(55525:55528): PID: 4 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 05:27:21:872 Kernel/(55525:55528): Finaliza el proceso 4 - Motivo: SUCCESS
+[INFO] 05:27:22:117 Kernel/(55525:55545): Se crea el proceso 5 en NEW
+[INFO] 05:27:22:117 Kernel/(55525:55529): PID: 5 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 05:27:22:117 Kernel/(55525:55529): Cola Ready FIFO: [5]
+[INFO] 05:27:22:117 Kernel/(55525:55528): PID: 5 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 05:27:22:119 Kernel/(55525:55528): PID: 5 - Signal: DISCO - Instancias: 6
+[INFO] 05:27:22:120 Kernel/(55525:55528): PID: 5 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 05:27:22:120 Kernel/(55525:55528): Finaliza el proceso 5 - Motivo: SUCCESS
+[INFO] 05:27:22:349 Kernel/(55525:55548): Se crea el proceso 6 en NEW
+[INFO] 05:27:22:349 Kernel/(55525:55529): PID: 6 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 05:27:22:349 Kernel/(55525:55529): Cola Ready FIFO: [6]
+[INFO] 05:27:22:350 Kernel/(55525:55528): PID: 6 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 05:27:22:351 Kernel/(55525:55528): PID: 6 - Signal: DISCO - Instancias: 7
+[INFO] 05:27:22:352 Kernel/(55525:55528): PID: 6 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 05:27:22:353 Kernel/(55525:55528): Finaliza el proceso 6 - Motivo: SUCCESS
+[INFO] 05:27:22:596 Kernel/(55525:55551): Se crea el proceso 7 en NEW
+[INFO] 05:27:22:597 Kernel/(55525:55529): PID: 7 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 05:27:22:597 Kernel/(55525:55529): Cola Ready FIFO: [7]
+[INFO] 05:27:22:597 Kernel/(55525:55528): PID: 7 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 05:27:22:598 Kernel/(55525:55528): PID: 7 - Signal: DISCO - Instancias: 8
+[INFO] 05:27:22:599 Kernel/(55525:55528): PID: 7 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 05:27:22:600 Kernel/(55525:55528): Finaliza el proceso 7 - Motivo: SUCCESS
+[INFO] 05:27:22:812 Kernel/(55525:55554): Se crea el proceso 8 en NEW
+[INFO] 05:27:22:812 Kernel/(55525:55529): PID: 8 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 05:27:22:812 Kernel/(55525:55529): Cola Ready FIFO: [8]
+[INFO] 05:27:22:812 Kernel/(55525:55528): PID: 8 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 05:27:22:813 Kernel/(55525:55528): PID: 8 - Signal: DISCO - Instancias: 9
+[INFO] 05:27:22:814 Kernel/(55525:55528): PID: 8 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 05:27:22:815 Kernel/(55525:55528): Finaliza el proceso 8 - Motivo: SUCCESS
+[INFO] 05:27:23:062 Kernel/(55525:55557): Se crea el proceso 9 en NEW
+[INFO] 05:27:23:062 Kernel/(55525:55529): PID: 9 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 05:27:23:062 Kernel/(55525:55529): Cola Ready FIFO: [9]
+[INFO] 05:27:23:063 Kernel/(55525:55528): PID: 9 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 05:27:23:064 Kernel/(55525:55528): PID: 9 - Signal: DISCO - Instancias: 10
+[INFO] 05:27:23:066 Kernel/(55525:55528): PID: 9 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 05:27:23:067 Kernel/(55525:55528): Finaliza el proceso 9 - Motivo: SUCCESS
+[INFO] 05:27:23:285 Kernel/(55525:55560): Se crea el proceso 10 en NEW
+[INFO] 05:27:23:285 Kernel/(55525:55529): PID: 10 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 05:27:23:285 Kernel/(55525:55529): Cola Ready FIFO: [10]
+[INFO] 05:27:23:286 Kernel/(55525:55528): PID: 10 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 05:27:23:289 Kernel/(55525:55528): PID: 10 - Signal: DISCO - Instancias: 11
+[INFO] 05:27:23:290 Kernel/(55525:55528): PID: 10 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 05:27:23:291 Kernel/(55525:55528): Finaliza el proceso 10 - Motivo: SUCCESS
+[INFO] 05:27:23:516 Kernel/(55525:55563): Se crea el proceso 11 en NEW
+[INFO] 05:27:23:516 Kernel/(55525:55529): PID: 11 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 05:27:23:517 Kernel/(55525:55529): Cola Ready FIFO: [11]
+[INFO] 05:27:23:517 Kernel/(55525:55528): PID: 11 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 05:27:23:518 Kernel/(55525:55528): PID: 11 - Signal: DISCO - Instancias: 12
+[INFO] 05:27:23:519 Kernel/(55525:55528): PID: 11 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 05:27:23:519 Kernel/(55525:55528): Finaliza el proceso 11 - Motivo: SUCCESS
+[INFO] 05:27:23:737 Kernel/(55525:55566): Se crea el proceso 12 en NEW
+[INFO] 05:27:23:738 Kernel/(55525:55529): PID: 12 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 05:27:23:738 Kernel/(55525:55529): Cola Ready FIFO: [12]
+[INFO] 05:27:23:739 Kernel/(55525:55528): PID: 12 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 05:27:23:748 Kernel/(55525:55528): PID: 12 - Signal: DISCO - Instancias: 13
+[INFO] 05:27:23:752 Kernel/(55525:55528): PID: 12 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 05:27:23:753 Kernel/(55525:55528): Finaliza el proceso 12 - Motivo: SUCCESS
+[INFO] 05:27:42:608 Kernel/(55578:55586): Se crea el proceso 1 en NEW
+[INFO] 05:27:42:611 Kernel/(55578:55582): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 05:27:42:612 Kernel/(55578:55582): Cola Ready FIFO: [1]
+[INFO] 05:27:42:615 Kernel/(55578:55581): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 05:27:42:656 Kernel/(55578:55581): PID: 1 - Wait: DISCO - Instancias: 0
+[INFO] 05:27:42:665 Kernel/(55578:55581): PID: 1 - Signal: DISCO - Instancias: 1
+[INFO] 05:27:42:668 Kernel/(55578:55581): PID: 1 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 05:27:42:668 Kernel/(55578:55581): Finaliza el proceso 1 - Motivo: SUCCESS
+[INFO] 05:28:00:910 Kernel/(55598:55606): Se crea el proceso 1 en NEW
+[INFO] 05:28:00:913 Kernel/(55598:55602): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 05:28:00:914 Kernel/(55598:55602): Cola Ready FIFO: [1]
+[INFO] 05:28:00:917 Kernel/(55598:55601): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 05:28:00:956 Kernel/(55598:55601): PID: 1 - Wait: DISCO - Instancias: 0
+[INFO] 05:28:00:965 Kernel/(55598:55601): PID: 1 - Signal: DISCO - Instancias: 1
+[INFO] 05:28:00:968 Kernel/(55598:55601): PID: 1 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 05:28:00:969 Kernel/(55598:55601): Finaliza el proceso 1 - Motivo: SUCCESS
+[INFO] 05:28:59:391 Kernel/(55624:55632): Se crea el proceso 1 en NEW
+[INFO] 05:28:59:396 Kernel/(55624:55628): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 05:28:59:406 Kernel/(55624:55628): Cola Ready FIFO: [1]
+[INFO] 05:28:59:414 Kernel/(55624:55627): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 05:28:59:455 Kernel/(55624:55627): PID: 1 - Wait: DISCO - Instancias: 0
+[INFO] 05:28:59:458 Kernel/(55624:55627): PID: 1 - Wait: SCANNER - Instancias: 0
+[INFO] 05:28:59:459 Kernel/(55624:55627): PID: 1 - Wait: IMPRESORA - Instancias: 0
+[INFO] 05:28:59:462 Kernel/(55624:55627): PID: 1 - Signal: DISCO - Instancias: 1
+[INFO] 05:28:59:476 Kernel/(55624:55627): PID: 1 - Signal: IMPRESORA - Instancias: 1
+[INFO] 05:28:59:481 Kernel/(55624:55627): PID: 1 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 05:28:59:481 Kernel/(55624:55627): Finaliza el proceso 1 - Motivo: SUCCESS
+[INFO] 05:29:22:558 Kernel/(55644:55652): Se crea el proceso 1 en NEW
+[INFO] 05:29:22:561 Kernel/(55644:55648): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 05:29:22:563 Kernel/(55644:55648): Cola Ready FIFO: [1]
+[INFO] 05:29:22:566 Kernel/(55644:55647): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 05:29:22:607 Kernel/(55644:55647): PID: 1 - Signal: DISCO - Instancias: 2
+[INFO] 05:29:22:609 Kernel/(55644:55647): PID: 1 - Signal: SCANNER - Instancias: 2
+[INFO] 05:29:22:610 Kernel/(55644:55647): PID: 1 - Signal: IMPRESORA - Instancias: 2
+[INFO] 05:29:22:616 Kernel/(55644:55647): PID: 1 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 05:29:22:617 Kernel/(55644:55647): Finaliza el proceso 1 - Motivo: SUCCESS
+[INFO] 05:29:41:766 Kernel/(55664:55672): Se crea el proceso 1 en NEW
+[INFO] 05:29:41:769 Kernel/(55664:55668): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 05:29:41:771 Kernel/(55664:55668): Cola Ready FIFO: [1]
+[INFO] 05:29:41:774 Kernel/(55664:55667): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 05:29:41:815 Kernel/(55664:55667): PID: 1 - Wait: DISCO - Instancias: 0
+[INFO] 05:29:41:822 Kernel/(55664:55667): PID: 1 - Signal: DISCO - Instancias: 1
+[INFO] 05:29:41:827 Kernel/(55664:55667): PID: 1 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 05:29:41:827 Kernel/(55664:55667): Finaliza el proceso 1 - Motivo: SUCCESS
+[INFO] 05:30:20:862 Kernel/(55685:55693): Se crea el proceso 1 en NEW
+[INFO] 05:30:20:865 Kernel/(55685:55689): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 05:30:20:867 Kernel/(55685:55689): Cola Ready FIFO: [1]
+[INFO] 05:30:20:870 Kernel/(55685:55688): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 05:30:20:912 Kernel/(55685:55688): PID: 1 - Wait: DISCO - Instancias: 0
+[INFO] 05:30:20:921 Kernel/(55685:55688): PID: 1 - Signal: DISCO - Instancias: 1
+[INFO] 05:30:20:923 Kernel/(55685:55688): PID: 1 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 05:30:20:924 Kernel/(55685:55688): Finaliza el proceso 1 - Motivo: SUCCESS
+[INFO] 05:49:01:824 Kernel/(1988:2097): Se crea el proceso 1 en NEW
+[INFO] 05:49:01:828 Kernel/(1988:1992): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 05:49:01:830 Kernel/(1988:1992): Cola Ready FIFO: [1]
+[INFO] 05:49:01:833 Kernel/(1988:1991): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 05:49:01:876 Kernel/(1988:1991): PID: 1 - Wait: DISCO - Instancias: 0
+[INFO] 05:49:01:885 Kernel/(1988:1991): PID: 1 - Signal: DISCO - Instancias: 1
+[INFO] 05:49:01:888 Kernel/(1988:1991): PID: 1 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 05:49:01:888 Kernel/(1988:1991): Finaliza el proceso 1 - Motivo: SUCCESS
+[INFO] 05:52:04:065 Kernel/(2165:2173): Se crea el proceso 1 en NEW
+[INFO] 05:52:04:069 Kernel/(2165:2169): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 05:52:04:070 Kernel/(2165:2169): Cola Ready FIFO: [1]
+[INFO] 05:52:04:074 Kernel/(2165:2168): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 05:52:04:120 Kernel/(2165:2168): PID: 1 - Wait: DISCO - Instancias: 0
+[INFO] 05:52:04:124 Kernel/(2165:2168): PID: 1 - Signal: DISCO - Instancias: 1
+[INFO] 05:52:04:127 Kernel/(2165:2168): PID: 1 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 05:52:04:128 Kernel/(2165:2168): Finaliza el proceso 1 - Motivo: SUCCESS
+[INFO] 05:58:09:791 Kernel/(2427:2435): Se crea el proceso 1 en NEW
+[INFO] 05:58:09:795 Kernel/(2427:2431): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 05:58:09:797 Kernel/(2427:2431): Cola Ready FIFO: [1]
+[INFO] 05:58:09:799 Kernel/(2427:2430): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 05:58:09:850 Kernel/(2427:2430): PID: 1 - Wait: DISCO - Instancias: 0
+[INFO] 05:58:09:855 Kernel/(2427:2430): PID: 1 - Signal: DISCO - Instancias: 1
+[INFO] 05:58:09:857 Kernel/(2427:2430): PID: 1 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 05:58:09:858 Kernel/(2427:2430): Finaliza el proceso 1 - Motivo: SUCCESS
+[INFO] 05:59:15:873 Kernel/(2451:2459): Se crea el proceso 1 en NEW
+[INFO] 05:59:15:878 Kernel/(2451:2455): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 05:59:15:881 Kernel/(2451:2455): Cola Ready FIFO: [1]
+[INFO] 05:59:15:884 Kernel/(2451:2454): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 05:59:15:925 Kernel/(2451:2454): PID: 1 - Wait: DISCO - Instancias: 0
+[INFO] 05:59:15:938 Kernel/(2451:2454): PID: 1 - Signal: DISCO - Instancias: 1
+[INFO] 05:59:15:939 Kernel/(2451:2454): PID: 1 - Wait: SCANNER - Instancias: 0
+[ERROR] 05:59:15:940 Kernel/(2451:2454): El recurso RECURSO_INEXISTENTE no existe
+[INFO] 05:59:15:941 Kernel/(2451:2454): PID: 1 - Signal: SCANNER - Instancias: 1
+[INFO] 05:59:15:942 Kernel/(2451:2454): PID: 1 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 05:59:15:943 Kernel/(2451:2454): Finaliza el proceso 1 - Motivo: SUCCESS
+[INFO] 05:59:27:085 Kernel/(2451:2462): Se crea el proceso 2 en NEW
+[INFO] 05:59:27:085 Kernel/(2451:2455): PID: 2 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 05:59:27:085 Kernel/(2451:2455): Cola Ready FIFO: [2]
+[INFO] 05:59:27:086 Kernel/(2451:2454): PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 05:59:27:087 Kernel/(2451:2454): PID: 2 - Wait: DISCO - Instancias: 0
+[INFO] 05:59:27:088 Kernel/(2451:2454): PID: 2 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 05:59:27:088 Kernel/(2451:2454): PID: 2 - Bloqueado por: IO
+[INFO] 05:59:27:089 Kernel/(2451:2454): PID: 2 - Ejecuta IO: 5
+[INFO] 05:59:32:122 Kernel/(2451:2463): PID: 2 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 05:59:32:122 Kernel/(2451:2463): Cola Ready FIFO: [2]
+[INFO] 05:59:32:122 Kernel/(2451:2454): PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 05:59:32:124 Kernel/(2451:2454): PID: 2 - Wait: SCANNER - Instancias: 0
+[INFO] 05:59:32:125 Kernel/(2451:2454): PID: 2 - Signal: DISCO - Instancias: 1
+[INFO] 05:59:32:126 Kernel/(2451:2454): PID: 2 - Signal: SCANNER - Instancias: 1
+[INFO] 05:59:32:127 Kernel/(2451:2454): PID: 2 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 05:59:32:128 Kernel/(2451:2454): Finaliza el proceso 2 - Motivo: SUCCESS
+[INFO] 05:59:36:546 Kernel/(2451:2466): Se crea el proceso 3 en NEW
+[INFO] 05:59:36:546 Kernel/(2451:2455): PID: 3 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 05:59:36:547 Kernel/(2451:2455): Cola Ready FIFO: [3]
+[INFO] 05:59:36:547 Kernel/(2451:2454): PID: 3 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 05:59:36:548 Kernel/(2451:2454): PID: 3 - Wait: DISCO - Instancias: 0
+[INFO] 05:59:36:549 Kernel/(2451:2454): PID: 3 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 05:59:36:549 Kernel/(2451:2454): PID: 3 - Bloqueado por: IO
+[INFO] 05:59:36:550 Kernel/(2451:2454): PID: 3 - Ejecuta IO: 5
+[INFO] 05:59:37:234 Kernel/(2451:2470): Se crea el proceso 4 en NEW
+[INFO] 05:59:37:234 Kernel/(2451:2455): PID: 4 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 05:59:37:234 Kernel/(2451:2455): Cola Ready FIFO: [4]
+[INFO] 05:59:37:235 Kernel/(2451:2454): PID: 4 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 05:59:37:236 Kernel/(2451:2454): PID: 4 - Wait: DISCO - Instancias: -1
+[INFO] 05:59:37:236 Kernel/(2451:2454): PID: 4 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 05:59:37:236 Kernel/(2451:2454): PID: 4 - Bloqueado por: DISCO
+[INFO] 05:59:41:550 Kernel/(2451:2467): PID: 3 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 05:59:41:552 Kernel/(2451:2467): Cola Ready FIFO: [3]
+[INFO] 05:59:41:553 Kernel/(2451:2454): PID: 3 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 05:59:41:556 Kernel/(2451:2454): PID: 3 - Wait: SCANNER - Instancias: 0
+[INFO] 05:59:41:557 Kernel/(2451:2454): PID: 3 - Signal: DISCO - Instancias: 0
+[INFO] 05:59:41:558 Kernel/(2451:2454): PID: 4 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 05:59:41:558 Kernel/(2451:2454): Cola Ready FIFO: [4]
+[INFO] 05:59:41:560 Kernel/(2451:2454): PID: 3 - Signal: SCANNER - Instancias: 1
+[INFO] 05:59:41:563 Kernel/(2451:2454): PID: 3 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 05:59:41:564 Kernel/(2451:2454): Finaliza el proceso 3 - Motivo: SUCCESS
+[INFO] 05:59:41:564 Kernel/(2451:2454): PID: 4 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 05:59:41:567 Kernel/(2451:2454): PID: 4 - Signal: DISCO - Instancias: 1
+[INFO] 05:59:41:568 Kernel/(2451:2454): PID: 4 - Wait: SCANNER - Instancias: 0
+[ERROR] 05:59:41:569 Kernel/(2451:2454): El recurso RECURSO_INEXISTENTE no existe
+[INFO] 05:59:41:569 Kernel/(2451:2454): PID: 4 - Signal: SCANNER - Instancias: 1
+[INFO] 05:59:41:570 Kernel/(2451:2454): PID: 4 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 05:59:41:570 Kernel/(2451:2454): Finaliza el proceso 4 - Motivo: SUCCESS
+[INFO] 05:59:58:322 Kernel/(2451:2473): Se crea el proceso 5 en NEW
+[INFO] 05:59:58:322 Kernel/(2451:2455): PID: 5 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 05:59:58:322 Kernel/(2451:2455): Cola Ready FIFO: [5]
+[INFO] 05:59:58:323 Kernel/(2451:2454): PID: 5 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 05:59:58:324 Kernel/(2451:2454): PID: 5 - Wait: DISCO - Instancias: 0
+[INFO] 05:59:58:325 Kernel/(2451:2454): PID: 5 - Signal: DISCO - Instancias: 1
+[INFO] 05:59:58:326 Kernel/(2451:2454): PID: 5 - Wait: SCANNER - Instancias: 0
+[ERROR] 05:59:58:328 Kernel/(2451:2454): El recurso RECURSO_INEXISTENTE no existe
+[INFO] 05:59:58:328 Kernel/(2451:2454): PID: 5 - Signal: SCANNER - Instancias: 1
+[INFO] 05:59:58:329 Kernel/(2451:2454): PID: 5 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 05:59:58:330 Kernel/(2451:2454): Finaliza el proceso 5 - Motivo: SUCCESS
+[INFO] 05:59:59:074 Kernel/(2451:2476): Se crea el proceso 6 en NEW
+[INFO] 05:59:59:075 Kernel/(2451:2455): PID: 6 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 05:59:59:075 Kernel/(2451:2455): Cola Ready FIFO: [6]
+[INFO] 05:59:59:075 Kernel/(2451:2454): PID: 6 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 05:59:59:076 Kernel/(2451:2454): PID: 6 - Wait: DISCO - Instancias: 0
+[INFO] 05:59:59:077 Kernel/(2451:2454): PID: 6 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 05:59:59:077 Kernel/(2451:2454): PID: 6 - Bloqueado por: IO
+[INFO] 05:59:59:078 Kernel/(2451:2454): PID: 6 - Ejecuta IO: 5
+[INFO] 06:00:04:078 Kernel/(2451:2477): PID: 6 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 06:00:04:079 Kernel/(2451:2477): Cola Ready FIFO: [6]
+[INFO] 06:00:04:079 Kernel/(2451:2454): PID: 6 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 06:00:04:081 Kernel/(2451:2454): PID: 6 - Wait: SCANNER - Instancias: 0
+[INFO] 06:00:04:083 Kernel/(2451:2454): PID: 6 - Signal: DISCO - Instancias: 1
+[INFO] 06:00:04:084 Kernel/(2451:2454): PID: 6 - Signal: SCANNER - Instancias: 1
+[INFO] 06:00:04:085 Kernel/(2451:2454): PID: 6 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 06:00:04:086 Kernel/(2451:2454): Finaliza el proceso 6 - Motivo: SUCCESS
+[INFO] 06:00:07:106 Kernel/(2451:2480): Se crea el proceso 7 en NEW
+[INFO] 06:00:07:106 Kernel/(2451:2455): PID: 7 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 06:00:07:106 Kernel/(2451:2455): Cola Ready FIFO: [7]
+[INFO] 06:00:07:107 Kernel/(2451:2454): PID: 7 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 06:00:07:108 Kernel/(2451:2454): PID: 7 - Wait: DISCO - Instancias: 0
+[INFO] 06:00:07:109 Kernel/(2451:2454): PID: 7 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 06:00:07:109 Kernel/(2451:2454): PID: 7 - Bloqueado por: IO
+[INFO] 06:00:07:109 Kernel/(2451:2454): PID: 7 - Ejecuta IO: 5
+[INFO] 06:00:07:759 Kernel/(2451:2484): Se crea el proceso 8 en NEW
+[INFO] 06:00:07:759 Kernel/(2451:2455): PID: 8 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 06:00:07:760 Kernel/(2451:2455): Cola Ready FIFO: [8]
+[INFO] 06:00:07:760 Kernel/(2451:2454): PID: 8 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 06:00:07:761 Kernel/(2451:2454): PID: 8 - Wait: DISCO - Instancias: -1
+[INFO] 06:00:07:761 Kernel/(2451:2454): PID: 8 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 06:00:07:761 Kernel/(2451:2454): PID: 8 - Bloqueado por: DISCO
+[INFO] 06:00:12:110 Kernel/(2451:2481): PID: 7 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 06:00:12:112 Kernel/(2451:2481): Cola Ready FIFO: [7]
+[INFO] 06:00:12:113 Kernel/(2451:2454): PID: 7 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 06:00:12:116 Kernel/(2451:2454): PID: 7 - Wait: SCANNER - Instancias: 0
+[INFO] 06:00:12:117 Kernel/(2451:2454): PID: 7 - Signal: DISCO - Instancias: 0
+[INFO] 06:00:12:117 Kernel/(2451:2454): PID: 8 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 06:00:12:117 Kernel/(2451:2454): Cola Ready FIFO: [8]
+[INFO] 06:00:12:118 Kernel/(2451:2454): PID: 7 - Signal: SCANNER - Instancias: 1
+[INFO] 06:00:12:120 Kernel/(2451:2454): PID: 7 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 06:00:12:120 Kernel/(2451:2454): Finaliza el proceso 7 - Motivo: SUCCESS
+[INFO] 06:00:12:120 Kernel/(2451:2454): PID: 8 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 06:00:12:122 Kernel/(2451:2454): PID: 8 - Signal: DISCO - Instancias: 1
+[INFO] 06:00:12:125 Kernel/(2451:2454): PID: 8 - Wait: SCANNER - Instancias: 0
+[ERROR] 06:00:12:128 Kernel/(2451:2454): El recurso RECURSO_INEXISTENTE no existe
+[INFO] 06:00:12:128 Kernel/(2451:2454): PID: 8 - Signal: SCANNER - Instancias: 1
+[INFO] 06:00:12:129 Kernel/(2451:2454): PID: 8 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 06:00:12:129 Kernel/(2451:2454): Finaliza el proceso 8 - Motivo: SUCCESS

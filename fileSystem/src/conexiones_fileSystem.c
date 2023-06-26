@@ -15,9 +15,9 @@ void init_conexiones() {
 
 	//SE HACE SERVIDOR Y ESPERA LA CONEXION DEL KERNEL
 	int server = iniciar_servidor("127.0.0.1", lectura_de_config.PUERTO_ESCUCHA);
-	log_warning(logger,"Servidor listo para recibir al cliente, puerto: %s", lectura_de_config.PUERTO_ESCUCHA);
+	log_warning(my_logger, "File System listo para recibir al Kernel");
 	kernel = esperar_cliente(server);
-	log_warning(logger,"Se conecto el Kernel a FileSystem");
+	log_warning(my_logger, "Kernel se conecto a File System");
 
 	pthread_t hilo_escuchar_kernel;
     pthread_create(&hilo_escuchar_kernel, NULL, (void*)escuchar_kernel, NULL);

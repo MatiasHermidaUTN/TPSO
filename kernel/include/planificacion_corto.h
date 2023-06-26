@@ -22,8 +22,10 @@ void manejar_io(t_args_io* args_io);
 
 void wait_recurso(t_pcb* pcb, char* recurso);
 t_recurso* buscar_recurso(char* nombre_recurso, t_list* lista);
-void signal_recurso(t_pcb* pcb, char* recurso);
+void signal_recurso(t_pcb* pcb, char* recurso, int esta_en_exit);
+void eliminar_recurso_de_lista(t_list* recursos, char* nombre_recurso, int esta_en_exit);
 void exit_proceso(t_pcb* pcb, t_msj_kernel_consola mensaje);
+void signal_de_todos_los_recursos(t_pcb* pcb);
 char* mensaje_de_finalizacion_a_string(t_msj_kernel_consola mensaje);
 
 void list_remove_pcb(t_list *lista, t_pcb *pcb);

@@ -43,8 +43,7 @@ void ejecutar_instrucciones(t_pcb* pcb) {
 				int cantidad_de_bytes = obtener_cantidad_de_bytes(instruccion_actual, parametros_actuales);
 
 				// EVALUACION SEG_FAULT
-				if(datos_mmu.desplazamiento_segmento + cantidad_de_bytes > datos_mmu.tamanio_segmento) { //TODO: calcula mal el tamanio_segmento porque no encuentra el id del segmento pq no se crearon. Ya debería funcionar bien igual.
-				//if(0) {
+				if(datos_mmu.desplazamiento_segmento + cantidad_de_bytes > datos_mmu.tamanio_segmento) {
 					log_info(logger, "PID: %d - Error SEG_FAULT - Segmento: %d - Offset: %d - Tamaño: %d", pcb->pid, datos_mmu.numero_segmento, datos_mmu.desplazamiento_segmento, datos_mmu.tamanio_segmento); //log obligatorio
 
 					enviar_pcb_a_kernel(pcb, EXIT_CON_SEG_FAULT, parametros_actuales);
@@ -53,21 +52,20 @@ void ejecutar_instrucciones(t_pcb* pcb) {
 					//Atentos a la mayor villereada de todos los tiempos!!
 
 				    // EJECUCION INSTRUCCION
-					if(instruccion_actual == MOV_IN) {
-						ejecutar_mov_in(pcb, datos_mmu, obtener_registro(instruccion_actual, parametros_actuales));
-						break;
-					}
-					else if(instruccion_actual == MOV_OUT) {
-						ejecutar_mov_out(pcb, datos_mmu, obtener_registro(instruccion_actual, parametros_actuales));
-						break;
-					}
-					else {
-						ejecutar_fread_o_fwrite(pcb, datos_mmu.direccion_fisica, instruccion_actual, parametros_actuales);
-						return;
+					switch(instruccion_actual) {
+						case MOV_IN:
+							ejecutar_mov_in(pcb, datos_mmu, obtener_registro(instruccion_actual, parametros_actuales));
+							break;
+						case MOV_OUT:
+							ejecutar_mov_out(pcb, datos_mmu, obtener_registro(instruccion_actual, parametros_actuales));
+							break;
+						default:
+							ejecutar_fread_o_fwrite(pcb, datos_mmu.direccion_fisica, instruccion_actual, parametros_actuales);
+							return;
 					}
 				}
 
-				break; //No va a llegar nunca acá, pero sino me tira warning
+				break;
 
 			case IO: case F_OPEN: case F_CLOSE: case F_SEEK: case F_TRUNCATE: case WAIT:
 			case SIGNAL: case CREATE_SEGMENT: case DELETE_SEGMENT: case YIELD: case EXIT:
@@ -146,7 +144,7 @@ void set_registro(t_pcb* pcb, char* registro, char* valor) {
 		memcpy(pcb->registros_cpu.RDX, valor, 16 * sizeof(char));
 	}
 
-	sleep(lectura_de_config.RETARDO_INSTRUCCION);
+	usleep(lectura_de_config.RETARDO_INSTRUCCION * 1000); //Porque me lo dan en milisegundos
 	return;
 }
 
@@ -190,10 +188,9 @@ char* leer_registro(t_pcb* pcb, char* registro) {
 		memcpy(valor, pcb->registros_cpu.RDX, 16 * sizeof(char));
 	}
 
-	char barra_cero = '\0';
-	memcpy(valor + tamanio_registro(registro), &barra_cero, sizeof(char)); //Para que pueda funcionar bien con las funciones de string_array
+	memcpy(valor + tamanio_registro(registro), "\0", sizeof(char)); //Para que pueda funcionar bien con las funciones de string_array
 
-	usleep(lectura_de_config.RETARDO_INSTRUCCION * 1000);
+	usleep(lectura_de_config.RETARDO_INSTRUCCION * 1000); //Porque me lo dan en milisegundos
 	return valor;
 }
 
@@ -217,7 +214,7 @@ void enviar_pcb_a_kernel(t_pcb* pcb, t_msj_kernel_cpu mensaje, t_list* list_para
 	enviar_pcb(socket_kernel, pcb, mensaje, parametros);
 
 	free(parametros);
-	//hay que hacer un free y no un string_array_destroy porque sino estraría liberando los de el pcb
+	// Hay que hacer un free y no un string_array_destroy porque sino estraría liberando los de el pcb
 }
 
 char* obtener_parametros_a_emitir(t_list* parametros_actuales) {
@@ -309,7 +306,6 @@ void ejecutar_mov_in(t_pcb* pcb, t_datos_mmu datos_mmu, char* nombre_registro) {
 	char ** parametros_lectura;
 
 	if(recibir_msj(socket_memoria) == LEIDO_OK) { //No hace falta pero bueno, recibe un mensaje sí o sí
-
 		parametros_lectura = recibir_parametros_de_mensaje(socket_memoria);
 	}
 
@@ -317,13 +313,7 @@ void ejecutar_mov_in(t_pcb* pcb, t_datos_mmu datos_mmu, char* nombre_registro) {
 
 	set_registro(pcb, nombre_registro, valor);
 
-	log_warning(logger, "%c",pcb->registros_cpu.BX[0] );
-	log_warning(logger,"%c" ,     pcb->registros_cpu.BX[1]);
-	log_warning(logger,"%c",pcb->registros_cpu.BX[2]);
-	log_warning(logger, "%c",pcb->registros_cpu.BX[3]);
-
-
-	log_info(logger, "PID: %d - Accion: %s - Segmento: %d - Dirección Física: %d - Valor: %s", pcb->pid, "LEER", datos_mmu.numero_segmento, datos_mmu.direccion_fisica, valor); //log obligatorio
+	log_info(logger, "PID: %d - Accion: LEER - Segmento: %d - Dirección Física: %d - Valor: %s", pcb->pid, datos_mmu.numero_segmento, datos_mmu.direccion_fisica, valor); //log obligatorio
 
 	string_array_destroy(parametros_lectura);
 }
@@ -336,9 +326,10 @@ void ejecutar_mov_out(t_pcb* pcb, t_datos_mmu datos_mmu, char* nombre_registro) 
 
 	enviar_msj_con_parametros(socket_memoria, ESCRIBIR_VALOR, parametros);
 
-	if(recibir_msj(socket_memoria) == ESCRITO_OK){
-		log_info(logger, "PID: %d - Acción: %s - Segmento: %d - Dirección Física: %d - Valor: %s", pcb->pid, "LEER", datos_mmu.numero_segmento, datos_mmu.direccion_fisica, valor); //log obligatorio
-	}else{
+	if(recibir_msj(socket_memoria) == ESCRITO_OK) { //No hace falta pero bueno, recibe un mensaje sí o sí
+		log_info(logger, "PID: %d - Acción: ESCRIBIR - Segmento: %d - Dirección Física: %d - Valor: %s", pcb->pid, datos_mmu.numero_segmento, datos_mmu.direccion_fisica, valor); //log obligatorio
+	}
+	else {
 		log_error(logger, "No se pudo escribir en memoria");
 		exit(EXIT_FAILURE);
 	}

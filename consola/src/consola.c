@@ -39,7 +39,7 @@ void esperar_fin_proceso(int socket_kernel, t_log* logger) {
 			log_info(logger, "Proceso terminado por Segmentation Fault");
 			break;
 		default:
-			log_error(logger, "Hubo un error en el proceso"); //falta enviar el handshake en el Kernel cuando se termina el proceso
+			log_error(logger, "Hubo un error en el proceso");
 			exit(EXIT_FAILURE);
 	}
 }

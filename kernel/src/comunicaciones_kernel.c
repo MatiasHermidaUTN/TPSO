@@ -94,11 +94,6 @@ char** recibir_parametros_de_instruccion() {
 		parametro_auxiliar = malloc(tamanio_parametro); //se libera cuando se hace string_array_destroy
 		recv(socket_cpu, parametro_auxiliar, tamanio_parametro, MSG_WAITALL);
 		string_array_push(&parametros, parametro_auxiliar);
-
-		//NO DESCOMENTAR
-		//Me parece que esto rompía
-		//parametros[i] = malloc(tamanio_parametro);
-		//recv(socket_cpu, parametros[i], tamanio_parametro, MSG_WAITALL);
 	}
 
 	return parametros; //acordarse de hacerle el free del otro lado

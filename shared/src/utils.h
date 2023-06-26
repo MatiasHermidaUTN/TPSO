@@ -138,6 +138,8 @@ typedef struct pcb {
 	int tiempo_llegada_ready;
 	t_list* archivos_abiertos;
 
+	t_list* recursos;
+
 	int socket_consola; //para mandarle mensaje que cuando termina
 
 	double tiempo_real_ejecucion;
@@ -219,6 +221,7 @@ void memcpy_instrucciones_serializar(void* stream_pcb, t_list* instrucciones, in
 void memcpy_registros_serializar(void* stream_pcb, t_registros_cpu registros_cpu, int* desplazamiento);
 void memcpy_tabla_segmentos_serializar(void* stream, t_list* tabla_segmentos, int* desplazamiento);
 void memcpy_archivos_abiertos_serializar(void* stream, t_list* archivos_abiertos, int* desplazamiento);
+void memcpy_recursos_serializar(void* stream, t_list* recursos, int* desplazamiento);
 
 t_pcb* recibir_pcb(int socket);
 
@@ -229,6 +232,7 @@ void deserializar_parametros(void* a_recibir, int* desplazamiento, t_instruccion
 void memcpy_registros_deserializar(t_registros_cpu* registros_cpu, void* stream_pcb, int* desplazamiento);
 void memcpy_tabla_segmentos_deserializar(t_pcb* pcb, void* stream, int* desplazamiento);
 void memcpy_archivos_abiertos_deserializar(t_pcb* pcb, void* stream, int* desplazamiento);
+void memcpy_recursos_deserializar(t_pcb* pcb, void* stream, int* desplazamiento);
 
 void print_l_instrucciones(t_list* instrucciones);
 

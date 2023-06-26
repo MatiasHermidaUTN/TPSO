@@ -31,10 +31,6 @@ void planificar_corto() {
 				log_info(logger, "PID: %d - Bloqueado por: IO", pcb_recibido->pid); //log obligatorio
 				log_info(logger, "PID: %d - Ejecuta IO: %d", pcb_recibido->pid, tiempo_a_bloquear); //log obligatorio
 
-				pthread_mutex_lock(&mutex_pcbs_en_io);
-				list_add(list_pcbs_en_io, pcb_recibido); //para actualizar los segmentos en la compactacion
-				pthread_mutex_unlock(&mutex_pcbs_en_io);
-
 				t_args_io* args = malloc(sizeof(t_args_io));
 			    args->tiempo = tiempo_a_bloquear;
 				args->pcb = pcb_recibido;
@@ -198,16 +194,14 @@ void planificar_corto() {
 				string_array_destroy(parametros);
 
 				pcb_recibido = recibir_pcb(socket_cpu);
-				signal_recurso(pcb_recibido, nombre_recurso_signal);
-				free(nombre_recurso_signal);
+				signal_recurso(pcb_recibido, nombre_recurso_signal, 0);
 				break;
 
 			case CREATE_SEGMENT:
 				parametros = recibir_parametros_de_instruccion();
 				pcb_recibido = recibir_pcb(socket_cpu);
-				string_array_push(&parametros,string_itoa(pcb_recibido->pid));
+				string_array_push(&parametros, string_itoa(pcb_recibido->pid));
 
-				//TODO: testear cuando esté memoria lista
 				crear_segmento(pcb_recibido, parametros);
 
 				string_array_destroy(parametros);
@@ -219,8 +213,6 @@ void planificar_corto() {
 				pcb_recibido = recibir_pcb(socket_cpu);
 
 				string_array_push(&parametros, string_itoa(pcb_recibido->pid));
-
-				//TODO: testear cuando esté memoria lista
 
 				pthread_mutex_lock(&mutex_msj_memoria);
 				enviar_msj_con_parametros(socket_memoria, ELIMINAR_SEGMENTO, parametros); //id + pid
@@ -258,7 +250,7 @@ void planificar_corto() {
 				break;
 
 			case EXIT_CON_SEG_FAULT:
-				parametros = recibir_parametros_de_instruccion();
+				parametros = recibir_parametros_de_instruccion(); //Solo los recibe para liberarlos
 				pcb_recibido = recibir_pcb(socket_cpu);
 
 				cerrar_todos_los_archivos(pcb_recibido);
@@ -315,6 +307,9 @@ t_pcb* obtener_proximo_a_ejecutar() {
 }
 
 void manejar_io(t_args_io* args) {
+	pthread_mutex_lock(&mutex_pcbs_en_io);
+	list_add(list_pcbs_en_io, args->pcb); //para actualizar los segmentos en la compactacion
+	pthread_mutex_unlock(&mutex_pcbs_en_io);
 
 	sleep(args->tiempo);
 
@@ -324,16 +319,16 @@ void manejar_io(t_args_io* args) {
 	ready_list_push(args->pcb); //Aca calcula el S (proxima rafaga), actualizo el tiempo_llegada_ready y hago sem_post(&sem_cant_ready)
 	pthread_mutex_unlock(&mutex_pcbs_en_io); //CREO QUE PONIENDO ESTE PUSH ACA EN LOS MUTEX AHORA SE ACTUALIZA SI O SI EN LA COMPACTACION PORQUE LA COMPACTACAION USA ESTE MUTEX PARA ACTUALIZAR
 
-	//TODO: puede que nunca se actualice al pcb que está saliend de IO para READY en compactación.
+	//TODO: puede que nunca se actualice al pcb que está saliendo de IO para READY en compactación.
 	//Hay que agregar mutex para compactación
-
 
 	free(args);
 }
 
 void wait_recurso(t_pcb* pcb, char* nombre_recurso) {
 	t_recurso* recurso = buscar_recurso(nombre_recurso,list_recursos);
-	if(recurso) {
+
+	if(recurso) { //Existe el recurso
 		recurso->cantidad_disponibles--;
 		log_info(logger, "PID: %d - Wait: %s - Instancias: %d", pcb->pid, nombre_recurso, recurso->cantidad_disponibles); //log obligatorio
 
@@ -344,14 +339,15 @@ void wait_recurso(t_pcb* pcb, char* nombre_recurso) {
 			log_info(logger, "PID: %d - Estado Anterior: EXEC - Estado Actual: BLOCK", pcb->pid); //log obligatorio
 			log_info(logger, "PID: %d - Bloqueado por: %s", pcb->pid, nombre_recurso); //log obligatorio
 		}
-		else { //el recurso esta disponible, tiene que seguir ejecutando el mismo proceso
+		else { //El recurso esta disponible, tiene que seguir ejecutando el mismo proceso
+			list_add(pcb->recursos, strdup(nombre_recurso));
+
 			mantener_pcb_en_exec(pcb);
 		}
 	}
 	else {
 		log_error(logger, "El recurso %s no existe", nombre_recurso);
-		exit_proceso(pcb, SUCCESS); //no existe el recurso
-		//TODO: No hace SIGNAL de los recursos que había hecho WAIT, por lo que si otro proceso hace WAIT de alguno de ellos se queda en deadlock
+		exit_proceso(pcb, SUCCESS);
 	}
 }
 
@@ -366,27 +362,50 @@ t_recurso* buscar_recurso(char* nombre_recurso, t_list* lista) {
 	return NULL;
 }
 
-void signal_recurso(t_pcb* pcb, char* nombre_recurso) {
+void signal_recurso(t_pcb* pcb, char* nombre_recurso, int esta_en_exit) {
 	t_recurso* recurso = buscar_recurso(nombre_recurso, list_recursos);
 
-	if(recurso) {
+	if(recurso) { //Si existe el recurso
+		eliminar_recurso_de_lista(pcb->recursos, nombre_recurso, esta_en_exit);
+
 		recurso->cantidad_disponibles++;
 		log_info(logger, "PID: %d - Signal: %s - Instancias: %d", pcb->pid, nombre_recurso, recurso->cantidad_disponibles); //log obligatorio
 
 		if(recurso->cantidad_disponibles <= 0) { //Si habia al menos un proceso que estaba bloqueado
 			t_pcb* pcb_a_desbloquear = queue_pop(recurso->cola_bloqueados);
+
+			list_add(pcb_a_desbloquear->recursos, strdup(nombre_recurso));
+
 			ready_list_push(pcb_a_desbloquear); //hace el sem_post(&sem_cant_ready)
 		}
 
-		mantener_pcb_en_exec(pcb);
+		if(!esta_en_exit) {
+			mantener_pcb_en_exec(pcb);
+		}
 	}
 	else {
 		log_error(logger, "El recurso %s no existe", nombre_recurso);
-		exit_proceso(pcb, SUCCESS); //no existe el recurso
+		exit_proceso(pcb, SUCCESS);
+	}
+
+	free(nombre_recurso);
+}
+
+void eliminar_recurso_de_lista(t_list* recursos, char* nombre_recurso, int esta_en_exit) {
+	for(int i = 0; i < list_size(recursos); i++) {
+		if(!strcmp(list_get(recursos, i), nombre_recurso)) {
+			char* recurso = list_remove(recursos, i);
+			if(!esta_en_exit) {
+				free(recurso);
+			}
+			break;
+		}
 	}
 }
 
 void exit_proceso(t_pcb* pcb, t_msj_kernel_consola mensaje) {
+	signal_de_todos_los_recursos(pcb);
+
 	enviar_msj(pcb->socket_consola, mensaje);
 
 	log_info(logger, "PID: %d - Estado Anterior: EXEC - Estado Actual: EXIT", pcb->pid); //log obligatorio
@@ -400,6 +419,12 @@ void exit_proceso(t_pcb* pcb, t_msj_kernel_consola mensaje) {
 	string_array_destroy(parametros_exit);
 
 	liberar_pcb(pcb);
+}
+
+void signal_de_todos_los_recursos(t_pcb* pcb) {
+	for(int i = 0; i < list_size(pcb->recursos); i++) {
+		signal_recurso(pcb, list_get(pcb->recursos, i), 1);
+	}
 }
 
 char* mensaje_de_finalizacion_a_string(t_msj_kernel_consola mensaje) {
@@ -422,6 +447,7 @@ void list_remove_pcb(t_list* lista, t_pcb* pcb_en_lista) {
 		pcb = list_get(lista, i);
 		if(pcb->pid == pcb_en_lista->pid) {
 			list_remove(lista, i);
+			break;
 		}
 	}
 }
@@ -473,12 +499,14 @@ void eliminar_archivo(t_pcb *pcb, char* nombre) {
 	}
 }
 
-void list_remove_recurso(t_list *lista, t_recurso *recurso) {
+void list_remove_recurso(t_list* lista, t_recurso* recurso) {
 	t_recurso* elemento;
 	for(int i = 0; i < list_size(lista); i++) {
 		elemento = list_get(lista, i);
-		if(!strcmp(elemento->nombre, recurso->nombre)){
-			elemento = list_remove(lista, i);
+
+		if(!strcmp(elemento->nombre, recurso->nombre)) {
+			list_remove(lista, i);
+			break;
 		}
 	}
 }
@@ -570,7 +598,7 @@ void crear_segmento(t_pcb* pcb_recibido, char** parametros) {
 				log_error(logger, "Error en la compactacion");
 				sem_post(&sem_compactacion); // Por las dudas (?
 				pthread_mutex_unlock(&mutex_msj_memoria); // Por las dudas (?
-				exit(EXIT_FAILURE); //Total rompe todo, osea son al pedo los por las dudas
+				exit(EXIT_FAILURE); //Total rompe todovich, osea son al pedo los por las dudas
 			}
 
 			break;

@@ -49,6 +49,7 @@ extern FILE* bloques;
 extern int tamanioBitmap;
 
 extern t_log* logger;
+extern t_log* my_logger;
 extern t_config* config;
 
 extern int kernel;

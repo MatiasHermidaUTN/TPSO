@@ -21,7 +21,7 @@ void manejar_conexion(int* socket_cliente) {
 
 	switch(rta_handshake){
 		case KERNEL:
-			log_info(logger_no_obligatorio, "El Kernel se conecto a memoria");
+			log_warning(logger_no_obligatorio, "Kernel se conecto a Memoria");
 			enviar_handshake(*socket_cliente, OK_HANDSHAKE);
 			socket_kernel = *socket_cliente;
 			free(socket_cliente);
@@ -29,7 +29,7 @@ void manejar_conexion(int* socket_cliente) {
 			break;
 
 		case CPU:
-			log_info(logger_no_obligatorio, "La CPU se conecto a memoria");
+			log_warning(logger_no_obligatorio, "CPU se conecto a Memoria");
 			enviar_handshake(*socket_cliente, OK_HANDSHAKE);
 			socket_cpu = *socket_cliente;
 			free(socket_cliente);
@@ -37,7 +37,7 @@ void manejar_conexion(int* socket_cliente) {
 			break;
 
 		case FILESYSTEM:
-			log_info(logger_no_obligatorio, "El Filesystem se conecto a memoria");
+			log_warning(logger_no_obligatorio, "File System se conecto a Memoria");
 			enviar_handshake(*socket_cliente, OK_HANDSHAKE);
 			socket_fileSystem = *socket_cliente;
 			free(socket_cliente);
