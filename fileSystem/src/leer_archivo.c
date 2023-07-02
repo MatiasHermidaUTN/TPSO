@@ -19,7 +19,7 @@ char* leer_archivo(char* nombre_archivo, int apartir_de_donde_leer, int cuanto_l
 	}
 	if (apartir_de_donde_leer + cuanto_leer > tamanio_archivo) {
 		cuanto_leer = tamanio_archivo - apartir_de_donde_leer;		//deberia tirar error?
-		log_warning(logger, "leo hasta fin archivo\n");
+		log_warning(my_logger, "Leo hasta fin archivo\n");
 	}
 
 	//LECTURA
@@ -31,7 +31,7 @@ char* leer_archivo(char* nombre_archivo, int apartir_de_donde_leer, int cuanto_l
 		fseek(bloques, puntero_directo * super_bloque_info.block_size + apartir_de_donde_leer, SEEK_SET);
 
 		leer_bloque(buffer, puntero_directo, apartir_de_donde_leer, &cuanto_leer, &cantidad_leida);
-		log_info(logger, "Acceso Bloque - Archivo: %s - Bloque Archivo: 0 - Bloque File System: %d", nombre_archivo, puntero_directo);
+		log_info(logger, "Acceso Bloque - Archivo: %s - Bloque Archivo: 0 - Bloque File System: %d", nombre_archivo, puntero_directo); //log obligatorio
 
 		leer_indirecto(buffer, archivo_FCB, PRIMER_BLOQUE_SECUNDARIO, &cuanto_leer, &cantidad_leida);
 	}
@@ -45,7 +45,7 @@ char* leer_archivo(char* nombre_archivo, int apartir_de_donde_leer, int cuanto_l
 		uint32_t puntero_secundario = conseguir_ptr_secundario_para_indirecto(puntero_indirecto, bloque_secundario_inicial);
 
 		leer_bloque(buffer, puntero_secundario, apartir_de_donde_leer_bloque_inicial, &cuanto_leer, &cantidad_leida);
-		log_info(logger, "Acceso Bloque - Archivo: %s - Bloque Archivo: %d - Bloque File System: %d", nombre_archivo, bloque_secundario_inicial, puntero_secundario);
+		log_info(logger, "Acceso Bloque - Archivo: %s - Bloque Archivo: %d - Bloque File System: %d", nombre_archivo, bloque_secundario_inicial, puntero_secundario); //log obligatorio
 
 		leer_indirecto(buffer, archivo_FCB, bloque_secundario_inicial+1, &cuanto_leer, &cantidad_leida);
 	}
@@ -90,7 +90,7 @@ void leer_indirecto(char* buffer, t_config* archivo_FCB, int bloque_secundario_d
 	while(*cuanto_leer > 0) {
 		puntero_secundario = conseguir_ptr_secundario_para_indirecto(puntero_indirecto, bloque_secundario_donde_leer);
 		leer_bloque(buffer, puntero_secundario, DESDE_EL_INICIO, cuanto_leer, cantidad_leida);
-		log_info(logger, "Acceso Bloque - Archivo: %s - Bloque Archivo: %d - Bloque File System: %d", nombre_archivo, bloque_secundario_donde_leer, puntero_secundario);
+		log_info(logger, "Acceso Bloque - Archivo: %s - Bloque Archivo: %d - Bloque File System: %d", nombre_archivo, bloque_secundario_donde_leer, puntero_secundario); //log obligatorio
 
 		bloque_secundario_donde_leer++;
 	}

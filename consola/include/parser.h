@@ -9,8 +9,9 @@
 #include <commons/collections/dictionary.h>
 #include <commons/collections/list.h>
 #include <stdio.h>
+#include "configuracion_consola.h"
 
-t_list* parsearPseudocodigo(t_log* logger, char* direccionPseudocodigo);
-t_instruccion* parsearInstruccion(char* lineaLeida, t_log* logger, t_dictionary* instrucciones);
+t_list* parsear_pseudocodigo(char* direccion_pseudocodigo);
+t_instruccion* parsear_instruccion(char* linea_leida);
 
 #endif /* PARSER_H_ */

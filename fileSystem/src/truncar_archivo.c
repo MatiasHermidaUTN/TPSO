@@ -90,7 +90,7 @@ uint32_t dame_un_bloque_libre() {
 		if (bitarray_test_bit(bitarray_de_bitmap, puntero) == 0) {
 			bitarray_set_bit(bitarray_de_bitmap, puntero);
 			msync(bitmap_pointer, tamanioBitmap, MS_SYNC);
-			log_info(logger, "Acceso a Bitmap - Bloque: %d - Estado: 1", puntero);
+			log_info(logger, "Acceso a Bitmap - Bloque: %d - Estado: 1", puntero); //log obligatorio
 			return puntero;
 		}
 	}
@@ -101,5 +101,5 @@ uint32_t dame_un_bloque_libre() {
 void liberar_bloque(uint32_t puntero){
 	bitarray_clean_bit(bitarray_de_bitmap, puntero);
 	msync(bitmap_pointer, tamanioBitmap, MS_SYNC);
-	log_info(logger, "Acceso a Bitmap - Bloque: %d - Estado: 0", puntero);
+	log_info(logger, "Acceso a Bitmap - Bloque: %d - Estado: 0", puntero); //log obligatorio
 }

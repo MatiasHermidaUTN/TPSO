@@ -1,6 +1,10 @@
 #include "../include/configuracion_consola.h"
 
-t_consola_config leer_consola_config(t_config* config) {
+int socket_kernel;
+t_config* config;
+t_log* logger;
+
+t_consola_config leer_consola_config() {
     t_consola_config lectura_de_config;
 
     lectura_de_config.IP_KERNEL     = strdup(config_get_string_value(config, "IP_KERNEL"));

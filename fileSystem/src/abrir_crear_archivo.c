@@ -20,7 +20,7 @@ bool archivo_se_puede_leer(char* path)
 
 void crear_archivo(char* nombre_archivo) {
 	char* path = obtener_path_FCB_sin_free(nombre_archivo);
-	t_config* FCBdefault = iniciar_config("../FCBdefault");
+	t_config* FCBdefault = iniciar_config("./fileSystem/FCBdefault");
 	config_set_value(FCBdefault, "NOMBRE_ARCHIVO", nombre_archivo);
 	config_set_value(FCBdefault, "TAMANIO_ARCHIVO", "0");
 	config_set_value(FCBdefault, "PUNTERO_DIRECTO", "");

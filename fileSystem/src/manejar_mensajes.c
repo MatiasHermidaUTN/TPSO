@@ -1,7 +1,7 @@
 #include "../include/manejar_mensajes.h"
 
 void escuchar_kernel() {
-	while(1){
+	while(1) {
 		t_mensajes* args = malloc(sizeof(t_mensajes));
 		args->cod_op = recibir_msj(kernel);
 		args->parametros = recibir_parametros_de_mensaje(kernel);
@@ -11,7 +11,7 @@ void escuchar_kernel() {
 	return;
 }
 
-int manejar_mensaje(){
+int manejar_mensaje() {
 	sem_wait(&sem_sincro_cant_msj);
 
 	t_mensajes* args = list_pop_con_mutex(lista_fifo_msj, &mutex_cola_msj);
@@ -28,17 +28,18 @@ int manejar_mensaje(){
 			nombre_archivo = args->parametros[0];
 			if (existe_archivo(nombre_archivo)) {	//existe FCB?
 				enviar_msj(kernel, EL_ARCHIVO_YA_EXISTE);
-			} else {
+			}
+			else {
 				enviar_msj(kernel, EL_ARCHIVO_NO_EXISTE);
 			}
-			log_info(logger, "Abrir Archivo: %s", nombre_archivo);
+			log_info(logger, "Abrir Archivo: %s", nombre_archivo); //log obligatorio
 			break;
 
 		case CREAR_ARCHIVO:
 			nombre_archivo = args->parametros[0];
 			crear_archivo(nombre_archivo);	//crear FCB y poner tamaño 0 y sin bloques asociados.
 			enviar_msj(kernel, EL_ARCHIVO_FUE_CREADO);
-			log_info(logger, "Crear Archivo: %s", nombre_archivo);
+			log_info(logger, "Crear Archivo: %s", nombre_archivo); //log obligatorio
 			break;
 
 		case TRUNCAR_ARCHIVO:
@@ -52,7 +53,7 @@ int manejar_mensaje(){
 			string_array_push(&parametros_a_enviar, nombre_archivo);
 			string_array_push(&parametros_a_enviar, pid_truncar);
 			enviar_msj_con_parametros(kernel, EL_ARCHIVO_FUE_TRUNCADO, parametros_a_enviar);
-			log_info(logger, "Truncar Archivo: %s - Tamanio: %d", nombre_archivo, nuevo_tamanio_archivo);
+			log_info(logger, "Truncar Archivo: %s - Tamanio: %d", nombre_archivo, nuevo_tamanio_archivo); //log obligatorio
 			string_array_destroy(parametros_a_enviar);
 			break;
 
@@ -71,7 +72,7 @@ int manejar_mensaje(){
 			string_array_push(&parametros_a_enviar_leer, pid_leer); //pid para desbloquearlo despues
 			enviar_msj_con_parametros(kernel, EL_ARCHIVO_FUE_LEIDO, parametros_a_enviar_leer);
 
-			log_info(logger, "Leer Archivo: %s - Puntero: %d - Memoria: %d - Tamanio: %d", nombre_archivo, apartir_de_donde_X, dir_fisica_memoria, cuanto_X);
+			log_info(logger, "Leer Archivo: %s - Puntero: %d - Memoria: %d - Tamanio: %d", nombre_archivo, apartir_de_donde_X, dir_fisica_memoria, cuanto_X); //log obligatorio
 
 			string_array_destroy(parametros_a_enviar_leer);
 
@@ -92,11 +93,12 @@ int manejar_mensaje(){
 			string_array_push(&parametros_a_enviar_escribir, pid_escribir); //pid para desbloquearlo despues
 			enviar_msj_con_parametros(kernel, EL_ARCHIVO_FUE_ESCRITO, parametros_a_enviar_escribir);
 
-			log_info(logger, "Escribir Archivo: %s - Puntero: %d - Memoria: %d - Tamanio: %d", nombre_archivo, apartir_de_donde_X, dir_fisica_memoria, cuanto_X);
+			log_info(logger, "Escribir Archivo: %s - Puntero: %d - Memoria: %d - Tamanio: %d", nombre_archivo, apartir_de_donde_X, dir_fisica_memoria, cuanto_X); //log obligatorio
 			string_array_destroy(parametros_a_enviar_escribir);
 			free(buffer);
 
 			break;
+
 		default:
 			return 0;	//?
 	}

@@ -1,0 +1,200 @@
+[WARNING] 20:35:19:448 Memoria/(48591:48591): Memoria lista para recibir al cliente
+[INFO] 20:36:05:565 Memoria/(48591:48603): El Filesystem se conecto a memoria
+[INFO] 20:36:19:231 Memoria/(48591:48606): La CPU se conecto a memoria
+[INFO] 20:41:23:826 Memoria/(48591:48702): El Kernel se conecto a memoria
+[WARNING] 22:08:05:011 Memoria/(50023:50023): Memoria lista para recibir al cliente
+[WARNING] 22:08:08:583 Memoria/(50023:50026): CPU se conecto a Memoria
+[WARNING] 22:08:14:473 Memoria/(50023:50032): File System se conecto a Memoria
+[WARNING] 22:08:17:044 Memoria/(50023:50035): Kernel se conecto a Memoria
+[WARNING] 23:15:43:293 Memoria/(51923:51923): Memoria lista para recibir al cliente
+[WARNING] 23:15:44:400 Memoria/(51923:51926): CPU se conecto a Memoria
+[WARNING] 23:15:46:609 Memoria/(51923:51931): File System se conecto a Memoria
+[WARNING] 23:15:48:181 Memoria/(51923:51934): Kernel se conecto a Memoria
+[WARNING] 23:16:23:520 Memoria/(51949:51949): Memoria lista para recibir al cliente
+[WARNING] 23:16:36:369 Memoria/(51949:51952): CPU se conecto a Memoria
+[WARNING] 23:16:37:359 Memoria/(51949:51957): File System se conecto a Memoria
+[WARNING] 23:16:38:726 Memoria/(51949:51960): Kernel se conecto a Memoria
+[WARNING] 23:20:01:384 Memoria/(52100:52100): Memoria lista para recibir al cliente
+[WARNING] 23:20:03:678 Memoria/(52100:52103): CPU se conecto a Memoria
+[WARNING] 23:20:04:428 Memoria/(52100:52108): File System se conecto a Memoria
+[WARNING] 23:20:06:142 Memoria/(52100:52111): Kernel se conecto a Memoria
+[WARNING] 23:26:02:342 Memoria/(52160:52160): Memoria lista para recibir al cliente
+[WARNING] 23:26:03:971 Memoria/(52160:52163): CPU se conecto a Memoria
+[WARNING] 23:26:04:462 Memoria/(52160:52168): File System se conecto a Memoria
+[WARNING] 23:26:05:909 Memoria/(52160:52171): Kernel se conecto a Memoria
+[WARNING] 23:45:32:907 Memoria/(52483:52483): Memoria lista para recibir al cliente
+[WARNING] 23:45:34:411 Memoria/(52483:52486): CPU se conecto a Memoria
+[WARNING] 23:45:35:590 Memoria/(52483:52491): File System se conecto a Memoria
+[WARNING] 23:45:38:574 Memoria/(52483:52494): Kernel se conecto a Memoria
+[WARNING] 23:47:12:999 Memoria/(52506:52506): Memoria lista para recibir al cliente
+[WARNING] 23:47:14:366 Memoria/(52506:52509): CPU se conecto a Memoria
+[WARNING] 23:47:15:335 Memoria/(52506:52514): File System se conecto a Memoria
+[WARNING] 23:47:17:055 Memoria/(52506:52517): Kernel se conecto a Memoria
+[WARNING] 23:48:29:844 Memoria/(52557:52557): Memoria lista para recibir al cliente
+[WARNING] 23:48:33:706 Memoria/(52557:52560): CPU se conecto a Memoria
+[WARNING] 23:48:34:761 Memoria/(52557:52565): File System se conecto a Memoria
+[WARNING] 23:48:36:120 Memoria/(52557:52568): Kernel se conecto a Memoria
+[WARNING] 23:52:37:851 Memoria/(52614:52614): Memoria lista para recibir al cliente
+[WARNING] 23:52:39:272 Memoria/(52614:52617): CPU se conecto a Memoria
+[WARNING] 23:52:48:522 Memoria/(52614:52622): File System se conecto a Memoria
+[WARNING] 23:52:50:508 Memoria/(52614:52625): Kernel se conecto a Memoria
+[WARNING] 00:01:59:316 Memoria/(52902:52902): Memoria lista para recibir al cliente
+[WARNING] 00:02:00:890 Memoria/(52902:52905): CPU se conecto a Memoria
+[WARNING] 00:02:01:550 Memoria/(52902:52910): File System se conecto a Memoria
+[WARNING] 00:02:02:965 Memoria/(52902:52913): Kernel se conecto a Memoria
+[WARNING] 00:02:04:596 Memoria/(52902:52902): No se encontro el proceso con pid 1
+[WARNING] 00:04:31:473 Memoria/(52968:52968): Memoria lista para recibir al cliente
+[WARNING] 00:04:33:322 Memoria/(52968:52971): CPU se conecto a Memoria
+[WARNING] 00:04:33:739 Memoria/(52968:52976): File System se conecto a Memoria
+[WARNING] 00:04:35:047 Memoria/(52968:52979): Kernel se conecto a Memoria
+[WARNING] 00:04:35:948 Memoria/(52968:52968): No se encontro el proceso con pid 1
+[WARNING] 00:05:58:115 Memoria/(53033:53033): Memoria lista para recibir al cliente
+[WARNING] 00:05:59:459 Memoria/(53033:53036): CPU se conecto a Memoria
+[WARNING] 00:06:00:261 Memoria/(53033:53041): File System se conecto a Memoria
+[WARNING] 00:06:01:552 Memoria/(53033:53044): Kernel se conecto a Memoria
+[WARNING] 00:06:25:670 Memoria/(53080:53080): Memoria lista para recibir al cliente
+[WARNING] 00:06:27:016 Memoria/(53080:53083): CPU se conecto a Memoria
+[WARNING] 00:06:27:465 Memoria/(53080:53088): File System se conecto a Memoria
+[WARNING] 00:06:28:587 Memoria/(53080:53091): Kernel se conecto a Memoria
+[WARNING] 00:06:29:297 Memoria/(53080:53080): No se encontro el proceso con pid 1
+[WARNING] 00:22:24:134 Memoria/(53376:53376): Memoria lista para recibir al cliente
+[WARNING] 00:22:33:706 Memoria/(53379:53379): Memoria lista para recibir al cliente
+[WARNING] 00:22:35:490 Memoria/(53379:53382): CPU se conecto a Memoria
+[WARNING] 00:22:38:833 Memoria/(53379:53386): Kernel se conecto a Memoria
+[WARNING] 00:23:00:862 Memoria/(53396:53396): Memoria lista para recibir al cliente
+[WARNING] 00:23:02:231 Memoria/(53396:53399): CPU se conecto a Memoria
+[WARNING] 00:23:02:955 Memoria/(53396:53404): File System se conecto a Memoria
+[WARNING] 00:23:04:811 Memoria/(53396:53407): Kernel se conecto a Memoria
+[WARNING] 00:24:21:913 Memoria/(53439:53439): Memoria lista para recibir al cliente
+[WARNING] 00:24:23:176 Memoria/(53439:53442): CPU se conecto a Memoria
+[WARNING] 00:24:23:743 Memoria/(53439:53447): File System se conecto a Memoria
+[WARNING] 00:24:25:006 Memoria/(53439:53450): Kernel se conecto a Memoria
+[WARNING] 00:25:33:344 Memoria/(53495:53495): Memoria lista para recibir al cliente
+[WARNING] 00:25:34:455 Memoria/(53495:53498): CPU se conecto a Memoria
+[WARNING] 00:25:35:395 Memoria/(53495:53503): File System se conecto a Memoria
+[WARNING] 00:25:36:709 Memoria/(53495:53506): Kernel se conecto a Memoria
+[WARNING] 00:33:24:882 Memoria/(53709:53709): Memoria lista para recibir al cliente
+[WARNING] 00:33:26:289 Memoria/(53709:53712): CPU se conecto a Memoria
+[WARNING] 00:33:26:862 Memoria/(53709:53717): File System se conecto a Memoria
+[WARNING] 00:33:28:376 Memoria/(53709:53720): Kernel se conecto a Memoria
+[WARNING] 00:36:11:931 Memoria/(53761:53761): Memoria lista para recibir al cliente
+[WARNING] 00:36:13:119 Memoria/(53761:53764): CPU se conecto a Memoria
+[WARNING] 00:36:13:608 Memoria/(53761:53769): File System se conecto a Memoria
+[WARNING] 00:36:15:757 Memoria/(53761:53772): Kernel se conecto a Memoria
+[WARNING] 00:37:02:534 Memoria/(53837:53837): Memoria lista para recibir al cliente
+[WARNING] 00:37:03:736 Memoria/(53837:53840): CPU se conecto a Memoria
+[WARNING] 00:37:04:329 Memoria/(53837:53845): File System se conecto a Memoria
+[WARNING] 00:37:05:540 Memoria/(53837:53848): Kernel se conecto a Memoria
+[WARNING] 00:40:27:350 Memoria/(53935:53935): Memoria lista para recibir al cliente
+[WARNING] 00:40:33:151 Memoria/(53937:53937): Memoria lista para recibir al cliente
+[WARNING] 00:40:34:453 Memoria/(53937:53940): CPU se conecto a Memoria
+[WARNING] 00:40:35:117 Memoria/(53937:53945): File System se conecto a Memoria
+[WARNING] 00:40:36:295 Memoria/(53937:53948): Kernel se conecto a Memoria
+[WARNING] 04:31:12:041 Memoria/(54245:54245): Memoria lista para recibir al cliente
+[WARNING] 04:31:13:466 Memoria/(54245:54248): CPU se conecto a Memoria
+[WARNING] 04:31:14:782 Memoria/(54245:54253): File System se conecto a Memoria
+[WARNING] 04:31:19:357 Memoria/(54245:54256): Kernel se conecto a Memoria
+[WARNING] 04:33:47:762 Memoria/(54302:54302): Memoria lista para recibir al cliente
+[WARNING] 04:33:49:059 Memoria/(54302:54305): CPU se conecto a Memoria
+[WARNING] 04:33:50:138 Memoria/(54302:54310): File System se conecto a Memoria
+[WARNING] 04:33:56:124 Memoria/(54302:54313): Kernel se conecto a Memoria
+[WARNING] 04:40:20:191 Memoria/(54654:54654): Memoria lista para recibir al cliente
+[WARNING] 04:40:21:406 Memoria/(54654:54657): CPU se conecto a Memoria
+[WARNING] 04:40:23:095 Memoria/(54654:54662): File System se conecto a Memoria
+[WARNING] 04:40:25:149 Memoria/(54654:54665): Kernel se conecto a Memoria
+[WARNING] 04:42:27:497 Memoria/(54715:54715): Memoria lista para recibir al cliente
+[WARNING] 04:42:28:745 Memoria/(54715:54718): CPU se conecto a Memoria
+[WARNING] 04:42:29:276 Memoria/(54715:54723): File System se conecto a Memoria
+[WARNING] 04:42:30:738 Memoria/(54715:54726): Kernel se conecto a Memoria
+[WARNING] 04:42:38:857 Memoria/(54735:54735): Memoria lista para recibir al cliente
+[WARNING] 04:42:40:245 Memoria/(54735:54738): CPU se conecto a Memoria
+[WARNING] 04:42:41:133 Memoria/(54735:54743): File System se conecto a Memoria
+[WARNING] 04:42:42:325 Memoria/(54735:54746): Kernel se conecto a Memoria
+[WARNING] 04:42:51:735 Memoria/(54785:54785): Memoria lista para recibir al cliente
+[WARNING] 04:42:53:040 Memoria/(54785:54788): CPU se conecto a Memoria
+[WARNING] 04:42:53:585 Memoria/(54785:54793): File System se conecto a Memoria
+[WARNING] 04:42:55:396 Memoria/(54785:54796): Kernel se conecto a Memoria
+[WARNING] 04:53:01:860 Memoria/(55016:55016): Memoria lista para recibir al cliente
+[WARNING] 04:53:03:191 Memoria/(55016:55019): CPU se conecto a Memoria
+[WARNING] 04:53:03:835 Memoria/(55016:55024): File System se conecto a Memoria
+[WARNING] 04:53:05:494 Memoria/(55016:55027): Kernel se conecto a Memoria
+[WARNING] 04:53:16:470 Memoria/(55033:55033): Memoria lista para recibir al cliente
+[WARNING] 04:53:18:430 Memoria/(55033:55036): CPU se conecto a Memoria
+[WARNING] 04:53:19:457 Memoria/(55033:55041): File System se conecto a Memoria
+[WARNING] 04:53:23:531 Memoria/(55033:55044): Kernel se conecto a Memoria
+[WARNING] 05:20:10:054 Memoria/(55332:55332): Memoria lista para recibir al cliente
+[WARNING] 05:20:11:905 Memoria/(55332:55335): CPU se conecto a Memoria
+[WARNING] 05:20:12:342 Memoria/(55332:55340): File System se conecto a Memoria
+[WARNING] 05:20:17:236 Memoria/(55332:55343): Kernel se conecto a Memoria
+[WARNING] 05:21:33:921 Memoria/(55354:55354): Memoria lista para recibir al cliente
+[WARNING] 05:21:35:031 Memoria/(55354:55357): CPU se conecto a Memoria
+[WARNING] 05:21:35:674 Memoria/(55354:55362): File System se conecto a Memoria
+[WARNING] 05:21:36:998 Memoria/(55354:55365): Kernel se conecto a Memoria
+[WARNING] 05:22:10:860 Memoria/(55380:55380): Memoria lista para recibir al cliente
+[WARNING] 05:22:11:997 Memoria/(55380:55383): CPU se conecto a Memoria
+[WARNING] 05:22:12:520 Memoria/(55380:55388): File System se conecto a Memoria
+[WARNING] 05:22:14:315 Memoria/(55380:55391): Kernel se conecto a Memoria
+[WARNING] 05:24:28:709 Memoria/(55411:55411): Memoria lista para recibir al cliente
+[WARNING] 05:24:29:889 Memoria/(55411:55414): CPU se conecto a Memoria
+[WARNING] 05:24:32:233 Memoria/(55411:55419): File System se conecto a Memoria
+[WARNING] 05:24:34:249 Memoria/(55411:55422): Kernel se conecto a Memoria
+[WARNING] 05:25:04:343 Memoria/(55432:55432): Memoria lista para recibir al cliente
+[WARNING] 05:25:05:741 Memoria/(55432:55435): CPU se conecto a Memoria
+[WARNING] 05:25:06:593 Memoria/(55432:55440): File System se conecto a Memoria
+[WARNING] 05:25:07:924 Memoria/(55432:55443): Kernel se conecto a Memoria
+[WARNING] 05:26:03:628 Memoria/(55455:55455): Memoria lista para recibir al cliente
+[WARNING] 05:26:04:740 Memoria/(55455:55458): CPU se conecto a Memoria
+[WARNING] 05:26:05:546 Memoria/(55455:55463): File System se conecto a Memoria
+[WARNING] 05:26:06:732 Memoria/(55455:55466): Kernel se conecto a Memoria
+[WARNING] 05:26:23:451 Memoria/(55475:55475): Memoria lista para recibir al cliente
+[WARNING] 05:26:25:791 Memoria/(55475:55478): CPU se conecto a Memoria
+[WARNING] 05:26:26:625 Memoria/(55475:55483): File System se conecto a Memoria
+[WARNING] 05:26:27:777 Memoria/(55475:55486): Kernel se conecto a Memoria
+[WARNING] 05:26:42:387 Memoria/(55495:55495): Memoria lista para recibir al cliente
+[WARNING] 05:26:43:618 Memoria/(55495:55498): CPU se conecto a Memoria
+[WARNING] 05:26:44:205 Memoria/(55495:55503): File System se conecto a Memoria
+[WARNING] 05:26:45:283 Memoria/(55495:55506): Kernel se conecto a Memoria
+[WARNING] 05:27:11:339 Memoria/(55515:55515): Memoria lista para recibir al cliente
+[WARNING] 05:27:12:475 Memoria/(55515:55518): CPU se conecto a Memoria
+[WARNING] 05:27:12:997 Memoria/(55515:55523): File System se conecto a Memoria
+[WARNING] 05:27:14:121 Memoria/(55515:55526): Kernel se conecto a Memoria
+[WARNING] 05:27:30:198 Memoria/(55568:55568): Memoria lista para recibir al cliente
+[WARNING] 05:27:31:323 Memoria/(55568:55571): CPU se conecto a Memoria
+[WARNING] 05:27:31:987 Memoria/(55568:55576): File System se conecto a Memoria
+[WARNING] 05:27:33:172 Memoria/(55568:55579): Kernel se conecto a Memoria
+[WARNING] 05:27:49:315 Memoria/(55588:55588): Memoria lista para recibir al cliente
+[WARNING] 05:27:50:427 Memoria/(55588:55591): CPU se conecto a Memoria
+[WARNING] 05:27:50:844 Memoria/(55588:55596): File System se conecto a Memoria
+[WARNING] 05:27:52:292 Memoria/(55588:55599): Kernel se conecto a Memoria
+[WARNING] 05:28:55:539 Memoria/(55608:55608): Memoria lista para recibir al cliente
+[WARNING] 05:28:56:655 Memoria/(55608:55612): CPU se conecto a Memoria
+[WARNING] 05:28:57:076 Memoria/(55608:55622): File System se conecto a Memoria
+[WARNING] 05:28:58:270 Memoria/(55608:55625): Kernel se conecto a Memoria
+[WARNING] 05:29:19:051 Memoria/(55634:55634): Memoria lista para recibir al cliente
+[WARNING] 05:29:20:167 Memoria/(55634:55637): CPU se conecto a Memoria
+[WARNING] 05:29:20:558 Memoria/(55634:55642): File System se conecto a Memoria
+[WARNING] 05:29:21:659 Memoria/(55634:55645): Kernel se conecto a Memoria
+[WARNING] 05:29:28:523 Memoria/(55654:55654): Memoria lista para recibir al cliente
+[WARNING] 05:29:29:690 Memoria/(55654:55657): CPU se conecto a Memoria
+[WARNING] 05:29:30:188 Memoria/(55654:55662): File System se conecto a Memoria
+[WARNING] 05:29:31:325 Memoria/(55654:55665): Kernel se conecto a Memoria
+[WARNING] 05:30:12:547 Memoria/(55675:55675): Memoria lista para recibir al cliente
+[WARNING] 05:30:13:611 Memoria/(55675:55678): CPU se conecto a Memoria
+[WARNING] 05:30:14:012 Memoria/(55675:55683): File System se conecto a Memoria
+[WARNING] 05:30:19:371 Memoria/(55675:55686): Kernel se conecto a Memoria
+[WARNING] 05:47:09:300 Memoria/(1978:1978): Memoria lista para recibir al cliente
+[WARNING] 05:47:17:490 Memoria/(1978:1981): CPU se conecto a Memoria
+[WARNING] 05:47:30:391 Memoria/(1978:1986): File System se conecto a Memoria
+[WARNING] 05:47:46:730 Memoria/(1978:1989): Kernel se conecto a Memoria
+[WARNING] 05:51:46:804 Memoria/(2155:2155): Memoria lista para recibir al cliente
+[WARNING] 05:51:49:220 Memoria/(2155:2160): File System se conecto a Memoria
+[WARNING] 05:51:50:988 Memoria/(2155:2163): CPU se conecto a Memoria
+[WARNING] 05:51:52:291 Memoria/(2155:2166): Kernel se conecto a Memoria
+[WARNING] 05:58:04:563 Memoria/(2417:2417): Memoria lista para recibir al cliente
+[WARNING] 05:58:05:367 Memoria/(2417:2422): File System se conecto a Memoria
+[WARNING] 05:58:06:936 Memoria/(2417:2425): CPU se conecto a Memoria
+[WARNING] 05:58:07:796 Memoria/(2417:2428): Kernel se conecto a Memoria
+[WARNING] 05:59:08:952 Memoria/(2441:2441): Memoria lista para recibir al cliente
+[WARNING] 05:59:09:876 Memoria/(2441:2446): File System se conecto a Memoria
+[WARNING] 05:59:11:044 Memoria/(2441:2449): CPU se conecto a Memoria
+[WARNING] 05:59:13:973 Memoria/(2441:2452): Kernel se conecto a Memoria

@@ -27,7 +27,7 @@ int main(int argc, char** argv) {
 	//LECTURA DE CONFIG DEL FILESYSTEM
 	logger = iniciar_logger("FileSystem.log", "FS");
 	my_logger = iniciar_logger("my_fileSystem.log", "FS");
-	config = iniciar_config("../fileSystem.config");
+	config = iniciar_config(argv[1]);
     lectura_de_config = leer_fileSystem_config(config);
 
 	lista_fifo_msj = list_create();

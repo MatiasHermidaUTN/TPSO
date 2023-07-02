@@ -28,7 +28,10 @@ int main(int argc, char** argv) {
     while (1) {
     	switch (recibir_msj(socket_kernel)) {
     		case PCB_A_EJECUTAR:
-    			t_pcb* pcb = recibir_pcb(socket_kernel); //deserializar hace el malloc
+    			size_t cantidad_de_parametros; //Va a ser siempre 0, pero no me interesa (por eso no se usa)
+    			recv(socket_kernel, &cantidad_de_parametros, sizeof(size_t), MSG_WAITALL); //Hardcodeado nashe
+
+    			t_pcb* pcb = recibir_pcb(socket_kernel); //Deserializar hace el malloc
 
     			ejecutar_instrucciones(pcb);
 

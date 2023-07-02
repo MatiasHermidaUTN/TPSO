@@ -9,8 +9,8 @@
 #include "parser.h"
 
 void* serializar_instrucciones(t_list* instrucciones, int size);
-int enviar_instrucciones(int socket_kernel, t_list* instrucciones);
-int calculo_tamanio_msj(t_list* instrucciones);
+int enviar_instrucciones(t_list* instrucciones);
+int tamanio_msj(t_list* instrucciones);
 int calculo_tamanio_parametros(t_list* parametros, int index_instruccion);
 
 

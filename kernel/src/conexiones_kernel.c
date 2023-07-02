@@ -39,7 +39,6 @@ void manejar_conexion(void* args) {
 }
 
 int contador_pid = 1;
-
 t_pcb* crear_pcb(t_list* instrucciones, int socket_consola) {
 	t_pcb* pcb = malloc(sizeof(t_pcb));
 

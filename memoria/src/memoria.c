@@ -106,7 +106,7 @@ int manejar_mensaje() { //pinta bien
 			}
 			if(!tengo_espacio_contiguo(tamanio_segmento)) {
 				
-				log_warning(logger_no_obligatorio, "hay que compactar");
+				log_warning(logger_no_obligatorio, "Hay que compactar");
 				enviar_msj(socket_kernel, HAY_QUE_COMPACTAR); 
 				break;
 			}

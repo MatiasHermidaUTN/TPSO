@@ -2,6 +2,7 @@
 
 int socket_kernel;
 int socket_memoria;
+
 t_cpu_config lectura_de_config;
 
 t_log* logger;

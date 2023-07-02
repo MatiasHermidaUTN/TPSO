@@ -1,0 +1,210 @@
+[INFO] 21:08:09:060 Memoria/(2704:2704): Creación de Proceso PID: 1
+[INFO] 21:08:14:068 Memoria/(2704:2704): Eliminación de Proceso PID: 1
+[INFO] 21:08:31:539 Memoria/(2704:2704): Creación de Proceso PID: 2
+[INFO] 21:08:38:548 Memoria/(2704:2704): Eliminación de Proceso PID: 2
+[INFO] 21:20:05:371 Memoria/(3025:3025): Creación de Proceso PID: 1
+[INFO] 21:20:35:616 Memoria/(3055:3055): Creación de Proceso PID: 1
+[INFO] 21:20:42:732 Memoria/(3055:3055): Eliminación de Proceso PID: 1
+[INFO] 21:20:58:167 Memoria/(3055:3055): Creación de Proceso PID: 2
+[INFO] 21:20:58:185 Memoria/(3055:3055): Eliminación de Proceso PID: 2
+[INFO] 21:21:48:274 Memoria/(3055:3055): Creación de Proceso PID: 3
+[INFO] 21:21:49:278 Memoria/(3055:3055): Eliminación de Proceso PID: 3
+[INFO] 21:23:35:155 Memoria/(3055:3055): Creación de Proceso PID: 4
+[INFO] 21:23:36:217 Memoria/(3055:3055): Eliminación de Proceso PID: 4
+[INFO] 21:56:12:873 Memoria/(4623:4623): Creación de Proceso PID: 1
+[INFO] 22:01:49:483 Memoria/(4770:4770): Creación de Proceso PID: 1
+[INFO] 22:12:33:479 Memoria/(5050:5050): Creación de Proceso PID: 1
+[INFO] 22:14:33:745 Memoria/(5108:5108): Creación de Proceso PID: 1
+[INFO] 22:14:34:812 Memoria/(5108:5108): Eliminación de Proceso PID: 1
+[INFO] 22:15:11:625 Memoria/(5108:5108): Creación de Proceso PID: 2
+[INFO] 22:15:16:656 Memoria/(5108:5108): Eliminación de Proceso PID: 2
+[INFO] 22:15:26:015 Memoria/(5108:5108): Creación de Proceso PID: 3
+[INFO] 22:15:33:040 Memoria/(5108:5108): Eliminación de Proceso PID: 3
+[INFO] 22:15:40:926 Memoria/(5108:5108): Creación de Proceso PID: 4
+[INFO] 22:15:40:945 Memoria/(5108:5108): PID: 4 - Crear Segmento: 1 - Base: 128 - TAMAÑO: 40
+[INFO] 22:15:40:959 Memoria/(5108:5108): PID: 4 - Crear Segmento: 2 - Base: 168 - TAMAÑO: 20
+[INFO] 22:15:40:967 Memoria/(5108:5108): PID: 4 - Crear Segmento: 3 - Base: 188 - TAMAÑO: 40
+[INFO] 22:15:40:973 Memoria/(5108:5108): PID: 4 - Eliminar Segmento: 2 - Base: 168 - TAMAÑO: 20
+[INFO] 22:15:40:991 Memoria/(5108:5108): Solicitud de Compactación
+[INFO] 22:15:40:997 Memoria/(5108:5108): PID: 4 - Segmento: 0 - Base: 0 - Tamaño 128
+[INFO] 22:15:41:001 Memoria/(5108:5108): PID: 4 - Segmento: 1 - Base: 128 - Tamaño 40
+[INFO] 22:15:41:001 Memoria/(5108:5108): PID: 4 - Segmento: 3 - Base: 168 - Tamaño 40
+[INFO] 22:15:43:015 Memoria/(5108:5108): PID: 4 - Crear Segmento: 4 - Base: 208 - TAMAÑO: 40
+[INFO] 22:15:43:019 Memoria/(5108:5108): Eliminación de Proceso PID: 4
+[INFO] 22:16:42:319 Memoria/(5108:5108): Creación de Proceso PID: 5
+[INFO] 22:16:44:373 Memoria/(5108:5108): PID: 5 - Acción: ESCRIBIR - Dirección física: 4 - Tamaño: 4 - Origen: CPU
+[INFO] 22:16:45:457 Memoria/(5108:5108): PID: 5 - Acción: LEER - Dirección física: 4 - Tamaño: 4 - Origen: FILESYSTEM
+[INFO] 22:16:48:498 Memoria/(5108:5108): PID: 5 - Acción: ESCRIBIR - Dirección física: 10 - Tamaño: 4 - Origen: FILESYSTEM
+[INFO] 22:16:49:509 Memoria/(5108:5108): PID: 5 - Acción: LEER - Dirección física: 10 - Tamaño: 4 - Origen: CPU
+[INFO] 22:16:51:530 Memoria/(5108:5108): Eliminación de Proceso PID: 5
+[INFO] 22:23:09:665 Memoria/(5237:5237): Creación de Proceso PID: 1
+[INFO] 22:23:33:920 Memoria/(5269:5269): Creación de Proceso PID: 1
+[INFO] 22:25:28:364 Memoria/(5294:5294): Creación de Proceso PID: 1
+[INFO] 22:25:30:463 Memoria/(5294:5294): PID: 1 - Acción: ESCRIBIR - Dirección física: 4 - Tamaño: 4 - Origen: CPU
+[INFO] 22:25:31:520 Memoria/(5294:5294): PID: 1 - Acción: LEER - Dirección física: 4 - Tamaño: 4 - Origen: FILESYSTEM
+[INFO] 22:25:34:574 Memoria/(5294:5294): PID: 1 - Acción: ESCRIBIR - Dirección física: 10 - Tamaño: 4 - Origen: FILESYSTEM
+[INFO] 22:25:35:586 Memoria/(5294:5294): PID: 1 - Acción: LEER - Dirección física: 10 - Tamaño: 4 - Origen: CPU
+[INFO] 22:25:37:615 Memoria/(5294:5294): Eliminación de Proceso PID: 1
+[INFO] 22:34:18:829 Memoria/(5418:5418): Creación de Proceso PID: 1
+[INFO] 22:34:20:946 Memoria/(5418:5418): PID: 1 - Acción: ESCRIBIR - Dirección física: 4 - Tamaño: 4 - Origen: CPU
+[INFO] 22:34:21:996 Memoria/(5418:5418): PID: 1 - Acción: LEER - Dirección física: 4 - Tamaño: 4 - Origen: FILESYSTEM
+[INFO] 22:34:25:067 Memoria/(5418:5418): PID: 1 - Acción: ESCRIBIR - Dirección física: 10 - Tamaño: 4 - Origen: FILESYSTEM
+[INFO] 22:34:26:079 Memoria/(5418:5418): PID: 1 - Acción: LEER - Dirección física: 10 - Tamaño: 4 - Origen: CPU
+[INFO] 22:34:28:100 Memoria/(5418:5418): Eliminación de Proceso PID: 1
+[INFO] 22:34:44:399 Memoria/(5418:5418): Creación de Proceso PID: 2
+[INFO] 22:34:47:467 Memoria/(5418:5418): Eliminación de Proceso PID: 2
+[INFO] 22:35:45:013 Memoria/(5418:5418): Creación de Proceso PID: 3
+[INFO] 22:39:14:885 Memoria/(5515:5515): Creación de Proceso PID: 1
+[INFO] 22:39:17:983 Memoria/(5515:5515): Eliminación de Proceso PID: 1
+[INFO] 23:15:52:205 Memoria/(5862:5862): Creación de Proceso PID: 1
+[INFO] 23:15:55:345 Memoria/(5862:5862): Eliminación de Proceso PID: 1
+[INFO] 23:16:51:099 Memoria/(5890:5890): Creación de Proceso PID: 1
+[INFO] 23:17:05:463 Memoria/(5913:5913): Creación de Proceso PID: 1
+[INFO] 23:17:08:558 Memoria/(5913:5913): Eliminación de Proceso PID: 1
+[INFO] 23:19:31:133 Memoria/(5984:5984): Creación de Proceso PID: 1
+[INFO] 23:19:34:267 Memoria/(5984:5984): Eliminación de Proceso PID: 1
+[INFO] 23:23:46:633 Memoria/(6064:6064): Creación de Proceso PID: 1
+[INFO] 23:23:49:737 Memoria/(6064:6064): Eliminación de Proceso PID: 1
+[INFO] 23:30:06:344 Memoria/(6196:6196): Creación de Proceso PID: 1
+[INFO] 23:30:09:458 Memoria/(6196:6196): Eliminación de Proceso PID: 1
+[INFO] 23:34:05:456 Memoria/(6342:6342): Creación de Proceso PID: 1
+[INFO] 23:34:08:635 Memoria/(6342:6342): Eliminación de Proceso PID: 1
+[INFO] 23:59:21:410 Memoria/(6432:6432): Creación de Proceso PID: 1
+[INFO] 23:59:24:521 Memoria/(6432:6432): Eliminación de Proceso PID: 1
+[INFO] 23:59:32:011 Memoria/(6432:6432): Creación de Proceso PID: 2
+[INFO] 23:59:35:055 Memoria/(6432:6432): Eliminación de Proceso PID: 2
+[INFO] 00:00:34:472 Memoria/(6589:6589): Creación de Proceso PID: 1
+[INFO] 00:00:37:578 Memoria/(6589:6589): Eliminación de Proceso PID: 1
+[INFO] 16:54:53:103 Memoria/(33404:33404): Creación de Proceso PID: 1
+[INFO] 16:54:56:291 Memoria/(33404:33404): Eliminación de Proceso PID: 1
+[INFO] 16:55:36:806 Memoria/(33898:33898): Creación de Proceso PID: 1
+[INFO] 16:55:39:911 Memoria/(33898:33898): Eliminación de Proceso PID: 1
+[INFO] 16:56:15:853 Memoria/(33953:33953): Creación de Proceso PID: 1
+[INFO] 16:56:18:959 Memoria/(33953:33953): Eliminación de Proceso PID: 1
+[INFO] 17:05:53:995 Memoria/(34247:34247): Creación de Proceso PID: 1
+[INFO] 17:05:57:102 Memoria/(34247:34247): Eliminación de Proceso PID: 1
+[INFO] 17:06:06:061 Memoria/(34247:34247): Creación de Proceso PID: 2
+[INFO] 17:06:09:104 Memoria/(34247:34247): Eliminación de Proceso PID: 2
+[INFO] 17:06:20:034 Memoria/(34247:34247): Creación de Proceso PID: 3
+[INFO] 17:06:20:849 Memoria/(34247:34247): Creación de Proceso PID: 4
+[INFO] 17:06:21:686 Memoria/(34247:34247): Creación de Proceso PID: 5
+[INFO] 17:06:22:331 Memoria/(34247:34247): Creación de Proceso PID: 6
+[INFO] 17:06:23:053 Memoria/(34247:34247): Eliminación de Proceso PID: 3
+[INFO] 17:06:26:064 Memoria/(34247:34247): Eliminación de Proceso PID: 4
+[INFO] 17:06:29:072 Memoria/(34247:34247): Eliminación de Proceso PID: 5
+[INFO] 17:06:32:079 Memoria/(34247:34247): Eliminación de Proceso PID: 6
+[INFO] 17:08:38:903 Memoria/(34312:34312): Creación de Proceso PID: 1
+[INFO] 17:08:42:005 Memoria/(34312:34312): Eliminación de Proceso PID: 1
+[INFO] 17:11:39:527 Memoria/(34337:34337): Creación de Proceso PID: 1
+[INFO] 17:12:23:588 Memoria/(34359:34359): Creación de Proceso PID: 1
+[INFO] 17:13:27:552 Memoria/(34379:34379): Creación de Proceso PID: 1
+[INFO] 17:13:27:627 Memoria/(34379:34379): Eliminación de Proceso PID: 1
+[INFO] 17:14:01:174 Memoria/(34379:34379): Creación de Proceso PID: 2
+[INFO] 17:14:02:185 Memoria/(34379:34379): Eliminación de Proceso PID: 2
+[INFO] 17:14:14:970 Memoria/(34379:34379): Creación de Proceso PID: 3
+[INFO] 17:14:15:979 Memoria/(34379:34379): Eliminación de Proceso PID: 3
+[INFO] 17:17:49:503 Memoria/(34379:34379): Creación de Proceso PID: 4
+[INFO] 17:17:53:163 Memoria/(34379:34379): Eliminación de Proceso PID: 4
+[INFO] 17:18:12:772 Memoria/(34479:34479): Creación de Proceso PID: 1
+[INFO] 17:18:15:986 Memoria/(34479:34479): Eliminación de Proceso PID: 1
+[INFO] 17:20:25:431 Memoria/(34500:34500): Creación de Proceso PID: 1
+[INFO] 17:20:28:526 Memoria/(34500:34500): Eliminación de Proceso PID: 1
+[INFO] 17:28:06:751 Memoria/(34633:34633): Creación de Proceso PID: 1
+[INFO] 17:28:06:923 Memoria/(34633:34633): Eliminación de Proceso PID: 1
+[INFO] 18:12:21:399 Memoria/(34848:34848): Creación de Proceso PID: 1
+[INFO] 18:12:21:488 Memoria/(34848:34848): Eliminación de Proceso PID: 1
+[INFO] 18:13:19:767 Memoria/(34895:34895): Creación de Proceso PID: 1
+[INFO] 18:13:19:856 Memoria/(34895:34895): Eliminación de Proceso PID: 1
+[INFO] 18:13:33:920 Memoria/(34915:34915): Creación de Proceso PID: 1
+[INFO] 18:13:34:012 Memoria/(34915:34915): Eliminación de Proceso PID: 1
+[INFO] 18:13:42:345 Memoria/(34935:34935): Creación de Proceso PID: 1
+[INFO] 18:13:42:438 Memoria/(34935:34935): Eliminación de Proceso PID: 1
+[INFO] 18:14:57:398 Memoria/(35007:35007): Creación de Proceso PID: 1
+[INFO] 18:14:57:488 Memoria/(35007:35007): Eliminación de Proceso PID: 1
+[INFO] 18:15:13:665 Memoria/(35027:35027): Creación de Proceso PID: 1
+[INFO] 18:15:13:787 Memoria/(35027:35027): Eliminación de Proceso PID: 1
+[INFO] 18:15:37:551 Memoria/(35047:35047): Creación de Proceso PID: 1
+[INFO] 18:15:37:645 Memoria/(35047:35047): Eliminación de Proceso PID: 1
+[INFO] 18:16:00:077 Memoria/(35067:35067): Creación de Proceso PID: 1
+[INFO] 18:16:00:171 Memoria/(35067:35067): Eliminación de Proceso PID: 1
+[INFO] 18:16:49:739 Memoria/(35347:35347): Creación de Proceso PID: 1
+[INFO] 18:16:49:832 Memoria/(35347:35347): Eliminación de Proceso PID: 1
+[INFO] 18:18:46:824 Memoria/(35374:35374): Creación de Proceso PID: 1
+[INFO] 18:39:04:430 Memoria/(35640:35640): Creación de Proceso PID: 1
+[INFO] 18:39:04:623 Memoria/(35640:35640): Eliminación de Proceso PID: 1
+[INFO] 18:40:12:938 Memoria/(35660:35660): Creación de Proceso PID: 1
+[INFO] 18:40:13:083 Memoria/(35660:35660): Eliminación de Proceso PID: 1
+[INFO] 18:42:09:004 Memoria/(35682:35682): Creación de Proceso PID: 1
+[INFO] 18:42:09:095 Memoria/(35682:35682): Eliminación de Proceso PID: 1
+[INFO] 18:46:08:387 Memoria/(35707:35707): Creación de Proceso PID: 1
+[INFO] 18:46:08:548 Memoria/(35707:35707): Eliminación de Proceso PID: 1
+[INFO] 18:46:59:485 Memoria/(35707:35707): Creación de Proceso PID: 2
+[INFO] 18:47:00:128 Memoria/(35707:35707): Creación de Proceso PID: 3
+[INFO] 18:47:05:504 Memoria/(35707:35707): Eliminación de Proceso PID: 2
+[INFO] 18:47:11:513 Memoria/(35707:35707): Eliminación de Proceso PID: 3
+[INFO] 18:49:17:301 Memoria/(35707:35707): Creación de Proceso PID: 4
+[INFO] 18:49:17:583 Memoria/(35707:35707): Eliminación de Proceso PID: 4
+[INFO] 18:49:33:518 Memoria/(35707:35707): Creación de Proceso PID: 5
+[INFO] 18:49:43:547 Memoria/(35707:35707): Eliminación de Proceso PID: 5
+[INFO] 18:50:43:895 Memoria/(35707:35707): Creación de Proceso PID: 6
+[INFO] 18:50:49:942 Memoria/(35707:35707): Eliminación de Proceso PID: 6
+[INFO] 18:59:01:864 Memoria/(35916:35916): Creación de Proceso PID: 1
+[INFO] 18:59:01:954 Memoria/(35916:35916): Eliminación de Proceso PID: 1
+[INFO] 18:59:15:294 Memoria/(35916:35916): Creación de Proceso PID: 2
+[INFO] 18:59:25:358 Memoria/(35916:35916): Eliminación de Proceso PID: 2
+[INFO] 19:00:52:597 Memoria/(35916:35916): Creación de Proceso PID: 3
+[INFO] 19:01:02:624 Memoria/(35916:35916): Eliminación de Proceso PID: 3
+[INFO] 19:01:35:445 Memoria/(35916:35916): Creación de Proceso PID: 4
+[INFO] 19:01:45:472 Memoria/(35916:35916): Eliminación de Proceso PID: 4
+[INFO] 19:02:04:741 Memoria/(35916:35916): Creación de Proceso PID: 5
+[INFO] 19:02:14:774 Memoria/(35916:35916): Eliminación de Proceso PID: 5
+[INFO] 19:02:22:039 Memoria/(35916:35916): Creación de Proceso PID: 6
+[INFO] 19:02:22:597 Memoria/(35916:35916): Creación de Proceso PID: 7
+[INFO] 19:02:23:134 Memoria/(35916:35916): Creación de Proceso PID: 8
+[INFO] 19:02:23:615 Memoria/(35916:35916): Creación de Proceso PID: 9
+[INFO] 19:02:32:064 Memoria/(35916:35916): Eliminación de Proceso PID: 6
+[INFO] 19:02:42:090 Memoria/(35916:35916): Eliminación de Proceso PID: 7
+[INFO] 19:02:52:111 Memoria/(35916:35916): Eliminación de Proceso PID: 8
+[INFO] 19:03:02:142 Memoria/(35916:35916): Eliminación de Proceso PID: 9
+[INFO] 19:34:39:163 Memoria/(36966:36966): Creación de Proceso PID: 1
+[INFO] 19:34:49:273 Memoria/(36966:36966): Eliminación de Proceso PID: 1
+[INFO] 19:35:03:635 Memoria/(36966:36966): Creación de Proceso PID: 2
+[INFO] 19:35:03:652 Memoria/(36966:36966): Eliminación de Proceso PID: 2
+[INFO] 19:35:14:916 Memoria/(36966:36966): Creación de Proceso PID: 3
+[INFO] 19:35:20:944 Memoria/(36966:36966): Eliminación de Proceso PID: 3
+[INFO] 20:06:50:799 Memoria/(37554:37554): Creación de Proceso PID: 1
+[INFO] 20:06:57:208 Memoria/(37554:37554): Eliminación de Proceso PID: 1
+[INFO] 20:07:20:292 Memoria/(38104:38104): Creación de Proceso PID: 1
+[INFO] 20:07:26:426 Memoria/(38104:38104): Eliminación de Proceso PID: 1
+[INFO] 20:10:46:768 Memoria/(38269:38269): Creación de Proceso PID: 1
+[INFO] 20:10:52:874 Memoria/(38269:38269): Eliminación de Proceso PID: 1
+[INFO] 20:12:03:949 Memoria/(38269:38269): Creación de Proceso PID: 2
+[INFO] 20:12:09:978 Memoria/(38269:38269): Eliminación de Proceso PID: 2
+[INFO] 20:19:27:172 Memoria/(38269:38269): Creación de Proceso PID: 3
+[INFO] 20:19:33:218 Memoria/(38269:38269): Eliminación de Proceso PID: 3
+[INFO] 20:20:09:702 Memoria/(38831:38831): Creación de Proceso PID: 1
+[INFO] 20:20:15:809 Memoria/(38831:38831): Eliminación de Proceso PID: 1
+[INFO] 20:20:21:750 Memoria/(38831:38831): Creación de Proceso PID: 2
+[INFO] 20:20:21:767 Memoria/(38831:38831): Eliminación de Proceso PID: 2
+[INFO] 20:20:31:607 Memoria/(38831:38831): Creación de Proceso PID: 3
+[INFO] 20:20:31:618 Memoria/(38831:38831): PID: 3 - Crear Segmento: 1 - Base: 128 - TAMAÑO: 40
+[INFO] 20:20:31:637 Memoria/(38831:38831): PID: 3 - Crear Segmento: 2 - Base: 168 - TAMAÑO: 20
+[INFO] 20:20:31:644 Memoria/(38831:38831): PID: 3 - Crear Segmento: 3 - Base: 188 - TAMAÑO: 40
+[INFO] 20:20:31:650 Memoria/(38831:38831): PID: 3 - Eliminar Segmento: 2 - Base: 168 - TAMAÑO: 20
+[INFO] 20:20:31:667 Memoria/(38831:38831): Solicitud de Compactación
+[INFO] 20:20:31:670 Memoria/(38831:38831): PID: 3 - Segmento: 0 - Base: 0 - Tamaño 128
+[INFO] 20:20:31:670 Memoria/(38831:38831): PID: 3 - Segmento: 1 - Base: 128 - Tamaño 40
+[INFO] 20:20:31:670 Memoria/(38831:38831): PID: 3 - Segmento: 3 - Base: 168 - Tamaño 40
+[INFO] 20:20:33:684 Memoria/(38831:38831): PID: 3 - Crear Segmento: 4 - Base: 208 - TAMAÑO: 40
+[INFO] 20:20:33:689 Memoria/(38831:38831): Eliminación de Proceso PID: 3
+[INFO] 20:21:41:831 Memoria/(38861:38861): Creación de Proceso PID: 1
+[INFO] 20:21:41:832 Memoria/(38861:38861): PID: 1 - Crear Segmento: 1 - Base: 128 - TAMAÑO: 40
+[INFO] 20:21:41:832 Memoria/(38861:38861): PID: 1 - Crear Segmento: 2 - Base: 168 - TAMAÑO: 20
+[INFO] 20:21:41:832 Memoria/(38861:38861): PID: 1 - Crear Segmento: 3 - Base: 188 - TAMAÑO: 40
+[INFO] 20:21:41:833 Memoria/(38861:38861): PID: 1 - Eliminar Segmento: 2 - Base: 168 - TAMAÑO: 20
+[INFO] 20:21:41:833 Memoria/(38861:38861): Solicitud de Compactación
+[INFO] 20:21:41:833 Memoria/(38861:38861): PID: 1 - Segmento: 0 - Base: 0 - Tamaño 128
+[INFO] 20:21:41:833 Memoria/(38861:38861): PID: 1 - Segmento: 1 - Base: 128 - Tamaño 40
+[INFO] 20:21:41:833 Memoria/(38861:38861): PID: 1 - Segmento: 3 - Base: 168 - Tamaño 40
+[INFO] 20:21:43:834 Memoria/(38861:38861): PID: 1 - Crear Segmento: 4 - Base: 208 - TAMAÑO: 40
+[INFO] 20:21:43:835 Memoria/(38861:38861): Eliminación de Proceso PID: 1

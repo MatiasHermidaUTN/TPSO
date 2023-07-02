@@ -22,11 +22,7 @@ t_dictionary* crear_diccionario_instrucciones(){
 }
 
 void agregar_a_diccionario(t_dictionary* diccionario, char* key, int elemento){
-	int* elemento_a_agreagar = malloc(sizeof(elemento));
-	*elemento_a_agreagar = elemento;
-	dictionary_put(diccionario, key, elemento_a_agreagar);
-}
-
-void destruir_diccionario(int* cantParametros){
-	free(cantParametros);
+	int* elemento_a_agregar = malloc(sizeof(elemento));
+	*elemento_a_agregar = elemento;
+	dictionary_put(diccionario, key, elemento_a_agregar);
 }

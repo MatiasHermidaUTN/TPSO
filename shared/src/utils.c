@@ -91,7 +91,7 @@ t_log* iniciar_logger(char* path, char* nombre) {
 	t_log* nuevo_logger = log_create(path, nombre, 1, LOG_LEVEL_INFO);
 
 	if(!nuevo_logger) {
-		printf("No se pudo crear un logger.");
+		printf("No se pudo crear un logger.\n");
 		exit(EXIT_FAILURE);
 	}
 
@@ -196,11 +196,9 @@ void* serializar_pcb(t_pcb* pcb, size_t* size_total, t_msj_kernel_cpu op_code, c
 	size_t size_payload = tamanio_payload_pcb(pcb);
 	*size_total = sizeof(t_msj_kernel_cpu);
 
-	if(string_array_size(parametros_de_instruccion)) { //Si hay algun parametro
-		*size_total += sizeof(size_t); //Cantidad de parametros
-		for(int i = 0; i < string_array_size(parametros_de_instruccion); i++) {
-			*size_total += sizeof(size_t) + strlen(parametros_de_instruccion[i]) + 1; //Tamanio de parametro + longitud de parametro
-		}
+	*size_total += sizeof(size_t); //Cantidad de parametros
+	for(int i = 0; i < string_array_size(parametros_de_instruccion); i++) {
+		*size_total += sizeof(size_t) + strlen(parametros_de_instruccion[i]) + 1; //Tamanio de parametro + longitud de parametro
 	}
 
 	*size_total += sizeof(size_t) + size_payload;
@@ -208,33 +206,45 @@ void* serializar_pcb(t_pcb* pcb, size_t* size_total, t_msj_kernel_cpu op_code, c
 	void* stream_pcb = malloc(*size_total);
 	int desplazamiento = 0;
 
-	//* memcpy código de operación y tamanio de Payload *//
+	////////////////////////////////
+	// memcpy código de operación //
+	////////////////////////////////
 
     memcpy(stream_pcb + desplazamiento, &(op_code), sizeof(op_code));
     desplazamiento += sizeof(op_code);
 
-    if(string_array_size(parametros_de_instruccion)) { //Si hay algun parametro
-    	size_t cantidad_de_parametros = string_array_size(parametros_de_instruccion);
-    	memcpy(stream_pcb + desplazamiento, &(cantidad_de_parametros), sizeof(cantidad_de_parametros));
-    	desplazamiento += sizeof(cantidad_de_parametros);
+    ///////////////////////
+    // memcpy parámetros //
+    ///////////////////////
 
-    	size_t size_parametro_de_instruccion;
-    	for(int i = 0; i < cantidad_de_parametros; i++) {
-    		size_parametro_de_instruccion = strlen(parametros_de_instruccion[i]) + 1;
-			memcpy(stream_pcb + desplazamiento, &(size_parametro_de_instruccion), sizeof(size_parametro_de_instruccion));
-			desplazamiento += sizeof(size_parametro_de_instruccion);
+    //Para esto no hace falta deserializar en recibir_pcb, ya que esto lo hace la funcion recibir_parametro_de_instruccion
 
-			memcpy(stream_pcb + desplazamiento, parametros_de_instruccion[i], size_parametro_de_instruccion);
-			desplazamiento += size_parametro_de_instruccion;
-    	}
+    size_t cantidad_de_parametros = string_array_size(parametros_de_instruccion);
+    memcpy(stream_pcb + desplazamiento, &(cantidad_de_parametros), sizeof(cantidad_de_parametros));
+    desplazamiento += sizeof(cantidad_de_parametros);
 
-    	//string_array_destroy(parametros_de_instruccion);
-    } //Para esto no hace falta deserializar en recibir_pcb, ya que esto lo hace la funcion recibir_parametro_de_instruccion
+   	size_t size_parametro_de_instruccion;
+   	for(int i = 0; i < cantidad_de_parametros; i++) {
+   		size_parametro_de_instruccion = strlen(parametros_de_instruccion[i]) + 1;
+		memcpy(stream_pcb + desplazamiento, &(size_parametro_de_instruccion), sizeof(size_parametro_de_instruccion));
+		desplazamiento += sizeof(size_parametro_de_instruccion);
+
+		memcpy(stream_pcb + desplazamiento, parametros_de_instruccion[i], size_parametro_de_instruccion);
+		desplazamiento += size_parametro_de_instruccion;
+   	}
+
+   	//string_array_destroy(parametros_de_instruccion);
+
+   	///////////////////////////////
+   	// memcpy tamanio de Payload //
+   	///////////////////////////////
 
     memcpy(stream_pcb + desplazamiento, &(size_payload), sizeof(size_payload));
     desplazamiento += sizeof(size_payload);
 
-	//* memcpy Payload *//
+    ////////////////////
+	// memcpy Payload //
+    ////////////////////
 
 	memcpy(stream_pcb + desplazamiento, &(pcb->pid), sizeof(pcb->pid));
 	desplazamiento += sizeof(pcb->pid);
@@ -502,57 +512,51 @@ t_pcb* deserializar_pcb(void* stream) {
 
 t_list* deserializar_instrucciones(void* a_recibir, size_t size_payload, int* desplazamiento) {
     t_list* instrucciones = list_create();
-    t_dictionary* diccionario_instrucciones = crear_diccionario_instrucciones();
 
-	while((*desplazamiento) < size_payload) {
+	while(*desplazamiento < size_payload) {
     	t_instruccion* instruccion = malloc(sizeof(t_instruccion));
 		size_t largo_nombre;
 
-		memcpy(&(largo_nombre), a_recibir + (*desplazamiento), sizeof(size_t));		//pongo size de nombre instruccion
-		(*desplazamiento) += sizeof(size_t);
-	    //printf("%d\n", (int)largo_nombre);
+		memcpy(&largo_nombre, a_recibir + *desplazamiento, sizeof(size_t));
+		*desplazamiento += sizeof(size_t);
 
 		instruccion->nombre = malloc(largo_nombre);
-		memcpy(instruccion->nombre, a_recibir + (*desplazamiento), largo_nombre);		//pongo nombre instruccion
-	    (*desplazamiento) += largo_nombre;
+		memcpy(instruccion->nombre, a_recibir + *desplazamiento, largo_nombre);
+	    *desplazamiento += largo_nombre;
 
-	    //***PARAMETROS***
 		instruccion->parametros = list_create();
 
-		deserializar_parametros(a_recibir, desplazamiento, instruccion, diccionario_instrucciones);
+		deserializar_parametros(a_recibir, desplazamiento, instruccion);
 
 		list_add(instrucciones, instruccion);
 	}
 
-    //printf("Los bytes recibidos en el stream son: %d\n", desplazamiento+(int)sizeof(op_code)+(int)sizeof(size_t));
-
-    dictionary_destroy_and_destroy_elements(diccionario_instrucciones, (void*)destruir_diccionario);
-
     return instrucciones;
 }
 
-void deserializar_parametros(void* a_recibir, int* desplazamiento, t_instruccion* instruccion, t_dictionary* diccionario_instrucciones) {
-	int* cantidad_de_parametros_esperados;
+void deserializar_parametros(void* a_recibir, int* desplazamiento, t_instruccion* instruccion) {
+    t_dictionary* diccionario_instrucciones = crear_diccionario_instrucciones();
+
 	if(!dictionary_has_key(diccionario_instrucciones, instruccion->nombre)) {
-		//log_error(logger, "No existe instruccion: %s , en el diccionario", instruccion->nombre);
 		printf("No existe instruccion: %s , en el diccionario", instruccion->nombre);
-		exit(-1);
+		exit(EXIT_FAILURE);
 	}
-	cantidad_de_parametros_esperados = (int*)dictionary_get(diccionario_instrucciones, instruccion->nombre);
+
+	int* cantidad_de_parametros_esperados = dictionary_get(diccionario_instrucciones, instruccion->nombre);
 
 	for(int j = 0; j < *cantidad_de_parametros_esperados; j++) {
-		char* parametro;
 		size_t largo_parametro;
+		memcpy(&largo_parametro, a_recibir + *desplazamiento, sizeof(size_t));
+		*desplazamiento += sizeof(size_t);
 
-		memcpy(&(largo_parametro), a_recibir + (*desplazamiento), sizeof(size_t));		//pongo size de nombre parametro
-		(*desplazamiento)+= sizeof(size_t);
-
-		parametro = malloc(largo_parametro);
-		memcpy(parametro, a_recibir + (*desplazamiento), largo_parametro);		//pongo nombre parametro
-		(*desplazamiento) += largo_parametro;
+		char* parametro = malloc(largo_parametro);
+		memcpy(parametro, a_recibir + *desplazamiento, largo_parametro);
+		*desplazamiento += largo_parametro;
 
 		list_add(instruccion->parametros, parametro);
     }
+
+    dictionary_destroy_and_destroy_elements(diccionario_instrucciones, (void*)free);
 }
 
 void memcpy_registros_deserializar(t_registros_cpu* registros_cpu, void* stream_pcb, int* desplazamiento) {

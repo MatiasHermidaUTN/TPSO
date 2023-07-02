@@ -6,24 +6,24 @@ void planificar_corto() {
 	char** parametros;
 
 	while(1) {
-		sem_wait(&sem_cant_ready); //entra solo si hay algun proceso en Ready, es una espera no activa
+		sem_wait(&sem_cant_ready); //Entra solo si hay algun proceso en Ready, es una espera no activa
 		pcb = obtener_proximo_a_ejecutar();
 
 	    //Comienza ejecucion
-		char** sin_parametros = string_array_new(); //hardcodeado nashe
+		char** sin_parametros = string_array_new(); //Hardcodeado nashe
 		enviar_pcb(socket_cpu, pcb, PCB_A_EJECUTAR, sin_parametros);
 		string_array_destroy(sin_parametros);
 		liberar_pcb(pcb);
 
 		t_msj_kernel_cpu respuesta = esperar_cpu();
 
+		parametros = recibir_parametros_de_instruccion();
+		pcb_recibido = recibir_pcb(socket_cpu);
+
 		switch(respuesta) {
 			case IO:
-				parametros = recibir_parametros_de_instruccion();
 				int tiempo_a_bloquear = atoi(parametros[0]);
-				string_array_destroy(parametros);
 
-				pcb_recibido = recibir_pcb(socket_cpu);
 				pcb_recibido->tiempo_real_ejecucion = time(NULL) - pcb_recibido->tiempo_inicial_ejecucion;
 				//Finaliza ejecucion
 
@@ -41,9 +41,6 @@ void planificar_corto() {
 				break;
 
 			case F_OPEN:
-				parametros = recibir_parametros_de_instruccion();
-				pcb_recibido = recibir_pcb(socket_cpu);
-
 				t_recurso* archivo_a_abrir = buscar_recurso(parametros[0], list_archivos);
 
 				t_archivo_abierto* archivo_abierto = malloc(sizeof(t_archivo_abierto));
@@ -51,11 +48,11 @@ void planificar_corto() {
 				archivo_abierto->posicion_actual = 0;
 				list_add(pcb_recibido->archivos_abiertos, archivo_abierto);
 
-				if(archivo_a_abrir) { //si el archivo esta abierto
+				if(archivo_a_abrir) { //Si el archivo esta abierto
 					bloquear_pcb_por_archivo(pcb_recibido, archivo_a_abrir->nombre);
 
 				}
-				else { //si no esta abierto
+				else { //Si no esta abierto
 					enviar_msj_con_parametros(socket_fileSystem, EXISTE_ARCHIVO, parametros);
 					sem_wait(&sem_respuesta_fs);
 
@@ -73,7 +70,7 @@ void planificar_corto() {
 						sem_wait(&sem_respuesta_fs);
 
 						if(respuesta_fs_global == EL_ARCHIVO_FUE_CREADO) {
-							log_warning(my_logger, "Se abrio el archivo"); //en realidad nunca va a fallar. Esto tendria que haberse hecho con un solo mensaje pero lo separaron en abrir y crear.
+							log_warning(my_logger, "Se abrio el archivo"); //En realidad nunca va a fallar. Esto tendria que haberse hecho con un solo mensaje pero lo separaron en abrir y crear.
 						}
 						else {
 							log_error(logger, "El File System no pudo crear el archivo");
@@ -88,29 +85,19 @@ void planificar_corto() {
 					mantener_pcb_en_exec(pcb_recibido);
 				}
 
-				string_array_destroy(parametros);
 				break;
 
 			case F_CLOSE:
-				parametros = recibir_parametros_de_instruccion();
-				pcb_recibido = recibir_pcb(socket_cpu);
-
 				cerrar_archivo(pcb_recibido, parametros[0]);
 
 				mantener_pcb_en_exec(pcb_recibido);
-
-				string_array_destroy(parametros);
 				break;
 
 			case F_SEEK:
-				parametros = recibir_parametros_de_instruccion();
-				pcb_recibido = recibir_pcb(socket_cpu);
 				t_archivo_abierto* archivo_a_modificar = buscar_archivo_en_pcb(pcb_recibido, parametros[0]);
 				archivo_a_modificar->posicion_actual = atoi(parametros[1]);
 
 				log_info(logger, "PID: %d - Actualizar puntero Archivo: %s - Puntero %d", pcb_recibido->pid, archivo_a_modificar->nombre_archivo, archivo_a_modificar->posicion_actual); //log obligatorio
-
-				string_array_destroy(parametros);
 
 				mantener_pcb_en_exec(pcb_recibido);
 				break;
@@ -134,14 +121,11 @@ void planificar_corto() {
 
 				pthread_mutex_lock(&mutex_cantidad_de_reads_writes);
 				if(!cantidad_de_reads_writes) {
-					sem_wait(&sem_compactacion); //solo avisa si habían 0 operaciones
+					sem_wait(&sem_compactacion); //Solo avisa si habían 0 operaciones
 				} //Solo sirve para que luego CREATE_SEGMENT tenga que hacer un wait y, si habían operaciones, se quede esperando a que finalicen
 				cantidad_de_reads_writes++;
 				pthread_mutex_unlock(&mutex_cantidad_de_reads_writes);
 
-
-				parametros = recibir_parametros_de_instruccion();
-				pcb_recibido = recibir_pcb(socket_cpu);
 
 				t_archivo_abierto* archivo = buscar_archivo_en_pcb(pcb_recibido, parametros[0]);
 
@@ -157,12 +141,9 @@ void planificar_corto() {
 				log_info(logger, "PID: %d - %s Archivo: %s - Puntero %d - Dirección Memoria %s - Tamaño %d", pcb_recibido->pid, accion, archivo->nombre_archivo, archivo->posicion_actual, parametros[1], cantidad_bytes); //log obligatorio
 
 				free(accion);
-				string_array_destroy(parametros);
 				break;
 
 			case F_TRUNCATE:
-				parametros = recibir_parametros_de_instruccion();
-				pcb_recibido = recibir_pcb(socket_cpu);
 				char* pid_a_enviar = string_itoa(pcb_recibido->pid);
 
 				string_array_push(&parametros, pid_a_enviar);
@@ -171,47 +152,31 @@ void planificar_corto() {
 				enviar_msj_con_parametros(socket_fileSystem, TRUNCAR_ARCHIVO, parametros);
 
 				log_info(logger, "PID: %d - Archivo: %s - Tamaño: %s", pcb_recibido->pid, parametros[0], parametros[1]); //log obligatorio
-
-				string_array_destroy(parametros);
 				break;
 
 			case WAIT:
-				parametros = recibir_parametros_de_instruccion();
 				//char* nombre_recurso_wait = string_array_pop(parametros); //TODO: fijarse si anda
 				char* nombre_recurso_wait = strdup(parametros[0]);
-				string_array_destroy(parametros);
 
-				pcb_recibido = recibir_pcb(socket_cpu);
 				wait_recurso(pcb_recibido, nombre_recurso_wait);
 
 				free(nombre_recurso_wait);
 				break;
 
 			case SIGNAL:
-				parametros = recibir_parametros_de_instruccion();
 				//char* nombre_recurso_signal = string_array_pop(parametros); //TODO: fijarse si anda
 				char* nombre_recurso_signal = strdup(parametros[0]);
-				string_array_destroy(parametros);
 
-				pcb_recibido = recibir_pcb(socket_cpu);
 				signal_recurso(pcb_recibido, nombre_recurso_signal, 0);
 				break;
 
 			case CREATE_SEGMENT:
-				parametros = recibir_parametros_de_instruccion();
-				pcb_recibido = recibir_pcb(socket_cpu);
 				string_array_push(&parametros, string_itoa(pcb_recibido->pid));
 
 				crear_segmento(pcb_recibido, parametros);
-
-				string_array_destroy(parametros);
-
 				break;
 
 			case DELETE_SEGMENT:
-				parametros = recibir_parametros_de_instruccion();
-				pcb_recibido = recibir_pcb(socket_cpu);
-
 				string_array_push(&parametros, string_itoa(pcb_recibido->pid));
 
 				pthread_mutex_lock(&mutex_msj_memoria);
@@ -229,41 +194,30 @@ void planificar_corto() {
 
 				log_info(logger, "PID: %d - Eliminar Segmento - Id Segmento: %s", pcb_recibido->pid, parametros[0]); //log obligatorio
 
-				string_array_destroy(parametros);
-
 				mantener_pcb_en_exec(pcb_recibido);
-
 				break;
 
 			case YIELD: //vuelve a ready
-				pcb_recibido = recibir_pcb(socket_cpu);
 				pcb_recibido->tiempo_real_ejecucion = time(NULL) - pcb_recibido->tiempo_inicial_ejecucion;
 				//Finaliza ejecucion
 
 				ready_list_push(pcb_recibido); //Aca calcula el S (proxima rafaga), actualizo el tiempo_llegada_ready y hago sem_post(&sem_cant_ready) (solo necesito pasarle el pcb, porque ya sé que es en Ready)
-
 				break;
 
 			case EXIT:
-				pcb_recibido = recibir_pcb(socket_cpu);
 				exit_proceso(pcb_recibido, SUCCESS); //Aca hace el sem_post(&sem_multiprogramacion)
 				break;
 
 			case EXIT_CON_SEG_FAULT:
-				parametros = recibir_parametros_de_instruccion(); //Solo los recibe para liberarlos
-				pcb_recibido = recibir_pcb(socket_cpu);
-
-				cerrar_todos_los_archivos(pcb_recibido);
-
 				exit_proceso(pcb_recibido, SEG_FAULT); //Aca hace el sem_post(&sem_multiprogramacion)
-
-				string_array_destroy(parametros);
 				break;
 
 			default:
 				log_error(logger, "Error en la comunicacion entre el Kernel y la CPU");
 				exit(EXIT_FAILURE);
 		}
+
+		string_array_destroy(parametros);
 	}
 }
 
@@ -328,7 +282,7 @@ void manejar_io(t_args_io* args) {
 void wait_recurso(t_pcb* pcb, char* nombre_recurso) {
 	t_recurso* recurso = buscar_recurso(nombre_recurso,list_recursos);
 
-	if(recurso) { //Existe el recurso
+	if(recurso) { //Si existe el recurso
 		recurso->cantidad_disponibles--;
 		log_info(logger, "PID: %d - Wait: %s - Instancias: %d", pcb->pid, nombre_recurso, recurso->cantidad_disponibles); //log obligatorio
 
@@ -379,7 +333,7 @@ void signal_recurso(t_pcb* pcb, char* nombre_recurso, int esta_en_exit) {
 			ready_list_push(pcb_a_desbloquear); //hace el sem_post(&sem_cant_ready)
 		}
 
-		if(!esta_en_exit) {
+		if(!esta_en_exit) { //Para que no lo vuelva a meter en READY si pasó a EXIT
 			mantener_pcb_en_exec(pcb);
 		}
 	}
@@ -395,7 +349,7 @@ void eliminar_recurso_de_lista(t_list* recursos, char* nombre_recurso, int esta_
 	for(int i = 0; i < list_size(recursos); i++) {
 		if(!strcmp(list_get(recursos, i), nombre_recurso)) {
 			char* recurso = list_remove(recursos, i);
-			if(!esta_en_exit) {
+			if(!esta_en_exit) { //Para que no lo libere así nomás cuando pasa a EXIT, sino que se libere con la lista entera al hacer liberar_pcb
 				free(recurso);
 			}
 			break;
@@ -405,6 +359,7 @@ void eliminar_recurso_de_lista(t_list* recursos, char* nombre_recurso, int esta_
 
 void exit_proceso(t_pcb* pcb, t_msj_kernel_consola mensaje) {
 	signal_de_todos_los_recursos(pcb);
+	cerrar_todos_los_archivos(pcb);
 
 	enviar_msj(pcb->socket_consola, mensaje);
 
@@ -454,10 +409,12 @@ void list_remove_pcb(t_list* lista, t_pcb* pcb_en_lista) {
 
 void cerrar_archivo(t_pcb* pcb_recibido, char* nombre_archivo) {
 	//Elimina al archivo de la lista de archivos abiertos del pcb
-	eliminar_archivo(pcb_recibido, nombre_archivo);
+	t_archivo_abierto* archivo_a_eliminar = eliminar_archivo(pcb_recibido, nombre_archivo); //Para poder libeerarlo después de usarlo
 
 	t_recurso* archivo_a_cerrar = buscar_recurso(nombre_archivo, list_archivos);
 	archivo_a_cerrar->cantidad_disponibles++;
+
+	destruir_archivo_abierto(archivo_a_eliminar);
 
 	log_info(logger, "PID: %d - Cerrar Archivo: %s", pcb_recibido->pid, archivo_a_cerrar->nombre); //log obligatorio
 
@@ -488,15 +445,16 @@ void cerrar_todos_los_archivos(t_pcb* pcb) {
 	}
 }
 
-void eliminar_archivo(t_pcb *pcb, char* nombre) {
+t_archivo_abierto* eliminar_archivo(t_pcb* pcb, char* nombre) {
 	t_archivo_abierto* archivo_a_eliminar;
 	for(int i = 0; i < list_size(pcb->archivos_abiertos); i++) {
 		archivo_a_eliminar = list_get(pcb->archivos_abiertos, i);
 		if(!strcmp(archivo_a_eliminar->nombre_archivo, nombre)) {
-			list_remove(pcb->archivos_abiertos, i);
-			destruir_archivo_abierto(archivo_a_eliminar);
+			return list_remove(pcb->archivos_abiertos, i);
 		}
 	}
+
+	return NULL; //No debería llegar acá
 }
 
 void list_remove_recurso(t_list* lista, t_recurso* recurso) {

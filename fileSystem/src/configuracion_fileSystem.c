@@ -47,7 +47,7 @@ void init_bitmap() {
 	bitmap_pointer = mmap(NULL, tamanioBitmap, PROT_READ | PROT_WRITE, MAP_SHARED, fd_bitmap, 0);
 	bitarray_de_bitmap = bitarray_create_with_mode((char*) bitmap_pointer, tamanioBitmap, MSB_FIRST);
 	close(fd_bitmap);
-	log_warning(logger, "Bitmap abierto");
+	log_warning(my_logger, "Bitmap abierto");
 }
 
 void init_bloques() {
