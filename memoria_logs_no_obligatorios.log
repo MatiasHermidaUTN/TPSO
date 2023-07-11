@@ -233,3 +233,7 @@
 [WARNING] 20:21:32:223 Memoria/(38861:38869): File System se conecto a Memoria
 [WARNING] 20:21:35:291 Memoria/(38861:38872): Kernel se conecto a Memoria
 [WARNING] 20:21:41:833 Memoria/(38861:38861): Hay que compactar
+[WARNING] 16:00:01:414 Memoria/(3409:3409): Memoria lista para recibir al cliente
+[WARNING] 16:00:10:133 Memoria/(3409:3414): File System se conecto a Memoria
+[WARNING] 16:00:33:393 Memoria/(3409:3418): CPU se conecto a Memoria
+[WARNING] 16:00:40:325 Memoria/(3409:3421): Kernel se conecto a Memoria
