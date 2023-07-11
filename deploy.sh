@@ -1,5 +1,5 @@
 git clone https://github.com/sisoputnfrba/so-commons-library.git
-cd so-commons-library.git
+cd ../so-commons-library.git
 make debug
 make install
 cd ..
