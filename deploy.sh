@@ -8,9 +8,9 @@ cd tp-2023-1c-Los-Matias/shared/Debug
 make clean
 make all
 sudo cp libshared.so ../../../../../usr/local/lib/
+cd ../../
 ./compilar_modulo.sh memoria
 ./compilar_modulo.sh fileSystem
 ./compilar_modulo.sh cpu
 ./compilar_modulo.sh kernel
 ./compilar_modulo.sh consola
-cd ../../
