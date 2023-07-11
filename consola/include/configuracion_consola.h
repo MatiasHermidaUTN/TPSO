@@ -9,6 +9,7 @@
 typedef struct consola_config {
     char* IP_KERNEL;
     char* PUERTO_KERNEL;
+    char* IP_CONSOLA;
 } t_consola_config;
 
 extern int socket_kernel;

@@ -13,6 +13,7 @@ typedef struct fileSystem_config {
 	char* PATH_BLOQUES;
 	char* PATH_FCB;
 	char* RETARDO_ACCESO_BLOQUE;
+	char* IP_FILESYSTEM;
 } t_fileSystem_config;
 
 extern t_fileSystem_config lectura_de_config;

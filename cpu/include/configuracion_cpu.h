@@ -13,6 +13,7 @@ typedef struct cpu_config {
     int RETARDO_INSTRUCCION;
     char* PUERTO_ESCUCHA;
     int TAM_MAX_SEGMENTO;
+    char* IP_CPU;
 } t_cpu_config;
 
 extern int socket_kernel;

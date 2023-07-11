@@ -22,7 +22,7 @@ int main(int argc, char** argv) {
 	pthread_mutex_init(&mutex_cola_msj, NULL);
 
 	//CREO SERVIDOR Y ESPERO CLIENTES
-    socket_memoria = iniciar_servidor("127.0.0.1", lectura_de_config.PUERTO_ESCUCHA); 
+    socket_memoria = iniciar_servidor(lectura_de_config.IP_MEMORIA, lectura_de_config.PUERTO_ESCUCHA);
 	log_warning(logger_no_obligatorio, "Memoria lista para recibir al cliente");
 	for(int i = 0 ; i<3 ; ){		//3 pq hay que aceptar 1 de cada: Kernel, CPU y FileSystem
 		i += recibir_conexiones(socket_memoria, logger); //Recibe conexiones (es bloqueante) y crea hilos para manejarlas, devuelve 1 con cada conexion recibida

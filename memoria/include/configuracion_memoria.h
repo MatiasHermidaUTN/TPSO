@@ -19,6 +19,7 @@ typedef struct memoria_config {
     char* RETARDO_MEMORIA;
     char* RETARDO_COMPACTACION;
     char* ALGORITMO_ASIGNACION;
+    char* IP_MEMORIA;
 } t_memoria_config;
 
 extern t_memoria_config lectura_de_config;

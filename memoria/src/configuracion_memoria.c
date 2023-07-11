@@ -24,6 +24,7 @@ void leer_memoria_config(t_config* config) {
 	lectura_de_config.RETARDO_MEMORIA	   = strdup(config_get_string_value(config, "RETARDO_MEMORIA"));
 	lectura_de_config.RETARDO_COMPACTACION = strdup(config_get_string_value(config, "RETARDO_COMPACTACION"));
 	lectura_de_config.ALGORITMO_ASIGNACION = strdup(config_get_string_value(config, "ALGORITMO_ASIGNACION"));
+	lectura_de_config.IP_MEMORIA = strdup(config_get_string_value(config, "IP_MEMORIA"));
 
     return;
 }
@@ -36,4 +37,5 @@ void liberar_estructura_config() {
 	free(lectura_de_config.RETARDO_MEMORIA);
 	free(lectura_de_config.RETARDO_COMPACTACION);
 	free(lectura_de_config.ALGORITMO_ASIGNACION);
+	free(lectura_de_config.IP_MEMORIA);
 }

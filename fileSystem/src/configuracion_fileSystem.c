@@ -12,6 +12,7 @@ t_fileSystem_config leer_fileSystem_config(t_config* config) {
 	lectura_de_config.PATH_BLOQUES          = config_get_string_value(config, "PATH_BLOQUES");
 	lectura_de_config.PATH_FCB              = config_get_string_value(config, "PATH_FCB");
 	lectura_de_config.RETARDO_ACCESO_BLOQUE = config_get_string_value(config, "RETARDO_ACCESO_BLOQUE");
+	lectura_de_config.IP_FILESYSTEM 		= config_get_string_value(config, "IP_FILESYSTEM");
 
 	return lectura_de_config;
 }
