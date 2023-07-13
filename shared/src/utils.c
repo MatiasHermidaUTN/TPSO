@@ -892,7 +892,7 @@ void* serializar_procesos_con_segmentos(t_list* procesos_actualizados, size_t* s
 		desplazamiento += sizeof(cantidad_segmentos);
 
 		for(int j = 0; j < cantidad_segmentos; j++) {
-			segmento = list_get(proceso->tabla_segmentos, i);
+			segmento = list_get(proceso->tabla_segmentos, j);
 
 			memcpy(stream + desplazamiento, &(segmento->id), sizeof(segmento->id));
 			desplazamiento += sizeof(segmento->id);

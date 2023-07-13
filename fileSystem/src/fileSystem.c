@@ -56,7 +56,7 @@ int main(int argc, char** argv) {
 }
 
 //comunicaciones
-char* leer_de_memoria(int dir_fisica_memoria, int cuanto_X){
+char* leer_de_memoria(int dir_fisica_memoria, int cuanto_X, char* pid){
 	char ** parametros_a_enviar = string_array_new();
 
 	char* s_aux = string_itoa(dir_fisica_memoria);
@@ -64,6 +64,8 @@ char* leer_de_memoria(int dir_fisica_memoria, int cuanto_X){
 
 	char* s_aux2 = string_itoa(cuanto_X);
 	string_array_push(&parametros_a_enviar, s_aux2);
+
+	string_array_push(&parametros_a_enviar, pid);
 
 	enviar_msj_con_parametros(socket_memoria, LEER_VALOR, parametros_a_enviar);
 
@@ -74,7 +76,7 @@ char* leer_de_memoria(int dir_fisica_memoria, int cuanto_X){
 
 
 	if(mensaje->cod_op != LEIDO_OK){
-		//kaboom??? TODO
+		log_error(logger,"No se leyo bien %d",mensaje->cod_op);
 	}
 		
 	mensaje->parametros = recibir_parametros_de_mensaje(socket_memoria);
@@ -87,11 +89,12 @@ char* leer_de_memoria(int dir_fisica_memoria, int cuanto_X){
 	return buffer;
 }
 
-void escribir_en_memoria(int dir_fisica_memoria, int cuanto_X, char* buffer){
+void escribir_en_memoria(int dir_fisica_memoria, int cuanto_X, char* buffer, char* pid){
 	char** parametros_a_enviar = string_array_new();
 	
 	char* s_aux = string_itoa(dir_fisica_memoria);
 	string_array_push(&parametros_a_enviar, s_aux);
+	string_array_push(&parametros_a_enviar, pid);
 
 	memcpy(buffer + cuanto_X, "\0", 1); //agrega el /0 al final del buffer
 

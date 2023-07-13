@@ -5618,3 +5618,471 @@
 [INFO] 06:00:07:745 Consola/(2483:2483): Puerto KERNEL: 8000
 [INFO] 06:00:12:119 Consola/(2479:2479): Proceso terminado exitosamente
 [INFO] 06:00:12:128 Consola/(2483:2483): Proceso terminado exitosamente
+[WARNING] 00:51:52:998 Consola/(6388:6388): IP Kernel: 127.0.0.1
+[WARNING] 00:51:52:998 Consola/(6388:6388): Puerto Kernel: 8000
+[WARNING] 00:51:53:550 Consola/(6391:6391): IP Kernel: 127.0.0.1
+[WARNING] 00:51:53:550 Consola/(6391:6391): Puerto Kernel: 8000
+[WARNING] 00:51:54:222 Consola/(6394:6394): IP Kernel: 127.0.0.1
+[WARNING] 00:51:54:223 Consola/(6394:6394): Puerto Kernel: 8000
+[INFO] 00:52:11:014 Consola/(6388:6388): Proceso terminado exitosamente
+[INFO] 00:52:38:035 Consola/(6391:6391): Proceso terminado exitosamente
+[INFO] 00:52:39:037 Consola/(6394:6394): Proceso terminado exitosamente
+[WARNING] 00:54:33:992 Consola/(6622:6622): IP Kernel: 127.0.0.1
+[WARNING] 00:54:33:994 Consola/(6622:6622): Puerto Kernel: 8000
+[WARNING] 00:54:34:475 Consola/(6625:6625): IP Kernel: 127.0.0.1
+[WARNING] 00:54:34:475 Consola/(6625:6625): Puerto Kernel: 8000
+[WARNING] 00:54:35:196 Consola/(6628:6628): IP Kernel: 127.0.0.1
+[WARNING] 00:54:35:197 Consola/(6628:6628): Puerto Kernel: 8000
+[INFO] 00:54:56:014 Consola/(6622:6622): Proceso terminado exitosamente
+[INFO] 00:55:19:035 Consola/(6625:6625): Proceso terminado exitosamente
+[INFO] 00:55:20:037 Consola/(6628:6628): Proceso terminado exitosamente
+[WARNING] 01:32:28:789 Consola/(6925:6925): IP Kernel: 127.0.0.1
+[WARNING] 01:32:28:790 Consola/(6925:6925): Puerto Kernel: 8000
+[WARNING] 01:32:29:169 Consola/(6929:6929): IP Kernel: 127.0.0.1
+[WARNING] 01:32:29:171 Consola/(6929:6929): Puerto Kernel: 8000
+[INFO] 01:32:29:173 Consola/(6929:6929): Proceso terminado exitosamente
+[WARNING] 01:32:29:667 Consola/(6932:6932): IP Kernel: 127.0.0.1
+[WARNING] 01:32:29:668 Consola/(6932:6932): Puerto Kernel: 8000
+[INFO] 01:32:29:669 Consola/(6932:6932): Proceso terminado exitosamente
+[INFO] 01:32:38:796 Consola/(6925:6925): Proceso terminado exitosamente
+[WARNING] 01:35:26:979 Consola/(7247:7247): IP Kernel: 127.0.0.1
+[WARNING] 01:35:26:981 Consola/(7247:7247): Puerto Kernel: 8000
+[WARNING] 01:35:27:526 Consola/(7251:7251): IP Kernel: 127.0.0.1
+[WARNING] 01:35:27:526 Consola/(7251:7251): Puerto Kernel: 8000
+[WARNING] 01:35:28:104 Consola/(7255:7255): IP Kernel: 127.0.0.1
+[WARNING] 01:35:28:106 Consola/(7255:7255): Puerto Kernel: 8000
+[WARNING] 01:36:58:589 Consola/(7259:7259): IP Kernel: 127.0.0.1
+[WARNING] 01:36:58:589 Consola/(7259:7259): Puerto Kernel: 8000
+[ERROR] 01:37:33:006 Consola/(7255:7255): Hubo un error en el proceso
+[ERROR] 01:37:33:006 Consola/(7251:7251): Hubo un error en el proceso
+[ERROR] 01:37:33:006 Consola/(7247:7247): Hubo un error en el proceso
+[ERROR] 01:37:33:006 Consola/(7259:7259): Hubo un error en el proceso
+[WARNING] 01:45:22:260 Consola/(7491:7491): IP Kernel: 127.0.0.1
+[WARNING] 01:45:22:260 Consola/(7491:7491): Puerto Kernel: 8000
+[WARNING] 01:45:22:771 Consola/(7494:7494): IP Kernel: 127.0.0.1
+[WARNING] 01:45:22:772 Consola/(7494:7494): Puerto Kernel: 8000
+[WARNING] 01:45:23:286 Consola/(7497:7497): IP Kernel: 127.0.0.1
+[WARNING] 01:45:23:286 Consola/(7497:7497): Puerto Kernel: 8000
+[INFO] 01:45:44:299 Consola/(7497:7497): Proceso terminado exitosamente
+[INFO] 01:45:44:300 Consola/(7491:7491): Proceso terminado exitosamente
+[ERROR] 01:45:44:656 Consola/(7494:7494): Hubo un error en el proceso
+[WARNING] 01:49:20:638 Consola/(7604:7604): IP Kernel: 127.0.0.1
+[WARNING] 01:49:20:638 Consola/(7604:7604): Puerto Kernel: 8000
+[ERROR] 01:49:49:671 Consola/(7604:7604): Hubo un error en el proceso
+[WARNING] 01:50:41:566 Consola/(7654:7654): IP Kernel: 127.0.0.1
+[WARNING] 01:50:41:566 Consola/(7654:7654): Puerto Kernel: 8000
+[WARNING] 01:51:02:982 Consola/(7658:7658): IP Kernel: 127.0.0.1
+[WARNING] 01:51:02:983 Consola/(7658:7658): Puerto Kernel: 8000
+[ERROR] 01:58:25:593 Consola/(7654:7654): Hubo un error en el proceso
+[ERROR] 01:58:25:607 Consola/(7658:7658): Hubo un error en el proceso
+[WARNING] 01:58:41:942 Consola/(7902:7902): IP Kernel: 127.0.0.1
+[WARNING] 01:58:41:942 Consola/(7902:7902): Puerto Kernel: 8000
+[WARNING] 01:58:43:469 Consola/(7905:7905): IP Kernel: 127.0.0.1
+[WARNING] 01:58:43:470 Consola/(7905:7905): Puerto Kernel: 8000
+[ERROR] 02:14:50:947 Consola/(7905:7905): Hubo un error en el proceso
+[ERROR] 02:14:50:947 Consola/(7902:7902): Hubo un error en el proceso
+[WARNING] 02:15:33:419 Consola/(8086:8086): IP Kernel: 127.0.0.1
+[WARNING] 02:15:33:420 Consola/(8086:8086): Puerto Kernel: 8000
+[WARNING] 02:15:35:795 Consola/(8089:8089): IP Kernel: 127.0.0.1
+[WARNING] 02:15:35:796 Consola/(8089:8089): Puerto Kernel: 8000
+[WARNING] 02:16:00:169 Consola/(8092:8092): IP Kernel: 127.0.0.1
+[WARNING] 02:16:00:170 Consola/(8092:8092): Puerto Kernel: 8000
+[INFO] 02:16:06:181 Consola/(8092:8092): Proceso terminado exitosamente
+[INFO] 02:16:06:182 Consola/(8086:8086): Proceso terminado exitosamente
+[ERROR] 02:16:07:006 Consola/(8089:8089): Hubo un error en el proceso
+[WARNING] 02:22:02:208 Consola/(8375:8375): IP Kernel: 127.0.0.1
+[WARNING] 02:22:02:209 Consola/(8375:8375): Puerto Kernel: 8000
+[WARNING] 02:22:03:350 Consola/(8378:8378): IP Kernel: 127.0.0.1
+[WARNING] 02:22:03:350 Consola/(8378:8378): Puerto Kernel: 8000
+[WARNING] 02:22:05:171 Consola/(8381:8381): IP Kernel: 127.0.0.1
+[WARNING] 02:22:05:172 Consola/(8381:8381): Puerto Kernel: 8000
+[INFO] 02:22:24:267 Consola/(8381:8381): Proceso terminado exitosamente
+[INFO] 02:22:24:270 Consola/(8375:8375): Proceso terminado exitosamente
+[ERROR] 02:22:24:715 Consola/(8378:8378): Hubo un error en el proceso
+[WARNING] 02:26:28:311 Consola/(8471:8471): IP Kernel: 127.0.0.1
+[WARNING] 02:26:28:312 Consola/(8471:8471): Puerto Kernel: 8000
+[WARNING] 02:26:29:190 Consola/(8474:8474): IP Kernel: 127.0.0.1
+[WARNING] 02:26:29:190 Consola/(8474:8474): Puerto Kernel: 8000
+[WARNING] 02:26:30:409 Consola/(8477:8477): IP Kernel: 127.0.0.1
+[WARNING] 02:26:30:409 Consola/(8477:8477): Puerto Kernel: 8000
+[INFO] 02:26:51:027 Consola/(8477:8477): Proceso terminado exitosamente
+[INFO] 02:26:51:037 Consola/(8471:8471): Proceso terminado exitosamente
+[INFO] 02:26:51:069 Consola/(8474:8474): Proceso terminado exitosamente
+[WARNING] 02:43:40:570 Consola/(8865:8865): IP Kernel: 127.0.0.1
+[WARNING] 02:43:40:571 Consola/(8865:8865): Puerto Kernel: 8000
+[WARNING] 02:43:41:820 Consola/(8868:8868): IP Kernel: 127.0.0.1
+[WARNING] 02:43:41:821 Consola/(8868:8868): Puerto Kernel: 8000
+[WARNING] 02:43:43:158 Consola/(8871:8871): IP Kernel: 127.0.0.1
+[WARNING] 02:43:43:158 Consola/(8871:8871): Puerto Kernel: 8000
+[INFO] 02:44:04:208 Consola/(8871:8871): Proceso terminado exitosamente
+[INFO] 02:44:04:221 Consola/(8865:8865): Proceso terminado exitosamente
+[INFO] 02:44:04:242 Consola/(8868:8868): Proceso terminado exitosamente
+[WARNING] 02:49:32:220 Consola/(9010:9010): IP Kernel: 127.0.0.1
+[WARNING] 02:49:32:221 Consola/(9010:9010): Puerto Kernel: 8000
+[WARNING] 02:49:33:204 Consola/(9013:9013): IP Kernel: 127.0.0.1
+[WARNING] 02:49:33:204 Consola/(9013:9013): Puerto Kernel: 8000
+[WARNING] 02:49:34:165 Consola/(9016:9016): IP Kernel: 127.0.0.1
+[WARNING] 02:49:34:165 Consola/(9016:9016): Puerto Kernel: 8000
+[INFO] 02:49:54:981 Consola/(9016:9016): Proceso terminado exitosamente
+[INFO] 02:49:54:994 Consola/(9010:9010): Proceso terminado exitosamente
+[INFO] 02:49:55:032 Consola/(9013:9013): Proceso terminado exitosamente
+[WARNING] 02:59:02:463 Consola/(9316:9316): IP Kernel: 127.0.0.1
+[WARNING] 02:59:02:465 Consola/(9316:9316): Puerto Kernel: 8000
+[WARNING] 02:59:04:118 Consola/(9319:9319): IP Kernel: 127.0.0.1
+[WARNING] 02:59:04:118 Consola/(9319:9319): Puerto Kernel: 8000
+[WARNING] 02:59:04:782 Consola/(9322:9322): IP Kernel: 127.0.0.1
+[WARNING] 02:59:04:786 Consola/(9322:9322): Puerto Kernel: 8000
+[INFO] 02:59:25:271 Consola/(9322:9322): Proceso terminado exitosamente
+[INFO] 02:59:25:291 Consola/(9316:9316): Proceso terminado exitosamente
+[INFO] 02:59:25:307 Consola/(9319:9319): Proceso terminado exitosamente
+[WARNING] 03:04:33:314 Consola/(9658:9658): IP Kernel: 127.0.0.1
+[WARNING] 03:04:33:316 Consola/(9658:9658): Puerto Kernel: 8000
+[WARNING] 03:04:34:055 Consola/(9661:9661): IP Kernel: 127.0.0.1
+[WARNING] 03:04:34:056 Consola/(9661:9661): Puerto Kernel: 8000
+[WARNING] 03:04:35:060 Consola/(9664:9664): IP Kernel: 127.0.0.1
+[WARNING] 03:04:35:060 Consola/(9664:9664): Puerto Kernel: 8000
+[INFO] 03:04:56:224 Consola/(9664:9664): Proceso terminado exitosamente
+[INFO] 03:04:56:259 Consola/(9658:9658): Proceso terminado exitosamente
+[INFO] 03:04:56:340 Consola/(9661:9661): Proceso terminado exitosamente
+[WARNING] 03:11:45:826 Consola/(9931:9931): IP Kernel: 127.0.0.1
+[WARNING] 03:11:45:828 Consola/(9931:9931): Puerto Kernel: 8000
+[WARNING] 03:11:46:616 Consola/(9934:9934): IP Kernel: 127.0.0.1
+[WARNING] 03:11:46:616 Consola/(9934:9934): Puerto Kernel: 8000
+[WARNING] 03:11:47:609 Consola/(9937:9937): IP Kernel: 127.0.0.1
+[WARNING] 03:11:47:610 Consola/(9937:9937): Puerto Kernel: 8000
+[INFO] 03:12:08:478 Consola/(9937:9937): Proceso terminado exitosamente
+[INFO] 03:12:08:507 Consola/(9931:9931): Proceso terminado exitosamente
+[INFO] 03:12:08:535 Consola/(9934:9934): Proceso terminado exitosamente
+[WARNING] 03:13:16:304 Consola/(9965:9965): IP Kernel: 127.0.0.1
+[WARNING] 03:13:16:304 Consola/(9965:9965): Puerto Kernel: 8000
+[WARNING] 03:13:17:280 Consola/(9968:9968): IP Kernel: 127.0.0.1
+[WARNING] 03:13:17:280 Consola/(9968:9968): Puerto Kernel: 8000
+[WARNING] 03:13:18:298 Consola/(9971:9971): IP Kernel: 127.0.0.1
+[WARNING] 03:13:18:299 Consola/(9971:9971): Puerto Kernel: 8000
+[INFO] 03:13:38:344 Consola/(9971:9971): Proceso terminado exitosamente
+[INFO] 03:13:38:346 Consola/(9965:9965): Proceso terminado exitosamente
+[INFO] 03:13:38:348 Consola/(9968:9968): Proceso terminado exitosamente
+[WARNING] 03:15:18:651 Consola/(10030:10030): IP Kernel: 127.0.0.1
+[WARNING] 03:15:18:651 Consola/(10030:10030): Puerto Kernel: 8000
+[WARNING] 03:15:19:395 Consola/(10033:10033): IP Kernel: 127.0.0.1
+[WARNING] 03:15:19:395 Consola/(10033:10033): Puerto Kernel: 8000
+[WARNING] 03:15:20:129 Consola/(10036:10036): IP Kernel: 127.0.0.1
+[WARNING] 03:15:20:129 Consola/(10036:10036): Puerto Kernel: 8000
+[INFO] 03:15:40:688 Consola/(10036:10036): Proceso terminado exitosamente
+[INFO] 03:15:40:691 Consola/(10030:10030): Proceso terminado exitosamente
+[INFO] 03:15:40:692 Consola/(10033:10033): Proceso terminado exitosamente
+[WARNING] 03:18:38:095 Consola/(10137:10137): IP Kernel: 127.0.0.1
+[WARNING] 03:18:38:097 Consola/(10137:10137): Puerto Kernel: 8000
+[WARNING] 03:18:39:020 Consola/(10140:10140): IP Kernel: 127.0.0.1
+[WARNING] 03:18:39:020 Consola/(10140:10140): Puerto Kernel: 8000
+[WARNING] 03:18:39:902 Consola/(10143:10143): IP Kernel: 127.0.0.1
+[WARNING] 03:18:39:903 Consola/(10143:10143): Puerto Kernel: 8000
+[ERROR] 03:19:20:247 Consola/(10143:10143): Hubo un error en el proceso
+[ERROR] 03:19:20:248 Consola/(10140:10140): Hubo un error en el proceso
+[ERROR] 03:19:20:249 Consola/(10137:10137): Hubo un error en el proceso
+[WARNING] 03:21:52:550 Consola/(10220:10220): IP Kernel: 127.0.0.1
+[WARNING] 03:21:52:551 Consola/(10220:10220): Puerto Kernel: 8000
+[WARNING] 03:21:53:188 Consola/(10223:10223): IP Kernel: 127.0.0.1
+[WARNING] 03:21:53:188 Consola/(10223:10223): Puerto Kernel: 8000
+[WARNING] 03:21:53:816 Consola/(10226:10226): IP Kernel: 127.0.0.1
+[WARNING] 03:21:53:816 Consola/(10226:10226): Puerto Kernel: 8000
+[ERROR] 03:23:09:678 Consola/(10226:10226): Hubo un error en el proceso
+[ERROR] 03:23:09:680 Consola/(10220:10220): Hubo un error en el proceso
+[ERROR] 03:23:09:686 Consola/(10223:10223): Hubo un error en el proceso
+[WARNING] 03:25:13:792 Consola/(10294:10294): IP Kernel: 127.0.0.1
+[WARNING] 03:25:13:796 Consola/(10294:10294): Puerto Kernel: 8000
+[ERROR] 03:25:13:798 Consola/(10294:10294): Hubo un error en el proceso
+[WARNING] 03:27:14:940 Consola/(10332:10332): IP Kernel: 127.0.0.1
+[WARNING] 03:27:14:941 Consola/(10332:10332): Puerto Kernel: 8000
+[ERROR] 03:27:14:943 Consola/(10332:10332): Hubo un error en el proceso
+[WARNING] 03:27:22:214 Consola/(10334:10334): IP Kernel: 127.0.0.1
+[WARNING] 03:27:22:214 Consola/(10334:10334): Puerto Kernel: 8000
+[ERROR] 03:27:22:215 Consola/(10334:10334): Hubo un error en el proceso
+[WARNING] 03:28:32:665 Consola/(10360:10360): IP Kernel: 127.0.0.1
+[WARNING] 03:28:32:665 Consola/(10360:10360): Puerto Kernel: 8000
+[WARNING] 03:28:34:202 Consola/(10364:10364): IP Kernel: 127.0.0.1
+[WARNING] 03:28:34:203 Consola/(10364:10364): Puerto Kernel: 8000
+[WARNING] 03:28:35:191 Consola/(10367:10367): IP Kernel: 127.0.0.1
+[WARNING] 03:28:35:196 Consola/(10367:10367): Puerto Kernel: 8000
+[ERROR] 03:29:50:642 Consola/(10364:10364): Hubo un error en el proceso
+[ERROR] 03:29:50:642 Consola/(10360:10360): Hubo un error en el proceso
+[ERROR] 03:29:50:650 Consola/(10367:10367): Hubo un error en el proceso
+[WARNING] 03:35:31:272 Consola/(10525:10525): IP Kernel: 127.0.0.1
+[WARNING] 03:35:31:275 Consola/(10525:10525): Puerto Kernel: 8000
+[WARNING] 03:35:32:263 Consola/(10528:10528): IP Kernel: 127.0.0.1
+[WARNING] 03:35:32:264 Consola/(10528:10528): Puerto Kernel: 8000
+[WARNING] 03:35:33:411 Consola/(10531:10531): IP Kernel: 127.0.0.1
+[WARNING] 03:35:33:417 Consola/(10531:10531): Puerto Kernel: 8000
+[INFO] 03:35:58:792 Consola/(10531:10531): Proceso terminado exitosamente
+[INFO] 03:35:58:795 Consola/(10525:10525): Proceso terminado exitosamente
+[INFO] 03:35:58:798 Consola/(10528:10528): Proceso terminado exitosamente
+[WARNING] 03:37:14:565 Consola/(10552:10552): IP Kernel: 127.0.0.1
+[WARNING] 03:37:14:565 Consola/(10552:10552): Puerto Kernel: 8000
+[WARNING] 03:37:15:242 Consola/(10555:10555): IP Kernel: 127.0.0.1
+[WARNING] 03:37:15:242 Consola/(10555:10555): Puerto Kernel: 8000
+[WARNING] 03:37:16:004 Consola/(10558:10558): IP Kernel: 127.0.0.1
+[WARNING] 03:37:16:006 Consola/(10558:10558): Puerto Kernel: 8000
+[INFO] 03:37:41:979 Consola/(10558:10558): Proceso terminado exitosamente
+[INFO] 03:37:41:980 Consola/(10552:10552): Proceso terminado exitosamente
+[INFO] 03:37:41:981 Consola/(10555:10555): Proceso terminado exitosamente
+[WARNING] 03:39:45:684 Consola/(10651:10651): IP Kernel: 127.0.0.1
+[WARNING] 03:39:45:686 Consola/(10651:10651): Puerto Kernel: 8000
+[WARNING] 03:39:46:394 Consola/(10654:10654): IP Kernel: 127.0.0.1
+[WARNING] 03:39:46:394 Consola/(10654:10654): Puerto Kernel: 8000
+[WARNING] 03:39:47:124 Consola/(10657:10657): IP Kernel: 127.0.0.1
+[WARNING] 03:39:47:126 Consola/(10657:10657): Puerto Kernel: 8000
+[INFO] 03:40:12:987 Consola/(10657:10657): Proceso terminado exitosamente
+[INFO] 03:40:12:989 Consola/(10651:10651): Proceso terminado exitosamente
+[INFO] 03:40:12:990 Consola/(10654:10654): Proceso terminado exitosamente
+[WARNING] 04:01:57:300 Consola/(11032:11032): IP Kernel: 127.0.0.1
+[WARNING] 04:01:57:302 Consola/(11032:11032): Puerto Kernel: 8000
+[WARNING] 04:01:57:793 Consola/(11035:11035): IP Kernel: 127.0.0.1
+[WARNING] 04:01:57:793 Consola/(11035:11035): Puerto Kernel: 8000
+[WARNING] 04:01:58:249 Consola/(11038:11038): IP Kernel: 127.0.0.1
+[WARNING] 04:01:58:250 Consola/(11038:11038): Puerto Kernel: 8000
+[INFO] 04:02:19:352 Consola/(11038:11038): Proceso terminado exitosamente
+[INFO] 04:02:19:354 Consola/(11032:11032): Proceso terminado exitosamente
+[INFO] 04:02:19:357 Consola/(11035:11035): Proceso terminado exitosamente
+[WARNING] 04:23:37:231 Consola/(11681:11681): IP Kernel: 127.0.0.1
+[WARNING] 04:23:37:232 Consola/(11681:11681): Puerto Kernel: 8000
+[WARNING] 04:23:37:878 Consola/(11685:11685): IP Kernel: 127.0.0.1
+[WARNING] 04:23:37:878 Consola/(11685:11685): Puerto Kernel: 8000
+[ERROR] 04:23:52:531 Consola/(11685:11685): Hubo un error en el proceso
+[WARNING] 04:25:11:091 Consola/(11724:11724): IP Kernel: 127.0.0.1
+[WARNING] 04:25:11:096 Consola/(11724:11724): Puerto Kernel: 8000
+[WARNING] 04:25:11:707 Consola/(11727:11727): IP Kernel: 127.0.0.1
+[WARNING] 04:25:11:708 Consola/(11727:11727): Puerto Kernel: 8000
+[INFO] 04:25:14:120 Consola/(11727:11727): Proceso terminado por falta de memoria
+[WARNING] 04:25:57:114 Consola/(11738:11738): IP Kernel: 127.0.0.1
+[WARNING] 04:25:57:115 Consola/(11738:11738): Puerto Kernel: 8000
+[ERROR] 04:25:57:116 Consola/(11738:11738): Hubo un error en el proceso
+[WARNING] 04:25:57:781 Consola/(11740:11740): IP Kernel: 127.0.0.1
+[WARNING] 04:25:57:782 Consola/(11740:11740): Puerto Kernel: 8000
+[ERROR] 04:25:57:782 Consola/(11740:11740): Hubo un error en el proceso
+[WARNING] 04:26:17:866 Consola/(11761:11761): IP Kernel: 127.0.0.1
+[WARNING] 04:26:17:866 Consola/(11761:11761): Puerto Kernel: 8000
+[WARNING] 04:26:18:296 Consola/(11764:11764): IP Kernel: 127.0.0.1
+[WARNING] 04:26:18:296 Consola/(11764:11764): Puerto Kernel: 8000
+[ERROR] 04:26:35:883 Consola/(11761:11761): Hubo un error en el proceso
+[ERROR] 04:26:35:886 Consola/(11764:11764): Hubo un error en el proceso
+[WARNING] 04:32:50:382 Consola/(11877:11877): IP Kernel: 127.0.0.1
+[WARNING] 04:32:50:385 Consola/(11877:11877): Puerto Kernel: 8000
+[WARNING] 04:33:16:312 Consola/(11904:11904): IP Kernel: 127.0.0.1
+[WARNING] 04:33:16:312 Consola/(11904:11904): Puerto Kernel: 8000
+[WARNING] 04:33:16:953 Consola/(11907:11907): IP Kernel: 127.0.0.1
+[WARNING] 04:33:16:953 Consola/(11907:11907): Puerto Kernel: 8000
+[ERROR] 04:33:34:330 Consola/(11904:11904): Hubo un error en el proceso
+[ERROR] 04:33:34:331 Consola/(11907:11907): Hubo un error en el proceso
+[WARNING] 04:43:32:202 Consola/(12081:12081): IP Kernel: 127.0.0.1
+[WARNING] 04:43:32:203 Consola/(12081:12081): Puerto Kernel: 8000
+[WARNING] 04:43:32:942 Consola/(12084:12084): IP Kernel: 127.0.0.1
+[WARNING] 04:43:32:942 Consola/(12084:12084): Puerto Kernel: 8000
+[ERROR] 04:44:35:987 Consola/(12081:12081): Hubo un error en el proceso
+[ERROR] 04:44:35:989 Consola/(12084:12084): Hubo un error en el proceso
+[WARNING] 04:46:33:813 Consola/(12150:12150): IP Kernel: 127.0.0.1
+[WARNING] 04:46:33:814 Consola/(12150:12150): Puerto Kernel: 8000
+[WARNING] 04:46:34:520 Consola/(12153:12153): IP Kernel: 127.0.0.1
+[WARNING] 04:46:34:521 Consola/(12153:12153): Puerto Kernel: 8000
+[ERROR] 04:47:37:545 Consola/(12150:12150): Hubo un error en el proceso
+[ERROR] 04:47:37:547 Consola/(12153:12153): Hubo un error en el proceso
+[WARNING] 04:49:34:096 Consola/(12239:12239): IP Kernel: 127.0.0.1
+[WARNING] 04:49:34:101 Consola/(12239:12239): Puerto Kernel: 8000
+[WARNING] 04:49:34:815 Consola/(12242:12242): IP Kernel: 127.0.0.1
+[WARNING] 04:49:34:816 Consola/(12242:12242): Puerto Kernel: 8000
+[ERROR] 04:49:54:307 Consola/(12239:12239): Hubo un error en el proceso
+[ERROR] 04:49:54:311 Consola/(12242:12242): Hubo un error en el proceso
+[WARNING] 04:52:10:431 Consola/(12328:12328): IP Kernel: 127.0.0.1
+[WARNING] 04:52:10:432 Consola/(12328:12328): Puerto Kernel: 8000
+[WARNING] 04:52:11:144 Consola/(12331:12331): IP Kernel: 127.0.0.1
+[WARNING] 04:52:11:144 Consola/(12331:12331): Puerto Kernel: 8000
+[ERROR] 04:52:30:660 Consola/(12328:12328): Hubo un error en el proceso
+[ERROR] 04:52:30:662 Consola/(12331:12331): Hubo un error en el proceso
+[WARNING] 04:55:06:382 Consola/(12424:12424): IP Kernel: 127.0.0.1
+[WARNING] 04:55:06:382 Consola/(12424:12424): Puerto Kernel: 8000
+[WARNING] 04:55:06:913 Consola/(12427:12427): IP Kernel: 127.0.0.1
+[WARNING] 04:55:06:914 Consola/(12427:12427): Puerto Kernel: 8000
+[ERROR] 04:55:25:957 Consola/(12424:12424): Hubo un error en el proceso
+[ERROR] 04:55:25:958 Consola/(12427:12427): Hubo un error en el proceso
+[WARNING] 04:57:47:634 Consola/(12523:12523): IP Kernel: 127.0.0.1
+[WARNING] 04:57:47:634 Consola/(12523:12523): Puerto Kernel: 8000
+[WARNING] 04:57:48:247 Consola/(12526:12526): IP Kernel: 127.0.0.1
+[WARNING] 04:57:48:258 Consola/(12526:12526): Puerto Kernel: 8000
+[ERROR] 04:58:07:228 Consola/(12523:12523): Hubo un error en el proceso
+[ERROR] 04:58:07:234 Consola/(12526:12526): Hubo un error en el proceso
+[WARNING] 05:07:32:240 Consola/(12955:12955): IP Kernel: 127.0.0.1
+[WARNING] 05:07:32:241 Consola/(12955:12955): Puerto Kernel: 8000
+[WARNING] 05:07:32:871 Consola/(12958:12958): IP Kernel: 127.0.0.1
+[WARNING] 05:07:32:871 Consola/(12958:12958): Puerto Kernel: 8000
+[INFO] 05:09:21:273 Consola/(12958:12958): Proceso terminado exitosamente
+[INFO] 05:09:37:285 Consola/(12955:12955): Proceso terminado exitosamente
+[WARNING] 05:11:03:640 Consola/(12986:12986): IP Kernel: 127.0.0.1
+[WARNING] 05:11:03:640 Consola/(12986:12986): Puerto Kernel: 8000
+[WARNING] 05:11:04:356 Consola/(12989:12989): IP Kernel: 127.0.0.1
+[WARNING] 05:11:04:359 Consola/(12989:12989): Puerto Kernel: 8000
+[WARNING] 05:11:04:982 Consola/(12992:12992): IP Kernel: 127.0.0.1
+[WARNING] 05:11:04:983 Consola/(12992:12992): Puerto Kernel: 8000
+[WARNING] 05:11:05:577 Consola/(12995:12995): IP Kernel: 127.0.0.1
+[WARNING] 05:11:05:578 Consola/(12995:12995): Puerto Kernel: 8000
+[INFO] 05:11:21:647 Consola/(12986:12986): Proceso terminado exitosamente
+[INFO] 05:11:39:651 Consola/(12989:12989): Proceso terminado exitosamente
+[INFO] 05:11:57:656 Consola/(12992:12992): Proceso terminado exitosamente
+[INFO] 05:12:15:660 Consola/(12995:12995): Proceso terminado exitosamente
+[WARNING] 05:26:16:490 Consola/(13529:13529): IP Kernel: 127.0.0.1
+[WARNING] 05:26:16:491 Consola/(13529:13529): Puerto Kernel: 8000
+[INFO] 05:26:17:497 Consola/(13529:13529): Proceso terminado exitosamente
+[WARNING] 05:26:59:416 Consola/(13532:13532): IP Kernel: 127.0.0.1
+[WARNING] 05:26:59:416 Consola/(13532:13532): Puerto Kernel: 8000
+[INFO] 05:27:00:418 Consola/(13532:13532): Proceso terminado exitosamente
+[WARNING] 05:27:15:938 Consola/(13536:13536): IP Kernel: 127.0.0.1
+[WARNING] 05:27:15:938 Consola/(13536:13536): Puerto Kernel: 8000
+[INFO] 05:27:21:943 Consola/(13536:13536): Proceso terminado por Segmentation Fault
+[WARNING] 05:28:14:664 Consola/(13540:13540): IP Kernel: 127.0.0.1
+[WARNING] 05:28:14:664 Consola/(13540:13540): Puerto Kernel: 8000
+[ERROR] 05:28:42:166 Consola/(13540:13540): Hubo un error en el proceso
+[WARNING] 05:29:27:906 Consola/(13567:13567): IP Kernel: 127.0.0.1
+[WARNING] 05:29:27:907 Consola/(13567:13567): Puerto Kernel: 8000
+[INFO] 05:29:27:946 Consola/(13567:13567): Proceso terminado por falta de memoria
+[WARNING] 05:30:52:034 Consola/(13600:13600): IP Kernel: 127.0.0.1
+[WARNING] 05:30:52:034 Consola/(13600:13600): Puerto Kernel: 8000
+[INFO] 05:30:52:038 Consola/(13600:13600): Proceso terminado por falta de memoria
+[WARNING] 05:31:17:766 Consola/(13624:13624): IP Kernel: 127.0.0.1
+[WARNING] 05:31:17:766 Consola/(13624:13624): Puerto Kernel: 8000
+[INFO] 05:31:17:769 Consola/(13624:13624): Proceso terminado por falta de memoria
+[WARNING] 05:31:19:221 Consola/(13627:13627): IP Kernel: 127.0.0.1
+[WARNING] 05:31:19:222 Consola/(13627:13627): Puerto Kernel: 8000
+[INFO] 05:31:19:225 Consola/(13627:13627): Proceso terminado por falta de memoria
+[WARNING] 05:31:20:682 Consola/(13630:13630): IP Kernel: 127.0.0.1
+[WARNING] 05:31:20:683 Consola/(13630:13630): Puerto Kernel: 8000
+[INFO] 05:31:20:684 Consola/(13630:13630): Proceso terminado por falta de memoria
+[WARNING] 05:31:21:917 Consola/(13633:13633): IP Kernel: 127.0.0.1
+[WARNING] 05:31:21:918 Consola/(13633:13633): Puerto Kernel: 8000
+[INFO] 05:31:21:919 Consola/(13633:13633): Proceso terminado por falta de memoria
+[WARNING] 05:31:23:191 Consola/(13636:13636): IP Kernel: 127.0.0.1
+[WARNING] 05:31:23:191 Consola/(13636:13636): Puerto Kernel: 8000
+[INFO] 05:31:23:193 Consola/(13636:13636): Proceso terminado por falta de memoria
+[WARNING] 05:31:24:461 Consola/(13639:13639): IP Kernel: 127.0.0.1
+[WARNING] 05:31:24:462 Consola/(13639:13639): Puerto Kernel: 8000
+[INFO] 05:31:24:464 Consola/(13639:13639): Proceso terminado por falta de memoria
+[WARNING] 05:31:25:418 Consola/(13642:13642): IP Kernel: 127.0.0.1
+[WARNING] 05:31:25:419 Consola/(13642:13642): Puerto Kernel: 8000
+[INFO] 05:31:25:420 Consola/(13642:13642): Proceso terminado por falta de memoria
+[WARNING] 05:31:30:178 Consola/(13645:13645): IP Kernel: 127.0.0.1
+[WARNING] 05:31:30:178 Consola/(13645:13645): Puerto Kernel: 8000
+[INFO] 05:31:31:180 Consola/(13645:13645): Proceso terminado exitosamente
+[WARNING] 05:31:33:024 Consola/(13648:13648): IP Kernel: 127.0.0.1
+[WARNING] 05:31:33:024 Consola/(13648:13648): Puerto Kernel: 8000
+[INFO] 05:31:33:026 Consola/(13648:13648): Proceso terminado por falta de memoria
+[WARNING] 05:31:39:109 Consola/(13651:13651): IP Kernel: 127.0.0.1
+[WARNING] 05:31:39:109 Consola/(13651:13651): Puerto Kernel: 8000
+[INFO] 05:31:40:110 Consola/(13651:13651): Proceso terminado exitosamente
+[WARNING] 05:31:43:810 Consola/(13654:13654): IP Kernel: 127.0.0.1
+[WARNING] 05:31:43:810 Consola/(13654:13654): Puerto Kernel: 8000
+[INFO] 05:31:43:812 Consola/(13654:13654): Proceso terminado por falta de memoria
+[WARNING] 05:31:48:410 Consola/(13657:13657): IP Kernel: 127.0.0.1
+[WARNING] 05:31:48:410 Consola/(13657:13657): Puerto Kernel: 8000
+[INFO] 05:31:54:418 Consola/(13657:13657): Proceso terminado por Segmentation Fault
+[WARNING] 05:31:59:523 Consola/(13660:13660): IP Kernel: 127.0.0.1
+[WARNING] 05:31:59:524 Consola/(13660:13660): Puerto Kernel: 8000
+[ERROR] 05:32:17:251 Consola/(13660:13660): Hubo un error en el proceso
+[WARNING] 05:32:44:180 Consola/(13691:13691): IP Kernel: 127.0.0.1
+[WARNING] 05:32:44:181 Consola/(13691:13691): Puerto Kernel: 8000
+[INFO] 05:32:50:218 Consola/(13691:13691): Proceso terminado por Segmentation Fault
+[WARNING] 05:33:18:198 Consola/(13696:13696): IP Kernel: 127.0.0.1
+[WARNING] 05:33:18:200 Consola/(13696:13696): Puerto Kernel: 8000
+[ERROR] 05:47:02:697 Consola/(13696:13696): Hubo un error en el proceso
+[WARNING] 05:47:16:112 Consola/(13955:13955): IP Kernel: 127.0.0.1
+[WARNING] 05:47:16:113 Consola/(13955:13955): Puerto Kernel: 8000
+[INFO] 05:47:22:148 Consola/(13955:13955): Proceso terminado por Segmentation Fault
+[WARNING] 05:47:26:154 Consola/(13958:13958): IP Kernel: 127.0.0.1
+[WARNING] 05:47:26:154 Consola/(13958:13958): Puerto Kernel: 8000
+[ERROR] 05:52:07:575 Consola/(13958:13958): Hubo un error en el proceso
+[WARNING] 05:52:28:507 Consola/(13996:13996): IP Kernel: 127.0.0.1
+[WARNING] 05:52:28:508 Consola/(13996:13996): Puerto Kernel: 8000
+[INFO] 05:52:28:551 Consola/(13996:13996): Proceso terminado por falta de memoria
+[WARNING] 05:52:30:449 Consola/(13999:13999): IP Kernel: 127.0.0.1
+[WARNING] 05:52:30:450 Consola/(13999:13999): Puerto Kernel: 8000
+[INFO] 05:52:30:459 Consola/(13999:13999): Proceso terminado por falta de memoria
+[WARNING] 05:52:31:343 Consola/(14002:14002): IP Kernel: 127.0.0.1
+[WARNING] 05:52:31:343 Consola/(14002:14002): Puerto Kernel: 8000
+[INFO] 05:52:31:347 Consola/(14002:14002): Proceso terminado por falta de memoria
+[WARNING] 05:52:31:935 Consola/(14005:14005): IP Kernel: 127.0.0.1
+[WARNING] 05:52:31:935 Consola/(14005:14005): Puerto Kernel: 8000
+[INFO] 05:52:31:939 Consola/(14005:14005): Proceso terminado por falta de memoria
+[WARNING] 05:52:32:517 Consola/(14008:14008): IP Kernel: 127.0.0.1
+[WARNING] 05:52:32:518 Consola/(14008:14008): Puerto Kernel: 8000
+[INFO] 05:52:32:522 Consola/(14008:14008): Proceso terminado por falta de memoria
+[WARNING] 05:52:33:120 Consola/(14011:14011): IP Kernel: 127.0.0.1
+[WARNING] 05:52:33:121 Consola/(14011:14011): Puerto Kernel: 8000
+[INFO] 05:52:33:125 Consola/(14011:14011): Proceso terminado por falta de memoria
+[WARNING] 05:52:50:169 Consola/(14014:14014): IP Kernel: 127.0.0.1
+[WARNING] 05:52:50:169 Consola/(14014:14014): Puerto Kernel: 8000
+[INFO] 05:52:56:185 Consola/(14014:14014): Proceso terminado por Segmentation Fault
+[WARNING] 05:53:04:770 Consola/(14018:14018): IP Kernel: 127.0.0.1
+[WARNING] 05:53:04:772 Consola/(14018:14018): Puerto Kernel: 8000
+[ERROR] 05:53:18:456 Consola/(14018:14018): Hubo un error en el proceso
+[WARNING] 06:03:14:026 Consola/(14181:14181): IP Kernel: 127.0.0.1
+[WARNING] 06:03:14:027 Consola/(14181:14181): Puerto Kernel: 8000
+[INFO] 06:03:15:032 Consola/(14181:14181): Proceso terminado exitosamente
+[WARNING] 06:03:17:659 Consola/(14184:14184): IP Kernel: 127.0.0.1
+[WARNING] 06:03:17:659 Consola/(14184:14184): Puerto Kernel: 8000
+[INFO] 06:03:19:092 Consola/(14184:14184): Proceso terminado exitosamente
+[WARNING] 06:03:22:003 Consola/(14187:14187): IP Kernel: 127.0.0.1
+[WARNING] 06:03:22:003 Consola/(14187:14187): Puerto Kernel: 8000
+[INFO] 06:03:28:010 Consola/(14187:14187): Proceso terminado por Segmentation Fault
+[WARNING] 06:03:31:311 Consola/(14190:14190): IP Kernel: 127.0.0.1
+[WARNING] 06:03:31:311 Consola/(14190:14190): Puerto Kernel: 8000
+[INFO] 06:03:31:314 Consola/(14190:14190): Proceso terminado por falta de memoria
+[WARNING] 06:03:34:522 Consola/(14193:14193): IP Kernel: 127.0.0.1
+[WARNING] 06:03:34:522 Consola/(14193:14193): Puerto Kernel: 8000
+[INFO] 06:03:40:527 Consola/(14193:14193): Proceso terminado por Segmentation Fault
+[WARNING] 06:09:53:426 Consola/(14772:14772): IP Kernel: 127.0.0.1
+[WARNING] 06:09:53:427 Consola/(14772:14772): Puerto Kernel: 8000
+[WARNING] 06:09:54:282 Consola/(14775:14775): IP Kernel: 127.0.0.1
+[WARNING] 06:09:54:282 Consola/(14775:14775): Puerto Kernel: 8000
+[INFO] 06:09:54:432 Consola/(14772:14772): Proceso terminado por recurso inexistente
+[WARNING] 06:09:55:107 Consola/(14778:14778): IP Kernel: 127.0.0.1
+[WARNING] 06:09:55:108 Consola/(14778:14778): Puerto Kernel: 8000
+[INFO] 06:09:55:434 Consola/(14775:14775): Proceso terminado por recurso inexistente
+[WARNING] 06:09:55:943 Consola/(14781:14781): IP Kernel: 127.0.0.1
+[WARNING] 06:09:55:944 Consola/(14781:14781): Puerto Kernel: 8000
+[INFO] 06:10:01:441 Consola/(14778:14778): Proceso terminado por Segmentation Fault
+[INFO] 06:10:01:445 Consola/(14781:14781): Proceso terminado por falta de memoria
+[WARNING] 06:12:34:617 Consola/(14846:14846): IP Kernel: 127.0.0.1
+[WARNING] 06:12:34:618 Consola/(14846:14846): Puerto Kernel: 8000
+[WARNING] 06:12:35:395 Consola/(14849:14849): IP Kernel: 127.0.0.1
+[WARNING] 06:12:35:396 Consola/(14849:14849): Puerto Kernel: 8000
+[INFO] 06:12:35:620 Consola/(14846:14846): Proceso terminado por recurso inexistente
+[WARNING] 06:12:36:476 Consola/(14852:14852): IP Kernel: 127.0.0.1
+[WARNING] 06:12:36:478 Consola/(14852:14852): Puerto Kernel: 8000
+[INFO] 06:12:36:622 Consola/(14849:14849): Proceso terminado por recurso inexistente
+[WARNING] 06:12:37:696 Consola/(14855:14855): IP Kernel: 127.0.0.1
+[WARNING] 06:12:37:697 Consola/(14855:14855): Puerto Kernel: 8000
+[INFO] 06:12:42:626 Consola/(14852:14852): Proceso terminado por Segmentation Fault
+[INFO] 06:12:42:629 Consola/(14855:14855): Proceso terminado por falta de memoria
+[WARNING] 06:13:30:809 Consola/(14921:14921): IP Kernel: 127.0.0.1
+[WARNING] 06:13:30:810 Consola/(14921:14921): Puerto Kernel: 8000
+[WARNING] 06:13:31:340 Consola/(14924:14924): IP Kernel: 127.0.0.1
+[WARNING] 06:13:31:341 Consola/(14924:14924): Puerto Kernel: 8000
+[INFO] 06:13:31:811 Consola/(14921:14921): Proceso terminado por recurso inexistente
+[WARNING] 06:13:31:948 Consola/(14927:14927): IP Kernel: 127.0.0.1
+[WARNING] 06:13:31:948 Consola/(14927:14927): Puerto Kernel: 8000
+[WARNING] 06:13:32:510 Consola/(14931:14931): IP Kernel: 127.0.0.1
+[WARNING] 06:13:32:510 Consola/(14931:14931): Puerto Kernel: 8000
+[INFO] 06:13:32:813 Consola/(14924:14924): Proceso terminado por recurso inexistente
+[INFO] 06:13:38:819 Consola/(14927:14927): Proceso terminado por Segmentation Fault
+[INFO] 06:13:38:822 Consola/(14931:14931): Proceso terminado por falta de memoria
+[WARNING] 06:14:24:672 Consola/(14968:14968): IP Kernel: 127.0.0.1
+[WARNING] 06:14:24:672 Consola/(14968:14968): Puerto Kernel: 8000
+[ERROR] 06:14:24:673 Consola/(14968:14968): Hubo un error en el proceso
+[WARNING] 06:14:57:504 Consola/(15021:15021): IP Kernel: 127.0.0.1
+[WARNING] 06:14:57:504 Consola/(15021:15021): Puerto Kernel: 8000
+[WARNING] 06:14:58:161 Consola/(15024:15024): IP Kernel: 127.0.0.1
+[WARNING] 06:14:58:162 Consola/(15024:15024): Puerto Kernel: 8000
+[WARNING] 06:14:58:866 Consola/(15027:15027): IP Kernel: 127.0.0.1
+[WARNING] 06:14:58:866 Consola/(15027:15027): Puerto Kernel: 8000
+[WARNING] 06:14:59:498 Consola/(15030:15030): IP Kernel: 127.0.0.1
+[WARNING] 06:14:59:498 Consola/(15030:15030): Puerto Kernel: 8000
+[INFO] 06:15:03:510 Consola/(15021:15021): Proceso terminado por Segmentation Fault
+[INFO] 06:15:04:512 Consola/(15024:15024): Proceso terminado por recurso inexistente
+[INFO] 06:15:10:520 Consola/(15027:15027): Proceso terminado por Segmentation Fault
+[INFO] 06:15:10:524 Consola/(15030:15030): Proceso terminado por falta de memoria

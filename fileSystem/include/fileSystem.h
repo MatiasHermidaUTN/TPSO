@@ -61,8 +61,8 @@ extern sem_t sem_sincro_cant_msj;
 extern t_list* lista_fifo_msj;
 
 //comunicaciones
-char* leer_de_memoria(int cuanto_X, int dir_fisica_memoria);
-void escribir_en_memoria(int dir_fisica_memoria, int cuanto_leer, char* buffer);
+char* leer_de_memoria(int cuanto_X, int dir_fisica_memoria, char*pid);
+void escribir_en_memoria(int dir_fisica_memoria, int cuanto_leer, char* buffer, char*pid);
 
 //debug
 int cant_unos_en_bitmap();

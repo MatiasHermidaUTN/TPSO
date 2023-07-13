@@ -300,8 +300,8 @@ void wait_recurso(t_pcb* pcb, char* nombre_recurso) {
 		}
 	}
 	else {
-		log_error(logger, "El recurso %s no existe", nombre_recurso);
-		exit_proceso(pcb, SUCCESS);
+		log_warning(my_logger, "El recurso %s no existe", nombre_recurso);
+		exit_proceso(pcb, RECURSO_INEXISTENTE);
 	}
 }
 
@@ -338,8 +338,8 @@ void signal_recurso(t_pcb* pcb, char* nombre_recurso, int esta_en_exit) {
 		}
 	}
 	else {
-		log_error(logger, "El recurso %s no existe", nombre_recurso);
-		exit_proceso(pcb, SUCCESS);
+		log_warning(my_logger, "El recurso %s no existe", nombre_recurso);
+		exit_proceso(pcb, RECURSO_INEXISTENTE);
 	}
 
 	free(nombre_recurso);
@@ -348,10 +348,7 @@ void signal_recurso(t_pcb* pcb, char* nombre_recurso, int esta_en_exit) {
 void eliminar_recurso_de_lista(t_list* recursos, char* nombre_recurso, int esta_en_exit) {
 	for(int i = 0; i < list_size(recursos); i++) {
 		if(!strcmp(list_get(recursos, i), nombre_recurso)) {
-			char* recurso = list_remove(recursos, i);
-			if(!esta_en_exit) { //Para que no lo libere así nomás cuando pasa a EXIT, sino que se libere con la lista entera al hacer liberar_pcb
-				free(recurso);
-			}
+			free(list_remove(recursos, i));
 			break;
 		}
 	}
@@ -377,8 +374,9 @@ void exit_proceso(t_pcb* pcb, t_msj_kernel_consola mensaje) {
 }
 
 void signal_de_todos_los_recursos(t_pcb* pcb) {
-	for(int i = 0; i < list_size(pcb->recursos); i++) {
-		signal_recurso(pcb, list_get(pcb->recursos, i), 1);
+	int tamanio = list_size(pcb->recursos);
+	for(int i = 0; i < tamanio; i++) {
+		signal_recurso(pcb, strdup(list_get(pcb->recursos, 0)), 1);
 	}
 }
 
@@ -390,6 +388,8 @@ char* mensaje_de_finalizacion_a_string(t_msj_kernel_consola mensaje) {
 			return "OUT_OF_MEMORY";
 		case SEG_FAULT:
 			return "SEG_FAULT";
+		case RECURSO_INEXISTENTE:
+			return "RECURSO_INEXISTENTE";
 		default:
 			log_error(logger, "Error en el envio de mensaje de finalizacion");
 			exit(EXIT_FAILURE);

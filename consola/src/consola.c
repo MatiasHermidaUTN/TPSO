@@ -37,6 +37,9 @@ void esperar_fin_proceso() {
 		case SEG_FAULT:
 			log_info(logger, "Proceso terminado por Segmentation Fault");
 			break;
+		case RECURSO_INEXISTENTE:
+			log_info(logger, "Proceso terminado por recurso inexistente");
+			break;
 		default:
 			log_error(logger, "Hubo un error en el proceso");
 			exit(EXIT_FAILURE);

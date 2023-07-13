@@ -65,7 +65,7 @@ int manejar_mensaje() {
 			char* pid_leer = strdup(args->parametros[4]);
 
 			buffer = leer_archivo(nombre_archivo, apartir_de_donde_X, cuanto_X);	//malloc se hace en leer_archivo
-			escribir_en_memoria(dir_fisica_memoria, cuanto_X, buffer);
+			escribir_en_memoria(dir_fisica_memoria, cuanto_X, buffer, strdup(pid_leer));
 
 			char** parametros_a_enviar_leer = string_array_new();
 			string_array_push(&parametros_a_enviar_leer, nombre_archivo); //nombre del archivo
@@ -85,7 +85,7 @@ int manejar_mensaje() {
 			apartir_de_donde_X = atoi(args->parametros[3]);
 			char* pid_escribir = strdup(args->parametros[4]);
 
-			buffer = leer_de_memoria(dir_fisica_memoria, cuanto_X);	//malloc se hace en leer_de_memoria
+			buffer = leer_de_memoria(dir_fisica_memoria, cuanto_X, strdup(pid_escribir));	//malloc se hace en leer_de_memoria
 			escribir_archivo(buffer, nombre_archivo, apartir_de_donde_X, cuanto_X);
 
 			char** parametros_a_enviar_escribir = string_array_new();

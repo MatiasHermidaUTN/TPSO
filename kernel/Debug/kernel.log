@@ -31415,3 +31415,2055 @@
 [INFO] 06:00:12:128 Kernel/(2451:2454): PID: 8 - Signal: SCANNER - Instancias: 1
 [INFO] 06:00:12:129 Kernel/(2451:2454): PID: 8 - Estado Anterior: EXEC - Estado Actual: EXIT
 [INFO] 06:00:12:129 Kernel/(2451:2454): Finaliza el proceso 8 - Motivo: SUCCESS
+[INFO] 00:51:53:000 Kernel/(6332:6389): Se crea el proceso 1 en NEW
+[INFO] 00:51:53:004 Kernel/(6332:6336): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 00:51:53:004 Kernel/(6332:6336): Cola Ready FIFO: [1]
+[INFO] 00:51:53:004 Kernel/(6332:6334): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 00:51:53:552 Kernel/(6332:6392): Se crea el proceso 2 en NEW
+[INFO] 00:51:53:552 Kernel/(6332:6336): PID: 2 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 00:51:53:552 Kernel/(6332:6336): Cola Ready FIFO: [2]
+[INFO] 00:51:54:224 Kernel/(6332:6395): Se crea el proceso 3 en NEW
+[INFO] 00:51:54:224 Kernel/(6332:6336): PID: 3 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 00:51:54:224 Kernel/(6332:6336): Cola Ready FIFO: [2, 3]
+[INFO] 00:52:05:009 Kernel/(6332:6334): PID: 1 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 00:52:05:009 Kernel/(6332:6334): Cola Ready FIFO: [2, 3, 1]
+[INFO] 00:52:05:009 Kernel/(6332:6334): PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 00:52:07:011 Kernel/(6332:6334): PID: 2 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 00:52:07:011 Kernel/(6332:6334): Cola Ready FIFO: [3, 1, 2]
+[INFO] 00:52:07:011 Kernel/(6332:6334): PID: 3 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 00:52:09:013 Kernel/(6332:6334): PID: 3 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 00:52:09:013 Kernel/(6332:6334): Cola Ready FIFO: [1, 2, 3]
+[INFO] 00:52:09:013 Kernel/(6332:6334): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 00:52:11:014 Kernel/(6332:6334): PID: 1 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 00:52:11:015 Kernel/(6332:6334): Finaliza el proceso 1 - Motivo: SUCCESS
+[INFO] 00:52:11:015 Kernel/(6332:6334): PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 00:52:13:016 Kernel/(6332:6334): PID: 2 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 00:52:13:017 Kernel/(6332:6334): Cola Ready FIFO: [3, 2]
+[INFO] 00:52:13:017 Kernel/(6332:6334): PID: 3 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 00:52:15:018 Kernel/(6332:6334): PID: 3 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 00:52:15:018 Kernel/(6332:6334): Cola Ready FIFO: [2, 3]
+[INFO] 00:52:15:018 Kernel/(6332:6334): PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 00:52:17:019 Kernel/(6332:6334): PID: 2 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 00:52:17:019 Kernel/(6332:6334): Cola Ready FIFO: [3, 2]
+[INFO] 00:52:17:019 Kernel/(6332:6334): PID: 3 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 00:52:19:021 Kernel/(6332:6334): PID: 3 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 00:52:19:021 Kernel/(6332:6334): Cola Ready FIFO: [2, 3]
+[INFO] 00:52:19:021 Kernel/(6332:6334): PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 00:52:21:022 Kernel/(6332:6334): PID: 2 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 00:52:21:022 Kernel/(6332:6334): Cola Ready FIFO: [3, 2]
+[INFO] 00:52:21:022 Kernel/(6332:6334): PID: 3 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 00:52:23:023 Kernel/(6332:6334): PID: 3 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 00:52:23:023 Kernel/(6332:6334): Cola Ready FIFO: [2, 3]
+[INFO] 00:52:23:023 Kernel/(6332:6334): PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 00:52:25:024 Kernel/(6332:6334): PID: 2 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 00:52:25:024 Kernel/(6332:6334): Cola Ready FIFO: [3, 2]
+[INFO] 00:52:25:024 Kernel/(6332:6334): PID: 3 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 00:52:27:026 Kernel/(6332:6334): PID: 3 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 00:52:27:026 Kernel/(6332:6334): Cola Ready FIFO: [2, 3]
+[INFO] 00:52:27:026 Kernel/(6332:6334): PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 00:52:29:027 Kernel/(6332:6334): PID: 2 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 00:52:29:027 Kernel/(6332:6334): Cola Ready FIFO: [3, 2]
+[INFO] 00:52:29:027 Kernel/(6332:6334): PID: 3 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 00:52:31:029 Kernel/(6332:6334): PID: 3 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 00:52:31:029 Kernel/(6332:6334): Cola Ready FIFO: [2, 3]
+[INFO] 00:52:31:029 Kernel/(6332:6334): PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 00:52:33:031 Kernel/(6332:6334): PID: 2 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 00:52:33:031 Kernel/(6332:6334): Cola Ready FIFO: [3, 2]
+[INFO] 00:52:33:031 Kernel/(6332:6334): PID: 3 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 00:52:35:032 Kernel/(6332:6334): PID: 3 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 00:52:35:032 Kernel/(6332:6334): Cola Ready FIFO: [2, 3]
+[INFO] 00:52:35:032 Kernel/(6332:6334): PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 00:52:36:033 Kernel/(6332:6334): PID: 2 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 00:52:36:033 Kernel/(6332:6334): Cola Ready FIFO: [3, 2]
+[INFO] 00:52:36:033 Kernel/(6332:6334): PID: 3 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 00:52:37:034 Kernel/(6332:6334): PID: 3 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 00:52:37:034 Kernel/(6332:6334): Cola Ready FIFO: [2, 3]
+[INFO] 00:52:37:034 Kernel/(6332:6334): PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 00:52:38:035 Kernel/(6332:6334): PID: 2 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 00:52:38:036 Kernel/(6332:6334): Finaliza el proceso 2 - Motivo: SUCCESS
+[INFO] 00:52:38:036 Kernel/(6332:6334): PID: 3 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 00:52:39:037 Kernel/(6332:6334): PID: 3 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 00:52:39:038 Kernel/(6332:6334): Finaliza el proceso 3 - Motivo: SUCCESS
+[INFO] 00:54:33:997 Kernel/(6612:6623): Se crea el proceso 1 en NEW
+[INFO] 00:54:33:999 Kernel/(6612:6615): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 00:54:33:999 Kernel/(6612:6615): Cola Ready HRRN: [1]
+[INFO] 00:54:33:999 Kernel/(6612:6614): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 00:54:34:476 Kernel/(6612:6626): Se crea el proceso 2 en NEW
+[INFO] 00:54:34:477 Kernel/(6612:6615): PID: 2 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 00:54:34:477 Kernel/(6612:6615): Cola Ready HRRN: [2]
+[INFO] 00:54:35:201 Kernel/(6612:6629): Se crea el proceso 3 en NEW
+[INFO] 00:54:35:201 Kernel/(6612:6615): PID: 3 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 00:54:35:201 Kernel/(6612:6615): Cola Ready HRRN: [2, 3]
+[INFO] 00:54:46:006 Kernel/(6612:6614): PID: 1 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 00:54:46:006 Kernel/(6612:6614): Cola Ready HRRN: [2, 3, 1]
+[INFO] 00:54:46:007 Kernel/(6612:6614): PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 00:54:48:009 Kernel/(6612:6614): PID: 2 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 00:54:48:009 Kernel/(6612:6614): Cola Ready HRRN: [3, 1, 2]
+[INFO] 00:54:48:009 Kernel/(6612:6614): PID: 3 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 00:54:50:010 Kernel/(6612:6614): PID: 3 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 00:54:50:010 Kernel/(6612:6614): Cola Ready HRRN: [1, 2, 3]
+[INFO] 00:54:50:010 Kernel/(6612:6614): PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 00:54:52:012 Kernel/(6612:6614): PID: 2 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 00:54:52:012 Kernel/(6612:6614): Cola Ready HRRN: [1, 3, 2]
+[INFO] 00:54:52:012 Kernel/(6612:6614): PID: 3 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 00:54:54:013 Kernel/(6612:6614): PID: 3 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 00:54:54:013 Kernel/(6612:6614): Cola Ready HRRN: [1, 2, 3]
+[INFO] 00:54:54:013 Kernel/(6612:6614): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 00:54:56:014 Kernel/(6612:6614): PID: 1 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 00:54:56:015 Kernel/(6612:6614): Finaliza el proceso 1 - Motivo: SUCCESS
+[INFO] 00:54:56:015 Kernel/(6612:6614): PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 00:54:58:016 Kernel/(6612:6614): PID: 2 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 00:54:58:016 Kernel/(6612:6614): Cola Ready HRRN: [3, 2]
+[INFO] 00:54:58:016 Kernel/(6612:6614): PID: 3 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 00:55:00:019 Kernel/(6612:6614): PID: 3 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 00:55:00:019 Kernel/(6612:6614): Cola Ready HRRN: [2, 3]
+[INFO] 00:55:00:019 Kernel/(6612:6614): PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 00:55:02:021 Kernel/(6612:6614): PID: 2 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 00:55:02:021 Kernel/(6612:6614): Cola Ready HRRN: [3, 2]
+[INFO] 00:55:02:021 Kernel/(6612:6614): PID: 3 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 00:55:04:022 Kernel/(6612:6614): PID: 3 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 00:55:04:023 Kernel/(6612:6614): Cola Ready HRRN: [2, 3]
+[INFO] 00:55:04:023 Kernel/(6612:6614): PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 00:55:06:024 Kernel/(6612:6614): PID: 2 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 00:55:06:024 Kernel/(6612:6614): Cola Ready HRRN: [3, 2]
+[INFO] 00:55:06:024 Kernel/(6612:6614): PID: 3 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 00:55:08:025 Kernel/(6612:6614): PID: 3 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 00:55:08:025 Kernel/(6612:6614): Cola Ready HRRN: [2, 3]
+[INFO] 00:55:08:025 Kernel/(6612:6614): PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 00:55:10:028 Kernel/(6612:6614): PID: 2 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 00:55:10:028 Kernel/(6612:6614): Cola Ready HRRN: [3, 2]
+[INFO] 00:55:10:028 Kernel/(6612:6614): PID: 3 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 00:55:12:029 Kernel/(6612:6614): PID: 3 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 00:55:12:029 Kernel/(6612:6614): Cola Ready HRRN: [2, 3]
+[INFO] 00:55:12:029 Kernel/(6612:6614): PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 00:55:14:031 Kernel/(6612:6614): PID: 2 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 00:55:14:031 Kernel/(6612:6614): Cola Ready HRRN: [3, 2]
+[INFO] 00:55:14:031 Kernel/(6612:6614): PID: 3 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 00:55:16:032 Kernel/(6612:6614): PID: 3 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 00:55:16:032 Kernel/(6612:6614): Cola Ready HRRN: [2, 3]
+[INFO] 00:55:16:032 Kernel/(6612:6614): PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 00:55:17:033 Kernel/(6612:6614): PID: 2 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 00:55:17:033 Kernel/(6612:6614): Cola Ready HRRN: [3, 2]
+[INFO] 00:55:17:033 Kernel/(6612:6614): PID: 3 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 00:55:18:034 Kernel/(6612:6614): PID: 3 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 00:55:18:034 Kernel/(6612:6614): Cola Ready HRRN: [2, 3]
+[INFO] 00:55:18:034 Kernel/(6612:6614): PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 00:55:19:035 Kernel/(6612:6614): PID: 2 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 00:55:19:036 Kernel/(6612:6614): Finaliza el proceso 2 - Motivo: SUCCESS
+[INFO] 00:55:19:036 Kernel/(6612:6614): PID: 3 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 00:55:20:037 Kernel/(6612:6614): PID: 3 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 00:55:20:038 Kernel/(6612:6614): Finaliza el proceso 3 - Motivo: SUCCESS
+[INFO] 01:32:28:793 Kernel/(6917:6926): Se crea el proceso 1 en NEW
+[INFO] 01:32:28:793 Kernel/(6917:6921): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 01:32:28:793 Kernel/(6917:6921): Cola Ready HRRN: [1]
+[INFO] 01:32:28:793 Kernel/(6917:6920): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 01:32:28:794 Kernel/(6917:6920): PID: 1 - Wait: DISCO - Instancias: 0
+[INFO] 01:32:28:794 Kernel/(6917:6920): PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 01:32:28:794 Kernel/(6917:6920): PID: 1 - Bloqueado por: IO
+[INFO] 01:32:28:794 Kernel/(6917:6920): PID: 1 - Ejecuta IO: 10
+[INFO] 01:32:29:173 Kernel/(6917:6930): Se crea el proceso 2 en NEW
+[INFO] 01:32:29:173 Kernel/(6917:6921): PID: 2 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 01:32:29:173 Kernel/(6917:6921): Cola Ready HRRN: [2]
+[INFO] 01:32:29:173 Kernel/(6917:6920): PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[ERROR] 01:32:29:173 Kernel/(6917:6920): El recurso IMPRESORA no existe
+[INFO] 01:32:29:173 Kernel/(6917:6920): PID: 2 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 01:32:29:173 Kernel/(6917:6920): Finaliza el proceso 2 - Motivo: SUCCESS
+[INFO] 01:32:29:668 Kernel/(6917:6933): Se crea el proceso 3 en NEW
+[INFO] 01:32:29:668 Kernel/(6917:6921): PID: 3 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 01:32:29:669 Kernel/(6917:6921): Cola Ready HRRN: [3]
+[INFO] 01:32:29:669 Kernel/(6917:6920): PID: 3 - Estado Anterior: READY - Estado Actual: EXEC
+[ERROR] 01:32:29:669 Kernel/(6917:6920): El recurso SCANNER no existe
+[INFO] 01:32:29:669 Kernel/(6917:6920): PID: 3 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 01:32:29:669 Kernel/(6917:6920): Finaliza el proceso 3 - Motivo: SUCCESS
+[INFO] 01:32:38:795 Kernel/(6917:6927): PID: 1 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 01:32:38:795 Kernel/(6917:6927): Cola Ready HRRN: [1]
+[INFO] 01:32:38:795 Kernel/(6917:6920): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[ERROR] 01:32:38:795 Kernel/(6917:6920): El recurso IMPRESORA no existe
+[INFO] 01:32:38:795 Kernel/(6917:6920): PID: 1 - Signal: DISCO - Instancias: 1
+[INFO] 01:32:38:796 Kernel/(6917:6920): PID: 1 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 01:32:38:796 Kernel/(6917:6920): Finaliza el proceso 1 - Motivo: SUCCESS
+[INFO] 01:35:26:982 Kernel/(7240:7248): Se crea el proceso 1 en NEW
+[INFO] 01:35:26:984 Kernel/(7240:7243): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 01:35:26:984 Kernel/(7240:7243): Cola Ready FIFO: [1]
+[INFO] 01:35:26:984 Kernel/(7240:7242): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 01:35:26:985 Kernel/(7240:7242): PID: 1 - Wait: DISCO - Instancias: 0
+[INFO] 01:35:26:985 Kernel/(7240:7242): PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 01:35:26:985 Kernel/(7240:7242): PID: 1 - Bloqueado por: IO
+[INFO] 01:35:26:985 Kernel/(7240:7242): PID: 1 - Ejecuta IO: 10
+[INFO] 01:35:27:527 Kernel/(7240:7252): Se crea el proceso 2 en NEW
+[INFO] 01:35:27:527 Kernel/(7240:7243): PID: 2 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 01:35:27:527 Kernel/(7240:7243): Cola Ready FIFO: [2]
+[INFO] 01:35:27:527 Kernel/(7240:7242): PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 01:35:27:527 Kernel/(7240:7242): PID: 2 - Wait: IMPRESORA - Instancias: 0
+[INFO] 01:35:27:528 Kernel/(7240:7242): PID: 2 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 01:35:27:528 Kernel/(7240:7242): PID: 2 - Bloqueado por: IO
+[INFO] 01:35:27:528 Kernel/(7240:7242): PID: 2 - Ejecuta IO: 10
+[INFO] 01:35:28:107 Kernel/(7240:7256): Se crea el proceso 3 en NEW
+[INFO] 01:35:28:108 Kernel/(7240:7243): PID: 3 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 01:35:28:108 Kernel/(7240:7243): Cola Ready FIFO: [3]
+[INFO] 01:35:28:108 Kernel/(7240:7242): PID: 3 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 01:35:28:108 Kernel/(7240:7242): PID: 3 - Wait: SCANNER - Instancias: 0
+[INFO] 01:35:28:108 Kernel/(7240:7242): PID: 3 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 01:35:28:108 Kernel/(7240:7242): PID: 3 - Bloqueado por: IO
+[INFO] 01:35:28:108 Kernel/(7240:7242): PID: 3 - Ejecuta IO: 10
+[INFO] 01:35:36:986 Kernel/(7240:7249): PID: 1 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 01:35:36:986 Kernel/(7240:7249): Cola Ready FIFO: [1]
+[INFO] 01:35:36:986 Kernel/(7240:7242): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 01:35:36:987 Kernel/(7240:7242): PID: 1 - Wait: IMPRESORA - Instancias: -1
+[INFO] 01:35:36:987 Kernel/(7240:7242): PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 01:35:36:987 Kernel/(7240:7242): PID: 1 - Bloqueado por: IMPRESORA
+[INFO] 01:35:37:529 Kernel/(7240:7253): PID: 2 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 01:35:37:529 Kernel/(7240:7253): Cola Ready FIFO: [2]
+[INFO] 01:35:37:529 Kernel/(7240:7242): PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 01:35:37:530 Kernel/(7240:7242): PID: 2 - Wait: SCANNER - Instancias: -1
+[INFO] 01:35:37:530 Kernel/(7240:7242): PID: 2 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 01:35:37:530 Kernel/(7240:7242): PID: 2 - Bloqueado por: SCANNER
+[INFO] 01:35:38:109 Kernel/(7240:7257): PID: 3 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 01:35:38:109 Kernel/(7240:7257): Cola Ready FIFO: [3]
+[INFO] 01:35:38:109 Kernel/(7240:7242): PID: 3 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 01:35:38:109 Kernel/(7240:7242): PID: 3 - Wait: DISCO - Instancias: -1
+[INFO] 01:35:38:109 Kernel/(7240:7242): PID: 3 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 01:35:38:109 Kernel/(7240:7242): PID: 3 - Bloqueado por: DISCO
+[INFO] 01:36:58:590 Kernel/(7240:7260): Se crea el proceso 4 en NEW
+[INFO] 01:45:22:262 Kernel/(7484:7492): Se crea el proceso 1 en NEW
+[INFO] 01:45:22:262 Kernel/(7484:7487): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 01:45:22:262 Kernel/(7484:7487): Cola Ready FIFO: [1]
+[INFO] 01:45:22:262 Kernel/(7484:7486): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 01:45:22:262 Kernel/(7484:7486): PID: 1 - Wait: RA - Instancias: 0
+[INFO] 01:45:22:774 Kernel/(7484:7495): Se crea el proceso 2 en NEW
+[INFO] 01:45:22:774 Kernel/(7484:7487): PID: 2 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 01:45:22:774 Kernel/(7484:7487): Cola Ready FIFO: [2]
+[INFO] 01:45:23:287 Kernel/(7484:7498): Se crea el proceso 3 en NEW
+[INFO] 01:45:23:287 Kernel/(7484:7487): PID: 3 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 01:45:23:287 Kernel/(7484:7487): Cola Ready FIFO: [2, 3]
+[INFO] 01:45:25:265 Kernel/(7484:7486): PID: 1 - Crear Segmento - Id: 1 - Tamaño: 128
+[INFO] 01:45:25:265 Kernel/(7484:7486): PID: 1 - Signal: RB - Instancias: 1
+[INFO] 01:45:25:267 Kernel/(7484:7486): PID: 1 - Wait: RA - Instancias: -1
+[INFO] 01:45:25:267 Kernel/(7484:7486): PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 01:45:25:268 Kernel/(7484:7486): PID: 1 - Bloqueado por: RA
+[INFO] 01:45:25:268 Kernel/(7484:7486): PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 01:45:25:269 Kernel/(7484:7486): PID: 2 - Wait: RB - Instancias: 0
+[INFO] 01:45:27:272 Kernel/(7484:7486): PID: 2 - Crear Segmento - Id: 1 - Tamaño: 64
+[INFO] 01:45:27:272 Kernel/(7484:7486): PID: 2 - Crear Segmento - Id: 2 - Tamaño: 64
+[INFO] 01:45:27:273 Kernel/(7484:7486): PID: 2 - Crear Segmento - Id: 3 - Tamaño: 64
+[INFO] 01:45:27:273 Kernel/(7484:7486): PID: 2 - Crear Segmento - Id: 4 - Tamaño: 64
+[INFO] 01:45:27:274 Kernel/(7484:7486): PID: 2 - Crear Segmento - Id: 5 - Tamaño: 64
+[INFO] 01:45:27:275 Kernel/(7484:7486): PID: 2 - Crear Segmento - Id: 6 - Tamaño: 64
+[INFO] 01:45:27:275 Kernel/(7484:7486): PID: 2 - Crear Segmento - Id: 7 - Tamaño: 64
+[INFO] 01:45:27:276 Kernel/(7484:7486): PID: 2 - Crear Segmento - Id: 8 - Tamaño: 64
+[INFO] 01:45:30:278 Kernel/(7484:7486): PID: 2 - Signal: RA - Instancias: 0
+[INFO] 01:45:30:278 Kernel/(7484:7486): PID: 1 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 01:45:30:278 Kernel/(7484:7486): Cola Ready FIFO: [3, 1]
+[INFO] 01:45:30:279 Kernel/(7484:7486): PID: 2 - Wait: RB - Instancias: -1
+[INFO] 01:45:30:279 Kernel/(7484:7486): PID: 2 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 01:45:30:279 Kernel/(7484:7486): PID: 2 - Bloqueado por: RB
+[INFO] 01:45:30:279 Kernel/(7484:7486): PID: 3 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 01:45:30:279 Kernel/(7484:7486): PID: 3 - Wait: RC - Instancias: -1
+[INFO] 01:45:30:279 Kernel/(7484:7486): PID: 3 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 01:45:30:279 Kernel/(7484:7486): PID: 3 - Bloqueado por: RC
+[INFO] 01:45:30:279 Kernel/(7484:7486): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 01:45:30:280 Kernel/(7484:7486): PID: 1 - Eliminar Segmento - Id Segmento: 1
+[INFO] 01:45:32:282 Kernel/(7484:7486): PID: 1 - Signal: RB - Instancias: 0
+[INFO] 01:45:32:282 Kernel/(7484:7486): PID: 2 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 01:45:32:282 Kernel/(7484:7486): Cola Ready FIFO: [2]
+[INFO] 01:45:32:282 Kernel/(7484:7486): PID: 1 - Wait: RA - Instancias: -1
+[INFO] 01:45:32:283 Kernel/(7484:7486): PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 01:45:32:283 Kernel/(7484:7486): PID: 1 - Bloqueado por: RA
+[INFO] 01:45:32:283 Kernel/(7484:7486): PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 01:45:32:283 Kernel/(7484:7486): PID: 2 - Crear Segmento - Id: 9 - Tamaño: 64
+[INFO] 01:45:38:288 Kernel/(7484:7486): PID: 2 - Signal: RC - Instancias: 0
+[INFO] 01:45:38:288 Kernel/(7484:7486): PID: 3 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 01:45:38:288 Kernel/(7484:7486): Cola Ready FIFO: [3]
+[INFO] 01:45:38:289 Kernel/(7484:7486): PID: 2 - Wait: RB - Instancias: -1
+[INFO] 01:45:38:289 Kernel/(7484:7486): PID: 2 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 01:45:38:289 Kernel/(7484:7486): PID: 2 - Bloqueado por: RB
+[INFO] 01:45:38:289 Kernel/(7484:7486): PID: 3 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 01:45:38:290 Kernel/(7484:7486): PID: 3 - Crear Segmento - Id: 1 - Tamaño: 256
+[INFO] 01:45:40:291 Kernel/(7484:7486): PID: 3 - Signal: RB - Instancias: 0
+[INFO] 01:45:40:291 Kernel/(7484:7486): PID: 2 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 01:45:40:291 Kernel/(7484:7486): Cola Ready FIFO: [2]
+[INFO] 01:45:40:292 Kernel/(7484:7486): PID: 3 - Wait: RC - Instancias: -1
+[INFO] 01:45:40:292 Kernel/(7484:7486): PID: 3 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 01:45:40:292 Kernel/(7484:7486): PID: 3 - Bloqueado por: RC
+[INFO] 01:45:40:292 Kernel/(7484:7486): PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 01:45:42:294 Kernel/(7484:7486): PID: 2 - Eliminar Segmento - Id Segmento: 1
+[INFO] 01:45:44:296 Kernel/(7484:7486): PID: 2 - Eliminar Segmento - Id Segmento: 2
+[INFO] 01:45:44:296 Kernel/(7484:7486): PID: 2 - Eliminar Segmento - Id Segmento: 4
+[INFO] 01:45:44:297 Kernel/(7484:7486): PID: 2 - Eliminar Segmento - Id Segmento: 5
+[INFO] 01:45:44:297 Kernel/(7484:7486): PID: 2 - Signal: RC - Instancias: 0
+[INFO] 01:45:44:297 Kernel/(7484:7486): PID: 3 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 01:45:44:297 Kernel/(7484:7486): Cola Ready FIFO: [3]
+[INFO] 01:45:44:298 Kernel/(7484:7486): PID: 2 - Wait: RB - Instancias: -1
+[INFO] 01:45:44:298 Kernel/(7484:7486): PID: 2 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 01:45:44:298 Kernel/(7484:7486): PID: 2 - Bloqueado por: RB
+[INFO] 01:45:44:298 Kernel/(7484:7486): PID: 3 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 01:45:44:298 Kernel/(7484:7486): PID: 3 - Crear Segmento - Id: 2 - Tamaño: 128
+[INFO] 01:45:44:298 Kernel/(7484:7486): PID: 3 - Signal: RA - Instancias: 0
+[INFO] 01:45:44:298 Kernel/(7484:7486): PID: 1 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 01:45:44:298 Kernel/(7484:7486): Cola Ready FIFO: [1]
+[INFO] 01:45:44:299 Kernel/(7484:7486): PID: 3 - Signal: RB - Instancias: 0
+[INFO] 01:45:44:299 Kernel/(7484:7486): PID: 2 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 01:45:44:299 Kernel/(7484:7486): Cola Ready FIFO: [1, 2]
+[INFO] 01:45:44:299 Kernel/(7484:7486): PID: 3 - Signal: RC - Instancias: 1
+[INFO] 01:45:44:300 Kernel/(7484:7486): PID: 3 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 01:45:44:300 Kernel/(7484:7486): Finaliza el proceso 3 - Motivo: SUCCESS
+[INFO] 01:45:44:300 Kernel/(7484:7486): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 01:45:44:300 Kernel/(7484:7486): PID: 1 - Signal: RA - Instancias: 1
+[INFO] 01:45:44:300 Kernel/(7484:7486): PID: 1 - Signal: RA - Instancias: 2
+[INFO] 01:45:44:301 Kernel/(7484:7486): PID: 1 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 01:45:44:301 Kernel/(7484:7486): Finaliza el proceso 1 - Motivo: SUCCESS
+[INFO] 01:49:20:640 Kernel/(7597:7605): Se crea el proceso 1 en NEW
+[INFO] 01:49:20:641 Kernel/(7597:7600): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 01:49:20:641 Kernel/(7597:7600): Cola Ready FIFO: [1]
+[INFO] 01:49:20:641 Kernel/(7597:7599): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 01:49:20:642 Kernel/(7597:7599): PID: 1 - Wait: RB - Instancias: -1
+[INFO] 01:49:20:642 Kernel/(7597:7599): PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 01:49:20:642 Kernel/(7597:7599): PID: 1 - Bloqueado por: RB
+[INFO] 01:50:41:567 Kernel/(7622:7655): Se crea el proceso 1 en NEW
+[INFO] 01:50:41:568 Kernel/(7622:7626): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 01:50:41:568 Kernel/(7622:7626): Cola Ready FIFO: [1]
+[INFO] 01:50:41:568 Kernel/(7622:7625): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 01:50:41:568 Kernel/(7622:7625): PID: 1 - Wait: RA - Instancias: 0
+[INFO] 01:50:44:571 Kernel/(7622:7625): PID: 1 - Crear Segmento - Id: 1 - Tamaño: 128
+[INFO] 01:50:44:571 Kernel/(7622:7625): PID: 1 - Signal: RB - Instancias: 1
+[INFO] 01:50:44:572 Kernel/(7622:7625): PID: 1 - Wait: RA - Instancias: -1
+[INFO] 01:50:44:572 Kernel/(7622:7625): PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 01:50:44:572 Kernel/(7622:7625): PID: 1 - Bloqueado por: RA
+[INFO] 01:51:02:984 Kernel/(7622:7659): Se crea el proceso 2 en NEW
+[INFO] 01:51:02:984 Kernel/(7622:7626): PID: 2 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 01:51:02:984 Kernel/(7622:7626): Cola Ready FIFO: [2]
+[INFO] 01:51:02:984 Kernel/(7622:7625): PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 01:51:02:985 Kernel/(7622:7625): PID: 2 - Wait: RB - Instancias: 0
+[INFO] 01:51:04:986 Kernel/(7622:7625): PID: 2 - Crear Segmento - Id: 1 - Tamaño: 64
+[INFO] 01:51:04:987 Kernel/(7622:7625): PID: 2 - Crear Segmento - Id: 2 - Tamaño: 64
+[INFO] 01:51:04:991 Kernel/(7622:7625): PID: 2 - Crear Segmento - Id: 3 - Tamaño: 64
+[INFO] 01:51:04:992 Kernel/(7622:7625): PID: 2 - Crear Segmento - Id: 4 - Tamaño: 64
+[INFO] 01:51:04:993 Kernel/(7622:7625): PID: 2 - Crear Segmento - Id: 5 - Tamaño: 64
+[INFO] 01:51:04:993 Kernel/(7622:7625): PID: 2 - Crear Segmento - Id: 6 - Tamaño: 64
+[INFO] 01:51:04:994 Kernel/(7622:7625): PID: 2 - Crear Segmento - Id: 7 - Tamaño: 64
+[INFO] 01:51:04:995 Kernel/(7622:7625): PID: 2 - Crear Segmento - Id: 8 - Tamaño: 64
+[INFO] 01:51:08:000 Kernel/(7622:7625): PID: 2 - Signal: RA - Instancias: 0
+[INFO] 01:51:08:000 Kernel/(7622:7625): PID: 1 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 01:51:08:000 Kernel/(7622:7625): Cola Ready FIFO: [1]
+[INFO] 01:51:08:001 Kernel/(7622:7625): PID: 2 - Wait: RB - Instancias: -1
+[INFO] 01:51:08:001 Kernel/(7622:7625): PID: 2 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 01:51:08:001 Kernel/(7622:7625): PID: 2 - Bloqueado por: RB
+[INFO] 01:51:08:001 Kernel/(7622:7625): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 01:51:08:001 Kernel/(7622:7625): PID: 1 - Eliminar Segmento - Id Segmento: 1
+[INFO] 01:51:10:002 Kernel/(7622:7625): PID: 1 - Signal: RB - Instancias: 0
+[INFO] 01:51:10:002 Kernel/(7622:7625): PID: 2 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 01:51:10:002 Kernel/(7622:7625): Cola Ready FIFO: [2]
+[INFO] 01:51:10:002 Kernel/(7622:7625): PID: 1 - Wait: RA - Instancias: -1
+[INFO] 01:51:10:002 Kernel/(7622:7625): PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 01:51:10:002 Kernel/(7622:7625): PID: 1 - Bloqueado por: RA
+[INFO] 01:51:10:002 Kernel/(7622:7625): PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 01:51:10:003 Kernel/(7622:7625): PID: 2 - Crear Segmento - Id: 9 - Tamaño: 64
+[INFO] 01:51:16:006 Kernel/(7622:7625): PID: 2 - Signal: RC - Instancias: 1
+[INFO] 01:51:16:007 Kernel/(7622:7625): PID: 2 - Wait: RB - Instancias: -1
+[INFO] 01:51:16:007 Kernel/(7622:7625): PID: 2 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 01:51:16:007 Kernel/(7622:7625): PID: 2 - Bloqueado por: RB
+[INFO] 01:58:41:945 Kernel/(7895:7903): Se crea el proceso 1 en NEW
+[INFO] 01:58:41:946 Kernel/(7895:7898): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 01:58:41:946 Kernel/(7895:7898): Cola Ready FIFO: [1]
+[INFO] 01:58:41:946 Kernel/(7895:7897): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 01:58:41:949 Kernel/(7895:7897): PID: 1 - Wait: RA - Instancias: 0
+[INFO] 01:58:43:479 Kernel/(7895:7906): Se crea el proceso 2 en NEW
+[INFO] 01:58:43:481 Kernel/(7895:7898): PID: 2 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 01:58:43:481 Kernel/(7895:7898): Cola Ready FIFO: [2]
+[INFO] 01:58:44:951 Kernel/(7895:7897): PID: 1 - Crear Segmento - Id: 1 - Tamaño: 128
+[INFO] 01:58:44:951 Kernel/(7895:7897): PID: 1 - Signal: RB - Instancias: 1
+[INFO] 01:58:44:952 Kernel/(7895:7897): PID: 1 - Wait: RA - Instancias: -1
+[INFO] 01:58:44:952 Kernel/(7895:7897): PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 01:58:44:952 Kernel/(7895:7897): PID: 1 - Bloqueado por: RA
+[INFO] 01:58:44:952 Kernel/(7895:7897): PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 01:58:44:952 Kernel/(7895:7897): PID: 2 - Wait: RB - Instancias: 0
+[INFO] 01:58:46:955 Kernel/(7895:7897): PID: 2 - Crear Segmento - Id: 1 - Tamaño: 64
+[INFO] 01:58:46:956 Kernel/(7895:7897): PID: 2 - Crear Segmento - Id: 2 - Tamaño: 64
+[INFO] 01:58:46:957 Kernel/(7895:7897): PID: 2 - Crear Segmento - Id: 3 - Tamaño: 64
+[INFO] 01:58:46:957 Kernel/(7895:7897): PID: 2 - Crear Segmento - Id: 4 - Tamaño: 64
+[INFO] 01:58:46:958 Kernel/(7895:7897): PID: 2 - Crear Segmento - Id: 5 - Tamaño: 64
+[INFO] 01:58:46:959 Kernel/(7895:7897): PID: 2 - Crear Segmento - Id: 6 - Tamaño: 64
+[INFO] 01:58:46:960 Kernel/(7895:7897): PID: 2 - Crear Segmento - Id: 7 - Tamaño: 64
+[INFO] 01:58:46:960 Kernel/(7895:7897): PID: 2 - Crear Segmento - Id: 8 - Tamaño: 64
+[INFO] 01:58:49:963 Kernel/(7895:7897): PID: 2 - Signal: RA - Instancias: 0
+[INFO] 01:58:49:963 Kernel/(7895:7897): PID: 1 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 01:58:49:963 Kernel/(7895:7897): Cola Ready FIFO: [1]
+[INFO] 01:58:49:965 Kernel/(7895:7897): PID: 2 - Wait: RB - Instancias: -1
+[INFO] 01:58:49:965 Kernel/(7895:7897): PID: 2 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 01:58:49:965 Kernel/(7895:7897): PID: 2 - Bloqueado por: RB
+[INFO] 01:58:49:965 Kernel/(7895:7897): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 01:58:49:966 Kernel/(7895:7897): PID: 1 - Eliminar Segmento - Id Segmento: 1
+[INFO] 01:58:51:967 Kernel/(7895:7897): PID: 1 - Signal: RB - Instancias: 0
+[INFO] 01:58:51:967 Kernel/(7895:7897): PID: 2 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 01:58:51:967 Kernel/(7895:7897): Cola Ready FIFO: [2]
+[INFO] 01:58:51:968 Kernel/(7895:7897): PID: 1 - Wait: RA - Instancias: -1
+[INFO] 01:58:51:968 Kernel/(7895:7897): PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 01:58:51:968 Kernel/(7895:7897): PID: 1 - Bloqueado por: RA
+[INFO] 01:58:51:968 Kernel/(7895:7897): PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 01:58:51:969 Kernel/(7895:7897): PID: 2 - Crear Segmento - Id: 9 - Tamaño: 64
+[INFO] 01:58:57:972 Kernel/(7895:7897): PID: 2 - Signal: RC - Instancias: 1
+[INFO] 01:58:57:972 Kernel/(7895:7897): PID: 2 - Wait: RB - Instancias: -1
+[INFO] 01:58:57:972 Kernel/(7895:7897): PID: 2 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 01:58:57:972 Kernel/(7895:7897): PID: 2 - Bloqueado por: RB
+[INFO] 02:15:33:423 Kernel/(8078:8087): Se crea el proceso 1 en NEW
+[INFO] 02:15:33:425 Kernel/(8078:8081): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 02:15:33:425 Kernel/(8078:8081): Cola Ready FIFO: [1]
+[INFO] 02:15:33:425 Kernel/(8078:8080): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 02:15:33:426 Kernel/(8078:8080): PID: 1 - Wait: RA - Instancias: 0
+[INFO] 02:15:36:427 Kernel/(8078:8090): Se crea el proceso 2 en NEW
+[INFO] 02:15:36:428 Kernel/(8078:8081): PID: 2 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 02:15:36:428 Kernel/(8078:8081): Cola Ready FIFO: [2]
+[INFO] 02:15:36:428 Kernel/(8078:8080): PID: 1 - Crear Segmento - Id: 1 - Tamaño: 128
+[INFO] 02:15:36:428 Kernel/(8078:8080): PID: 1 - Signal: RB - Instancias: 1
+[INFO] 02:15:36:428 Kernel/(8078:8080): PID: 1 - Wait: RA - Instancias: -1
+[INFO] 02:15:36:428 Kernel/(8078:8080): PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 02:15:36:428 Kernel/(8078:8080): PID: 1 - Bloqueado por: RA
+[INFO] 02:15:36:428 Kernel/(8078:8080): PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 02:15:36:429 Kernel/(8078:8080): PID: 2 - Wait: RB - Instancias: 0
+[INFO] 02:15:38:432 Kernel/(8078:8080): PID: 2 - Crear Segmento - Id: 1 - Tamaño: 64
+[INFO] 02:15:38:434 Kernel/(8078:8080): PID: 2 - Crear Segmento - Id: 2 - Tamaño: 64
+[INFO] 02:15:38:439 Kernel/(8078:8080): PID: 2 - Crear Segmento - Id: 3 - Tamaño: 64
+[INFO] 02:15:38:447 Kernel/(8078:8080): PID: 2 - Crear Segmento - Id: 4 - Tamaño: 64
+[INFO] 02:15:38:450 Kernel/(8078:8080): PID: 2 - Crear Segmento - Id: 5 - Tamaño: 64
+[INFO] 02:15:38:451 Kernel/(8078:8080): PID: 2 - Crear Segmento - Id: 6 - Tamaño: 64
+[INFO] 02:15:38:468 Kernel/(8078:8080): PID: 2 - Crear Segmento - Id: 7 - Tamaño: 64
+[INFO] 02:15:38:474 Kernel/(8078:8080): PID: 2 - Crear Segmento - Id: 8 - Tamaño: 64
+[INFO] 02:15:41:477 Kernel/(8078:8080): PID: 2 - Signal: RA - Instancias: 0
+[INFO] 02:15:41:477 Kernel/(8078:8080): PID: 1 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 02:15:41:477 Kernel/(8078:8080): Cola Ready FIFO: [1]
+[INFO] 02:15:41:478 Kernel/(8078:8080): PID: 2 - Wait: RB - Instancias: -1
+[INFO] 02:15:41:478 Kernel/(8078:8080): PID: 2 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 02:15:41:478 Kernel/(8078:8080): PID: 2 - Bloqueado por: RB
+[INFO] 02:15:41:478 Kernel/(8078:8080): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 02:15:41:478 Kernel/(8078:8080): PID: 1 - Eliminar Segmento - Id Segmento: 1
+[INFO] 02:15:43:480 Kernel/(8078:8080): PID: 1 - Signal: RB - Instancias: 0
+[INFO] 02:15:43:480 Kernel/(8078:8080): PID: 2 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 02:15:43:480 Kernel/(8078:8080): Cola Ready FIFO: [2]
+[INFO] 02:15:43:481 Kernel/(8078:8080): PID: 1 - Wait: RA - Instancias: -1
+[INFO] 02:15:43:481 Kernel/(8078:8080): PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 02:15:43:481 Kernel/(8078:8080): PID: 1 - Bloqueado por: RA
+[INFO] 02:15:43:481 Kernel/(8078:8080): PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 02:15:43:482 Kernel/(8078:8080): PID: 2 - Crear Segmento - Id: 9 - Tamaño: 64
+[INFO] 02:15:49:485 Kernel/(8078:8080): PID: 2 - Signal: RC - Instancias: 1
+[INFO] 02:15:49:485 Kernel/(8078:8080): PID: 2 - Wait: RB - Instancias: -1
+[INFO] 02:15:49:485 Kernel/(8078:8080): PID: 2 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 02:15:49:485 Kernel/(8078:8080): PID: 2 - Bloqueado por: RB
+[INFO] 02:16:00:171 Kernel/(8078:8093): Se crea el proceso 3 en NEW
+[INFO] 02:16:00:171 Kernel/(8078:8081): PID: 3 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 02:16:00:171 Kernel/(8078:8081): Cola Ready FIFO: [3]
+[INFO] 02:16:00:171 Kernel/(8078:8080): PID: 3 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 02:16:00:171 Kernel/(8078:8080): PID: 3 - Wait: RC - Instancias: 0
+[INFO] 02:16:00:171 Kernel/(8078:8080): PID: 3 - Crear Segmento - Id: 1 - Tamaño: 256
+[INFO] 02:16:02:173 Kernel/(8078:8080): PID: 3 - Signal: RB - Instancias: 0
+[INFO] 02:16:02:173 Kernel/(8078:8080): PID: 2 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 02:16:02:173 Kernel/(8078:8080): Cola Ready FIFO: [2]
+[INFO] 02:16:02:174 Kernel/(8078:8080): PID: 3 - Wait: RC - Instancias: -1
+[INFO] 02:16:02:174 Kernel/(8078:8080): PID: 3 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 02:16:02:174 Kernel/(8078:8080): PID: 3 - Bloqueado por: RC
+[INFO] 02:16:02:174 Kernel/(8078:8080): PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 02:16:04:176 Kernel/(8078:8080): PID: 2 - Eliminar Segmento - Id Segmento: 1
+[INFO] 02:16:06:177 Kernel/(8078:8080): PID: 2 - Eliminar Segmento - Id Segmento: 2
+[INFO] 02:16:06:178 Kernel/(8078:8080): PID: 2 - Eliminar Segmento - Id Segmento: 4
+[INFO] 02:16:06:179 Kernel/(8078:8080): PID: 2 - Eliminar Segmento - Id Segmento: 5
+[INFO] 02:16:06:179 Kernel/(8078:8080): PID: 2 - Signal: RC - Instancias: 0
+[INFO] 02:16:06:179 Kernel/(8078:8080): PID: 3 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 02:16:06:180 Kernel/(8078:8080): Cola Ready FIFO: [3]
+[INFO] 02:16:06:180 Kernel/(8078:8080): PID: 2 - Wait: RB - Instancias: -1
+[INFO] 02:16:06:180 Kernel/(8078:8080): PID: 2 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 02:16:06:180 Kernel/(8078:8080): PID: 2 - Bloqueado por: RB
+[INFO] 02:16:06:180 Kernel/(8078:8080): PID: 3 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 02:16:06:180 Kernel/(8078:8080): PID: 3 - Crear Segmento - Id: 2 - Tamaño: 128
+[INFO] 02:16:06:180 Kernel/(8078:8080): PID: 3 - Signal: RA - Instancias: 0
+[INFO] 02:16:06:180 Kernel/(8078:8080): PID: 1 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 02:16:06:181 Kernel/(8078:8080): Cola Ready FIFO: [1]
+[INFO] 02:16:06:181 Kernel/(8078:8080): PID: 3 - Signal: RB - Instancias: 0
+[INFO] 02:16:06:181 Kernel/(8078:8080): PID: 2 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 02:16:06:181 Kernel/(8078:8080): Cola Ready FIFO: [1, 2]
+[INFO] 02:16:06:181 Kernel/(8078:8080): PID: 3 - Signal: RC - Instancias: 1
+[INFO] 02:16:06:182 Kernel/(8078:8080): PID: 3 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 02:16:06:182 Kernel/(8078:8080): Finaliza el proceso 3 - Motivo: SUCCESS
+[INFO] 02:16:06:182 Kernel/(8078:8080): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 02:16:06:182 Kernel/(8078:8080): PID: 1 - Signal: RA - Instancias: 1
+[INFO] 02:16:06:182 Kernel/(8078:8080): PID: 1 - Signal: RA - Instancias: 2
+[INFO] 02:16:06:183 Kernel/(8078:8080): PID: 1 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 02:16:06:183 Kernel/(8078:8080): Finaliza el proceso 1 - Motivo: SUCCESS
+[INFO] 02:22:02:212 Kernel/(8365:8376): Se crea el proceso 1 en NEW
+[INFO] 02:22:02:213 Kernel/(8365:8369): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 02:22:02:213 Kernel/(8365:8369): Cola Ready FIFO: [1]
+[INFO] 02:22:02:213 Kernel/(8365:8368): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 02:22:02:214 Kernel/(8365:8368): PID: 1 - Wait: RA - Instancias: 0
+[INFO] 02:22:03:352 Kernel/(8365:8379): Se crea el proceso 2 en NEW
+[INFO] 02:22:03:352 Kernel/(8365:8369): PID: 2 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 02:22:03:352 Kernel/(8365:8369): Cola Ready FIFO: [2]
+[INFO] 02:22:05:218 Kernel/(8365:8382): Se crea el proceso 3 en NEW
+[INFO] 02:22:05:218 Kernel/(8365:8369): PID: 3 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 02:22:05:220 Kernel/(8365:8369): Cola Ready FIFO: [2, 3]
+[INFO] 02:22:05:221 Kernel/(8365:8368): PID: 1 - Crear Segmento - Id: 1 - Tamaño: 128
+[INFO] 02:22:05:222 Kernel/(8365:8368): PID: 1 - Signal: RB - Instancias: 1
+[INFO] 02:22:05:223 Kernel/(8365:8368): PID: 1 - Wait: RA - Instancias: -1
+[INFO] 02:22:05:224 Kernel/(8365:8368): PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 02:22:05:224 Kernel/(8365:8368): PID: 1 - Bloqueado por: RA
+[INFO] 02:22:05:224 Kernel/(8365:8368): PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 02:22:05:225 Kernel/(8365:8368): PID: 2 - Wait: RB - Instancias: 0
+[INFO] 02:22:07:229 Kernel/(8365:8368): PID: 2 - Crear Segmento - Id: 1 - Tamaño: 64
+[INFO] 02:22:07:231 Kernel/(8365:8368): PID: 2 - Crear Segmento - Id: 2 - Tamaño: 64
+[INFO] 02:22:07:232 Kernel/(8365:8368): PID: 2 - Crear Segmento - Id: 3 - Tamaño: 64
+[INFO] 02:22:07:233 Kernel/(8365:8368): PID: 2 - Crear Segmento - Id: 4 - Tamaño: 64
+[INFO] 02:22:07:234 Kernel/(8365:8368): PID: 2 - Crear Segmento - Id: 5 - Tamaño: 64
+[INFO] 02:22:07:236 Kernel/(8365:8368): PID: 2 - Crear Segmento - Id: 6 - Tamaño: 64
+[INFO] 02:22:07:240 Kernel/(8365:8368): PID: 2 - Crear Segmento - Id: 7 - Tamaño: 64
+[INFO] 02:22:07:242 Kernel/(8365:8368): PID: 2 - Crear Segmento - Id: 8 - Tamaño: 64
+[INFO] 02:22:10:244 Kernel/(8365:8368): PID: 2 - Signal: RA - Instancias: 0
+[INFO] 02:22:10:244 Kernel/(8365:8368): PID: 1 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 02:22:10:244 Kernel/(8365:8368): Cola Ready FIFO: [3, 1]
+[INFO] 02:22:10:245 Kernel/(8365:8368): PID: 2 - Wait: RB - Instancias: -1
+[INFO] 02:22:10:245 Kernel/(8365:8368): PID: 2 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 02:22:10:245 Kernel/(8365:8368): PID: 2 - Bloqueado por: RB
+[INFO] 02:22:10:245 Kernel/(8365:8368): PID: 3 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 02:22:10:246 Kernel/(8365:8368): PID: 3 - Wait: RC - Instancias: -1
+[INFO] 02:22:10:246 Kernel/(8365:8368): PID: 3 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 02:22:10:246 Kernel/(8365:8368): PID: 3 - Bloqueado por: RC
+[INFO] 02:22:10:246 Kernel/(8365:8368): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 02:22:10:246 Kernel/(8365:8368): PID: 1 - Eliminar Segmento - Id Segmento: 1
+[INFO] 02:22:12:249 Kernel/(8365:8368): PID: 1 - Signal: RB - Instancias: 0
+[INFO] 02:22:12:249 Kernel/(8365:8368): PID: 2 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 02:22:12:249 Kernel/(8365:8368): Cola Ready FIFO: [2]
+[INFO] 02:22:12:249 Kernel/(8365:8368): PID: 1 - Wait: RA - Instancias: -1
+[INFO] 02:22:12:249 Kernel/(8365:8368): PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 02:22:12:249 Kernel/(8365:8368): PID: 1 - Bloqueado por: RA
+[INFO] 02:22:12:249 Kernel/(8365:8368): PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 02:22:12:251 Kernel/(8365:8368): PID: 2 - Crear Segmento - Id: 9 - Tamaño: 64
+[INFO] 02:22:18:256 Kernel/(8365:8368): PID: 2 - Signal: RC - Instancias: 0
+[INFO] 02:22:18:256 Kernel/(8365:8368): PID: 3 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 02:22:18:256 Kernel/(8365:8368): Cola Ready FIFO: [3]
+[INFO] 02:22:18:257 Kernel/(8365:8368): PID: 2 - Wait: RB - Instancias: -1
+[INFO] 02:22:18:257 Kernel/(8365:8368): PID: 2 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 02:22:18:257 Kernel/(8365:8368): PID: 2 - Bloqueado por: RB
+[INFO] 02:22:18:257 Kernel/(8365:8368): PID: 3 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 02:22:18:257 Kernel/(8365:8368): PID: 3 - Crear Segmento - Id: 1 - Tamaño: 256
+[INFO] 02:22:20:258 Kernel/(8365:8368): PID: 3 - Signal: RB - Instancias: 0
+[INFO] 02:22:20:258 Kernel/(8365:8368): PID: 2 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 02:22:20:258 Kernel/(8365:8368): Cola Ready FIFO: [2]
+[INFO] 02:22:20:259 Kernel/(8365:8368): PID: 3 - Wait: RC - Instancias: -1
+[INFO] 02:22:20:259 Kernel/(8365:8368): PID: 3 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 02:22:20:259 Kernel/(8365:8368): PID: 3 - Bloqueado por: RC
+[INFO] 02:22:20:259 Kernel/(8365:8368): PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 02:22:22:261 Kernel/(8365:8368): PID: 2 - Eliminar Segmento - Id Segmento: 1
+[INFO] 02:22:24:263 Kernel/(8365:8368): PID: 2 - Eliminar Segmento - Id Segmento: 2
+[INFO] 02:22:24:264 Kernel/(8365:8368): PID: 2 - Eliminar Segmento - Id Segmento: 4
+[INFO] 02:22:24:264 Kernel/(8365:8368): PID: 2 - Eliminar Segmento - Id Segmento: 5
+[INFO] 02:22:24:265 Kernel/(8365:8368): PID: 2 - Signal: RC - Instancias: 0
+[INFO] 02:22:24:265 Kernel/(8365:8368): PID: 3 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 02:22:24:265 Kernel/(8365:8368): Cola Ready FIFO: [3]
+[INFO] 02:22:24:266 Kernel/(8365:8368): PID: 2 - Wait: RB - Instancias: -1
+[INFO] 02:22:24:266 Kernel/(8365:8368): PID: 2 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 02:22:24:266 Kernel/(8365:8368): PID: 2 - Bloqueado por: RB
+[INFO] 02:22:24:266 Kernel/(8365:8368): PID: 3 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 02:22:24:266 Kernel/(8365:8368): PID: 3 - Crear Segmento - Id: 2 - Tamaño: 128
+[INFO] 02:22:24:266 Kernel/(8365:8368): PID: 3 - Signal: RA - Instancias: 0
+[INFO] 02:22:24:266 Kernel/(8365:8368): PID: 1 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 02:22:24:266 Kernel/(8365:8368): Cola Ready FIFO: [1]
+[INFO] 02:22:24:267 Kernel/(8365:8368): PID: 3 - Signal: RB - Instancias: 0
+[INFO] 02:22:24:267 Kernel/(8365:8368): PID: 2 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 02:22:24:267 Kernel/(8365:8368): Cola Ready FIFO: [1, 2]
+[INFO] 02:22:24:267 Kernel/(8365:8368): PID: 3 - Signal: RC - Instancias: 1
+[INFO] 02:22:24:269 Kernel/(8365:8368): PID: 3 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 02:22:24:269 Kernel/(8365:8368): Finaliza el proceso 3 - Motivo: SUCCESS
+[INFO] 02:22:24:270 Kernel/(8365:8368): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 02:22:24:270 Kernel/(8365:8368): PID: 1 - Signal: RA - Instancias: 1
+[INFO] 02:22:24:270 Kernel/(8365:8368): PID: 1 - Signal: RA - Instancias: 2
+[INFO] 02:22:24:271 Kernel/(8365:8368): PID: 1 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 02:22:24:271 Kernel/(8365:8368): Finaliza el proceso 1 - Motivo: SUCCESS
+[INFO] 03:13:16:306 Kernel/(9958:9966): Se crea el proceso 1 en NEW
+[INFO] 03:13:16:309 Kernel/(9958:9962): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 03:13:16:309 Kernel/(9958:9962): Cola Ready FIFO: [1]
+[INFO] 03:13:16:310 Kernel/(9958:9961): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:13:16:310 Kernel/(9958:9961): PID: 1 - Wait: RA - Instancias: 0
+[INFO] 03:13:17:282 Kernel/(9958:9969): Se crea el proceso 2 en NEW
+[INFO] 03:13:17:283 Kernel/(9958:9962): PID: 2 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 03:13:17:283 Kernel/(9958:9962): Cola Ready FIFO: [2]
+[INFO] 03:13:18:300 Kernel/(9958:9972): Se crea el proceso 3 en NEW
+[INFO] 03:13:18:300 Kernel/(9958:9962): PID: 3 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 03:13:18:300 Kernel/(9958:9962): Cola Ready FIFO: [2, 3]
+[INFO] 03:13:19:314 Kernel/(9958:9961): PID: 1 - Crear Segmento - Id: 1 - Tamaño: 128
+[INFO] 03:13:19:315 Kernel/(9958:9961): PID: 1 - Signal: RB - Instancias: 1
+[INFO] 03:13:19:316 Kernel/(9958:9961): PID: 1 - Wait: RA - Instancias: -1
+[INFO] 03:13:19:316 Kernel/(9958:9961): PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 03:13:19:316 Kernel/(9958:9961): PID: 1 - Bloqueado por: RA
+[INFO] 03:13:19:316 Kernel/(9958:9961): PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:13:19:316 Kernel/(9958:9961): PID: 2 - Wait: RB - Instancias: 0
+[INFO] 03:13:21:319 Kernel/(9958:9961): PID: 2 - Crear Segmento - Id: 1 - Tamaño: 64
+[INFO] 03:13:21:320 Kernel/(9958:9961): PID: 2 - Crear Segmento - Id: 2 - Tamaño: 64
+[INFO] 03:13:21:320 Kernel/(9958:9961): PID: 2 - Crear Segmento - Id: 3 - Tamaño: 64
+[INFO] 03:13:21:321 Kernel/(9958:9961): PID: 2 - Crear Segmento - Id: 4 - Tamaño: 64
+[INFO] 03:13:21:322 Kernel/(9958:9961): PID: 2 - Crear Segmento - Id: 5 - Tamaño: 64
+[INFO] 03:13:21:322 Kernel/(9958:9961): PID: 2 - Crear Segmento - Id: 6 - Tamaño: 64
+[INFO] 03:13:21:323 Kernel/(9958:9961): PID: 2 - Crear Segmento - Id: 7 - Tamaño: 64
+[INFO] 03:13:21:323 Kernel/(9958:9961): PID: 2 - Crear Segmento - Id: 8 - Tamaño: 64
+[INFO] 03:13:24:325 Kernel/(9958:9961): PID: 2 - Signal: RA - Instancias: 0
+[INFO] 03:13:24:325 Kernel/(9958:9961): PID: 1 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 03:13:24:325 Kernel/(9958:9961): Cola Ready FIFO: [3, 1]
+[INFO] 03:13:24:325 Kernel/(9958:9961): PID: 2 - Wait: RB - Instancias: -1
+[INFO] 03:13:24:326 Kernel/(9958:9961): PID: 2 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 03:13:24:326 Kernel/(9958:9961): PID: 2 - Bloqueado por: RB
+[INFO] 03:13:24:326 Kernel/(9958:9961): PID: 3 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:13:24:326 Kernel/(9958:9961): PID: 3 - Wait: RC - Instancias: -1
+[INFO] 03:13:24:326 Kernel/(9958:9961): PID: 3 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 03:13:24:326 Kernel/(9958:9961): PID: 3 - Bloqueado por: RC
+[INFO] 03:13:24:326 Kernel/(9958:9961): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:13:24:326 Kernel/(9958:9961): PID: 1 - Eliminar Segmento - Id Segmento: 1
+[INFO] 03:13:26:327 Kernel/(9958:9961): PID: 1 - Signal: RB - Instancias: 0
+[INFO] 03:13:26:327 Kernel/(9958:9961): PID: 2 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 03:13:26:327 Kernel/(9958:9961): Cola Ready FIFO: [2]
+[INFO] 03:13:26:328 Kernel/(9958:9961): PID: 1 - Wait: RA - Instancias: -1
+[INFO] 03:13:26:328 Kernel/(9958:9961): PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 03:13:26:328 Kernel/(9958:9961): PID: 1 - Bloqueado por: RA
+[INFO] 03:13:26:328 Kernel/(9958:9961): PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:13:26:329 Kernel/(9958:9961): PID: 2 - Crear Segmento - Id: 9 - Tamaño: 64
+[INFO] 03:13:32:332 Kernel/(9958:9961): PID: 2 - Signal: RC - Instancias: 0
+[INFO] 03:13:32:332 Kernel/(9958:9961): PID: 3 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 03:13:32:332 Kernel/(9958:9961): Cola Ready FIFO: [3]
+[INFO] 03:13:32:333 Kernel/(9958:9961): PID: 2 - Wait: RB - Instancias: -1
+[INFO] 03:13:32:333 Kernel/(9958:9961): PID: 2 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 03:13:32:333 Kernel/(9958:9961): PID: 2 - Bloqueado por: RB
+[INFO] 03:13:32:333 Kernel/(9958:9961): PID: 3 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:13:32:333 Kernel/(9958:9961): PID: 3 - Crear Segmento - Id: 1 - Tamaño: 256
+[INFO] 03:13:34:335 Kernel/(9958:9961): PID: 3 - Signal: RB - Instancias: 0
+[INFO] 03:13:34:335 Kernel/(9958:9961): PID: 2 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 03:13:34:335 Kernel/(9958:9961): Cola Ready FIFO: [2]
+[INFO] 03:13:34:335 Kernel/(9958:9961): PID: 3 - Wait: RC - Instancias: -1
+[INFO] 03:13:34:335 Kernel/(9958:9961): PID: 3 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 03:13:34:335 Kernel/(9958:9961): PID: 3 - Bloqueado por: RC
+[INFO] 03:13:34:335 Kernel/(9958:9961): PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:13:36:338 Kernel/(9958:9961): PID: 2 - Eliminar Segmento - Id Segmento: 1
+[INFO] 03:13:38:340 Kernel/(9958:9961): PID: 2 - Eliminar Segmento - Id Segmento: 2
+[INFO] 03:13:38:341 Kernel/(9958:9961): PID: 2 - Eliminar Segmento - Id Segmento: 4
+[INFO] 03:13:38:342 Kernel/(9958:9961): PID: 2 - Eliminar Segmento - Id Segmento: 5
+[INFO] 03:13:38:342 Kernel/(9958:9961): PID: 2 - Signal: RC - Instancias: 0
+[INFO] 03:13:38:342 Kernel/(9958:9961): PID: 3 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 03:13:38:342 Kernel/(9958:9961): Cola Ready FIFO: [3]
+[INFO] 03:13:38:343 Kernel/(9958:9961): PID: 2 - Wait: RB - Instancias: -1
+[INFO] 03:13:38:343 Kernel/(9958:9961): PID: 2 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 03:13:38:343 Kernel/(9958:9961): PID: 2 - Bloqueado por: RB
+[INFO] 03:13:38:343 Kernel/(9958:9961): PID: 3 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:13:38:344 Kernel/(9958:9961): PID: 3 - Crear Segmento - Id: 2 - Tamaño: 128
+[INFO] 03:13:38:344 Kernel/(9958:9961): PID: 3 - Signal: RA - Instancias: 0
+[INFO] 03:13:38:344 Kernel/(9958:9961): PID: 1 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 03:13:38:344 Kernel/(9958:9961): Cola Ready FIFO: [1]
+[INFO] 03:13:38:344 Kernel/(9958:9961): PID: 3 - Signal: RB - Instancias: 0
+[INFO] 03:13:38:344 Kernel/(9958:9961): PID: 2 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 03:13:38:344 Kernel/(9958:9961): Cola Ready FIFO: [1, 2]
+[INFO] 03:13:38:344 Kernel/(9958:9961): PID: 3 - Signal: RC - Instancias: 1
+[INFO] 03:13:38:344 Kernel/(9958:9961): PID: 3 - Signal: RC - Instancias: 2
+[INFO] 03:13:38:345 Kernel/(9958:9961): PID: 3 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 03:13:38:345 Kernel/(9958:9961): Finaliza el proceso 3 - Motivo: SUCCESS
+[INFO] 03:13:38:345 Kernel/(9958:9961): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:13:38:346 Kernel/(9958:9961): PID: 1 - Signal: RA - Instancias: 1
+[INFO] 03:13:38:346 Kernel/(9958:9961): PID: 1 - Signal: RA - Instancias: 2
+[INFO] 03:13:38:346 Kernel/(9958:9961): PID: 1 - Signal: RA - Instancias: 3
+[INFO] 03:13:38:347 Kernel/(9958:9961): PID: 1 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 03:13:38:347 Kernel/(9958:9961): Finaliza el proceso 1 - Motivo: SUCCESS
+[INFO] 03:13:38:347 Kernel/(9958:9961): PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:13:38:347 Kernel/(9958:9961): PID: 2 - Signal: RB - Instancias: 1
+[INFO] 03:13:38:347 Kernel/(9958:9961): PID: 2 - Signal: RB - Instancias: 2
+[INFO] 03:13:38:347 Kernel/(9958:9961): PID: 2 - Signal: RB - Instancias: 3
+[INFO] 03:13:38:347 Kernel/(9958:9961): PID: 2 - Signal: RB - Instancias: 4
+[INFO] 03:13:38:348 Kernel/(9958:9961): PID: 2 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 03:13:38:349 Kernel/(9958:9961): Finaliza el proceso 2 - Motivo: SUCCESS
+[INFO] 03:15:18:653 Kernel/(10023:10031): Se crea el proceso 1 en NEW
+[INFO] 03:15:18:653 Kernel/(10023:10027): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 03:15:18:653 Kernel/(10023:10027): Cola Ready FIFO: [1]
+[INFO] 03:15:18:653 Kernel/(10023:10026): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:15:18:654 Kernel/(10023:10026): PID: 1 - Wait: RA - Instancias: 0
+[INFO] 03:15:19:398 Kernel/(10023:10034): Se crea el proceso 2 en NEW
+[INFO] 03:15:19:398 Kernel/(10023:10027): PID: 2 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 03:15:19:398 Kernel/(10023:10027): Cola Ready FIFO: [2]
+[INFO] 03:15:20:130 Kernel/(10023:10037): Se crea el proceso 3 en NEW
+[INFO] 03:15:20:131 Kernel/(10023:10027): PID: 3 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 03:15:20:131 Kernel/(10023:10027): Cola Ready FIFO: [2, 3]
+[INFO] 03:15:21:656 Kernel/(10023:10026): PID: 1 - Crear Segmento - Id: 1 - Tamaño: 128
+[INFO] 03:15:21:656 Kernel/(10023:10026): PID: 1 - Signal: RB - Instancias: 1
+[INFO] 03:15:21:657 Kernel/(10023:10026): PID: 1 - Wait: RA - Instancias: -1
+[INFO] 03:15:21:657 Kernel/(10023:10026): PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 03:15:21:657 Kernel/(10023:10026): PID: 1 - Bloqueado por: RA
+[INFO] 03:15:21:657 Kernel/(10023:10026): PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:15:21:658 Kernel/(10023:10026): PID: 2 - Wait: RB - Instancias: 0
+[INFO] 03:15:23:663 Kernel/(10023:10026): PID: 2 - Crear Segmento - Id: 1 - Tamaño: 64
+[INFO] 03:15:23:664 Kernel/(10023:10026): PID: 2 - Crear Segmento - Id: 2 - Tamaño: 64
+[INFO] 03:15:23:664 Kernel/(10023:10026): PID: 2 - Crear Segmento - Id: 3 - Tamaño: 64
+[INFO] 03:15:23:665 Kernel/(10023:10026): PID: 2 - Crear Segmento - Id: 4 - Tamaño: 64
+[INFO] 03:15:23:666 Kernel/(10023:10026): PID: 2 - Crear Segmento - Id: 5 - Tamaño: 64
+[INFO] 03:15:23:666 Kernel/(10023:10026): PID: 2 - Crear Segmento - Id: 6 - Tamaño: 64
+[INFO] 03:15:23:667 Kernel/(10023:10026): PID: 2 - Crear Segmento - Id: 7 - Tamaño: 64
+[INFO] 03:15:23:667 Kernel/(10023:10026): PID: 2 - Crear Segmento - Id: 8 - Tamaño: 64
+[INFO] 03:15:26:669 Kernel/(10023:10026): PID: 2 - Signal: RA - Instancias: 0
+[INFO] 03:15:26:669 Kernel/(10023:10026): PID: 1 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 03:15:26:670 Kernel/(10023:10026): Cola Ready FIFO: [3, 1]
+[INFO] 03:15:26:670 Kernel/(10023:10026): PID: 2 - Wait: RB - Instancias: -1
+[INFO] 03:15:26:670 Kernel/(10023:10026): PID: 2 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 03:15:26:670 Kernel/(10023:10026): PID: 2 - Bloqueado por: RB
+[INFO] 03:15:26:670 Kernel/(10023:10026): PID: 3 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:15:26:670 Kernel/(10023:10026): PID: 3 - Wait: RC - Instancias: -1
+[INFO] 03:15:26:670 Kernel/(10023:10026): PID: 3 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 03:15:26:670 Kernel/(10023:10026): PID: 3 - Bloqueado por: RC
+[INFO] 03:15:26:670 Kernel/(10023:10026): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:15:26:671 Kernel/(10023:10026): PID: 1 - Eliminar Segmento - Id Segmento: 1
+[INFO] 03:15:28:672 Kernel/(10023:10026): PID: 1 - Signal: RB - Instancias: 0
+[INFO] 03:15:28:672 Kernel/(10023:10026): PID: 2 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 03:15:28:672 Kernel/(10023:10026): Cola Ready FIFO: [2]
+[INFO] 03:15:28:673 Kernel/(10023:10026): PID: 1 - Wait: RA - Instancias: -1
+[INFO] 03:15:28:673 Kernel/(10023:10026): PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 03:15:28:673 Kernel/(10023:10026): PID: 1 - Bloqueado por: RA
+[INFO] 03:15:28:673 Kernel/(10023:10026): PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:15:28:674 Kernel/(10023:10026): PID: 2 - Crear Segmento - Id: 9 - Tamaño: 64
+[INFO] 03:15:34:677 Kernel/(10023:10026): PID: 2 - Signal: RC - Instancias: 0
+[INFO] 03:15:34:677 Kernel/(10023:10026): PID: 3 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 03:15:34:677 Kernel/(10023:10026): Cola Ready FIFO: [3]
+[INFO] 03:15:34:678 Kernel/(10023:10026): PID: 2 - Wait: RB - Instancias: -1
+[INFO] 03:15:34:678 Kernel/(10023:10026): PID: 2 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 03:15:34:678 Kernel/(10023:10026): PID: 2 - Bloqueado por: RB
+[INFO] 03:15:34:678 Kernel/(10023:10026): PID: 3 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:15:34:678 Kernel/(10023:10026): PID: 3 - Crear Segmento - Id: 1 - Tamaño: 256
+[INFO] 03:15:36:679 Kernel/(10023:10026): PID: 3 - Signal: RB - Instancias: 0
+[INFO] 03:15:36:679 Kernel/(10023:10026): PID: 2 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 03:15:36:679 Kernel/(10023:10026): Cola Ready FIFO: [2]
+[INFO] 03:15:36:680 Kernel/(10023:10026): PID: 3 - Wait: RC - Instancias: -1
+[INFO] 03:15:36:680 Kernel/(10023:10026): PID: 3 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 03:15:36:680 Kernel/(10023:10026): PID: 3 - Bloqueado por: RC
+[INFO] 03:15:36:680 Kernel/(10023:10026): PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:15:38:682 Kernel/(10023:10026): PID: 2 - Eliminar Segmento - Id Segmento: 1
+[INFO] 03:15:40:685 Kernel/(10023:10026): PID: 2 - Eliminar Segmento - Id Segmento: 2
+[INFO] 03:15:40:685 Kernel/(10023:10026): PID: 2 - Eliminar Segmento - Id Segmento: 4
+[INFO] 03:15:40:686 Kernel/(10023:10026): PID: 2 - Eliminar Segmento - Id Segmento: 5
+[INFO] 03:15:40:686 Kernel/(10023:10026): PID: 2 - Signal: RC - Instancias: 0
+[INFO] 03:15:40:686 Kernel/(10023:10026): PID: 3 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 03:15:40:686 Kernel/(10023:10026): Cola Ready FIFO: [3]
+[INFO] 03:15:40:687 Kernel/(10023:10026): PID: 2 - Wait: RB - Instancias: -1
+[INFO] 03:15:40:687 Kernel/(10023:10026): PID: 2 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 03:15:40:687 Kernel/(10023:10026): PID: 2 - Bloqueado por: RB
+[INFO] 03:15:40:687 Kernel/(10023:10026): PID: 3 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:15:40:687 Kernel/(10023:10026): PID: 3 - Crear Segmento - Id: 2 - Tamaño: 128
+[INFO] 03:15:40:687 Kernel/(10023:10026): PID: 3 - Signal: RA - Instancias: 0
+[INFO] 03:15:40:687 Kernel/(10023:10026): PID: 1 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 03:15:40:687 Kernel/(10023:10026): Cola Ready FIFO: [1]
+[INFO] 03:15:40:688 Kernel/(10023:10026): PID: 3 - Signal: RB - Instancias: 0
+[INFO] 03:15:40:688 Kernel/(10023:10026): PID: 2 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 03:15:40:688 Kernel/(10023:10026): Cola Ready FIFO: [1, 2]
+[INFO] 03:15:40:688 Kernel/(10023:10026): PID: 3 - Signal: RC - Instancias: 1
+[INFO] 03:15:40:688 Kernel/(10023:10026): PID: 3 - Signal: RC - Instancias: 2
+[INFO] 03:15:40:689 Kernel/(10023:10026): PID: 3 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 03:15:40:690 Kernel/(10023:10026): Finaliza el proceso 3 - Motivo: SUCCESS
+[INFO] 03:15:40:690 Kernel/(10023:10026): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:15:40:690 Kernel/(10023:10026): PID: 1 - Signal: RA - Instancias: 1
+[INFO] 03:15:40:690 Kernel/(10023:10026): PID: 1 - Signal: RA - Instancias: 2
+[INFO] 03:15:40:690 Kernel/(10023:10026): PID: 1 - Signal: RA - Instancias: 3
+[INFO] 03:15:40:692 Kernel/(10023:10026): PID: 1 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 03:15:40:692 Kernel/(10023:10026): Finaliza el proceso 1 - Motivo: SUCCESS
+[INFO] 03:15:40:692 Kernel/(10023:10026): PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:15:40:692 Kernel/(10023:10026): PID: 2 - Signal: RB - Instancias: 1
+[INFO] 03:15:40:692 Kernel/(10023:10026): PID: 2 - Signal: RB - Instancias: 2
+[INFO] 03:15:40:692 Kernel/(10023:10026): PID: 2 - Signal: RB - Instancias: 3
+[INFO] 03:15:40:692 Kernel/(10023:10026): PID: 2 - Signal: RB - Instancias: 4
+[INFO] 03:15:40:693 Kernel/(10023:10026): PID: 2 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 03:15:40:693 Kernel/(10023:10026): Finaliza el proceso 2 - Motivo: SUCCESS
+[INFO] 03:18:38:103 Kernel/(10130:10138): Se crea el proceso 1 en NEW
+[INFO] 03:18:38:103 Kernel/(10130:10134): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 03:18:38:103 Kernel/(10130:10134): Cola Ready FIFO: [1]
+[INFO] 03:18:38:104 Kernel/(10130:10132): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:18:38:104 Kernel/(10130:10132): PID: 1 - Wait: RA - Instancias: 0
+[INFO] 03:18:39:022 Kernel/(10130:10141): Se crea el proceso 2 en NEW
+[INFO] 03:18:39:022 Kernel/(10130:10134): PID: 2 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 03:18:39:022 Kernel/(10130:10134): Cola Ready FIFO: [2]
+[INFO] 03:18:39:904 Kernel/(10130:10144): Se crea el proceso 3 en NEW
+[INFO] 03:18:39:904 Kernel/(10130:10134): PID: 3 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 03:18:39:904 Kernel/(10130:10134): Cola Ready FIFO: [2, 3]
+[INFO] 03:18:41:109 Kernel/(10130:10132): PID: 1 - Crear Segmento - Id: 1 - Tamaño: 128
+[INFO] 03:18:41:109 Kernel/(10130:10132): PID: 1 - Signal: RB - Instancias: 1
+[INFO] 03:18:41:110 Kernel/(10130:10132): PID: 1 - Wait: RA - Instancias: -1
+[INFO] 03:18:41:110 Kernel/(10130:10132): PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 03:18:41:110 Kernel/(10130:10132): PID: 1 - Bloqueado por: RA
+[INFO] 03:18:41:110 Kernel/(10130:10132): PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:18:41:110 Kernel/(10130:10132): PID: 2 - Wait: RB - Instancias: 0
+[INFO] 03:18:43:111 Kernel/(10130:10132): PID: 2 - Crear Segmento - Id: 1 - Tamaño: 64
+[INFO] 03:18:43:112 Kernel/(10130:10132): PID: 2 - Crear Segmento - Id: 2 - Tamaño: 64
+[INFO] 03:18:43:113 Kernel/(10130:10132): PID: 2 - Crear Segmento - Id: 3 - Tamaño: 64
+[INFO] 03:18:43:113 Kernel/(10130:10132): PID: 2 - Crear Segmento - Id: 4 - Tamaño: 64
+[INFO] 03:18:43:114 Kernel/(10130:10132): PID: 2 - Crear Segmento - Id: 5 - Tamaño: 64
+[INFO] 03:18:43:115 Kernel/(10130:10132): PID: 2 - Crear Segmento - Id: 6 - Tamaño: 64
+[INFO] 03:18:43:116 Kernel/(10130:10132): PID: 2 - Crear Segmento - Id: 7 - Tamaño: 64
+[INFO] 03:18:43:117 Kernel/(10130:10132): PID: 2 - Crear Segmento - Id: 8 - Tamaño: 64
+[INFO] 03:18:46:119 Kernel/(10130:10132): PID: 2 - Signal: RA - Instancias: 0
+[INFO] 03:18:46:119 Kernel/(10130:10132): PID: 1 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 03:18:46:119 Kernel/(10130:10132): Cola Ready FIFO: [3, 1]
+[INFO] 03:18:46:120 Kernel/(10130:10132): PID: 2 - Wait: RB - Instancias: -1
+[INFO] 03:18:46:120 Kernel/(10130:10132): PID: 2 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 03:18:46:120 Kernel/(10130:10132): PID: 2 - Bloqueado por: RB
+[INFO] 03:18:46:120 Kernel/(10130:10132): PID: 3 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:18:46:120 Kernel/(10130:10132): PID: 3 - Wait: RC - Instancias: -1
+[INFO] 03:18:46:120 Kernel/(10130:10132): PID: 3 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 03:18:46:120 Kernel/(10130:10132): PID: 3 - Bloqueado por: RC
+[INFO] 03:18:46:120 Kernel/(10130:10132): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:18:46:120 Kernel/(10130:10132): PID: 1 - Eliminar Segmento - Id Segmento: 1
+[INFO] 03:18:48:122 Kernel/(10130:10132): PID: 1 - Signal: RB - Instancias: 0
+[INFO] 03:18:48:122 Kernel/(10130:10132): PID: 2 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 03:18:48:122 Kernel/(10130:10132): Cola Ready FIFO: [2]
+[INFO] 03:18:48:122 Kernel/(10130:10132): PID: 1 - Wait: RA - Instancias: -1
+[INFO] 03:18:48:122 Kernel/(10130:10132): PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 03:18:48:122 Kernel/(10130:10132): PID: 1 - Bloqueado por: RA
+[INFO] 03:18:48:122 Kernel/(10130:10132): PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:18:48:123 Kernel/(10130:10132): PID: 2 - Crear Segmento - Id: 9 - Tamaño: 64
+[INFO] 03:18:54:126 Kernel/(10130:10132): PID: 2 - Signal: RC - Instancias: 0
+[INFO] 03:18:54:126 Kernel/(10130:10132): PID: 3 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 03:18:54:126 Kernel/(10130:10132): Cola Ready FIFO: [3]
+[INFO] 03:18:54:126 Kernel/(10130:10132): PID: 2 - Wait: RB - Instancias: -1
+[INFO] 03:18:54:126 Kernel/(10130:10132): PID: 2 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 03:18:54:126 Kernel/(10130:10132): PID: 2 - Bloqueado por: RB
+[INFO] 03:18:54:126 Kernel/(10130:10132): PID: 3 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:18:54:127 Kernel/(10130:10132): PID: 3 - Crear Segmento - Id: 1 - Tamaño: 256
+[INFO] 03:18:56:128 Kernel/(10130:10132): PID: 3 - Signal: RB - Instancias: 0
+[INFO] 03:18:56:128 Kernel/(10130:10132): PID: 2 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 03:18:56:128 Kernel/(10130:10132): Cola Ready FIFO: [2]
+[INFO] 03:18:56:129 Kernel/(10130:10132): PID: 3 - Wait: RC - Instancias: -1
+[INFO] 03:18:56:129 Kernel/(10130:10132): PID: 3 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 03:18:56:129 Kernel/(10130:10132): PID: 3 - Bloqueado por: RC
+[INFO] 03:18:56:129 Kernel/(10130:10132): PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:21:52:553 Kernel/(10210:10221): Se crea el proceso 1 en NEW
+[INFO] 03:21:52:554 Kernel/(10210:10214): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 03:21:52:554 Kernel/(10210:10214): Cola Ready FIFO: [1]
+[INFO] 03:21:52:554 Kernel/(10210:10213): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:21:52:555 Kernel/(10210:10213): PID: 1 - Wait: RA - Instancias: 0
+[INFO] 03:21:53:191 Kernel/(10210:10224): Se crea el proceso 2 en NEW
+[INFO] 03:21:53:192 Kernel/(10210:10214): PID: 2 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 03:21:53:192 Kernel/(10210:10214): Cola Ready FIFO: [2]
+[INFO] 03:21:53:818 Kernel/(10210:10227): Se crea el proceso 3 en NEW
+[INFO] 03:21:53:818 Kernel/(10210:10214): PID: 3 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 03:21:53:818 Kernel/(10210:10214): Cola Ready FIFO: [2, 3]
+[INFO] 03:21:55:559 Kernel/(10210:10213): PID: 1 - Crear Segmento - Id: 1 - Tamaño: 128
+[INFO] 03:21:55:562 Kernel/(10210:10213): PID: 1 - Signal: RB - Instancias: 1
+[INFO] 03:21:55:564 Kernel/(10210:10213): PID: 1 - Wait: RA - Instancias: -1
+[INFO] 03:21:55:565 Kernel/(10210:10213): PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 03:21:55:565 Kernel/(10210:10213): PID: 1 - Bloqueado por: RA
+[INFO] 03:21:55:565 Kernel/(10210:10213): PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:21:55:570 Kernel/(10210:10213): PID: 2 - Wait: RB - Instancias: 0
+[INFO] 03:21:57:577 Kernel/(10210:10213): PID: 2 - Crear Segmento - Id: 1 - Tamaño: 64
+[INFO] 03:21:57:581 Kernel/(10210:10213): PID: 2 - Crear Segmento - Id: 2 - Tamaño: 64
+[INFO] 03:21:57:583 Kernel/(10210:10213): PID: 2 - Crear Segmento - Id: 3 - Tamaño: 64
+[INFO] 03:21:57:585 Kernel/(10210:10213): PID: 2 - Crear Segmento - Id: 4 - Tamaño: 64
+[INFO] 03:21:57:589 Kernel/(10210:10213): PID: 2 - Crear Segmento - Id: 5 - Tamaño: 64
+[INFO] 03:21:57:590 Kernel/(10210:10213): PID: 2 - Crear Segmento - Id: 6 - Tamaño: 64
+[INFO] 03:21:57:595 Kernel/(10210:10213): PID: 2 - Crear Segmento - Id: 7 - Tamaño: 64
+[INFO] 03:21:57:605 Kernel/(10210:10213): PID: 2 - Crear Segmento - Id: 8 - Tamaño: 64
+[INFO] 03:22:00:615 Kernel/(10210:10213): PID: 2 - Signal: RA - Instancias: 0
+[INFO] 03:22:00:615 Kernel/(10210:10213): PID: 1 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 03:22:00:615 Kernel/(10210:10213): Cola Ready FIFO: [3, 1]
+[INFO] 03:22:00:616 Kernel/(10210:10213): PID: 2 - Wait: RB - Instancias: -1
+[INFO] 03:22:00:616 Kernel/(10210:10213): PID: 2 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 03:22:00:616 Kernel/(10210:10213): PID: 2 - Bloqueado por: RB
+[INFO] 03:22:00:616 Kernel/(10210:10213): PID: 3 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:22:00:617 Kernel/(10210:10213): PID: 3 - Wait: RC - Instancias: -1
+[INFO] 03:22:00:617 Kernel/(10210:10213): PID: 3 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 03:22:00:617 Kernel/(10210:10213): PID: 3 - Bloqueado por: RC
+[INFO] 03:22:00:617 Kernel/(10210:10213): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:22:00:617 Kernel/(10210:10213): PID: 1 - Eliminar Segmento - Id Segmento: 1
+[INFO] 03:22:02:619 Kernel/(10210:10213): PID: 1 - Signal: RB - Instancias: 0
+[INFO] 03:22:02:619 Kernel/(10210:10213): PID: 2 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 03:22:02:619 Kernel/(10210:10213): Cola Ready FIFO: [2]
+[INFO] 03:22:02:619 Kernel/(10210:10213): PID: 1 - Wait: RA - Instancias: -1
+[INFO] 03:22:02:619 Kernel/(10210:10213): PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 03:22:02:619 Kernel/(10210:10213): PID: 1 - Bloqueado por: RA
+[INFO] 03:22:02:619 Kernel/(10210:10213): PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:22:02:620 Kernel/(10210:10213): PID: 2 - Crear Segmento - Id: 9 - Tamaño: 64
+[INFO] 03:22:08:624 Kernel/(10210:10213): PID: 2 - Signal: RC - Instancias: 0
+[INFO] 03:22:08:624 Kernel/(10210:10213): PID: 3 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 03:22:08:624 Kernel/(10210:10213): Cola Ready FIFO: [3]
+[INFO] 03:22:08:625 Kernel/(10210:10213): PID: 2 - Wait: RB - Instancias: -1
+[INFO] 03:22:08:625 Kernel/(10210:10213): PID: 2 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 03:22:08:625 Kernel/(10210:10213): PID: 2 - Bloqueado por: RB
+[INFO] 03:22:08:625 Kernel/(10210:10213): PID: 3 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:22:08:625 Kernel/(10210:10213): Compactación: Esperando Fin de Operaciones de FS
+[INFO] 03:22:08:625 Kernel/(10210:10213): Compactación: Se solicitó compactación
+[ERROR] 03:23:09:676 Kernel/(10210:10213): Error en la compactacion
+[INFO] 03:28:32:690 Kernel/(10353:10361): Se crea el proceso 1 en NEW
+[INFO] 03:28:32:692 Kernel/(10353:10356): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 03:28:32:692 Kernel/(10353:10356): Cola Ready FIFO: [1]
+[INFO] 03:28:32:692 Kernel/(10353:10355): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:28:32:693 Kernel/(10353:10355): PID: 1 - Wait: RA - Instancias: 0
+[INFO] 03:28:34:220 Kernel/(10353:10365): Se crea el proceso 2 en NEW
+[INFO] 03:28:34:221 Kernel/(10353:10356): PID: 2 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 03:28:34:221 Kernel/(10353:10356): Cola Ready FIFO: [2]
+[INFO] 03:28:35:700 Kernel/(10353:10368): Se crea el proceso 3 en NEW
+[INFO] 03:28:35:701 Kernel/(10353:10356): PID: 3 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 03:28:35:701 Kernel/(10353:10356): Cola Ready FIFO: [2, 3]
+[INFO] 03:28:35:708 Kernel/(10353:10355): PID: 1 - Crear Segmento - Id: 1 - Tamaño: 128
+[INFO] 03:28:35:708 Kernel/(10353:10355): PID: 1 - Signal: RB - Instancias: 1
+[INFO] 03:28:35:708 Kernel/(10353:10355): PID: 1 - Wait: RA - Instancias: -1
+[INFO] 03:28:35:708 Kernel/(10353:10355): PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 03:28:35:708 Kernel/(10353:10355): PID: 1 - Bloqueado por: RA
+[INFO] 03:28:35:708 Kernel/(10353:10355): PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:28:35:709 Kernel/(10353:10355): PID: 2 - Wait: RB - Instancias: 0
+[INFO] 03:28:37:727 Kernel/(10353:10355): PID: 2 - Crear Segmento - Id: 1 - Tamaño: 64
+[INFO] 03:28:37:738 Kernel/(10353:10355): PID: 2 - Crear Segmento - Id: 2 - Tamaño: 64
+[INFO] 03:28:37:741 Kernel/(10353:10355): PID: 2 - Crear Segmento - Id: 3 - Tamaño: 64
+[INFO] 03:28:37:743 Kernel/(10353:10355): PID: 2 - Crear Segmento - Id: 4 - Tamaño: 64
+[INFO] 03:28:37:746 Kernel/(10353:10355): PID: 2 - Crear Segmento - Id: 5 - Tamaño: 64
+[INFO] 03:28:37:750 Kernel/(10353:10355): PID: 2 - Crear Segmento - Id: 6 - Tamaño: 64
+[INFO] 03:28:37:752 Kernel/(10353:10355): PID: 2 - Crear Segmento - Id: 7 - Tamaño: 64
+[INFO] 03:28:37:763 Kernel/(10353:10355): PID: 2 - Crear Segmento - Id: 8 - Tamaño: 64
+[INFO] 03:28:40:772 Kernel/(10353:10355): PID: 2 - Signal: RA - Instancias: 0
+[INFO] 03:28:40:772 Kernel/(10353:10355): PID: 1 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 03:28:40:772 Kernel/(10353:10355): Cola Ready FIFO: [3, 1]
+[INFO] 03:28:40:773 Kernel/(10353:10355): PID: 2 - Wait: RB - Instancias: -1
+[INFO] 03:28:40:773 Kernel/(10353:10355): PID: 2 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 03:28:40:773 Kernel/(10353:10355): PID: 2 - Bloqueado por: RB
+[INFO] 03:28:40:773 Kernel/(10353:10355): PID: 3 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:28:40:774 Kernel/(10353:10355): PID: 3 - Wait: RC - Instancias: -1
+[INFO] 03:28:40:774 Kernel/(10353:10355): PID: 3 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 03:28:40:774 Kernel/(10353:10355): PID: 3 - Bloqueado por: RC
+[INFO] 03:28:40:774 Kernel/(10353:10355): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:28:40:790 Kernel/(10353:10355): PID: 1 - Eliminar Segmento - Id Segmento: 1
+[INFO] 03:28:42:799 Kernel/(10353:10355): PID: 1 - Signal: RB - Instancias: 0
+[INFO] 03:28:42:799 Kernel/(10353:10355): PID: 2 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 03:28:42:799 Kernel/(10353:10355): Cola Ready FIFO: [2]
+[INFO] 03:28:42:800 Kernel/(10353:10355): PID: 1 - Wait: RA - Instancias: -1
+[INFO] 03:28:42:800 Kernel/(10353:10355): PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 03:28:42:800 Kernel/(10353:10355): PID: 1 - Bloqueado por: RA
+[INFO] 03:28:42:800 Kernel/(10353:10355): PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:28:42:810 Kernel/(10353:10355): PID: 2 - Crear Segmento - Id: 9 - Tamaño: 64
+[INFO] 03:28:48:830 Kernel/(10353:10355): PID: 2 - Signal: RC - Instancias: 0
+[INFO] 03:28:48:830 Kernel/(10353:10355): PID: 3 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 03:28:48:831 Kernel/(10353:10355): Cola Ready FIFO: [3]
+[INFO] 03:28:48:835 Kernel/(10353:10355): PID: 2 - Wait: RB - Instancias: -1
+[INFO] 03:28:48:836 Kernel/(10353:10355): PID: 2 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 03:28:48:837 Kernel/(10353:10355): PID: 2 - Bloqueado por: RB
+[INFO] 03:28:48:837 Kernel/(10353:10355): PID: 3 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:28:48:856 Kernel/(10353:10355): Compactación: Esperando Fin de Operaciones de FS
+[INFO] 03:28:48:856 Kernel/(10353:10355): Compactación: Se solicitó compactación
+[ERROR] 03:29:50:641 Kernel/(10353:10355): Error en la compactacion
+[INFO] 03:35:31:337 Kernel/(10515:10526): Se crea el proceso 1 en NEW
+[INFO] 03:35:31:339 Kernel/(10515:10518): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 03:35:31:339 Kernel/(10515:10518): Cola Ready FIFO: [1]
+[INFO] 03:35:31:339 Kernel/(10515:10517): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:35:31:341 Kernel/(10515:10517): PID: 1 - Wait: RA - Instancias: 0
+[INFO] 03:35:32:270 Kernel/(10515:10529): Se crea el proceso 2 en NEW
+[INFO] 03:35:32:271 Kernel/(10515:10518): PID: 2 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 03:35:32:271 Kernel/(10515:10518): Cola Ready FIFO: [2]
+[INFO] 03:35:34:363 Kernel/(10515:10532): Se crea el proceso 3 en NEW
+[INFO] 03:35:34:363 Kernel/(10515:10518): PID: 3 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 03:35:34:363 Kernel/(10515:10518): Cola Ready FIFO: [2, 3]
+[INFO] 03:35:34:378 Kernel/(10515:10517): PID: 1 - Crear Segmento - Id: 1 - Tamaño: 128
+[INFO] 03:35:34:378 Kernel/(10515:10517): PID: 1 - Signal: RB - Instancias: 1
+[INFO] 03:35:34:379 Kernel/(10515:10517): PID: 1 - Wait: RA - Instancias: -1
+[INFO] 03:35:34:379 Kernel/(10515:10517): PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 03:35:34:379 Kernel/(10515:10517): PID: 1 - Bloqueado por: RA
+[INFO] 03:35:34:379 Kernel/(10515:10517): PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:35:34:379 Kernel/(10515:10517): PID: 2 - Wait: RB - Instancias: 0
+[INFO] 03:35:36:406 Kernel/(10515:10517): PID: 2 - Crear Segmento - Id: 1 - Tamaño: 64
+[INFO] 03:35:36:424 Kernel/(10515:10517): PID: 2 - Crear Segmento - Id: 2 - Tamaño: 64
+[INFO] 03:35:36:433 Kernel/(10515:10517): PID: 2 - Crear Segmento - Id: 3 - Tamaño: 64
+[INFO] 03:35:36:447 Kernel/(10515:10517): PID: 2 - Crear Segmento - Id: 4 - Tamaño: 64
+[INFO] 03:35:36:458 Kernel/(10515:10517): PID: 2 - Crear Segmento - Id: 5 - Tamaño: 64
+[INFO] 03:35:36:482 Kernel/(10515:10517): PID: 2 - Crear Segmento - Id: 6 - Tamaño: 64
+[INFO] 03:35:36:495 Kernel/(10515:10517): PID: 2 - Crear Segmento - Id: 7 - Tamaño: 64
+[INFO] 03:35:36:513 Kernel/(10515:10517): PID: 2 - Crear Segmento - Id: 8 - Tamaño: 64
+[INFO] 03:35:39:516 Kernel/(10515:10517): PID: 2 - Signal: RA - Instancias: 0
+[INFO] 03:35:39:516 Kernel/(10515:10517): PID: 1 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 03:35:39:516 Kernel/(10515:10517): Cola Ready FIFO: [3, 1]
+[INFO] 03:35:39:517 Kernel/(10515:10517): PID: 2 - Wait: RB - Instancias: -1
+[INFO] 03:35:39:517 Kernel/(10515:10517): PID: 2 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 03:35:39:517 Kernel/(10515:10517): PID: 2 - Bloqueado por: RB
+[INFO] 03:35:39:517 Kernel/(10515:10517): PID: 3 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:35:39:517 Kernel/(10515:10517): PID: 3 - Wait: RC - Instancias: -1
+[INFO] 03:35:39:517 Kernel/(10515:10517): PID: 3 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 03:35:39:517 Kernel/(10515:10517): PID: 3 - Bloqueado por: RC
+[INFO] 03:35:39:517 Kernel/(10515:10517): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:35:39:527 Kernel/(10515:10517): PID: 1 - Eliminar Segmento - Id Segmento: 1
+[INFO] 03:35:41:531 Kernel/(10515:10517): PID: 1 - Signal: RB - Instancias: 0
+[INFO] 03:35:41:531 Kernel/(10515:10517): PID: 2 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 03:35:41:531 Kernel/(10515:10517): Cola Ready FIFO: [2]
+[INFO] 03:35:41:531 Kernel/(10515:10517): PID: 1 - Wait: RA - Instancias: -1
+[INFO] 03:35:41:531 Kernel/(10515:10517): PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 03:35:41:531 Kernel/(10515:10517): PID: 1 - Bloqueado por: RA
+[INFO] 03:35:41:531 Kernel/(10515:10517): PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:35:41:535 Kernel/(10515:10517): PID: 2 - Crear Segmento - Id: 9 - Tamaño: 64
+[INFO] 03:35:47:548 Kernel/(10515:10517): PID: 2 - Signal: RC - Instancias: 0
+[INFO] 03:35:47:548 Kernel/(10515:10517): PID: 3 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 03:35:47:548 Kernel/(10515:10517): Cola Ready FIFO: [3]
+[INFO] 03:35:47:549 Kernel/(10515:10517): PID: 2 - Wait: RB - Instancias: -1
+[INFO] 03:35:47:549 Kernel/(10515:10517): PID: 2 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 03:35:47:549 Kernel/(10515:10517): PID: 2 - Bloqueado por: RB
+[INFO] 03:35:47:549 Kernel/(10515:10517): PID: 3 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:35:47:558 Kernel/(10515:10517): Compactación: Esperando Fin de Operaciones de FS
+[INFO] 03:35:47:559 Kernel/(10515:10517): Compactación: Se solicitó compactación
+[INFO] 03:35:52:720 Kernel/(10515:10517): Se finalizó el proceso de compactación
+[INFO] 03:35:52:744 Kernel/(10515:10517): PID: 3 - Crear Segmento - Id: 1 - Tamaño: 256
+[INFO] 03:35:54:748 Kernel/(10515:10517): PID: 3 - Signal: RB - Instancias: 0
+[INFO] 03:35:54:748 Kernel/(10515:10517): PID: 2 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 03:35:54:748 Kernel/(10515:10517): Cola Ready FIFO: [2]
+[INFO] 03:35:54:748 Kernel/(10515:10517): PID: 3 - Wait: RC - Instancias: -1
+[INFO] 03:35:54:748 Kernel/(10515:10517): PID: 3 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 03:35:54:748 Kernel/(10515:10517): PID: 3 - Bloqueado por: RC
+[INFO] 03:35:54:748 Kernel/(10515:10517): PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:35:56:760 Kernel/(10515:10517): PID: 2 - Eliminar Segmento - Id Segmento: 1
+[INFO] 03:35:58:771 Kernel/(10515:10517): PID: 2 - Eliminar Segmento - Id Segmento: 2
+[INFO] 03:35:58:773 Kernel/(10515:10517): PID: 2 - Eliminar Segmento - Id Segmento: 4
+[INFO] 03:35:58:776 Kernel/(10515:10517): PID: 2 - Eliminar Segmento - Id Segmento: 5
+[INFO] 03:35:58:777 Kernel/(10515:10517): PID: 2 - Signal: RC - Instancias: 0
+[INFO] 03:35:58:777 Kernel/(10515:10517): PID: 3 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 03:35:58:778 Kernel/(10515:10517): Cola Ready FIFO: [3]
+[INFO] 03:35:58:779 Kernel/(10515:10517): PID: 2 - Wait: RB - Instancias: -1
+[INFO] 03:35:58:779 Kernel/(10515:10517): PID: 2 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 03:35:58:779 Kernel/(10515:10517): PID: 2 - Bloqueado por: RB
+[INFO] 03:35:58:780 Kernel/(10515:10517): PID: 3 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:35:58:791 Kernel/(10515:10517): PID: 3 - Crear Segmento - Id: 2 - Tamaño: 128
+[INFO] 03:35:58:791 Kernel/(10515:10517): PID: 3 - Signal: RA - Instancias: 0
+[INFO] 03:35:58:791 Kernel/(10515:10517): PID: 1 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 03:35:58:791 Kernel/(10515:10517): Cola Ready FIFO: [1]
+[INFO] 03:35:58:792 Kernel/(10515:10517): PID: 3 - Signal: RB - Instancias: 0
+[INFO] 03:35:58:792 Kernel/(10515:10517): PID: 2 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 03:35:58:792 Kernel/(10515:10517): Cola Ready FIFO: [1, 2]
+[INFO] 03:35:58:792 Kernel/(10515:10517): PID: 3 - Signal: RC - Instancias: 1
+[INFO] 03:35:58:792 Kernel/(10515:10517): PID: 3 - Signal: RC - Instancias: 2
+[INFO] 03:35:58:794 Kernel/(10515:10517): PID: 3 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 03:35:58:794 Kernel/(10515:10517): Finaliza el proceso 3 - Motivo: SUCCESS
+[INFO] 03:35:58:794 Kernel/(10515:10517): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:35:58:795 Kernel/(10515:10517): PID: 1 - Signal: RA - Instancias: 1
+[INFO] 03:35:58:795 Kernel/(10515:10517): PID: 1 - Signal: RA - Instancias: 2
+[INFO] 03:35:58:795 Kernel/(10515:10517): PID: 1 - Signal: RA - Instancias: 3
+[INFO] 03:35:58:797 Kernel/(10515:10517): PID: 1 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 03:35:58:797 Kernel/(10515:10517): Finaliza el proceso 1 - Motivo: SUCCESS
+[INFO] 03:35:58:797 Kernel/(10515:10517): PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:35:58:798 Kernel/(10515:10517): PID: 2 - Signal: RB - Instancias: 1
+[INFO] 03:35:58:798 Kernel/(10515:10517): PID: 2 - Signal: RB - Instancias: 2
+[INFO] 03:35:58:798 Kernel/(10515:10517): PID: 2 - Signal: RB - Instancias: 3
+[INFO] 03:35:58:798 Kernel/(10515:10517): PID: 2 - Signal: RB - Instancias: 4
+[INFO] 03:35:58:799 Kernel/(10515:10517): PID: 2 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 03:35:58:799 Kernel/(10515:10517): Finaliza el proceso 2 - Motivo: SUCCESS
+[INFO] 03:37:14:595 Kernel/(10544:10553): Se crea el proceso 1 en NEW
+[INFO] 03:37:14:595 Kernel/(10544:10547): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 03:37:14:595 Kernel/(10544:10547): Cola Ready FIFO: [1]
+[INFO] 03:37:14:595 Kernel/(10544:10546): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:37:14:596 Kernel/(10544:10546): PID: 1 - Wait: RA - Instancias: 0
+[INFO] 03:37:15:247 Kernel/(10544:10556): Se crea el proceso 2 en NEW
+[INFO] 03:37:15:247 Kernel/(10544:10547): PID: 2 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 03:37:15:248 Kernel/(10544:10547): Cola Ready FIFO: [2]
+[INFO] 03:37:16:009 Kernel/(10544:10559): Se crea el proceso 3 en NEW
+[INFO] 03:37:16:009 Kernel/(10544:10547): PID: 3 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 03:37:16:010 Kernel/(10544:10547): Cola Ready FIFO: [2, 3]
+[INFO] 03:37:17:631 Kernel/(10544:10546): PID: 1 - Crear Segmento - Id: 1 - Tamaño: 128
+[INFO] 03:37:17:632 Kernel/(10544:10546): PID: 1 - Signal: RB - Instancias: 1
+[INFO] 03:37:17:633 Kernel/(10544:10546): PID: 1 - Wait: RA - Instancias: -1
+[INFO] 03:37:17:633 Kernel/(10544:10546): PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 03:37:17:634 Kernel/(10544:10546): PID: 1 - Bloqueado por: RA
+[INFO] 03:37:17:634 Kernel/(10544:10546): PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:37:17:635 Kernel/(10544:10546): PID: 2 - Wait: RB - Instancias: 0
+[INFO] 03:37:19:667 Kernel/(10544:10546): PID: 2 - Crear Segmento - Id: 1 - Tamaño: 64
+[INFO] 03:37:19:698 Kernel/(10544:10546): PID: 2 - Crear Segmento - Id: 2 - Tamaño: 64
+[INFO] 03:37:19:715 Kernel/(10544:10546): PID: 2 - Crear Segmento - Id: 3 - Tamaño: 64
+[INFO] 03:37:19:731 Kernel/(10544:10546): PID: 2 - Crear Segmento - Id: 4 - Tamaño: 64
+[INFO] 03:37:19:749 Kernel/(10544:10546): PID: 2 - Crear Segmento - Id: 5 - Tamaño: 64
+[INFO] 03:37:19:763 Kernel/(10544:10546): PID: 2 - Crear Segmento - Id: 6 - Tamaño: 64
+[INFO] 03:37:19:773 Kernel/(10544:10546): PID: 2 - Crear Segmento - Id: 7 - Tamaño: 64
+[INFO] 03:37:19:787 Kernel/(10544:10546): PID: 2 - Crear Segmento - Id: 8 - Tamaño: 64
+[INFO] 03:37:22:796 Kernel/(10544:10546): PID: 2 - Signal: RA - Instancias: 0
+[INFO] 03:37:22:796 Kernel/(10544:10546): PID: 1 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 03:37:22:796 Kernel/(10544:10546): Cola Ready FIFO: [3, 1]
+[INFO] 03:37:22:796 Kernel/(10544:10546): PID: 2 - Wait: RB - Instancias: -1
+[INFO] 03:37:22:797 Kernel/(10544:10546): PID: 2 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 03:37:22:797 Kernel/(10544:10546): PID: 2 - Bloqueado por: RB
+[INFO] 03:37:22:797 Kernel/(10544:10546): PID: 3 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:37:22:797 Kernel/(10544:10546): PID: 3 - Wait: RC - Instancias: -1
+[INFO] 03:37:22:797 Kernel/(10544:10546): PID: 3 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 03:37:22:797 Kernel/(10544:10546): PID: 3 - Bloqueado por: RC
+[INFO] 03:37:22:797 Kernel/(10544:10546): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:37:22:812 Kernel/(10544:10546): PID: 1 - Eliminar Segmento - Id Segmento: 1
+[INFO] 03:37:24:816 Kernel/(10544:10546): PID: 1 - Signal: RB - Instancias: 0
+[INFO] 03:37:24:816 Kernel/(10544:10546): PID: 2 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 03:37:24:816 Kernel/(10544:10546): Cola Ready FIFO: [2]
+[INFO] 03:37:24:817 Kernel/(10544:10546): PID: 1 - Wait: RA - Instancias: -1
+[INFO] 03:37:24:817 Kernel/(10544:10546): PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 03:37:24:817 Kernel/(10544:10546): PID: 1 - Bloqueado por: RA
+[INFO] 03:37:24:817 Kernel/(10544:10546): PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:37:24:823 Kernel/(10544:10546): PID: 2 - Crear Segmento - Id: 9 - Tamaño: 64
+[INFO] 03:37:30:834 Kernel/(10544:10546): PID: 2 - Signal: RC - Instancias: 0
+[INFO] 03:37:30:834 Kernel/(10544:10546): PID: 3 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 03:37:30:835 Kernel/(10544:10546): Cola Ready FIFO: [3]
+[INFO] 03:37:30:835 Kernel/(10544:10546): PID: 2 - Wait: RB - Instancias: -1
+[INFO] 03:37:30:835 Kernel/(10544:10546): PID: 2 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 03:37:30:836 Kernel/(10544:10546): PID: 2 - Bloqueado por: RB
+[INFO] 03:37:30:836 Kernel/(10544:10546): PID: 3 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:37:30:841 Kernel/(10544:10546): Compactación: Esperando Fin de Operaciones de FS
+[INFO] 03:37:30:841 Kernel/(10544:10546): Compactación: Se solicitó compactación
+[INFO] 03:37:35:935 Kernel/(10544:10546): Se finalizó el proceso de compactación
+[INFO] 03:37:35:943 Kernel/(10544:10546): PID: 3 - Crear Segmento - Id: 1 - Tamaño: 256
+[INFO] 03:37:37:952 Kernel/(10544:10546): PID: 3 - Signal: RB - Instancias: 0
+[INFO] 03:37:37:952 Kernel/(10544:10546): PID: 2 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 03:37:37:952 Kernel/(10544:10546): Cola Ready FIFO: [2]
+[INFO] 03:37:37:952 Kernel/(10544:10546): PID: 3 - Wait: RC - Instancias: -1
+[INFO] 03:37:37:953 Kernel/(10544:10546): PID: 3 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 03:37:37:953 Kernel/(10544:10546): PID: 3 - Bloqueado por: RC
+[INFO] 03:37:37:953 Kernel/(10544:10546): PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:37:39:961 Kernel/(10544:10546): PID: 2 - Eliminar Segmento - Id Segmento: 1
+[INFO] 03:37:41:970 Kernel/(10544:10546): PID: 2 - Eliminar Segmento - Id Segmento: 2
+[INFO] 03:37:41:972 Kernel/(10544:10546): PID: 2 - Eliminar Segmento - Id Segmento: 4
+[INFO] 03:37:41:975 Kernel/(10544:10546): PID: 2 - Eliminar Segmento - Id Segmento: 5
+[INFO] 03:37:41:975 Kernel/(10544:10546): PID: 2 - Signal: RC - Instancias: 0
+[INFO] 03:37:41:975 Kernel/(10544:10546): PID: 3 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 03:37:41:975 Kernel/(10544:10546): Cola Ready FIFO: [3]
+[INFO] 03:37:41:975 Kernel/(10544:10546): PID: 2 - Wait: RB - Instancias: -1
+[INFO] 03:37:41:975 Kernel/(10544:10546): PID: 2 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 03:37:41:975 Kernel/(10544:10546): PID: 2 - Bloqueado por: RB
+[INFO] 03:37:41:975 Kernel/(10544:10546): PID: 3 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:37:41:978 Kernel/(10544:10546): PID: 3 - Crear Segmento - Id: 2 - Tamaño: 128
+[INFO] 03:37:41:978 Kernel/(10544:10546): PID: 3 - Signal: RA - Instancias: 0
+[INFO] 03:37:41:978 Kernel/(10544:10546): PID: 1 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 03:37:41:978 Kernel/(10544:10546): Cola Ready FIFO: [1]
+[INFO] 03:37:41:979 Kernel/(10544:10546): PID: 3 - Signal: RB - Instancias: 0
+[INFO] 03:37:41:979 Kernel/(10544:10546): PID: 2 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 03:37:41:979 Kernel/(10544:10546): Cola Ready FIFO: [1, 2]
+[INFO] 03:37:41:979 Kernel/(10544:10546): PID: 3 - Signal: RC - Instancias: 1
+[INFO] 03:37:41:979 Kernel/(10544:10546): PID: 3 - Signal: RC - Instancias: 2
+[INFO] 03:37:41:980 Kernel/(10544:10546): PID: 3 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 03:37:41:980 Kernel/(10544:10546): Finaliza el proceso 3 - Motivo: SUCCESS
+[INFO] 03:37:41:980 Kernel/(10544:10546): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:37:41:980 Kernel/(10544:10546): PID: 1 - Signal: RA - Instancias: 1
+[INFO] 03:37:41:980 Kernel/(10544:10546): PID: 1 - Signal: RA - Instancias: 2
+[INFO] 03:37:41:980 Kernel/(10544:10546): PID: 1 - Signal: RA - Instancias: 3
+[INFO] 03:37:41:981 Kernel/(10544:10546): PID: 1 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 03:37:41:981 Kernel/(10544:10546): Finaliza el proceso 1 - Motivo: SUCCESS
+[INFO] 03:37:41:981 Kernel/(10544:10546): PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:37:41:981 Kernel/(10544:10546): PID: 2 - Signal: RB - Instancias: 1
+[INFO] 03:37:41:981 Kernel/(10544:10546): PID: 2 - Signal: RB - Instancias: 2
+[INFO] 03:37:41:981 Kernel/(10544:10546): PID: 2 - Signal: RB - Instancias: 3
+[INFO] 03:37:41:981 Kernel/(10544:10546): PID: 2 - Signal: RB - Instancias: 4
+[INFO] 03:37:41:982 Kernel/(10544:10546): PID: 2 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 03:37:41:982 Kernel/(10544:10546): Finaliza el proceso 2 - Motivo: SUCCESS
+[INFO] 03:39:45:702 Kernel/(10644:10652): Se crea el proceso 1 en NEW
+[INFO] 03:39:45:703 Kernel/(10644:10647): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 03:39:45:703 Kernel/(10644:10647): Cola Ready FIFO: [1]
+[INFO] 03:39:45:703 Kernel/(10644:10646): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:39:45:704 Kernel/(10644:10646): PID: 1 - Wait: RA - Instancias: 0
+[INFO] 03:39:46:397 Kernel/(10644:10655): Se crea el proceso 2 en NEW
+[INFO] 03:39:46:397 Kernel/(10644:10647): PID: 2 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 03:39:46:397 Kernel/(10644:10647): Cola Ready FIFO: [2]
+[INFO] 03:39:47:134 Kernel/(10644:10658): Se crea el proceso 3 en NEW
+[INFO] 03:39:47:134 Kernel/(10644:10647): PID: 3 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 03:39:47:134 Kernel/(10644:10647): Cola Ready FIFO: [2, 3]
+[INFO] 03:39:48:729 Kernel/(10644:10646): PID: 1 - Crear Segmento - Id: 1 - Tamaño: 128
+[INFO] 03:39:48:730 Kernel/(10644:10646): PID: 1 - Signal: RB - Instancias: 1
+[INFO] 03:39:48:730 Kernel/(10644:10646): PID: 1 - Wait: RA - Instancias: -1
+[INFO] 03:39:48:730 Kernel/(10644:10646): PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 03:39:48:731 Kernel/(10644:10646): PID: 1 - Bloqueado por: RA
+[INFO] 03:39:48:731 Kernel/(10644:10646): PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:39:48:732 Kernel/(10644:10646): PID: 2 - Wait: RB - Instancias: 0
+[INFO] 03:39:50:787 Kernel/(10644:10646): PID: 2 - Crear Segmento - Id: 1 - Tamaño: 64
+[INFO] 03:39:50:796 Kernel/(10644:10646): PID: 2 - Crear Segmento - Id: 2 - Tamaño: 64
+[INFO] 03:39:50:800 Kernel/(10644:10646): PID: 2 - Crear Segmento - Id: 3 - Tamaño: 64
+[INFO] 03:39:50:803 Kernel/(10644:10646): PID: 2 - Crear Segmento - Id: 4 - Tamaño: 64
+[INFO] 03:39:50:805 Kernel/(10644:10646): PID: 2 - Crear Segmento - Id: 5 - Tamaño: 64
+[INFO] 03:39:50:807 Kernel/(10644:10646): PID: 2 - Crear Segmento - Id: 6 - Tamaño: 64
+[INFO] 03:39:50:811 Kernel/(10644:10646): PID: 2 - Crear Segmento - Id: 7 - Tamaño: 64
+[INFO] 03:39:50:822 Kernel/(10644:10646): PID: 2 - Crear Segmento - Id: 8 - Tamaño: 64
+[INFO] 03:39:53:826 Kernel/(10644:10646): PID: 2 - Signal: RA - Instancias: 0
+[INFO] 03:39:53:826 Kernel/(10644:10646): PID: 1 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 03:39:53:826 Kernel/(10644:10646): Cola Ready FIFO: [3, 1]
+[INFO] 03:39:53:826 Kernel/(10644:10646): PID: 2 - Wait: RB - Instancias: -1
+[INFO] 03:39:53:827 Kernel/(10644:10646): PID: 2 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 03:39:53:827 Kernel/(10644:10646): PID: 2 - Bloqueado por: RB
+[INFO] 03:39:53:827 Kernel/(10644:10646): PID: 3 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:39:53:827 Kernel/(10644:10646): PID: 3 - Wait: RC - Instancias: -1
+[INFO] 03:39:53:827 Kernel/(10644:10646): PID: 3 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 03:39:53:827 Kernel/(10644:10646): PID: 3 - Bloqueado por: RC
+[INFO] 03:39:53:827 Kernel/(10644:10646): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:39:53:834 Kernel/(10644:10646): PID: 1 - Eliminar Segmento - Id Segmento: 1
+[INFO] 03:39:55:842 Kernel/(10644:10646): PID: 1 - Signal: RB - Instancias: 0
+[INFO] 03:39:55:842 Kernel/(10644:10646): PID: 2 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 03:39:55:842 Kernel/(10644:10646): Cola Ready FIFO: [2]
+[INFO] 03:39:55:844 Kernel/(10644:10646): PID: 1 - Wait: RA - Instancias: -1
+[INFO] 03:39:55:844 Kernel/(10644:10646): PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 03:39:55:844 Kernel/(10644:10646): PID: 1 - Bloqueado por: RA
+[INFO] 03:39:55:844 Kernel/(10644:10646): PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:39:55:857 Kernel/(10644:10646): PID: 2 - Crear Segmento - Id: 9 - Tamaño: 64
+[INFO] 03:40:01:868 Kernel/(10644:10646): PID: 2 - Signal: RC - Instancias: 0
+[INFO] 03:40:01:868 Kernel/(10644:10646): PID: 3 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 03:40:01:868 Kernel/(10644:10646): Cola Ready FIFO: [3]
+[INFO] 03:40:01:869 Kernel/(10644:10646): PID: 2 - Wait: RB - Instancias: -1
+[INFO] 03:40:01:869 Kernel/(10644:10646): PID: 2 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 03:40:01:869 Kernel/(10644:10646): PID: 2 - Bloqueado por: RB
+[INFO] 03:40:01:869 Kernel/(10644:10646): PID: 3 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:40:01:873 Kernel/(10644:10646): Compactación: Esperando Fin de Operaciones de FS
+[INFO] 03:40:01:873 Kernel/(10644:10646): Compactación: Se solicitó compactación
+[INFO] 03:40:06:946 Kernel/(10644:10646): Se finalizó el proceso de compactación
+[INFO] 03:40:06:950 Kernel/(10644:10646): PID: 3 - Crear Segmento - Id: 1 - Tamaño: 256
+[INFO] 03:40:08:952 Kernel/(10644:10646): PID: 3 - Signal: RB - Instancias: 0
+[INFO] 03:40:08:952 Kernel/(10644:10646): PID: 2 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 03:40:08:952 Kernel/(10644:10646): Cola Ready FIFO: [2]
+[INFO] 03:40:08:952 Kernel/(10644:10646): PID: 3 - Wait: RC - Instancias: -1
+[INFO] 03:40:08:952 Kernel/(10644:10646): PID: 3 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 03:40:08:952 Kernel/(10644:10646): PID: 3 - Bloqueado por: RC
+[INFO] 03:40:08:952 Kernel/(10644:10646): PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:40:10:961 Kernel/(10644:10646): PID: 2 - Eliminar Segmento - Id Segmento: 1
+[INFO] 03:40:12:971 Kernel/(10644:10646): PID: 2 - Eliminar Segmento - Id Segmento: 2
+[INFO] 03:40:12:972 Kernel/(10644:10646): PID: 2 - Eliminar Segmento - Id Segmento: 4
+[INFO] 03:40:12:973 Kernel/(10644:10646): PID: 2 - Eliminar Segmento - Id Segmento: 5
+[INFO] 03:40:12:974 Kernel/(10644:10646): PID: 2 - Signal: RC - Instancias: 0
+[INFO] 03:40:12:974 Kernel/(10644:10646): PID: 3 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 03:40:12:974 Kernel/(10644:10646): Cola Ready FIFO: [3]
+[INFO] 03:40:12:975 Kernel/(10644:10646): PID: 2 - Wait: RB - Instancias: -1
+[INFO] 03:40:12:975 Kernel/(10644:10646): PID: 2 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 03:40:12:975 Kernel/(10644:10646): PID: 2 - Bloqueado por: RB
+[INFO] 03:40:12:975 Kernel/(10644:10646): PID: 3 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:40:12:983 Kernel/(10644:10646): PID: 3 - Crear Segmento - Id: 2 - Tamaño: 128
+[INFO] 03:40:12:987 Kernel/(10644:10646): PID: 3 - Signal: RA - Instancias: 0
+[INFO] 03:40:12:987 Kernel/(10644:10646): PID: 1 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 03:40:12:987 Kernel/(10644:10646): Cola Ready FIFO: [1]
+[INFO] 03:40:12:987 Kernel/(10644:10646): PID: 3 - Signal: RB - Instancias: 0
+[INFO] 03:40:12:987 Kernel/(10644:10646): PID: 2 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 03:40:12:987 Kernel/(10644:10646): Cola Ready FIFO: [1, 2]
+[INFO] 03:40:12:987 Kernel/(10644:10646): PID: 3 - Signal: RC - Instancias: 1
+[INFO] 03:40:12:987 Kernel/(10644:10646): PID: 3 - Signal: RC - Instancias: 2
+[INFO] 03:40:12:988 Kernel/(10644:10646): PID: 3 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 03:40:12:988 Kernel/(10644:10646): Finaliza el proceso 3 - Motivo: SUCCESS
+[INFO] 03:40:12:988 Kernel/(10644:10646): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:40:12:989 Kernel/(10644:10646): PID: 1 - Signal: RA - Instancias: 1
+[INFO] 03:40:12:989 Kernel/(10644:10646): PID: 1 - Signal: RA - Instancias: 2
+[INFO] 03:40:12:989 Kernel/(10644:10646): PID: 1 - Signal: RA - Instancias: 3
+[INFO] 03:40:12:990 Kernel/(10644:10646): PID: 1 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 03:40:12:990 Kernel/(10644:10646): Finaliza el proceso 1 - Motivo: SUCCESS
+[INFO] 03:40:12:990 Kernel/(10644:10646): PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 03:40:12:990 Kernel/(10644:10646): PID: 2 - Signal: RB - Instancias: 1
+[INFO] 03:40:12:990 Kernel/(10644:10646): PID: 2 - Signal: RB - Instancias: 2
+[INFO] 03:40:12:990 Kernel/(10644:10646): PID: 2 - Signal: RB - Instancias: 3
+[INFO] 03:40:12:990 Kernel/(10644:10646): PID: 2 - Signal: RB - Instancias: 4
+[INFO] 03:40:12:991 Kernel/(10644:10646): PID: 2 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 03:40:12:991 Kernel/(10644:10646): Finaliza el proceso 2 - Motivo: SUCCESS
+[INFO] 04:01:57:307 Kernel/(11022:11033): Se crea el proceso 1 en NEW
+[INFO] 04:01:57:308 Kernel/(11022:11025): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 04:01:57:308 Kernel/(11022:11025): Cola Ready FIFO: [1]
+[INFO] 04:01:57:308 Kernel/(11022:11024): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 04:01:57:309 Kernel/(11022:11024): PID: 1 - Wait: RA - Instancias: 0
+[INFO] 04:01:57:795 Kernel/(11022:11036): Se crea el proceso 2 en NEW
+[INFO] 04:01:57:795 Kernel/(11022:11025): PID: 2 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 04:01:57:795 Kernel/(11022:11025): Cola Ready FIFO: [2]
+[INFO] 04:01:58:251 Kernel/(11022:11039): Se crea el proceso 3 en NEW
+[INFO] 04:01:58:251 Kernel/(11022:11025): PID: 3 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 04:01:58:251 Kernel/(11022:11025): Cola Ready FIFO: [2, 3]
+[INFO] 04:02:00:310 Kernel/(11022:11024): PID: 1 - Crear Segmento - Id: 1 - Tamaño: 128
+[INFO] 04:02:00:311 Kernel/(11022:11024): PID: 1 - Signal: RB - Instancias: 1
+[INFO] 04:02:00:312 Kernel/(11022:11024): PID: 1 - Wait: RA - Instancias: -1
+[INFO] 04:02:00:312 Kernel/(11022:11024): PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 04:02:00:312 Kernel/(11022:11024): PID: 1 - Bloqueado por: RA
+[INFO] 04:02:00:312 Kernel/(11022:11024): PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 04:02:00:312 Kernel/(11022:11024): PID: 2 - Wait: RB - Instancias: 0
+[INFO] 04:02:02:315 Kernel/(11022:11024): PID: 2 - Crear Segmento - Id: 1 - Tamaño: 64
+[INFO] 04:02:02:316 Kernel/(11022:11024): PID: 2 - Crear Segmento - Id: 2 - Tamaño: 64
+[INFO] 04:02:02:317 Kernel/(11022:11024): PID: 2 - Crear Segmento - Id: 3 - Tamaño: 64
+[INFO] 04:02:02:317 Kernel/(11022:11024): PID: 2 - Crear Segmento - Id: 4 - Tamaño: 64
+[INFO] 04:02:02:318 Kernel/(11022:11024): PID: 2 - Crear Segmento - Id: 5 - Tamaño: 64
+[INFO] 04:02:02:319 Kernel/(11022:11024): PID: 2 - Crear Segmento - Id: 6 - Tamaño: 64
+[INFO] 04:02:02:320 Kernel/(11022:11024): PID: 2 - Crear Segmento - Id: 7 - Tamaño: 64
+[INFO] 04:02:02:321 Kernel/(11022:11024): PID: 2 - Crear Segmento - Id: 8 - Tamaño: 64
+[INFO] 04:02:05:326 Kernel/(11022:11024): PID: 2 - Signal: RA - Instancias: 0
+[INFO] 04:02:05:326 Kernel/(11022:11024): PID: 1 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 04:02:05:326 Kernel/(11022:11024): Cola Ready FIFO: [3, 1]
+[INFO] 04:02:05:328 Kernel/(11022:11024): PID: 2 - Wait: RB - Instancias: -1
+[INFO] 04:02:05:328 Kernel/(11022:11024): PID: 2 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 04:02:05:328 Kernel/(11022:11024): PID: 2 - Bloqueado por: RB
+[INFO] 04:02:05:328 Kernel/(11022:11024): PID: 3 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 04:02:05:329 Kernel/(11022:11024): PID: 3 - Wait: RC - Instancias: -1
+[INFO] 04:02:05:329 Kernel/(11022:11024): PID: 3 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 04:02:05:329 Kernel/(11022:11024): PID: 3 - Bloqueado por: RC
+[INFO] 04:02:05:329 Kernel/(11022:11024): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 04:02:05:332 Kernel/(11022:11024): PID: 1 - Eliminar Segmento - Id Segmento: 1
+[INFO] 04:02:07:333 Kernel/(11022:11024): PID: 1 - Signal: RB - Instancias: 0
+[INFO] 04:02:07:333 Kernel/(11022:11024): PID: 2 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 04:02:07:334 Kernel/(11022:11024): Cola Ready FIFO: [2]
+[INFO] 04:02:07:334 Kernel/(11022:11024): PID: 1 - Wait: RA - Instancias: -1
+[INFO] 04:02:07:334 Kernel/(11022:11024): PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 04:02:07:334 Kernel/(11022:11024): PID: 1 - Bloqueado por: RA
+[INFO] 04:02:07:334 Kernel/(11022:11024): PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 04:02:07:335 Kernel/(11022:11024): PID: 2 - Crear Segmento - Id: 9 - Tamaño: 64
+[INFO] 04:02:13:339 Kernel/(11022:11024): PID: 2 - Signal: RC - Instancias: 0
+[INFO] 04:02:13:340 Kernel/(11022:11024): PID: 3 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 04:02:13:340 Kernel/(11022:11024): Cola Ready FIFO: [3]
+[INFO] 04:02:13:340 Kernel/(11022:11024): PID: 2 - Wait: RB - Instancias: -1
+[INFO] 04:02:13:341 Kernel/(11022:11024): PID: 2 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 04:02:13:341 Kernel/(11022:11024): PID: 2 - Bloqueado por: RB
+[INFO] 04:02:13:341 Kernel/(11022:11024): PID: 3 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 04:02:13:341 Kernel/(11022:11024): PID: 3 - Crear Segmento - Id: 1 - Tamaño: 256
+[INFO] 04:02:15:343 Kernel/(11022:11024): PID: 3 - Signal: RB - Instancias: 0
+[INFO] 04:02:15:343 Kernel/(11022:11024): PID: 2 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 04:02:15:343 Kernel/(11022:11024): Cola Ready FIFO: [2]
+[INFO] 04:02:15:343 Kernel/(11022:11024): PID: 3 - Wait: RC - Instancias: -1
+[INFO] 04:02:15:343 Kernel/(11022:11024): PID: 3 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 04:02:15:343 Kernel/(11022:11024): PID: 3 - Bloqueado por: RC
+[INFO] 04:02:15:343 Kernel/(11022:11024): PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 04:02:17:345 Kernel/(11022:11024): PID: 2 - Eliminar Segmento - Id Segmento: 1
+[INFO] 04:02:19:347 Kernel/(11022:11024): PID: 2 - Eliminar Segmento - Id Segmento: 2
+[INFO] 04:02:19:347 Kernel/(11022:11024): PID: 2 - Eliminar Segmento - Id Segmento: 4
+[INFO] 04:02:19:348 Kernel/(11022:11024): PID: 2 - Eliminar Segmento - Id Segmento: 5
+[INFO] 04:02:19:349 Kernel/(11022:11024): PID: 2 - Signal: RC - Instancias: 0
+[INFO] 04:02:19:349 Kernel/(11022:11024): PID: 3 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 04:02:19:349 Kernel/(11022:11024): Cola Ready FIFO: [3]
+[INFO] 04:02:19:350 Kernel/(11022:11024): PID: 2 - Wait: RB - Instancias: -1
+[INFO] 04:02:19:350 Kernel/(11022:11024): PID: 2 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 04:02:19:350 Kernel/(11022:11024): PID: 2 - Bloqueado por: RB
+[INFO] 04:02:19:350 Kernel/(11022:11024): PID: 3 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 04:02:19:351 Kernel/(11022:11024): PID: 3 - Crear Segmento - Id: 2 - Tamaño: 128
+[INFO] 04:02:19:351 Kernel/(11022:11024): PID: 3 - Signal: RA - Instancias: 0
+[INFO] 04:02:19:351 Kernel/(11022:11024): PID: 1 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 04:02:19:351 Kernel/(11022:11024): Cola Ready FIFO: [1]
+[INFO] 04:02:19:352 Kernel/(11022:11024): PID: 3 - Signal: RB - Instancias: 0
+[INFO] 04:02:19:352 Kernel/(11022:11024): PID: 2 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 04:02:19:352 Kernel/(11022:11024): Cola Ready FIFO: [1, 2]
+[INFO] 04:02:19:352 Kernel/(11022:11024): PID: 3 - Signal: RC - Instancias: 1
+[INFO] 04:02:19:352 Kernel/(11022:11024): PID: 3 - Signal: RC - Instancias: 2
+[INFO] 04:02:19:353 Kernel/(11022:11024): PID: 3 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 04:02:19:353 Kernel/(11022:11024): Finaliza el proceso 3 - Motivo: SUCCESS
+[INFO] 04:02:19:353 Kernel/(11022:11024): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 04:02:19:353 Kernel/(11022:11024): PID: 1 - Signal: RA - Instancias: 1
+[INFO] 04:02:19:353 Kernel/(11022:11024): PID: 1 - Signal: RA - Instancias: 2
+[INFO] 04:02:19:353 Kernel/(11022:11024): PID: 1 - Signal: RA - Instancias: 3
+[INFO] 04:02:19:354 Kernel/(11022:11024): PID: 1 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 04:02:19:354 Kernel/(11022:11024): Finaliza el proceso 1 - Motivo: SUCCESS
+[INFO] 04:02:19:354 Kernel/(11022:11024): PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 04:02:19:356 Kernel/(11022:11024): PID: 2 - Signal: RB - Instancias: 1
+[INFO] 04:02:19:357 Kernel/(11022:11024): PID: 2 - Signal: RB - Instancias: 2
+[INFO] 04:02:19:357 Kernel/(11022:11024): PID: 2 - Signal: RB - Instancias: 3
+[INFO] 04:02:19:357 Kernel/(11022:11024): PID: 2 - Signal: RB - Instancias: 4
+[INFO] 04:02:19:358 Kernel/(11022:11024): PID: 2 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 04:02:19:358 Kernel/(11022:11024): Finaliza el proceso 2 - Motivo: SUCCESS
+[ERROR] 04:23:37:564 Kernel/(11673:11682): Error en el envio de instrucciones
+[INFO] 04:23:37:882 Kernel/(11673:11686): Se crea el proceso 1 en NEW
+[INFO] 04:23:37:883 Kernel/(11673:11677): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 04:23:37:883 Kernel/(11673:11677): Cola Ready FIFO: [1]
+[INFO] 04:23:37:883 Kernel/(11673:11676): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 04:23:37:884 Kernel/(11673:11676): PID: 1 - Wait: RB - Instancias: -1
+[INFO] 04:23:37:884 Kernel/(11673:11676): PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 04:23:37:884 Kernel/(11673:11676): PID: 1 - Bloqueado por: RB
+[INFO] 04:25:11:102 Kernel/(11715:11725): Se crea el proceso 1 en NEW
+[INFO] 04:25:11:108 Kernel/(11715:11718): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 04:25:11:108 Kernel/(11715:11718): Cola Ready FIFO: [1]
+[INFO] 04:25:11:108 Kernel/(11715:11717): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 04:25:11:110 Kernel/(11715:11717): PID: 1 - Wait: RA - Instancias: 0
+[INFO] 04:25:11:709 Kernel/(11715:11728): Se crea el proceso 2 en NEW
+[INFO] 04:25:11:709 Kernel/(11715:11718): PID: 2 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 04:25:11:709 Kernel/(11715:11718): Cola Ready FIFO: [2]
+[INFO] 04:25:14:115 Kernel/(11715:11717): PID: 1 - Crear Segmento - Id: 1 - Tamaño: 128
+[INFO] 04:25:14:115 Kernel/(11715:11717): PID: 1 - Signal: RB - Instancias: 1
+[INFO] 04:25:14:116 Kernel/(11715:11717): PID: 1 - Wait: RA - Instancias: -1
+[INFO] 04:25:14:116 Kernel/(11715:11717): PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 04:25:14:116 Kernel/(11715:11717): PID: 1 - Bloqueado por: RA
+[INFO] 04:25:14:116 Kernel/(11715:11717): PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 04:25:14:116 Kernel/(11715:11717): PID: 2 - Wait: RB - Instancias: 0
+[INFO] 04:25:14:117 Kernel/(11715:11717): PID: 2 - Crear Segmento - Id: 1 - Tamaño: 64
+[INFO] 04:25:14:117 Kernel/(11715:11717): PID: 2 - Crear Segmento - Id: 2 - Tamaño: 64
+[INFO] 04:25:14:118 Kernel/(11715:11717): PID: 2 - Crear Segmento - Id: 3 - Tamaño: 64
+[INFO] 04:25:14:118 Kernel/(11715:11717): PID: 2 - Crear Segmento - Id: 4 - Tamaño: 64
+[INFO] 04:25:14:119 Kernel/(11715:11717): PID: 2 - Signal: RB - Instancias: 1
+[INFO] 04:25:14:121 Kernel/(11715:11717): PID: 2 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 04:25:14:121 Kernel/(11715:11717): Finaliza el proceso 2 - Motivo: OUT_OF_MEMORY
+[INFO] 04:26:17:867 Kernel/(11754:11762): Se crea el proceso 1 en NEW
+[INFO] 04:26:17:867 Kernel/(11754:11757): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 04:26:17:867 Kernel/(11754:11757): Cola Ready FIFO: [1]
+[INFO] 04:26:17:867 Kernel/(11754:11756): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 04:26:17:868 Kernel/(11754:11756): PID: 1 - Wait: RA - Instancias: 0
+[INFO] 04:26:18:297 Kernel/(11754:11765): Se crea el proceso 2 en NEW
+[INFO] 04:26:18:297 Kernel/(11754:11757): PID: 2 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 04:26:18:297 Kernel/(11754:11757): Cola Ready FIFO: [2]
+[INFO] 04:26:35:878 Kernel/(11754:11756): PID: 1 - Abrir Archivo: Consoles
+[INFO] 04:32:50:393 Kernel/(11869:11878): Se crea el proceso 1 en NEW
+[INFO] 04:32:50:393 Kernel/(11869:11873): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 04:32:50:393 Kernel/(11869:11873): Cola Ready FIFO: [1]
+[INFO] 04:32:50:393 Kernel/(11869:11872): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 04:32:50:399 Kernel/(11869:11872): PID: 1 - Wait: RB - Instancias: -1
+[INFO] 04:32:50:399 Kernel/(11869:11872): PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 04:32:50:399 Kernel/(11869:11872): PID: 1 - Bloqueado por: RB
+[INFO] 04:33:16:314 Kernel/(11897:11905): Se crea el proceso 1 en NEW
+[INFO] 04:33:16:314 Kernel/(11897:11901): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 04:33:16:314 Kernel/(11897:11901): Cola Ready FIFO: [1]
+[INFO] 04:33:16:314 Kernel/(11897:11900): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 04:33:16:315 Kernel/(11897:11900): PID: 1 - Wait: RA - Instancias: 0
+[INFO] 04:33:16:954 Kernel/(11897:11908): Se crea el proceso 2 en NEW
+[INFO] 04:33:16:954 Kernel/(11897:11901): PID: 2 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 04:33:16:954 Kernel/(11897:11901): Cola Ready FIFO: [2]
+[INFO] 04:33:34:326 Kernel/(11897:11900): PID: 1 - Abrir Archivo: Consoles
+[INFO] 04:43:32:209 Kernel/(12071:12082): Se crea el proceso 1 en NEW
+[INFO] 04:43:32:212 Kernel/(12071:12075): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 04:43:32:212 Kernel/(12071:12075): Cola Ready FIFO: [1]
+[INFO] 04:43:32:212 Kernel/(12071:12074): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 04:43:32:215 Kernel/(12071:12074): PID: 1 - Wait: RA - Instancias: 0
+[INFO] 04:43:32:943 Kernel/(12071:12085): Se crea el proceso 2 en NEW
+[INFO] 04:43:32:943 Kernel/(12071:12075): PID: 2 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 04:43:32:943 Kernel/(12071:12075): Cola Ready FIFO: [2]
+[INFO] 04:43:50:231 Kernel/(12071:12074): PID: 1 - Abrir Archivo: Consoles
+[INFO] 04:43:50:261 Kernel/(12071:12074): PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 04:43:50:262 Kernel/(12071:12074): PID: 1 - Bloqueado por: Consoles
+[INFO] 04:43:50:262 Kernel/(12071:12074): PID: 1 - Archivo: Consoles - Tamaño: 256
+[INFO] 04:43:50:263 Kernel/(12071:12074): PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 04:43:50:266 Kernel/(12071:12074): PID: 2 - Wait: RB - Instancias: -1
+[INFO] 04:43:50:266 Kernel/(12071:12074): PID: 2 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 04:43:50:266 Kernel/(12071:12074): PID: 2 - Bloqueado por: RB
+[INFO] 04:44:35:271 Kernel/(12071:12076): PID: 1 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 04:44:35:272 Kernel/(12071:12076): Cola Ready FIFO: [1]
+[INFO] 04:44:35:272 Kernel/(12071:12074): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 04:44:35:273 Kernel/(12071:12074): PID: 1 - Actualizar puntero Archivo: Consoles - Puntero 128
+[INFO] 04:44:35:274 Kernel/(12071:12074): PID: 1 - Signal: RB - Instancias: 0
+[INFO] 04:44:35:274 Kernel/(12071:12074): PID: 2 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 04:44:35:274 Kernel/(12071:12074): Cola Ready FIFO: [2]
+[INFO] 04:44:35:275 Kernel/(12071:12074): PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 04:44:35:275 Kernel/(12071:12074): PID: 1 - Bloqueado por: Consoles
+[INFO] 04:44:35:275 Kernel/(12071:12074): PID: 1 - Escribir Archivo: Consoles - Puntero 208 - Dirección Memoria 32 - Tamaño 80
+[INFO] 04:44:35:275 Kernel/(12071:12074): PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[ERROR] 04:44:35:985 Kernel/(12071:12074): Error en el recibo de mensaje de memoria
+[INFO] 04:46:33:818 Kernel/(12135:12151): Se crea el proceso 1 en NEW
+[INFO] 04:46:33:819 Kernel/(12135:12139): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 04:46:33:819 Kernel/(12135:12139): Cola Ready FIFO: [1]
+[INFO] 04:46:33:819 Kernel/(12135:12138): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 04:46:33:821 Kernel/(12135:12138): PID: 1 - Wait: RA - Instancias: 0
+[INFO] 04:46:34:522 Kernel/(12135:12154): Se crea el proceso 2 en NEW
+[INFO] 04:46:34:522 Kernel/(12135:12139): PID: 2 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 04:46:34:522 Kernel/(12135:12139): Cola Ready FIFO: [2]
+[INFO] 04:46:51:832 Kernel/(12135:12138): PID: 1 - Abrir Archivo: Consoles
+[INFO] 04:46:51:839 Kernel/(12135:12138): PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 04:46:51:839 Kernel/(12135:12138): PID: 1 - Bloqueado por: Consoles
+[INFO] 04:46:51:839 Kernel/(12135:12138): PID: 1 - Archivo: Consoles - Tamaño: 256
+[INFO] 04:46:51:839 Kernel/(12135:12138): PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 04:46:51:840 Kernel/(12135:12138): PID: 2 - Wait: RB - Instancias: -1
+[INFO] 04:46:51:840 Kernel/(12135:12138): PID: 2 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 04:46:51:840 Kernel/(12135:12138): PID: 2 - Bloqueado por: RB
+[INFO] 04:47:36:852 Kernel/(12135:12140): PID: 1 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 04:47:36:854 Kernel/(12135:12140): Cola Ready FIFO: [1]
+[INFO] 04:47:36:854 Kernel/(12135:12138): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 04:47:36:855 Kernel/(12135:12138): PID: 1 - Actualizar puntero Archivo: Consoles - Puntero 128
+[INFO] 04:47:36:855 Kernel/(12135:12138): PID: 1 - Signal: RB - Instancias: 0
+[INFO] 04:47:36:855 Kernel/(12135:12138): PID: 2 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 04:47:36:855 Kernel/(12135:12138): Cola Ready FIFO: [2]
+[INFO] 04:47:36:856 Kernel/(12135:12138): PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 04:47:36:856 Kernel/(12135:12138): PID: 1 - Bloqueado por: Consoles
+[INFO] 04:47:36:856 Kernel/(12135:12138): PID: 1 - Escribir Archivo: Consoles - Puntero 208 - Dirección Memoria 32 - Tamaño 80
+[INFO] 04:47:36:856 Kernel/(12135:12138): PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[ERROR] 04:47:37:544 Kernel/(12135:12138): Error en el recibo de mensaje de memoria
+[INFO] 04:49:34:104 Kernel/(12222:12240): Se crea el proceso 1 en NEW
+[INFO] 04:49:34:105 Kernel/(12222:12225): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 04:49:34:105 Kernel/(12222:12225): Cola Ready FIFO: [1]
+[INFO] 04:49:34:105 Kernel/(12222:12224): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 04:49:34:110 Kernel/(12222:12224): PID: 1 - Wait: RA - Instancias: 0
+[INFO] 04:49:34:818 Kernel/(12222:12243): Se crea el proceso 2 en NEW
+[INFO] 04:49:34:818 Kernel/(12222:12225): PID: 2 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 04:49:34:818 Kernel/(12222:12225): Cola Ready FIFO: [2]
+[INFO] 04:49:52:132 Kernel/(12222:12224): PID: 1 - Abrir Archivo: Consoles
+[INFO] 04:49:52:132 Kernel/(12222:12224): PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 04:49:52:132 Kernel/(12222:12224): PID: 1 - Bloqueado por: Consoles
+[INFO] 04:49:52:133 Kernel/(12222:12224): PID: 1 - Archivo: Consoles - Tamaño: 256
+[INFO] 04:49:52:133 Kernel/(12222:12224): PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 04:49:52:133 Kernel/(12222:12224): PID: 2 - Wait: RB - Instancias: -1
+[INFO] 04:49:52:133 Kernel/(12222:12224): PID: 2 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 04:49:52:133 Kernel/(12222:12224): PID: 2 - Bloqueado por: RB
+[INFO] 04:49:52:186 Kernel/(12222:12226): PID: 1 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 04:49:52:192 Kernel/(12222:12226): Cola Ready FIFO: [1]
+[INFO] 04:49:52:192 Kernel/(12222:12224): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 04:49:52:192 Kernel/(12222:12224): PID: 1 - Actualizar puntero Archivo: Consoles - Puntero 128
+[INFO] 04:49:52:193 Kernel/(12222:12224): PID: 1 - Signal: RB - Instancias: 0
+[INFO] 04:49:52:193 Kernel/(12222:12224): PID: 2 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 04:49:52:193 Kernel/(12222:12224): Cola Ready FIFO: [2]
+[INFO] 04:49:52:194 Kernel/(12222:12224): PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 04:49:52:194 Kernel/(12222:12224): PID: 1 - Bloqueado por: Consoles
+[INFO] 04:49:52:194 Kernel/(12222:12224): PID: 1 - Escribir Archivo: Consoles - Puntero 208 - Dirección Memoria 32 - Tamaño 80
+[INFO] 04:49:52:194 Kernel/(12222:12224): PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 04:49:52:194 Kernel/(12222:12224): PID: 2 - Crear Segmento - Id: 1 - Tamaño: 64
+[INFO] 04:49:52:194 Kernel/(12222:12224): PID: 2 - Crear Segmento - Id: 2 - Tamaño: 64
+[INFO] 04:49:52:195 Kernel/(12222:12224): PID: 2 - Crear Segmento - Id: 3 - Tamaño: 64
+[INFO] 04:49:52:195 Kernel/(12222:12224): PID: 2 - Crear Segmento - Id: 4 - Tamaño: 64
+[INFO] 04:49:52:196 Kernel/(12222:12224): PID: 2 - Crear Segmento - Id: 5 - Tamaño: 128
+[INFO] 04:49:52:199 Kernel/(12222:12224): PID: 2 - Eliminar Segmento - Id Segmento: 2
+[INFO] 04:49:52:199 Kernel/(12222:12224): PID: 2 - Eliminar Segmento - Id Segmento: 4
+[INFO] 04:49:52:206 Kernel/(12222:12224): Compactación: Esperando Fin de Operaciones de FS
+[INFO] 04:52:10:436 Kernel/(12321:12329): Se crea el proceso 1 en NEW
+[INFO] 04:52:10:437 Kernel/(12321:12324): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 04:52:10:437 Kernel/(12321:12324): Cola Ready FIFO: [1]
+[INFO] 04:52:10:437 Kernel/(12321:12323): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 04:52:10:439 Kernel/(12321:12323): PID: 1 - Wait: RA - Instancias: 0
+[INFO] 04:52:11:145 Kernel/(12321:12332): Se crea el proceso 2 en NEW
+[INFO] 04:52:11:145 Kernel/(12321:12324): PID: 2 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 04:52:11:145 Kernel/(12321:12324): Cola Ready FIFO: [2]
+[INFO] 04:52:28:475 Kernel/(12321:12323): PID: 1 - Abrir Archivo: Consoles
+[INFO] 04:52:28:476 Kernel/(12321:12323): PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 04:52:28:477 Kernel/(12321:12323): PID: 1 - Bloqueado por: Consoles
+[INFO] 04:52:28:478 Kernel/(12321:12323): PID: 1 - Archivo: Consoles - Tamaño: 256
+[INFO] 04:52:28:478 Kernel/(12321:12323): PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 04:52:28:478 Kernel/(12321:12323): PID: 2 - Wait: RB - Instancias: -1
+[INFO] 04:52:28:479 Kernel/(12321:12323): PID: 2 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 04:52:28:479 Kernel/(12321:12323): PID: 2 - Bloqueado por: RB
+[INFO] 04:52:28:568 Kernel/(12321:12325): PID: 1 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 04:52:28:568 Kernel/(12321:12325): Cola Ready FIFO: [1]
+[INFO] 04:52:28:568 Kernel/(12321:12323): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 04:52:28:569 Kernel/(12321:12323): PID: 1 - Actualizar puntero Archivo: Consoles - Puntero 128
+[INFO] 04:52:28:571 Kernel/(12321:12323): PID: 1 - Signal: RB - Instancias: 0
+[INFO] 04:52:28:571 Kernel/(12321:12323): PID: 2 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 04:52:28:572 Kernel/(12321:12323): Cola Ready FIFO: [2]
+[INFO] 04:52:28:573 Kernel/(12321:12323): PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 04:52:28:573 Kernel/(12321:12323): PID: 1 - Bloqueado por: Consoles
+[INFO] 04:52:28:573 Kernel/(12321:12323): PID: 1 - Escribir Archivo: Consoles - Puntero 208 - Dirección Memoria 32 - Tamaño 80
+[INFO] 04:52:28:574 Kernel/(12321:12323): PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 04:52:28:575 Kernel/(12321:12323): PID: 2 - Crear Segmento - Id: 1 - Tamaño: 64
+[INFO] 04:52:28:576 Kernel/(12321:12323): PID: 2 - Crear Segmento - Id: 2 - Tamaño: 64
+[INFO] 04:52:28:583 Kernel/(12321:12323): PID: 2 - Crear Segmento - Id: 3 - Tamaño: 64
+[INFO] 04:52:28:587 Kernel/(12321:12323): PID: 2 - Crear Segmento - Id: 4 - Tamaño: 64
+[INFO] 04:52:28:587 Kernel/(12321:12323): PID: 2 - Crear Segmento - Id: 5 - Tamaño: 128
+[INFO] 04:52:28:588 Kernel/(12321:12323): PID: 2 - Eliminar Segmento - Id Segmento: 2
+[INFO] 04:52:28:588 Kernel/(12321:12323): PID: 2 - Eliminar Segmento - Id Segmento: 4
+[INFO] 04:52:28:589 Kernel/(12321:12323): Compactación: Esperando Fin de Operaciones de FS
+[INFO] 04:55:06:385 Kernel/(12417:12425): Se crea el proceso 1 en NEW
+[INFO] 04:55:06:385 Kernel/(12417:12420): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 04:55:06:385 Kernel/(12417:12420): Cola Ready FIFO: [1]
+[INFO] 04:55:06:385 Kernel/(12417:12419): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 04:55:06:388 Kernel/(12417:12419): PID: 1 - Wait: RA - Instancias: 0
+[INFO] 04:55:06:915 Kernel/(12417:12428): Se crea el proceso 2 en NEW
+[INFO] 04:55:06:916 Kernel/(12417:12420): PID: 2 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 04:55:06:916 Kernel/(12417:12420): Cola Ready FIFO: [2]
+[INFO] 04:55:24:413 Kernel/(12417:12419): PID: 1 - Abrir Archivo: Consoles
+[INFO] 04:55:24:414 Kernel/(12417:12419): PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 04:55:24:414 Kernel/(12417:12419): PID: 1 - Bloqueado por: Consoles
+[INFO] 04:55:24:414 Kernel/(12417:12419): PID: 1 - Archivo: Consoles - Tamaño: 256
+[INFO] 04:55:24:414 Kernel/(12417:12419): PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 04:55:24:414 Kernel/(12417:12419): PID: 2 - Wait: RB - Instancias: -1
+[INFO] 04:55:24:414 Kernel/(12417:12419): PID: 2 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 04:55:24:415 Kernel/(12417:12419): PID: 2 - Bloqueado por: RB
+[INFO] 04:55:24:460 Kernel/(12417:12421): PID: 1 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 04:55:24:461 Kernel/(12417:12421): Cola Ready FIFO: [1]
+[INFO] 04:55:24:461 Kernel/(12417:12419): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 04:55:24:461 Kernel/(12417:12419): PID: 1 - Actualizar puntero Archivo: Consoles - Puntero 128
+[INFO] 04:55:24:463 Kernel/(12417:12419): PID: 1 - Signal: RB - Instancias: 0
+[INFO] 04:55:24:463 Kernel/(12417:12419): PID: 2 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 04:55:24:463 Kernel/(12417:12419): Cola Ready FIFO: [2]
+[INFO] 04:55:24:465 Kernel/(12417:12419): PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 04:55:24:465 Kernel/(12417:12419): PID: 1 - Bloqueado por: Consoles
+[INFO] 04:55:24:465 Kernel/(12417:12419): PID: 1 - Escribir Archivo: Consoles - Puntero 208 - Dirección Memoria 32 - Tamaño 80
+[INFO] 04:55:24:465 Kernel/(12417:12419): PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 04:55:24:465 Kernel/(12417:12419): PID: 2 - Crear Segmento - Id: 1 - Tamaño: 64
+[INFO] 04:55:24:465 Kernel/(12417:12419): PID: 2 - Crear Segmento - Id: 2 - Tamaño: 64
+[INFO] 04:55:24:466 Kernel/(12417:12419): PID: 2 - Crear Segmento - Id: 3 - Tamaño: 64
+[INFO] 04:55:24:466 Kernel/(12417:12419): PID: 2 - Crear Segmento - Id: 4 - Tamaño: 64
+[INFO] 04:55:24:466 Kernel/(12417:12419): PID: 2 - Crear Segmento - Id: 5 - Tamaño: 128
+[INFO] 04:55:24:466 Kernel/(12417:12419): PID: 2 - Eliminar Segmento - Id Segmento: 2
+[INFO] 04:55:24:467 Kernel/(12417:12419): PID: 2 - Eliminar Segmento - Id Segmento: 4
+[INFO] 04:55:24:467 Kernel/(12417:12419): Compactación: Esperando Fin de Operaciones de FS
+[INFO] 04:57:47:677 Kernel/(12516:12524): Se crea el proceso 1 en NEW
+[INFO] 04:57:47:678 Kernel/(12516:12519): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 04:57:47:678 Kernel/(12516:12519): Cola Ready FIFO: [1]
+[INFO] 04:57:47:678 Kernel/(12516:12518): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 04:57:47:679 Kernel/(12516:12518): PID: 1 - Wait: RA - Instancias: 0
+[INFO] 04:57:48:272 Kernel/(12516:12527): Se crea el proceso 2 en NEW
+[INFO] 04:57:48:274 Kernel/(12516:12519): PID: 2 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 04:57:48:274 Kernel/(12516:12519): Cola Ready FIFO: [2]
+[INFO] 04:58:05:714 Kernel/(12516:12518): PID: 1 - Abrir Archivo: Consoles
+[INFO] 04:58:05:715 Kernel/(12516:12518): PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 04:58:05:715 Kernel/(12516:12518): PID: 1 - Bloqueado por: Consoles
+[INFO] 04:58:05:715 Kernel/(12516:12518): PID: 1 - Archivo: Consoles - Tamaño: 256
+[INFO] 04:58:05:715 Kernel/(12516:12518): PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 04:58:05:715 Kernel/(12516:12518): PID: 2 - Wait: RB - Instancias: -1
+[INFO] 04:58:05:715 Kernel/(12516:12518): PID: 2 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 04:58:05:715 Kernel/(12516:12518): PID: 2 - Bloqueado por: RB
+[INFO] 04:58:05:717 Kernel/(12516:12520): PID: 1 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 04:58:05:717 Kernel/(12516:12520): Cola Ready FIFO: [1]
+[INFO] 04:58:05:717 Kernel/(12516:12518): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 04:58:05:717 Kernel/(12516:12518): PID: 1 - Actualizar puntero Archivo: Consoles - Puntero 128
+[INFO] 04:58:05:718 Kernel/(12516:12518): PID: 1 - Signal: RB - Instancias: 0
+[INFO] 04:58:05:718 Kernel/(12516:12518): PID: 2 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 04:58:05:718 Kernel/(12516:12518): Cola Ready FIFO: [2]
+[INFO] 04:58:05:718 Kernel/(12516:12518): PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 04:58:05:718 Kernel/(12516:12518): PID: 1 - Bloqueado por: Consoles
+[INFO] 04:58:05:720 Kernel/(12516:12518): PID: 1 - Escribir Archivo: Consoles - Puntero 208 - Dirección Memoria 32 - Tamaño 80
+[INFO] 04:58:05:720 Kernel/(12516:12518): PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[ERROR] 04:58:07:227 Kernel/(12516:12518): Error en el recibo de mensaje de memoria
+[INFO] 05:07:32:247 Kernel/(12948:12956): Se crea el proceso 1 en NEW
+[INFO] 05:07:32:249 Kernel/(12948:12952): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 05:07:32:249 Kernel/(12948:12952): Cola Ready FIFO: [1]
+[INFO] 05:07:32:249 Kernel/(12948:12951): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 05:07:32:252 Kernel/(12948:12951): PID: 1 - Wait: RA - Instancias: 0
+[INFO] 05:07:32:872 Kernel/(12948:12959): Se crea el proceso 2 en NEW
+[INFO] 05:07:32:873 Kernel/(12948:12952): PID: 2 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 05:07:32:873 Kernel/(12948:12952): Cola Ready FIFO: [2]
+[INFO] 05:07:50:264 Kernel/(12948:12951): PID: 1 - Abrir Archivo: Consoles
+[INFO] 05:07:50:265 Kernel/(12948:12951): PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 05:07:50:265 Kernel/(12948:12951): PID: 1 - Bloqueado por: Consoles
+[INFO] 05:07:50:265 Kernel/(12948:12951): PID: 1 - Archivo: Consoles - Tamaño: 256
+[INFO] 05:07:50:265 Kernel/(12948:12951): PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 05:07:50:265 Kernel/(12948:12951): PID: 2 - Wait: RB - Instancias: -1
+[INFO] 05:07:50:266 Kernel/(12948:12953): PID: 1 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 05:07:50:266 Kernel/(12948:12951): PID: 2 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 05:07:50:266 Kernel/(12948:12951): PID: 2 - Bloqueado por: RB
+[INFO] 05:07:50:266 Kernel/(12948:12953): Cola Ready FIFO: [1]
+[INFO] 05:07:50:266 Kernel/(12948:12951): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 05:07:50:266 Kernel/(12948:12951): PID: 1 - Actualizar puntero Archivo: Consoles - Puntero 128
+[INFO] 05:07:50:267 Kernel/(12948:12951): PID: 1 - Signal: RB - Instancias: 0
+[INFO] 05:07:50:267 Kernel/(12948:12951): PID: 2 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 05:07:50:267 Kernel/(12948:12951): Cola Ready FIFO: [2]
+[INFO] 05:07:50:267 Kernel/(12948:12951): PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 05:07:50:267 Kernel/(12948:12951): PID: 1 - Bloqueado por: Consoles
+[INFO] 05:07:50:267 Kernel/(12948:12951): PID: 1 - Escribir Archivo: Consoles - Puntero 208 - Dirección Memoria 32 - Tamaño 80
+[INFO] 05:07:50:267 Kernel/(12948:12951): PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 05:07:51:268 Kernel/(12948:12951): PID: 2 - Crear Segmento - Id: 1 - Tamaño: 64
+[INFO] 05:07:51:269 Kernel/(12948:12951): PID: 2 - Crear Segmento - Id: 2 - Tamaño: 64
+[INFO] 05:07:51:269 Kernel/(12948:12951): PID: 2 - Crear Segmento - Id: 3 - Tamaño: 64
+[INFO] 05:07:51:270 Kernel/(12948:12951): PID: 2 - Crear Segmento - Id: 4 - Tamaño: 64
+[INFO] 05:07:51:270 Kernel/(12948:12951): PID: 2 - Crear Segmento - Id: 5 - Tamaño: 128
+[INFO] 05:07:51:270 Kernel/(12948:12951): PID: 2 - Eliminar Segmento - Id Segmento: 2
+[INFO] 05:07:51:271 Kernel/(12948:12951): PID: 2 - Eliminar Segmento - Id Segmento: 4
+[INFO] 05:07:51:271 Kernel/(12948:12951): Compactación: Esperando Fin de Operaciones de FS
+[INFO] 05:08:51:271 Kernel/(12948:12953): PID: 1 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 05:08:51:272 Kernel/(12948:12953): Cola Ready FIFO: [1]
+[INFO] 05:08:51:272 Kernel/(12948:12951): Compactación: Se solicitó compactación
+[INFO] 05:09:21:273 Kernel/(12948:12951): Se finalizó el proceso de compactación
+[INFO] 05:09:21:273 Kernel/(12948:12951): PID: 2 - Crear Segmento - Id: 6 - Tamaño: 128
+[INFO] 05:09:21:273 Kernel/(12948:12951): PID: 2 - Signal: RB - Instancias: 1
+[INFO] 05:09:21:273 Kernel/(12948:12951): PID: 2 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 05:09:21:274 Kernel/(12948:12951): Finaliza el proceso 2 - Motivo: SUCCESS
+[INFO] 05:09:21:274 Kernel/(12948:12951): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 05:09:21:275 Kernel/(12948:12951): PID: 1 - Cerrar Archivo: Consoles
+[INFO] 05:09:21:277 Kernel/(12948:12951): PID: 1 - Abrir Archivo: Videogames
+[INFO] 05:09:21:279 Kernel/(12948:12951): PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 05:09:21:279 Kernel/(12948:12951): PID: 1 - Bloqueado por: Videogames
+[INFO] 05:09:21:279 Kernel/(12948:12951): PID: 1 - Archivo: Videogames - Tamaño: 64
+[INFO] 05:09:21:280 Kernel/(12948:12953): PID: 1 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 05:09:21:280 Kernel/(12948:12953): Cola Ready FIFO: [1]
+[INFO] 05:09:21:281 Kernel/(12948:12951): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 05:09:21:281 Kernel/(12948:12951): PID: 1 - Actualizar puntero Archivo: Videogames - Puntero 0
+[INFO] 05:09:21:282 Kernel/(12948:12951): PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 05:09:21:282 Kernel/(12948:12951): PID: 1 - Bloqueado por: Videogames
+[INFO] 05:09:21:282 Kernel/(12948:12951): PID: 1 - Escribir Archivo: Videogames - Puntero 16 - Dirección Memoria 0 - Tamaño 16
+[INFO] 05:09:37:283 Kernel/(12948:12953): PID: 1 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 05:09:37:283 Kernel/(12948:12953): Cola Ready FIFO: [1]
+[INFO] 05:09:37:283 Kernel/(12948:12951): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 05:09:37:284 Kernel/(12948:12951): PID: 1 - Cerrar Archivo: Videogames
+[INFO] 05:09:37:284 Kernel/(12948:12951): PID: 1 - Signal: RA - Instancias: 1
+[INFO] 05:09:37:284 Kernel/(12948:12951): PID: 1 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 05:09:37:285 Kernel/(12948:12951): Finaliza el proceso 1 - Motivo: SUCCESS
+[INFO] 05:11:03:643 Kernel/(12977:12987): Se crea el proceso 1 en NEW
+[INFO] 05:11:03:643 Kernel/(12977:12980): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 05:11:03:643 Kernel/(12977:12980): Cola Ready FIFO: [1]
+[INFO] 05:11:03:643 Kernel/(12977:12979): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 05:11:03:644 Kernel/(12977:12979): PID: 1 - Abrir Archivo: Videogames
+[INFO] 05:11:03:644 Kernel/(12977:12979): PID: 1 - Actualizar puntero Archivo: Videogames - Puntero 0
+[INFO] 05:11:03:644 Kernel/(12977:12979): PID: 1 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 05:11:03:644 Kernel/(12977:12979): PID: 1 - Bloqueado por: Videogames
+[INFO] 05:11:03:644 Kernel/(12977:12979): PID: 1 - Leer Archivo: Videogames - Puntero 16 - Dirección Memoria 16 - Tamaño 16
+[INFO] 05:11:04:380 Kernel/(12977:12990): Se crea el proceso 2 en NEW
+[INFO] 05:11:04:383 Kernel/(12977:12980): PID: 2 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 05:11:04:383 Kernel/(12977:12980): Cola Ready FIFO: [2]
+[INFO] 05:11:04:383 Kernel/(12977:12979): PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 05:11:04:384 Kernel/(12977:12979): PID: 2 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 05:11:04:384 Kernel/(12977:12979): PID: 2 - Bloqueado por: Videogames
+[INFO] 05:11:04:983 Kernel/(12977:12993): Se crea el proceso 3 en NEW
+[INFO] 05:11:04:983 Kernel/(12977:12980): PID: 3 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 05:11:04:983 Kernel/(12977:12980): Cola Ready FIFO: [3]
+[INFO] 05:11:04:983 Kernel/(12977:12979): PID: 3 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 05:11:04:984 Kernel/(12977:12979): PID: 3 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 05:11:04:984 Kernel/(12977:12979): PID: 3 - Bloqueado por: Videogames
+[INFO] 05:11:05:578 Kernel/(12977:12996): Se crea el proceso 4 en NEW
+[INFO] 05:11:05:578 Kernel/(12977:12980): PID: 4 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 05:11:05:578 Kernel/(12977:12980): Cola Ready FIFO: [4]
+[INFO] 05:11:05:578 Kernel/(12977:12979): PID: 4 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 05:11:05:579 Kernel/(12977:12979): PID: 4 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 05:11:05:579 Kernel/(12977:12979): PID: 4 - Bloqueado por: Videogames
+[INFO] 05:11:19:646 Kernel/(12977:12981): PID: 1 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 05:11:19:646 Kernel/(12977:12981): Cola Ready FIFO: [1]
+[INFO] 05:11:19:646 Kernel/(12977:12979): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 05:11:21:647 Kernel/(12977:12979): PID: 1 - Cerrar Archivo: Videogames
+[INFO] 05:11:21:647 Kernel/(12977:12979): PID: 2 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 05:11:21:647 Kernel/(12977:12979): Cola Ready FIFO: [2]
+[INFO] 05:11:21:647 Kernel/(12977:12979): PID: 2 - Abrir Archivo: Videogames
+[INFO] 05:11:21:647 Kernel/(12977:12979): PID: 1 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 05:11:21:648 Kernel/(12977:12979): Finaliza el proceso 1 - Motivo: SUCCESS
+[INFO] 05:11:21:648 Kernel/(12977:12979): PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 05:11:21:648 Kernel/(12977:12979): PID: 2 - Actualizar puntero Archivo: Videogames - Puntero 0
+[INFO] 05:11:21:648 Kernel/(12977:12979): PID: 2 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 05:11:21:648 Kernel/(12977:12979): PID: 2 - Bloqueado por: Videogames
+[INFO] 05:11:21:648 Kernel/(12977:12979): PID: 2 - Leer Archivo: Videogames - Puntero 16 - Dirección Memoria 16 - Tamaño 16
+[INFO] 05:11:37:650 Kernel/(12977:12981): PID: 2 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 05:11:37:650 Kernel/(12977:12981): Cola Ready FIFO: [2]
+[INFO] 05:11:37:650 Kernel/(12977:12979): PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 05:11:39:651 Kernel/(12977:12979): PID: 2 - Cerrar Archivo: Videogames
+[INFO] 05:11:39:651 Kernel/(12977:12979): PID: 3 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 05:11:39:651 Kernel/(12977:12979): Cola Ready FIFO: [3]
+[INFO] 05:11:39:651 Kernel/(12977:12979): PID: 3 - Abrir Archivo: Videogames
+[INFO] 05:11:39:651 Kernel/(12977:12979): PID: 2 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 05:11:39:652 Kernel/(12977:12979): Finaliza el proceso 2 - Motivo: SUCCESS
+[INFO] 05:11:39:652 Kernel/(12977:12979): PID: 3 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 05:11:39:653 Kernel/(12977:12979): PID: 3 - Actualizar puntero Archivo: Videogames - Puntero 0
+[INFO] 05:11:39:653 Kernel/(12977:12979): PID: 3 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 05:11:39:653 Kernel/(12977:12979): PID: 3 - Bloqueado por: Videogames
+[INFO] 05:11:39:653 Kernel/(12977:12979): PID: 3 - Leer Archivo: Videogames - Puntero 16 - Dirección Memoria 16 - Tamaño 16
+[INFO] 05:11:55:654 Kernel/(12977:12981): PID: 3 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 05:11:55:654 Kernel/(12977:12981): Cola Ready FIFO: [3]
+[INFO] 05:11:55:654 Kernel/(12977:12979): PID: 3 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 05:11:57:655 Kernel/(12977:12979): PID: 3 - Cerrar Archivo: Videogames
+[INFO] 05:11:57:655 Kernel/(12977:12979): PID: 4 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 05:11:57:655 Kernel/(12977:12979): Cola Ready FIFO: [4]
+[INFO] 05:11:57:655 Kernel/(12977:12979): PID: 4 - Abrir Archivo: Videogames
+[INFO] 05:11:57:656 Kernel/(12977:12979): PID: 3 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 05:11:57:656 Kernel/(12977:12979): Finaliza el proceso 3 - Motivo: SUCCESS
+[INFO] 05:11:57:656 Kernel/(12977:12979): PID: 4 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 05:11:57:657 Kernel/(12977:12979): PID: 4 - Actualizar puntero Archivo: Videogames - Puntero 0
+[INFO] 05:11:57:657 Kernel/(12977:12979): PID: 4 - Estado Anterior: EXEC - Estado Actual: BLOCK
+[INFO] 05:11:57:657 Kernel/(12977:12979): PID: 4 - Bloqueado por: Videogames
+[INFO] 05:11:57:657 Kernel/(12977:12979): PID: 4 - Leer Archivo: Videogames - Puntero 16 - Dirección Memoria 16 - Tamaño 16
+[INFO] 05:12:13:658 Kernel/(12977:12981): PID: 4 - Estado Anterior: BLOCK - Estado Actual: READY
+[INFO] 05:12:13:658 Kernel/(12977:12981): Cola Ready FIFO: [4]
+[INFO] 05:12:13:658 Kernel/(12977:12979): PID: 4 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 05:12:15:659 Kernel/(12977:12979): PID: 4 - Cerrar Archivo: Videogames
+[INFO] 05:12:15:660 Kernel/(12977:12979): PID: 4 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 05:12:15:660 Kernel/(12977:12979): Finaliza el proceso 4 - Motivo: SUCCESS
+[INFO] 05:26:16:493 Kernel/(13522:13530): Se crea el proceso 1 en NEW
+[INFO] 05:26:16:495 Kernel/(13522:13526): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 05:26:16:495 Kernel/(13522:13526): Cola Ready FIFO: [1]
+[INFO] 05:26:16:495 Kernel/(13522:13525): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[ERROR] 05:26:17:497 Kernel/(13522:13525): El recurso LA_TERCERA_DE_FRANCIA no existe
+[INFO] 05:26:17:497 Kernel/(13522:13525): PID: 1 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 05:26:17:498 Kernel/(13522:13525): Finaliza el proceso 1 - Motivo: SUCCESS
+[INFO] 05:26:59:417 Kernel/(13522:13533): Se crea el proceso 2 en NEW
+[INFO] 05:26:59:417 Kernel/(13522:13526): PID: 2 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 05:26:59:417 Kernel/(13522:13526): Cola Ready FIFO: [2]
+[INFO] 05:26:59:417 Kernel/(13522:13525): PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[ERROR] 05:27:00:418 Kernel/(13522:13525): El recurso EL_CUARTO_DE_FRANCIA no existe
+[INFO] 05:27:00:418 Kernel/(13522:13525): PID: 2 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 05:27:00:419 Kernel/(13522:13525): Finaliza el proceso 2 - Motivo: SUCCESS
+[INFO] 05:27:15:940 Kernel/(13522:13537): Se crea el proceso 3 en NEW
+[INFO] 05:27:15:940 Kernel/(13522:13526): PID: 3 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 05:27:15:940 Kernel/(13522:13526): Cola Ready FIFO: [3]
+[INFO] 05:27:15:940 Kernel/(13522:13525): PID: 3 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 05:27:21:943 Kernel/(13522:13525): PID: 3 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 05:27:21:944 Kernel/(13522:13525): Finaliza el proceso 3 - Motivo: SEG_FAULT
+[INFO] 05:28:14:665 Kernel/(13522:13541): Se crea el proceso 4 en NEW
+[INFO] 05:28:14:665 Kernel/(13522:13526): PID: 4 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 05:28:14:666 Kernel/(13522:13526): Cola Ready FIFO: [4]
+[INFO] 05:28:14:666 Kernel/(13522:13525): PID: 4 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 05:28:14:666 Kernel/(13522:13525): PID: 3 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 05:28:14:666 Kernel/(13522:13525): Finaliza el proceso 3 - Motivo: SEG_FAULT
+[INFO] 05:29:27:922 Kernel/(13560:13568): Se crea el proceso 1 en NEW
+[INFO] 05:29:27:923 Kernel/(13560:13563): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 05:29:27:923 Kernel/(13560:13563): Cola Ready FIFO: [1]
+[INFO] 05:29:27:923 Kernel/(13560:13562): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 05:29:27:931 Kernel/(13560:13562): PID: 1 - Crear Segmento - Id: 1 - Tamaño: 256
+[INFO] 05:29:27:933 Kernel/(13560:13562): PID: 1 - Crear Segmento - Id: 2 - Tamaño: 256
+[INFO] 05:29:27:942 Kernel/(13560:13562): PID: 1 - Crear Segmento - Id: 3 - Tamaño: 256
+[INFO] 05:29:27:946 Kernel/(13560:13562): PID: 1 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 05:29:27:946 Kernel/(13560:13562): Finaliza el proceso 1 - Motivo: OUT_OF_MEMORY
+[INFO] 05:30:52:035 Kernel/(13593:13601): Se crea el proceso 1 en NEW
+[INFO] 05:30:52:035 Kernel/(13593:13597): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 05:30:52:035 Kernel/(13593:13597): Cola Ready FIFO: [1]
+[INFO] 05:30:52:035 Kernel/(13593:13596): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 05:30:52:036 Kernel/(13593:13596): PID: 1 - Crear Segmento - Id: 1 - Tamaño: 256
+[INFO] 05:30:52:036 Kernel/(13593:13596): PID: 1 - Crear Segmento - Id: 2 - Tamaño: 256
+[INFO] 05:30:52:037 Kernel/(13593:13596): PID: 1 - Crear Segmento - Id: 3 - Tamaño: 256
+[INFO] 05:30:52:037 Kernel/(13593:13596): PID: 1 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 05:30:52:037 Kernel/(13593:13596): Finaliza el proceso 1 - Motivo: OUT_OF_MEMORY
+[INFO] 05:31:17:767 Kernel/(13617:13625): Se crea el proceso 1 en NEW
+[INFO] 05:31:17:767 Kernel/(13617:13621): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 05:31:17:767 Kernel/(13617:13621): Cola Ready FIFO: [1]
+[INFO] 05:31:17:767 Kernel/(13617:13620): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 05:31:17:768 Kernel/(13617:13620): PID: 1 - Crear Segmento - Id: 1 - Tamaño: 256
+[INFO] 05:31:17:768 Kernel/(13617:13620): PID: 1 - Crear Segmento - Id: 2 - Tamaño: 256
+[INFO] 05:31:17:769 Kernel/(13617:13620): PID: 1 - Crear Segmento - Id: 3 - Tamaño: 256
+[INFO] 05:31:17:769 Kernel/(13617:13620): PID: 1 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 05:31:17:769 Kernel/(13617:13620): Finaliza el proceso 1 - Motivo: OUT_OF_MEMORY
+[INFO] 05:31:19:223 Kernel/(13617:13628): Se crea el proceso 2 en NEW
+[INFO] 05:31:19:223 Kernel/(13617:13621): PID: 2 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 05:31:19:223 Kernel/(13617:13621): Cola Ready FIFO: [2]
+[INFO] 05:31:19:224 Kernel/(13617:13620): PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 05:31:19:224 Kernel/(13617:13620): PID: 2 - Crear Segmento - Id: 1 - Tamaño: 256
+[INFO] 05:31:19:224 Kernel/(13617:13620): PID: 2 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 05:31:19:224 Kernel/(13617:13620): Finaliza el proceso 2 - Motivo: OUT_OF_MEMORY
+[INFO] 05:31:20:683 Kernel/(13617:13631): Se crea el proceso 3 en NEW
+[INFO] 05:31:20:684 Kernel/(13617:13621): PID: 3 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 05:31:20:684 Kernel/(13617:13621): Cola Ready FIFO: [3]
+[INFO] 05:31:20:684 Kernel/(13617:13620): PID: 3 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 05:31:20:684 Kernel/(13617:13620): PID: 3 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 05:31:20:684 Kernel/(13617:13620): Finaliza el proceso 3 - Motivo: OUT_OF_MEMORY
+[INFO] 05:31:21:919 Kernel/(13617:13634): Se crea el proceso 4 en NEW
+[INFO] 05:31:21:919 Kernel/(13617:13621): PID: 4 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 05:31:21:919 Kernel/(13617:13621): Cola Ready FIFO: [4]
+[INFO] 05:31:21:919 Kernel/(13617:13620): PID: 4 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 05:31:21:919 Kernel/(13617:13620): PID: 4 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 05:31:21:919 Kernel/(13617:13620): Finaliza el proceso 4 - Motivo: OUT_OF_MEMORY
+[INFO] 05:31:23:192 Kernel/(13617:13637): Se crea el proceso 5 en NEW
+[INFO] 05:31:23:192 Kernel/(13617:13621): PID: 5 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 05:31:23:193 Kernel/(13617:13621): Cola Ready FIFO: [5]
+[INFO] 05:31:23:193 Kernel/(13617:13620): PID: 5 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 05:31:23:193 Kernel/(13617:13620): PID: 5 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 05:31:23:193 Kernel/(13617:13620): Finaliza el proceso 5 - Motivo: OUT_OF_MEMORY
+[INFO] 05:31:24:463 Kernel/(13617:13640): Se crea el proceso 6 en NEW
+[INFO] 05:31:24:463 Kernel/(13617:13621): PID: 6 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 05:31:24:463 Kernel/(13617:13621): Cola Ready FIFO: [6]
+[INFO] 05:31:24:463 Kernel/(13617:13620): PID: 6 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 05:31:24:463 Kernel/(13617:13620): PID: 6 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 05:31:24:464 Kernel/(13617:13620): Finaliza el proceso 6 - Motivo: OUT_OF_MEMORY
+[INFO] 05:31:25:419 Kernel/(13617:13643): Se crea el proceso 7 en NEW
+[INFO] 05:31:25:420 Kernel/(13617:13621): PID: 7 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 05:31:25:420 Kernel/(13617:13621): Cola Ready FIFO: [7]
+[INFO] 05:31:25:420 Kernel/(13617:13620): PID: 7 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 05:31:25:420 Kernel/(13617:13620): PID: 7 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 05:31:25:420 Kernel/(13617:13620): Finaliza el proceso 7 - Motivo: OUT_OF_MEMORY
+[INFO] 05:31:30:179 Kernel/(13617:13646): Se crea el proceso 8 en NEW
+[INFO] 05:31:30:179 Kernel/(13617:13621): PID: 8 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 05:31:30:179 Kernel/(13617:13621): Cola Ready FIFO: [8]
+[INFO] 05:31:30:179 Kernel/(13617:13620): PID: 8 - Estado Anterior: READY - Estado Actual: EXEC
+[ERROR] 05:31:31:180 Kernel/(13617:13620): El recurso LA_TERCERA_DE_FRANCIA no existe
+[INFO] 05:31:31:180 Kernel/(13617:13620): PID: 8 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 05:31:31:181 Kernel/(13617:13620): Finaliza el proceso 8 - Motivo: SUCCESS
+[INFO] 05:31:33:025 Kernel/(13617:13649): Se crea el proceso 9 en NEW
+[INFO] 05:31:33:025 Kernel/(13617:13621): PID: 9 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 05:31:33:025 Kernel/(13617:13621): Cola Ready FIFO: [9]
+[INFO] 05:31:33:025 Kernel/(13617:13620): PID: 9 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 05:31:33:026 Kernel/(13617:13620): PID: 9 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 05:31:33:026 Kernel/(13617:13620): Finaliza el proceso 9 - Motivo: OUT_OF_MEMORY
+[INFO] 05:31:39:110 Kernel/(13617:13652): Se crea el proceso 10 en NEW
+[INFO] 05:31:39:110 Kernel/(13617:13621): PID: 10 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 05:31:39:110 Kernel/(13617:13621): Cola Ready FIFO: [10]
+[INFO] 05:31:39:110 Kernel/(13617:13620): PID: 10 - Estado Anterior: READY - Estado Actual: EXEC
+[ERROR] 05:31:40:110 Kernel/(13617:13620): El recurso EL_CUARTO_DE_FRANCIA no existe
+[INFO] 05:31:40:110 Kernel/(13617:13620): PID: 10 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 05:31:40:111 Kernel/(13617:13620): Finaliza el proceso 10 - Motivo: SUCCESS
+[INFO] 05:31:43:811 Kernel/(13617:13655): Se crea el proceso 11 en NEW
+[INFO] 05:31:43:811 Kernel/(13617:13621): PID: 11 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 05:31:43:811 Kernel/(13617:13621): Cola Ready FIFO: [11]
+[INFO] 05:31:43:811 Kernel/(13617:13620): PID: 11 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 05:31:43:812 Kernel/(13617:13620): PID: 11 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 05:31:43:812 Kernel/(13617:13620): Finaliza el proceso 11 - Motivo: OUT_OF_MEMORY
+[INFO] 05:31:48:411 Kernel/(13617:13658): Se crea el proceso 12 en NEW
+[INFO] 05:31:48:412 Kernel/(13617:13621): PID: 12 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 05:31:48:412 Kernel/(13617:13621): Cola Ready FIFO: [12]
+[INFO] 05:31:48:412 Kernel/(13617:13620): PID: 12 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 05:31:54:418 Kernel/(13617:13620): PID: 12 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 05:31:54:419 Kernel/(13617:13620): Finaliza el proceso 12 - Motivo: SEG_FAULT
+[INFO] 05:31:59:525 Kernel/(13617:13661): Se crea el proceso 13 en NEW
+[INFO] 05:31:59:525 Kernel/(13617:13621): PID: 13 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 05:31:59:525 Kernel/(13617:13621): Cola Ready FIFO: [13]
+[INFO] 05:31:59:525 Kernel/(13617:13620): PID: 13 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 05:31:59:525 Kernel/(13617:13620): PID: 12 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 05:31:59:525 Kernel/(13617:13620): Finaliza el proceso 12 - Motivo: SEG_FAULT
+[INFO] 05:32:44:201 Kernel/(13684:13692): Se crea el proceso 1 en NEW
+[INFO] 05:32:44:201 Kernel/(13684:13687): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 05:32:44:201 Kernel/(13684:13687): Cola Ready FIFO: [1]
+[INFO] 05:32:44:201 Kernel/(13684:13686): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 05:32:50:218 Kernel/(13684:13686): PID: 1 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 05:32:50:218 Kernel/(13684:13686): Finaliza el proceso 1 - Motivo: SEG_FAULT
+[INFO] 05:33:18:202 Kernel/(13684:13697): Se crea el proceso 2 en NEW
+[INFO] 05:33:18:203 Kernel/(13684:13687): PID: 2 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 05:33:18:203 Kernel/(13684:13687): Cola Ready FIFO: [2]
+[INFO] 05:33:18:203 Kernel/(13684:13686): PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 05:33:18:203 Kernel/(13684:13686): PID: 1 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 05:33:18:204 Kernel/(13684:13686): Finaliza el proceso 1 - Motivo: SEG_FAULT
+[INFO] 05:47:16:133 Kernel/(13947:13956): Se crea el proceso 1 en NEW
+[INFO] 05:47:16:134 Kernel/(13947:13950): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 05:47:16:134 Kernel/(13947:13950): Cola Ready FIFO: [1]
+[INFO] 05:47:16:134 Kernel/(13947:13949): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 05:47:22:148 Kernel/(13947:13949): PID: 1 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 05:47:22:149 Kernel/(13947:13949): Finaliza el proceso 1 - Motivo: SEG_FAULT
+[INFO] 05:47:26:156 Kernel/(13947:13959): Se crea el proceso 2 en NEW
+[INFO] 05:47:26:157 Kernel/(13947:13950): PID: 2 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 05:47:26:157 Kernel/(13947:13950): Cola Ready FIFO: [2]
+[INFO] 05:47:26:157 Kernel/(13947:13949): PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 05:47:26:157 Kernel/(13947:13949): PID: 1 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 05:47:26:157 Kernel/(13947:13949): Finaliza el proceso 1 - Motivo: SEG_FAULT
+[INFO] 05:52:28:526 Kernel/(13989:13997): Se crea el proceso 1 en NEW
+[INFO] 05:52:28:527 Kernel/(13989:13992): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 05:52:28:527 Kernel/(13989:13992): Cola Ready FIFO: [1]
+[INFO] 05:52:28:527 Kernel/(13989:13991): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 05:52:28:539 Kernel/(13989:13991): PID: 1 - Crear Segmento - Id: 1 - Tamaño: 256
+[INFO] 05:52:28:542 Kernel/(13989:13991): PID: 1 - Crear Segmento - Id: 2 - Tamaño: 256
+[INFO] 05:52:28:547 Kernel/(13989:13991): PID: 1 - Crear Segmento - Id: 3 - Tamaño: 256
+[INFO] 05:52:28:551 Kernel/(13989:13991): PID: 1 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 05:52:28:552 Kernel/(13989:13991): Finaliza el proceso 1 - Motivo: OUT_OF_MEMORY
+[INFO] 05:52:30:453 Kernel/(13989:14000): Se crea el proceso 2 en NEW
+[INFO] 05:52:30:453 Kernel/(13989:13992): PID: 2 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 05:52:30:453 Kernel/(13989:13992): Cola Ready FIFO: [2]
+[INFO] 05:52:30:453 Kernel/(13989:13991): PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 05:52:30:457 Kernel/(13989:13991): PID: 2 - Crear Segmento - Id: 1 - Tamaño: 256
+[INFO] 05:52:30:458 Kernel/(13989:13991): PID: 2 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 05:52:30:459 Kernel/(13989:13991): Finaliza el proceso 2 - Motivo: OUT_OF_MEMORY
+[INFO] 05:52:31:345 Kernel/(13989:14003): Se crea el proceso 3 en NEW
+[INFO] 05:52:31:345 Kernel/(13989:13992): PID: 3 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 05:52:31:345 Kernel/(13989:13992): Cola Ready FIFO: [3]
+[INFO] 05:52:31:345 Kernel/(13989:13991): PID: 3 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 05:52:31:347 Kernel/(13989:13991): PID: 3 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 05:52:31:347 Kernel/(13989:13991): Finaliza el proceso 3 - Motivo: OUT_OF_MEMORY
+[INFO] 05:52:31:936 Kernel/(13989:14006): Se crea el proceso 4 en NEW
+[INFO] 05:52:31:937 Kernel/(13989:13992): PID: 4 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 05:52:31:937 Kernel/(13989:13992): Cola Ready FIFO: [4]
+[INFO] 05:52:31:937 Kernel/(13989:13991): PID: 4 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 05:52:31:938 Kernel/(13989:13991): PID: 4 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 05:52:31:938 Kernel/(13989:13991): Finaliza el proceso 4 - Motivo: OUT_OF_MEMORY
+[INFO] 05:52:32:519 Kernel/(13989:14009): Se crea el proceso 5 en NEW
+[INFO] 05:52:32:519 Kernel/(13989:13992): PID: 5 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 05:52:32:519 Kernel/(13989:13992): Cola Ready FIFO: [5]
+[INFO] 05:52:32:519 Kernel/(13989:13991): PID: 5 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 05:52:32:521 Kernel/(13989:13991): PID: 5 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 05:52:32:521 Kernel/(13989:13991): Finaliza el proceso 5 - Motivo: OUT_OF_MEMORY
+[INFO] 05:52:33:122 Kernel/(13989:14012): Se crea el proceso 6 en NEW
+[INFO] 05:52:33:122 Kernel/(13989:13992): PID: 6 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 05:52:33:122 Kernel/(13989:13992): Cola Ready FIFO: [6]
+[INFO] 05:52:33:122 Kernel/(13989:13991): PID: 6 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 05:52:33:124 Kernel/(13989:13991): PID: 6 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 05:52:33:124 Kernel/(13989:13991): Finaliza el proceso 6 - Motivo: OUT_OF_MEMORY
+[INFO] 05:52:50:171 Kernel/(13989:14015): Se crea el proceso 7 en NEW
+[INFO] 05:52:50:171 Kernel/(13989:13992): PID: 7 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 05:52:50:171 Kernel/(13989:13992): Cola Ready FIFO: [7]
+[INFO] 05:52:50:171 Kernel/(13989:13991): PID: 7 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 05:52:56:185 Kernel/(13989:13991): PID: 7 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 05:52:56:186 Kernel/(13989:13991): Finaliza el proceso 7 - Motivo: SEG_FAULT
+[INFO] 05:53:04:774 Kernel/(13989:14019): Se crea el proceso 8 en NEW
+[INFO] 05:53:04:774 Kernel/(13989:13992): PID: 8 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 05:53:04:774 Kernel/(13989:13992): Cola Ready FIFO: [8]
+[INFO] 05:53:04:774 Kernel/(13989:13991): PID: 8 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 05:53:04:774 Kernel/(13989:13991): PID: 7 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 05:53:04:774 Kernel/(13989:13991): Finaliza el proceso 7 - Motivo: SEG_FAULT
+[INFO] 06:03:14:029 Kernel/(14174:14182): Se crea el proceso 1 en NEW
+[INFO] 06:03:14:029 Kernel/(14174:14178): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 06:03:14:030 Kernel/(14174:14178): Cola Ready FIFO: [1]
+[INFO] 06:03:14:030 Kernel/(14174:14177): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[ERROR] 06:03:15:032 Kernel/(14174:14177): El recurso LA_TERCERA_DE_FRANCIA no existe
+[INFO] 06:03:15:032 Kernel/(14174:14177): PID: 1 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 06:03:15:033 Kernel/(14174:14177): Finaliza el proceso 1 - Motivo: SUCCESS
+[INFO] 06:03:18:090 Kernel/(14174:14185): Se crea el proceso 2 en NEW
+[INFO] 06:03:18:090 Kernel/(14174:14178): PID: 2 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 06:03:18:091 Kernel/(14174:14178): Cola Ready FIFO: [2]
+[INFO] 06:03:18:091 Kernel/(14174:14177): PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[ERROR] 06:03:19:092 Kernel/(14174:14177): El recurso EL_CUARTO_DE_FRANCIA no existe
+[INFO] 06:03:19:092 Kernel/(14174:14177): PID: 2 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 06:03:19:093 Kernel/(14174:14177): Finaliza el proceso 2 - Motivo: SUCCESS
+[INFO] 06:03:22:006 Kernel/(14174:14188): Se crea el proceso 3 en NEW
+[INFO] 06:03:22:006 Kernel/(14174:14178): PID: 3 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 06:03:22:006 Kernel/(14174:14178): Cola Ready FIFO: [3]
+[INFO] 06:03:22:006 Kernel/(14174:14177): PID: 3 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 06:03:28:010 Kernel/(14174:14177): PID: 3 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 06:03:28:011 Kernel/(14174:14177): Finaliza el proceso 3 - Motivo: SEG_FAULT
+[INFO] 06:03:31:312 Kernel/(14174:14191): Se crea el proceso 4 en NEW
+[INFO] 06:03:31:312 Kernel/(14174:14178): PID: 4 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 06:03:31:312 Kernel/(14174:14178): Cola Ready FIFO: [4]
+[INFO] 06:03:31:312 Kernel/(14174:14177): PID: 4 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 06:03:31:313 Kernel/(14174:14177): PID: 4 - Crear Segmento - Id: 1 - Tamaño: 256
+[INFO] 06:03:31:313 Kernel/(14174:14177): PID: 4 - Crear Segmento - Id: 2 - Tamaño: 256
+[INFO] 06:03:31:314 Kernel/(14174:14177): PID: 4 - Crear Segmento - Id: 3 - Tamaño: 256
+[INFO] 06:03:31:314 Kernel/(14174:14177): PID: 4 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 06:03:31:314 Kernel/(14174:14177): Finaliza el proceso 4 - Motivo: OUT_OF_MEMORY
+[INFO] 06:03:34:523 Kernel/(14174:14194): Se crea el proceso 5 en NEW
+[INFO] 06:03:34:523 Kernel/(14174:14178): PID: 5 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 06:03:34:524 Kernel/(14174:14178): Cola Ready FIFO: [5]
+[INFO] 06:03:34:524 Kernel/(14174:14177): PID: 5 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 06:03:40:527 Kernel/(14174:14177): PID: 5 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 06:03:40:528 Kernel/(14174:14177): Finaliza el proceso 5 - Motivo: SEG_FAULT
+[INFO] 06:09:53:429 Kernel/(14765:14773): Se crea el proceso 1 en NEW
+[INFO] 06:09:53:430 Kernel/(14765:14768): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 06:09:53:431 Kernel/(14765:14768): Cola Ready FIFO: [1]
+[INFO] 06:09:53:431 Kernel/(14765:14767): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 06:09:54:286 Kernel/(14765:14776): Se crea el proceso 2 en NEW
+[INFO] 06:09:54:287 Kernel/(14765:14768): PID: 2 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 06:09:54:287 Kernel/(14765:14768): Cola Ready FIFO: [2]
+[ERROR] 06:09:54:432 Kernel/(14765:14767): El recurso LA_TERCERA_DE_FRANCIA no existe
+[INFO] 06:09:54:432 Kernel/(14765:14767): PID: 1 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 06:09:54:433 Kernel/(14765:14767): Finaliza el proceso 1 - Motivo: RECURSO_INEXISTENTE
+[INFO] 06:09:54:433 Kernel/(14765:14767): PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 06:09:55:111 Kernel/(14765:14779): Se crea el proceso 3 en NEW
+[INFO] 06:09:55:111 Kernel/(14765:14768): PID: 3 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 06:09:55:111 Kernel/(14765:14768): Cola Ready FIFO: [3]
+[ERROR] 06:09:55:434 Kernel/(14765:14767): El recurso EL_CUARTO_DE_FRANCIA no existe
+[INFO] 06:09:55:434 Kernel/(14765:14767): PID: 2 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 06:09:55:435 Kernel/(14765:14767): Finaliza el proceso 2 - Motivo: RECURSO_INEXISTENTE
+[INFO] 06:09:55:435 Kernel/(14765:14767): PID: 3 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 06:09:55:945 Kernel/(14765:14782): Se crea el proceso 4 en NEW
+[INFO] 06:09:55:945 Kernel/(14765:14768): PID: 4 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 06:09:55:945 Kernel/(14765:14768): Cola Ready FIFO: [4]
+[INFO] 06:10:01:441 Kernel/(14765:14767): PID: 3 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 06:10:01:442 Kernel/(14765:14767): Finaliza el proceso 3 - Motivo: SEG_FAULT
+[INFO] 06:10:01:442 Kernel/(14765:14767): PID: 4 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 06:10:01:442 Kernel/(14765:14767): PID: 4 - Crear Segmento - Id: 1 - Tamaño: 256
+[INFO] 06:10:01:443 Kernel/(14765:14767): PID: 4 - Crear Segmento - Id: 2 - Tamaño: 256
+[INFO] 06:10:01:444 Kernel/(14765:14767): PID: 4 - Crear Segmento - Id: 3 - Tamaño: 256
+[INFO] 06:10:01:445 Kernel/(14765:14767): PID: 4 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 06:10:01:445 Kernel/(14765:14767): Finaliza el proceso 4 - Motivo: OUT_OF_MEMORY
+[INFO] 06:12:34:619 Kernel/(14839:14847): Se crea el proceso 1 en NEW
+[INFO] 06:12:34:619 Kernel/(14839:14843): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 06:12:34:619 Kernel/(14839:14843): Cola Ready FIFO: [1]
+[INFO] 06:12:34:619 Kernel/(14839:14842): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 06:12:35:397 Kernel/(14839:14850): Se crea el proceso 2 en NEW
+[INFO] 06:12:35:397 Kernel/(14839:14843): PID: 2 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 06:12:35:397 Kernel/(14839:14843): Cola Ready FIFO: [2]
+[WARNING] 06:12:35:620 Kernel/(14839:14842): El recurso LA_TERCERA_DE_FRANCIA no existe
+[INFO] 06:12:35:620 Kernel/(14839:14842): PID: 1 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 06:12:35:621 Kernel/(14839:14842): Finaliza el proceso 1 - Motivo: RECURSO_INEXISTENTE
+[INFO] 06:12:35:621 Kernel/(14839:14842): PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 06:12:36:481 Kernel/(14839:14853): Se crea el proceso 3 en NEW
+[INFO] 06:12:36:481 Kernel/(14839:14843): PID: 3 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 06:12:36:481 Kernel/(14839:14843): Cola Ready FIFO: [3]
+[ERROR] 06:12:36:622 Kernel/(14839:14842): El recurso EL_CUARTO_DE_FRANCIA no existe
+[INFO] 06:12:36:622 Kernel/(14839:14842): PID: 2 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 06:12:36:623 Kernel/(14839:14842): Finaliza el proceso 2 - Motivo: RECURSO_INEXISTENTE
+[INFO] 06:12:36:623 Kernel/(14839:14842): PID: 3 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 06:12:37:698 Kernel/(14839:14856): Se crea el proceso 4 en NEW
+[INFO] 06:12:37:698 Kernel/(14839:14843): PID: 4 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 06:12:37:698 Kernel/(14839:14843): Cola Ready FIFO: [4]
+[INFO] 06:12:42:626 Kernel/(14839:14842): PID: 3 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 06:12:42:627 Kernel/(14839:14842): Finaliza el proceso 3 - Motivo: SEG_FAULT
+[INFO] 06:12:42:627 Kernel/(14839:14842): PID: 4 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 06:12:42:628 Kernel/(14839:14842): PID: 4 - Crear Segmento - Id: 1 - Tamaño: 256
+[INFO] 06:12:42:628 Kernel/(14839:14842): PID: 4 - Crear Segmento - Id: 2 - Tamaño: 256
+[INFO] 06:12:42:628 Kernel/(14839:14842): PID: 4 - Crear Segmento - Id: 3 - Tamaño: 256
+[INFO] 06:12:42:629 Kernel/(14839:14842): PID: 4 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 06:12:42:629 Kernel/(14839:14842): Finaliza el proceso 4 - Motivo: OUT_OF_MEMORY
+[INFO] 06:13:30:810 Kernel/(14914:14922): Se crea el proceso 1 en NEW
+[INFO] 06:13:30:810 Kernel/(14914:14917): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 06:13:30:811 Kernel/(14914:14917): Cola Ready FIFO: [1]
+[INFO] 06:13:30:811 Kernel/(14914:14916): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 06:13:31:342 Kernel/(14914:14925): Se crea el proceso 2 en NEW
+[INFO] 06:13:31:343 Kernel/(14914:14917): PID: 2 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 06:13:31:343 Kernel/(14914:14917): Cola Ready FIFO: [2]
+[WARNING] 06:13:31:811 Kernel/(14914:14916): El recurso LA_TERCERA_DE_FRANCIA no existe
+[INFO] 06:13:31:811 Kernel/(14914:14916): PID: 1 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 06:13:31:812 Kernel/(14914:14916): Finaliza el proceso 1 - Motivo: RECURSO_INEXISTENTE
+[INFO] 06:13:31:812 Kernel/(14914:14916): PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 06:13:31:949 Kernel/(14914:14928): Se crea el proceso 3 en NEW
+[INFO] 06:13:31:949 Kernel/(14914:14917): PID: 3 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 06:13:31:949 Kernel/(14914:14917): Cola Ready FIFO: [3]
+[INFO] 06:13:32:511 Kernel/(14914:14932): Se crea el proceso 4 en NEW
+[INFO] 06:13:32:511 Kernel/(14914:14917): PID: 4 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 06:13:32:511 Kernel/(14914:14917): Cola Ready FIFO: [3, 4]
+[WARNING] 06:13:32:813 Kernel/(14914:14916): El recurso EL_CUARTO_DE_FRANCIA no existe
+[INFO] 06:13:32:813 Kernel/(14914:14916): PID: 2 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 06:13:32:813 Kernel/(14914:14916): Finaliza el proceso 2 - Motivo: RECURSO_INEXISTENTE
+[INFO] 06:13:32:813 Kernel/(14914:14916): PID: 3 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 06:13:38:818 Kernel/(14914:14916): PID: 3 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 06:13:38:820 Kernel/(14914:14916): Finaliza el proceso 3 - Motivo: SEG_FAULT
+[INFO] 06:13:38:820 Kernel/(14914:14916): PID: 4 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 06:13:38:821 Kernel/(14914:14916): PID: 4 - Crear Segmento - Id: 1 - Tamaño: 256
+[INFO] 06:13:38:822 Kernel/(14914:14916): PID: 4 - Crear Segmento - Id: 2 - Tamaño: 256
+[INFO] 06:13:38:822 Kernel/(14914:14916): PID: 4 - Crear Segmento - Id: 3 - Tamaño: 256
+[INFO] 06:13:38:824 Kernel/(14914:14916): PID: 4 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 06:13:38:824 Kernel/(14914:14916): Finaliza el proceso 4 - Motivo: OUT_OF_MEMORY
+[INFO] 06:14:57:506 Kernel/(15014:15022): Se crea el proceso 1 en NEW
+[INFO] 06:14:57:506 Kernel/(15014:15018): PID: 1 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 06:14:57:506 Kernel/(15014:15018): Cola Ready FIFO: [1]
+[INFO] 06:14:57:506 Kernel/(15014:15017): PID: 1 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 06:14:58:163 Kernel/(15014:15025): Se crea el proceso 2 en NEW
+[INFO] 06:14:58:163 Kernel/(15014:15018): PID: 2 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 06:14:58:163 Kernel/(15014:15018): Cola Ready FIFO: [2]
+[INFO] 06:14:58:867 Kernel/(15014:15028): Se crea el proceso 3 en NEW
+[INFO] 06:14:58:868 Kernel/(15014:15018): PID: 3 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 06:14:58:868 Kernel/(15014:15018): Cola Ready FIFO: [2, 3]
+[INFO] 06:14:59:498 Kernel/(15014:15031): Se crea el proceso 4 en NEW
+[INFO] 06:14:59:499 Kernel/(15014:15018): PID: 4 - Estado Anterior: NEW - Estado Actual: READY
+[INFO] 06:14:59:499 Kernel/(15014:15018): Cola Ready FIFO: [2, 3, 4]
+[INFO] 06:15:03:510 Kernel/(15014:15017): PID: 1 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 06:15:03:511 Kernel/(15014:15017): Finaliza el proceso 1 - Motivo: SEG_FAULT
+[INFO] 06:15:03:511 Kernel/(15014:15017): PID: 2 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 06:15:04:512 Kernel/(15014:15017): PID: 2 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 06:15:04:513 Kernel/(15014:15017): Finaliza el proceso 2 - Motivo: RECURSO_INEXISTENTE
+[INFO] 06:15:04:513 Kernel/(15014:15017): PID: 3 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 06:15:10:520 Kernel/(15014:15017): PID: 3 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 06:15:10:521 Kernel/(15014:15017): Finaliza el proceso 3 - Motivo: SEG_FAULT
+[INFO] 06:15:10:522 Kernel/(15014:15017): PID: 4 - Estado Anterior: READY - Estado Actual: EXEC
+[INFO] 06:15:10:522 Kernel/(15014:15017): PID: 4 - Crear Segmento - Id: 1 - Tamaño: 256
+[INFO] 06:15:10:523 Kernel/(15014:15017): PID: 4 - Crear Segmento - Id: 2 - Tamaño: 256
+[INFO] 06:15:10:523 Kernel/(15014:15017): PID: 4 - Crear Segmento - Id: 3 - Tamaño: 256
+[INFO] 06:15:10:525 Kernel/(15014:15017): PID: 4 - Estado Anterior: EXEC - Estado Actual: EXIT
+[INFO] 06:15:10:525 Kernel/(15014:15017): Finaliza el proceso 4 - Motivo: OUT_OF_MEMORY

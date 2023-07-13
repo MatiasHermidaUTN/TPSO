@@ -100,7 +100,7 @@ int manejar_mensaje() { //pinta bien
 
 			if(!tengo_espacio_general(tamanio_segmento)) {
 				
-				log_error(logger_no_obligatorio, "no hay espacio para segmento");
+				log_warning(logger_no_obligatorio, "No hay espacio para segmento");
 				enviar_msj(socket_kernel, NO_HAY_ESPACIO_DISPONIBLE);
 				break;
 			}
@@ -162,13 +162,10 @@ int manejar_mensaje() { //pinta bien
 			//-----ENTRADA-----//
 			dir_fisica = atoi(mensaje->parametros[0]);
 			buffer = mensaje->parametros[1];
+			pid = atoi(mensaje->parametros[2]);
 
 			tamanio_buffer = string_length(buffer); //Saca el /0 (eso es bueno)
 			//-----------------//
-
-			buscar_pid_y_id_segmento_por_dir_fisica(dir_fisica, &pid, &id_segmento);
-
-			hay_seg_fault(pid, id_segmento, dir_fisica, tamanio_buffer);
 
 			memcpy(memoria_principal + dir_fisica, buffer, tamanio_buffer);
 
@@ -198,13 +195,10 @@ int manejar_mensaje() { //pinta bien
 			//-----ENTRADA-----//
 			dir_fisica = atoi(mensaje->parametros[0]);
 			tamanio_buffer = atoi(mensaje->parametros[1]); //tamanio del buffer a leer sin /0
+			pid = atoi(mensaje->parametros[2]);
 			//-----------------//
 
 			buffer = malloc(tamanio_buffer + 1);
-
-			buscar_pid_y_id_segmento_por_dir_fisica(dir_fisica, &pid, &id_segmento);
-
-			hay_seg_fault(pid, id_segmento, dir_fisica, tamanio_buffer);
 
 			memcpy(buffer, memoria_principal + dir_fisica, tamanio_buffer);
 
@@ -515,8 +509,11 @@ void hay_seg_fault(int pid, int id_segmento, int dir_fisica, int tamanio_buffer)
 	if(dir_fisica < nodoS->base)
 		log_error(logger_no_obligatorio, "Segmentation Fault: Se intento acceder a una direccion de memoria menor a la base del segmento");
 
-	if(dir_fisica + tamanio_buffer > nodoS->base + nodoS->tamanio)
+	if(dir_fisica + tamanio_buffer > nodoS->base + nodoS->tamanio){
+		log_warning(logger_no_obligatorio,"dir_fisica = %d ; tamanio_buffer = %d ; nodoS->base = %d ; nodoS->tamanio = %d",dir_fisica,tamanio_buffer,nodoS->base,nodoS->tamanio);
 		log_error(logger_no_obligatorio, "Segmentation Fault: Se intento acceder a una direccion de memoria mayor al limite del segmento");
+	}
+
 
 }
 
@@ -730,7 +727,7 @@ void* serializar_procesos_con_segmentos_memoria(t_list* procesos_actualizados, s
 		desplazamiento += sizeof(cantidad_segmentos);
 
 		for(int j = 0; j < cantidad_segmentos; j++) {
-			segmento = list_get(proceso->lista_segmentos, i); //mati: tabla_segmentos
+			segmento = list_get(proceso->lista_segmentos, j); //mati: tabla_segmentos
 
 			memcpy(stream + desplazamiento, &(segmento->id), sizeof(segmento->id));
 			desplazamiento += sizeof(segmento->id);

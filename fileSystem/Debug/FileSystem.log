@@ -99,3 +99,53 @@
 [WARNING] 21:03:18:493 FS/(2747:2747): Bitmap abierto
 [WARNING] 21:18:29:787 FS/(2924:2924): Bitmap abierto
 [WARNING] 21:19:42:331 FS/(3020:3020): Bitmap abierto
+[ERROR] 00:46:17:147 FS/(5711:5711): SuperBloque no existe
+[ERROR] 00:46:17:149 FS/(5711:5711): No se pudo ni CREAR el bitmap
+[ERROR] 00:46:17:149 FS/(5711:5711): No se pudo ni CREAR el bloques
+[ERROR] 00:49:10:845 FS/(6099:6099): SuperBloque no existe
+[ERROR] 01:34:06:386 FS/(6948:6948): SuperBloque no existe
+[ERROR] 04:10:17:179 FS/(11199:11199): SuperBloque no existe
+[ERROR] 04:10:17:180 FS/(11199:11199): No se pudo ni CREAR el bitmap
+[ERROR] 04:10:17:180 FS/(11199:11199): No se pudo ni CREAR el bloques
+[ERROR] 04:10:17:186 FS/(11199:11199): error en el handshake
+[ERROR] 04:11:28:164 FS/(11228:11228): error en el handshake
+[ERROR] 04:21:52:268 FS/(11589:11589): error en el handshake
+[INFO] 04:26:35:878 FS/(11749:11749): Abrir Archivo: Consoles
+[INFO] 04:33:34:326 FS/(11892:11892): Abrir Archivo: Consoles
+[INFO] 04:43:50:230 FS/(12066:12066): Abrir Archivo: Consoles
+[INFO] 04:43:50:253 FS/(12066:12066): Crear Archivo: Consoles
+[INFO] 04:43:50:264 FS/(12066:12066): Acceso a Bitmap - Bloque: 2 - Estado: 1
+[INFO] 04:43:50:265 FS/(12066:12066): Acceso a Bitmap - Bloque: 3 - Estado: 1
+[INFO] 04:43:50:267 FS/(12066:12066): Acceso a Bitmap - Bloque: 4 - Estado: 1
+[INFO] 04:44:05:268 FS/(12066:12066): Acceso a Bitmap - Bloque: 5 - Estado: 1
+[INFO] 04:44:20:270 FS/(12066:12066): Acceso a Bitmap - Bloque: 6 - Estado: 1
+[INFO] 04:44:35:274 FS/(12066:12066): Truncar Archivo: Consoles - Tamanio: 256
+[INFO] 04:46:51:832 FS/(12130:12130): Abrir Archivo: Consoles
+[INFO] 04:46:51:839 FS/(12130:12130): Crear Archivo: Consoles
+[INFO] 04:46:51:841 FS/(12130:12130): Acceso a Bitmap - Bloque: 7 - Estado: 1
+[INFO] 04:46:51:842 FS/(12130:12130): Acceso a Bitmap - Bloque: 8 - Estado: 1
+[INFO] 04:46:51:843 FS/(12130:12130): Acceso a Bitmap - Bloque: 9 - Estado: 1
+[INFO] 04:47:06:845 FS/(12130:12130): Acceso a Bitmap - Bloque: 10 - Estado: 1
+[INFO] 04:47:21:851 FS/(12130:12130): Acceso a Bitmap - Bloque: 11 - Estado: 1
+[INFO] 04:47:36:855 FS/(12130:12130): Truncar Archivo: Consoles - Tamanio: 256
+[INFO] 04:58:05:714 FS/(12511:12511): Abrir Archivo: Consoles
+[INFO] 04:58:05:717 FS/(12511:12511): Truncar Archivo: Consoles - Tamanio: 256
+[ERROR] 04:58:07:246 FS/(12511:12511): No se leyo bien -1
+[INFO] 05:07:50:264 FS/(12943:12943): Abrir Archivo: Consoles
+[INFO] 05:07:50:266 FS/(12943:12943): Truncar Archivo: Consoles - Tamanio: 256
+[INFO] 05:08:51:271 FS/(12943:12943): Escribir Archivo: Consoles - Puntero: 128 - Memoria: 32 - Tamanio: 80
+[INFO] 05:09:21:277 FS/(12943:12943): Abrir Archivo: Videogames
+[INFO] 05:09:21:278 FS/(12943:12943): Crear Archivo: Videogames
+[INFO] 05:09:21:280 FS/(12943:12943): Acceso a Bitmap - Bloque: 12 - Estado: 1
+[INFO] 05:09:21:281 FS/(12943:12943): Truncar Archivo: Videogames - Tamanio: 64
+[INFO] 05:09:37:283 FS/(12943:12943): Escribir Archivo: Videogames - Puntero: 0 - Memoria: 0 - Tamanio: 16
+[INFO] 05:11:03:644 FS/(12972:12972): Abrir Archivo: Videogames
+[INFO] 05:11:18:645 FS/(12972:12972): Acceso Bloque - Archivo: Videogames - Bloque Archivo: 0 - Bloque File System: 12
+[INFO] 05:11:19:645 FS/(12972:12972): Leer Archivo: Videogames - Puntero: 0 - Memoria: 16 - Tamanio: 16
+[INFO] 05:11:36:649 FS/(12972:12972): Acceso Bloque - Archivo: Videogames - Bloque Archivo: 0 - Bloque File System: 12
+[INFO] 05:11:37:650 FS/(12972:12972): Leer Archivo: Videogames - Puntero: 0 - Memoria: 16 - Tamanio: 16
+[INFO] 05:11:54:653 FS/(12972:12972): Acceso Bloque - Archivo: Videogames - Bloque Archivo: 0 - Bloque File System: 12
+[INFO] 05:11:55:654 FS/(12972:12972): Leer Archivo: Videogames - Puntero: 0 - Memoria: 16 - Tamanio: 16
+[INFO] 05:12:12:657 FS/(12972:12972): Acceso Bloque - Archivo: Videogames - Bloque Archivo: 0 - Bloque File System: 12
+[INFO] 05:12:13:658 FS/(12972:12972): Leer Archivo: Videogames - Puntero: 0 - Memoria: 16 - Tamanio: 16
+[ERROR] 05:32:26:359 FS/(13668:13668): error en el handshake

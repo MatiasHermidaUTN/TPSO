@@ -237,3 +237,58 @@
 [WARNING] 16:00:10:133 Memoria/(3409:3414): File System se conecto a Memoria
 [WARNING] 16:00:33:393 Memoria/(3409:3418): CPU se conecto a Memoria
 [WARNING] 16:00:40:325 Memoria/(3409:3421): Kernel se conecto a Memoria
+[WARNING] 03:27:11:905 Memoria/(10328:10328): Memoria lista para recibir al cliente
+[WARNING] 03:27:52:656 Memoria/(10338:10338): Memoria lista para recibir al cliente
+[WARNING] 03:28:17:324 Memoria/(10343:10343): Memoria lista para recibir al cliente
+[WARNING] 03:28:19:762 Memoria/(10343:10346): CPU se conecto a Memoria
+[WARNING] 03:28:21:742 Memoria/(10343:10351): File System se conecto a Memoria
+[WARNING] 03:28:24:354 Memoria/(10343:10354): Kernel se conecto a Memoria
+[WARNING] 03:28:48:844 Memoria/(10343:10343): Hay que compactar
+[WARNING] 03:35:19:510 Memoria/(10505:10505): Memoria lista para recibir al cliente
+[WARNING] 03:35:20:482 Memoria/(10505:10508): CPU se conecto a Memoria
+[WARNING] 03:35:21:701 Memoria/(10505:10513): File System se conecto a Memoria
+[WARNING] 03:35:23:498 Memoria/(10505:10516): Kernel se conecto a Memoria
+[WARNING] 03:35:47:553 Memoria/(10505:10505): Hay que compactar
+[WARNING] 03:37:05:313 Memoria/(10534:10534): Memoria lista para recibir al cliente
+[WARNING] 03:37:05:883 Memoria/(10534:10537): CPU se conecto a Memoria
+[WARNING] 03:37:07:697 Memoria/(10534:10542): File System se conecto a Memoria
+[WARNING] 03:37:10:770 Memoria/(10534:10545): Kernel se conecto a Memoria
+[WARNING] 03:37:30:838 Memoria/(10534:10534): Hay que compactar
+[WARNING] 03:39:34:058 Memoria/(10634:10634): Memoria lista para recibir al cliente
+[WARNING] 03:39:38:073 Memoria/(10634:10637): CPU se conecto a Memoria
+[WARNING] 03:39:40:048 Memoria/(10634:10642): File System se conecto a Memoria
+[WARNING] 03:39:42:514 Memoria/(10634:10645): Kernel se conecto a Memoria
+[WARNING] 03:40:01:871 Memoria/(10634:10634): Hay que compactar
+[WARNING] 04:57:30:119 Memoria/(12506:12506): Memoria lista para recibir al cliente
+[WARNING] 04:57:32:012 Memoria/(12506:12509): CPU se conecto a Memoria
+[WARNING] 04:57:41:383 Memoria/(12506:12514): File System se conecto a Memoria
+[WARNING] 04:57:43:534 Memoria/(12506:12517): Kernel se conecto a Memoria
+[WARNING] 05:29:15:793 Memoria/(13550:13550): Memoria lista para recibir al cliente
+[WARNING] 05:29:17:828 Memoria/(13550:13553): CPU se conecto a Memoria
+[WARNING] 05:29:20:268 Memoria/(13550:13558): File System se conecto a Memoria
+[WARNING] 05:29:22:410 Memoria/(13550:13561): Kernel se conecto a Memoria
+[ERROR] 05:29:27:945 Memoria/(13550:13550): no hay espacio para segmento
+[WARNING] 05:30:34:911 Memoria/(13576:13576): Memoria lista para recibir al cliente
+[WARNING] 05:30:36:139 Memoria/(13576:13579): CPU se conecto a Memoria
+[WARNING] 05:32:34:718 Memoria/(13674:13674): Memoria lista para recibir al cliente
+[WARNING] 05:32:35:565 Memoria/(13674:13677): CPU se conecto a Memoria
+[WARNING] 05:32:37:209 Memoria/(13674:13682): File System se conecto a Memoria
+[WARNING] 05:32:38:748 Memoria/(13674:13685): Kernel se conecto a Memoria
+[WARNING] 05:33:18:205 Memoria/(13674:13674): No se encontro el proceso con pid 1
+[WARNING] 05:47:08:522 Memoria/(13937:13937): Memoria lista para recibir al cliente
+[WARNING] 05:47:09:074 Memoria/(13937:13940): CPU se conecto a Memoria
+[WARNING] 05:47:10:072 Memoria/(13937:13945): File System se conecto a Memoria
+[WARNING] 05:47:11:116 Memoria/(13937:13948): Kernel se conecto a Memoria
+[WARNING] 05:47:26:158 Memoria/(13937:13937): No se encontro el proceso con pid 1
+[WARNING] 05:52:16:194 Memoria/(13979:13979): Memoria lista para recibir al cliente
+[WARNING] 05:52:16:385 Memoria/(13979:13982): CPU se conecto a Memoria
+[WARNING] 05:52:20:051 Memoria/(13979:13987): File System se conecto a Memoria
+[WARNING] 05:52:21:403 Memoria/(13979:13990): Kernel se conecto a Memoria
+[ERROR] 05:52:28:550 Memoria/(13979:13979): no hay espacio para segmento
+[ERROR] 05:52:30:458 Memoria/(13979:13979): no hay espacio para segmento
+[ERROR] 05:52:31:346 Memoria/(13979:13979): no hay espacio para segmento
+[ERROR] 05:52:31:938 Memoria/(13979:13979): no hay espacio para segmento
+[ERROR] 05:52:32:521 Memoria/(13979:13979): no hay espacio para segmento
+[ERROR] 05:52:33:124 Memoria/(13979:13979): no hay espacio para segmento
+[WARNING] 05:53:04:775 Memoria/(13979:13979): No se encontro el proceso con pid 7
+[WARNING] 06:02:55:431 Memoria/(14161:14161): Memoria lista para recibir al cliente

@@ -47,6 +47,7 @@ void ejecutar_instrucciones(t_pcb* pcb) {
 					log_info(logger, "PID: %d - Error SEG_FAULT - Segmento: %d - Offset: %d - Tamaño: %d", pcb->pid, datos_mmu.numero_segmento, datos_mmu.desplazamiento_segmento, datos_mmu.tamanio_segmento); //log obligatorio
 
 					enviar_pcb_a_kernel(pcb, EXIT_CON_SEG_FAULT, parametros_actuales);
+					return;
 				}
 				else {
 					//Atentos a la mayor villereada de todos los tiempos!!
@@ -298,6 +299,7 @@ void ejecutar_mov_in(t_pcb* pcb, t_datos_mmu datos_mmu, char* nombre_registro) {
 	char** parametros = string_array_new();
 	string_array_push(&parametros, string_itoa(datos_mmu.direccion_fisica));
 	string_array_push(&parametros, string_itoa(tamanio_registro(nombre_registro)));
+	string_array_push(&parametros, string_itoa(pcb->pid));
 
 	enviar_msj_con_parametros(socket_memoria, LEER_VALOR, parametros);
 
@@ -323,6 +325,7 @@ void ejecutar_mov_out(t_pcb* pcb, t_datos_mmu datos_mmu, char* nombre_registro) 
 	string_array_push(&parametros, string_itoa(datos_mmu.direccion_fisica));
 	char* valor = leer_registro(pcb, nombre_registro);
 	string_array_push(&parametros, valor);
+	string_array_push(&parametros, string_itoa(pcb->pid));
 
 	enviar_msj_con_parametros(socket_memoria, ESCRIBIR_VALOR, parametros);
 

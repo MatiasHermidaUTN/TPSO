@@ -208,3 +208,215 @@
 [INFO] 20:21:41:833 Memoria/(38861:38861): PID: 1 - Segmento: 3 - Base: 168 - Tamaño 40
 [INFO] 20:21:43:834 Memoria/(38861:38861): PID: 1 - Crear Segmento: 4 - Base: 208 - TAMAÑO: 40
 [INFO] 20:21:43:835 Memoria/(38861:38861): Eliminación de Proceso PID: 1
+[INFO] 03:28:32:677 Memoria/(10343:10343): Creación de Proceso PID: 1
+[INFO] 03:28:34:206 Memoria/(10343:10343): Creación de Proceso PID: 2
+[INFO] 03:28:34:696 Memoria/(10343:10343): PID: 1 - Acción: ESCRIBIR - Dirección física: 12 - Tamaño: 4 - Origen: CPU
+[INFO] 03:28:35:700 Memoria/(10343:10343): Creación de Proceso PID: 3
+[INFO] 03:28:35:707 Memoria/(10343:10343): PID: 1 - Crear Segmento: 1 - Base: 128 - TAMAÑO: 128
+[INFO] 03:28:35:713 Memoria/(10343:10343): PID: 2 - Acción: LEER - Dirección física: 12 - Tamaño: 4 - Origen: CPU
+[INFO] 03:28:37:723 Memoria/(10343:10343): PID: 2 - Crear Segmento: 1 - Base: 256 - TAMAÑO: 64
+[INFO] 03:28:37:737 Memoria/(10343:10343): PID: 2 - Crear Segmento: 2 - Base: 320 - TAMAÑO: 64
+[INFO] 03:28:37:740 Memoria/(10343:10343): PID: 2 - Crear Segmento: 3 - Base: 384 - TAMAÑO: 64
+[INFO] 03:28:37:743 Memoria/(10343:10343): PID: 2 - Crear Segmento: 4 - Base: 448 - TAMAÑO: 64
+[INFO] 03:28:37:745 Memoria/(10343:10343): PID: 2 - Crear Segmento: 5 - Base: 512 - TAMAÑO: 64
+[INFO] 03:28:37:750 Memoria/(10343:10343): PID: 2 - Crear Segmento: 6 - Base: 576 - TAMAÑO: 64
+[INFO] 03:28:37:752 Memoria/(10343:10343): PID: 2 - Crear Segmento: 7 - Base: 640 - TAMAÑO: 64
+[INFO] 03:28:37:754 Memoria/(10343:10343): PID: 2 - Crear Segmento: 8 - Base: 704 - TAMAÑO: 64
+[INFO] 03:28:39:764 Memoria/(10343:10343): PID: 2 - Acción: ESCRIBIR - Dirección física: 12 - Tamaño: 4 - Origen: CPU
+[INFO] 03:28:40:780 Memoria/(10343:10343): PID: 1 - Eliminar Segmento: 1 - Base: 128 - TAMAÑO: 128
+[INFO] 03:28:40:795 Memoria/(10343:10343): PID: 1 - Acción: LEER - Dirección física: 12 - Tamaño: 4 - Origen: CPU
+[INFO] 03:28:42:804 Memoria/(10343:10343): PID: 2 - Crear Segmento: 9 - Base: 768 - TAMAÑO: 64
+[INFO] 03:28:44:815 Memoria/(10343:10343): PID: 2 - Acción: ESCRIBIR - Dirección física: 256 - Tamaño: 8 - Origen: CPU
+[INFO] 03:28:47:821 Memoria/(10343:10343): PID: 2 - Acción: ESCRIBIR - Dirección física: 704 - Tamaño: 8 - Origen: CPU
+[INFO] 03:28:48:863 Memoria/(10343:10343): Solicitud de Compactación
+[INFO] 03:28:49:041 Memoria/(10343:10343): PID: 1 - Segmento: 0 - Base: 0 - Tamaño 128
+[INFO] 03:28:49:046 Memoria/(10343:10343): PID: 2 - Segmento: 0 - Base: 0 - Tamaño 128
+[INFO] 03:28:49:046 Memoria/(10343:10343): PID: 2 - Segmento: 1 - Base: 128 - Tamaño 64
+[INFO] 03:28:49:047 Memoria/(10343:10343): PID: 2 - Segmento: 2 - Base: 192 - Tamaño 64
+[INFO] 03:28:49:050 Memoria/(10343:10343): PID: 2 - Segmento: 3 - Base: 256 - Tamaño 64
+[INFO] 03:28:49:051 Memoria/(10343:10343): PID: 2 - Segmento: 4 - Base: 320 - Tamaño 64
+[INFO] 03:28:49:052 Memoria/(10343:10343): PID: 2 - Segmento: 5 - Base: 384 - Tamaño 64
+[INFO] 03:28:49:052 Memoria/(10343:10343): PID: 2 - Segmento: 6 - Base: 448 - Tamaño 64
+[INFO] 03:28:49:053 Memoria/(10343:10343): PID: 2 - Segmento: 7 - Base: 512 - Tamaño 64
+[INFO] 03:28:49:054 Memoria/(10343:10343): PID: 2 - Segmento: 8 - Base: 576 - Tamaño 64
+[INFO] 03:28:49:060 Memoria/(10343:10343): PID: 2 - Segmento: 9 - Base: 640 - Tamaño 64
+[INFO] 03:28:49:062 Memoria/(10343:10343): PID: 3 - Segmento: 0 - Base: 0 - Tamaño 128
+[INFO] 03:35:31:318 Memoria/(10505:10505): Creación de Proceso PID: 1
+[INFO] 03:35:32:266 Memoria/(10505:10505): Creación de Proceso PID: 2
+[INFO] 03:35:33:344 Memoria/(10505:10505): PID: 1 - Acción: ESCRIBIR - Dirección física: 12 - Tamaño: 4 - Origen: CPU
+[INFO] 03:35:34:358 Memoria/(10505:10505): Creación de Proceso PID: 3
+[INFO] 03:35:34:377 Memoria/(10505:10505): PID: 1 - Crear Segmento: 1 - Base: 128 - TAMAÑO: 128
+[INFO] 03:35:34:381 Memoria/(10505:10505): PID: 2 - Acción: LEER - Dirección física: 12 - Tamaño: 4 - Origen: CPU
+[INFO] 03:35:36:400 Memoria/(10505:10505): PID: 2 - Crear Segmento: 1 - Base: 256 - TAMAÑO: 64
+[INFO] 03:35:36:424 Memoria/(10505:10505): PID: 2 - Crear Segmento: 2 - Base: 320 - TAMAÑO: 64
+[INFO] 03:35:36:432 Memoria/(10505:10505): PID: 2 - Crear Segmento: 3 - Base: 384 - TAMAÑO: 64
+[INFO] 03:35:36:439 Memoria/(10505:10505): PID: 2 - Crear Segmento: 4 - Base: 448 - TAMAÑO: 64
+[INFO] 03:35:36:457 Memoria/(10505:10505): PID: 2 - Crear Segmento: 5 - Base: 512 - TAMAÑO: 64
+[INFO] 03:35:36:471 Memoria/(10505:10505): PID: 2 - Crear Segmento: 6 - Base: 576 - TAMAÑO: 64
+[INFO] 03:35:36:491 Memoria/(10505:10505): PID: 2 - Crear Segmento: 7 - Base: 640 - TAMAÑO: 64
+[INFO] 03:35:36:503 Memoria/(10505:10505): PID: 2 - Crear Segmento: 8 - Base: 704 - TAMAÑO: 64
+[INFO] 03:35:38:515 Memoria/(10505:10505): PID: 2 - Acción: ESCRIBIR - Dirección física: 12 - Tamaño: 4 - Origen: CPU
+[INFO] 03:35:39:522 Memoria/(10505:10505): PID: 1 - Eliminar Segmento: 1 - Base: 128 - TAMAÑO: 128
+[INFO] 03:35:39:529 Memoria/(10505:10505): PID: 1 - Acción: LEER - Dirección física: 12 - Tamaño: 4 - Origen: CPU
+[INFO] 03:35:41:534 Memoria/(10505:10505): PID: 2 - Crear Segmento: 9 - Base: 768 - TAMAÑO: 64
+[INFO] 03:35:43:543 Memoria/(10505:10505): PID: 2 - Acción: ESCRIBIR - Dirección física: 256 - Tamaño: 8 - Origen: CPU
+[INFO] 03:35:46:546 Memoria/(10505:10505): PID: 2 - Acción: ESCRIBIR - Dirección física: 704 - Tamaño: 8 - Origen: CPU
+[INFO] 03:35:47:559 Memoria/(10505:10505): Solicitud de Compactación
+[INFO] 03:35:47:680 Memoria/(10505:10505): PID: 1 - Segmento: 0 - Base: 0 - Tamaño 128
+[INFO] 03:35:47:683 Memoria/(10505:10505): PID: 2 - Segmento: 0 - Base: 0 - Tamaño 128
+[INFO] 03:35:47:684 Memoria/(10505:10505): PID: 2 - Segmento: 1 - Base: 128 - Tamaño 64
+[INFO] 03:35:47:685 Memoria/(10505:10505): PID: 2 - Segmento: 2 - Base: 192 - Tamaño 64
+[INFO] 03:35:47:686 Memoria/(10505:10505): PID: 2 - Segmento: 3 - Base: 256 - Tamaño 64
+[INFO] 03:35:47:687 Memoria/(10505:10505): PID: 2 - Segmento: 4 - Base: 320 - Tamaño 64
+[INFO] 03:35:47:688 Memoria/(10505:10505): PID: 2 - Segmento: 5 - Base: 384 - Tamaño 64
+[INFO] 03:35:47:689 Memoria/(10505:10505): PID: 2 - Segmento: 6 - Base: 448 - Tamaño 64
+[INFO] 03:35:47:690 Memoria/(10505:10505): PID: 2 - Segmento: 7 - Base: 512 - Tamaño 64
+[INFO] 03:35:47:694 Memoria/(10505:10505): PID: 2 - Segmento: 8 - Base: 576 - Tamaño 64
+[INFO] 03:35:47:696 Memoria/(10505:10505): PID: 2 - Segmento: 9 - Base: 640 - Tamaño 64
+[INFO] 03:35:47:703 Memoria/(10505:10505): PID: 3 - Segmento: 0 - Base: 0 - Tamaño 128
+[INFO] 03:35:52:730 Memoria/(10505:10505): PID: 3 - Crear Segmento: 1 - Base: 704 - TAMAÑO: 256
+[INFO] 03:35:52:746 Memoria/(10505:10505): PID: 3 - Acción: LEER - Dirección física: 12 - Tamaño: 4 - Origen: CPU
+[INFO] 03:35:54:749 Memoria/(10505:10505): PID: 2 - Acción: LEER - Dirección física: 128 - Tamaño: 8 - Origen: CPU
+[INFO] 03:35:56:751 Memoria/(10505:10505): PID: 2 - Eliminar Segmento: 1 - Base: 128 - TAMAÑO: 64
+[INFO] 03:35:56:764 Memoria/(10505:10505): PID: 2 - Acción: LEER - Dirección física: 576 - Tamaño: 8 - Origen: CPU
+[INFO] 03:35:58:766 Memoria/(10505:10505): PID: 2 - Eliminar Segmento: 2 - Base: 192 - TAMAÑO: 64
+[INFO] 03:35:58:772 Memoria/(10505:10505): PID: 2 - Eliminar Segmento: 4 - Base: 320 - TAMAÑO: 64
+[INFO] 03:35:58:775 Memoria/(10505:10505): PID: 2 - Eliminar Segmento: 5 - Base: 384 - TAMAÑO: 64
+[INFO] 03:35:58:783 Memoria/(10505:10505): PID: 3 - Crear Segmento: 2 - Base: 128 - TAMAÑO: 128
+[INFO] 03:35:58:828 Memoria/(10505:10505): Eliminación de Proceso PID: 3
+[INFO] 03:35:58:839 Memoria/(10505:10505): Eliminación de Proceso PID: 1
+[INFO] 03:35:58:840 Memoria/(10505:10505): Eliminación de Proceso PID: 2
+[INFO] 03:37:14:578 Memoria/(10534:10534): Creación de Proceso PID: 1
+[INFO] 03:37:15:243 Memoria/(10534:10534): Creación de Proceso PID: 2
+[INFO] 03:37:16:008 Memoria/(10534:10534): Creación de Proceso PID: 3
+[INFO] 03:37:16:602 Memoria/(10534:10534): PID: 1 - Acción: ESCRIBIR - Dirección física: 12 - Tamaño: 4 - Origen: CPU
+[INFO] 03:37:17:628 Memoria/(10534:10534): PID: 1 - Crear Segmento: 1 - Base: 128 - TAMAÑO: 128
+[INFO] 03:37:17:643 Memoria/(10534:10534): PID: 2 - Acción: LEER - Dirección física: 12 - Tamaño: 4 - Origen: CPU
+[INFO] 03:37:19:654 Memoria/(10534:10534): PID: 2 - Crear Segmento: 1 - Base: 256 - TAMAÑO: 64
+[INFO] 03:37:19:692 Memoria/(10534:10534): PID: 2 - Crear Segmento: 2 - Base: 320 - TAMAÑO: 64
+[INFO] 03:37:19:706 Memoria/(10534:10534): PID: 2 - Crear Segmento: 3 - Base: 384 - TAMAÑO: 64
+[INFO] 03:37:19:730 Memoria/(10534:10534): PID: 2 - Crear Segmento: 4 - Base: 448 - TAMAÑO: 64
+[INFO] 03:37:19:747 Memoria/(10534:10534): PID: 2 - Crear Segmento: 5 - Base: 512 - TAMAÑO: 64
+[INFO] 03:37:19:756 Memoria/(10534:10534): PID: 2 - Crear Segmento: 6 - Base: 576 - TAMAÑO: 64
+[INFO] 03:37:19:772 Memoria/(10534:10534): PID: 2 - Crear Segmento: 7 - Base: 640 - TAMAÑO: 64
+[INFO] 03:37:19:782 Memoria/(10534:10534): PID: 2 - Crear Segmento: 8 - Base: 704 - TAMAÑO: 64
+[INFO] 03:37:21:790 Memoria/(10534:10534): PID: 2 - Acción: ESCRIBIR - Dirección física: 12 - Tamaño: 4 - Origen: CPU
+[INFO] 03:37:22:803 Memoria/(10534:10534): PID: 1 - Eliminar Segmento: 1 - Base: 128 - TAMAÑO: 128
+[INFO] 03:37:22:813 Memoria/(10534:10534): PID: 1 - Acción: LEER - Dirección física: 12 - Tamaño: 4 - Origen: CPU
+[INFO] 03:37:24:819 Memoria/(10534:10534): PID: 2 - Crear Segmento: 9 - Base: 768 - TAMAÑO: 64
+[INFO] 03:37:26:825 Memoria/(10534:10534): PID: 2 - Acción: ESCRIBIR - Dirección física: 256 - Tamaño: 8 - Origen: CPU
+[INFO] 03:37:29:831 Memoria/(10534:10534): PID: 2 - Acción: ESCRIBIR - Dirección física: 704 - Tamaño: 8 - Origen: CPU
+[INFO] 03:37:30:842 Memoria/(10534:10534): Solicitud de Compactación
+[INFO] 03:37:30:924 Memoria/(10534:10534): PID: 1 - Segmento: 0 - Base: 0 - Tamaño 128
+[INFO] 03:37:30:925 Memoria/(10534:10534): PID: 2 - Segmento: 0 - Base: 0 - Tamaño 128
+[INFO] 03:37:30:926 Memoria/(10534:10534): PID: 2 - Segmento: 1 - Base: 128 - Tamaño 64
+[INFO] 03:37:30:926 Memoria/(10534:10534): PID: 2 - Segmento: 2 - Base: 192 - Tamaño 64
+[INFO] 03:37:30:927 Memoria/(10534:10534): PID: 2 - Segmento: 3 - Base: 256 - Tamaño 64
+[INFO] 03:37:30:927 Memoria/(10534:10534): PID: 2 - Segmento: 4 - Base: 320 - Tamaño 64
+[INFO] 03:37:30:928 Memoria/(10534:10534): PID: 2 - Segmento: 5 - Base: 384 - Tamaño 64
+[INFO] 03:37:30:928 Memoria/(10534:10534): PID: 2 - Segmento: 6 - Base: 448 - Tamaño 64
+[INFO] 03:37:30:929 Memoria/(10534:10534): PID: 2 - Segmento: 7 - Base: 512 - Tamaño 64
+[INFO] 03:37:30:929 Memoria/(10534:10534): PID: 2 - Segmento: 8 - Base: 576 - Tamaño 64
+[INFO] 03:37:30:930 Memoria/(10534:10534): PID: 2 - Segmento: 9 - Base: 640 - Tamaño 64
+[INFO] 03:37:30:931 Memoria/(10534:10534): PID: 3 - Segmento: 0 - Base: 0 - Tamaño 128
+[INFO] 03:37:35:938 Memoria/(10534:10534): PID: 3 - Crear Segmento: 1 - Base: 704 - TAMAÑO: 256
+[INFO] 03:37:35:944 Memoria/(10534:10534): PID: 3 - Acción: LEER - Dirección física: 12 - Tamaño: 4 - Origen: CPU
+[INFO] 03:37:37:954 Memoria/(10534:10534): PID: 2 - Acción: LEER - Dirección física: 128 - Tamaño: 8 - Origen: CPU
+[INFO] 03:37:39:960 Memoria/(10534:10534): PID: 2 - Eliminar Segmento: 1 - Base: 128 - TAMAÑO: 64
+[INFO] 03:37:39:962 Memoria/(10534:10534): PID: 2 - Acción: LEER - Dirección física: 576 - Tamaño: 8 - Origen: CPU
+[INFO] 03:37:41:964 Memoria/(10534:10534): PID: 2 - Eliminar Segmento: 2 - Base: 192 - TAMAÑO: 64
+[INFO] 03:37:41:971 Memoria/(10534:10534): PID: 2 - Eliminar Segmento: 4 - Base: 320 - TAMAÑO: 64
+[INFO] 03:37:41:973 Memoria/(10534:10534): PID: 2 - Eliminar Segmento: 5 - Base: 384 - TAMAÑO: 64
+[INFO] 03:37:41:977 Memoria/(10534:10534): PID: 3 - Crear Segmento: 2 - Base: 128 - TAMAÑO: 128
+[INFO] 03:37:41:984 Memoria/(10534:10534): Eliminación de Proceso PID: 3
+[INFO] 03:37:42:022 Memoria/(10534:10534): Eliminación de Proceso PID: 1
+[INFO] 03:37:42:023 Memoria/(10534:10534): Eliminación de Proceso PID: 2
+[INFO] 03:39:45:696 Memoria/(10634:10634): Creación de Proceso PID: 1
+[INFO] 03:39:46:396 Memoria/(10634:10634): Creación de Proceso PID: 2
+[INFO] 03:39:47:131 Memoria/(10634:10634): Creación de Proceso PID: 3
+[INFO] 03:39:47:708 Memoria/(10634:10634): PID: 1 - Acción: ESCRIBIR - Dirección física: 12 - Tamaño: 4 - Origen: CPU
+[INFO] 03:39:48:727 Memoria/(10634:10634): PID: 1 - Crear Segmento: 1 - Base: 128 - TAMAÑO: 128
+[INFO] 03:39:48:766 Memoria/(10634:10634): PID: 2 - Acción: LEER - Dirección física: 12 - Tamaño: 4 - Origen: CPU
+[INFO] 03:39:50:786 Memoria/(10634:10634): PID: 2 - Crear Segmento: 1 - Base: 256 - TAMAÑO: 64
+[INFO] 03:39:50:793 Memoria/(10634:10634): PID: 2 - Crear Segmento: 2 - Base: 320 - TAMAÑO: 64
+[INFO] 03:39:50:799 Memoria/(10634:10634): PID: 2 - Crear Segmento: 3 - Base: 384 - TAMAÑO: 64
+[INFO] 03:39:50:802 Memoria/(10634:10634): PID: 2 - Crear Segmento: 4 - Base: 448 - TAMAÑO: 64
+[INFO] 03:39:50:805 Memoria/(10634:10634): PID: 2 - Crear Segmento: 5 - Base: 512 - TAMAÑO: 64
+[INFO] 03:39:50:807 Memoria/(10634:10634): PID: 2 - Crear Segmento: 6 - Base: 576 - TAMAÑO: 64
+[INFO] 03:39:50:811 Memoria/(10634:10634): PID: 2 - Crear Segmento: 7 - Base: 640 - TAMAÑO: 64
+[INFO] 03:39:50:814 Memoria/(10634:10634): PID: 2 - Crear Segmento: 8 - Base: 704 - TAMAÑO: 64
+[INFO] 03:39:52:824 Memoria/(10634:10634): PID: 2 - Acción: ESCRIBIR - Dirección física: 12 - Tamaño: 4 - Origen: CPU
+[INFO] 03:39:53:832 Memoria/(10634:10634): PID: 1 - Eliminar Segmento: 1 - Base: 128 - TAMAÑO: 128
+[INFO] 03:39:53:839 Memoria/(10634:10634): PID: 1 - Acción: LEER - Dirección física: 12 - Tamaño: 4 - Origen: CPU
+[INFO] 03:39:55:850 Memoria/(10634:10634): PID: 2 - Crear Segmento: 9 - Base: 768 - TAMAÑO: 64
+[INFO] 03:39:57:861 Memoria/(10634:10634): PID: 2 - Acción: ESCRIBIR - Dirección física: 256 - Tamaño: 8 - Origen: CPU
+[INFO] 03:40:00:865 Memoria/(10634:10634): PID: 2 - Acción: ESCRIBIR - Dirección física: 704 - Tamaño: 8 - Origen: CPU
+[INFO] 03:40:01:873 Memoria/(10634:10634): Solicitud de Compactación
+[INFO] 03:40:01:925 Memoria/(10634:10634): PID: 1 - Segmento: 0 - Base: 0 - Tamaño 128
+[INFO] 03:40:01:926 Memoria/(10634:10634): PID: 2 - Segmento: 0 - Base: 0 - Tamaño 128
+[INFO] 03:40:01:931 Memoria/(10634:10634): PID: 2 - Segmento: 1 - Base: 128 - Tamaño 64
+[INFO] 03:40:01:931 Memoria/(10634:10634): PID: 2 - Segmento: 2 - Base: 192 - Tamaño 64
+[INFO] 03:40:01:932 Memoria/(10634:10634): PID: 2 - Segmento: 3 - Base: 256 - Tamaño 64
+[INFO] 03:40:01:932 Memoria/(10634:10634): PID: 2 - Segmento: 4 - Base: 320 - Tamaño 64
+[INFO] 03:40:01:932 Memoria/(10634:10634): PID: 2 - Segmento: 5 - Base: 384 - Tamaño 64
+[INFO] 03:40:01:933 Memoria/(10634:10634): PID: 2 - Segmento: 6 - Base: 448 - Tamaño 64
+[INFO] 03:40:01:933 Memoria/(10634:10634): PID: 2 - Segmento: 7 - Base: 512 - Tamaño 64
+[INFO] 03:40:01:933 Memoria/(10634:10634): PID: 2 - Segmento: 8 - Base: 576 - Tamaño 64
+[INFO] 03:40:01:938 Memoria/(10634:10634): PID: 2 - Segmento: 9 - Base: 640 - Tamaño 64
+[INFO] 03:40:01:941 Memoria/(10634:10634): PID: 3 - Segmento: 0 - Base: 0 - Tamaño 128
+[INFO] 03:40:06:948 Memoria/(10634:10634): PID: 3 - Crear Segmento: 1 - Base: 704 - TAMAÑO: 256
+[INFO] 03:40:06:951 Memoria/(10634:10634): PID: 3 - Acción: LEER - Dirección física: 12 - Tamaño: 4 - Origen: CPU
+[INFO] 03:40:08:954 Memoria/(10634:10634): PID: 2 - Acción: LEER - Dirección física: 128 - Tamaño: 8 - Origen: CPU
+[INFO] 03:40:10:960 Memoria/(10634:10634): PID: 2 - Eliminar Segmento: 1 - Base: 128 - TAMAÑO: 64
+[INFO] 03:40:10:963 Memoria/(10634:10634): PID: 2 - Acción: LEER - Dirección física: 576 - Tamaño: 8 - Origen: CPU
+[INFO] 03:40:12:969 Memoria/(10634:10634): PID: 2 - Eliminar Segmento: 2 - Base: 192 - TAMAÑO: 64
+[INFO] 03:40:12:972 Memoria/(10634:10634): PID: 2 - Eliminar Segmento: 4 - Base: 320 - TAMAÑO: 64
+[INFO] 03:40:12:973 Memoria/(10634:10634): PID: 2 - Eliminar Segmento: 5 - Base: 384 - TAMAÑO: 64
+[INFO] 03:40:12:977 Memoria/(10634:10634): PID: 3 - Crear Segmento: 2 - Base: 128 - TAMAÑO: 128
+[INFO] 03:40:12:995 Memoria/(10634:10634): Eliminación de Proceso PID: 3
+[INFO] 03:40:13:030 Memoria/(10634:10634): Eliminación de Proceso PID: 1
+[INFO] 03:40:13:031 Memoria/(10634:10634): Eliminación de Proceso PID: 2
+[INFO] 04:57:47:666 Memoria/(12506:12506): Creación de Proceso PID: 1
+[INFO] 04:57:48:268 Memoria/(12506:12506): Creación de Proceso PID: 2
+[INFO] 04:57:49:685 Memoria/(12506:12506): PID: 1 - Acción: ESCRIBIR - Dirección física: 0 - Tamaño: 16 - Origen: CPU
+[INFO] 04:57:52:693 Memoria/(12506:12506): PID: 1 - Acción: ESCRIBIR - Dirección física: 32 - Tamaño: 16 - Origen: CPU
+[INFO] 04:57:55:699 Memoria/(12506:12506): PID: 1 - Acción: ESCRIBIR - Dirección física: 48 - Tamaño: 16 - Origen: CPU
+[INFO] 04:57:58:704 Memoria/(12506:12506): PID: 1 - Acción: ESCRIBIR - Dirección física: 64 - Tamaño: 16 - Origen: CPU
+[INFO] 04:58:01:708 Memoria/(12506:12506): PID: 1 - Acción: ESCRIBIR - Dirección física: 80 - Tamaño: 16 - Origen: CPU
+[INFO] 04:58:04:711 Memoria/(12506:12506): PID: 1 - Acción: ESCRIBIR - Dirección física: 96 - Tamaño: 16 - Origen: CPU
+[INFO] 05:29:27:918 Memoria/(13550:13550): Creación de Proceso PID: 1
+[INFO] 05:29:27:930 Memoria/(13550:13550): PID: 1 - Crear Segmento: 1 - Base: 128 - TAMAÑO: 256
+[INFO] 05:29:27:933 Memoria/(13550:13550): PID: 1 - Crear Segmento: 2 - Base: 384 - TAMAÑO: 256
+[INFO] 05:29:27:939 Memoria/(13550:13550): PID: 1 - Crear Segmento: 3 - Base: 640 - TAMAÑO: 256
+[INFO] 05:29:27:952 Memoria/(13550:13550): Eliminación de Proceso PID: 1
+[INFO] 05:32:44:198 Memoria/(13674:13674): Creación de Proceso PID: 1
+[INFO] 05:32:47:207 Memoria/(13674:13674): PID: 1 - Acción: ESCRIBIR - Dirección física: 124 - Tamaño: 4 - Origen: CPU
+[INFO] 05:32:48:213 Memoria/(13674:13674): PID: 1 - Acción: LEER - Dirección física: 124 - Tamaño: 4 - Origen: CPU
+[INFO] 05:32:50:233 Memoria/(13674:13674): Eliminación de Proceso PID: 1
+[INFO] 05:33:18:201 Memoria/(13674:13674): Creación de Proceso PID: 2
+[INFO] 05:47:16:122 Memoria/(13937:13937): Creación de Proceso PID: 1
+[INFO] 05:47:19:139 Memoria/(13937:13937): PID: 1 - Acción: ESCRIBIR - Dirección física: 124 - Tamaño: 4 - Origen: CPU
+[INFO] 05:47:20:144 Memoria/(13937:13937): PID: 1 - Acción: LEER - Dirección física: 124 - Tamaño: 4 - Origen: CPU
+[INFO] 05:47:22:156 Memoria/(13937:13937): Eliminación de Proceso PID: 1
+[INFO] 05:47:26:156 Memoria/(13937:13937): Creación de Proceso PID: 2
+[INFO] 05:52:28:521 Memoria/(13979:13979): Creación de Proceso PID: 1
+[INFO] 05:52:28:538 Memoria/(13979:13979): PID: 1 - Crear Segmento: 1 - Base: 128 - TAMAÑO: 256
+[INFO] 05:52:28:541 Memoria/(13979:13979): PID: 1 - Crear Segmento: 2 - Base: 384 - TAMAÑO: 256
+[INFO] 05:52:28:547 Memoria/(13979:13979): PID: 1 - Crear Segmento: 3 - Base: 640 - TAMAÑO: 256
+[INFO] 05:52:28:558 Memoria/(13979:13979): Eliminación de Proceso PID: 1
+[INFO] 05:52:30:452 Memoria/(13979:13979): Creación de Proceso PID: 2
+[INFO] 05:52:30:456 Memoria/(13979:13979): PID: 2 - Crear Segmento: 1 - Base: 384 - TAMAÑO: 256
+[INFO] 05:52:30:462 Memoria/(13979:13979): Eliminación de Proceso PID: 2
+[INFO] 05:52:31:344 Memoria/(13979:13979): Creación de Proceso PID: 3
+[INFO] 05:52:31:348 Memoria/(13979:13979): Eliminación de Proceso PID: 3
+[INFO] 05:52:31:936 Memoria/(13979:13979): Creación de Proceso PID: 4
+[INFO] 05:52:31:940 Memoria/(13979:13979): Eliminación de Proceso PID: 4
+[INFO] 05:52:32:519 Memoria/(13979:13979): Creación de Proceso PID: 5
+[INFO] 05:52:32:523 Memoria/(13979:13979): Eliminación de Proceso PID: 5
+[INFO] 05:52:33:122 Memoria/(13979:13979): Creación de Proceso PID: 6
+[INFO] 05:52:33:127 Memoria/(13979:13979): Eliminación de Proceso PID: 6
+[INFO] 05:52:50:171 Memoria/(13979:13979): Creación de Proceso PID: 7
+[INFO] 05:52:53:175 Memoria/(13979:13979): PID: 7 - Acción: ESCRIBIR - Dirección física: 124 - Tamaño: 4 - Origen: CPU
+[INFO] 05:52:54:181 Memoria/(13979:13979): PID: 7 - Acción: LEER - Dirección física: 124 - Tamaño: 4 - Origen: CPU
+[INFO] 05:52:56:187 Memoria/(13979:13979): Eliminación de Proceso PID: 7
+[INFO] 05:53:04:773 Memoria/(13979:13979): Creación de Proceso PID: 8

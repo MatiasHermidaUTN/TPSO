@@ -107,3 +107,11 @@
 [INFO] 20:12:03:962 FS/(38274:38274): Abrir Archivo: OTRO
 [INFO] 20:19:27:198 FS/(38274:38274): Abrir Archivo: OTRO
 [INFO] 20:20:09:777 FS/(38836:38836): Abrir Archivo: OTRO
+[INFO] 04:49:52:134 FS/(12217:12217): Abrir Archivo: Consoles
+[INFO] 04:49:52:211 FS/(12217:12217): Truncar Archivo: Consoles - Tamanio: 256
+[INFO] 04:52:28:482 FS/(12316:12316): Abrir Archivo: Consoles
+[INFO] 04:52:28:585 FS/(12316:12316): Truncar Archivo: Consoles - Tamanio: 256
+[ERROR] 04:52:29:198 FS/(12316:12316): No se leyo bien
+[INFO] 04:55:24:416 FS/(12412:12412): Abrir Archivo: Consoles
+[INFO] 04:55:24:470 FS/(12412:12412): Truncar Archivo: Consoles - Tamanio: 256
+[ERROR] 04:55:24:719 FS/(12412:12412): No se leyo bien -1

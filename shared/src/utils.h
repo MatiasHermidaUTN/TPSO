@@ -70,6 +70,7 @@ typedef enum {
 	SUCCESS,
 	OUT_OF_MEMORY,
 	SEG_FAULT,
+	RECURSO_INEXISTENTE,
 } t_msj_kernel_consola;
 
 typedef enum {
