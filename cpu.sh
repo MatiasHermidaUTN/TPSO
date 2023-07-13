@@ -1,1 +1,3 @@
-LD_LIBRARY_PATH=/home/utnso/tp-2023-1c-Los-Matias/shared/Debug $@ ./cpu/Debug/cpu ./cpu/cpu.config
+cd cpu/Debug
+LD_LIBRARY_PATH=/home/utnso/tp-2023-1c-Los-Matias/shared/Debug $@ ./cpu ../cpu_$1.config
+cd ../../

@@ -1,1 +1,3 @@
-LD_LIBRARY_PATH=/home/utnso/tp-2023-1c-Los-Matias/shared/Debug $2 ./consola/Debug/consola ./consola/consola.config consola/instrucciones/$1
+cd consola/Debug
+LD_LIBRARY_PATH=/home/utnso/tp-2023-1c-Los-Matias/shared/Debug ./consola ../consola.config ../instrucciones/$1
+cd ../../
