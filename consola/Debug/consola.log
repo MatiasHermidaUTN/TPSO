@@ -6086,3 +6086,24 @@
 [INFO] 06:15:04:512 Consola/(15024:15024): Proceso terminado por recurso inexistente
 [INFO] 06:15:10:520 Consola/(15027:15027): Proceso terminado por Segmentation Fault
 [INFO] 06:15:10:524 Consola/(15030:15030): Proceso terminado por falta de memoria
+[WARNING] 21:54:28:126 Consola/(5495:5495): IP Kernel: 127.0.0.1
+[WARNING] 21:54:28:127 Consola/(5495:5495): Puerto Kernel: 8000
+[WARNING] 21:54:28:631 Consola/(5498:5498): IP Kernel: 127.0.0.1
+[WARNING] 21:54:28:631 Consola/(5498:5498): Puerto Kernel: 8000
+[WARNING] 21:54:29:172 Consola/(5501:5501): IP Kernel: 127.0.0.1
+[WARNING] 21:54:29:172 Consola/(5501:5501): Puerto Kernel: 8000
+[ERROR] 21:54:29:173 Consola/(5501:5501): Error al abrir archivo pseudocodigo
+[INFO] 21:54:44:142 Consola/(5495:5495): Proceso terminado exitosamente
+[INFO] 21:54:58:156 Consola/(5498:5498): Proceso terminado exitosamente
+[WARNING] 21:55:17:289 Consola/(5507:5507): IP Kernel: 127.0.0.1
+[WARNING] 21:55:17:289 Consola/(5507:5507): Puerto Kernel: 8000
+[ERROR] 21:55:17:290 Consola/(5507:5507): Error al abrir archivo pseudocodigo
+[WARNING] 21:56:16:711 Consola/(5544:5544): IP Kernel: 127.0.0.1
+[WARNING] 21:56:16:712 Consola/(5544:5544): Puerto Kernel: 8000
+[WARNING] 21:56:17:150 Consola/(5547:5547): IP Kernel: 127.0.0.1
+[WARNING] 21:56:17:150 Consola/(5547:5547): Puerto Kernel: 8000
+[WARNING] 21:56:17:658 Consola/(5550:5550): IP Kernel: 127.0.0.1
+[WARNING] 21:56:17:658 Consola/(5550:5550): Puerto Kernel: 8000
+[INFO] 21:56:38:736 Consola/(5544:5544): Proceso terminado exitosamente
+[INFO] 21:57:01:768 Consola/(5547:5547): Proceso terminado exitosamente
+[INFO] 21:57:02:771 Consola/(5550:5550): Proceso terminado exitosamente

@@ -460,3 +460,13 @@
 [WARNING] 06:14:49:868 FS/(15009:15009): Bloques abierto
 [WARNING] 06:14:49:878 FS/(15009:15009): File System listo para recibir al Kernel
 [WARNING] 06:14:50:357 FS/(15009:15009): Kernel se conecto a File System
+[WARNING] 21:53:23:403 FS/(5483:5483): SuperBloque leido
+[WARNING] 21:53:23:404 FS/(5483:5483): Bitmap abierto
+[WARNING] 21:53:23:404 FS/(5483:5483): Bloques abierto
+[WARNING] 21:53:23:412 FS/(5483:5483): File System listo para recibir al Kernel
+[WARNING] 21:53:36:516 FS/(5483:5483): Kernel se conecto a File System
+[WARNING] 21:56:06:613 FS/(5532:5532): SuperBloque leido
+[WARNING] 21:56:06:614 FS/(5532:5532): Bitmap abierto
+[WARNING] 21:56:06:614 FS/(5532:5532): Bloques abierto
+[WARNING] 21:56:06:616 FS/(5532:5532): File System listo para recibir al Kernel
+[WARNING] 21:56:07:891 FS/(5532:5532): Kernel se conecto a File System

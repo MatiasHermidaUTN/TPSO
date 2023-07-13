@@ -415,3 +415,11 @@
 [WARNING] 06:14:49:876 Memoria/(15004:15012): File System se conecto a Memoria
 [WARNING] 06:14:50:357 Memoria/(15004:15015): Kernel se conecto a Memoria
 [WARNING] 06:15:10:524 Memoria/(15004:15004): No hay espacio para segmento
+[WARNING] 21:52:56:357 Memoria/(5478:5478): Memoria lista para recibir al cliente
+[WARNING] 21:53:10:480 Memoria/(5478:5481): CPU se conecto a Memoria
+[WARNING] 21:53:23:411 Memoria/(5478:5486): File System se conecto a Memoria
+[WARNING] 21:53:36:516 Memoria/(5478:5489): Kernel se conecto a Memoria
+[WARNING] 21:56:03:866 Memoria/(5527:5527): Memoria lista para recibir al cliente
+[WARNING] 21:56:05:372 Memoria/(5527:5530): CPU se conecto a Memoria
+[WARNING] 21:56:06:616 Memoria/(5527:5535): File System se conecto a Memoria
+[WARNING] 21:56:07:891 Memoria/(5527:5538): Kernel se conecto a Memoria

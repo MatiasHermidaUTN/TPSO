@@ -51,24 +51,6 @@ t_pcb* crear_pcb(t_list* instrucciones, int socket_consola) {
 	pcb->pc = 0;
 	pcb->registros_cpu = init_registros_cpu();
 
-
-	pthread_mutex_lock(&mutex_msj_memoria);
-
-	char** parametros_crear_pcb = string_array_new();
-	string_array_push(&parametros_crear_pcb, string_itoa(pcb->pid));
-	enviar_msj_con_parametros(socket_memoria, INICIALIZAR_PROCESO, parametros_crear_pcb);
-	string_array_destroy(parametros_crear_pcb);
-
-	if(recibir_msj(socket_memoria) == PROCESO_INICIALIZADO) { //No hace falta pero bueno, recibe un mensaje sí o sí
-		pcb->tabla_segmentos = recibir_tabla_segmentos(socket_memoria);
-	}
-	else {
-		log_error(logger, "Error en el uso de segmentos");
-		exit(EXIT_FAILURE);
-	}
-
-	pthread_mutex_unlock(&mutex_msj_memoria);
-
 	pcb->estimado_prox_rafaga = lectura_de_config.ESTIMACION_INICIAL;
 	pcb->tiempo_llegada_ready = 0;
 	pcb->archivos_abiertos = list_create();
