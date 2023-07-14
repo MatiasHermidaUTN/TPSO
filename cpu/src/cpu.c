@@ -8,7 +8,7 @@ int main(int argc, char** argv) {
     t_config* config = iniciar_config(argv[1]);
     lectura_de_config = leer_cpu_config(config);
 
-    logger = iniciar_logger("cpu.config", "CPU");
+    logger = iniciar_logger("cpu.log", "CPU");
     my_logger = iniciar_logger("my_cpu.log", "CPU");
 
     socket_memoria = crear_conexion(lectura_de_config.IP_MEMORIA, lectura_de_config.PUERTO_MEMORIA);
