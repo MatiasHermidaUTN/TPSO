@@ -36,10 +36,10 @@ int main(int argc, char** argv) {
 	pthread_mutex_init(&mutex_cola_msj, NULL);
 
 	//SUPERBLOQUE, BITMAP, BLOQUES, carpeta FCBs
+	init_carpeta_fcbs();
 	init_superbloque();
 	init_bitmap();
 	init_bloques();
-	init_carpeta_fcbs();
 
 	init_conexiones();
 
