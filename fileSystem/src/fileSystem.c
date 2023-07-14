@@ -76,7 +76,7 @@ char* leer_de_memoria(int dir_fisica_memoria, int cuanto_X, char* pid){
 
 
 	if(mensaje->cod_op != LEIDO_OK){
-		log_error(logger,"No se leyo bien %d",mensaje->cod_op);
+		log_error(my_logger,"No se leyo bien %d",mensaje->cod_op);
 	}
 		
 	mensaje->parametros = recibir_parametros_de_mensaje(socket_memoria);

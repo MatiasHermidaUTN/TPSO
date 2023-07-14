@@ -9,7 +9,7 @@ void init_conexiones() {
     enviar_handshake(socket_memoria, FILESYSTEM);
     int rta = recibir_handshake(socket_memoria);
     if(rta != OK_HANDSHAKE){
-    	log_error(logger,"error en el handshake");
+    	log_error(my_logger,"error en el handshake");
     	exit(EXIT_FAILURE);
     }
 

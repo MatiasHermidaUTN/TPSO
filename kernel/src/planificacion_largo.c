@@ -18,7 +18,7 @@ void planificar_largo() {
 			pcb->tabla_segmentos = recibir_tabla_segmentos(socket_memoria);
 		}
 		else {
-			log_error(logger, "Error en el uso de segmentos");
+			log_error(my_logger, "Error en el uso de segmentos");
 			exit(EXIT_FAILURE);
 		}
 

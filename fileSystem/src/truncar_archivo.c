@@ -94,7 +94,7 @@ uint32_t dame_un_bloque_libre() {
 			return puntero;
 		}
 	}
-	log_error(logger, "No existe mas espacio en el disco");
+	log_error(my_logger, "No existe mas espacio en el disco");
 	return -1;
 }
 

@@ -2,11 +2,11 @@
 
 int enviar_instrucciones(t_list* instrucciones) {
 	int size = tamanio_msj(instrucciones);
-	void* a_enviar = serializar_instrucciones(instrucciones, size);
+	void* stream_instrucciones = serializar_instrucciones(instrucciones, size);
 
-	send(socket_kernel, a_enviar, size, 0);
+	send(socket_kernel, stream_instrucciones, size, 0);
 
-	free(a_enviar);
+	free(stream_instrucciones);
 	return 0;
 }
 
@@ -16,7 +16,7 @@ void* serializar_instrucciones(t_list* instrucciones, int size) {
     int desplazamiento = 0;
 
     t_msj_kernel_consola op_code = LIST_INSTRUCCIONES;
-    memcpy(stream + desplazamiento, &(op_code), sizeof(op_code));
+    memcpy(stream + desplazamiento, &op_code, sizeof(op_code));
     desplazamiento += sizeof(op_code);
 
     memcpy(stream + desplazamiento, &size_payload, sizeof(size_t));

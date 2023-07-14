@@ -74,7 +74,7 @@ void ejecutar_instrucciones(t_pcb* pcb) {
 				return;
 
 			default:
-				log_error(logger, "Error en el decode de la instruccion");
+				log_error(my_logger, "Error en el decode de la instruccion");
 				//exit(EXIT_FAILURE);
 				break;
 		}
@@ -333,7 +333,7 @@ void ejecutar_mov_out(t_pcb* pcb, t_datos_mmu datos_mmu, char* nombre_registro) 
 		log_info(logger, "PID: %d - Acción: ESCRIBIR - Segmento: %d - Dirección Física: %d - Valor: %s", pcb->pid, datos_mmu.numero_segmento, datos_mmu.direccion_fisica, valor); //log obligatorio
 	}
 	else {
-		log_error(logger, "No se pudo escribir en memoria");
+		log_error(my_logger, "No se pudo escribir en memoria");
 		exit(EXIT_FAILURE);
 	}
 

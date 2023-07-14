@@ -34,7 +34,7 @@ extern sem_t sem_cant_msj;
 extern t_list* lista_fifo_msj;
 
 extern t_log* logger;
-extern t_log* logger_no_obligatorio;
+extern t_log* my_logger;
 
 void leer_memoria_config(t_config* config);
 void liberar_estructura_config();

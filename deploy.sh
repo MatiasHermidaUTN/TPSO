@@ -2,8 +2,8 @@ cd ../
 sudo rm -rf so-commons-library
 git clone https://github.com/sisoputnfrba/so-commons-library.git
 cd so-commons-library
-make debug
-make install
+sudo make debug
+sudo make install
 cd ..
 sudo cp tp-2023-1c-Los-Matias/shared/src/*.h ../../usr/local/include/
 cd tp-2023-1c-Los-Matias/shared/Debug

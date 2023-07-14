@@ -73,7 +73,7 @@ void planificar_corto() {
 							log_warning(my_logger, "Se abrio el archivo"); //En realidad nunca va a fallar. Esto tendria que haberse hecho con un solo mensaje pero lo separaron en abrir y crear.
 						}
 						else {
-							log_error(logger, "El File System no pudo crear el archivo");
+							log_error(my_logger, "El File System no pudo crear el archivo");
 							exit(EXIT_FAILURE);
 						}
 
@@ -186,7 +186,7 @@ void planificar_corto() {
 					actualizar_segmentos_de_pcb(pcb_recibido, recibir_tabla_segmentos(socket_memoria));
 				}
 				else {
-					log_error(logger, "Error en el uso de segmentos");
+					log_error(my_logger, "Error en el uso de segmentos");
 				}
 
 				pthread_mutex_unlock(&mutex_msj_memoria);
@@ -213,7 +213,7 @@ void planificar_corto() {
 				break;
 
 			default:
-				log_error(logger, "Error en la comunicacion entre el Kernel y la CPU");
+				log_error(my_logger, "Error en la comunicacion entre el Kernel y la CPU");
 				exit(EXIT_FAILURE);
 		}
 
@@ -256,7 +256,7 @@ t_pcb* obtener_proximo_a_ejecutar() {
 		log_info(logger, "PID: %d - Estado Anterior: READY - Estado Actual: EXEC", pcb->pid); //log obligatorio
 		return pcb;
 	}
-	else log_error(logger, "Error en la lectura del algoritmo de planificacion");
+	else log_error(my_logger, "Error en la lectura del algoritmo de planificacion");
 	exit(EXIT_FAILURE);
 }
 
@@ -391,7 +391,7 @@ char* mensaje_de_finalizacion_a_string(t_msj_kernel_consola mensaje) {
 		case RECURSO_INEXISTENTE:
 			return "RECURSO_INEXISTENTE";
 		default:
-			log_error(logger, "Error en el envio de mensaje de finalizacion");
+			log_error(my_logger, "Error en el envio de mensaje de finalizacion");
 			exit(EXIT_FAILURE);
 	}
 }
@@ -409,7 +409,7 @@ void list_remove_pcb(t_list* lista, t_pcb* pcb_en_lista) {
 
 void cerrar_archivo(t_pcb* pcb_recibido, char* nombre_archivo) {
 	//Elimina al archivo de la lista de archivos abiertos del pcb
-	t_archivo_abierto* archivo_a_eliminar = eliminar_archivo(pcb_recibido, nombre_archivo); //Para poder libeerarlo después de usarlo
+	t_archivo_abierto* archivo_a_eliminar = eliminar_archivo(pcb_recibido, nombre_archivo); //Para poder liberarlo después de usarlo
 
 	t_recurso* archivo_a_cerrar = buscar_recurso(nombre_archivo, list_archivos);
 	archivo_a_cerrar->cantidad_disponibles++;
@@ -553,7 +553,7 @@ void crear_segmento(t_pcb* pcb_recibido, char** parametros) {
 				crear_segmento(pcb_recibido, parametros);
 			}
 			else {
-				log_error(logger, "Error en la compactacion");
+				log_error(my_logger, "Error en la compactacion");
 				sem_post(&sem_compactacion); // Por las dudas (?
 				pthread_mutex_unlock(&mutex_msj_memoria); // Por las dudas (?
 				exit(EXIT_FAILURE); //Total rompe todovich, osea son al pedo los por las dudas
@@ -562,7 +562,7 @@ void crear_segmento(t_pcb* pcb_recibido, char** parametros) {
 			break;
 
 		default:
-			log_error(logger, "Error en el recibo de mensaje de memoria");
+			log_error(my_logger, "Error en el recibo de mensaje de memoria");
 			exit(EXIT_FAILURE);
 	}
 }
@@ -643,7 +643,7 @@ t_proceso_actualizado* list_remove_if_pid_equals_to(t_list* procesos, int pid) {
 		}
 	}
 
-	log_error(logger, "Error al obtener pid de proceso con segmentos actualizado");
+	log_error(my_logger, "Error al obtener pid de proceso con segmentos actualizado");
 	exit(EXIT_FAILURE);
 	return proceso; //no debería llegar acá
 }

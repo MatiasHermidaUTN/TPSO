@@ -10,11 +10,11 @@ char* leer_archivo(char* nombre_archivo, int apartir_de_donde_leer, int cuanto_l
 	int tamanio_archivo = config_get_int_value(archivo_FCB, "TAMANIO_ARCHIVO");
 	if (tamanio_archivo == 0){
 		config_destroy(archivo_FCB);
-		log_error(logger, "ERROR, tamanio_archivo == 0");
+		log_error(my_logger, "ERROR, tamanio_archivo == 0");
 		return "";
 	}
 	if (apartir_de_donde_leer > tamanio_archivo) {
-		log_error(logger, "ERROR, apartir_de_donde_leer es > al tamanio_archivo");
+		log_error(my_logger, "ERROR, apartir_de_donde_leer es > al tamanio_archivo");
 		return "";
 	}
 	if (apartir_de_donde_leer + cuanto_leer > tamanio_archivo) {

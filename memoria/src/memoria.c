@@ -9,7 +9,7 @@ int main(int argc, char** argv) {
 	t_config* config = iniciar_config(argv[1]);
 	leer_memoria_config(config);
     logger = iniciar_logger("memoria.log", "Memoria");
-	logger_no_obligatorio = iniciar_logger("memoria_logs_no_obligatorios.log", "Memoria");
+	my_logger = iniciar_logger("memoria_logs_no_obligatorios.log", "Memoria");
 
     lista_fifo_msj = list_create();
 	lista_procesos = list_create();
@@ -23,7 +23,7 @@ int main(int argc, char** argv) {
 
 	//CREO SERVIDOR Y ESPERO CLIENTES
     socket_memoria = iniciar_servidor(lectura_de_config.IP_MEMORIA, lectura_de_config.PUERTO_ESCUCHA);
-	log_warning(logger_no_obligatorio, "Memoria lista para recibir al cliente");
+	log_warning(my_logger, "Memoria lista para recibir al cliente");
 	for(int i = 0 ; i<3 ; ){		//3 pq hay que aceptar 1 de cada: Kernel, CPU y FileSystem
 		i += recibir_conexiones(socket_memoria, logger); //Recibe conexiones (es bloqueante) y crea hilos para manejarlas, devuelve 1 con cada conexion recibida
 	}
@@ -33,7 +33,7 @@ int main(int argc, char** argv) {
 	bitmap_pointer = malloc(tamanio_bitmap);
 	memset(bitmap_pointer,0,tamanio_bitmap);
 	if((atoi(lectura_de_config.TAM_MEMORIA) % 8)){ //error por si el bitmap no tiene el tamaño correcto
-		log_error(logger_no_obligatorio, "El tamaño de la memoria no es multiplo de 8");
+		log_error(my_logger, "El tamaño de la memoria no es multiplo de 8");
 	}
 	bitarray_de_bitmap = bitarray_create_with_mode(bitmap_pointer, tamanio_bitmap, MSB_FIRST);
 
@@ -45,7 +45,7 @@ int main(int argc, char** argv) {
 	while(manejar_mensaje());
 
 	log_destroy(logger);
-	log_destroy(logger_no_obligatorio);
+	log_destroy(my_logger);
 	config_destroy(config);
 	liberar_estructura_config();
 	free(memoria_principal);	
@@ -100,13 +100,13 @@ int manejar_mensaje() { //pinta bien
 
 			if(!tengo_espacio_general(tamanio_segmento)) {
 				
-				log_warning(logger_no_obligatorio, "No hay espacio para segmento");
+				log_warning(my_logger, "No hay espacio para segmento");
 				enviar_msj(socket_kernel, NO_HAY_ESPACIO_DISPONIBLE);
 				break;
 			}
 			if(!tengo_espacio_contiguo(tamanio_segmento)) {
 				
-				log_warning(logger_no_obligatorio, "Hay que compactar");
+				log_warning(my_logger, "Hay que compactar");
 				enviar_msj(socket_kernel, HAY_QUE_COMPACTAR); 
 				break;
 			}
@@ -184,7 +184,7 @@ int manejar_mensaje() { //pinta bien
 					enviar_msj(socket_fileSystem, ESCRITO_OK);
 					break;
 				default:
-					log_error(logger_no_obligatorio, "Origen de mensaje no válido");
+					log_error(my_logger, "Origen de mensaje no válido");
 					break;
 			}
 			//----------------//
@@ -221,7 +221,7 @@ int manejar_mensaje() { //pinta bien
 					enviar_msj_con_parametros(socket_fileSystem, LEIDO_OK, parametros_a_enviar);
 					break;
 				default:
-					log_error(logger_no_obligatorio, "Origen de mensaje no válido");
+					log_error(my_logger, "Origen de mensaje no válido");
 					break;
 			}
 			string_array_destroy(parametros_a_enviar);
@@ -315,7 +315,7 @@ char* detectar_origen_mensaje(int origen_mensaje) {
 			break;
 		default:
 			origen_mensaje_string = strdup("ORIGEN INVALIDO");
-			log_error(logger_no_obligatorio, "Origen de mensaje no valido");
+			log_error(my_logger, "Origen de mensaje no valido");
 			return origen_mensaje_string;
 
 			break;
@@ -413,10 +413,10 @@ int crear_segmento(int pid, int id_segmento, int tamanio_segmento) { //CHEQUEADA
 	int base = asignar_espacio_en_memoria(tamanio_segmento);
 
 	if (list_size(nodoP->lista_segmentos) >= atoi(lectura_de_config.CANT_SEGMENTOS)) {
-		log_error(logger_no_obligatorio, "Max Cant de Segmentos alcanzada");
+		log_error(my_logger, "Max Cant de Segmentos alcanzada");
 	}
 	if (base == -1) {
-		log_error(logger_no_obligatorio, "No se pudo asignar un espacio de memoria");
+		log_error(my_logger, "No se pudo asignar un espacio de memoria");
 	}
 
 	for(int i = 0; i < tamanio_segmento; i++){
@@ -498,7 +498,7 @@ int asignar_espacio_en_memoria(int tamanio_segmento) { //CHEQUEADA 2.0
 		return base;
 	}
 
-	log_error(logger_no_obligatorio, "Algoritmo de asignacion no valido"); 
+	log_error(my_logger, "Algoritmo de asignacion no valido"); 
 	return base;
 }
 
@@ -507,11 +507,11 @@ void hay_seg_fault(int pid, int id_segmento, int dir_fisica, int tamanio_buffer)
 	nodoSegmento* nodoS = buscar_por_id(nodoP->lista_segmentos, id_segmento);
 
 	if(dir_fisica < nodoS->base)
-		log_error(logger_no_obligatorio, "Segmentation Fault: Se intento acceder a una direccion de memoria menor a la base del segmento");
+		log_error(my_logger, "Segmentation Fault: Se intento acceder a una direccion de memoria menor a la base del segmento");
 
 	if(dir_fisica + tamanio_buffer > nodoS->base + nodoS->tamanio){
-		log_warning(logger_no_obligatorio,"dir_fisica = %d ; tamanio_buffer = %d ; nodoS->base = %d ; nodoS->tamanio = %d",dir_fisica,tamanio_buffer,nodoS->base,nodoS->tamanio);
-		log_error(logger_no_obligatorio, "Segmentation Fault: Se intento acceder a una direccion de memoria mayor al limite del segmento");
+		log_warning(my_logger,"dir_fisica = %d ; tamanio_buffer = %d ; nodoS->base = %d ; nodoS->tamanio = %d",dir_fisica,tamanio_buffer,nodoS->base,nodoS->tamanio);
+		log_error(my_logger, "Segmentation Fault: Se intento acceder a una direccion de memoria mayor al limite del segmento");
 	}
 
 
@@ -530,7 +530,7 @@ nodoProceso* buscar_por_pid(int pid) { //CHEQUEADA 2.0
 		}
 	}
 
-	log_warning(logger_no_obligatorio, "No se encontro el proceso con pid %d", pid);
+	log_warning(my_logger, "No se encontro el proceso con pid %d", pid);
 	return NULL; 
 }
 
@@ -545,7 +545,7 @@ nodoSegmento* buscar_por_id(t_list* lista_segmentos, int id_segmento) { //CHEQUE
 		}
 	}
 
-	log_warning(logger_no_obligatorio, "No se encontro el segmento con id %d", id_segmento);
+	log_warning(my_logger, "No se encontro el segmento con id %d", id_segmento);
 	return NULL; 
 }
 
@@ -565,7 +565,7 @@ void buscar_pid_y_id_segmento_por_base(int base, int* pid, int* id_segmento) { /
 		}
 	}
 
-	log_warning(logger_no_obligatorio, "No se encontro el segmento con base %d", base);
+	log_warning(my_logger, "No se encontro el segmento con base %d", base);
 	*pid = -1;
 	*id_segmento = -1;
 	return;
@@ -587,7 +587,7 @@ void buscar_pid_y_id_segmento_por_dir_fisica(int dir_fisica, int* pid, int* id_s
 		}
 	}
 
-	log_warning(logger_no_obligatorio, "No se encontro el segmento con direccion fisica %d", dir_fisica);
+	log_warning(my_logger, "No se encontro el segmento con direccion fisica %d", dir_fisica);
 	*pid = -1;
 	*id_segmento = -1;
 	return;

@@ -26,7 +26,7 @@ void init_superbloque() {
 		log_warning(my_logger, "SuperBloque leido");
 	}
 	else {
-		log_error(logger, "SuperBloque no existe");
+		log_error(my_logger, "SuperBloque no existe");
 		//destroy everything in reality
 	}
 }
@@ -40,7 +40,7 @@ void init_bitmap() {
 		log_warning(my_logger, "Creando bitmap");
 		fd_bitmap = open(lectura_de_config.PATH_BITMAP, O_CREAT | O_RDWR, 0664); //abre o crea el archivo en un file descriptor
 		if (fd_bitmap == -1){
-			log_error(logger, "No se pudo ni CREAR el bitmap");
+			log_error(my_logger, "No se pudo ni CREAR el bitmap");
 			//destroy everything in reality
 		}
 		ftruncate(fd_bitmap, tamanioBitmap+10);
@@ -58,7 +58,7 @@ void init_bloques() {
 		log_warning(my_logger, "CREANDO BLOQUES");
 		int fd_bloques = open(lectura_de_config.PATH_BLOQUES, O_CREAT | O_RDWR, 0664);	//abre o crea el archivo en un file descriptor
 		if (fd_bloques == -1){
-			log_error(logger, "No se pudo ni CREAR el bloques");
+			log_error(my_logger, "No se pudo ni CREAR el bloques");
 			//destroy everything in reality
 		}
 		int tamanioBloques = super_bloque_info.block_size * super_bloque_info.block_count;

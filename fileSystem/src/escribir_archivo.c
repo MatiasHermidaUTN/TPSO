@@ -9,7 +9,7 @@ void escribir_archivo(char* buffer, char* nombre_archivo, int apartir_de_donde_e
 	int cantidad_escrita = 0; //para ir recortando el buffer cuando ya leí
 	//FAILSAFE
 	if (apartir_de_donde_escribir > tamanio_archivo) {		//failsafe - no escribir donde no hay
-		log_error(logger, "ERROR, apartir_de_donde_leer es > al tamanio_archivo");
+		log_error(my_logger, "ERROR, apartir_de_donde_leer es > al tamanio_archivo");
 		return;
 	}
 	if(apartir_de_donde_escribir + cuanto_escribir > tamanio_archivo){

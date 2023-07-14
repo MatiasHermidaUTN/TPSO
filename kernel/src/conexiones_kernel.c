@@ -34,7 +34,7 @@ void manejar_conexion(void* args) {
 
 			break;
 		default:
-			log_error(logger, "Error en el envio de instrucciones");
+			log_error(my_logger, "Error en el envio de instrucciones");
 	}
 }
 
@@ -116,27 +116,27 @@ t_registros_cpu init_registros_cpu() {
 void init_conexiones() {
 	socket_memoria = crear_conexion(lectura_de_config.IP_MEMORIA, lectura_de_config.PUERTO_MEMORIA);
 	if(socket_memoria == -1) {
-		log_error(logger, "Kernel no pudo conectarse a Memoria");
+		log_error(my_logger, "Kernel no pudo conectarse a Memoria");
 		exit(EXIT_FAILURE);
 	}
 
 	enviar_handshake(socket_memoria, KERNEL);
 	t_handshake respuesta = recibir_handshake(socket_memoria);
 	if(respuesta == ERROR_HANDSHAKE){
-		log_error(logger,"Kernel no pudo conectarse a Memoria");
+		log_error(my_logger,"Kernel no pudo conectarse a Memoria");
 		exit(EXIT_FAILURE);
 	}
 
 	//Para estos no hace falta handshake porque solo reciben al Kernel
 	socket_cpu = crear_conexion(lectura_de_config.IP_CPU, lectura_de_config.PUERTO_CPU);
 	if(socket_cpu == -1) {
-		log_error(logger, "Kernel no pudo conectarse a CPU");
+		log_error(my_logger, "Kernel no pudo conectarse a CPU");
 		exit(EXIT_FAILURE);
 	}
 
 	socket_fileSystem = crear_conexion(lectura_de_config.IP_FILESYSTEM, lectura_de_config.PUERTO_FILESYSTEM);
 	if(socket_fileSystem == -1) {
-		log_error(logger, "Kernel no pudo conectarse a File System");
+		log_error(my_logger, "Kernel no pudo conectarse a File System");
 		exit(EXIT_FAILURE);
 	}
 }

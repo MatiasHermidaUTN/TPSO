@@ -210,7 +210,7 @@ void* serializar_pcb(t_pcb* pcb, size_t* size_total, t_msj_kernel_cpu op_code, c
 	// memcpy código de operación //
 	////////////////////////////////
 
-    memcpy(stream_pcb + desplazamiento, &(op_code), sizeof(op_code));
+    memcpy(stream_pcb + desplazamiento, &op_code, sizeof(op_code));
     desplazamiento += sizeof(op_code);
 
     ///////////////////////
@@ -220,13 +220,13 @@ void* serializar_pcb(t_pcb* pcb, size_t* size_total, t_msj_kernel_cpu op_code, c
     //Para esto no hace falta deserializar en recibir_pcb, ya que esto lo hace la funcion recibir_parametro_de_instruccion
 
     size_t cantidad_de_parametros = string_array_size(parametros_de_instruccion);
-    memcpy(stream_pcb + desplazamiento, &(cantidad_de_parametros), sizeof(cantidad_de_parametros));
+    memcpy(stream_pcb + desplazamiento, &cantidad_de_parametros, sizeof(cantidad_de_parametros));
     desplazamiento += sizeof(cantidad_de_parametros);
 
    	size_t size_parametro_de_instruccion;
    	for(int i = 0; i < cantidad_de_parametros; i++) {
    		size_parametro_de_instruccion = strlen(parametros_de_instruccion[i]) + 1;
-		memcpy(stream_pcb + desplazamiento, &(size_parametro_de_instruccion), sizeof(size_parametro_de_instruccion));
+		memcpy(stream_pcb + desplazamiento, &size_parametro_de_instruccion, sizeof(size_parametro_de_instruccion));
 		desplazamiento += sizeof(size_parametro_de_instruccion);
 
 		memcpy(stream_pcb + desplazamiento, parametros_de_instruccion[i], size_parametro_de_instruccion);
@@ -313,8 +313,8 @@ size_t tamanio_payload_pcb(t_pcb* pcb) {
 
 size_t tamanio_instrucciones(t_list* instrucciones) {
 	int size = 0;
-	for(int i = 0; i < instrucciones->elements_count; i++) {
-		t_instruccion* instruccion = (t_instruccion*)list_get(instrucciones, i);
+	for(int i = 0; i < list_size(instrucciones); i++) {
+		t_instruccion* instruccion = list_get(instrucciones, i);
 	    size += sizeof(size_t)	//para longitud del nombre / para decir cuantos char son el nombre de instruccion
 	    		+ strlen(instruccion->nombre) + 1
 				+ tamanio_parametros(instruccion->parametros, i);
@@ -324,16 +324,16 @@ size_t tamanio_instrucciones(t_list* instrucciones) {
 
 int tamanio_parametros(t_list* parametros, int index_instruccion) {
 	int size_parametro = 0;
-	for(int i = 0; i < parametros->elements_count; i++) {
+	for(int i = 0; i < list_size(parametros); i++) {
 	    size_parametro += sizeof(size_t)	//para decir cuantos char son el nombre de parametro
-	    		+ strlen( (char*)list_get(parametros, i) ) + 1;
+	    		+ strlen(list_get(parametros, i)) + 1;
     }
 	return size_parametro;
 }
 
 void memcpy_instrucciones_serializar(void* stream_pcb, t_list* instrucciones, int* desplazamiento) {
-	for(int i = 0 ; i < instrucciones->elements_count ; i++) {
-		t_instruccion* instruccion = (t_instruccion*)list_get(instrucciones, i);
+	for(int i = 0 ; i < list_size(instrucciones); i++) {
+		t_instruccion* instruccion = list_get(instrucciones, i);
 		size_t largo_nombre = strlen(instruccion->nombre)+1;
 
 		memcpy(stream_pcb + (*desplazamiento), &(largo_nombre), sizeof(size_t));		//pongo size de nombre instruccion
@@ -343,15 +343,15 @@ void memcpy_instrucciones_serializar(void* stream_pcb, t_list* instrucciones, in
 		(*desplazamiento) += largo_nombre;
 
 		t_list* parametros = instruccion->parametros;
-		for(int j = 0; j < parametros->elements_count; j++) {
-			char* parametro = (char*)list_get(parametros, j);
-			size_t largo_nombre = strlen(parametro)+1;
+		for(int j = 0; j < list_size(parametros); j++) {
+			char* parametro = list_get(parametros, j);
+			size_t largo_nombre = strlen(parametro) + 1;
 
-			memcpy(stream_pcb + (*desplazamiento), &(largo_nombre), sizeof(size_t));	//pongo size nombre parametro
-			(*desplazamiento) += sizeof(size_t);
+			memcpy(stream_pcb + *desplazamiento, &largo_nombre, sizeof(size_t));	//pongo size nombre parametro
+			*desplazamiento += sizeof(size_t);
 
-			memcpy(stream_pcb + (*desplazamiento), parametro, largo_nombre);			//pongo parametro
-			(*desplazamiento) += largo_nombre;
+			memcpy(stream_pcb + *desplazamiento, parametro, largo_nombre);			//pongo parametro
+			*desplazamiento += largo_nombre;
 		}
 	}
 }

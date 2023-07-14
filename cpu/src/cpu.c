@@ -15,7 +15,7 @@ int main(int argc, char** argv) {
     enviar_handshake(socket_memoria, CPU);
     t_handshake respuesta = recibir_handshake(socket_memoria);
     if(respuesta == ERROR_HANDSHAKE){
-        log_error(logger, "CPU no se pudo conectar a Memoria");
+        log_error(my_logger, "CPU no se pudo conectar a Memoria");
         exit(EXIT_FAILURE);
     }
 

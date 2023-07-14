@@ -34,6 +34,6 @@ int main (int argc, char** argv) {
 
     liberar_estructura_config(lectura_de_config);
     config_destroy(config);
-    log_error(logger, "Fallaron las conexiones entre el Kernel y la Consola");
+    log_error(my_logger, "Fallaron las conexiones entre el Kernel y la Consola");
     exit(EXIT_FAILURE);
 }
