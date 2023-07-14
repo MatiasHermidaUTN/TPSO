@@ -21,6 +21,8 @@ void escribir_archivo(char* buffer, char* nombre_archivo, int apartir_de_donde_e
 		uint32_t puntero_directo = config_get_int_value(archivo_FCB, "PUNTERO_DIRECTO");
 
 		escribir_bloque(buffer, puntero_directo, apartir_de_donde_escribir, &cuanto_escribir, &cantidad_escrita);
+		log_info(logger, "Acceso Bloque - Archivo: %s - Bloque Archivo: 0 - Bloque File System: %d", nombre_archivo, puntero_directo); //log obligatorio
+		
 		sobreescribir_indirecto(buffer, archivo_FCB, PRIMER_BLOQUE_SECUNDARIO, &cuanto_escribir, &cantidad_escrita);
 	}
 	else {
@@ -32,6 +34,8 @@ void escribir_archivo(char* buffer, char* nombre_archivo, int apartir_de_donde_e
 		uint32_t puntero_secundario = conseguir_ptr_secundario_para_indirecto(puntero_indirecto, bloque_secundario_inicial);
 
 		escribir_bloque(buffer, puntero_secundario, apartir_de_donde_escribir_relativo_a_bloque, &cuanto_escribir, &cantidad_escrita);
+		log_info(logger, "Acceso Bloque - Archivo: %s - Bloque Archivo: %d - Bloque File System: %d", nombre_archivo, bloque_secundario_inicial, puntero_secundario); //log obligatorio
+
 		sobreescribir_indirecto(buffer, archivo_FCB, bloque_secundario_inicial + 1, &cuanto_escribir, &cantidad_escrita);
 	}
 	
@@ -41,11 +45,13 @@ void escribir_archivo(char* buffer, char* nombre_archivo, int apartir_de_donde_e
 
 void sobreescribir_indirecto(char* buffer, t_config* archivo_FCB, int bloque_secundario_donde_escribir, int* cuanto_escribir, int* cantidad_escrita) {
 	uint32_t puntero_indirecto = config_get_int_value(archivo_FCB, "PUNTERO_INDIRECTO");
-	uint32_t puntero_secundario;			
+	uint32_t puntero_secundario;
+	char* nombre_archivo = config_get_string_value(archivo_FCB, "NOMBRE_ARCHIVO");
 
 	while(*cuanto_escribir > 0) {
 		puntero_secundario = conseguir_ptr_secundario_para_indirecto(puntero_indirecto, bloque_secundario_donde_escribir);
 		escribir_bloque(buffer, puntero_secundario, DESDE_EL_INICIO, cuanto_escribir, cantidad_escrita);
+		log_info(logger, "Acceso Bloque - Archivo: %s - Bloque Archivo: %d - Bloque File System: %d", nombre_archivo, bloque_secundario_donde_escribir, puntero_secundario); //log obligatorio
 		bloque_secundario_donde_escribir++;
 	}
 	return;
