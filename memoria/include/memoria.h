@@ -7,6 +7,7 @@
 #include "configuracion_memoria.h"
 #include "comunicaciones_memoria.h"
 #include <unistd.h> //usleep()
+#include <math.h>
 
 typedef struct nodoSegmento {
 	int id;

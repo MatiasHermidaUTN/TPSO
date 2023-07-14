@@ -20,13 +20,16 @@ bool archivo_se_puede_leer(char* path)
 
 void crear_archivo(char* nombre_archivo) {
 	char* path = obtener_path_FCB_sin_free(nombre_archivo);
-	//t_config* FCBdefault = iniciar_config("./fileSystem/FCBdefault");
-	t_config* FCBdefault = iniciar_config("../FCBdefault"); //TODO por que antes andaba?
-	config_set_value(FCBdefault, "NOMBRE_ARCHIVO", nombre_archivo);
-	config_set_value(FCBdefault, "TAMANIO_ARCHIVO", "0");
-	config_set_value(FCBdefault, "PUNTERO_DIRECTO", "");
-	config_set_value(FCBdefault, "PUNTERO_INDIRECTO", "");
-	config_save_in_file(FCBdefault, path);
-	config_destroy(FCBdefault);					//cierro el FCB
+	FILE* fcb_nuevo = fopen(path, "w");
+
+	fwrite("NOMBRE_ARCHIVO=", sizeof(char), 15, fcb_nuevo);
+	char* aux = strdup(nombre_archivo);
+	fwrite(aux, sizeof(char), strlen(aux), fcb_nuevo);
+	free(aux);
+	fwrite("\n", sizeof(char), 1, fcb_nuevo);
+	fwrite("TAMANIO_ARCHIVO=0\n", sizeof(char), 18, fcb_nuevo);
+	fwrite("PUNTERO_DIRECTO=\n", sizeof(char), 17, fcb_nuevo);
+	fwrite("PUNTERO_INDIRECTO=\n", sizeof(char), 19, fcb_nuevo);
+	fclose(fcb_nuevo);
 	free(path);
 }

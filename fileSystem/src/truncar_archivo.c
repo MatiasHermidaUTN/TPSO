@@ -57,12 +57,16 @@ void agrandas_archivo(t_config* archivo_FCB, char* nombre_archivo, int nuevo_tam
 	//entro si no tiene puntero_directo
 	if(tamanio_archivo == 0){
 		uint32_t puntero_directo = dame_un_bloque_libre();
-		config_set_value(archivo_FCB, "PUNTERO_DIRECTO", string_itoa(puntero_directo));
+		char* aux = string_itoa(puntero_directo);
+		config_set_value(archivo_FCB, "PUNTERO_DIRECTO", aux);
+		free(aux);
 	}
 	//entro si tiene puntero_directo, no tiene puntero_indirecto y si el nuevo tamanio requiere de punteros_secundarios
 	if(tamanio_archivo <= super_bloque_info.block_size && nuevo_tamanio_archivo > super_bloque_info.block_size){
 		uint32_t puntero_indirecto = dame_un_bloque_libre();
-		config_set_value(archivo_FCB, "PUNTERO_INDIRECTO", string_itoa(puntero_indirecto));
+		char* aux = string_itoa(puntero_indirecto);
+		config_set_value(archivo_FCB, "PUNTERO_INDIRECTO", aux);
+		free(aux);
 
 		int cant_punteros_secundarios = 0;
 		int cant_bloques_secundarios_necesarios = (int) ceil((float) nuevo_tamanio_archivo / super_bloque_info.block_size - 1);
