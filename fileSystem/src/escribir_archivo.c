@@ -75,7 +75,7 @@ void escribir_bloque(char* buffer, uint32_t puntero, int apartir_de_donde_escrib
 		*cuanto_escribir = 0;
 	}
 
-	log_warning(my_logger, "buffer_restante: %s\ncuanto_escribir: %d\ncantidad_escrita_total: %d\npuntero: %d", buffer_restante, *cuanto_escribir, *cantidad_escrita_total, puntero);
+	//log_warning(my_logger, "buffer_restante: %s\ncuanto_escribir: %d\ncantidad_escrita_total: %d\npuntero: %d", buffer_restante, *cuanto_escribir, *cantidad_escrita_total, puntero);
 
 	free(buffer_restante);
 	return;

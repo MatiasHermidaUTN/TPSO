@@ -335,7 +335,10 @@ void eliminar_segmento(int pid, int id_segmento) {
 		memset(memoria_principal + nodoS->base, 0, nodoS->tamanio);
 	}
 
-	list_remove_element_memoria(nodoP->lista_segmentos, nodoS); 
+	//log_warning(my_logger, "list_size() antes: %d", list_size(nodoP->lista_segmentos));
+	list_remove_element_memoria(nodoP->lista_segmentos, nodoS);
+	//log_warning(my_logger, "list_size() despues: %d", list_size(nodoP->lista_segmentos));
+
 	free(nodoS);
 }
 
@@ -343,8 +346,9 @@ void eliminar_proceso(int pid) {
 	nodoProceso* nodoP = buscar_por_pid(pid);
 	nodoSegmento* nodoS;
 
-	for(int i = 0; i < list_size(nodoP->lista_segmentos); i++){
-		nodoS = list_get(nodoP->lista_segmentos, i);
+	int tamanio = list_size(nodoP->lista_segmentos);
+	for(int i = 0; i < tamanio; i++) {
+		nodoS = list_get(nodoP->lista_segmentos, 0);
 		eliminar_segmento(pid, nodoS->id);
 	}
 
@@ -596,8 +600,9 @@ void buscar_pid_y_id_segmento_por_dir_fisica(int dir_fisica, int* pid, int* id_s
 void eliminar_lista_procesos() { 
 	nodoProceso* nodoP;
 
-	for(int i = 0; i < list_size(lista_procesos); i++) {
-		nodoP = list_get(lista_procesos, i);
+	int tamanio = list_size(lista_procesos);
+	for(int i = 0; i < tamanio; i++) {
+		nodoP = list_get(lista_procesos, 0);
 		eliminar_proceso(nodoP->pid);
 	}
 
@@ -609,8 +614,9 @@ void eliminar_lista_procesos() {
 void eliminar_lista_mensajes() {
 	t_mensajes* nodoM;
 
-	for(int i = 0; i < list_size(lista_fifo_msj); i++) {
-		nodoM = list_get(lista_fifo_msj, i);
+	int tamanio = list_size(lista_fifo_msj);
+	for(int i = 0; i < tamanio; i++) {
+		nodoM = list_get(lista_fifo_msj, 0);
 
 		string_array_destroy(nodoM->parametros);
 
