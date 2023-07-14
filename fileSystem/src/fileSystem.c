@@ -59,12 +59,8 @@ int main(int argc, char** argv) {
 char* leer_de_memoria(int dir_fisica_memoria, int cuanto_X, char* pid){
 	char ** parametros_a_enviar = string_array_new();
 
-	char* s_aux = string_itoa(dir_fisica_memoria);
-	string_array_push(&parametros_a_enviar, s_aux);
-
-	char* s_aux2 = string_itoa(cuanto_X);
-	string_array_push(&parametros_a_enviar, s_aux2);
-
+	string_array_push(&parametros_a_enviar, string_itoa(dir_fisica_memoria));
+	string_array_push(&parametros_a_enviar, string_itoa(cuanto_X));
 	string_array_push(&parametros_a_enviar, pid);
 
 	enviar_msj_con_parametros(socket_memoria, LEER_VALOR, parametros_a_enviar);
@@ -92,14 +88,14 @@ char* leer_de_memoria(int dir_fisica_memoria, int cuanto_X, char* pid){
 void escribir_en_memoria(int dir_fisica_memoria, int cuanto_X, char* buffer, char* pid){
 	char** parametros_a_enviar = string_array_new();
 	
-	char* s_aux = string_itoa(dir_fisica_memoria);
-	string_array_push(&parametros_a_enviar, s_aux);
-	string_array_push(&parametros_a_enviar, pid);
-
 	memcpy(buffer + cuanto_X, "\0", 1); //agrega el /0 al final del buffer
 
+	string_array_push(&parametros_a_enviar, string_itoa(dir_fisica_memoria));
 	string_array_push(&parametros_a_enviar, buffer);
+	string_array_push(&parametros_a_enviar, pid);
+
 	enviar_msj_con_parametros(socket_memoria, ESCRIBIR_VALOR, parametros_a_enviar);
+
 	string_array_destroy(parametros_a_enviar);
 
 	t_mensajes* mensaje = malloc(sizeof(t_mensajes));
