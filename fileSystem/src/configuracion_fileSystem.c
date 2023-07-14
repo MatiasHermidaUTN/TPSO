@@ -71,8 +71,8 @@ void init_bloques() {
 
 void init_carpeta_fcbs() {
 	//FCBs carpeta raiz
-	char* comando = malloc(10 + strlen("mkdir -v -p ") + strlen(lectura_de_config.PATH_FCB));
-	strcpy(comando, "mkdir -v -p ");
+	char* comando = malloc(10 + strlen("mkdir -p ") + strlen(lectura_de_config.PATH_FCB));
+	strcpy(comando, "mkdir -p ");
 	strcat(comando, lectura_de_config.PATH_FCB);
 	system(comando);
 	free(comando);

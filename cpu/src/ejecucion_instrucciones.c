@@ -215,7 +215,7 @@ void enviar_pcb_a_kernel(t_pcb* pcb, t_msj_kernel_cpu mensaje, t_list* list_para
 	enviar_pcb(socket_kernel, pcb, mensaje, parametros);
 
 	free(parametros);
-	// Hay que hacer un free y no un string_array_destroy porque sino estraría liberando los de el pcb
+	// Hay que hacer un free y no un string_array_destroy porque sino estraría liberando los del pcb
 }
 
 char* obtener_parametros_a_emitir(t_list* parametros_actuales) {

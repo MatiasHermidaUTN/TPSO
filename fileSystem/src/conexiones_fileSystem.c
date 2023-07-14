@@ -3,13 +3,13 @@
 void init_conexiones() {
 	//SE CONECTA AL SERIVDOR MEMORIA
 	socket_memoria = crear_conexion(lectura_de_config.IP_MEMORIA, lectura_de_config.PUERTO_MEMORIA);
-	if(socket_memoria == -1){
-		printf("No conectado a memoria\n");
+	if(socket_memoria == -1) {
+		log_error(my_logger, "No conectado a memoria\n");
 	}
     enviar_handshake(socket_memoria, FILESYSTEM);
     int rta = recibir_handshake(socket_memoria);
-    if(rta != OK_HANDSHAKE){
-    	log_error(my_logger,"error en el handshake");
+    if(rta != OK_HANDSHAKE) {
+    	log_error(my_logger," error en el handshake");
     	exit(EXIT_FAILURE);
     }
 
