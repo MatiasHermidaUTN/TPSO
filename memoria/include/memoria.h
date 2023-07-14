@@ -51,5 +51,6 @@ int list_remove_element_memoria(t_list *self, void *element);
 
 
 void imprimir_bitmap();
+void imprimir_memoria();
 
 #endif /* MEMORIA_H_ */

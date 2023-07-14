@@ -29,7 +29,8 @@ int main(int argc, char** argv) {
 	}
 
 	//BITMAP
-	int tamanio_bitmap = (int)(atoi(lectura_de_config.TAM_MEMORIA) / 8);
+	int tamanio_bitmap = (int) ceil( ((double) (atoi(lectura_de_config.TAM_MEMORIA)))/ 8.0);
+
 	bitmap_pointer = malloc(tamanio_bitmap);
 	memset(bitmap_pointer,0,tamanio_bitmap);
 	if((atoi(lectura_de_config.TAM_MEMORIA) % 8)){ //error por si el bitmap no tiene el tamaño correcto
@@ -227,7 +228,7 @@ int manejar_mensaje() { //pinta bien
 			string_array_destroy(parametros_a_enviar);
 			//----------------//
 
-			break;	//No es necesario el free(buffer) porque se lo libera en el string_array_destroy
+			break;	
 		}
 		case COMPACTAR:{
 			log_info(logger, "Solicitud de Compactación"); //log obligatorio
@@ -263,9 +264,11 @@ void compactar() { //CHEQUEADA 2.0
 	int pid;
 	int id_segmento;
 
-	for(int i = 0; i < bitarray_get_max_bit(bitarray_de_bitmap); i++) {
+	//for(int i = 0; i < bitarray_get_max_bit(bitarray_de_bitmap); i++) {
+	for(int i = 0; i < atoi(lectura_de_config.TAM_MEMORIA); i++) {
 		if(bitarray_test_bit(bitarray_de_bitmap, i) == 0) {
-			for(int j = i; j < bitarray_get_max_bit(bitarray_de_bitmap); j++) {
+			//for(int j = i; j < bitarray_get_max_bit(bitarray_de_bitmap); j++) {
+			for(int j = i; j < atoi(lectura_de_config.TAM_MEMORIA); j++) { 
 				if(bitarray_test_bit(bitarray_de_bitmap, j) == 1) {
 					buscar_pid_y_id_segmento_por_base(j, &pid, &id_segmento);
 
@@ -334,10 +337,8 @@ void eliminar_segmento(int pid, int id_segmento) {
 
 		memset(memoria_principal + nodoS->base, 0, nodoS->tamanio);
 	}
-
-	//log_warning(my_logger, "list_size() antes: %d", list_size(nodoP->lista_segmentos));
+	
 	list_remove_element_memoria(nodoP->lista_segmentos, nodoS);
-	//log_warning(my_logger, "list_size() despues: %d", list_size(nodoP->lista_segmentos));
 
 	free(nodoS);
 }
@@ -361,7 +362,8 @@ void eliminar_proceso(int pid) {
 int tengo_espacio_contiguo(int tamanio_segmento) { //CHEQUEADA 2.0
 	int contador = 0;
 
-	for(int i = 0; i < bitarray_get_max_bit(bitarray_de_bitmap); i++) {
+	//for(int i = 0; i < bitarray_get_max_bit(bitarray_de_bitmap); i++) {
+	for(int i = 0; i < atoi(lectura_de_config.TAM_MEMORIA); i++) {
 
 		if(bitarray_test_bit(bitarray_de_bitmap, i) == 0) {
 			contador++;
@@ -382,7 +384,8 @@ int tengo_espacio_contiguo(int tamanio_segmento) { //CHEQUEADA 2.0
 int tengo_espacio_general(int tamanio_segmento) { //CHEQUEADA 2.0
 	int contador = 0;
 
-	for(int i = 0; i < bitarray_get_max_bit(bitarray_de_bitmap); i++) {
+	//for(int i = 0; i < bitarray_get_max_bit(bitarray_de_bitmap); i++) {
+	for(int i = 0; i < atoi(lectura_de_config.TAM_MEMORIA); i++) {
 
 		if(bitarray_test_bit(bitarray_de_bitmap, i) == 0) {
 			contador++;
@@ -443,7 +446,9 @@ int asignar_espacio_en_memoria(int tamanio_segmento) { //CHEQUEADA 2.0
 	int espacio_libre = 0;
 	
 	if(!strcmp("FIRST", lectura_de_config.ALGORITMO_ASIGNACION)) {
-		for(int i = 0; i < bitarray_get_max_bit(bitarray_de_bitmap); i++) {
+		//for(int i = 0; i < bitarray_get_max_bit(bitarray_de_bitmap); i++) {
+		for(int i = 0; i < atoi(lectura_de_config.TAM_MEMORIA); i++) { 
+
 			if(bitarray_test_bit(bitarray_de_bitmap, i) == 0) {
 				contador++;
 			}
@@ -459,7 +464,9 @@ int asignar_espacio_en_memoria(int tamanio_segmento) { //CHEQUEADA 2.0
 	}
 		
 	else if(!strcmp("BEST", lectura_de_config.ALGORITMO_ASIGNACION)) {
-		for(int i = 0; i < bitarray_get_max_bit(bitarray_de_bitmap); i++) {
+		//for(int i = 0; i < bitarray_get_max_bit(bitarray_de_bitmap); i++) {
+		for(int i = 0; i < atoi(lectura_de_config.TAM_MEMORIA); i++) {
+
 			if(bitarray_test_bit(bitarray_de_bitmap, i) == 0) {
 				contador++;
 			}
@@ -470,7 +477,9 @@ int asignar_espacio_en_memoria(int tamanio_segmento) { //CHEQUEADA 2.0
 				}
 				contador = 0;
 			}
-			if(i == bitarray_get_max_bit(bitarray_de_bitmap) - 1){		//caso final de archivo, por si el ultimo es 0
+			//if(i == bitarray_get_max_bit(bitarray_de_bitmap) - 1){		//caso final de archivo, por si el ultimo es 0
+			if(i == atoi(lectura_de_config.TAM_MEMORIA) - 1){
+
 				if(contador >= tamanio_segmento && (espacio_libre == 0 || contador < espacio_libre)) {
 					espacio_libre = contador;
 					base = i - contador + 1;
@@ -481,7 +490,9 @@ int asignar_espacio_en_memoria(int tamanio_segmento) { //CHEQUEADA 2.0
 	}
 		
 	else if(!strcmp("WORST", lectura_de_config.ALGORITMO_ASIGNACION)) {
-		for(int i = 0; i < bitarray_get_max_bit(bitarray_de_bitmap); i++) {
+		//for(int i = 0; i < bitarray_get_max_bit(bitarray_de_bitmap); i++) {
+		for(int i = 0; i < atoi(lectura_de_config.TAM_MEMORIA); i++) {
+
 			if(bitarray_test_bit(bitarray_de_bitmap, i) == 0) {
 				contador++;
 			}
@@ -492,7 +503,9 @@ int asignar_espacio_en_memoria(int tamanio_segmento) { //CHEQUEADA 2.0
 				}
 				contador = 0;
 			}
-			if(i == bitarray_get_max_bit(bitarray_de_bitmap) - 1){		//caso final de archivo, por si el ultimo es 0
+			//if(i == bitarray_get_max_bit(bitarray_de_bitmap) - 1){		//caso final de archivo, por si el ultimo es 0
+			if(i == atoi(lectura_de_config.TAM_MEMORIA) - 1){
+
 				if(contador >= tamanio_segmento && contador > espacio_libre) {
 					espacio_libre = contador;
 					base = i - contador + 1;
@@ -766,4 +779,23 @@ void imprimir_bitmap() {
             printf("\n");
         }
     }
+}
+
+void imprimir_memoria() {
+	for(int j = 0; j < list_size(lista_procesos); j++) {
+		nodoProceso* nodoP = list_get(lista_procesos, j);
+		printf("PID: %d\n", nodoP->pid);
+		for(int i = 0; i < list_size(nodoP->lista_segmentos); i++) {
+			nodoSegmento* nodoS = list_get(nodoP->lista_segmentos, i);
+			printf("ID: %d, BASE: %d, TAMANIO: %d \n", nodoS->id, nodoS->base, nodoS->tamanio);
+
+			char* contenido = malloc(nodoS->tamanio + 1);
+			memcpy(contenido, memoria_principal + nodoS->base, nodoS->tamanio);
+			memcpy(contenido + nodoS->tamanio, "\0", 1);
+			printf("CONTENIDO: %s\n", contenido);
+
+			free(contenido);
+		}
+		printf("\n");
+	}
 }
