@@ -24,6 +24,6 @@ void planificar_largo() {
 
 		pthread_mutex_unlock(&mutex_msj_memoria);
 
-		ready_list_push(pcb);
+		ready_list_push(pcb, "NEW");
 	}
 }

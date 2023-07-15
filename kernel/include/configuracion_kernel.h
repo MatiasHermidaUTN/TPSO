@@ -104,11 +104,12 @@ void init_estados();
 
 void liberar_estructura_config(t_kernel_config config);
 
+void mantener_pcb_en_exec(t_pcb* pcb_recibido);
+void ready_list_push(t_pcb* pcb_recibido, char* estado_anterior);
+
+void calcular_prox_rafaga(t_pcb* pcb);
+
 void log_pids();
 char* obtener_pids(t_list* lista_pcbs);
-
-void mantener_pcb_en_exec(t_pcb* pcb_recibido);
-void ready_list_push(t_pcb* pcb_recibido);
-void calcular_prox_rafaga(t_pcb* pcb);
 
 #endif /* CONFIGURACION_KERNEL_H_ */

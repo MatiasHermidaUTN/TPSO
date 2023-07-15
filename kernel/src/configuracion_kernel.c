@@ -146,6 +146,28 @@ void liberar_estructura_config(t_kernel_config config){
 	string_array_destroy(config.INSTANCIAS_RECURSOS);
 }
 
+void mantener_pcb_en_exec(t_pcb* pcb_recibido) {
+	proximo_pcb_a_ejecutar_forzado = pcb_recibido;
+	sem_post(&sem_cant_ready); //Al no pasar por la funcion ready_list_push hay que hacerlo manualmente, vuelve a ejecutar sin pasar por ready
+}
+
+void ready_list_push(t_pcb* pcb_recibido, char* estado_anterior) {
+	log_info(logger, "PID: %d - Estado Anterior: %s - Estado Actual: READY", pcb_recibido->pid, estado_anterior); //log obligatorio
+
+	pcb_recibido->tiempo_llegada_ready = time(NULL); //Actualizo el momento en que llega a Ready
+	calcular_prox_rafaga(pcb_recibido); //S se calcula solo al que entra a Ready. Si es la primera vez que entra a Ready, se obtiene la Estimación Inicial de todas formas
+
+	list_push_con_mutex(ready_list, pcb_recibido, &mutex_ready_list);
+	log_pids(); //log obligatorio
+
+	sem_post(&sem_cant_ready); //Avisa que hay un nuevo proceso en Ready
+}
+
+void calcular_prox_rafaga(t_pcb* pcb) {
+	double alpha = lectura_de_config.HRRN_ALFA;
+	pcb->estimado_prox_rafaga = alpha * pcb->tiempo_real_ejecucion + (1 - alpha) * pcb->estimado_prox_rafaga; //pcb->estimado_prox_rafaga acá es como el estimado anterior
+}
+
 void log_pids() {
 	char* pids = obtener_pids(ready_list);
 	log_info(logger, "Cola Ready %s: [%s]", lectura_de_config.ALGORITMO_PLANIFICACION, pids); //log obligatorio
@@ -167,36 +189,5 @@ char* obtener_pids(t_list* pcbs) {
 	}
 
 	return pids;
-}
-
-void mantener_pcb_en_exec(t_pcb* pcb_recibido) {
-	proximo_pcb_a_ejecutar_forzado = pcb_recibido;
-	sem_post(&sem_cant_ready); //Al no pasar por la funcion ready_list_push hay que hacerlo manualmente, vuelve a ejecutar sin pasar por ready
-}
-
-void ready_list_push(t_pcb* pcb_recibido) {
-	char* estado_anterior;
-	if(pcb_recibido->pc == 0) { //si es la primera vez / el proceso viene de NEW
-		estado_anterior = strdup("NEW");
-	}
-	else { //Si no es la primera vez / el proceso viene de BLOCK
-		estado_anterior = strdup("BLOCK");
-	}
-
-	log_info(logger, "PID: %d - Estado Anterior: %s - Estado Actual: READY", pcb_recibido->pid, estado_anterior); //log obligatorio
-	free(estado_anterior);
-
-	pcb_recibido->tiempo_llegada_ready = time(NULL); //Actualizo el momento en que llega a Ready
-	calcular_prox_rafaga(pcb_recibido); //S se calcula solo al que entra a Ready. Si es la primera vez que entra a Ready, se obtiene la Estimación Inicial de todas formas
-
-	list_push_con_mutex(ready_list, pcb_recibido, &mutex_ready_list);
-	log_pids(); //log obligatorio
-
-	sem_post(&sem_cant_ready); //Dice que hay un nuevo proceso en Ready
-}
-
-void calcular_prox_rafaga(t_pcb* pcb) {
-	double alpha = lectura_de_config.HRRN_ALFA;
-	pcb->estimado_prox_rafaga = alpha * pcb->tiempo_real_ejecucion + (1-alpha) * pcb->estimado_prox_rafaga; //pcb->estimado_prox_rafaga aca es como el estimado anterior
 }
 

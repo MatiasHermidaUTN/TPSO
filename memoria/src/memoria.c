@@ -9,7 +9,7 @@ int main(int argc, char** argv) {
 	t_config* config = iniciar_config(argv[1]);
 	leer_memoria_config(config);
     logger = iniciar_logger("memoria.log", "Memoria");
-	my_logger = iniciar_logger("memoria_logs_no_obligatorios.log", "Memoria");
+	my_logger = iniciar_logger("my_memoria.log", "Memoria");
 
     lista_fifo_msj = list_create();
 	lista_procesos = list_create();

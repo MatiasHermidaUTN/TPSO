@@ -2,7 +2,7 @@
 
 void escuchar_kernel() {
 	while(1) {
-		t_mensajes* args = malloc(sizeof(t_mensajes));
+		t_mensajes* args = malloc(sizeof(t_mensajes)); //TODO: tira definitely lost acá si hago ^C primero en Kernel
 		args->cod_op = recibir_msj(kernel);
 		args->parametros = recibir_parametros_de_mensaje(kernel);
 		list_push_con_mutex(lista_fifo_msj, args, &mutex_cola_msj);

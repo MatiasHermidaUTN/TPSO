@@ -1,8 +1,9 @@
 #include "../include/escuchador_de_filesystem.h"
 
 void escuchar_de_filesystem() {
+	//Para no perder mensajes que llegan de FS en caso de que mande varios seguidos mientras Kernel está ejecutando
 	while(1) {
-		int op_code_recibido = recibir_msj(socket_fileSystem);
+		t_msj_kernel_fileSystem op_code_recibido = recibir_msj(socket_fileSystem);
 		switch(op_code_recibido) {
 			case EL_ARCHIVO_YA_EXISTE: case EL_ARCHIVO_NO_EXISTE: case EL_ARCHIVO_FUE_CREADO:
 
@@ -46,7 +47,7 @@ void desbloquear_pcb_por_archivo(char* nombre_archivo, int pid) {
 	t_pcb* pcb = obtener_pcb_de_cola(archivo, pid);
 	pthread_mutex_unlock(&(archivo->mutex_archivo));
 
-	ready_list_push(pcb);
+	ready_list_push(pcb, "BLOCK");
 }
 
 t_pcb* obtener_pcb_de_cola(t_recurso* archivo, int pid) { //Busca al pcb en la cola y lo devuelve (sacandolo de la cola)

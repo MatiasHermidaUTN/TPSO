@@ -5,7 +5,9 @@ void ejecutar_instrucciones(t_pcb* pcb) {
 	t_instruccion* instruccion_actual_t;
 
 	while(pcb->pc < cantidad_instrucciones) {
-		//Fetch
+		///////////
+		// Fetch //
+		///////////
 		instruccion_actual_t = list_get(pcb->instrucciones, pcb->pc);
 		pcb->pc++;
 
@@ -15,14 +17,17 @@ void ejecutar_instrucciones(t_pcb* pcb) {
 		log_info(logger, "PID: %d - Ejecutando: %s - %s", pcb->pid, instruccion_actual_t->nombre, parametros_a_emitir); //log obligatorio
 		free(parametros_a_emitir);
 
-		//Decode y Execute
+		////////////
+		// Decode //
+		////////////
 		t_msj_kernel_cpu instruccion_actual = instruccion_a_enum(instruccion_actual_t);
+
+		/////////////
+		// Execute //
+		/////////////
 		switch(instruccion_actual) {
 			case SET:
-				//log_warning(my_logger, "AX: %c%c%c%c", pcb->registros_cpu.AX[0], pcb->registros_cpu.AX[1], pcb->registros_cpu.AX[2], pcb->registros_cpu.AX[3]);
 				set_registro(pcb, list_get(parametros_actuales, 0), list_get(parametros_actuales, 1));
-				//log_warning(my_logger, "AX: %c%c%c%c", pcb->registros_cpu.AX[0], pcb->registros_cpu.AX[1], pcb->registros_cpu.AX[2], pcb->registros_cpu.AX[3]);
-
 				break;
 
 			case MOV_IN: case MOV_OUT: case F_READ: case F_WRITE:
@@ -50,7 +55,7 @@ void ejecutar_instrucciones(t_pcb* pcb) {
 					return;
 				}
 				else {
-					//Atentos a la mayor villereada de todos los tiempos!!
+					//Atentos a la mayor (ya no... xd) villereada de todos los tiempos!!
 
 				    // EJECUCION INSTRUCCION
 					switch(instruccion_actual) {
@@ -191,7 +196,7 @@ char* leer_registro(t_pcb* pcb, char* registro) {
 
 	memcpy(valor + tamanio_registro(registro), "\0", sizeof(char)); //Para que pueda funcionar bien con las funciones de string_array
 
-	usleep(lectura_de_config.RETARDO_INSTRUCCION * 1000); //Porque me lo dan en milisegundos
+	//usleep(lectura_de_config.RETARDO_INSTRUCCION * 1000); //Porque me lo dan en milisegundos
 	return valor;
 }
 
@@ -245,7 +250,6 @@ int buscar_campo_de_segmento(t_list* segmentos, char* campo, int id) {
 		}
 	}
 
-	//TODO: Entra por acá siempre pues no coincide el id (ya que todavía no implementamos la creación de segmentos desde Memoria)
 	return -1;
 }
 
@@ -262,8 +266,9 @@ t_datos_mmu mmu(t_pcb* pcb, int direccion_logica) {
 	return datos;
 }
 
-
-// Funciones de abstracción de lógica
+////////////////////////////////////////
+// Funciones de abstracción de lógica //
+////////////////////////////////////////
 
 int numero_de_parametro_de_direccion_logica(t_msj_kernel_cpu instruccion_actual) {
 	return instruccion_actual != MOV_OUT;
@@ -292,8 +297,9 @@ int numero_de_parametro_de_registro(t_msj_kernel_cpu instruccion_actual) {
 	return instruccion_actual == MOV_OUT; //De vuelta, anda pq sí pero basta, es sexo
 }
 
-
-//Funciones de ejecución posta
+/////////////////////////////////
+//Funciones de ejecución posta //
+/////////////////////////////////
 
 void ejecutar_mov_in(t_pcb* pcb, t_datos_mmu datos_mmu, char* nombre_registro) {
 	char** parametros = string_array_new();
@@ -309,19 +315,23 @@ void ejecutar_mov_in(t_pcb* pcb, t_datos_mmu datos_mmu, char* nombre_registro) {
 
 	if(recibir_msj(socket_memoria) == LEIDO_OK) { //No hace falta pero bueno, recibe un mensaje sí o sí
 		parametros_lectura = recibir_parametros_de_mensaje(socket_memoria);
+
+		char* valor = parametros_lectura[0];
+
+		set_registro(pcb, nombre_registro, valor);
+
+		log_info(logger, "PID: %d - Accion: LEER - Segmento: %d - Dirección Física: %d - Valor: %s", pcb->pid, datos_mmu.numero_segmento, datos_mmu.direccion_fisica, valor); //log obligatorio
 	}
-
-	char* valor = parametros_lectura[0];
-
-	set_registro(pcb, nombre_registro, valor);
-
-	log_info(logger, "PID: %d - Accion: LEER - Segmento: %d - Dirección Física: %d - Valor: %s", pcb->pid, datos_mmu.numero_segmento, datos_mmu.direccion_fisica, valor); //log obligatorio
+	else {
+		log_error(my_logger, "No se pudo leer en memoria");
+		exit(EXIT_FAILURE);
+	}
 
 	string_array_destroy(parametros_lectura);
 }
 
 void ejecutar_mov_out(t_pcb* pcb, t_datos_mmu datos_mmu, char* nombre_registro) {
-	char** parametros= string_array_new();
+	char** parametros = string_array_new();
 	string_array_push(&parametros, string_itoa(datos_mmu.direccion_fisica));
 	char* valor = leer_registro(pcb, nombre_registro);
 	string_array_push(&parametros, valor);

@@ -57,7 +57,7 @@ void init_bitmap() {
 	tamanioBitmap = (int) ceil( (double) super_bloque_info.block_count / 8.0);
 	int fd_bitmap = open(lectura_de_config.PATH_BITMAP, O_RDWR, 0664);	//abre o crea el archivo en un file descriptor
 	if (fd_bitmap == -1) {
-		close(fd_bitmap);
+		close(fd_bitmap); //TODO: valgrind tira warning porque se está cerrando con fd = -1
 		log_warning(my_logger, "Creando bitmap");
 		fd_bitmap = open(lectura_de_config.PATH_BITMAP, O_CREAT | O_RDWR, 0664); //abre o crea el archivo en un file descriptor
 		if (fd_bitmap == -1) {
