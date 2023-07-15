@@ -445,7 +445,7 @@ void cerrar_todos_los_archivos(t_pcb* pcb) {
 	int tamanio = list_size(pcb->archivos_abiertos);
 	for(int i = 0; i < tamanio; i++) {
 		archivo = list_get(pcb->archivos_abiertos, 0); //0 pues cerrar_archivo va a ir eliminándolo de la lista de archivos_abiertos
-		cerrar_archivo(pcb, archivo->nombre_archivo);
+		cerrar_archivo(pcb, strdup(archivo->nombre_archivo));
 	}
 }
 
@@ -535,7 +535,9 @@ void crear_segmento(t_pcb* pcb_recibido, char** parametros) {
 				t_list* procesos = recibir_procesos_con_segmentos(socket_memoria);
 				pthread_mutex_unlock(&mutex_msj_memoria);
 
+				pthread_mutex_lock(&mutex_esta_actualizando_segmentos);
 				actualizar_segmentos(pcb_recibido, procesos);
+				pthread_mutex_unlock(&mutex_esta_actualizando_segmentos);
 
 				log_info(logger, "Se finalizó el proceso de compactación"); //log obligatorio
 				sem_post(&sem_compactacion); //Funcionaría como un mutex en este caso

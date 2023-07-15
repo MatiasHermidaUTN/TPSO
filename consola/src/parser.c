@@ -12,7 +12,9 @@ t_list* parsear_pseudocodigo(char* direccion_pseudocodigo) {
     size_t length = 0;
 
     while (getline(&linea_leida, &length, archivo_pseudocodigo) != -1) {
-    	list_add(instrucciones_leidas, parsear_instruccion(linea_leida));
+    	if(strcmp(linea_leida,"\n")){
+        	list_add(instrucciones_leidas, parsear_instruccion(linea_leida));
+    	}
     }
 
 	free(linea_leida);

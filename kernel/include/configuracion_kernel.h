@@ -67,6 +67,7 @@ extern pthread_mutex_t mutex_ready_list;
 extern pthread_mutex_t mutex_cantidad_de_reads_writes;
 extern pthread_mutex_t mutex_msj_memoria;
 extern pthread_mutex_t mutex_pcbs_en_io;
+extern pthread_mutex_t mutex_esta_actualizando_segmentos;
 
 extern sem_t sem_cant_ready;
 extern sem_t sem_cant_new;

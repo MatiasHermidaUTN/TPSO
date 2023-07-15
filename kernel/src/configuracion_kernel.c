@@ -33,6 +33,7 @@ pthread_mutex_t mutex_ready_list;
 pthread_mutex_t mutex_cantidad_de_reads_writes;
 pthread_mutex_t mutex_msj_memoria;
 pthread_mutex_t mutex_pcbs_en_io;
+pthread_mutex_t mutex_esta_actualizando_segmentos;
 
 sem_t sem_cant_ready;
 sem_t sem_cant_new;
@@ -103,6 +104,7 @@ void init_semaforos() {
 	pthread_mutex_init(&mutex_cantidad_de_reads_writes, NULL);
 	pthread_mutex_init(&mutex_msj_memoria, NULL);
 	pthread_mutex_init(&mutex_pcbs_en_io, NULL);
+	pthread_mutex_init(&mutex_esta_actualizando_segmentos, NULL);
 
 	sem_init(&sem_cant_ready, 0, 0);
 	sem_init(&sem_cant_new, 0, 0);
